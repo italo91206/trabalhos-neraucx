@@ -1,0 +1,10 @@
+		Métodos Ordenação			Arquivo Ordenado						Arquivo em Ordem Reversa				Arquivo Randômico
+Comp. Prog. | Comp. Equa. | Mov. Prog. | Mov. Equa. | Tempo | Comp. Prog. | Comp. Equa. | Mov. Prog. | Mov. Equa. | Tempo | Comp. Prog. | Comp. Equa. | Mov. Prog. | Mov. Equa. | Tempo
+Bucket Sortreta      1345       75,00       1345       225,00       14      3054         662,00      3054       1375,00       31      541         638,00      541       735,00        5  
+Insercao Binária      757       0,00       1228       342,00       13      1036         2,72      157       1222,00        2      447         145,60      128       510,00        1  
+Selecao Direta       6555       6612,00       228       342,00       35      21321         1300,00      412       800,00      113      5050         1249,00      200       224,49       29  
+Bubble Sort          6555       0,00         0       0,00       70      21321         0,00      8024       0,00      274      5050         0,00      2100       0,00       65  
+Heap Sort            6612       0,00       612       0,00       75      21424         0,00      2704       0,00      250      5100         0,00      974       0,00       64  
+Shell Sort           338       0,00         0       0,00        3      1337         0,00      1040       0,00       21      438         0,00      198       0,00        6  
+Shake Sort           6555       6555,00         0       0,00       74      21321         1275,00      5234       640,00      310      5050         1225,00      984       1228,00       70  
+QuickSort              2       0,00         2       0,00       11        2         0,00        2       0,00       21        2         0,00        2       0,00       10  
