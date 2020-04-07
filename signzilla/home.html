@@ -15,3 +15,13 @@
     <p>{{customVar code=banner-signzilla}}</p>
 </div>
 <!-- /page identifier: Home Signzilla -->
+
+<script type="text/javascript" xml="space">
+	require(["jquery"], function($){
+		jQuery(document).ready(function(){
+			console.log('documento está carregado');
+			var player = new Vimeo.Player(document.querySelector('iframe'));
+			player.play();
+		});
+	});
+</script>

@@ -21,14 +21,13 @@
 				</div>
 
 			</div>
-
 			<!-- video id="videomain" class="youtube_video" autoplay muted="muted" loop>
 				<source src="https://www.signzilla.com/media/wysiwyg/new-home/videoSignzilla.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video -->
             <div id="videomain" class="youtube_video" style="overflow: hidden; background: url('https://i.vimeocdn.com/video/859756655.jpg') no-repeat center 22%; background-size: 100%;">
                 <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/394035361?loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;background=1" style="position:absolute;top:-12%;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen" allowfullscreen=""></iframe>
+                    <iframe src="https://player.vimeo.com/video/394035361?autoplay=0&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;background=1" style="position:absolute;top:-12%;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen" allowfullscreen=""></iframe>
                 </div>
             </div>
 		</div>
@@ -88,12 +87,4 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" xml="space">
-	require(['jquery'], function($){
-		jQuery(document).ready(function(){
-			console.log('documento está carregado');
-			var player = new Vimeo.Player(document.querySelector('iframe'));
-			player.play();
-		})
-	})
-</script>
+
