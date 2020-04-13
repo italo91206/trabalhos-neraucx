@@ -1,0 +1,1841 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+    @font-face {
+        font-family: 'fontello';
+        src: url('../fonts/fontello.eot');
+        src: url('../fonts/fontello.eot') format('embedded-opentype'),
+            url('../fonts/fontello.woff') format('woff'),
+            url('../fonts/fontello.ttf') format('truetype'),
+            url('../fonts/fontello.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: "Verdana";
+    }
+
+    .sugestoes {
+        list-style-type: none;
+
+    }
+
+    ul.sugestoes li {
+        cursor: pointer;
+    }
+
+    .row {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    /******** INDEX CSS*****/
+    .index .header {
+        display: unset;
+        position: absolute;
+        padding: 30px 0 15px 0;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .index .header .logo {
+        max-height: 61px;
+        width: auto;
+        transform: translate3d(0, 0, 0);
+        margin-top: -2px;
+    }
+
+    .drag-drop {
+        height: 184px;
+        width: 485px;
+        background: #a9a6a6;
+        margin-top: 40px;
+        text-align: center;
+        line-height: 200px;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .index .header .headerAjusta {
+        padding-top: 30px;
+    }
+
+    .index .mainIndex {
+        background-size: 1351px 864.64px;
+        background-position: 50% -289.557px;
+        background-image: url(../imgs/index/home-parallax-2.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+    }
+
+    .index .mainIndex .parallax-overlay {
+        background-color: rgb(54, 56, 62);
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    .index .mainIndex .mainContainerSearch {
+        margin: 0 auto;
+        padding: 44vh 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .index .mainIndex .mainContainerSearch .ajusteTitle {
+        font-size: 40px;
+        color: #fff;
+        margin-bottom: 10px;
+        letter-spacing: -1px;
+        font-family: "Varela Round";
+
+    }
+
+    .index .ajusteBSEARCH {
+        height: 80%;
+        margin-left: 2px;
+    }
+
+    .index .meioIndex {
+        width: 100%;
+        min-height: 130px;
+    }
+
+    .index .ajusteRowSub {
+        padding-top: 6em;
+    }
+
+    .index .ajusteRowSub h3 {
+        font-size: 26px !important;
+    }
+
+    .index .contentSub p {
+        font-size: 16px;
+        color: #888;
+        line-height: 27px;
+        margin: 18px 0 0 0;
+    }
+
+    .index .subMeio .icon-container {
+        font-size: 66px;
+        color: #fff;
+        background-color: #073070;
+        height: 140px;
+        width: 140px;
+        line-height: 140px;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 13px;
+        display: inline-block;
+        position: relative;
+        font-family: "Varela Round";
+
+    }
+
+    #predioI:hover i,
+    #runI:hover i,
+    #likeI:hover i,
+    #chaveI:hover i {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1.16);
+        transition: all 0.2s ease-in;
+        display: inline-block;
+
+
+    }
+
+
+
+    .index .afterSubIndex span {
+        color: #888;
+        font-size: 18px;
+        display: block;
+    }
+
+    .index .imagesBOX {
+        height: 339px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        float: left;
+        border-radius: 3px;
+
+    }
+
+    .index .blog-post {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: inline-block;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    .index .post-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .index .post-img img {
+        width: 100%;
+        height: 300px;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .index .post-content {
+
+        padding: 38px;
+    }
+
+    .index .flip-banner-content {
+        background-image: url(../imgs/index/flip-banner-bg.jpg);
+        background-attachment: fixed;
+        background-size: 1351px 864.64px;
+        background-position: 50% -275.31px;
+        height: 188px;
+        position: relative;
+    }
+
+    .index .flip-banner-content h2 {
+        position: absolute;
+        color: white;
+        top: 35%;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .index .flip-banner-content .flip-hidden {
+        display: none;
+    }
+
+    .parallax-overlayFot {
+        background-color: rgb(7, 48, 112);
+        opacity: 0.9;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .loginBoto {
+        color: white;
+    }
+
+    .index .foto-userSPAN {
+        top: auto !important;
+    }
+
+    .index .header-widget a.sign-in {
+        color: white;
+    }
+
+    .img-imovelFRONT {
+        width: 900px;
+        height: 500px;
+    }
+
+    .container-imgsImovel {
+        width: 70%;
+
+    }
+
+    .dropdown-toggle::after {
+        color: #073070;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-top: 0.8em;
+        margin-left: 0.5em;
+        /* vertical-align: 0.255em; */
+        content: "";
+        border-top: 0.5em solid;
+        border-right: 0.5em solid transparent;
+        border-bottom: 0;
+        border-left: 0.5em solid transparent;
+    }
+
+    .toggle-index::after {
+        color: #fff;
+    }
+
+    .contentSub {
+        padding-bottom: 30px;
+    }
+
+    /***** FIM INDEX CSS **********/
+
+
+    /************************************************ USER LOGIN CSS ***************/
+
+
+    .headerLogin ul.top-bar-menu {
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    .headerLogin ul.top-bar-menu li {
+        font-size: 13px;
+        display: inline-block;
+        margin: 0 20px 0 0;
+        color: white;
+    }
+
+    .headerLogin ul.top-bar-menu li a {
+        color: white;
+        font-family: "Varela Round";
+    }
+
+    .headerLogin ul.top-bar-menu li i {
+        color: #fff;
+        margin: 0 5px 0 0;
+        font-size: 15px;
+        position: relative;
+        top: 1px;
+    }
+
+    .headerLogin ul.social-icons {
+        float: right;
+        list-style: none;
+    }
+
+    .headerLogin .social-icons li {
+        margin: 0;
+        padding: 0;
+        float: left;
+        line-height: 0;
+    }
+
+    .headerLogin .social-icons li a {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .headerLogin .social-icons li a i {
+        margin-top: 1em;
+        font-size: 20px;
+        color: white;
+        transform: scale(1);
+
+    }
+
+    .headerLogin .social-icons li:hover {
+        transform: scale(1);
+        color: black;
+        background: white;
+    }
+
+
+
+    .headerLogin .social-icons li:hover a i {
+        transform: scale(1.1) translateY(calc(-50% - 2px));
+        color: black;
+
+    }
+
+
+    .headerLogin #logo img {
+        max-height: 61px;
+        width: auto;
+        transform: translate3d(0, 0, 0);
+        margin-top: -2px;
+    }
+
+    .loginHeader .header-widget {
+        padding: 11px;
+    }
+
+    .userLogin .cadastre {
+        margin-top: 2em;
+    }
+
+    .userLogin .cadastre h3 {
+        border-bottom: 1px solid #f1f1f1;
+        line-height: 50px;
+    }
+
+    .userLogin .cadastre p {
+        padding-right: 15px;
+        text-align: justify;
+
+    }
+
+    /* .campoCadastro{
+display: none;
+} */
+
+    .campoCadastro h3 {
+        border: none;
+        margin: 0;
+        padding: 27px 0;
+        text-transform: none;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: transparent;
+        color: #333;
+        padding-right: 60px;
+    }
+
+    .campoCadastro .linhaCadastro {
+        cursor: pointer;
+    }
+
+    .campoCadastro .linhaCadastro {
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+    }
+
+    .campoCadastro .linhaCadastro i {
+        float: right;
+        margin-top: 30px;
+        font-size: 29px;
+        right: 0;
+        color: #333;
+        position: absolute;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .campoCadastro .form-linha i {
+        left: 28px !important;
+    }
+
+
+    .campoCadastro h3.titleCadastro {
+        font-weight: bold;
+    }
+
+    .campoCadastro .alugarImovel,
+    .campoCadastro .anunciarImovel,
+    .campoCadastro .cadastroCorretor {
+        display: none;
+
+    }
+
+
+    /*************************************************** FIM USER LOGIN CSS ************/
+
+
+
+
+
+
+
+
+
+    /*************************** EDITA USER CSS *************************************/
+
+    .editaUser .sectionMeio .form-linha i {
+        left: 27px !important;
+
+    }
+
+    /* .sectionMeio{
+
+} */
+
+    .sideLayout .my-account-nav-container {
+        border-radius: 3px;
+        /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); */
+        background: #f9f9f9;
+        padding: 30px 0;
+        margin: 0 0 40px 0;
+
+    }
+
+    .sideLayout .my-account-nav-container ul.my-account-nav {
+        padding: 0 35px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .sideLayout .my-account-nav-container ul.my-account-nav .sub-nav-title {
+        font-size: 13px;
+        margin-bottom: 5px !important;
+        display: inline-block;
+        color: #888;
+    }
+
+
+    .sideLayout .my-account-nav-container ul.my-account-nav li {
+        color: black;
+        list-style: none;
+        padding: 5px 0 2px 0;
+        margin: 0;
+
+    }
+
+    .sideLayout .my-account-nav-container ul.my-account-nav li a {
+        color: black;
+    }
+
+
+
+    .myAccount {
+        margin-top: 2em;
+        background-color: #f8f8f8;
+        position: relative;
+        padding: 33px 0;
+        margin-bottom: 65px;
+    }
+
+
+
+
+
+    /***************************** FIM EDITA USER CSS ******************************/
+
+
+    /***************************** AGENDA CORRETOR CSS ******************************/
+
+    .topoAgenda {
+        width: 100%;
+        background-color: #073070;
+        height: 50px;
+
+
+    }
+
+    .topoAgenda h3 {
+        font-family: "Varela Round";
+        font-size: 20px;
+        color: white;
+        padding: 10px 10px 14px 26px;
+
+    }
+
+    .agendamentos {
+        font-family: "Varela Round";
+    }
+
+    .agendamentos .agendaEspaco {
+        padding: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 1em;
+    }
+
+    .imovelProperty {
+        display: inline-block;
+        background: #f0f0f0;
+        color: #888;
+        border-radius: 2px;
+        font-size: 13px;
+        margin-top: 9px;
+        padding: 2px 10px;
+    }
+
+    /************************** FIM AGENDA CORRETOR CSS ******************************/
+
+
+
+
+    /***************************** CADASTRO DE IMOVEL CSS ***********************************/
+    /* .sectioncadImovel{
+
+} */
+
+    .sectioncadImovel i.moedaOpt {
+        font-size: 17px;
+
+
+    }
+
+    .sectioncadImovel .espacamentoLinha {
+        margin-top: 2em;
+    }
+
+    .sectioncadImovel .form-linha i {
+        left: 27px !important;
+
+    }
+
+
+
+
+
+    /**************************** FIM CADASTRO DE IMOVEL CSS *******************************/
+
+
+
+    /******************** CSS PAGINA PESQUISA *******************************************/
+    /* .searchPage{
+
+} */
+
+    .searchPage .sectionSearch {
+        background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5));
+        background-color: #f7f7f7;
+    }
+
+    .searchPage .mapaSection {
+        background-color: white;
+    }
+
+    .searchCampo {
+
+        padding: 43px;
+    }
+
+    .searchPage .campoButton {
+        width: 100%;
+    }
+
+    .searchPage .campoButton a {
+        float: right;
+    }
+
+    .searchCampo .resultCampo {
+        background-color: white;
+    }
+
+    .searchPage .listing-item {
+        display: inline-block;
+        width: 47%;
+        float: left;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        margin-bottom: 30px;
+
+    }
+
+    .searchPage .listing-img-content {
+        position: absolute;
+        z-index: 99;
+        bottom: 0;
+        top: 127px;
+        color: white;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px 30px;
+
+    }
+
+    .searchPage .owl-carousel {
+        display: none;
+        position: relative;
+        width: 100%;
+        -ms-touch-action: pan-y;
+        max-height: 258px !important;
+        overflow: hidden !important;
+        min-height: 258px !important;
+    }
+
+    .searchPage .listing-title {
+        padding: 15px 30px;
+        padding-top: 12px;
+
+    }
+
+    .searchPage ul.listing-details {
+        background-color: #f7f7f7;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        width: 100%;
+        padding: 18px 30px 18px 0;
+    }
+
+    .searchPage ul.listing-details li {
+        width: auto;
+        box-sizing: border-box;
+        margin: 0;
+        color: #868686;
+        padding: 3px 0 3px 30px;
+        display: inline-block;
+        line-height: 26px;
+    }
+
+    /* .resultCampo{
+background-color: white;
+} */
+
+    .searchPage .espacamentoLinha {
+        margin-top: 2em;
+    }
+
+    ul.paginas li {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 1em;
+
+    }
+
+    ul.paginas li span {
+        padding: 12px 12px;
+        border-bottom: none;
+        display: inline-block;
+        color: #888;
+        background-color: #f2f2f2;
+        margin: 0;
+        -webkit-transition: all 200ms ease-in-out;
+        -moz-transition: all 200ms ease-in-out;
+        -o-transition: all 200ms ease-in-out;
+        -ms-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        border-radius: 3px;
+        line-height: 20px;
+        width: 35px;
+    }
+
+    ul.paginas li span.active {
+        background-color: #073070 !important;
+        color: white;
+    }
+
+    .searchPage div.colunaResultado {
+        overflow: auto;
+        height: 600px;
+
+    }
+
+    /********************* FIM CSS PAGINA PESQUISA ***********************************/
+
+    .UrlAgenda .dados_agendamento {
+        margin: 0 auto;
+        width: 60%;
+        min-height: 200px;
+        background: rgba(0, 0, 0, 0.1)
+    }
+
+    .UrlAgenda .dados_agendamento .topo_ag {
+        width: 100%;
+        background: linear-gradient(60deg, #073070 0%, #673AB7 125%);
+        height: 20%;
+        text-align: center;
+    }
+
+    .UrlAgenda .dados_agendamento .topo_ag h3 {
+        color: white;
+
+    }
+
+    /********************** CSS PAGINA IMOVEL *************************************/
+    .agendamentos .legendas {
+        padding: 10px;
+
+    }
+
+    .agendamentos .legendas div {
+        height: 30px;
+        margin-left: 8px;
+        border-radius: 14px;
+    }
+
+    .imovelPage {
+        width: 100%;
+    }
+
+    /* .imovelPage .imovelImage{
+
+} */
+
+    .imovelPage p.desc-headline {
+        font-size: 22px;
+        margin: 50px 0 25px 0;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .imovelPage p.description {
+        color: #707070;
+    }
+
+
+
+    .imovelPage .widget {
+        position: relative;
+    }
+
+    .imovelPage .widget .agent-widget {
+        background-color: #fff;
+        color: #707070;
+        border-radius: 4px;
+        padding: 32px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+        margin-bottom: 30px;
+    }
+
+    .imovelPage .widget .agent-widget .imovel-totals p {
+        float: left;
+        display: block;
+        width: 100%;
+        margin-bottom: 0px;
+        font-size: 15px;
+        padding: 0 4px;
+    }
+
+    .imovelPage .widget .agent-widget .imovel-totals p span {
+        float: right;
+
+    }
+
+    .imovel-totals .separator {
+        margin: 10px 0;
+        background-image: linear-gradient(to right, #c2beba 45%, rgba(0, 0, 0, 0) 0);
+        background-position: bottom;
+        background-size: 5px;
+        background-repeat: repeat-x;
+        height: 1px;
+        clear: both;
+        display: block;
+    }
+
+    .btn-aj {
+        background-image: url(../imgs/bg-btn-aj-t.png);
+        background-size: 55%;
+        background-position-y: center;
+        background-position-x: right;
+        font-weight: bold !important;
+        text-shadow: 1px 1px rgba(66, 66, 66, 0.35);
+        background-blend-mode: luminosity;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .imovelPage .btn-agendaV {
+        width: 100%;
+        text-align: center;
+    }
+
+    div.botoesAgenda {
+        margin-top: 4em;
+    }
+
+
+    .modalBackground {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+
+    }
+
+    .modal-topo {
+        border-bottom: 1px solid #e5e5e5;
+        border-bottom: none;
+        color: white;
+        background: #073070;
+        background: -moz-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+        background: -webkit-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+        background: linear-gradient(60deg, #073070 0%, #673AB7 125%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#073070', endColorstr='#673AB7', GradientType=1);
+    }
+
+    span.closeModal {
+        float: right;
+        cursor: pointer;
+    }
+
+    .modal-corpo {
+        position: relative;
+        padding: 15px;
+    }
+
+    .linhaHEADER {
+        margin: 0 auto;
+    }
+
+
+
+    .diasS {
+        cursor: pointer;
+    }
+
+    .diasS:hover {
+        background-color: #eaeaea;
+    }
+
+    .diasS label {
+        cursor: pointer;
+
+        color: #616161;
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    .diasS label:hover {
+        background-color: #eaeaea;
+    }
+
+    .espacaDias {
+        margin-top: 2em;
+    }
+
+    .mod-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+        margin-top: 2em;
+    }
+
+    .mod-footer .campoButtonAgenda {
+        width: 100%;
+        float: right;
+    }
+
+    .line_hora {
+        padding: 10px;
+        /*background: rgba(0,0,0,0.1);*/
+        margin-top: 0.1em;
+        font-size: 25px;
+        color: black;
+    }
+
+    .line_hora p {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .alert-agenda_imovel {
+
+        background: #673AB7;
+        color: white;
+        font-size: 20px;
+    }
+
+    .vuecal__event.event {
+        color: white;
+        background-color: #0a3b8a;
+        /* border: 1px solid #021b42; */
+    }
+
+    .vuecal__event-time {
+        display: none
+    }
+
+    /***************** FIM CSS PAGINA IMOVEL ****************************/
+    /***************** CSS CRIA IMOVEL ADMIN *************************/
+    .criaImovelAdmin .form-linha i {
+        left: 21px !important;
+        font-size: 15px !important;
+        top: 37px !important;
+    }
+
+    .campo_corretor {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .campo_corretor h6 {
+
+        text-align: center;
+    }
+
+    .redirect {
+        cursor: pointer;
+    }
+
+    /************* FIM CSS CRIA IMOVEL ADMIN******************/
+    /**************************************** GLOBAL CSS********************/
+
+    .erroInput {
+        border: 1px solid red !important;
+    }
+
+    .alinhaTextoCenter {
+        text-align: center;
+    }
+
+    .ico-ajato {
+        background-image: url(../imgs/aj-icon.png);
+        width: 20px;
+        background-repeat: no-repeat;
+        content: "";
+        display: inline-block;
+        position: relative;
+        background-size: 100%;
+        background-position-y: 4px;
+    }
+
+    .padraoSelect {
+        height: 51px;
+        line-height: 51px;
+        padding: 0 20px;
+        outline: none;
+        font-size: 15px;
+        color: #808080;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        background-color: #fcfcfc;
+        font-weight: 500;
+        border: 1px solid #e0e0e0;
+        opacity: 1;
+        border-radius: 3px;
+    }
+
+    .strong,
+    strong {
+        font-weight: bold;
+    }
+
+    .left-side {
+        float: left;
+        width: 65%;
+        display: inline-block;
+    }
+
+    .right-side {
+        float: right;
+        width: 35%;
+        display: inline-block;
+    }
+
+    .form-linha {
+        position: relative;
+
+
+    }
+
+    .form-linha label {
+        color: #707070;
+    }
+
+    .form-linha i {
+        position: absolute;
+        top: 46px;
+        font-size: 21px;
+        left: 11px;
+        color: #707070;
+
+    }
+
+    .input-text {
+        padding-left: 42px !important;
+        -webkit-appearance: textfield;
+        background-color: white;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        padding: 1px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: initial;
+        border-image: initial;
+        line-height: 51px;
+        padding: 0 20px;
+        outline: none;
+        font-size: 15px;
+        color: #808080;
+        margin: 0 0 16px 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        background-color: #fcfcfc;
+        font-weight: 500;
+        border: 1px solid #e0e0e0;
+        opacity: 1;
+        border-radius: 3px;
+    }
+
+    .botaoPadrao {
+        background-color: #073070;
+        top: 0;
+        padding: 10px 20px;
+        color: white !important;
+        position: relative;
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        margin-right: 6px;
+        overflow: hidden;
+        border: none;
+        border-radius: 3px;
+    }
+
+    #footer {
+        padding: 70px 0 0 0;
+        background-color: #fcfcfc;
+        box-shadow: inset 0 20px 50px -20px rgba(0, 0, 0, 0.06);
+    }
+
+    #footer ul.footer-links {
+        margin: 0 0 15px 0;
+        padding: 0;
+        width: 33%;
+        box-sizing: border-box;
+        /* display: inline-block; */
+        float: left;
+    }
+
+    #footer .footer-links li {
+        position: relative;
+        list-style: none;
+    }
+
+    #footer .footer-links li a {
+        padding: 0 0 9px 16px;
+        display: inline-block;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        color: #707070;
+        line-height: 21px;
+    }
+
+    #footer .footer-links li a:hover {
+        padding-left: 22px;
+    }
+
+    #footer .social-icons li {
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        /* float: left; */
+        line-height: 0;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+    }
+
+    #footer ul.social-icons {
+        padding-inline-start: 0px;
+        margin: 25px auto 0 auto;
+        text-align: center;
+    }
+
+    #footer ul.social-icons li a:hover {
+        padding: 5px;
+    }
+
+    #footer ul.social-icons li a i {
+        color: #000;
+    }
+
+    #footer .link a {
+        color: #000;
+    }
+
+    #footer .contact-item {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    #footer .footer-title {
+        color: #073070;
+        font-weight: bold;
+    }
+
+    #footer .footer-list {
+        /* font-style: italic; */
+    }
+
+    #footer .copyrights {
+        color: #707070;
+        border-top: 1px solid rgba(0, 0, 0, 0.09);
+        /* margin-top: 60px; */
+        text-align: center;
+        padding: 30px 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    #sugestoes {
+        position: absolute;
+        width: 60%;
+        min-height: 50px;
+        background-color: white;
+        top: 52px;
+    }
+
+    .user-menu {
+        position: absolute;
+        z-index: 2;
+        width: 89%;
+    }
+
+    .user-menu ul {
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        list-style-type: none;
+        display: inline-block;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .user-menu ul li a {
+        color: #696969;
+
+    }
+
+    .user-menu ul li {
+        line-height: 5px;
+    }
+
+    .foto-userSPAN {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        float: left;
+        top: -5px;
+        overflow: hidden;
+        margin: 0 0.25em;
+    }
+
+    .foto-userIMG {
+        min-height: 100%;
+        width: 100%;
+        /* height: 62px; */
+        display: inline-block;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    /************* FIM GLOBAL CSSS ***************************************/
+
+
+
+    @media(min-width: 800px) {
+
+        /******************************** DESKTOP********** ******/
+        .user-menu_index {
+            width: 78% !important;
+        }
+
+        .container-footer {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            max-width: 1140px;
+            margin-left: auto;
+        }
+
+        .rowDesktop {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .inputSearchIndex {
+            width: 80%;
+            float: left;
+        }
+
+        .index .headBox {
+            display: inline-block;
+            font-size: 28px;
+            line-height: 38px;
+            background-color: #fff;
+            padding: 22px 50px;
+            margin: 0;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+            width: auto;
+            border-radius: 3px;
+            position: absolute;
+            transform: translate3d(-50%, -50%, 0);
+            margin: 0 auto;
+            text-align: center;
+            margin-left: 50%;
+            margin-top: 4.5em;
+            z-index: 5;
+        }
+
+        .index .headBox h3 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            font-size: 40px !important;
+
+        }
+
+        .index .subMeio {
+            padding-bottom: 30px;
+            background: rgb(247, 247, 247);
+            /* height: 464px; */
+            width: 100%;
+        }
+
+
+
+        .index .imageFirst {
+            background-image: url(../imgs/index/prudente.jpg);
+            background-position-x: -36px;
+        }
+
+        .index .imageSecond {
+            background-image: url(../imgs/index/londrina.jpg);
+
+
+        }
+
+        .index .imageTerc {
+            background-image: url(../imgs/index/assis.jpg);
+            background-position-y: 22px;
+            background-position-x: -24px;
+        }
+
+        .index .imageQuart {
+            background-image: url(../imgs/index/maringa.jpg);
+            background-position-y: 21px;
+        }
+
+
+        .index .afterSubIndex {
+            margin-top: 2em;
+            text-align: center;
+            height: 769px;
+        }
+
+        .index .FotMeio {
+            background: rgb(247, 247, 247);
+            /* height: 739px;*/
+            width: 100%;
+        }
+
+        .headerLogin .top-bar {
+            width: 100%;
+            /* height: 47px; */
+            background: #073070;
+            background: -moz-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+            background: -webkit-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+            background: linear-gradient(60deg, #073070 0%, #673AB7 125%);
+        }
+
+        .headerLogin .loginHeader {
+            position: relative;
+            padding: 15px 0;
+            box-shadow: 0px 1px 20px 2px rgba(0, 0, 0, 0.33);
+            /* height: 96px; */
+            z-index: 2;
+
+        }
+
+        .userLogin .meioLogin {
+            padding: 10px 55px 55px 55px;
+
+
+        }
+
+        .titleBlog {
+            font-size: 20px;
+        }
+
+        .modal-content {
+            top: 5em;
+            margin: 0 auto;
+            width: 48%;
+            min-height: 400px;
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            outline: 0;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        }
+
+        .modal-topo .titleHeader h3 {
+            padding: 10px;
+        }
+
+        body.modal-opened {
+            overflow: hidden;
+        }
+
+        .modal-C {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+
+    /******************** FIM CSS DESKTOP ************************/
+
+    @media(max-width: 799px) {
+
+        /***MOBILE *****/
+        .UrlAgenda .dados_agendamento {
+            width: 100% !important;
+        }
+
+        .alert-agenda_imovel {
+            font-size: 16px !important;
+        }
+
+        .inputSearchIndex {
+            width: 80%;
+            float: left;
+        }
+
+        .index .headBox {
+            display: inline-block;
+            font-size: 28px;
+            line-height: 38px;
+            background-color: #fff;
+            padding: 22px 50px;
+            margin: 0;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            border-radius: 3px;
+            position: absolute;
+            transform: translate3d(-50%, -50%, 0);
+            margin: 0 auto;
+            text-align: center;
+            margin-left: 50%;
+            margin-top: 4.5em;
+            z-index: 5;
+        }
+
+        .index .headBox h3 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            font-size: 29px !important;
+        }
+
+        .index .subMeio {
+            margin: 0 auto;
+            background: rgb(247, 247, 247);
+            /* height: 1500px; */
+            width: 100%;
+        }
+
+        .index .imageFirst {
+            background-image: url(../imgs/index/prudente.jpg);
+        }
+
+        .index .imageSecond {
+            background-image: url(../imgs/index/londrina.jpg);
+
+        }
+
+        .index .imageTerc {
+            background-image: url(../imgs/index/assis.jpg);
+
+
+        }
+
+        .index .imageQuart {
+            background-image: url(../imgs/index/maringa.jpg);
+
+
+        }
+
+        .index .afterSubIndex {
+            margin-top: 2em;
+            text-align: center;
+            height: 1500px;
+        }
+
+        .index .FotMeio {
+            background: rgb(247, 247, 247);
+            /* height: 1900px;*/
+            width: 100%;
+        }
+
+        .headerLogin .top-bar {
+            width: 100%;
+            background: #073070;
+            background: -moz-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+            background: -webkit-linear-gradient(45deg, #073070 0%, #673AB7 125%);
+            background: linear-gradient(60deg, #073070 0%, #673AB7 125%);
+        }
+
+        .headerLogin .loginHeader {
+            position: relative;
+            padding: 25px 0 14px 0;
+            box-shadow: 0px 1px 20px 2px rgba(0, 0, 0, 0.33);
+            /* min-height: 153px; */
+        }
+
+        .ajust_mobile_head {
+            padding: 37px;
+        }
+
+        .userLogin .loginCampo {
+            margin-top: 2em;
+        }
+
+        .modal-content {
+            top: 5em;
+            margin: 0 auto;
+            width: 100%;
+            min-height: 400px;
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            outline: 0;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        }
+
+        .modal-topo .titleHeader h3 {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .modal-C {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            width: 100%;
+            min-height: 100%;
+
+        }
+
+        .index .mainIndex .mainContainerSearch .ajusteTitle {
+            /* padding: 15px !important; */
+            font-size: 28px !important;
+        }
+
+        .searchPage div.colunaResultado {
+            margin-top: 7em;
+        }
+
+        .dropMenuFront li {
+            padding: 18px !important;
+        }
+
+        .index .header .headerAjusta {
+            padding-top: 20px !important;
+
+        }
+
+    }
+
+    /************** FIM CSS MOBILE ***********************/
+
+    @media(max-width: 800px) {
+        .apenas_desktop {
+            display: none;
+        }
+    }
+
+    @media(min-width: 801px) {
+        .apenas_mobile {
+            display: none;
+        }
+
+    }
+
+    .ajuste_recebeVisitor {
+        font-size: 18px !important;
+    }
+
+    .ajuste_recebeVisitor p {
+        background: white;
+    }
+
+    .down_top_closed_front {
+        margin-top: 9px;
+        width: 14px;
+        height: 14px;
+        content: ' ' !important;
+        height: 0 !important;
+        pointer-events: none !important;
+        float: right;
+        display: block !important;
+        border-width: 18px;
+        border-color: rebeccapurple transparent transparent transparent;
+        border-style: solid !important;
+        border-image: initial !important;
+    }
+
+    .down_top_opened_front {
+        margin-top: -5px;
+        width: 14px;
+        float: right;
+        height: 14px;
+        content: ' ' !important;
+        height: 0 !important;
+        pointer-events: none !important;
+        display: block !important;
+        border-width: 18px;
+        float: right;
+        border-color: transparent transparent rebeccapurple transparent;
+        border-style: solid !important;
+        border-image: initial !important;
+    }
+
+    .down_top_closed_front_index {
+        border-color: white transparent transparent transparent !important;
+    }
+
+    .down_top_opened_front_index {
+        border-color: transparent transparent white transparent !important;
+    }
+
+    .ajust_mobile_head {
+        /* float: right; */
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 4px;
+        /* height: 45px; */
+    }
+
+    .ajust_mobile_head_index {
+        border: 1px solid white !important;
+    }
+
+    .dropMenuFront {
+        z-index: 5;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        list-style-type: none;
+        width: 190px;
+        padding: 0px 10px 0px 10px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .dropMenuFront li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+
+    .dropMenuFront li:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .img-imoveis {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+
+    .desativado {
+        cursor: not-allowed !important;
+    }
+
+    .desativado a {
+        cursor: not-allowed;
+    }
+
+    @media(min-width: 801px) {
+        .map-search {
+            height: 600px;
+        }
+
+        .mapaSection {
+            min-height: 600px;
+        }
+
+    }
+
+    @media(max-width: 800px) {
+        .map-search {
+            min-height: 450px;
+        }
+
+    }
+
+    .sobrepoePesquisaImg {
+        position: absolute;
+        width: 100%;
+        height: 65%;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* --------------------- MEDIAS ----------------------- */
+    @media (min-width: 319.9px) {
+        .ajusteTitle {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 577px) {
+        .contato {
+            display: none;
+        }
+
+        .header-widget-min {
+            display: none;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .headerLogin .top-bar-menu {
+            display: none;
+        }
+
+        .headerLogin ul.social-icons {
+            float: none;
+            margin: 0 auto;
+        }
+
+        .headerLogin .loginHeader {
+            min-height: 0;
+        }
+
+        .dropdown-toggle a.sign-in {
+            display: none;
+
+        }
+
+        .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+
+        .header-widget {
+            display: none;
+        }
+
+        .header-widget-min {
+            text-align: center;
+        }
+
+        h2.ajusTitle {
+            font-size: 30px;
+        }
+
+        .inputSearchIndex {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+
+        .top-bar-menu {
+            float: left;
+            flex-wrap: wrap;
+        }
+
+        .email {
+            font-size: 12px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        .headerLogin ul.top-bar-menu {
+            margin: 0;
+            padding-top: 18px;
+        }
+    }
+
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .navbar-brand {
+        padding: 0;
+    }
+
+    select[readonly] {
+        /* background: #eee; */
+        pointer-events: none;
+        touch-action: none;
+    }
+
+    input[type='file'] {
+        word-wrap: break-word;
+    }
+
+    #footer h4 {
+        padding-left: 15px;
+        border-bottom: 1px solid #e6e6e6;
+	}
+	
+	.vuelcal_flex, 
+	.vuecal__flex .vuecal__cell-content{
+		background-color: #eee;
+	}
+
+	.vuecal__event.event.vuecal__event--focus {
+		box-shadow: 0px 0px 4px black;
+	}
+
+	.vuecal__event.event {
+		background-color: #3ec185;
+    }
+    
+    div#map{
+        z-index: 1;
+    }
+
+    .agendamento-spinner{
+        display: inline-block;
+        width: 10rem;
+        height: 10rem;
+        vertical-align: text-bottom;
+        border: 1em solid #3ec185;
+        border-right-color: #ff000000 !important;
+        border-radius: 50%;
+        -webkit-animation: agendamento-spinner .75s linear infinite;
+        animation: agendamento-spinner .75s linear infinite;
+    }
+
+    @keyframes agendamento-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+      

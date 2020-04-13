@@ -1,0 +1,39 @@
+{"status": "3",scheduled_at:"2018-11-02 20:30:00",realtor_ID:"5c030310374fba10737417a3",visitor_ID:"5c045428374fba62b17eb413","property_ID":"5c029914374fba03314f0483","random":"1234efarofa"}
+
+
+
+ENVIO POSTMAN PARA AGENDAR
+{"data":{"hora":"11:00","data":"2018-12-03","diaSemana":"1","idimovel":"5c029914374fba03314f0483","iduser":"5c045428374fba62b17eb413"},"flag":"enviaAgenda"}
+
+
+PESQUISA OR COM REGEX (LIKE)
+db.imovel.find({"$or":[{"address.logradouro":{"$regex":"Os"}},{"address.logradouro":{"$regex":"novo"}}]})
+
+
+///////// OR IN PHP
+
+
+			$query['$or'] = array(
+				array(
+					'address.logradouro' => $regex
+				),
+				array(
+					'address.logradouro' => $regex2
+				)
+			);
+
+//////////////////////////OR WITH NIN
+			$query = array();
+			$query['$or'] = $where;
+
+			$query['state'] = array('$nin'=>array('SP')); 
+
+
+
+
+
+/////////////////PAGINAÇÃO COM MONGODB
+			$offset = ($pagina - 1) * 2;
+			$options = array();
+			$options['limit'] = 2;
+			$options['skip'] = $offset;

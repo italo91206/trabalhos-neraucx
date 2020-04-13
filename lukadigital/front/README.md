@@ -1,0 +1,46 @@
+# LukaDigital 
+#### Para implementar
+- [ ] Centralizar o check-box do evento do vue-cal
+- [ ] Ver se o carousel precisa estar dentro de um container ? ( Imovel.vue )
+- [ ] Fazer limite de paginação nas agendas-usuário e agenda-corretor ( você deixou o 'Pesquisa.vue' na metade!)
+- [ ] Caso condomínio tenha, fazer um blog-page ( com descrição, fotos, vídeos, detalhes e etc)
+- [ ] Introduzir chamada para corretor via SMS
+- [ ] O cadastro vencerá a cada 120 dias, sendo necessário atualizar os seus dados
+- [ ] Agenda usuário -> opção ocultar não funciona
+
+#### Implementado
+- [x] Pegar atalho do link pela agenda, não empurra o rótulo no router. Ver isso!
+- [x] API -> não está vindo data, apenas horário nos e-mails para o corretor confirmar a visita.
+- [x] Mostrar o endereço do imóvel no primeiro bloco da descrição
+- [x] Trocar os botões “Anterior” e “Próximo” por ícones de setas nas laterais (seguir exemplo das setas na seção NOVIDADES da Bearco)
+- [x] Remover barra do título do imóvel
+- [x] No agendar visita, fazer as seguintes alterações:
+- [x] Inserir um loader após o clique do “Confirmar agendamento”
+- [x] Trocar o fundo azul por um verde claro (#3ec185)
+- [x] Trocar a cor do botão “Confirmar agendamento” para #3ec185
+- [x] Verificar o z-index do mapa com a popup aberta (.modalBackground { z-index: 1039; })
+- [x] Implementar reload da popup de agendamento a cada clique nos botões de agendamento
+- [x] Deixar o slider de imagens “atrás” da sombra do header
+- [x] Deixar as datas indisponíveis com fundo cinza (#eee)
+- [x] Verificar por que não está mostrando o botão de login/cadastro no visitar agora
+- [x] Remover o campo do CNH obrigatório
+- [x] Você agora pode navegar entre logar e cadastrar ( antes não podia, tinha que dar refresh )
+- [x] Página imovel + modal de visita agora/agenda precisam ser reativos ao login
+- [x] Incluir um botão de cadastro no modal visitar agora/agendar visita
+- [x] Simplificar cadastro, deixar apenas os campos Nome / E-mail / Telefone / CPF ( apenas visão cadastrar pra alugar )
+- [x] Se você selecionar para agendar num dia que já passou, precisa ser marcado para a próxima semana.
+- [x] Não é possível cancelar um agendamento que tenha um corretor
+- [x] Configurar o envio dos e-mail de acordo com suas funções e as informações corretas.
+- [x] No agendar agora, tem que ver se já não está acontecendo uma visita no dia mostrado. Caso sim, é preciso indisponibilizar para clique.
+- [x] Os horários para ver se está disponível ou não a visita, não está certo
+- [x] Os horários de cada dia na agenda estão errados. Arrumar!
+- [x] Agenda do corretor possui informações do visitante: foto, whatsapp e telefonema.
+- [x] Agenda do visitante possui informações do corretor: foto, whatsapp e telefonema.
+- [x] Área valores deverá ter uma separação para capitalização e outra com seguro fiança. Ambos terão descritos o aluguel
+- [x] A primeiro momento, cadastro de corretor tem que estar desabilitado;
+- [x] CNH não será obrigatório para cadastro, mas CPF e RG sim 
+- [x] Ao cadastrar novo cliente/visitante, necessário indexar fotos RG, CPF, comprovante endereço e certidão de nascimento
+- Ao clicar no visitar agora:
+-  [x] Aparecer tela de login
+-  [x] Caso não, aparecer calendário para marcar visita.
+-  [x] Se tiver corretor disponível, exibir mensagem de disponibilidade para agendamento de imediato

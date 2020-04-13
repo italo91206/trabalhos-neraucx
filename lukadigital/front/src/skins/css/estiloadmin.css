@@ -1,0 +1,425 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+
+.tabelaADMIN{
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+
+}
+
+.tabelaADMIN thead th{
+        vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+        padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+p.nameADMIN{
+    font-size: 13px;
+    float: left;
+    margin-top: 8px;
+}
+
+.tabelaADMIN tbody td{
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+
+}
+.tabelaADMIN tr:hover{
+    background-color:#ecedec;
+}
+.tabelaADMIN tr:nth-child(odd) td{
+    background-color: #ecedec;
+}
+.tabelaADMIN tr:nth-child(even) td{
+    background-color: white;
+}
+.painelmeuperfil{
+	font-family: lato !important;
+}
+.centraliza{
+    margin: 0 auto;
+}
+.indexadmin{
+    background: #32323A;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.form-headerAdmin{
+	    margin: 0;
+    padding: 35px 15px;
+    text-align: center;
+    background: #5275ab;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+    border-bottom: 10px solid #073070;
+}
+.formLoginAdmin{
+	margin-top: -1%;
+}
+.content-login{
+	    max-width: 330px;
+    margin: 100px auto;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.login-campos{
+	    padding: 20px;
+    position: relative;
+}
+
+.user-login-info{
+	    background: #eaeaec;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+}
+.admin .form-linha i{
+	top: 17px !important;
+}
+
+.botaoPadraoAdmin{
+    background: #1fb569;
+    top: 0;
+    padding: 10px 20px;
+    color: white !important;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-right: 6px;
+    overflow: hidden;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.headerconfigAdmin img{
+	margin-top: 10px;
+    width: 128px;
+    margin-left: 20px;
+}
+
+
+
+.dropdownAdmin .fa-user{
+	    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: solid 1px #3F51B5;
+    text-align: center;
+    line-height: 2;
+    color: #3F51B5;
+}
+
+
+
+
+
+div.sideAdmin div{
+	 position: relative;
+    background: #4a4b4d;
+    color: #fff;
+}
+div.sideAdmin div:hover, div.sideAdmin div:hover a {
+    background: #fff;
+    color: #073070;
+    display: block;
+    font-size: 14px;
+}
+div.sideAdmin div a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 18px 0 18px 25px;
+    font-size: 12px;
+    outline: none;
+}
+
+.content-painel{
+	padding: 10px;
+	width: 100%;
+
+}
+
+.titlesAdmin{
+	    border-color: #eff2f7;
+    font-size: 13px;
+    font-weight: 400;
+    background: #fafafa;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+
+.checkPadrao{
+
+  	    height: 24px;
+    width: 22px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+
+}
+.espacaCheckPadrao{
+	margin-left: 28px !important;
+}
+.espacaCheckPadraoVer{
+	margin-top: 1em;
+}
+.selectPadraoAdmin, .inputPadraoAdmin{
+	display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-isn-out .15s;
+}
+.painelmeuperfil hr{
+	    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.dropMenuAdmin{
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    list-style-type: none;
+    width: 190px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    display: inline-block;
+
+}
+.dropMenuAdmin li{
+        border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-top: 10px;
+    padding: 10px;
+}
+.dropMenuAdmin li:hover{
+        border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-top: 10px;
+    background: rgba(0,0,0,0.1);
+}
+.down_top_closed{
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    content: ' ' !important;
+    height: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    display: block !important;
+    border-width: 11px;
+    border-color: #3F51B5 transparent transparent transparent !important;
+    /* top: 10px !important; */
+    /* left: 278px; */
+    border-style: solid !important;
+    border-image: initial !important;
+    /* background: rebeccapurple; */
+}
+.down_top_opened{
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    width: 14px;
+    height: 14px;
+    content: ' ' !important;
+    height: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    display: block !important;
+    border-width: 11px;
+    border-color: transparent transparent rebeccapurple transparent !important;
+    /* top: 10px !important; */
+    /* left: 278px; */
+    border-style: solid !important;
+    border-image: initial !important;
+    /* background: rebeccapurple; */
+}
+
+.corretorPerfil{
+	display: none;
+}
+
+@media(min-width: 814px){
+	.topoadmin{
+	    background: linear-gradient(60deg, #4275c5 0%,#073070 125%);
+	    width: 100%;
+	    height: 80px;
+
+
+
+	 }
+
+	 .dropdownAdmin{
+		 width: 100%;
+   		 height: 35px;
+   		 background: white;
+   		 margin-top: 4vh;
+       	 position: relative;
+   		 border-radius: 29px;
+
+		}
+
+
+.content-painel{
+	margin-left: 17%;
+
+}
+.ajusteColuna{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+    height: 100%;
+    position: fixed;
+    background: #4a4b4d;
+}
+
+.exibirPainelMob{
+
+	display: none;
+}
+.ajustContainer{
+	width: 80%;
+}
+.espacaNormal{
+	margin-top: 2em;
+}
+
+}/**** FIM DESKTOP CSS **/
+
+@media(max-width: 813px){
+
+    .editaAgendaAdmin .row .w-25{
+        width: 100% !important;
+    }
+
+    input[type="file"]{
+        font-size: 13px;
+    }
+	.topoadmin{
+	    background: linear-gradient(60deg, #aa146d 0%,#5b215e 125%);
+	    width: 100%;
+	    height: 151px;
+	}
+	.dropdownAdmin{
+        text-align: center;
+	  width: 76%;
+      height: 35px;
+      background: white;
+      margin-top: 3vh;
+      position: relative;
+     border-radius: 29px;
+     margin: 0 auto;
+
+	}
+
+	.centraImagem{
+		text-align: center;
+	}
+	.centradrop{
+		margin-top: 13px;
+       text-align: center;
+       z-index: 20;
+	}
+	.ajusteColuna{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+    height: 100%;
+    display: none;
+    background: #4a4b4d;
+	}
+	.exibirPainelMob {
+            width: 100%;
+            padding: 15px;
+            margin-top: 5px;
+            text-align: center;
+            color: white;
+            background-color: #aa146d;
+
+	
+	}
+	.exibirPainelMob i.ativo{
+		position: absolute;
+		right: 0;
+		transition: 1s;
+	}
+
+	.espacaMobile{
+		margin-top: 1em;
+	}
+    .dropMenuAdmin{
+        width: 100% !important;
+    }
+    .dropMenuAdmin li{
+        padding: 18px;
+
+    }
+    .img-blog_upload{
+            width: 24% !important;
+
+}
+
+
+}/*** FIM MOBILE CSS ***/
+
+.img-blog_upload{
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.criaBlog input[type="file"] ,.editBlog input[type="file"]  {
+    font-size: 13px;
+}
+
+.blogImagesText{
+    padding-bottom: 10px;
+    border: 1px solid #ecedec;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding-top: 11px;
+}
+
+.blogImagesText img{
+        margin-left: 8px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+}
