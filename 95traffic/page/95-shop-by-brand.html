@@ -1,63 +1,89 @@
 <script>
     require(['jquery'], function($){
         var brands = [
-            {name: "3M", image: "{{media url='wysiwyg/coming-soon/01.jpg'}}", link: "{{store direct_url='shop-by-brand/3m'}}"},
-            {name: "Albion", image: "{{media url='wysiwyg/coming-soon/albion.jpg'}}", link: "{{store direct_url='shop-by-brand/albion'}}"},
-            {name: "Ames True Temper", image: "{{media url='wysiwyg/coming-soon/02.jpg'}}", link: "{{store direct_url='shop-by-brand/ames'}}"},
-            {name: "Astro Optics", image: "{{media url='wysiwyg/coming-soon/astro-optics.jpg'}}", link: "{{store direct_url='shop-by-brand/astro-optics'}}"}, 
-            {name: "Bone", image: "{{media url='wysiwyg/coming-soon/bone.jpg'}}", link: "{{store direct_url='shop-by-brand/bone'}}"},
-            {name: "Boss", image: "{{media url='wysiwyg/coming-soon/boss.jpg'}}", link: "{{store direct_url='shop-by-brand/boss-gloves'}}"},
-            {name: "Chesapeake Valley Seed", image: "{{media url='wysiwyg/coming-soon/chesapeake.jpg'}}", link: "{{store direct_url='shop-by-brand/chesapeake-valley-seed'}}"},
-            {name: "Chicago Canvas & Supply", image: "{{media url='wysiwyg/coming-soon/chicago.jpg'}}", link: "{{store direct_url='shop-by-brand/chicago-canvas-and-supply'}}"},
-            {name: "Coburn Chemicals", image: "{{media url='wysiwyg/coming-soon/03.jpg'}}", link: "{{store direct_url='shop-by-brand/coburn-chemicals'}}"},
-            {name: "Dixon", image: "{{media url='wysiwyg/coming-soon/dixon.jpg'}}", link: "{{store direct_url='shop-by-brand/dixon'}}"},
-            {name: "Eagle", image: "{{media url='wysiwyg/coming-soon/04.jpg'}}", link: "{{store direct_url='shop-by-brand/eagle'}}"},
-            {name: "Empco", image: "{{media url='wysiwyg/coming-soon/empco.jpg'}}", link: "{{store direct_url='shop-by-brand/empco'}}"},
-            {name: "Energizer", image: "{{media url='wysiwyg/coming-soon/energizer.jpg'}}", link: "{{store direct_url='shop-by-brand/energizer'}}"},
-            {name: "ERB", image: "{{media url='wysiwyg/coming-soon/erb.jpg'}}", link: "{{store direct_url='shop-by-brand/erb'}}"},
-            {name: "FallTech", image: "{{media url='wysiwyg/coming-soon/05.jpg'}}", link: "{{store direct_url='shop-by-brand/fall-tech'}}"},
-            {name: "Franklin Industries", image: "{{media url='wysiwyg/coming-soon/06.jpg'}}", link: "{{store direct_url='shop-by-brand/franklin-industries'}}"},
-            {name: "Gerson", image: "{{media url='wysiwyg/coming-soon/gerson.jpg'}}", link: "{{store direct_url='shop-by-brand/gerson'}}"},
-            {name: "Grimco", image: "{{media url='wysiwyg/coming-soon/07.jpg'}}", link: "{{store direct_url='shop-by-brand/grimco'}}"},
-            {name: "Hanes Geo Components", image: "{{media url='wysiwyg/coming-soon/08.jpg'}}", link: "{{store direct_url='shop-by-brand/hanes-geo'}}"},
-            {name: "Igloo", image: "{{media url='wysiwyg/coming-soon/09.jpg'}}", link: "{{store direct_url='shop-by-brand/igloo'}}"},
-            {name: "Impact Recovery Systems", image: "{{media url='wysiwyg/coming-soon/10.jpg'}}", link: "{{store direct_url='shop-by-brand/impact-recovery'}}"},
-            {name: "Irwin", image: "{{media url='wysiwyg/coming-soon/irwin.jpg'}}", link: "{{store direct_url='shop-by-brand/irwin'}}"},
-            {name: "It Straps On", image: "{{media url='wysiwyg/coming-soon/it-straps-on.jpg'}}", link: "{{store direct_url='shop-by-brand/it-straps-on'}}"},
-            {name: "John Stortz & Son", image: "{{media url='wysiwyg/coming-soon/Stortz.jpg'}}", link: "{{store direct_url='shop-by-brand/john-stortz-son}}"},
-            {name: "Kaufman Concrete Treatments", image: "{{media url='wysiwyg/coming-soon/11.jpg'}}", link: "{{store direct_url='shop-by-brand/kaufman'}}"},
-            {name: "Keson", image: "{{media url='wysiwyg/coming-soon/keson.jpg'}}", link: "{{store direct_url='shop-by-brand/keson'}}"},
-            {name: "Kraft Tool Co.", image: "{{media url='wysiwyg/coming-soon/12.jpg'}}", link: "{{store direct_url='shop-by-brand/kraft'}}"},
-            {name: "Larsen Products", image: "{{media url='wysiwyg/coming-soon/larsen.jpg'}}", link: "{{store direct_url='shop-by-brand/larsen'}}"},
-            {name: "Lehigh", image: "{{media url='wysiwyg/coming-soon/lehigh.jpg'}}", link: "{{store direct_url='shop-by-brand/lehigh'}}"},
-            {name: "Linzer", image: "{{media url='wysiwyg/coming-soon/linzer.jpg'}}", link: "{{store direct_url='shop-by-brand/linzer'}}"}, 
-            {name: "Marmac", image: "{{media url='wysiwyg/coming-soon/marmac.jpg'}}", link: "{{store direct_url='shop-by-brand/marmac'}}"},
-            {name: "ML Kishigo", image: "{{media url='wysiwyg/coming-soon/13.jpg'}}", link: "{{store direct_url='shop-by-brand/ml-kishigo'}}"},
-            {name: "North American Signal", image: "{{media url='wysiwyg/coming-soon/north-american-signal.jpg'}}", link: "{{store direct_url='shop-by-brand/north-american-signal'}}"},
-            {name: "Nucor", image: "{{media url='wysiwyg/coming-soon/nucor.jpg'}}", link: "{{store direct_url='shop-by-brand/nucor'}}"},
-            {name: "Perma-Patch", image: "{{media url='wysiwyg/coming-soon/perma-patch.jpg'}}", link: "{{store direct_url='shop-by-brand/perma-patch'}}"},
-            {name: "Pexco", image: "{{media url='wysiwyg/coming-soon/14.jpg'}}", link: "{{store direct_url='shop-by-brand/pexco'}}"},
-            {name: "Poly America", image: "{{media url='wysiwyg/coming-soon/poly-america.jpg'}}", link: "{{store direct_url='shop-by-brand/poly-america'}}"}, 
-            {name: "Post Guard", image: "{{media url='wysiwyg/coming-soon/15.jpg'}}", link: "{{store direct_url='shop-by-brand/post-guard'}}"},
-            {name: "Rayovac", image: "{{media url='wysiwyg/coming-soon/rayovac.jpg'}}", link: "{{store direct_url='shop-by-brand/rayovac'}}"},
-            {name: "Razorback Professional Tools", image: "{{media url='wysiwyg/coming-soon/17.jpg'}}", link: "{{store direct_url='shop-by-brand/razor-back'}}"},
-            {name: "Safety Vehicle Emblem,", image: "{{media url='wysiwyg/coming-soon/safety-vehicle.jpg'}}", link: "{{store direct_url='shop-by-brand/safety-vehicle-emblem'}}"},
-            {name: "Seaboard", image: "{{media url='wysiwyg/coming-soon/Seaboard.jpg'}}", link: "{{store direct_url='shop-by-brand/seaboard'}}"},
-            {name: "Seymour", image: "{{media url='wysiwyg/coming-soon/18.jpg'}}", link: "{{store direct_url='shop-by-brand/seymour'}}"},
-            {name: "Sonco", image: "{{media url='wysiwyg/coming-soon/sonco.png'}}", link: "{{store direct_url='shop-by-brand/sonco'}}"}, 
-            {name: "Tenax", image: "{{media url='wysiwyg/coming-soon/Tenax.jpg'}}", link: "{{store direct_url='shop-by-brand/tenax'}}"},
-            {name: "Tipco", image: "{{media url='wysiwyg/coming-soon/Tipco.png'}}", link: "{{store direct_url='shop-by-brand/tipco'}}"},
-            {name: "Top Safety", image: "{{media url='wysiwyg/coming-soon/top-safety.jpg'}}", link: "{{store direct_url='shop-by-brand/top-safety'}}"},
-            {name: "Trinity Highway", image: "{{media url='wysiwyg/coming-soon/24.jpg'}}", link: "{{store direct_url='shop-by-brand/trinity-highway'}}"},
-            {name: "U.S. Tape", image: "{{media url='wysiwyg/coming-soon/20.jpg'}}", link: "{{store direct_url='shop-by-brand/us-tape'}}"},
-            {name: "Unger Services", image: "{{media url='wysiwyg/coming-soon/unger.jpg'}}", link: "{{store direct_url='shop-by-brand/unger'}}"},
-            {name: "United Abrasives", image: "{{media url='wysiwyg/coming-soon/19.jpg'}}", link: "{{store direct_url='shop-by-brand/united-abrasives'}}"},
-            {name: "Vaughan & Bushnell", image: "{{media url='wysiwyg/coming-soon/vaughan.jpg'}}", link: "{{store direct_url='shop-by-brand/vaughan-bushnell'}}"},
-            {name: "Vulcan Tools", image: "{{media url='wysiwyg/coming-soon/Vulcan.jpg'}}", link: "{{store direct_url='shop-by-brand/vulcan'}}"},
-            {name: "Wanco", image: "{{media url='wysiwyg/coming-soon/21.jpg'}}", link: "{{store direct_url='shop-by-brand/wanco'}}"},
-            {name: "W.R. Meadows", image: "{{media url='wysiwyg/coming-soon/22.jpg'}}", link: "{{store direct_url='shop-by-brand/w-r-meadows'}}"},
-            {name: "Wright", image: "{{media url='wysiwyg/coming-soon/23.jpg'}}", link: "{{store direct_url='shop-by-brand/wright'}}"},
-        ];
+        {name: "3M", image: "{{media url='wysiwyg/coming-soon/01.jpg'}}", link: "{{store direct_url='shop-by-brand/3m'}}"},
+        {name: "ADA", image: "{{media url='wysiwyg/coming-soon/ada.png'}}", link: "{{store direct_url='shop-by-brand/ada'}}"},
+		{name: "Albion", image: "{{media url='wysiwyg/coming-soon/albion.jpg'}}", link: "{{store direct_url='shop-by-brand/albion'}}"},
+        {name: "Ames True Temper", image: "{{media url='wysiwyg/coming-soon/02.jpg'}}", link: "{{store direct_url='shop-by-brand/ames'}}"},
+		{name: "Astro Optics", image: "{{media url='wysiwyg/coming-soon/astro-optics.jpg'}}", link: "{{store direct_url='shop-by-brand/astro-optics'}}"},
+		{name: "Better Brush", image: "{{media url='wysiwyg/coming-soon/betterbrush.jpg'}}", link: "{{store direct_url='shop-by-brand/better-brush'}}"},
+		{name: "Bone", image: "{{media url='wysiwyg/coming-soon/bone.jpg'}}", link: "{{store direct_url='shop-by-brand/bone'}}"},
+		{name: "Bonsal", image: "{{media url='wysiwyg/coming-soon/bonsal.jpg'}}", link: "{{store direct_url='shop-by-brand/bonsal'}}"},
+		{name: "Boss", image: "{{media url='wysiwyg/coming-soon/boss.jpg'}}", link: "{{store direct_url='shop-by-brand/boss-gloves'}}"},
+		{name: "Buckeye", image: "{{media url='wysiwyg/coming-soon/buckeye.jpg'}}", link: "{{store direct_url='shop-by-brand/buckeye'}}"},
+		{name: "CEP", image: "{{media url='wysiwyg/coming-soon/cep.jpg'}}", link: "{{store direct_url='shop-by-brand/cep}}"},
+		{name: "Chapin", image: "{{media url='wysiwyg/coming-soon/chapin.jpg'}}", link: "{{store direct_url='shop-by-brand/chapin'}}"},
+		{name: "Chesapeake Valley Seed", image: "{{media url='wysiwyg/coming-soon/chesapeake.jpg'}}", link: "{{store direct_url='shop-by-brand/chesapeake-valley-seed'}}"},
+		{name: "Chicago Canvas & Supply", image: "{{media url='wysiwyg/coming-soon/chicago.jpg'}}", link: "{{store direct_url='shop-by-brand/chicago-canvas-and-supply'}}"},
+        {name: "Coburn Chemicals", image: "{{media url='wysiwyg/coming-soon/03.jpg'}}", link: "{{store direct_url='shop-by-brand/coburn-chemicals'}}"},
+		{name: "Cortina", image: "{{media url='wysiwyg/coming-soon/cortina.jpg'}}", link: "{{store direct_url='shop-by-brand/cortina'}}"},
+		{name: "Deslauriers", image: "{{media url='wysiwyg/coming-soon/deslauriers.jpg'}}", link: "{{store direct_url='shop-by-brand/deslauriers'}}"},
+		{name: "Dixon", image: "{{media url='wysiwyg/coming-soon/dixon.jpg'}}", link: "{{store direct_url='shop-by-brand/dixon'}}"},
+        {name: "Eagle", image: "{{media url='wysiwyg/coming-soon/04.jpg'}}", link: "{{store direct_url='shop-by-brand/eagle'}}"},
+		{name: "Electro Tape", image: "{{media url='wysiwyg/coming-soon/electro-tape.jpg'}}", link: "{{store direct_url='shop-by-brand/electro-tape'}}"},
+		{name: "Ellwood Safety", image: "{{media url='wysiwyg/coming-soon/ellwood-safety.jpg'}}", link: "{{store direct_url='shop-by-brand/ellwood-safety'}}"},
+		{name: "Empco", image: "{{media url='wysiwyg/coming-soon/empco.jpg'}}", link: "{{store direct_url='shop-by-brand/empco'}}"},
+		{name: "Energizer", image: "{{media url='wysiwyg/coming-soon/energizer.jpg'}}", link: "{{store direct_url='shop-by-brand/energizer'}}"},
+		{name: "Ennis Flint", image: "{{media url='wysiwyg/coming-soon/ennis-flint.jpg'}}", link: "{{store direct_url='shop-by-brand/ennis-flint'}}"},
+		{name: "ERB", image: "{{media url='wysiwyg/coming-soon/erb.jpg'}}", link: "{{store direct_url='shop-by-brand/erb'}}"},
+        {name: "FallTech", image: "{{media url='wysiwyg/coming-soon/05.jpg'}}", link: "{{store direct_url='shop-by-brand/fall-tech'}}"},
+		{name: "Frank Winne", image: "{{media url='wysiwyg/coming-soon/frank-winne.jpg'}}", link: "{{store direct_url='shop-by-brand/frank-winne'}}"},
+        {name: "Franklin Industries", image: "{{media url='wysiwyg/coming-soon/06.jpg'}}", link: "{{store direct_url='shop-by-brand/franklin-industries'}}"},
+		{name: "Gerson", image: "{{media url='wysiwyg/coming-soon/gerson.jpg'}}", link: "{{store direct_url='shop-by-brand/gerson'}}"},
+        {name: "Grimco", image: "{{media url='wysiwyg/coming-soon/07.jpg'}}", link: "{{store direct_url='shop-by-brand/grimco'}}"},
+        {name: "Hanes Geo", image: "{{media url='wysiwyg/coming-soon/08.jpg'}}", link: "{{store direct_url='shop-by-brand/hanes-geo'}}"},
+		{name: "Hygrade", image: "{{media url='wysiwyg/coming-soon/hygrade.jpg'}}", link: "{{store direct_url='shop-by-brand/hygrade'}}"},
+        {name: "Igloo", image: "{{media url='wysiwyg/coming-soon/09.jpg'}}", link: "{{store direct_url='shop-by-brand/igloo'}}"},
+        {name: "Impact Recovery Systems", image: "{{media url='wysiwyg/coming-soon/10.jpg'}}", link: "{{store direct_url='shop-by-brand/impact-recovery'}}"},
+		{name: "Insteel", image: "{{media url='wysiwyg/coming-soon/insteel.jpg'}}", link: "{{store direct_url='shop-by-brand/insteel'}}"},
+		{name: "Irwin", image: "{{media url='wysiwyg/coming-soon/irwin.jpg'}}", link: "{{store direct_url='shop-by-brand/irwin'}}"},
+		{name: "It Straps On", image: "{{media url='wysiwyg/coming-soon/it-straps-on.jpg'}}", link: "{{store direct_url='shop-by-brand/it-straps-on'}}"},
+		{name: "JBC", image: "{{media url='wysiwyg/coming-soon/jbc.jpg'}}", link: "{{store direct_url='shop-by-brand/jbc'}}"},
+		{name: "John Stortz & Son", image: "{{media url='wysiwyg/coming-soon/Stortz.jpg'}}", link: "{{store direct_url='shop-by-brand/john-stortz-son}}"},
+        {name: "Kaufman Concrete Treatments", image: "{{media url='wysiwyg/coming-soon/11.jpg'}}", link: "{{store direct_url='shop-by-brand/kaufman'}}"},
+		{name: "Keson", image: "{{media url='wysiwyg/coming-soon/keson.jpg'}}", link: "{{store direct_url='shop-by-brand/keson'}}"},
+        {name: "Kraft Tool", image: "{{media url='wysiwyg/coming-soon/12.jpg'}}", link: "{{store direct_url='shop-by-brand/kraft'}}"},
+		{name: "Larsen Products", image: "{{media url='wysiwyg/coming-soon/larsen.jpg'}}", link: "{{store direct_url='shop-by-brand/larsen'}}"},
+		{name: "Lehigh", image: "{{media url='wysiwyg/coming-soon/lehigh.jpg'}}", link: "{{store direct_url='shop-by-brand/lehigh'}}"},
+		{name: "Linzer", image: "{{media url='wysiwyg/coming-soon/linzer.jpg'}}", link: "{{store direct_url='shop-by-brand/linzer'}}"},
+		{name: "MA Industries", image: "{{media url='wysiwyg/coming-soon/ma-industries.jpg'}}", link: "{{store direct_url='shop-by-brand/ma-industries'}}"},
+		{name: "Marmac", image: "{{media url='wysiwyg/coming-soon/marmac.jpg'}}", link: "{{store direct_url='shop-by-brand/marmac'}}"},	
+        {name: "ML Kishigo", image: "{{media url='wysiwyg/coming-soon/13.jpg'}}", link: "{{store direct_url='shop-by-brand/ml-kishigo'}}"},
+		{name: "Mutual", image: "{{media url='wysiwyg/coming-soon/mutual.jpg'}}", link: "{{store direct_url='shop-by-brand/mutual'}}"},
+		{name: "North American Signal", image: "{{media url='wysiwyg/coming-soon/north-american-signal.jpg'}}", link: "{{store direct_url='shop-by-brand/north-american-signal'}}"},
+		{name: "Nucor", image: "{{media url='wysiwyg/coming-soon/nucor.jpg'}}", link: "{{store direct_url='shop-by-brand/nucor'}}"},
+		{name: "Nupla", image: "{{media url='wysiwyg/coming-soon/nupla.jpg'}}", link: "{{store direct_url='shop-by-brand/nupla'}}"},
+		{name: "ORS/Nasco", image: "{{media url='wysiwyg/coming-soon/ors-nasco.jpg'}}", link: "{{store direct_url='shop-by-brand/ors-nasco'}}"},
+		{name: "Pavement Tools", image: "{{media url='wysiwyg/coming-soon/pavement-tools.jpg'}}", link: "{{store direct_url='shop-by-brand/pavement-tools'}}"},
+		{name: "Perma-Patch", image: "{{media url='wysiwyg/coming-soon/perma-patch.jpg'}}", link: "{{store direct_url='shop-by-brand/perma-patch'}}"},
+        {name: "Pexco", image: "{{media url='wysiwyg/coming-soon/14.jpg'}}", link: "{{store direct_url='shop-by-brand/pexco'}}"},
+		{name: "Poly America", image: "{{media url='wysiwyg/coming-soon/poly-america.jpg'}}", link: "{{store direct_url='shop-by-brand/poly-america'}}"},
+        {name: "Post Guard", image: "{{media url='wysiwyg/coming-soon/15.jpg'}}", link: "{{store direct_url='shop-by-brand/post-guard'}}"},	
+		{name: "Propex", image: "{{media url='wysiwyg/coming-soon/propex.jpg'}}", link: "{{store direct_url='shop-by-brand/propex'}}"},
+		{name: "Rayovac", image: "{{media url='wysiwyg/coming-soon/rayovac.jpg'}}", link: "{{store direct_url='shop-by-brand/rayovac'}}"},
+        {name: "Razorback Professional Tools", image: "{{media url='wysiwyg/coming-soon/17.jpg'}}", link: "{{store direct_url='shop-by-brand/razor-back'}}"},		
+		{name: "Remcon", image: "{{media url='wysiwyg/coming-soon/remcon.jpg'}}", link: "{{store direct_url='shop-by-brand/remcon'}}"},		
+		{name: "Safe Guard Signs", image: "{{media url='wysiwyg/coming-soon/safe-guard-signs.jpg'}}", link: "{{store direct_url='shop-by-brand/safe-guard-signs'}}"},		
+		{name: "Safety Vehicle Emblem,", image: "{{media url='wysiwyg/coming-soon/safety-vehicle.jpg'}}", link: "{{store direct_url='shop-by-brand/safety-vehicle-emblem'}}"},		
+		{name: "Sakrete", image: "{{media url='wysiwyg/coming-soon/sakrete.jpg'}}", link: "{{store direct_url='shop-by-brand/sakrete'}}"},		
+		{name: "Seaboard", image: "{{media url='wysiwyg/coming-soon/Seaboard.jpg'}}", link: "{{store direct_url='shop-by-brand/seaboard'}}"},	
+        {name: "Seymour", image: "{{media url='wysiwyg/coming-soon/18.jpg'}}", link: "{{store direct_url='shop-by-brand/seymour'}}"},	
+		{name: "Shaffer Products", image: "{{media url='wysiwyg/coming-soon/shaffer.jpg'}}", link: "{{store direct_url='shop-by-brand/shaffer'}}"},
+		{name: "Sonco", image: "{{media url='wysiwyg/coming-soon/sonco.png'}}", link: "{{store direct_url='shop-by-brand/sonco'}}"},
+		{name: "Tenax", image: "{{media url='wysiwyg/coming-soon/Tenax.jpg'}}", link: "{{store direct_url='shop-by-brand/tenax'}}"},	
+		{name: "Tennesse Hickory", image: "{{media url='wysiwyg/coming-soon/tennesse-hickory.jpg'}}", link: "{{store direct_url='shop-by-brand/tennesse-hickory'}}"},
+		{name: "Tipco", image: "{{media url='wysiwyg/coming-soon/Tipco.jpg'}}", link: "{{store direct_url='shop-by-brand/tipco'}}"},
+		{name: "Top Safety", image: "{{media url='wysiwyg/coming-soon/top-safety.jpg'}}", link: "{{store direct_url='shop-by-brand/top-safety'}}"},
+		{name: "Trinity Highway", image: "{{media url='wysiwyg/coming-soon/24.jpg'}}", link: "{{store direct_url='shop-by-brand/trinity-highway'}}"},
+		{name: "U.S. Tape", image: "{{media url='wysiwyg/coming-soon/20.jpg'}}", link: "{{store direct_url='shop-by-brand/us-tape'}}"},
+		{name: "Unger Services", image: "{{media url='wysiwyg/coming-soon/unger.jpg'}}", link: "{{store direct_url='shop-by-brand/unger'}}"},
+        {name: "United Abrasives", image: "{{media url='wysiwyg/coming-soon/19.jpg'}}", link: "{{store direct_url='shop-by-brand/united-abrasives'}}"},
+		{name: "Vaughan & Bushnell", image: "{{media url='wysiwyg/coming-soon/vaughan.jpg'}}", link: "{{store direct_url='shop-by-brand/vaughan-bushnell'}}"},
+		{name: "Vulcan Tools", image: "{{media url='wysiwyg/coming-soon/Vulcan.jpg'}}", link: "{{store direct_url='shop-by-brand/vulcan'}}"},
+        {name: "W.R. Meadows", image: "{{media url='wysiwyg/coming-soon/22.jpg'}}", link: "{{store direct_url='shop-by-brand/w-r-meadows'}}"},		
+        {name: "Wanco", image: "{{media url='wysiwyg/coming-soon/21.jpg'}}", link: "{{store direct_url='shop-by-brand/wanco'}}"},
+        {name: "Wright", image: "{{media url='wysiwyg/coming-soon/23.jpg'}}", link: "{{store direct_url='shop-by-brand/wright'}}"},
+    ];
     
         var html = '<div class="row flex">';
         var cont = 0;
@@ -73,56 +99,64 @@
     
         jQuery('#brands-catalog').html(html);
     });        
-    </script>
-    <div id="shop-by-brand">
-        <div class="container">
-            <h1>SHOP BY BRAND</h1>
-            <div id="brands-catalog">
-            </div>
-        </div>
+</script>
+
+<div id="shop-by-brand">
+    <div class="container">
+        <h1>SHOP BY BRAND</h1>
+        <div id="brands-catalog"></div>
     </div>
+</div>
     
-    <style>
-        .flex{
-            display: flex;
-        }
-        .flex .row{
-            width: 100%;
-        }
-        .flex .row .shop-by-brand{
-            width: 33.33%;
-        }
-        .shop-by-brand {
-            margin: 0 auto;
-        }
-        main#maincontent {
-            background: white;
-        }
-        .shop-by-brand {
-            height: 95px;
-            width: 300px;
-            box-shadow: 0px 0px 18.96px 5.04px rgba(38, 90, 121, 0.15);
-            background-color: white !important;
-            position: relative;
-            text-align: center;
-            opacity: 1;
-            min-height: 200px;
-        }
-        .shop-by-brand img {
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-            width: auto !important;
-            margin-top: 20%;
-            max-width: 80%;
-        }
-        .row.flex {
-            margin: 20px;
-        }
-        #shop-by-brand h1{
-            font-size: 45px;
-            color: black;
-            margin: 40px !important;
-        }
-    </style>
+<style>
+    .flex {
+        display: flex;
+    }
+
+    .flex .row {
+        width: 100%;
+    }
+
+    .flex .row .shop-by-brand {
+        width: 33.33%;
+    }
+
+    .shop-by-brand {
+        margin: 0 auto;
+    }
+
+    main#maincontent {
+        background: white;
+    }
+
+    .shop-by-brand {
+        height: 95px;
+        width: 300px;
+        box-shadow: 0px 0px 18.96px 5.04px rgba(38, 90, 121, 0.15);
+        background-color: white !important;
+        position: relative;
+        text-align: center;
+        opacity: 1;
+        min-height: 200px;
+    }
+
+    .shop-by-brand img {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto !important;
+        margin-top: 20%;
+        max-width: 80%;
+    }
+
+    .row.flex {
+        margin: 20px;
+    }
+
+    #shop-by-brand h1 {
+        font-size: 45px;
+        color: black;
+        margin: 40px !important;
+    }
+</style>
