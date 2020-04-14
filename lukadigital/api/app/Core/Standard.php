@@ -47,7 +47,7 @@ class Standard {
 	}
 
 
- public static function getNomeSemana($semana){
+ 	public static function getNomeSemana($semana){
     	$valor =  array();
     	switch($semana){
     		case 0:
