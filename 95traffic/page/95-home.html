@@ -9,7 +9,7 @@
             <section class="container desktop">
                 
                 <div class="careers-pre-slider" style="height: 51px;">
-                    <img src="{{media url=&quot;wysiwyg/sonco-95/home/imgs/above-banner.png&quot;}}" />
+                    <img src="/media/wysiwyg/sonco-95/home/imgs/above-banner.png" />
                 </div>
                 
                 <div class="category-widget-top slider-category">
@@ -45,8 +45,8 @@
 
             <section class="container text-center">
                 <a href="/95-shop-by-brand"><h1 class="privacy-main-title">SHOP BY BRAND</h1></a>
-                <div class="category-widget-top slider-category">
-                    <div class="owl-carousel-brand-slider owl-loaded owl-drag">
+                <div class="category-widget-top slider-category" style="width: 94% !important; margin: 0 auto;">
+                    <div class="owl-carousel-brand-slider owl-loaded owl-drag" id="brand-slider">
                         
                         <div class="owl-stage-outer">
                             <div class="owl-stage" style="display: flex" id="shop-by-brand-slider">
@@ -58,7 +58,7 @@
             </section>
 
             <section class="container">
-                <h1 class="privacy-main-title text-center margin-espacamento" style="margin-bottom: 25px !important">featured products</h1>
+                <h1 class="privacy-main-title text-center margin-espacamento" style="margin-bottom: 25px !important; margin-top: 57px !important;">featured products</h1>
                 <div class="line_main features-products margin-espacamento">
                     <div class="cmd-3"><a href="/catalog/category/view/id/527"><img class="w-100" src="https://www.95trafficsafety.com/media/wysiwyg/sonco-95/home/imgs/feature-4.jpeg" /></a></div>
                     <div class="cmd-3"><a href="/catalog/category/view/id/526"><img class="w-100" src="https://www.95trafficsafety.com/media/wysiwyg/sonco-95/home/imgs/feature-5.jpeg" /></a></div>
@@ -310,5 +310,50 @@
     h1.privacy-main-title{
         margin-bottom: 25px !important;
     }
-
+    #brand-slider .owl-nav{
+        position: absolute;
+        top: 110px;
+        display: flex;
+    }
+    #brand-slider button.owl-next, 
+    #brand-slider button.owl-prev {
+        border-radius: 100%;
+        height: 40px;
+        width: 40px;
+    }
+    #brand-slider button.owl-next {
+        margin-left: 866px;
+    }
+    #brand-slider .owl-dots {
+        margin-left: 475px;
+        -webkit-tap-highlight-color: transparent;
+    }
+    #brand-slider button.owl-dot {
+        background: 0 0;
+        color: inherit;
+        border: none;
+        padding: 0!important;
+        font: inherit;
+        display: inline-block;
+        zoom: 1;
+        margin: 0 0 1.25rem;
+    }
+    #brand-slider button.owl-dot.active {
+        background: 0 0;
+        color: inherit;
+        border: none;
+        padding: 0!important;
+        font: inherit;
+        display: inline-block;
+        zoom: 1;
+        margin: 0 0 1.25rem;
+    }
+    #brand-slider button.owl-prev span {
+        font-size: 40px;
+        margin-left: -3px;
+    }
+    #brand-slider button.owl-next span {
+        font-size: 40px;
+        margin-left: 0;
+    }
 </style>
