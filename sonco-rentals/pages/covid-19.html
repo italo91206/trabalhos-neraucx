@@ -1,9 +1,11 @@
 <div id="covid-19">
-    <div class="container">
+    <div class="container desktop">
         <img src="/media/wysiwyg/covid-19/banner.png" alt="Open for Business! image banner">
     </div>
 
-    <div class="container">
+    <img src="/media/wysiwyg/covid-19/banner-mobile.png" class="mobile w-100">
+
+    <div class="container" id="anchor">
         <div class="anchor-tittles">
             <ul class="index-list">
                 <li><a href="#commitment">Commitment</a></li>
@@ -15,12 +17,17 @@
         </div>
     </div>
 
-    <div class="container flex" style="margin-top: 35px" id="commitment">
-        <div class="cmd-6">
+    <div class="container flex relative" style="margin-top: 35px" id="commitment">
+        
+        <img src="/media/wysiwyg/covid-19/circles/circle-1.png" alt="" id="circle-1" class="desktop">
+        <img src="/media/wysiwyg/covid-19/circles/circle-2.png" alt="" id="circle-2" class="desktop">
+        <img src="/media/wysiwyg/covid-19/circles/circle-3.png" alt="" id="circle-3" class="desktop">
+        
+        <div class="cmd-6 desktop">
             <h1 class="uppercase">Our Commitment</h1>
             <p>
-                SONCO is classified as essential business due to the crucial equipment we<br/>
-                provide to various organizations and our<br/>
+                SONCO is classified as essential business due to the crucial<br/>
+                equipment we provide to various organizations and our<br/>
                 courageus heroes on the frontline fighting the  Coronavirus<br/>
                 to save lives everyday.<br/>
                 <br/>
@@ -31,16 +38,41 @@
             </p>
         </div>
 
-        <div class="cmd-6">
-            <p>video script goes here....</p>
+        <div class="cmd-6 desktop">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/407199880?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:100px;width:489px;height:301px;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+
+        <div class="cmd-6 mobile">
+            <h1 class="uppercase">Our Commitment</h1>
+            <p>
+                SONCO is classified as essential business due to the crucial
+                equipment we provide to various organizations and our
+                courageus heroes on the frontline fighting the  Coronavirus
+                to save lives everyday.
+                <br/><br/>
+                We are commiting our  40+ years of experience with Perimeter
+                Security products and, more recently, everything we learned helping
+                healthcare organizations nationwide, to help build perimeters in
+                different areas to expand COVID-19 testing and take care of patients.
+            </p>
+            <img src="/media/wysiwyg/covid-19/circles/circle-1.png" id="circle-11" class="mobile">
+            <iframe src="https://player.vimeo.com/video/407199880?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
 
     <hr class="separator" />
 
-    <div class="container" id="updates">
-        <h1 class="uppercase">Latest Updates From sonco</h1>
+    <div class="container relative" id="updates">
+        <img src="/media/wysiwyg/covid-19/circles/circle-4.png" alt="" id="circle-4" class="desktop">
+        <img src="/media/wysiwyg/covid-19/circles/circle-5.png" alt="" id="circle-5" class="desktop">
+
+        <h1 class="uppercase cmd-12">Latest Updates From sonco</h1>
         <img src="/media/wysiwyg/covid-19/safety-sticklers.png" alt="" class="safety-sticklers">
+        <img src="/media/wysiwyg/covid-19/circles/circle-12.png" alt="" id="circle-12" class="mobile">
+        <img src="/media/wysiwyg/covid-19/circles/circle-13.png" alt="" id="circle-13" class="mobile">
     </div>
 
     <div class="container flex" id="updates-blog">
@@ -50,7 +82,7 @@
                 <img src="/media/wysiwyg/covid-19/graphics.png" alt="">
             </div>
             <div class="text">
-                <p>Crowd Management in Hospitals: All you need to know</p>
+                <p>Crowd Management in Hospitals:<br/>All you need to know</p>
             </div>
         </div>
 
@@ -74,7 +106,7 @@
     </div>
 
     <div class="container" id="products">
-        <h1 class="uppercase">Equipment you need in your response to covid-19</h1>
+        <h1 class="uppercase cmd-12">Equipment you need in your response to covid-19</h1>
     </div>
 
     <div class="container flex">
@@ -135,13 +167,18 @@
 
     <hr class="separator" />
 
-    <div class="container flex" id="government">
+    <div class="container relative flex" id="government">
+
+        <img src="/media/wysiwyg/covid-19/circles/circle-6.png" alt="" id="circle-6">
+        <img src="/media/wysiwyg/covid-19/circles/circle-7.png" alt="" id="circle-7">
+        <img src="/media/wysiwyg/covid-19/circles/circle-8.png" alt="" id="circle-8">
+
         <div class="cmd-6">
             <img src="/media/wysiwyg/covid-19/government.png" alt="">
         </div>
         
         <div class="cmd-6" id="government-text">
-            <h1 class="uppercase">Support for <br/>Government Agencies</h1>
+            <h1 class="uppercase cmd-12">Support for <br/>Government Agencies</h1>
             <p>
                 On a national, state or local level, SONC supports<br/>
                 government agencies with top-tier products and a team<br/>
@@ -154,9 +191,12 @@
         </div>
     </div>
 
-    <div class="container flex" id="locations">
-        
-        <div class="cmd-6" id="government-text">
+    <div class="container relative flex" id="locations">
+
+        <img src="/media/wysiwyg/covid-19/circles/circle-9.png" alt="" id="circle-9">
+        <img src="/media/wysiwyg/covid-19/circles/circle-10.png" alt="" id="circle-10">
+
+        <div class="cmd-6" id="locations-text">
             <h1 class="uppercase">Our Presence</h1>
             <p>
                 All our locations are available Monday through<br/>
@@ -204,10 +244,106 @@
 <style>
     @media (min-width: 1200px){
         .container {
-            max-width: 1200px !important;
+            max-width: 1240px !important;
         }
     }
 
+    @media(max-width: 425px){
+        #covid-19{
+            overflow: hidden;
+        }
+        
+        .desktop{
+            display: none !important;
+        }
+        
+        .mobile{
+            display: block !important;
+        }
+
+        .request-a-quote-btn{
+            display: none !important;
+        }
+
+        ul.index-list{
+            padding-inline-start: 0px !important;
+        }
+
+        ul.index-list li a{
+            font-size: 12px !important;
+        }
+
+        div.anchor-tittles{
+            padding: 15px 0px !important;
+            margin: 7px 0px !important;
+        }
+
+        .cmd-6.mobile {
+            padding: 0;
+        }
+
+        img#circle-11 {
+            position: absolute;
+            right: -15px !important;
+            bottom: 268px !important;
+        }
+
+        iframe {
+            height: 301px !important;
+            width: 378px !important;
+        }
+
+        div#covid-19 p {
+            font-size: 15px !important;
+        }
+
+        hr.separator {
+            margin-top: 0 !important;
+            margin-bottom: 35px !important;
+        }
+        div#updates h1.uppercase{
+            width: 215px !important;
+        }
+
+        img.safety-sticklers {
+            left: 245px !important;
+            top: 40px !important;
+            width: 135px !important;
+        }
+        
+        img#circle-12 {
+            position: absolute;
+            top: -95px;
+            right: 110px;
+        }
+
+        img#circle-13 {
+            position: absolute;
+            top: -93px;
+            right: 0;
+        }
+    }
+    
+    div#anchor{
+        padding: 0px;
+    }
+
+    iframe {
+        height: 301px;
+        width: 489px;
+    }
+
+    #covid-19{
+        margin-top: -10px;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
     .uppercase{
         text-transform: uppercase;
     }
@@ -270,13 +406,13 @@
 
     hr.separator {
         width: 92%;
-        margin-top: 60px;
-        margin-bottom: 60px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 
     img.safety-sticklers{
         position: absolute;
-        left: 480px;
+        left: 520px;
         top: -15px;
     }
 
@@ -287,11 +423,11 @@
     div#updates h1.uppercase{
         border-right: 2px solid #ff1e2f;
         padding-right: 8px;
-        width: 457px;
+        width: 480px;
     }
 
     div#updates {
-        margin-bottom: 40px;
+        margin-bottom: 90px;
     }
 
     .text{
@@ -356,8 +492,8 @@
         margin-top: 25px;
     }
 
-    div#locations{
-        margin-top: 30px;
+    div#locations {
+        margin-top: 120px;
     }
 
     p.blue-bckg {
@@ -372,13 +508,13 @@
         font-family: Camber-Sb !important;
     }
 
-    .block {
+    #covid-19 .block {
         text-align: center;
         color: white;
     }
 
     .card {
-        max-width: 484px;
+        max-width: 575px;
         margin: 0 auto;
         box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
     }
@@ -403,5 +539,79 @@
 
     #cards{
         margin-top: 50px;
+    }
+    
+    .red-bckg a {
+        color: white;
+        text-decoration: none;
+    }
+
+    div#locations-text>p {
+        margin-bottom: 47px;
+    }
+
+    .card a {
+        color: #012e68;
+        font-size: 18px;
+        font-family: Camber-Md;
+    }
+
+    img#circle-1{
+        position: absolute;
+        right: 590px;
+        top: 13px;
+    }
+    
+    img#circle-2{
+        position: absolute;
+        right: 520px;
+        top: 177px;
+    }
+    
+    img#circle-3{
+        position: absolute;
+        top: 99px;
+        left: 680px;
+    }
+
+    img#circle-4 {
+        position: absolute;
+        right: 340px;
+        top: -50px;
+    }
+    
+    img#circle-5 {
+        position: absolute;
+        top: -68px;
+        right: 140px;
+    }
+
+    img#circle-6 {
+        position: absolute;
+        right: -60px;
+        top: -95px;
+    }
+
+    img#circle-7 {
+        position: absolute;
+        right: 112px;
+    }
+
+    img#circle-8 {
+        position: absolute;
+        right: -180px;
+        top: 50px;
+    }
+
+    img#circle-9 {
+        position: absolute;
+        left: 260px;
+        top: -50px;
+    }
+    
+    img#circle-10 {
+        position: absolute;
+        top: -100px;
+        left: 336px;
     }
 </style>
