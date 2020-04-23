@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="container flex">
+    <div class="container flex" style="margin-top: 35px" id="commitment">
         <div class="cmd-6">
             <h1 class="uppercase">Our Commitment</h1>
             <p>
@@ -23,7 +23,7 @@
                 provide to various organizations and our<br/>
                 courageus heroes on the frontline fighting the  Coronavirus<br/>
                 to save lives everyday.<br/>
-                <br/><br/>
+                <br/>
                 We are commiting our  40+ years of experience with Perimeter<br/>
                 Security products and, more recently, everything we learned helping<br/>
                 healthcare organizations nationwide, to help build perimeters in<br/>
@@ -38,12 +38,12 @@
 
     <hr class="separator" />
 
-    <div class="container">
+    <div class="container" id="updates">
         <h1 class="uppercase">Latest Updates From sonco</h1>
-        <img src="/media/wysiwyg/covid-19/safety-sticklers.png" alt="">
+        <img src="/media/wysiwyg/covid-19/safety-sticklers.png" alt="" class="safety-sticklers">
     </div>
 
-    <div class="container flex">
+    <div class="container flex" id="updates-blog">
         
         <div class="cmd-4">
             <div class="image">
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="products">
         <h1 class="uppercase">Equipment you need in your response to covid-19</h1>
     </div>
 
@@ -87,8 +87,8 @@
             </div>
             <div class="banner-description">
                 <p>Deploy fast temporary perimeters with protective barriers used to deﬁne the limits of an installation, activity, or area. </p>
-            </div>
-            <div class="button-red"><a href="#">View Products</a></div>
+            </div>            
+            <a><button class="button action red-main">View Products</button></a>
         </div>
 
         <div class="cmd-6">
@@ -101,9 +101,11 @@
             <div class="banner-description">
                 <p>Safely channelize vehicle trafﬁc and expedite patient testing with the water-ﬁlled Jersey barriers.</p>
             </div>
-            <div class="button-red"><a href="#">View Products</a></div>
+            <a><button class="button action red-main">View Products</button></a>
         </div>
+    </div>
 
+    <div class="container flex last-two-products">
         <div class="cmd-6">
             <div class="banner-img">
                 <img src="/media/wysiwyg/covid-19/social-distancing.png" alt="">
@@ -114,7 +116,7 @@
             <div class="banner-description">
                 <p>Let’s take the guesswork out of Social Distancing with Stanchion barriers that helps people stand in line safely.</p>
             </div>
-            <div class="button-red"><a href="#">View Products</a></div>
+            <a><button class="button action red-main">View Products</button></a>
         </div>
 
         <div class="cmd-6">
@@ -127,18 +129,85 @@
             <div class="banner-description">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             </div>
-            <div class="button-red"><a href="#">View Products</a></div>
+            <a><button class="button action red-main">View Products</button></a>
         </div>
     </div>
 
+    <hr class="separator" />
+
+    <div class="container flex" id="government">
+        <div class="cmd-6">
+            <img src="/media/wysiwyg/covid-19/government.png" alt="">
+        </div>
+        
+        <div class="cmd-6" id="government-text">
+            <h1 class="uppercase">Support for <br/>Government Agencies</h1>
+            <p>
+                On a national, state or local level, SONC supports<br/>
+                government agencies with top-tier products and a team<br/>
+                of experts to get the job done.<br/> 
+                <br/>
+                We offer special discounts and automatic NET30 term<br/>
+                to any Goverment agency as part of our commitment<br/>
+                to help fight COVID-19.
+            </p>
+        </div>
+    </div>
+
+    <div class="container flex" id="locations">
+        
+        <div class="cmd-6" id="government-text">
+            <h1 class="uppercase">Our Presence</h1>
+            <p>
+                All our locations are available Monday through<br/>
+                Friday from  9:00am to 5:00pm EST. Got questions?<br/> 
+                Call us at 866-698-7680 and we’ll help you out.
+            </p>
+            <div class="block">
+                <p class="blue-bckg">
+                    Multiple warehouses across the US for rapid and cost<br/>
+                    effective delivery direct to your site/event.<br/><br/>
+                    Click below to find a warehouse near you
+                </p>
+                <p class="red-bckg">
+                    <a>See Locations</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="cmd-6">
+            <img src="/media/wysiwyg/covid-19/sonco-truck.png" alt="">
+        </div>
+    </div>
+
+    <div class="container flex" id="cards">
+        <div class="card cmd-6">
+            <h1>Our Tech Platform</h1>
+            <p>
+                Create an account with Sonco member only princing,
+                special offers, fast checkout and many more benefits.
+            </p>
+            <a>Read to get started ?</a>
+        </div>
+
+        <div class="card cmd-6">
+            <h1>Get in Touch</h1>
+            <p>
+                Our staff is here to help you. Talk to a real, lime member
+                of  our sales team. We are on standby to help you out.
+            </p>
+            <a>Let's chat</a>
+        </div>
+    </div>
 </div>
 
 <style>
-    @media(max-width: 1200px){
-        .container{
-            max-width: 1210px !important;
+    @media (min-width: 1200px){
+        .container {
+            max-width: 1200px !important;
         }
     }
+
     .uppercase{
         text-transform: uppercase;
     }
@@ -177,6 +246,162 @@
     }
 
     ul.index-list li a:active{
+        color: #ff1e2f !important;
+    }
+
+    /* .container .cmd-6, 
+    .container .cmd-12 {
+        padding: 0px;
+    } */
+
+    h1.uppercase {
         color: #ff1e2f;
+        margin-bottom: 30px;
+        font-family: Camber-Sb;
+    }
+
+    div#covid-19 p {
+        font-size: 18px;
+    }
+
+    .flex{
+        display: flex;
+    }
+
+    hr.separator {
+        width: 92%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    img.safety-sticklers{
+        position: absolute;
+        left: 480px;
+        top: -15px;
+    }
+
+    div#updates{
+        position: relative;
+    }
+
+    div#updates h1.uppercase{
+        border-right: 2px solid #ff1e2f;
+        padding-right: 8px;
+        width: 457px;
+    }
+
+    div#updates {
+        margin-bottom: 40px;
+    }
+
+    .text{
+        margin-top: 7px;
+    }
+
+    .text p{
+        font-family: Camber-Md !important;
+    }
+
+    div#updates-blog {
+        margin-top: 60px;
+    }
+
+    div#products {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .banner-img {
+        position: relative;
+    }
+    
+    .banner-img img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .banner-text {
+        position: absolute;
+        bottom: 0px;
+        margin-left: 30px;
+    }
+
+    .banner-text h2 {
+        font-family: Camber-Sb;
+        font-size: 33px;
+        color: #fff;
+    }
+    
+    div.banner-description p {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 20px;
+        color: #58595b;
+    }
+
+    button.button.action.red-main {
+        margin-left: 35%;
+        margin-top: 25px;
+        background-color: #e62332 !important;
+        width: 130px;
+        height: 31px;
+        font-family: Camber-Rg;
+    }
+
+    div.last-two-products{
+        margin-top: 50px;
+    }
+
+    div#government-text{
+        margin-top: 25px;
+    }
+
+    div#locations{
+        margin-top: 30px;
+    }
+
+    p.blue-bckg {
+        background: #032e5a;
+        margin-bottom: 0;
+        padding: 25px 0;
+    }
+
+    p.red-bckg {
+        background: #ff1e2f;
+        padding: 9px 0;
+        font-family: Camber-Sb !important;
+    }
+
+    .block {
+        text-align: center;
+        color: white;
+    }
+
+    .card {
+        max-width: 484px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+    }
+
+    .card.cmd-6 {
+        text-align: center;
+        border-top: solid 10px #ff1e2f;
+        padding: 15px;
+    }
+
+    .card h1 {
+        color: #f91d2f;
+    }
+
+    .card a {
+        color: #012e68;
+    }
+
+    .card p {
+        color: #58595b;
+    }
+
+    #cards{
+        margin-top: 50px;
     }
 </style>
