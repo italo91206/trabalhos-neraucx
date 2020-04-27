@@ -1,0 +1,154 @@
+#Product .add-cart-button,
+#Product .add-quote-button {
+    position: fixed !important;
+    bottom: 75px;
+    right: 15px;
+    border-radius: 22px;
+}
+
+#Product .add-quote-button {
+    right: auto;
+    left: 15px;
+}
+
+#Product .product_image img {
+    max-width: 100%;
+}
+
+#Product .container.fluid {
+    padding-top: 0px;
+}
+
+#Product h1.product_name {
+    font-size: 20px;
+    padding: 15px;
+    font-family: 'Camber-Rg';
+    font-weight: bold;
+}
+
+#Product .product_description {
+    padding: 0 15px 100px;
+}
+
+#Product .product_price {
+    font-weight: bold;
+    color: #fe162e;
+    font-size: 18px;
+    padding-left: 15px;
+    float: left;
+}
+
+#Product .product_qty input {
+    width: 50px;
+    border: 1px solid #bbb;
+    line-height: 20px;
+    margin-left: 2px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+#Product .product_qty .qty_control {
+    width: 15px;
+    height: 30px;
+    float: left;
+}
+
+#Product .product_qty .qty_control span i {
+    font-size: 10px;
+}
+
+#Product .product_qty .qty_control span {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #bbb;
+    float: left;
+    line-height: 13px;
+    text-align: center;
+}
+
+#Product .product_qty .qty_control span.plus {
+    margin-bottom: 2px;
+}
+
+#Product .product_qty {
+    float: right;
+}
+
+div#Options {
+    padding: 5px 20px;
+}
+
+#Options span.title {
+    font-size: 16px !important;
+}
+
+#Options .option_values {
+    margin-top: 5px
+}
+
+#Options .option_values span {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 7px;
+    border: 1px solid #bbb;
+    padding: 3px 5px;
+}
+
+#Options .option_values span.highlight {
+    border-color: #e91d29 !important;
+}
+
+#Options .option_container {
+    margin-bottom: 15px;
+}
+
+.custom-loader {
+    animation: loader 1s infinite;
+    display: flex;
+}
+@-moz-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pagebuilder-column-group .pagebuilder-column {
+    clear: both !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+img.pagebuilder-mobile-hidden {
+    display: none;
+}
+
+.pagebuilder-column-group {
+    flex-wrap: wrap;
+}

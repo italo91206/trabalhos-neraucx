@@ -1,0 +1,200 @@
+{
+    "categories": [
+        {
+            "title": "Barricades",
+            "url": "barricades",
+            "icon": "barricades.png",
+            "id": 262,
+            "children": [
+                {
+                    "title": "Plastic Barricades",
+                    "url": "plastic-barricades",
+                    "icon": "plastic-barricades.jpg",
+                    "id": 108
+                },
+                {
+                    "title": "Stage Barriers",
+                    "url": "stage-barriers",
+                    "icon": "concert-barriers.jpg",
+                    "id": 270
+                },
+                {
+                    "title": "Steel Barricades",
+                    "url": "steel-barricades",
+                    "icon": "steel-barriers.jpg",
+                    "id": 263
+                },
+                {
+                    "title": "Water Filled Barriers",
+                    "url": "water-barriers",
+                    "icon": "water-barriers.jpg",
+                    "id": 271
+                }
+            ]
+        },
+        {
+            "title": "Custom Signs",
+            "url": "custom-signs",
+            "icon": "custom-signs.png",
+            "id": 265,
+            "children": [
+                {
+                    "title": "Fence Wraps",
+                    "url": "custom-fence-screen",
+                    "icon": "fence-wraps.jpg",
+                    "id": 273
+                },
+                {
+                    "title": "Stage Scrims",
+                    "url": "stage-banner",
+                    "icon": "stage-scrims.jpg",
+                    "id": 274
+                },
+                {
+                    "title": "Outdoor Displays",
+                    "url": "outdoor-display",
+                    "icon": "outdoor-displays.jpg",
+                    "id": 275
+                },
+                {
+                    "title": "Barricade Covers",
+                    "url": "barricade-covers",
+                    "icon": "barricade-covers.jpg",
+                    "id": 272
+                }
+            ]
+        },
+        {
+            "title": "Fence Solutions",
+            "url": "fence-solutions",
+            "icon": "fence-solutions.png",
+            "id": 267,
+            "children": [
+                {
+                    "title": "Custom Screens",
+                    "url": "custom-fence-screen",
+                    "icon": "custom-screens.jpg",
+                    "id": 280
+                },
+                {
+                    "title": "Temporary Fences",
+                    "url": "temporary-fence-panels",
+                    "icon": "temporary-panels.jpg",
+                    "id": 281
+                },
+                {
+                    "title": "Construction Windscreens",
+                    "url": "construction-fence-screen",
+                    "icon": "construction-windscreens.jpg",
+                    "id": 283
+                },
+                {
+                    "title": "Safety Signs",
+                    "url": "safety-signs",
+                    "icon": "custom-safety-signs.jpg",
+                    "id": 282
+                }
+            ]
+        },
+        {
+            "title": "Stanchions and Posts",
+            "url": "stanchions",
+            "icon": "stanchions.png",
+            "id": 268,
+            "children": [
+                {
+                    "title": "Accessories & Merchandising",
+                    "url": "accessories-and-merchandising",
+                    "icon": "accessories-merchandising.jpg",
+                    "id": 287
+                },
+                {
+                    "title": "Stanchion Posts",
+                    "url": "classic-rope-and-stanchion-systems",
+                    "icon": "stanchion-posts.jpg",
+                    "id": 275
+                },
+                {
+                    "title": "Retractable Belt Barriers",
+                    "url": "retractable-belt-barriers",
+                    "icon": "retractable-belt-barriers.jpg",
+                    "id": 285
+                },
+                {
+                    "title": "Wall Mounts",
+                    "url": "retractable-wall-mounts",
+                    "icon": "wall-mount-belts.jpg",
+                    "id": 286
+                }
+            ]
+        },
+        {
+            "title": "Traffic Safety",
+            "url": "traffic-safety",
+            "icon": "traffic-safety.png",
+            "id": 269,
+            "children": [
+                {
+                    "title": "Construction Signs",
+                    "url": "traffic-safety-signs",
+                    "icon": "construction-signs.jpg",
+                    "id": 289
+                },
+                {
+                    "title": "Plastic Channelizer Drums",
+                    "url": "channelizer-drums",
+                    "icon": "channelizer-drums.jpg",
+                    "id": 288
+                },
+                {
+                    "title": "Traffic Cones & Delineators ",
+                    "url": "traffic-cones-and-delineators",
+                    "icon": "traffic-delineators.jpg",
+                    "id": 290
+                },
+                {
+                    "title": "Traffic Barriers & Folded Barricades",
+                    "url": "traffic-barricades-and-barriers",
+                    "icon": "water-barriers.jpg",
+                    "id": 291
+                }
+            ]
+        }
+    ],
+    "categoryIds": [
+        "262",
+        "263",
+        "270",
+        "271",
+        "108",
+        "265",
+        "272",
+        "274",
+        "273",
+        "275",
+        "268",
+        "275",
+        "286",
+        "285",
+        "287",
+        "267",
+        "283",
+        "282",
+        "281",
+        "280",
+        "269",
+        "288",
+        "289",
+        "290",
+        "291",
+        "292"
+    ],
+    "promotions": [
+        {
+            "title": "Open For Business",
+            "url": "open-for-business",
+            "icon": "openforbusiness.png",
+            "id": 524
+        }
+    ]
+}

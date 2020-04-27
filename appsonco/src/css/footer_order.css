@@ -1,0 +1,63 @@
+div#FooterOrder {
+  background: #e6e6e6 !important;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: #e6e6e6;
+  padding-top: 25px;
+}
+
+#FooterOrder h3 {
+  line-height: 50px;
+}
+
+i.v-icon.fas.fa-shopping-cart.theme--dark {
+  color: #e6e6e6;
+}
+
+.btn-continue {
+  margin-top: -2px;
+}
+
+.search-box input {
+    background: #e91d29;
+    width: 100%;
+    margin-left: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.search-box input::placeholder {
+    color: #ddd;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0px;
+    top: 3px;
+}
+
+.search-box {
+    position: relative;
+}
+
+span.miniquote, span.minicart {
+    display: inline-block;
+    width: 24px;
+}
+
+.miniquote span.counter,
+.minicart span.counter {
+    position: relative;
+    top: -46px;
+    margin: 0 auto;
+    font-size: 10px;
+    color: #444444;
+}
+
+span.minicart {
+    width: 30px;
+}

@@ -1,0 +1,35 @@
+.bkg-red {
+  background: #e62332 !important;
+}
+
+.bkg-blue {
+  background: #272c5d !important;
+}
+
+.bkg-white {
+  background: #ffffff !important;
+}
+
+.border-red {
+  border-color: #e62332 !important;
+}
+
+.border-blue {
+  border-color: #272c5d !important;
+}
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.text-red {
+  color: #e62332 !important;
+}
+
+.text-blue {
+  color: #272c5d !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}

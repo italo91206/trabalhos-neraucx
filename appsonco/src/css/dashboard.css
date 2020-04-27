@@ -1,0 +1,134 @@
+.dashboard .home-content {
+    background: #ffffff;
+    padding: 20px 30px 80px !important;
+}
+
+.dashboard .home-content h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #898989;
+    font-family: Camber-Rg;
+    margin-bottom: 0px;
+}
+
+.dashboard .home-content h2 {
+    font-size: 22px;
+    color: #545454;
+    font-weight: 400;
+    font-family: Camber-Rg;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.dashboard .home-content h3 {
+    color: #ff1d2f;
+    font-family: 'Open Sans';
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.dashboard .home-content .data_container {
+    padding: 15px;
+}
+
+.dashboard .home-content div.text-center {
+    padding: 10px 15px;
+}
+
+.dashboard .home-content p {
+    padding: 0px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.dashboard .home-content a {
+    font-weight: normal;
+    line-height: 20px;
+    padding: 0;
+    margin-right: 0px;
+    color: #e91d29;
+}
+
+.dashboard .home-content .subtitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #545454;
+}
+
+.dashboard .home-content a.view_all {
+    position: absolute;
+    font-size: 15px;
+    font-weight: normal;
+    right: 15px;
+    top: 2px;
+}
+
+.dashboard .home-content .col {
+    margin-bottom: 25px;
+}
+
+.dashboard .home-content .actions {
+    font-weight: normal;
+}
+
+.dashboard .home-content a i {
+    color: #ff1d2f;
+}
+
+.dashboard .home-content img {
+    max-width: 100%;
+}
+
+.dashboard .home-content .buttons {
+    margin-bottom: 25px;
+}
+
+.dashboard .home-content #Orders .order_data {
+    padding: 15px;
+    border-bottom: 1px solid #ececec;
+}
+
+#AddressBook .home-content h1 {
+    border-bottom: 1px solid #ececec;
+}
+
+.address_data {
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.totals {
+    background: #f5f5f5;
+    padding: 5px 8px;
+    text-align: right;
+}
+
+.totals .line b {
+    float: left;
+    color: #545454;
+}
+
+.order_data {
+    padding: 10px 8px 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.totals .line {
+    padding: 6px 0;
+}
+
+.subsection.data_container {
+    padding: 0px 0px 20px !important;
+}
+
+.label_status {
+    padding: 2px 10px;
+    text-transform: uppercase;
+    border: 2px solid #c2c2c2;
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 3px;
+}

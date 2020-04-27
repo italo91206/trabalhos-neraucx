@@ -1,0 +1,46 @@
+.home-content {
+  background: #ffffff;
+  padding: 20px 30px 5px !important;
+}
+
+.home-content h3 {
+  color: #ff1d2f;
+  font-family: 'Camber-Rg';
+  margin: 15px 0;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.home-content div.text-center {
+  padding: 10px 15px;
+}
+
+.home-content p {
+  padding: 0px;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+.home-content a {
+  font-weight: bold;
+  line-height: 20px;
+  padding: 0.375rem 1.5rem;
+  margin-right: 10px;
+}
+
+.home-content a i {
+  color: #ff1d2f;
+}
+
+.home-content img {
+  max-width: 100%;
+}
+
+.home-content .buttons {
+  margin-bottom: 25px;
+}
+
+#Home p {
+    color: #545454;
+    text-align: justify;
+}

@@ -1,0 +1,11 @@
+{
+    "api": {
+        "token": "pa4confcboi8jvdjifzyqhfbj3bcjyr9",
+        "url": "https://www.soncocrowdcontrol.com/rest/V1/",
+        "mediaurl": "https://www.soncocrowdcontrol.com/media/catalog/product/",
+        "mediaBaseUrl": "https://www.soncocrowdcontrol.com/media/"
+    },
+    "home": {
+        "id": 325
+    }
+}

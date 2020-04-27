@@ -1,0 +1,20 @@
+{
+  "name": "Sonco Crowd Control",
+  "short_name": "Sonco Crowd Control",
+  "icons": [
+    {
+      "src": "/static/img/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/src/assets/bg_login.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "background_color": "#1d3055",
+  "theme_color": "#000066"
+}
