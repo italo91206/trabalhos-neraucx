@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Order from '@/components/Order'
+import Locations from '@/components/Locations'
 import Checkout from '@/components/Checkout'
 import CheckoutSuccess from '@/components/Checkout/CheckoutSuccess'
 import Quote from '@/components/Quote'
@@ -152,6 +153,12 @@ export default new Router({
             path: '/order-view/:order_id',
             name: 'OrderView',
             component: OrderView,
+            props: true
+        },
+        {
+            path: '/locations',
+            name: 'Locations',
+            component: Locations,
             props: true
         }
     ]

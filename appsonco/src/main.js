@@ -10,6 +10,13 @@ import VeeValidate from 'v-validate'
 import './scripts/api.js';
 import categories from './scripts/categories.json';
 import config from './scripts/config.json';
+import * as VueGoogleMaps from "vue2-google-maps";
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyA9EFGoipjVx7QOsML-cQNhYZLNkRapoJc",
+    libraries: "places" // necessary for places input
+  }
+});
 
 Vue.use(VueResource);
 Vue.use(VueMask);
