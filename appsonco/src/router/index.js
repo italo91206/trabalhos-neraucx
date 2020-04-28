@@ -4,7 +4,9 @@ import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Order from '@/components/Order'
 import Checkout from '@/components/Checkout'
+import CheckoutSuccess from '@/components/Checkout/CheckoutSuccess'
 import Quote from '@/components/Quote'
+import QuoteSuccess from '@/components/Checkout/QuoteSuccess'
 import Cart from '@/components/Cart'
 import Register from '@/components/Register'
 import Category from '@/components/Category'
@@ -90,9 +92,19 @@ export default new Router({
             component: Checkout
         },
         {
+            path: '/checkout/success',
+            name: 'CheckoutSuccess',
+            component: CheckoutSuccess
+        },
+        {
             path: '/quote',
             name: 'Quote',
             component: Quote
+        },
+        {
+            path: '/quote/success',
+            name: 'QuoteSuccess',
+            component: QuoteSuccess
         },
         {
             path: '/stores',

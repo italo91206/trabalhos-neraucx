@@ -7,8 +7,6 @@
                     <b-col>
                         <a href="javascript: history.go(-1);" class="prev-nav">&laquo; Back to cart</a>
                     </b-col>
-                </b-row>
-                <b-row>
                     <b-col>
                         <h2>Checkout</h2>
                         <div class="secure_checkout">
@@ -35,8 +33,13 @@
                 <b-row>
                     <b-col>
                         <h2>Shipping Methods</h2>
-                        <Addresses ref="address_list"></Addresses>
+                        <ShippingMethods/>
                     </b-col>
+                </b-row>
+                <b-row>
+                    <button class="red-button" v-on:click="goNextStep()">
+                        <span>Next</span>
+                    </button>
                 </b-row>
             </v-flex>
         </v-layout>
@@ -47,18 +50,23 @@
     import "@/css/home.css";
     import Menu from './Menu';
     import Addresses from './Checkout/Addresses';
+    import ShippingMethods from './Checkout/ShippingMethods';
+
     export default {
         name: 'Checkout',
         components: {
             Menu,
-            Addresses
+            Addresses,
+            ShippingMethods
         },
         data () {
             return {
                 cartData: {},
                 addresses: [],
                 cartTotals: [],
-                totalsLoaded: false
+                totalsLoaded: false,
+                methodSelected: true,
+                addressSelected: true
             }
         },
         beforeMount() {
@@ -105,7 +113,52 @@
                         this.addresses = response.data.addresses;
                     });
                 }
+            },
+            goNextStep(){
+                if(this.methodSelected && this.addressSelected){
+                    console.log('OK!');
+                    this.$router.push({name: 'CheckoutSuccess'});
+                }
             }
         }
     }
 </script>
+
+
+<style>
+    .summary.col {
+        background: #f4f4f4;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 18px 15px;
+        margin: 15px 0;
+    }
+    .address_data {
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 15px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 30px;
+        transition: .3s border-color;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        word-wrap: break-word;
+    }
+    button.red-button {
+        background-color: #e62332 !important;
+        border: none !important;
+        width: 194px !important;
+        height: 52px !important;
+        margin-bottom: 20px !important;
+    }
+    button.red-button>span {
+        text-transform: uppercase;
+        font-family: "Open Sans", Helvetica, Arial;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: center;
+    }
+</style>
