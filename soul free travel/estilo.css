@@ -42,6 +42,15 @@ li.vc_tta-tab.vc_active {
 
 
 /*aqui começa seu código */
+
+#banner-vitrine .wpb_column.column_container.col-md-12.col-lg-12 {
+    padding: 0px;
+}
+
+.vc_item {
+    width: 33.3333% !important;
+}
+
 #main-footer > div {
     width: unset !important;
 }
@@ -74,9 +83,11 @@ li.vc_tta-tab.vc_active {
     color: unset !important;
 }
 .home #st-content-wrapper.search-result-page .search-form-wrapper {
+    margin-top: 8px !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     position: relative !important;
+    background: red
 }
 .search-result-page .tour-search-form-home{
     width: 1200px;
@@ -204,6 +215,13 @@ i.fa.fa-envelope, i.fa.fa-link {
 /* seção media */
 #mobile-row{
     display: none;
+}
+
+@media(max-width: 1920px){
+    .home #st-content-wrapper.search-result-page .search-form-wrapper{
+        width: 1905px;
+        left: -367px
+    }
 }
 
 @media(max-width: 1024px){
