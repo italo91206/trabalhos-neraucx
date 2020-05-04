@@ -317,3 +317,34 @@ div#about-us-text {
 #about-us-text .container-fluid {
     padding: 0px !important;
 }
+
+/* Aqui começa a seção do search-form personalizado */
+
+div#sticky-nav {
+    background: none;
+}
+.search-result-page .tour-search-form-home .form-button button{
+    right: -290px;
+}
+#sticky-nav button.btn.btn-primary.btn-search {
+    height: 80px;
+    top: 0;
+}
+#sticky-nav .col-md-4 {
+    height: 80px;
+}
+#sticky-nav .col-md-4:nth-child(3) {
+    position: absolute;
+    left: 715px;
+    background: white;
+}
+#sticky-nav .col-md-4:nth-child(2) {
+    position: absolute;
+    left: 238px;
+    background: white;
+}
+#sticky-nav .col-md-4:nth-child(1) {
+    left: -230px;
+    position: absolute;
+    background: white;
+}
