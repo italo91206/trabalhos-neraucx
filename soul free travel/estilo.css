@@ -204,7 +204,8 @@ i.fa.fa-envelope, i.fa.fa-link {
 }
 
 .partners-photos img {
-    width: 20%;
+    width: 10%;
+    margin: 0 auto;
 }
 
 /* seção para a página about-us */
