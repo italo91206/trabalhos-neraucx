@@ -269,6 +269,7 @@
                                         <li><a href="/customers"> CUSTOMERS </a></li>
                                         <li><a href="/job-site-safety"> JOB SITE SAFETY </a></li>
                                         <li><a href="/stop-the-spread"> STOP THE SPREAD </a></li>
+                                        <li><a href="/our-commitment"> OUR COMMITMENT </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -286,6 +287,7 @@
                                         <li><a href="/customers"> CUSTOMERS </a></li>
                                         <li><a href="/job-site-safety"> JOB SITE SAFETY </a></li>
                                         <li><a href="/stop-the-spread"> STOP THE SPREAD </a></li>
+                                        <li><a href="/our-commitment"> OUR COMMITMENT </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -485,6 +487,72 @@
     }
     .img-promotion img {
         height: 39px !important;
+    }
+    @media screen and (min-width: 768px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type {
+            max-width: 1920px;
+            width: 1900px;
+            height: 207px;
+        }
+        [data-content-type='row'][data-appearance='contained']:nth-of-type(2){
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1440px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type {
+            width: 1440px;
+        }
+    }
+    @media screen and (max-width: 1024px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type {
+            width: 1024px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type{
+            display: none;
+        }
+        [data-content-type='row'][data-appearance='contained']:nth-of-type(2){
+            display: block;
+            height: 66px;
+            width: 768px;
+        }
+    }
+    @media screen and (max-width: 425px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type{
+            display: none;
+        }
+        [data-content-type='row'][data-appearance='contained']:nth-of-type(2){
+            display: block;
+            height: 66px;
+            width: 425px;
+        }
+    }
+    @media screen and (max-width: 375px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type{
+            display: none;
+        }
+        [data-content-type='row'][data-appearance='contained']:nth-of-type(2){
+            display: block;
+            height: 66px;
+            width: 375px;
+        }
+    }
+    @media screen and (max-width: 320px){
+        [data-content-type='row'][data-appearance='contained']:first-of-type{
+            display: none;
+        }
+        [data-content-type='row'][data-appearance='contained']:nth-of-type(2){
+            display: block;
+            height: 66px;
+            width: 320px;
+        }
+    }
+    .fundo_branco{
+        width: 0px;
+    }
+    .darkbg{
+        top:207px;
     }
 </style>
 <!-- /block identifier: new-menu-sonco -->
