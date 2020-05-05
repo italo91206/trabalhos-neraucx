@@ -66,6 +66,7 @@
                 <p>
                     Example of a line with 2 block separation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor sodales ultricies. Nulla pretium nec dui a facilisis. Nam tincidunt neque sapien, et ultrices mi scelerisque tristique. Integer dictum tortor augue. Sed id tempor sem. Duis quis diam quis lectus tristique dignissim. Nam volutpat enim consectetur enim hendrerit, sit amet pretium urna imperdiet. Curabitur sapien ante, lobortis ac mi non, dignissim volutpat neque. Aenean sit amet finibus nunc
                 </p>
+                <a href="" class="learn-more">Learn more <span>&gt;</span></a>
             </div>
         </div>
     </section>
@@ -81,12 +82,21 @@
             <ul>
                 <li> This will have a min-width. Use it careful!</li>
                 <li> This blueprint class It's entirely exclusive for the background-image </li>
-                <li> More li tags! </li>
+                <li> Watchout for our 45% width limit!</li>
                 <li> More li tags! </li>
                 <li> More li tags! </li>
             </ul>
             <a href="" class="red-button">red-button class</a>
         </div>  
+    </section>
+
+    <section>
+        <div class="request-a-quote">
+            <p>
+                Text inside the class "request-a-quote". Note that you still use the same button as the blueprint-class. The only difference is that the font-size increases by 5px. Another thing to be careful is that the image height is 190px. Please try to not surpass that limit!
+            </p>
+            <a href="" class="red-button">Sounds nice!</a>
+        </div>
     </section>
 
 </article>
@@ -103,11 +113,13 @@
         font-size: 32px !important;
         font-weight: 900;
         color: #032e59;
+        padding-left: 15px;
     }
     #product-content h3{
         color: #032e59;
         font-size: 26px;
         font-weight: 900;
+        padding-left: 15px;
     }
     .uppercase{
         text-transform: uppercase;
@@ -123,12 +135,12 @@
         color: #032e59;
         font-size: 16px;
     }
-    #product-content .cmd-4,
+    /* #product-content .cmd-4,
     #product-content .cmd-6,
     #product-content .cmd-9,
     #product-content .cmd-12{
         padding: 0px !important;
-    }
+    } */
     #product-content div.blueprint{
         background-image: url(/media/wysiwyg/steel-barricades-specsheet-section-bg_1_.jpg);
     }
@@ -136,10 +148,12 @@
         color: white !important;
         padding: 40px;
         min-height: 550px;
+        margin: 15px;
     }
     #product-content .blueprint p,
     #product-content .blueprint h2 {
         color: white !important;
+        padding-left: 0px !important;
     }
     #product-content .blueprint p{
         font-size: 16px;
@@ -149,15 +163,51 @@
         font-size: 16px;
         font-weight: 600;
     }
-    .page-main-pagebuilder-attributes {
-        display: none;
-    }
-    a.red-button {
+    #product-content a.red-button {
         font-size: 20px;
         text-transform: uppercase;
         padding: 10px 15px;
         background-color: #e62533;
         color: white;
         float: right;
+    }
+    #product-content .request-a-quote p{
+        color: white !important;
+        margin-bottom: 30px;
+    }
+    #product-content .request-a-quote{
+        background-image: url(/media/wysiwyg/request-quote-bg.jpg);
+        background-repeat: no-repeat;
+        min-height: 190px;
+        text-align: center;
+        color: white;
+        padding: 40px;
+        margin: 15px;
+    }
+    #product-content .request-a-quote a.red-button{
+        font-size: 25px;
+        font-weight: 700;
+        color: white !important;
+        float: unset !important;
+    }
+    .page-main-pagebuilder-attributes {
+        display: none;
+    }
+    #product-content hr{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 96%;
+    }
+    #product-content section{
+        margin: 10px 0px;
+        padding: 10px;
+    }
+    #product-content a.learn-more{
+        color: #032e59;
+        font-size: 16px;
+    }
+    #product-content ul {
+        padding-inline-start: 20px;
+        width: 45%;
     }
 </style>
