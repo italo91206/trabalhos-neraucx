@@ -6,6 +6,19 @@ body{
 img {
     max-width: 100%;
 }
+.mobile{
+    display: none;
+}
+.desktop{
+    display: block;
+}
+.hidden{
+    visibility: hidden;
+}
+img.manequim {
+    width: 100%;
+    margin-top: -140px;
+}
 button.buy-now{
     background-color: #FFDA3D;
     box-shadow: 0px 4px 15px rgba(30, 30, 30, 0.21);
@@ -568,7 +581,61 @@ div.redes-sociais .fab {
     font-size: 11px;
     margin-top: 40px;
 }
-
+div#footer {
+    padding-top: 34px;
+    background: #1E1E1E;
+}
+div.presentation.desktop img {
+    width: unset !important;
+}
+.product-column-1,
+.product-column-2{
+    margin: 0 auto;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.product-column-2 {
+    border-left: 1px solid rgba(111, 111, 111, 0.3);
+    height: 400px;
+    margin: auto;
+    padding-left: 22px;
+}
+div#shop-line button {
+    margin: 0 auto;
+}
+.product-column-2 p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #E5E5E5;
+}
+.product-column-2 button.bota-saiba-mais {
+    margin-left: -34px !important;
+}
+#product-info-desktop .product-column-1, 
+#product-info-desktop .product-column-2 {
+    padding: 15px;
+}
+#product-info-desktop .product-column-2 {
+    border-left: none;
+    height: unset;
+}
+p.amarelo {
+    color: #ffda3d;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5em;
+}
+h1 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 46px;
+    color: white;
+}
+p.black {
+    color: #241f1f;
+    padding-top: 4px;
+}
 @media(max-width: 425px){
     .container{
         max-width: 425px;
@@ -576,17 +643,46 @@ div.redes-sociais .fab {
     hr.separator{
         width: 375px;
     }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
 }
 
 @media(max-width: 375px){
+    img.manequim {
+        margin-top: -115px;
+    }
     .container{
         max-width: 375px;
     }
     hr.separator{
-        width: 299px;
+        width: 345px;
     }
     button.buy-now{
         margin-left: 85px;
+    }
+    button.add-cart{
+        margin-left: 12px;
+    }
+    div#promotion-bar{
+        padding: 5px 2px;
+        width: 100%;
+    }
+    div#opcoes-e-cores p.description{
+        margin-left: 8px;
+        font-size: 15px;
+    }
+    select.tamanho{
+        margin-left: 12px;
+    }
+    select.cor{
+        margin-left: 12px;
+    }
+    .copyright p{
+        font-size: 9px;
     }
     div#video-section img{
         width: 76%;
@@ -606,6 +702,35 @@ div.redes-sociais .fab {
 }
 
 @media(max-width: 320px){
+    div#promotion-bar{
+        padding: 5px 0px;
+    }
+    button.botao-compra{
+        width: 150px;
+
+    }
+    button.botao-compra i.fa.fa-shopping-cart{
+        margin-left: 0px;
+    }
+    div#video-section img{
+        width: 70%;
+    }
+    div#play-circle{
+        top: 120px;
+        left: 170px;
+    }
+    div#circulo-1{
+        left: 74px;
+        top: 36px;
+    }
+    div#circulo-2{
+        left: 116px;
+        top: 70px;
+    }
+    div#circulo-3{
+        left: 148px;
+        top: 98px;
+    }
     .container{
         max-width: 320px;
     }
@@ -614,5 +739,115 @@ div.redes-sociais .fab {
     }
     button.buy-now{
         margin-left: 32px;
+    }
+    div#cart-options .item{
+        width: 300px;
+    }
+    div.bloco-imagem img {
+        width: 65px;
+        margin-top: 17px;
+    }
+    div.bloco-texto h3{
+        font-size: 12px;
+    }
+    .bloco-preco {
+        margin-left: 9px;
+    }
+    input.choose1 {
+        margin-left: 8px;
+    }
+    button.add-cart{
+        width: 300px;
+    }
+    .bloco-amarelo{
+        width: 300px;
+    }
+    div.bloco-amarelo p.text{
+        margin-left: 22px;
+    }
+    div.bloco-do-bloco-amarelo p {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+    img.ministerio {
+        width: 48px;
+        height: 64px;
+        margin-top: 12px;
+        margin-left: 20px;
+    }
+    .bloco-do-bloco-amarelo{
+        width: 285px;
+        height: 91px;
+        margin-top: 40px;
+    }
+    img.manequim {
+        margin-top: -110px;
+    }
+    div#opcoes-e-cores p.description {
+        margin-left: 13px;
+        font-size: 12px;
+    }
+    div#bundle-item .item .item-content{
+        width: 300px;
+    }
+    div.bloco-texto h3{
+        line-height: 16px;
+    }
+    div#compre-por-unidade div.quantity{
+        width: 300px;
+    }
+    .quantity .image {
+        width: 20%;
+        padding-top: 17px;
+    }
+    select#quantity{
+        margin-left: 8px;
+    }
+    select.cor {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    div.refil{
+        width: 300px;
+    }
+    .refil img.masc-pequena {
+        width: 80%;
+        margin-top: 25px;
+    }
+    div.refil div.title p {
+        margin-top: 33px;
+    }
+    div.refil{
+        width: 300px;
+    }
+    .refil .image {
+        width: 15%;
+    }
+    .copyright p {
+        font-size: 8px;
+    }
+}
+@media(max-width: 1024px){
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 1240px){
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 1440px){
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 1920px){
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }
