@@ -100,7 +100,7 @@
                     <h2 class="amarelo">R$ 338,90</h2>
                     <p class="discount">15% de desconto</p>
                 </div>
-                <div class="bloco" >
+                <div class="bloco-input" >
                     <input type="radio" class="choose1">
                 </div>
             </div>
@@ -126,8 +126,185 @@
             </div>
         </div>
 
+        <div id="opcoes-e-cores">
+            <p class="amarelo">Tamanhos e cores</p>
+            <h1>Opções para <br/>todos os<br/>públicos</h1>
+            <img src="./assets/Agrupar 1 1.png" alt="" class="varias-mascaras" style="width: 100%">
+            <p class="description">A máscara de proteção reutilizável com suporte para<br/>filtro está disponível nos tamanhos infantil (P) e<br/> adulto (M ou G), nas cores branca, azul, rosa e preta.<br/> São diferentes opções para diversas necessidades.</p>
+        </div>
+
+        <div id="escolha-seu-kit">
+            <p class="amarelo">Escolha seu kit</p>
+            <h1>Como você<br/>vai se proteger<br/>hoje?</h1>
+
+            <div id="bundle-item">
+                <div class="item">
+                    <div class="item-content flex">
+                        <div class="bloco-imagem">
+                            <img src="./assets/bundle-image.png" alt="">
+                        </div>
+                        <div class="bloco-texto">
+                            <p class="amarelo">Kit 01</p>
+                            <h3>2 Máscaras<br/>+ Refil 60 un.</h3>
+                        </div>
+                        <div class="bloco-preco">
+                            <p class="riscado">de R$159,60</p>
+                            <h2 class="amarelo">R$ 149,90</h2>
+                            <p class="discount">6% de desconto</p>
+                        </div>
+                        <div class="bloco-input">
+                            <input type="radio" class="choose1" checked>
+                        </div>
+                    </div>
+                    <div class="item-specification"></div>
+                </div>
+                <div class="item">
+                    <div class="item-content flex">
+                        <div class="bloco-imagem">
+                            <img src="./assets/bundle-image.png" alt="">
+                        </div>
+                        <div class="bloco-texto">
+                            <p class="amarelo">Kit 02</p>
+                            <h3>3 Máscaras<br/>+ Refil 90 un.</h3>
+                        </div>
+                        <div class="bloco-preco">
+                            <p class="riscado">de R$329,40</p>
+                            <h2 class="amarelo">R$ 215,90</h2>
+                            <p class="discount">10% de desconto</p>
+                        </div>
+                        <div class="bloco-input">
+                            <input type="radio" class="choose1">
+                        </div>
+                    </div>
+                    <div class="item-specification"></div>
+                </div>
+                <div class="item">
+                    <div class="item-content flex">
+                        <div class="bloco-imagem">
+                            <img src="./assets/bundle-image.png" alt="">
+                        </div>
+                        <div class="bloco-texto">
+                            <p class="amarelo">Kit 03</p>
+                            <h3>5 Máscaras<br/>+ Refil 120 un.</h3>
+                        </div>
+                        <div class="bloco-preco">
+                            <p class="riscado">de R$399,00</p>
+                            <h2 class="amarelo">R$ 338,90</h2>
+                            <p class="discount">15% de desconto</p>
+                        </div>
+                        <div class="bloco-input">
+                            <input type="radio" class="choose1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="separator" />
+
+        <div id="compre-por-unidade">
+            <p class="amarelo">Compre por unidade</p>
+            <table name="compre-por-unidade">
+                <tr class="headers">
+                    <th>Compre</th>
+                    <th>Ganhe</th>
+                    <th>Valor unitário</th>
+                </tr>
+                <tr class="linha">
+                    <td>2</td>
+                    <td><span>8%</span> de desconto</td>
+                    <td>R$55,20</td>
+                </tr>
+                <tr class="linha">
+                    <td>4</td>
+                    <td><span>12%</span> de desconto</td>
+                    <td>R$52,80</td>
+                </tr>
+                <tr class="linha">
+                    <td>8</td>
+                    <td><span>17%</span> de desconto</td>
+                    <td>R$49,80</td>
+                </tr>
+                <tr class="linha">
+                    <td>10</td>
+                    <td><span>20%</span> de desconto</td>
+                    <td>R$48,00</td>
+                </tr>
+            </table>
+            <div class="quantity flex">
+                <div class="image">
+                    <img src="./assets/mascara-pequena.png" alt="" class="masc-pequena">
+                </div>
+                <div class="title">
+                    <p>Mascara<br/>de proteção</p>
+                </div>
+                <div class="preco">
+                    <p class="valor">R$ 59,90</p>
+                    <p class="parcela">em até 12x no cartão</p>
+                </div>
+                <div class="div-quantity">
+                    <select name="quantity" id="quantity">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <select name="" id="" class="tamanho">
+                    <option value="">Tamanho</option>
+                </select>
+
+                <select name="" id="" class="cor">
+                    <option value="">Cor</option>
+                </select>
+            </div>
+            <button class="add-cart">Adicionar ao carrinho <i class="fa fa-shopping-cart"></i></button>
+            <div class="refil flex">
+                <div class="image">
+                    <img src="./assets/refil-pequeno.png" alt="" class="masc-pequena">
+                </div>
+                <div class="title">
+                    <p>Refil 30 un.</p>
+                </div>
+                <div class="preco">
+                    <p class="valor">R$ 19,90</p>
+                    <p class="parcela">em até 12x no cartão</p>
+                </div>
+                <div class="div-quantity">
+                    <select name="quantity" id="refil-quantity">
+                        <option value="01">Qtd.</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
     </div>
     
-    <div id="footer"></div>
+    <div id="footer">
+        <div class="container">
+            <div class="redes-sociais flex">
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-youtube-square"></i>
+            </div>
+        </div>
+
+        <div class="container e-mails">
+            <p>
+                <b>Atendimento ao cliente</b><br/>
+                suporte@mascaraknit.com.br
+            </p>
+            <p>
+                <b>Atendimento corporativo</b><br/>
+                empresas@mascaraknit.com.br
+            </p>
+        </div>
+
+        <div class="container copyright">
+            <p>Rua Almirante Barroso - 240 - Bairro Genuíno Sampaio - CEP 93700-000 - Campo<br/>
+                Bom - Rio Grande do Sul - Brasil Fones: 51 3134 3953 | 51 99733 6634</p>
+        </div>
+    </div>
 </body>
 </html>
