@@ -1,0 +1,397 @@
+body{
+    background-color: rgb(39, 39, 39);
+    font-family: Sailec, sans-serif;
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+}
+button.buy-now{
+    background-color: #FFDA3D;
+    box-shadow: 0px 4px 15px rgba(30, 30, 30, 0.21);
+    border: none;
+    border-radius: 5px;
+    width: 130px;
+    height: 36px;
+    margin-top: 13px;
+    margin-left: 135px;
+    font-weight: 700;
+    font-size: 14px;
+}
+div#menu{
+    height: 61px;
+    margin: 0 auto;
+}
+div#menu i.fa.fa-shopping-cart {
+    margin-top: 22px;
+    color: #ffda3d;
+    font-size: 21px;
+    margin-left: 15px;
+}
+img.logo {
+    height: 27px;
+    margin-top: 17px;
+    width: 91px;
+    margin-left: 17px;
+}
+.flex{
+    display: flex;
+}
+.relative{
+    position: relative;
+}
+div#promotion-bar {
+    background-color: #ffda3d;
+    padding: 5px 46px;
+}
+div#promotion-bar p {
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-size: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 12px;
+}
+div.presentation {
+    text-align: center;
+    margin-top: 17px;
+}
+div.presentation p.amarelo {
+    color: #ffda3d;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5em;
+}
+div.presentation h1 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 46px;
+    color: white;
+}
+h2#product-name {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-left: 10px !important;
+    margin: 0px;
+}
+div#product-info p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #E5E5E5;
+    margin-left: 13px;
+}
+hr.separator{
+    border: 1px solid rgba(111, 111, 111, 0.3);
+    margin: 25px auto;
+}
+button.botao-compra {
+    width: 199px;
+    height: 50px;
+    background: #FFDA3D;
+    box-shadow: 0px 2px 20px rgba(255, 206, 0, 0.6);
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 auto
+}
+button.botao-compra i.fa.fa-shopping-cart {
+    color: #ffda3d;
+    background-color: #272727;
+    padding: 9px;
+    border-radius: 5px;
+    margin-left: 35px;
+    
+}
+button.bota-saiba-mais {
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    /* box-shadow: 0px 4px 15px rgba(255, 218, 61, 0.45); */
+    border-radius: 5px;
+    background: none;
+    width: 139px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #E5E5E5;
+    margin: 0 auto
+}
+div#product-info {
+    padding-bottom: 100px;
+    background: linear-gradient(180deg, rgba(113, 98, 62, 0) 0%, #000000 100%);
+}
+div#video-section img {
+    margin-left: 13px;
+    margin-top: -55px;
+}
+div#circulo-1 {
+    position: absolute;
+    top: 90px;
+    left: 180px;
+    width: 245px;
+    height: 245px;
+    border: 0.5px solid rgba(255, 189, 18, 0.2);
+    box-shadow: 0px 2px 6px rgba(255, 206, 0, 0.6);
+    border-radius: 100%;
+}
+div#circulo-2 {
+    position: absolute;
+    top: 120px;
+    left: 215px;
+    width: 179px;
+    height: 179px;
+    border: 0.5px solid rgba(255, 189, 18, 0.5);
+    box-shadow: 0px 2px 6px rgba(255, 206, 0, 0.6);
+    border-radius: 100%;
+}
+div#circulo-3 {
+    position: absolute;
+    top: 151px;
+    left: 245px;
+    width: 121px;
+    height: 121px;
+    border: 0.5px solid #FFBD12;
+    box-shadow: 0px 2px 6px rgba(255, 206, 0, 0.6);
+    border-radius: 100%;
+}
+div#play-circle {
+    position: absolute;
+    top: 172px;
+    left: 265px;
+    width: 79px;
+    height: 79px;
+    background-color: #241F1F;
+    box-shadow: 0px 2px 20px rgba(255, 206, 0, 0.6);
+    border-radius: 100%;
+}
+div#play-circle i.fa.fa-play {
+    position: absolute;
+    top: 32px;
+    left: 34px;
+    color: #ffda3d;
+}
+div#filtro-de-ar p.amarelo,
+div#cart-options p.amarelo,
+div#info-slider p.amarelo {
+    color: #ffda3d;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+div#filtro-de-ar h1,
+div#info-slider h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 46px;
+    color: #FFFFFF;
+}
+div#bolinha-2 {
+    width: 42px;
+    height: 42px;
+    border: dashed 1px #ffda3d;
+    border-radius: 100%;
+    position: absolute;
+    top: 135px;
+    left: 40px;
+}
+.bolinha-dentro {
+    width: 28px;
+    height: 28px;
+    box-shadow: 0px 2px 6px rgba(255, 206, 0, 0.6);
+    background: #FFDA3D;
+    border-radius: 100%;
+    margin-top: -9px;
+    margin-left: 7px;
+}
+.bolinha-dentro p {
+    padding-top: 6px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+div#slider .text {
+    text-align: center;
+}
+h4.slider-numero {
+    font-weight: bold;
+    line-height: 15px;
+    text-align: center;
+    color: #FFDA3D;
+    margin-bottom: 5px;
+}
+div#slider div.text h3 {
+    text-align: center;
+    color: #E5E5E5;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+div#slider div.text p {
+    line-height: 19px;
+    text-align: center;
+    color: #6F6F6F;
+    margin-block-start: 0px;
+}
+div#slider-progression-bar {
+    width: 169px;
+    height: 9px;
+    background: #494949;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+div#slider-progression {
+    height: 9px;
+    width: 50px;
+    background: #FFDA3D;
+    box-shadow: 0px 2px 20px rgba(255, 206, 0, 0.6);
+    border-radius: 20px;
+}
+div#cart-options h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 46px;
+    color: #FFFFFF;
+}
+div#cart-options .item {
+    width: 349px;
+    height: 97px;
+    border: 2px solid #494949;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+div.bloco-imagem img {
+    width: 100px;
+}
+div.bloco-texto p.amarelo {
+    text-align: left !important;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 20px;
+}
+div.bloco-texto h3 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E5E5E5;
+    margin: 0px;
+    margin-top: 4px;
+}
+div.bloco-preco p.riscado {
+    text-decoration-line: line-through;
+    line-height: 14px;
+    color: #4F4F4F;
+    margin: 0px;
+    margin-top: 20px;
+}
+div.bloco-preco h2.amarelo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 26px;
+    color: #FFBD12;
+    margin: 0px;
+}
+div.bloco-preco p.discount {
+    font-size: 11px;
+    line-height: 11px;
+    color: #828282;
+    margin: 0px;
+}
+input.choose1 {
+    margin-left: 15px;
+    margin-top: 40px;
+}
+button.add-cart {
+    width: 349px;
+    height: 50px;
+    background: #FFDA3D;
+    box-shadow: 0px 2px 20px rgba(255, 206, 0, 0.6);
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 38px;
+    font-weight: bold;
+    font-size: 14px;
+}
+button.add-cart i.fa.fa-shopping-cart {
+    background-color: #272727;
+    color: #ffda3d;
+    padding: 9px;
+    padding-left: 8px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+.bloco-amarelo {
+    width: 348px;
+    height: 435px;
+    background: linear-gradient(180deg, #FFDA3D -1.8%, #FFBD12 100%);
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+img.refil {
+    margin-top: -165px;
+}
+div.bloco-amarelo p.text {
+    margin-left: 33px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #1E1E1E;
+}
+.bloco-do-bloco-amarelo {
+    width: 305px;
+    height: 101px;
+    background: #FFDA3D;
+    box-shadow: 0px 2px 20px rgba(255, 206, 0, 0.4);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+img.ministerio {
+    width: 48px;
+    height: 64px;
+    margin-top: 17px;
+    margin-left: 27px;
+}
+div.bloco-do-bloco-amarelo p {
+    margin-left: 21px;
+}
+@media(max-width: 425px){
+    .container{
+        max-width: 425px;
+    }
+    hr.separator{
+        width: 375px;
+    }
+}
+
+@media(max-width: 375px){
+    .container{
+        max-width: 375px;
+    }
+    hr.separator{
+        width: 299px;
+    }
+    button.buy-now{
+        margin-left: 85px;
+    }
+}
+
+@media(max-width: 320px){
+    .container{
+        max-width: 320px;
+    }
+    hr.separator{
+        width: 244px;
+    }
+    button.buy-now{
+        margin-left: 32px;
+    }
+}
