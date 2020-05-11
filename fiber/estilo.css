@@ -594,12 +594,12 @@ div.presentation.desktop img {
     max-width: 50%;
     flex: 0 0 50%;
 }
-.product-column-2 {
+/* .product-column-2 {
     border-left: 1px solid rgba(111, 111, 111, 0.3);
     height: 400px;
     margin: auto;
     padding-left: 22px;
-}
+} */
 div#shop-line button {
     margin: 0 auto;
 }
@@ -635,6 +635,89 @@ h1 {
 p.black {
     color: #241f1f;
     padding-top: 4px;
+}
+
+div.presentation .product-column-2 {
+    text-align: left;
+    padding-left: 40px;
+}
+.presentation.desktop .product-column-2 h2#product-name {
+    margin-left: 0px !important;
+}
+.presentation.desktop .product-column-2 button.botao-compra {
+    margin-left: 0px !important;
+    margin-right: 45px !important;
+}
+img#video-full {
+    width: 80%;
+}
+div#manequim-slider-info-text p.amarelo {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    text-align: right;
+    color: #FFDA3D;
+    letter-spacing: unset;
+}
+div#manequim-slider-info-text p.cinza {
+    font-size: 14px;
+    line-height: 19px;
+    color: #6F6F6F;
+}
+div#info-slider-desktop .product-column-1 {
+    max-width: 30%;
+    flex: 0 0 30%;
+}
+#info-slider-desktop p b {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #E5E5E5;
+}
+p.cinza b {
+    color: #848282 !important;
+    font-weight: bold;
+}
+#info-slider-desktop .product-column-1 {
+    padding-top: 105px;
+}
+#cart-options-desktop .coluna-2 {
+    margin-left: 90px;
+}
+#cart-options-desktop  .coluna-1, .coluna-2 {
+    margin: 0 auto;
+}
+#cart-options-desktop  .coluna-1 {
+    margin-right: 0px;
+}
+#cart-options-desktop .item.flex {
+    width: 349px;
+    height: 97px;
+    border: 2px solid #494949;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+#cart-options-desktop button.add-cart{
+    margin-left: 0px;
+    width: 353px;
+}
+#filtro-de-ar-destkop img.refil{
+    margin-top: 0px;
+}
+#filtro-de-ar-destkop p.text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #E5E5E5;
+}
+#filtro-de-ar-destkop .bloco-do-bloco-amarelo{
+    margin: 0px;
+    width: 345px;
+}
+#filtro-de-ar-destkop div.bloco-do-bloco-amarelo p {
+    margin-left: 21px;
+    color: #1E1E1E;
+    font-size: 14px;
+    margin-top: 30px;
 }
 @media(max-width: 425px){
     .container{
@@ -832,22 +915,23 @@ p.black {
         max-width: 1000px;
         margin: 0 auto;
     }
+    
 }
 @media(max-width: 1240px){
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 }
 @media(max-width: 1440px){
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 }
 @media(max-width: 1920px){
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 }

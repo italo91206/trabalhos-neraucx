@@ -31,12 +31,6 @@
         </div>
 
         <div class="presentation desktop">
-            
-            <div class="container" style="text-align: center;">
-                <h1>Tecnologia do futuro<br/>para você se proteger agora</h1>
-                <p class="amarelo">Máscara Knit</p>
-            </div>
-            
             <div class="container flex">
                 <div class="product-column-1">
                     
@@ -44,10 +38,14 @@
                 </div>
 
                 <div class="product-column-2">
-                    <h1 id="product-name">Máscara<br/>de proteção</h1>
-                    <p>Reutilizável com suporte para filtro contra<br/>vírus, bactérias, pólen e poluição</p>
 
-                    <hr class="separator hidden" />
+                    <p class="amarelo">Máscara Knit</p>
+                    <h1>Tecnologia<br/>do futuro<br/>para você se<br/>proteger agora</h1>
+
+                    <hr class="separator" />
+
+                    <h2 id="product-name">Máscara de proteção</h2>
+                    <p>Reutilizável com suporte para filtro contra<br/>vírus, bactérias, pólen e poluição</p>
 
                     <div id="shop-line" class="container flex">
                         <button class="botao-compra">Compre agora <i class="fa fa-shopping-cart"></i></button>
@@ -72,43 +70,19 @@
 
         <div id="product-info-desktop" class="desktop">
             
-            <div class="container" style="text-align: center;">
-                <p class="amarelo">Knit technology</p>
-                <h1>Uma novidade com muitos benefícios</h1>
-            </div>
-
-            <div class="container flex relative">
-                <div class="product-column-1">
-                    <img src="./assets/video.png" alt="">
-                    <div id="play-button">
-                        <img src="" alt="" class="circulos">
-                        <div id="circulo-1"></div>
-                        <div id="circulo-2"></div>
-                        <div id="circulo-3"></div>
-                        <div id="play-circle">
-                            <i class="fa fa-play" class="play-button"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-column-2">
-                    
-                    <div id="slider">
-                        <div class="slider-1 relative">
-                            <div id="bolinha-2">
-                                <div class="bolinha-dentro"><p class="black">02</p></div>
-                            </div>
-                            <img src="./assets/manequim-com-mascara.png" class="manequim">
-
-                            <div class="text">
-                                <h4 class="slider-numero">02</h4>
-                                <h3>Formato anatômico</h3>
-                                <p>Sem costuras e com<br/> maior comodidade.</p>
-                            </div>
-                        </div>
+            <div class="container relative">
+                <img src="./assets/full_video.png" alt="" id="video-full">
+                <div id="play-button">
+                    <img src="" alt="" class="circulos">
+                    <div id="circulo-1"></div>
+                    <div id="circulo-2"></div>
+                    <div id="circulo-3"></div>
+                    <div id="play-circle">
+                        <i class="fa fa-play" class="play-button"></i>
                     </div>
                 </div>
             </div>
+            
         </div>
         
         <div id="video-section" class="relative mobile">
@@ -145,6 +119,33 @@
             </div>
         </div>
 
+        <div id="info-slider-desktop" class="desktop">
+            <div class="container flex">
+                <div class="product-column-1" style="text-align: right;">
+                    <p class="amarelo">Knit technology</p>
+                    <h1>Uma novidade<br/>com muitos</br>benefícios</h1>
+
+
+                    <div id="manequim-slider-info-text">
+                        <p class="amarelo">02</p>
+                        <p><b>Formato Anatômico</b></p>
+                        <p class="cinza">Sem costuras e com<br/>maior comodidade.</p>
+                        <p class="cinza"><b>&lt; &gt;</b></p>
+                    </div>
+                </div>
+                <div class="product-column-2">
+                    <div id="manequim-desktop-slider">
+                        <div class="slider-1 relative">
+                            <div id="bolinha-2">
+                                <div class="bolinha-dentro"><p>02</p></div>
+                            </div>
+                            <img src="./assets/manequim-com-mascara.png" class="manequim">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <hr class="separator mobile" />
 
         <div id="slider-progression-bar" class="mobile">
@@ -174,7 +175,41 @@
             <button class="add-cart">Adicionar ao carrinho <i class="fa fa-shopping-cart"></i></button>
         </div>
 
+        <div id="cart-options-desktop" class="desktop">
+            <div class="container flex">
+                <div class="coluna-1">
+                    <p class="amarelo">Aproveite</p>
+                    <h1>Proteja toda<br/> a sua família</h1>
+                </div>
+
+                <div class="coluna-2">
+                    <div class="item flex">
+                        <div class="bloco-imagem">
+                            <img src="./assets/bundle-image.png" alt="">
+                        </div>
+                        <div class="bloco-texto" >
+                            <p class="amarelo">Kit 03</p>
+                            <h3>5 Máscaras<br/>+ Refil 150 un.</h3>
+                        </div>
+                        <div class="bloco-preco" >
+                            <p class="riscado">de R$399,00</p>
+                            <h2 class="amarelo">R$ 338,90</h2>
+                            <p class="discount">15% de desconto</p>
+                        </div>
+                        <div class="bloco-input" >
+                            <input type="radio" class="choose1">
+                        </div>
+                    </div>
+                    <button class="add-cart">Adicionar ao carrinho <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
         <hr class="separator mobile" />
+
+        <div class="container">
+            <hr class="separator"/>
+        </div>
 
         <div id="filtro-de-ar" class="mobile">
             <p class="amarelo">Filtro de ar</p>
@@ -193,11 +228,44 @@
             </div>
         </div>
 
+        <div id="filtro-de-ar-destkop" class="desktop">
+            <div class="container flex">
+                <div class="product-column-1">
+                    <img src="./assets/refil.png" alt="" class="refil">
+                </div>
+                <div class="product-column-2">
+                    <p class="amarelo">Filtro de ar</p>
+                    <h1>Proteção <br/>amplificada</h1>
+                    <p class="text">
+                        A máscara é compatível com o refil de<br/>proteção Fiber E96 contra vírus, bactéria,<br/>pólen e poluição.<br/><br/>
+                        O refil está disponível nas farmácias em<br/>geral, mas você não precisa sair de casa<br/>para comprá-lo.                    
+                    </p>
+                    <div class="bloco-do-bloco-amarelo flex">
+                        <img src="./assets/ministerio-saude.png" alt="" class="ministerio">
+                        <p>Atende às análises previstas na <br/><b>RDC 142</b> do <b>Ministério </b><b>da Saúde.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container desktop">
+            <hr class="separator">
+        </div>
+
         <div id="opcoes-e-cores" class="mobile">
             <p class="amarelo">Tamanhos e cores</p>
             <h1>Opções para <br/>todos os<br/>públicos</h1>
             <img src="./assets/Agrupar 1 1.png" alt="" class="varias-mascaras" style="width: 100%">
             <p class="description">A máscara de proteção reutilizável com suporte para<br/>filtro está disponível nos tamanhos infantil (P) e<br/> adulto (M ou G), nas cores branca, azul, rosa e preta.<br/> São diferentes opções para diversas necessidades.</p>
+        </div>
+
+        <div id="opcoes-e-cores-destkop" class="desktop">
+            <div class="container">
+                <p class="amarelo">Tamanhos e cores</p>
+                <h1>Opções para <br/>todos os<br/>públicos</h1>
+                <img src="./assets/Agrupar 1 1.png" alt="" class="varias-mascaras" style="width: 100%">
+                <p class="description">A máscara de proteção reutilizável com suporte para<br/>filtro está disponível nos tamanhos infantil (P) e<br/> adulto (M ou G), nas cores branca, azul, rosa e preta.<br/> São diferentes opções para diversas necessidades.</p>
+            </div>
         </div>
 
         <div id="escolha-seu-kit" class="mobile">
