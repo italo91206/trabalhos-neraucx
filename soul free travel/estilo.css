@@ -210,87 +210,6 @@ i.fa.fa-envelope, i.fa.fa-link {
     display: none;
 }
 
-@media(max-width: 1920px){
-    .home #st-content-wrapper.search-result-page .search-form-wrapper{
-        width: 1905px;
-        left: -367px
-    }
-}
-
-@media(max-width: 1024px){
-    i.fa.fa-instagram, i.fa.fa-facebook-f, i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-google-plus, i.fa.fa-skype {
-        font-size: 20px !important;
-        padding: 10px 13px !important;
-        height: 40px !important;
-        width: 40px !important;
-    }
-    i.fa.fa-google-plus {
-        padding-left: 9px !important;
-    }
-    i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-skype {
-        padding-left: 11px !important;
-    }
-}
-
-@media(max-width: 425px){
-    #mobile-row{
-        display: block;
-    }
-    .wpb_column.column_container.col-md-3:nth-child(3),
-    .wpb_column.column_container.col-md-3:nth-child(4) {
-        display: none;
-    }
-    .wpb_images_carousel.wpb_content_element.vc_clearfix {
-        height: 200px;
-    }
-    img.attachment-full {
-        width: 100%;
-        height: 200px;
-    }
-    #header .header .header-left .logo img {
-        height: 40px;
-    }
-    #footer-row .container .row {
-        display: flex;
-    }
-    .footer-mobile-payment-types .custom-row img {
-        width: 20%;
-        padding: 5px 5px;
-    }
-    .footer-payment-types .custom-row img {
-        width: 50%;
-        padding: 5px 5px;
-    }
-    #mobile-row .container {
-        max-width: 425px;
-    }
-    #mobile-row .footer-icons {
-        margin-top: 0px;
-        margin-left: 50px;
-        margin-bottom: 40px;
-    }
-    .wpb_column.column_container.col-md-3:nth-child(1), 
-    .wpb_column.column_container.col-md-3:nth-child(2) {
-        width: unset !important;
-    }
-    div#footer-row {
-        height: 240px;
-    }
-    i.fa.fa-envelope, i.fa.fa-link {
-        font-size: 18px;
-        margin-right: 10px;
-    }
-    .footer-row {
-        font-size: 14px;
-    }
-    .search-result-page .tour-search-form-home {
-        width: unset !important;
-    }
-    .footer-payment-types {
-        margin-top: 100px;
-    }
-}
-
 /* Aqui começa a seção /about-us */
 
 div#about-us-text {
@@ -361,4 +280,140 @@ div#sticky-nav {
 }
 .form-group.form-extra-field.dropdown.clearfix.field-detination.has-icon i.input-icon {
     left: 0 !important;
+}
+@media (max-width: 991px){
+    .home #st-content-wrapper.search-result-page .search-form-wrapper .search-form .form-group {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 768px){
+    #sticky-nav .col-md-4:nth-child(1) {
+        left: 0px;
+    }
+    #sticky-nav .col-md-4:nth-child(2){
+        left: 285px;
+    }
+    #sticky-nav .col-md-4:nth-child(3) {
+        left: 580px;
+    }
+    .home #st-content-wrapper.search-result-page .search-form-wrapper .search-form .btn-search {
+        position: absolute;
+        right: -17px;
+        width: 120px;
+    }
+    .home #st-content-wrapper.search-result-page .search-form-wrapper .search-form .form-group.field-detination {
+        padding: 0px !important;
+    }
+    .home #st-content-wrapper.search-result-page .search-form-wrapper .search-form .form-group {
+        margin-top: 10px;
+        padding: 0px !important;
+    }
+}
+@media(max-width: 1920px){
+    .home #st-content-wrapper.search-result-page .search-form-wrapper{
+        width: 1905px;
+        left: -367px
+    }
+}
+@media(max-width: 1024px){
+    i.fa.fa-instagram, i.fa.fa-facebook-f, i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-google-plus, i.fa.fa-skype {
+        font-size: 20px !important;
+        padding: 10px 13px !important;
+        height: 40px !important;
+        width: 40px !important;
+    }
+    i.fa.fa-google-plus {
+        padding-left: 9px !important;
+    }
+    i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-skype {
+        padding-left: 11px !important;
+    }
+}
+@media(max-width: 425px){
+    html {
+        margin-top: 0px !important;
+    }
+    #sticky-nav .col-md-4:nth-child(1){
+        padding: 0px;
+        left: 364px;
+    }
+    #sticky-nav .col-md-4:nth-child(2){
+        left: 460px;
+        padding: 0px;
+    }
+    #sticky-nav .col-md-4:nth-child(3){
+        left: 610px;
+        width: 120px;
+    }
+    .search-result-page .search-form-wrapper .search-form .field-detination .dropdown#dropdown-destination {
+        padding-left: 25px !important;
+        padding-right: 13px;
+    }
+    .search-result-page .tour-search-form-home .search-form .form-date-field .date-wrapper .check-in-wrapper {
+        padding-left: 20px !important;
+    }
+    #mobile-row{
+        display: block;
+    }
+    .wpb_column.column_container.col-md-3:nth-child(3),
+    .wpb_column.column_container.col-md-3:nth-child(4) {
+        display: none;
+    }
+    .wpb_images_carousel.wpb_content_element.vc_clearfix {
+        height: 200px;
+    }
+    img.attachment-full {
+        width: 100%;
+        height: 200px;
+    }
+    #header .header .header-left .logo img {
+        height: 40px;
+    }
+    #footer-row .container .row {
+        display: flex;
+    }
+    .footer-mobile-payment-types .custom-row img {
+        width: 50%;
+        padding: 5px 5px;
+    }
+    .footer-mobile-payment-types p b {
+        color: white;
+        font-size: 20px;
+    }
+    .footer-mobile-payment-types {
+        margin-top: 100px;
+        padding: 30px;
+    }
+    .footer-payment-types .custom-row img {
+        width: 50%;
+        padding: 5px 5px;
+    }
+    #mobile-row .container {
+        max-width: 425px;
+    }
+    #mobile-row .footer-icons {
+        margin-top: 0px;
+        margin-left: 50px;
+        margin-bottom: 40px;
+    }
+    .wpb_column.column_container.col-md-3:nth-child(1), 
+    .wpb_column.column_container.col-md-3:nth-child(2) {
+        width: unset !important;
+    }
+    div#footer-row {
+        height: 240px;
+    }
+    i.fa.fa-envelope, i.fa.fa-link {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .footer-row {
+        font-size: 14px;
+    }
+    .search-result-page .tour-search-form-home {
+        width: unset !important;
+    }
+    .footer-payment-types {
+        margin-top: 100px;
+    }
 }
