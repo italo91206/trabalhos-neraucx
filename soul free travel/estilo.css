@@ -417,3 +417,49 @@ div#sticky-nav {
         margin-top: 100px;
     }
 }
+
+/* seção do grid */
+
+div#icones-pra-add .fa {
+    margin: auto auto;
+}
+div#icones-pra-add .fa {
+    margin: auto auto;
+    height: 40px;
+    width: 40px;
+    background-color: #2e53a4;
+    color: white;
+    font-size: 25px;
+    border-radius: 100%;
+    padding: 7px;
+}
+i.fa.fa-bicycle {
+    padding-left: 5px !important;
+}
+i.fa.fa-info-circle {
+    padding-left: 8px !important;
+}
+i.fa.fa-wheelchair {
+    padding-left: 10px !important;
+}
+.item-service.grid-item.has-matchHeight {
+    text-align: center;
+}
+.section-footer button {
+    background-color: #c2151b;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 20px;
+}
+.search-result-page.st-tours .grid-item .service-title a {
+    color: #2e53a4 !important;
+    font-weight: bold;
+}
+.descricao p, p.price {
+    color: #2e53a4;
+}
+.search-result-page.st-tours .grid-item .service-border{
+    border: none !important;
+}
