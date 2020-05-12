@@ -132,7 +132,8 @@ div#sticky-nav {
     display: flex;
 }
 .footer-payment-types .custom-row img {
-    width: 70%;
+    width: 158px;
+    height: 41.226px;
     padding: 5px 5px;
 }
 i.fa.fa-instagram, 
@@ -465,4 +466,9 @@ i.fa.fa-wheelchair {
 }
 i.fa.en.mr5 {
     display: none;
+}
+@media(max-width: 1300px){
+    #header .header .header-right .st-list li:last-child{
+        display: block !important;
+    }
 }
