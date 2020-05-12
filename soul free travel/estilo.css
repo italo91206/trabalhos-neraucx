@@ -463,3 +463,6 @@ i.fa.fa-wheelchair {
 .search-result-page.st-tours .grid-item .service-border{
     border: none !important;
 }
+i.fa.en.mr5 {
+    display: none;
+}
