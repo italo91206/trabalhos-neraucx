@@ -70,18 +70,26 @@
 
     <section>
         <div class="blueprint">
-            <h3>WHY CROWD CONTROL EXPERTS TRUST SONCO’S CLASSIC BARRICADE</h3>
-            <p>
-                Our interlocking steel barricades last for years of constant use in all weather<br/>conditions. The hot-dipped galvanized finish prevents rust and corrosion,<br/>while the 16-gauge steel keeps large, dense crowds secure and organized.<br/>This is superior durability which means you’re making a long-term<br/>investment – despite the low prices.
-            </p>
-            <ul>
-                <li> Built for super heavy-duty crowd-control applications.</li>
-                <li> The hot-dipped galvanized finish extends lifespan.</li>
-                <li> Black and orange powder-coated options available.</li>
-                <li>25% more steel than most barricades on the market.</li>
-                <li>Price-Match Guarantee! We’ll match or beat any competing rate.</li>
-            </ul>
-            <a href="" class="red-button">DOWNLOAD SPEC SHEET</a>
+            <div class="line_main">
+                <div class="cmd-6">
+                    <h3>WHY CROWD CONTROL EXPERTS TRUST SONCO’S CLASSIC BARRICADE</h3>
+                    <p>
+                        Our interlocking steel barricades last for years of constant use in all weather<br/>conditions. The hot-dipped galvanized finish prevents rust and corrosion,<br/>while the 16-gauge steel keeps large, dense crowds secure and organized.<br/>This is superior durability which means you’re making a long-term<br/>investment – despite the low prices.
+                    </p>
+                    <ul>
+                        <li> Built for super heavy-duty crowd-control applications.</li>
+                        <li> The hot-dipped galvanized finish extends lifespan.</li>
+                        <li> Black and orange powder-coated options available.</li>
+                        <li>25% more steel than most barricades on the market.</li>
+                        <li>Price-Match Guarantee! We’ll match or beat any competing rate.</li>
+                    </ul>
+                </div>
+                <div class="cmd-6" style="align-self: flex-end;">
+                    <a href="" class="red-button">DOWNLOAD SPEC SHEET</a>
+                </div>
+            </div>
+            
+            
         </div>  
     </section>
 
@@ -302,7 +310,6 @@
     }
     #product-content .blueprint ul {
         padding-inline-start: 20px;
-        width: 45%;
     }
     #product-content .blueprint h3,
     #product-content .blueprint h2 {
@@ -355,6 +362,30 @@
         width: 590px;
         height: 365px;
     }
+    @media(max-width: 1440px){
+        #video-iframe {
+            width: 570px;
+            height: 365px;
+        }
+    }
+    @media(max-width: 1024px){
+        #video-iframe {
+            width: 440px;
+            height: 285px;
+        }
+    }
+    @media(max-width: 768px){
+        #video-iframe {
+            width: 330px;
+            height: 206px;
+        }
+        #product-content .blueprint{
+            min-height: 645px;
+        }
+        #product-content .request-a-quote{
+            background-repeat: unset;
+        }
+    }
     @media(max-width: 425px){
         #product-content .blueprint ul {
             width: 100%;
@@ -374,6 +405,33 @@
         }
         #product-content div.blueprint {
             min-height: 875px;
+        }
+    }
+    @media(max-width: 375px){
+        #video-iframe {
+            width: 305px;
+            height: 233px;
+        }
+        #product-content div.blueprint {
+            min-height: 1048px;
+        }
+        #product-content a.red-button {
+            font-size: 16px;
+        }
+    }
+    @media(max-width: 320px){
+        #video-iframe {
+            width: 260px;
+            height: 200px;
+        }
+        #product-content div.blueprint {
+            min-height: 1352px;
+        }
+        #product-content a.red-button {
+            font-size: 12px !important;
+        }
+        #product-content a.red-button {
+            font-size: 9px !important;
         }
     }
 </style>
