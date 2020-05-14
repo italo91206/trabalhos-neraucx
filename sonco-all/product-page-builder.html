@@ -9,7 +9,7 @@
     <section>
         <div class="line_main">
             <div class="cmd-6">
-                <iframe frameborder="0" allowfullscreen="" src="https://player.vimeo.com/video/412424102?title=0&amp;byline=0&amp;portrait=0" data-element="video" id="video-iframe"></iframe>
+                <iframe frameborder="0" allowfullscreen="" src="https://player.vimeo.com/video/412424102?title=0&amp;byline=0&amp;portrait=0" data-element="video" id="video-iframe" style="width: 100%"></iframe>
                 <h3>Barricade Fence Brings Crowd Control to New Heights</h3>
                 <p>When you buy the right product the first time, you stay happy with your investment for the long-term. And because this barricade fence will last for years of constant use in all weather conditions, you’ll be making a long-term investment – despite saving money. At SONCO, we offer truly unbeatable prices as well as a line of credit program that gets you up to $100k and Net 30 terms on all products.</p>
             </div>
@@ -359,31 +359,36 @@
         text-align: right;
     }
     #video-iframe{
-        width: 590px;
+        /* width: 590px; */
         height: 365px;
     }
     @media(max-width: 1440px){
-        #video-iframe {
+        /* #video-iframe {
             width: 570px;
             height: 365px;
-        }
+        } */
     }
     @media(max-width: 1024px){
-        #video-iframe {
+        /* #video-iframe {
             width: 440px;
             height: 285px;
-        }
+        } */
     }
     @media(max-width: 768px){
-        #video-iframe {
+        /* #video-iframe {
             width: 330px;
             height: 206px;
-        }
+        } */
         #product-content .blueprint{
             min-height: 645px;
         }
         #product-content .request-a-quote{
             background-repeat: unset;
+        }
+    }
+    @media(max-width: 450px){
+        #product-content a.red-button {
+            font-size: 18px;
         }
     }
     @media(max-width: 425px){
@@ -399,31 +404,34 @@
         #product-content .request-a-quote{
             background-repeat: initial;
         }
-        #video-iframe {
+        /* #video-iframe {
             width: 370px;
             height: 365px;
-        }
+        } */
         #product-content div.blueprint {
             min-height: 875px;
         }
+        #product-content a.red-button {
+            font-size: 15px;
+        }
     }
     @media(max-width: 375px){
-        #video-iframe {
+        /* #video-iframe {
             width: 305px;
             height: 233px;
-        }
+        } */
         #product-content div.blueprint {
             min-height: 1048px;
         }
         #product-content a.red-button {
-            font-size: 16px;
+            font-size: 12px;
         }
     }
     @media(max-width: 320px){
-        #video-iframe {
+        /* #video-iframe {
             width: 260px;
             height: 200px;
-        }
+        } */
         #product-content div.blueprint {
             min-height: 1352px;
         }
