@@ -189,6 +189,7 @@ i.fa.fa-envelope, i.fa.fa-link {
 }
 
 .partners-photos img {
+    height: 10%;
     width: 10%;
     margin: 0 auto;
 }
@@ -513,5 +514,8 @@ i.fa.en.mr5 {
 }   
 /* bagunça da homepage */
 div.search-form.sticky.small {
+    display: none;
+}
+.form-group.form-date-search.st-form-package.clearfix {
     display: none;
 }
