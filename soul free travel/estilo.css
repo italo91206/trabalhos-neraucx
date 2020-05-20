@@ -459,6 +459,10 @@ div#sticky-nav {
 }
 
 /* seção do grid */
+p.price {
+    font-size: 20px;
+    line-height: 25px;
+}
 
 div#icones-pra-add .fa {
     margin: auto auto;
