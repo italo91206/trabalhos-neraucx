@@ -8,6 +8,7 @@ window.onload = function(){
     var atual = window.location.href;
     var tem = atual.includes("/en/");
     var final = "";
+    var param = "";
 
     if(tem){
         // quero poder ir pra português
@@ -16,6 +17,8 @@ window.onload = function(){
         final = partes[0];
         final = final.concat(".com.br/");
         final = final.concat(partes[1]);
+        param = new URL(final);
+        param.searchParams.set("currency", "BRL");
         this.console.log("Tinha!");
     }
     else{
@@ -24,13 +27,15 @@ window.onload = function(){
         final = partes[0];
         final = final.concat(".com.br/en/");
         final = final.concat(partes[1]);
+        param = new URL(final);
+        param.searchParams.set("currency", "EUR");
         jQuery(".st-list").children()[4].remove()
         this.console.log("Não tinha!");
     }
     
     var link = jQuery(".st-list").children()[3];
     link = jQuery(link).children()[0];
-    jQuery(link).attr("href", final);
+    jQuery(link).attr("href", param.href);
 
-    console.log(final);
+    console.log(param.href);
 }

@@ -85,7 +85,7 @@ div#vc_images-carousel-1-1588593616,
     font-weight: 400 !important;
     padding: 0px 3px !important;
     color: #2e53a4 !important;
-    font-size: 20px;
+    font-size: 17px;
     text-transform: lowercase;
 }
 .search-result-page .tour-search-form-home{
@@ -498,6 +498,7 @@ i.fa.fa-bicycle {
 .search-result-page.st-tours .grid-item .service-border{
     border: none !important;
 }
+i.fa.pt.mr5,
 i.fa.en.mr5 {
     display: none;
 }
@@ -513,4 +514,7 @@ div.search-form.sticky.small {
 }
 .form-group.form-date-search.st-form-package.clearfix {
     display: none;
+}
+li.dropdown.dropdown-currency.hidden-xs.hidden-sm {
+    display: none !important;
 }
