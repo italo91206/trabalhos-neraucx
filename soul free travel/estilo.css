@@ -462,25 +462,16 @@ div#sticky-nav {
 
 div#icones-pra-add .fa {
     margin: auto auto;
-}
-div#icones-pra-add .fa {
-    margin: auto auto;
     height: 40px;
     width: 40px;
     background-color: #2e53a4;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 100%;
-    padding: 7px;
+    padding: 10px;
 }
 i.fa.fa-bicycle {
-    padding-left: 5px !important;
-}
-i.fa.fa-info-circle {
     padding-left: 8px !important;
-}
-i.fa.fa-wheelchair {
-    padding-left: 10px !important;
 }
 .item-service.grid-item.has-matchHeight {
     text-align: center;
