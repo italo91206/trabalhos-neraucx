@@ -326,6 +326,14 @@ div#sticky-nav {
         left: 0px;
         width: 300px;
     }
+    a.vc_right.vc_carousel-control {
+        left: 32.25% !important;
+    }
+}
+@media(max-width: 1920px){
+    a.vc_right.vc_carousel-control {
+        left: 32.25% !important;
+    }
 }
 @media(max-width: 1024px){
     i.fa.fa-instagram, i.fa.fa-facebook-f, 
@@ -370,9 +378,6 @@ div#sticky-nav {
     }
     #header .header .header-left #st-main-menu{
         margin: auto auto;
-    }
-    a.vc_right.vc_carousel-control {
-        left: 32.25%;
     }
 }
 @media(max-width: 768px){
