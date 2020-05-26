@@ -20217,3 +20217,8 @@ button#send2 {
 .block-customer-login .fieldset:last-child{
 	margin-bottom: 0px !important;
 }
+@media(min-width: 769px){
+    .page-title-wrapper {
+        display: none;
+    }
+}
