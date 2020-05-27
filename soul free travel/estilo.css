@@ -112,8 +112,14 @@ div#sticky-nav {
 }
 
 /* Aqui começa a seção do footer */
-.social-icons.wpb_column.column_container.col-md-12 {
-    display: none;
+div#footer-row {
+    opacity: 1 !important;
+}
+.footer-links a:visited,
+.footer-links a:hover,
+.footer-links a:active,
+.footer-links a{
+    text-decoration: none;
 }
 .footer-links, 
 .footer-payment-types,
@@ -143,7 +149,7 @@ i.fa.fa-envelope {
     display: flex;
 }
 .footer-payment-types .custom-row img {
-    width: 158px;
+    width: 158px !important;
     height: 41.226px;
     padding: 5px 5px;
 }
@@ -478,7 +484,6 @@ div#sticky-nav {
     }
     #mobile-row .footer-icons {
         margin-top: 0px;
-        margin-left: 50px;
         margin-bottom: 40px;
     }
     .wpb_column.column_container.col-md-3:nth-child(1), 
@@ -551,7 +556,12 @@ div#sticky-nav {
     #about-us-text div{
         font-size: 20px !important;
     }
-
+    #header .header .header-left #st-main-menu .main-menu > li > a {
+        font-size: 17px !important;
+    }
+    .social-icons.wpb_column.column_container.col-md-12{
+        display: none;
+    }
 }
 
 /* seção do grid */
