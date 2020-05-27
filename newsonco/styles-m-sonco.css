@@ -20218,7 +20218,7 @@ button#send2 {
 	margin-bottom: 0px !important;
 }
 @media(min-width: 769px){
-    .page-title-wrapper {
+    .category-info .page-title-wrapper {
         display: none;
     }
 }
