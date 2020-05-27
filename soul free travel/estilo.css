@@ -204,7 +204,7 @@ i.fa.fa-envelope, i.fa.fa-link {
 
 .partners-photos img {
     height: 10%;
-    width: 10%;
+    width: 20%;
     margin: 0 auto;
 }
 
@@ -379,6 +379,12 @@ div#sticky-nav {
     #header .header .header-left #st-main-menu{
         margin: auto auto;
     }
+    .instagram-block {
+        margin-left: 10px;
+    }
+    .footer-payment-types .custom-row img {
+        width: 130px;
+    }
 }
 @media(max-width: 768px){
     #sticky-nav .col-md-4:nth-child(1) {
@@ -413,21 +419,23 @@ div#sticky-nav {
     #sticky-nav .col-md-4:nth-child(1) {
         left: 364px !important;
         width: 100px !important;
+        padding-left: 0px;
     }
     #sticky-nav .col-md-4:nth-child(2) {
-        left: 484px !important;
+        left: 480px !important;
         width: 145px !important;
     }
     #sticky-nav .col-md-4:nth-child(3) {
-        left: 640px !important;
+        left: 625px !important;
         width: 120px !important;
     }
     .search-result-page .search-form-wrapper .search-form .field-detination .dropdown#dropdown-destination {
-        padding-left: 25px !important;
+        padding-left: 15px !important;
         padding-right: 13px;
     }
     .search-result-page .tour-search-form-home .search-form .form-date-field .date-wrapper .check-in-wrapper {
-        padding-left: 20px !important;
+        padding-left: 0px !important;
+        margin-left: -7px !important;
     }
     #mobile-row{
         display: block;
@@ -506,6 +514,44 @@ div#sticky-nav {
         padding: 0px;
         width: 48% !important;
     }
+    .daterangepicker.dropdown-menu.ltr.show-calendar.respon-single.moveright.opensright {
+        top: 273px !important;
+        right: 0 !important;
+        left: unset !important;
+    }
+    .form-group.form-extra-field.dropdown.clearfix.field-detination.has-icon {
+        margin-top: 20px !important;
+    }
+    .form-group.form-date-field.form-date-search.clearfix.has-icon {
+        margin-top: 20px !important;
+    }
+    .render.check-out-render {
+        display: none !important;
+    }
+    .check-in-wrapper span {
+        display: none !important;
+    }
+    #sticky-nav .col-md-4:nth-child(2) i.input-icon.field-icon.fa,
+    #sticky-nav .col-md-4:nth-child(1) i.input-icon.field-icon.fa{
+        display: none;
+    }
+    .partners-photos img{
+        width: 100%;
+        height: unset !important;
+    }
+    div.partners-photos div {
+        display: block !important;
+    }
+    div#about-us-text{
+        top: -35px !important;
+    }
+    #about-us-text div p {
+        padding: 0px 15px;
+    }
+    #about-us-text div{
+        font-size: 20px !important;
+    }
+
 }
 
 /* seção do grid */
