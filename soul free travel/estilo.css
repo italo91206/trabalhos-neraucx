@@ -243,11 +243,75 @@ div#about-us-text {
     padding: 0px !important;
 }
 
+/* Seção 2.0 do search-form */
+@media(min-width: 1240px){
+    .form-group {
+        background: white;
+    }
+    
+    .st-search-form-tour .tour-search-form-home .search-form {
+        border: none;
+    }
+    
+    .search-form{
+        background: none !important;
+    }
+    .search-result-page .search-form-wrapper .search-form .form-date-field.has-icon .date-wrapper > div{
+        padding-left: none !important;
+    }
+    i.input-icon.field-icon.fa,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new .field-icon, 
+    .form-group.form-extra-field.dropdown.clearfix.field-tour-type i.input-icon {
+        padding-left: 25px !important;
+    }
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination #dropdown-destination,
+    .search-result-page .search-form-wrapper .search-form .form-date-field.has-icon .date-wrapper {
+        padding-left: 55px !important;
+    }
+    
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new{
+        margin-right: 160px;
+    }
+    
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-tour-type,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination{
+        width: 250px;
+        height: 50px !important;
+        min-height: unset !important;
+        margin: auto 50px;
+    }
+    button.btn.btn-primary.btn-search {
+        height: 50px;
+        margin: auto;
+    }
+}
+
+@media(max-width: 1024px){
+    .search-result-page .tour-search-form-home{
+        width: 1024px;
+    }
+    .search-form {
+        left: -125px;
+    }
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-tour-type,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new,
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination{
+        margin: auto 10px;
+    }
+}
+
+@media(max-width: 768px){
+
+}
+
 /* Aqui começa a seção do search-form personalizado */
 
 div#sticky-nav {
     background: none;
 }
+
 .search-result-page .tour-search-form-home .form-button button{
     right: -290px;
 }
@@ -296,9 +360,6 @@ div#sticky-nav {
 }
 .search-result-page .tour-search-form-home .search-form .form-date-field {
     padding: 8px 5px 17px 5px !important;
-}
-.search-result-page .search-form-wrapper .search-form .form-group.has-icon .field-icon{
-    top: 33% !important;
 }
 .form-group.form-extra-field.dropdown.clearfix.field-detination.has-icon i.input-icon {
     left: 0 !important;
