@@ -66,36 +66,37 @@
                         </span>
                     </div>
 
-                    <ul class="lista_menu_mobile subcontent-menu closed-newmenu">
-                        <div class="w-100"><a href="{{store direct_url=&quot;safety/traffic-safety&quot;}}">Traffic Safety</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;safety/personal-safety&quot;}}">Personal Safety</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;safety/jobsite-vehicle-safety&quot;}}">Jobsite &amp; Vehicle Safety</a></div>
-                    </ul>
-                    
-                    <ul class="lista_menu_mobile subcontent-menu closed-newmenu">
-                        <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/traffic-safety&quot;}}">Traffic Safety</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/traffic-signal-devices&quot;}}">Traffic Signal Devices</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/pavement-markings&quot;}}">Pavement Markings</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/signs&quot;}}">Signs</a></div>
-                    </ul>
-                    
-                    <ul class="lista_menu_mobile subcontent-menu closed-newmenu">
-                        <div class="w-100"><a href="{{store direct_url=&quot;construction-materials/permanent-materials&quot;}}">Permanent Materials</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;construction-materials/liquids-consumables&quot;}}">Liquids &amp; Consumables</a></div>    
-                    </ul>
-                    
-                    <ul class="lista_menu_mobile subcontent-menu closed-newmenu">
-                        <div class="w-100"><a href="{{store direct_url=&quot;jobsite/marking-surveying&quot;}}">Marking &amp; Surveying</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;jobsite/tools-supplies&quot;}}">Tools &amp; Supplies</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;jobsite/jobsite-vehicle-safety&quot;}}">Jobiste &amp; Vehicle Safety</a></div>
-                    </ul>
+                    <div class="submenu-wrap">
+                        <ul class="lista_menu_mobile subcontent-menu closed-newmenu submenu0">
+                            <div class="w-100"><a href="{{store direct_url=&quot;safety/traffic-safety&quot;}}">Traffic Safety</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;safety/personal-safety&quot;}}">Personal Safety</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;safety/jobsite-vehicle-safety&quot;}}">Jobsite &amp; Vehicle Safety</a></div>
+                        </ul>
+                        
+                        <ul class="lista_menu_mobile subcontent-menu closed-newmenu submenu1">
+                            <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/traffic-safety&quot;}}">Traffic Safety</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/traffic-signal-devices&quot;}}">Traffic Signal Devices</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/pavement-markings&quot;}}">Pavement Markings</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;temp-traffic-control/signs&quot;}}">Signs</a></div>
+                        </ul>
+                        
+                        <ul class="lista_menu_mobile subcontent-menu closed-newmenu submenu2">
+                            <div class="w-100"><a href="{{store direct_url=&quot;construction-materials/permanent-materials&quot;}}">Permanent Materials</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;construction-materials/liquids-consumables&quot;}}">Liquids &amp; Consumables</a></div>    
+                        </ul>
+                        
+                        <ul class="lista_menu_mobile subcontent-menu closed-newmenu submenu3">
+                            <div class="w-100"><a href="{{store direct_url=&quot;jobsite/marking-surveying&quot;}}">Marking &amp; Surveying</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;jobsite/tools-supplies&quot;}}">Tools &amp; Supplies</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;jobsite/jobsite-vehicle-safety&quot;}}">Jobiste &amp; Vehicle Safety</a></div>
+                        </ul>
 
-                    <ul class="lista_menu_mobile subcontent-menu closed-newmenu">
-                        <div class="w-100"><a href="{{store direct_url=&quot;tools/marking-surveying&quot;}}">Marking &amp; Surveying</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;tools/tools-supplies&quot;}}">Tools &amp; Supplies</a></div>
-                        <div class="w-100"><a href="{{store direct_url=&quot;tools/construct-equipment&quot;}}">Construct Equipment</a></div>
-                    </ul>
-                    
+                        <ul class="lista_menu_mobile subcontent-menu closed-newmenu submenu4">
+                            <div class="w-100"><a href="{{store direct_url=&quot;tools/marking-surveying&quot;}}">Marking &amp; Surveying</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;tools/tools-supplies&quot;}}">Tools &amp; Supplies</a></div>
+                            <div class="w-100"><a href="{{store direct_url=&quot;tools/construct-equipment&quot;}}">Construct Equipment</a></div>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,13 +152,12 @@
 
         jQuery('.main-option-menu').click(function () {
             console.log('Clicado!');
-            for (var i = 0; i < jQuery('.subcontent-menu-mobile ul').children().length; i++) {
-                console.log('Meu i é: ' + i);
-                console.log('Estou comparando com: ' + jQuery('.content-menu-mobile ul').children().length);
-                if (jQuery('.subcontent-menu-mobile ul').children()[i] == this) {
-
+            for (var i = 0; i < jQuery('.submenu-wrap').children().length; i++) {
+                var elem = jQuery('.submenu-wrap').children()[i];
+                if (jQuery(elem).hasClass('submenu' + i)) {
+                    console.log('É sim!');
                     jQuery('.backtomain-conteudo').html(jQuery(this).find('span').html());
-                    var element = jQuery('.lista_menu_mobile')[++i];
+                    var element = jQuery('.lista_menu_mobile')[i];
                     jQuery('.content-menu-mobile').addClass('aberto-sub');
                     elemOpened = element;
                     if (jQuery(element).hasClass('closed-newmenu'))
