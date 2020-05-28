@@ -525,15 +525,15 @@ div#sticky-nav {
         display: flex;
     }
     .footer-mobile-payment-types .custom-row img {
-        width: 50%;
+        width: 30%;
         padding: 5px 5px;
+        margin: 0 auto;
     }
     .footer-mobile-payment-types p b {
         color: white;
         font-size: 20px;
     }
     .footer-mobile-payment-types {
-        margin-top: 100px;
         padding: 15px;
     }
     .footer-payment-types .custom-row img {
@@ -552,7 +552,7 @@ div#sticky-nav {
         width: unset !important;
     }
     div#footer-row {
-        height: 240px;
+        display: none;
     }
     i.fa.fa-envelope, i.fa.fa-link {
         font-size: 18px;
@@ -622,6 +622,9 @@ div#sticky-nav {
     }
     .social-icons.wpb_column.column_container.col-md-12{
         display: none;
+    }
+    .wpb_text_column.wpb_content_element div.footer-icons {
+        display: none !important;
     }
 }
 
