@@ -151,25 +151,28 @@
         var elemOpened = false;
 
         jQuery('.main-option-menu').click(function () {
+            // console.log(this);
+            var child = 0;
+            var search = 0;
             
-            for (var i = 0; i < jQuery('.submenu-wrap').children().length; i++) {
-                var elem = jQuery('.submenu-wrap').children()[i];
-                console.log('Elemento:');
-                console.log(elem);
-                var submenu = 'submenu' + i;
-                console.log('Se tenho a classe: ' + submenu);
-                if (jQuery(elem).hasClass(submenu)) {
-                    console.log('É sim!');
-                    jQuery('.backtomain-conteudo').html(jQuery(this).find('span').html());
-                    var element = jQuery('.lista_menu_mobile')[i];
-                    jQuery('.content-menu-mobile').addClass('aberto-sub');
-                    elemOpened = element;
-                    if (jQuery(element).hasClass('closed-newmenu'))
-                        jQuery(element).removeClass('closed-newmenu');
-                    else
-                        jQuery(element).addClass('closed-newmenu');
-                }
+            while(search < jQuery('.main-option-menu').children().length){
+                // console.log('Meu busca é: ' + search);
+                // console.log('Elemento de busca: ');
+                // console.log(jQuery('.main-conteudo-menu').children()[search]);
+                if(this == jQuery('.main-conteudo-menu').children()[search])
+                    child = search;
+                search++;
             }
+            // console.log('Apertei no filho: ' + child);
+            
+            jQuery('.backtomain-conteudo').html(jQuery(this).find('span').html());
+            var element = jQuery('.submenu-wrap').children()[child];
+            jQuery('.content-menu-mobile').addClass('aberto-sub');
+            elemOpened = element;
+            if (jQuery(element).hasClass('closed-newmenu'))
+                jQuery(element).removeClass('closed-newmenu');
+            else
+                jQuery(element).addClass('closed-newmenu');
         });
 
         var sublast_opened = false;

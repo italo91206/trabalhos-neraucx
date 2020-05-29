@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Traveler\n"
 "POT-Creation-Date: 2020-02-07 14:19+0700\n"
-"PO-Revision-Date: 2020-05-29 15:05-0300\n"
+"PO-Revision-Date: 2020-05-29 15:09-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -32943,7 +32943,7 @@ msgstr "Nome:"
 
 #: inc/shortcodes/email/email.php:2453
 msgid "Last name:"
-msgstr "Sobrenome: "
+msgstr "Sobrenome:"
 
 #: inc/shortcodes/email/email.php:2458
 #: st_templates/user/user-details-owner.php:98
@@ -39113,7 +39113,7 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:23
 #: st_templates/user/detail-booking-history/woo/customer.php:23
 msgid "Phone "
-msgstr "Telefone"
+msgstr "Telefone "
 
 #: st_templates/bookingdc/search/field-children.php:47
 msgid "Age of children"
@@ -39589,7 +39589,7 @@ msgstr ""
 
 #: st_templates/email/booking_customer_infomation.php:79
 msgid "country"
-msgstr "País"
+msgstr "país"
 
 #: st_templates/email/booking_infomation.php:45
 #: st_templates/email/booking_infomation_rental.php:29
