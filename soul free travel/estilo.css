@@ -845,3 +845,6 @@ li.dropdown.dropdown-currency.hidden-xs.hidden-sm a {
         display: block;
     }
 }
+.st-checkout-page .cart-info .coupon-section form .form-group{
+    display: flex;
+}

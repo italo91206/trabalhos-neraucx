@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Traveler\n"
 "POT-Creation-Date: 2020-02-07 14:19+0700\n"
-"PO-Revision-Date: 2020-05-29 15:09-0300\n"
+"PO-Revision-Date: 2020-05-29 15:53-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -75,7 +75,7 @@ msgstr ""
 #: st_templates/user/partner/partner-info-inpost.php:62
 #: st_templates/user/partner/partner-info.php:72
 msgid "Phone: "
-msgstr ""
+msgstr "Telefone: "
 
 #: author.php:140 st_templates/layouts/modern/page/author.php:92
 #: st_templates/user/partner/partner-info-inpost.php:69
@@ -1938,7 +1938,7 @@ msgstr ""
 #: st_templates/user/verify/info.php:78 template-package-success-new.php:122
 #: template-package-success.php:109
 msgid "Phone"
-msgstr ""
+msgstr "Telefone"
 
 #: inc/admin/class.admin.activity.php:896
 #: inc/admin/class.admin.activity.php:899 inc/admin/class.admin.cars.php:1252
@@ -13721,7 +13721,7 @@ msgstr ""
 #: st_templates/layouts/modern/page/booking_infomation.php:339
 #: st_templates/layouts/modern/single_hotel/page/booking_infomation.php:294
 msgid "First Name"
-msgstr ""
+msgstr "Nome"
 
 #: inc/admin/class.admin.settings.php:9190 inc/helpers/class.sthelper.php:929
 #: inc/layouts/modern/admin/class.admin.settings.php:6974
@@ -19164,7 +19164,7 @@ msgstr ""
 #: st_templates/login/popup-login.php:55
 #: st_templates/login/popup-register.php:89
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privacidade"
 
 #: inc/class/class.coupon.php:28
 msgid "Coupon Detail"
@@ -31085,7 +31085,7 @@ msgstr ""
 #: st_templates/email/booking_customer_infomation.php:23
 #: template-package-success-new.php:101 template-package-success.php:88
 msgid "First name"
-msgstr ""
+msgstr "Nome"
 
 #: inc/plugins/wpbooking-form-builder/shinetheme/controllers/form-builder.php:118
 #: inc/plugins/wpbooking-form-builder/shinetheme/controllers/form-builder.php:121
@@ -37094,7 +37094,7 @@ msgstr "Eu li e aceito"
 #: language/english/all.php:150 language/english/all.php:371
 #: language/english/modun/general.php:14 language/english/modun/hotel.php:75
 msgid "terms and conditions"
-msgstr ""
+msgstr "termos e condições"
 
 #: language/english/all.php:151 language/english/modun/general.php:15
 msgid "Submit Booking"
@@ -37740,23 +37740,23 @@ msgstr ""
 
 #: language/english/all.php:355 language/english/modun/hotel.php:59
 msgid "email@domain.com"
-msgstr ""
+msgstr "email@dominio.com"
 
 #: language/english/all.php:357 language/english/modun/hotel.php:61
 msgid "Your Phone"
-msgstr ""
+msgstr "Seu telefone"
 
 #: language/english/all.php:360 language/english/modun/hotel.php:64
 msgid "Your Address Line 1"
-msgstr ""
+msgstr "Seu endereço"
 
 #: language/english/all.php:361 language/english/modun/hotel.php:65
 msgid "Your Address Line 2"
-msgstr ""
+msgstr "Complemento de endereço"
 
 #: language/english/all.php:363 language/english/modun/hotel.php:67
 msgid "Your City"
-msgstr ""
+msgstr "Sua cidade"
 
 #: language/english/all.php:368 language/english/all.php:537
 #: language/english/modun/hotel.php:72 language/english/modun/traveler.php:30
@@ -44247,7 +44247,7 @@ msgstr ""
 
 #: st_templates/user/user-details-owner.php:101
 msgid "Phone:"
-msgstr ""
+msgstr "Telefone:"
 
 #: st_templates/user/user-details-owner.php:104
 msgid "Address:"
@@ -45080,7 +45080,7 @@ msgstr ""
 
 #: woocommerce/order/order-details.php:123
 msgid "Telephone:"
-msgstr ""
+msgstr "Telefone:"
 
 #: woocommerce/order/order-details.php:140
 msgid "Billing Address"
