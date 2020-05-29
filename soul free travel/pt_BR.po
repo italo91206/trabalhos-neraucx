@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Traveler\n"
 "POT-Creation-Date: 2020-02-07 14:19+0700\n"
-"PO-Revision-Date: 2020-04-30 09:17-0300\n"
+"PO-Revision-Date: 2020-05-29 15:05-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -946,7 +946,7 @@ msgstr ""
 #: st_templates/vc-elements/st-hotel-room/st_hotel_room_facility.php:68
 #: st_templates/vc-elements/st-list-map-new/loop-adv/tour.php:68
 msgid "Price"
-msgstr ""
+msgstr "Preço"
 
 #: header-tour-modern.php:210 header-tour-modern.php:333
 #: inc/plugins/pdf-invoice/helpers-pdf.php:559
@@ -10740,7 +10740,7 @@ msgstr ""
 #: st_templates/user/user-add-activity-booking.php:256
 #: st_templates/user/user-add-tour-booking.php:241
 msgid "Departure date"
-msgstr ""
+msgstr "Data de saída"
 
 #: inc/admin/class.admin.settings.php:3787
 #: inc/admin/class.admin.settings.php:9566 inc/class/class.tour.php:581
@@ -13735,7 +13735,7 @@ msgstr ""
 #: st_templates/check_out/member_packages.php:20
 #: st_templates/check_out/member_packages.php:22
 msgid "Last Name"
-msgstr ""
+msgstr "Sobrenome"
 
 #: inc/admin/class.admin.settings.php:9210 inc/admin/class.user.php:182
 #: inc/admin/class.user.php:183 inc/helpers/class.sthelper.php:949
@@ -13752,7 +13752,7 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:44
 #: st_templates/user/detail-booking-history/woo/customer.php:41
 msgid "City"
-msgstr ""
+msgstr "Cidade"
 
 #: inc/admin/class.admin.settings.php:9215 inc/helpers/class.sthelper.php:954
 #: inc/layouts/modern/admin/class.admin.settings.php:6999
@@ -13795,7 +13795,7 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:62
 #: st_templates/user/detail-booking-history/woo/customer.php:59
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #: inc/admin/class.admin.settings.php:9235
 #: inc/layouts/modern/admin/class.admin.settings.php:7019
@@ -13870,7 +13870,7 @@ msgstr ""
 #: st_templates/layouts/modern/single_hotel/page/booking_infomation.php:303
 #: st_templates/user/detail-booking-history/customer.php:68
 msgid "Special Requirements"
-msgstr ""
+msgstr "Comentários"
 
 #: inc/admin/class.admin.settings.php:9281 inc/helpers/class.sthelper.php:1008
 #: inc/layouts/modern/admin/class.admin.settings.php:7065
@@ -14332,7 +14332,7 @@ msgstr ""
 #: st_templates/car_transfer/success_payment_item_row.php:72
 #: st_templates/user/detail-booking-history/car_transfer.php:57
 msgid "Departure Date"
-msgstr ""
+msgstr "Data de saída"
 
 #: inc/admin/class.admin.settings.php:9568 inc/class/class.car.transfer.php:349
 #: inc/class/class.user.php:2579 inc/configs/partner.php:1928
@@ -15365,7 +15365,7 @@ msgstr ""
 #: st_templates/layouts/modern/single_hotel/page/booking_infomation.php:297
 #: st_templates/user/detail-booking-history/woo/customer.php:29
 msgid "Address Line 1"
-msgstr ""
+msgstr "Endereço"
 
 #: inc/admin/class.user.php:158
 msgid "Show under your reviews"
@@ -15381,7 +15381,7 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:38
 #: st_templates/user/detail-booking-history/woo/customer.php:35
 msgid "Address Line 2"
-msgstr ""
+msgstr "Complemento"
 
 #: inc/admin/class.user.php:172 inc/admin/class.user.php:173
 #: language/english/all.php:724 language/english/all.php:775
@@ -15420,7 +15420,7 @@ msgstr ""
 #: st_templates/user/user-add-rental-booking.php:109
 #: st_templates/user/user-add-tour-booking.php:109
 msgid "State/Province/Region"
-msgstr ""
+msgstr "Estado"
 
 #: inc/admin/class.user.php:192 inc/admin/class.user.php:193
 #: inc/admin/views/activity/booking_edit.php:158
@@ -15447,7 +15447,7 @@ msgstr ""
 #: st_templates/user/user-add-rental-booking.php:117
 #: st_templates/user/user-add-tour-booking.php:117
 msgid "ZIP code/Postal code"
-msgstr ""
+msgstr "CEP"
 
 #: inc/admin/class.user.php:272 inc/admin/class.user.php:308
 #: inc/admin/views/users/partner_index.php:305
@@ -28109,7 +28109,7 @@ msgstr ""
 #: inc/modules/flights/views/flights/content-flights.php:589
 #: inc/plugins/pdf-invoice/helpers-pdf.php:1058
 msgid "Departure Date: "
-msgstr ""
+msgstr "Data de saída: "
 
 #: inc/modules/flights/views/flights/content-flights-load-data-ajax.php:597
 #: inc/modules/flights/views/flights/content-flights-load-data-ajax.php:647
@@ -31094,7 +31094,7 @@ msgstr ""
 #: st_templates/layouts/modern/single_hotel/page/booking_infomation.php:295
 #: template-package-success-new.php:108 template-package-success.php:95
 msgid "Last name"
-msgstr ""
+msgstr "Sobrenome"
 
 #: inc/plugins/wpbooking-form-builder/shinetheme/controllers/form-builder.php:161
 #: inc/plugins/wpbooking-form-builder/shinetheme/controllers/form-builder.php:164
@@ -32676,7 +32676,7 @@ msgstr ""
 
 #: inc/shortcodes/email/email.php:713 inc/shortcodes/email/email.php:1894
 msgid "Departure date: "
-msgstr ""
+msgstr "Data de saída: "
 
 #: inc/shortcodes/email/email.php:715
 msgid "Departure date - Return date: "
@@ -32939,11 +32939,11 @@ msgstr ""
 
 #: inc/shortcodes/email/email.php:2448
 msgid "First name:"
-msgstr ""
+msgstr "Nome:"
 
 #: inc/shortcodes/email/email.php:2453
 msgid "Last name:"
-msgstr ""
+msgstr "Sobrenome: "
 
 #: inc/shortcodes/email/email.php:2458
 #: st_templates/user/user-details-owner.php:98
@@ -32957,7 +32957,7 @@ msgstr ""
 
 #: inc/shortcodes/email/email.php:2473
 msgid "Address line 1:"
-msgstr ""
+msgstr "Endereço:"
 
 #: inc/shortcodes/email/email.php:2478
 msgid "Country:"
@@ -32965,7 +32965,7 @@ msgstr ""
 
 #: inc/shortcodes/email/email.php:2483
 msgid "Special Requirements:"
-msgstr ""
+msgstr "Comentários:"
 
 #: inc/shortcodes/email/email.php:2495
 msgid "Shipped to:"
@@ -37089,7 +37089,7 @@ msgstr ""
 
 #: language/english/all.php:149 language/english/modun/general.php:13
 msgid "I have read and accept the"
-msgstr ""
+msgstr "Eu li e aceito"
 
 #: language/english/all.php:150 language/english/all.php:371
 #: language/english/modun/general.php:14 language/english/modun/hotel.php:75
@@ -37304,7 +37304,7 @@ msgstr ""
 #: st_templates/email/booking_infomation_rental.php:93
 #: st_templates/email/booking_infomation_tours.php:100
 msgid "Phone :"
-msgstr ""
+msgstr "Telefone/celular:"
 
 #: language/english/all.php:204 language/english/modun/general.php:68
 msgid "Room :"
@@ -37331,7 +37331,7 @@ msgstr ""
 #: language/english/all.php:210 language/english/modun/general.php:74
 #: st_templates/email/booking_infomation_cars.php:106
 msgid "Price :"
-msgstr ""
+msgstr "Preço :"
 
 #: language/english/all.php:211 language/english/modun/general.php:75
 #: st_templates/email/booking_infomation.php:134
@@ -37768,7 +37768,7 @@ msgstr ""
 #: language/english/all.php:370 language/english/modun/hotel.php:74
 #, php-format
 msgid "I have read and accept the %s"
-msgstr ""
+msgstr "Eu li e aceito os %s"
 
 #: language/english/all.php:372 language/english/modun/hotel.php:76
 msgid "Sorry!. Hotel Not Found"
@@ -39095,13 +39095,13 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:5
 #: st_templates/user/detail-booking-history/woo/customer.php:5
 msgid "First name "
-msgstr ""
+msgstr "Nome "
 
 #: st_templates/booking_infomation.php:421
 #: st_templates/user/detail-booking-history/customer.php:11
 #: st_templates/user/detail-booking-history/woo/customer.php:11
 msgid "Last name "
-msgstr ""
+msgstr "Sobrenome "
 
 #: st_templates/booking_infomation.php:428
 #: st_templates/user/detail-booking-history/customer.php:17
@@ -39113,7 +39113,7 @@ msgstr ""
 #: st_templates/user/detail-booking-history/customer.php:23
 #: st_templates/user/detail-booking-history/woo/customer.php:23
 msgid "Phone "
-msgstr ""
+msgstr "Telefone"
 
 #: st_templates/bookingdc/search/field-children.php:47
 msgid "Age of children"
@@ -39589,7 +39589,7 @@ msgstr ""
 
 #: st_templates/email/booking_customer_infomation.php:79
 msgid "country"
-msgstr ""
+msgstr "País"
 
 #: st_templates/email/booking_infomation.php:45
 #: st_templates/email/booking_infomation_rental.php:29
@@ -41419,6 +41419,7 @@ msgid ""
 "I have read and accept the <a class=\"st-link\" href=\"%s\">Terms and "
 "Privacy Policy</a>"
 msgstr ""
+"Eu li e aceito os <a class=\"st-link\" href=\"%s\">termos e condições</a>"
 
 #: st_templates/layouts/modern/common/footer.php:260
 #: st_templates/layouts/modern/common/footer1.php:251

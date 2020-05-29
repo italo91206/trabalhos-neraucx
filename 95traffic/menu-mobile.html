@@ -151,10 +151,14 @@
         var elemOpened = false;
 
         jQuery('.main-option-menu').click(function () {
-            console.log('Clicado!');
+            
             for (var i = 0; i < jQuery('.submenu-wrap').children().length; i++) {
                 var elem = jQuery('.submenu-wrap').children()[i];
-                if (jQuery(elem).hasClass('submenu' + i)) {
+                console.log('Elemento:');
+                console.log(elem);
+                var submenu = 'submenu' + i;
+                console.log('Se tenho a classe: ' + submenu);
+                if (jQuery(elem).hasClass(submenu)) {
                     console.log('É sim!');
                     jQuery('.backtomain-conteudo').html(jQuery(this).find('span').html());
                     var element = jQuery('.lista_menu_mobile')[i];
