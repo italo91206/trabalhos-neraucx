@@ -1,3 +1,6 @@
+#social-menu-list-item{
+    display: none !important;
+}
 .block1 {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 25px;
@@ -383,6 +386,9 @@ div#about-us-text {
     }
 }
 @media(max-width: 425px){
+    #social-menu-list-item{
+        display: block !important;
+    }
     .search-form-wrapper.auto-height-form-search.st-search-form-tour {
         display: none;
     }
