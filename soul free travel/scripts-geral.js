@@ -47,11 +47,24 @@ window.onload = function(){
     // ========================
 
     var elem = jQuery("nav#st-main-menu ul#main-menu");
-    elem.append(`<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item mobile" style="color: grey" id="social-menu-list-item">`+
-        `<i class="fa fa-instagram"></i>`+
-        `<i class="fa fa-facebook-f"></i>`+
-        `<i class="fa fa-whatsapp"></i>`+
+    elem.append(`<li class="mobile" style="color: grey;" id="social-menu-list-item">`+
+        `<a href="https://www.instagram.com/soulfreetravels/" class="margin-left-fix"><i class="fa fa-instagram"></i></a>`+
+        `<a href="https://www.facebook.com/soulfreetravelss/"><i class="fa fa-facebook-f"></i></a>`+
+        `<a href="https://wa.me/5511986974949"><i class="fa fa-whatsapp"></i></a>`+
         `<i class="fa fa-youtube"></i>`+
-        `<i class="fa fa-google-plus"></i><i class="fa fa-skype"></i>`+
+        `<i class="fa fa-skype"></i>`+
     `</li>`);
+
+    var loginLink = jQuery("a.login");
+    var botaoFechar = jQuery("div.modal-header button.close");
+
+    loginLink.click(function(){
+        var modal = jQuery("#st-login-form");
+        modal.addClass('modal-aberto');
+    })
+
+    botaoFechar.click(function(){
+        var modal = jQuery("#st-login-form");
+        modal.removeClass('modal-aberto');
+    })
 }

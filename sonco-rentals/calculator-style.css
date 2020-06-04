@@ -1,0 +1,44 @@
+/*  
+========================
+a sonco já tem, só pra conseguir ver local
+======================== 
+*/
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+.cmd-4{
+    max-width: 32%;
+    flex: 0 0 32%;
+}
+/*  
+========================
+daqui pra baixo realmente vai ser novidade pro CSS
+======================== 
+*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+form#calculator{
+    color: #032e5a;
+    background-image: url(/media/wysiwyg/calculator-background.png);
+}
+form#calculator h2 {
+    font-family: Camber-Sb;
+    font-weight: 500;
+}
+form#calculator input[type="submit"] {
+    width: 100%;
+    margin-top: 90px;
+    border: none;
+    background-color: #032e5a;
+    color: white;
+    font-size: 22px;
+    font-family: Camber-Rg;
+    padding: 5px 0;
+}
+form#calculator .cmd-4 {
+    padding: 30px 50px;
+}
