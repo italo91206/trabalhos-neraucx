@@ -256,7 +256,20 @@ div#about-us-text {
 }
 
 /* Seção 2.0 do search-form */
+.form-group.form-extra-field.dropdown.clearfix.field-detination.has-icon i.input-icon.field-icon.fa {
+    padding-left: 20px;
+}
+
+.st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-guest-new .dropdown {
+    padding-left: 55px;
+}
+
+.form-group.form-extra-field.dropdown.clearfix.field-guest-new.has-icon i.input-icon.field-icon.fa {
+    padding-left: 20px;
+}
 @media(min-width: 1240px){
+
+
     .form-group {
         background: white;
     }
@@ -286,6 +299,7 @@ div#about-us-text {
         margin-right: 160px;
     }
     
+    .st-search-form-tour .form-group.form-extra-field.dropdown.clearfix.field-guest-new.has-icon,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-tour-type,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination{
@@ -301,6 +315,7 @@ div#about-us-text {
 }
 
 @media(max-width: 1024px){
+    .st-search-form-tour .form-group.form-extra-field.dropdown.clearfix.field-guest-new.has-icon,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-tour-type,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination{
@@ -333,6 +348,7 @@ div#about-us-text {
     .search-form {
         left: -125px;
     }
+    .st-search-form-tour .form-group.form-extra-field.dropdown.clearfix.field-guest-new.has-icon,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-tour-type,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.form-date-search-new,
     .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination{
@@ -341,6 +357,9 @@ div#about-us-text {
     .home #st-content-wrapper.search-result-page .search-form-wrapper .search-form .btn-search{
         margin-right: 0px;
         margin-left: 5px;
+    }
+    .st-search-form-tour .tour-search-form-home .search-form .form .form-group.field-detination #dropdown-destination{
+        padding-left: 55px !important;
     }
 }
 .mobile{
