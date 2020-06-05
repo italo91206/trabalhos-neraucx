@@ -965,3 +965,34 @@ i#fecharMenu {
 #header .header .header-right .st-list li {
     margin-right: 0px;
 }
+.item.has-matchHeight {
+    min-height: 450px;
+}
+
+/* ===================================== */
+/* seção do grid dos posts em /services */
+/* ===================================== */
+
+.vc_btn3-container.vc_btn3-left {
+    display: none;
+}
+
+.vc_col-sm-12.vc_gitem-col.vc_gitem-col-align- {
+    text-align: center;
+}
+
+.vc_custom_heading.vc_gitem-post-data.vc_gitem-post-data-source-post_title h4 {
+    text-align: center !important;
+}
+
+.vc_gitem-zone.vc_gitem-zone-c.vc_custom_1419240516480 {
+    background-color: unset !important;
+    color: #2e53a4;
+}
+
+.vc_gitem-post-data-source-post_title {
+    min-height: 50px;
+}
+#st-content-wrapper {
+    padding-bottom: 0px;
+}
