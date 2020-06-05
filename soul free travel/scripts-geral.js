@@ -61,10 +61,21 @@ window.onload = function(){
     loginLink.click(function(){
         var modal = jQuery("#st-login-form");
         modal.addClass('modal-aberto');
-    })
+    });
 
     botaoFechar.click(function(){
         var modal = jQuery("#st-login-form");
         modal.removeClass('modal-aberto');
-    })
+    });
+
+    jQuery("#fecharMenu").click(function(){
+        jQuery("#abrirMenu").removeClass("hidden");
+        jQuery("#fecharMenu").addClass("hidden");
+        jQuery("nav#st-main-menu").removeClass("open");
+    });
+
+    jQuery("#abrirMenu").click(function(){
+        jQuery("#abrirMenu").addClass("hidden");
+        jQuery("#fecharMenu").removeClass("hidden");
+    });
 }

@@ -37,7 +37,8 @@ li.vc_tta-tab.vc_active {
     margin-top: 10px !important;
 }
 
-#header .header .header-left #st-main-menu .main-menu li.current-menu-item > a, #header .header .header-left #st-main-menu .main-menu li.current-menu-ancestor > a {
+#header .header .header-left #st-main-menu .main-menu li.current-menu-item > a, 
+#header .header .header-left #st-main-menu .main-menu li.current-menu-ancestor > a {
     color: #2e53a4 !important;
 }
 
@@ -895,40 +896,51 @@ li#social-menu-list-item .fa {
     margin: 0px 0px;
 }
 #social-menu-list-item .margin-left-fix {
-    margin-left: 210px;
+    margin-left: 45%;
 }
 @media (max-width: 768px){
     #header .header{
         margin-bottom: 35px;
     }
     #header .header .header-left #st-main-menu .main-menu{
+        margin-top: 20px;
         padding-right: 20px;
     }
     #social-menu-list-item .margin-left-fix {
-        margin-left: 540px;
+        margin-left: 45%;
     }
 }
 @media (max-width: 425px){
+    #header .header .header-left .logo img{
+        height: 51px;
+        width: 130px;
+        max-width: unset;
+        max-height: unset;
+    }
+    div#wpadminbar {
+        display: none !important;
+    }
     #header .header .header-left #st-main-menu .main-menu{
-        padding-right: 20px;
+        margin-top: 20px;
+        padding-right: 65px;
     }
     #social-menu-list-item .margin-left-fix {
-        margin-left: 195px;
+        margin-left: 45%;
     }
 }
 @media (max-width: 411px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 185px;
+        margin-left: 40%;
     }
 }
 @media (max-width: 375px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 150px;
+        margin-left: 30%;
     }
 }
 @media (max-width: 320px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 95px;
+        margin-left: 20%;
     }
 }
 .modal.modal-aberto{
@@ -937,6 +949,19 @@ li#social-menu-list-item .fa {
 @media (max-width: 768px){
     #st-main-menu .main-menu li#social-menu-list-item {
         display: flex !important;
+        margin-top: 10px;
     }    
 }
 
+#header .header .header-left #st-main-menu .back-menu{
+    display: none !important;
+}
+a#abrirMenu {
+    margin-right: 0px !important;
+}
+i#fecharMenu {
+    font-size: 30px;
+}
+#header .header .header-right .st-list li {
+    margin-right: 0px;
+}
