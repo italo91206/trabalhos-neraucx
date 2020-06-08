@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Traveler\n"
 "POT-Creation-Date: 2020-02-07 14:19+0700\n"
-"PO-Revision-Date: 2020-05-29 15:53-0300\n"
+"PO-Revision-Date: 2020-06-08 09:15-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -11191,7 +11191,7 @@ msgstr ""
 #: st_templates/layouts/modern/tour/elements/search-new/price.php:73
 #: st_templates/layouts/modern/tour/elements/search/advanced.php:63
 msgid "Filter Price"
-msgstr ""
+msgstr "Filtrar preço"
 
 #: inc/admin/class.admin.settings.php:4731 inc/st-theme-options.php:3679
 msgid "Location & Date Change Box"
@@ -11645,12 +11645,12 @@ msgstr ""
 #: language/english/all.php:598 language/english/modun/user.php:59
 #: st_templates/user/user-setting.php:178
 msgid "Username"
-msgstr ""
+msgstr "Usuário"
 
 #: inc/admin/class.admin.settings.php:5697
 #: inc/layouts/modern/admin/class.admin.settings.php:3980
 msgid "Enter your username"
-msgstr ""
+msgstr "Insira seu usuário"
 
 #: inc/admin/class.admin.settings.php:5703 inc/gateways/skrill/skrill.php:88
 #: inc/gateways/skrill/skrill.php:91
@@ -11659,12 +11659,12 @@ msgstr ""
 #: st_templates/layouts/modern/common/footer.php:96
 #: st_templates/layouts/modern/common/footer1.php:94
 msgid "Password"
-msgstr ""
+msgstr "Senha"
 
 #: inc/admin/class.admin.settings.php:5705
 #: inc/layouts/modern/admin/class.admin.settings.php:3988
 msgid "Enter your password"
-msgstr ""
+msgstr "Insira sua senha"
 
 #: inc/admin/class.admin.settings.php:5711
 #: inc/layouts/modern/admin/class.admin.settings.php:3994
@@ -21360,13 +21360,13 @@ msgstr ""
 #: inc/layouts/modern/class/class.user.php:5371
 #: inc/layouts/modern/class/class.user.php:14452
 msgid "Your new password"
-msgstr ""
+msgstr "Sua nova senha"
 
 #: inc/class/class.user.php:5385 inc/class/class.user.php:14432
 #: inc/layouts/modern/class/class.user.php:5374
 #: inc/layouts/modern/class/class.user.php:14455
 msgid "Your new password is:"
-msgstr ""
+msgstr "Sua nova senha é:"
 
 #: inc/class/class.user.php:5394 inc/layouts/modern/class/class.user.php:5383
 msgid "Check your email address for your new password."
@@ -22448,17 +22448,17 @@ msgstr ""
 
 #: inc/class/class.user.php:14308 inc/layouts/modern/class/class.user.php:14331
 msgid "The username and password field is empty"
-msgstr ""
+msgstr "O nome de usuário e senha estão vazios"
 
 #: inc/class/class.user.php:14319 inc/layouts/modern/class/class.user.php:14342
 #, php-format
 msgid ""
 "The password you entered for the username <strong>%s</strong> is incorrect."
-msgstr ""
+msgstr "A senha para o usuário <strong>%s</strong> está incorreta."
 
 #: inc/class/class.user.php:14322 inc/layouts/modern/class/class.user.php:14345
 msgid "Invalid username."
-msgstr ""
+msgstr "Usuário inválido."
 
 #: inc/class/class.user.php:14325 inc/layouts/modern/class/class.user.php:14348
 msgid "The password field is empty."
@@ -22466,11 +22466,11 @@ msgstr ""
 
 #: inc/class/class.user.php:14328 inc/layouts/modern/class/class.user.php:14351
 msgid "The username field is empty."
-msgstr ""
+msgstr "O nome de usuário está vazio."
 
 #: inc/class/class.user.php:14371 inc/layouts/modern/class/class.user.php:14394
 msgid "Username & Password is required"
-msgstr ""
+msgstr "Usuário e senha é requisitado"
 
 #: inc/class/class.user.php:14394 inc/layouts/modern/class/class.user.php:14417
 msgid "Logged in successfully"
@@ -25143,7 +25143,7 @@ msgstr ""
 #: st_templates/layouts/modern/hotel/single/single-style-2.php:359
 #: st_templates/layouts/modern/hotel/single/single-style-3.php:480
 msgid "Review score"
-msgstr ""
+msgstr "Avaliações"
 
 #: inc/layouts/modern/configs/activity.php:134
 #: inc/layouts/modern/configs/car.php:107
@@ -25533,7 +25533,7 @@ msgstr ""
 #: inc/travel-helper.php:3672
 #, php-format
 msgid "Username: %s"
-msgstr ""
+msgstr "Usuário: %s"
 
 #: inc/layouts/modern/travel-helper.php:3907 inc/travel-helper.php:3655
 #, php-format
@@ -36577,7 +36577,7 @@ msgstr ""
 
 #: inc/widgets/st-search-hotel/st-search-hotel.php:141
 msgid "Review Score"
-msgstr ""
+msgstr "Avaliações"
 
 #: inc/widgets/st-search-rental/st-search-rental.php:8
 msgid "rental Filter Box"
@@ -40662,7 +40662,7 @@ msgstr "%s pessoas"
 #: st_templates/layouts/modern/tour/single/single-2.php:232
 #: st_templates/layouts/modern/tour/single/single-3.php:247
 msgid "View Less"
-msgstr ""
+msgstr "Ver menos"
 
 #: st_templates/layouts/modern/activity/single/single-1.php:259
 #: st_templates/layouts/modern/activity/single/single-2.php:242
@@ -41372,12 +41372,12 @@ msgstr ""
 #: st_templates/layouts/modern/common/footer.php:173
 #: st_templates/layouts/modern/common/footer1.php:171
 msgid "Username *"
-msgstr ""
+msgstr "Usuário *"
 
 #: st_templates/layouts/modern/common/footer.php:188
 #: st_templates/layouts/modern/common/footer1.php:186
 msgid "Password *"
-msgstr ""
+msgstr "Senha *"
 
 #: st_templates/layouts/modern/common/footer.php:196
 #: st_templates/layouts/modern/common/footer1.php:190
@@ -41433,7 +41433,7 @@ msgstr ""
 
 #: st_templates/layouts/modern/common/header/topbar-items/login.php:20
 msgid "Reset Password"
-msgstr ""
+msgstr "Resetar senha"
 
 #: st_templates/layouts/modern/common/header/topbar-items/login.php:27
 msgid "Enter the e-mail address associated with the account."
@@ -42709,11 +42709,11 @@ msgstr ""
 
 #: st_templates/login/form-login.php:60 st_templates/login/popup-login.php:48
 msgid "Forget Password"
-msgstr ""
+msgstr "Esqueci a senha"
 
 #: st_templates/login/form-login.php:60 st_templates/login/popup-login.php:48
 msgid "Forget Password ?"
-msgstr ""
+msgstr "Esqueceu a senha ?"
 
 #: st_templates/login/form-new-login.php:70
 #: st_templates/login/popup-register.php:68

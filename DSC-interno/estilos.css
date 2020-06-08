@@ -1,11 +1,14 @@
 *{
     font-family: 'Raleway', sans-serif;
 }
+body {
+    margin: 0px;
+}
 #top-bar{
     width: 100%;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .relative{
@@ -39,6 +42,8 @@
     box-shadow: 10px 20px 60px 0 rgba(52,37,244,0.50);
     border-radius: 10px;
     border: none;
+    font-family: Raleway;
+    font-size: 16px;
 }
 #nossos-clientes img{
     max-width: 200px;
@@ -51,6 +56,8 @@ h3.benefit-tittle {
     color: #24355A;
     letter-spacing: 0;
     text-align: center;
+    margin-top: 63px;
+    margin-bottom: 28px;
 }
 p.benefit-text {
     font-family: Raleway;
@@ -58,20 +65,14 @@ p.benefit-text {
     color: #5A5A5A;
     line-height: 22px;
 }
-#conheca-vantagens #primeiro-bloco h2 {
-    font-family: Questrial;
-    font-size: 52px;
-    color: #24355A;
-    letter-spacing: 0;
-    text-align: center;
-}
-#conheca-vantagens #primeiro-bloco p {
+#conheca-vantagens #primeiro-bloco > p {
     font-family: Raleway;
     font-size: 16px;
     color: #5A5A5A;
     letter-spacing: 0;
     text-align: center;
     line-height: 22px;
+    margin-bottom: 0px;
 }
 div#benefit-draw-1 {
     background-image: linear-gradient(242deg, #3425F4 6%, #7052DB 100%);
@@ -300,8 +301,9 @@ div#login-signup ul li {
 }
 
 #page-links ul li a {
-    font-family: Helvetica;
+    font-family: Raleway;
     font-size: 16px;
+    font-weight: 600;
     color: #353535;
     letter-spacing: 0;
     line-height: 22px;
@@ -340,4 +342,512 @@ div#login-signup ul li a:focus{
     color: #5A5A5A;
     letter-spacing: 0;
     line-height: 22px;
+}
+
+div#benefit-draw-2 {
+    box-shadow: 0px 7px 20px 0 rgba(21,9,97,0.40);
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+}
+
+div#conheca-vantagens,
+div#nossos-clientes,
+div#top-bar,
+div#venda-mais {
+    background-color: #f7f8fb;
+}
+
+h4 {
+    margin-top: 0px;
+}
+
+div#login-signup {
+    position: absolute;
+    right: 0;
+}
+
+div#top-bar div.container {
+    max-width: 1440px;
+}
+
+#venda-mais h2 {
+    font-weight: 100;
+    margin-top: 0px;
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355a;
+}
+
+#venda-mais p {
+    color: #5a5a5a;
+}
+img#circulos-grande {
+    position: absolute;
+    right: 0px;
+}
+
+img#iphones {
+    position: absolute;
+    right: 180px;
+    top: 70px;
+}
+
+.div-esquerda {
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+#nossos-clientes img:first-child {
+    margin-left: 0px;
+}
+
+#nossos-clientes img:last-child {
+    margin-right: 0px;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    margin: 0px;
+}
+#top-bar{
+    width: 100%;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.relative{
+    position: relative;
+}
+.flex{
+    display: flex;
+}
+.text-center{
+    text-align: center;
+}
+.button-cadastro {
+    height: 50px;
+    width: 110px;
+    background-color: #3425F4;
+    box-shadow: 10px 20px 60px 0 rgba(52,37,244,0.50);
+    border-radius: 10px;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    border: none;
+}
+.magic-button {
+    width: 213px;
+    height: 50px;
+    color: white;
+    background-image: linear-gradient(241deg, #3425F4 6%, #7052DB 100%);
+    box-shadow: 10px 20px 60px 0 rgba(52,37,244,0.50);
+    border-radius: 10px;
+    border: none;
+    font-family: Raleway;
+    font-size: 16px;
+}
+#nossos-clientes img{
+    max-width: 200px;
+    max-height: 50px;
+    margin: 0 auto;
+}
+p.benefit-text {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    line-height: 22px;
+}
+#conheca-vantagens #primeiro-bloco h2 {
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355A;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#conheca-vantagens #primeiro-bloco p {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+div#benefit-draw-1 {
+    background-image: linear-gradient(242deg, #3425F4 6%, #7052DB 100%);
+    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+}
+h4.titulo {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    color: #AA9CFF;
+    letter-spacing: 1.56px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+img.depoimento {
+    box-shadow: 0 10px 40px 0 rgba(0,0,0,0.20);
+    border-radius: 100px;
+    max-height: 70px;
+    max-width: 70px;
+    margin: 0 auto;
+}
+
+p.texto {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+p.nome {
+    font-family: Raleway;
+    font-size: 20px;
+    color: #24355A;
+    letter-spacing: 0;
+}
+
+p.origem {
+    font-family: Raleway;
+    font-size: 12px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+.depoimento {
+    margin: 0 auto;
+}
+
+.circle-white {
+    height: 67px;
+    width: 67px;
+    background: #FFFFFF;
+    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.15);
+    border-radius: 67px;
+}
+
+.circle-purple {
+    height: 67px;
+    width: 67px;
+    background-image: linear-gradient(241deg, #3425F4 6%, #7052DB 100%);
+    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
+    border-radius: 67px;
+}
+
+#como-funciona .divisao2 h3 {
+    font-family: Raleway;
+    font-size: 20px;
+    color: #24355A;
+    letter-spacing: 0;
+}
+
+#como-funciona .divisao2 p {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+
+#como-funciona .divisao1 {
+    height: 363px;
+    width: 530px;
+    background: #3D27F3;
+    box-shadow: 7px 14px 44px 0 rgba(31,21,159,0.10);
+    border-radius: 2.8px;
+}
+
+.divisao1, .divisao2 {
+    margin: 0 auto;
+}
+
+#integramos img {
+    max-height: 75px;
+    width: 205px;
+    opacity: 0.48;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin: 0 auto;
+}
+
+#integramos h3 {
+    font-family: Questrial;
+    font-size: 32px;
+    color: #24355A;
+    text-align: center;
+}
+
+#planos p {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    text-align: center;
+    line-height: 22px;
+}
+
+#planos h2{
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355A;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.plano {
+    width: 360px;
+    height: 437px;
+    border: 1px solid #DDDFE7;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.plano.selected {
+    background: #FFFFFF;
+    box-shadow: 40px 40px 80px 0 rgba(0,0,0,0.10);
+    border-radius: 5px;
+    height: 477px;
+    border: none;
+}
+
+button.plano {
+    background: #FFFFFF;
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A2DF0;
+    width: 213px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #3425F4;
+}
+
+.plano.selected button.plano {
+    background-image: linear-gradient(241deg, #3425F4 6%, #7052DB 100%);
+    box-shadow: 10px 20px 60px 0 rgba(52,37,244,0.50);
+    border-radius: 10px;
+    font-family: Raleway;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    border: none;
+}
+
+.plano ul li {
+    text-align: left;
+    list-style: none;
+    font-family: Raleway;
+    font-size: 14px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 30px;
+}
+
+.plano ul li i {
+    color: #FA2B56;
+    float: right;
+    padding-right: 20px;
+    padding-top: 8px;
+}
+
+#duvidas h2 {
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355A;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+#duvidas>p {
+    font-family: Raleway;
+    font-size: 16px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid #DDDFE7;
+    border-radius: 5px;
+    width: 360px;
+    height: 262px;
+    margin: 0 auto;
+}
+div#page-links ul li {
+    float: right;
+    margin: 15px;
+}
+div#login-signup ul li {
+    float: right;
+    margin: 0px 15px;
+}
+
+#page-links ul li a {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 600;
+    color: #353535;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+#page-links ul li,
+div#login-signup ul li{
+    list-style: none;
+}
+
+#page-links ul li a,
+#page-links ul li a:active,
+#page-links ul li a:hover,
+#page-links ul li a:visited,
+#page-links ul li a:focus{
+    text-decoration: none;
+} 
+
+div#login-signup ul li a,
+div#login-signup ul li a:active,
+div#login-signup ul li a:hover,
+div#login-signup ul li a:visited,
+div#login-signup ul li a:focus{
+    text-decoration: none;
+} 
+
+#duvidas p.questao {
+    font-family: Raleway;
+    color: #24355A;
+    font-size: 20px;
+}
+
+#duvidas p.resposta {
+    font-family: Raleway;
+    font-size: 14px;
+    color: #5A5A5A;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+div#benefit-draw-2 {
+    box-shadow: 0px 7px 20px 0 rgba(21,9,97,0.40);
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+}
+
+div#conheca-vantagens,
+div#nossos-clientes,
+div#top-bar,
+div#venda-mais {
+    background-color: #f7f8fb;
+}
+
+h4 {
+    margin-top: 0px;
+}
+
+div#login-signup {
+    position: absolute;
+    right: 0;
+}
+
+div#top-bar div.container {
+    max-width: 1440px;
+}
+
+#venda-mais h2 {
+    font-weight: 100;
+    margin-top: 0px;
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355a;
+}
+
+#venda-mais p {
+    color: #5a5a5a;
+}
+img#circulos-grande {
+    position: absolute;
+    right: 0px;
+}
+
+img#iphones {
+    position: absolute;
+    right: 180px;
+    top: 70px;
+}
+
+.div-esquerda {
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+#nossos-clientes img:first-child {
+    margin-left: 0px;
+}
+
+#nossos-clientes img:last-child {
+    margin-right: 0px;
+}
+
+#conheca-vantagens h4.titulo {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+div#benefits-bar {
+    margin-top: 80px;
+    padding-bottom: 110px;
+}
+
+.benefit {
+    margin: 0 auto;
+}
+
+div.benefit img {
+    padding-top: 42px;
+}
+
+div#depoimentos h4.titulo {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+#depoimentos h2 {
+    font-family: Questrial;
+    font-size: 52px;
+    color: #24355A;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 100;
+}
+
+div#fundo-oval {
+    background-image: url(./assets/fundo-oval.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+div#como-funciona {
+    background-color: #f2f1fe;
 }
