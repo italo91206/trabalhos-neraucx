@@ -1015,3 +1015,7 @@ i#fecharMenu {
 #st-content-wrapper {
     padding-bottom: 0px;
 }
+
+li.topbar-item.login-item {
+    margin-right: 0px !important;
+}

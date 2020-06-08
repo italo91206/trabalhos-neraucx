@@ -15,6 +15,9 @@ window.onload = function(){
     var final = "";
     var param = "";
 
+    var signup = jQuery("a.signup");
+    var login = jQuery("a.login");
+
     if(tem){
         // quero poder ir pra português
         jQuery(".st-list").children()[3].remove()
@@ -25,6 +28,8 @@ window.onload = function(){
         param = new URL(final);
         param.searchParams.set("currency", "BRL");
         this.console.log("Tinha!");
+        signup.html("sign up +");
+        login.html("login +");
     }
     else{
         // quero poder ir pra inglês
@@ -36,6 +41,8 @@ window.onload = function(){
         param.searchParams.set("currency", "EUR");
         jQuery(".st-list").children()[4].remove()
         this.console.log("Não tinha!");
+        signup.html("cadastrar +");
+        login.html("entrar +");
     }
     
     var link = jQuery(".st-list").children()[3];
@@ -78,4 +85,8 @@ window.onload = function(){
         jQuery("#abrirMenu").addClass("hidden");
         jQuery("#fecharMenu").removeClass("hidden");
     });
+
+    
+
+    
 }
