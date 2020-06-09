@@ -34,6 +34,12 @@ body {
     line-height: 22px;
     border: none;
 }
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
 .magic-button {
     width: 213px;
     height: 50px;
@@ -332,6 +338,8 @@ div#login-signup ul li a:hover,
 div#login-signup ul li a:visited,
 div#login-signup ul li a:focus{
     text-decoration: none;
+    color: #353535;
+    font-weight: 600;
 } 
 
 #duvidas p.questao {
@@ -586,14 +594,6 @@ div#page-links ul li {
 #page-links ul li a:hover,
 #page-links ul li a:visited,
 #page-links ul li a:focus{
-    text-decoration: none;
-} 
-
-div#login-signup ul li a,
-div#login-signup ul li a:active,
-div#login-signup ul li a:hover,
-div#login-signup ul li a:visited,
-div#login-signup ul li a:focus{
     text-decoration: none;
 } 
 
@@ -871,6 +871,41 @@ div#footer{
     margin-right: 380px;
 }
 
+#contato #texto h4.titulo {
+    text-align: left;
+}
+
+#contato h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+#contato p {
+    color: #fff;
+    font-weight: 100;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+
+div#texto {
+    position: absolute;
+    top: 380px;
+    left: 70px;
+}
+
+button.no-background {
+    background: none;
+    font-family: Raleway;
+    font-size: 16px;
+    color: #fff;
+    width: 213px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    font-weight: 600;
+}
+
 @media(max-width: 2560px){
     div#fundo-oval {
         background-size: cover;
@@ -888,6 +923,7 @@ div#footer{
         background-repeat: no-repeat;
     }
 }
+
 @media(max-width: 1440px){
     #footer .container.flex {
         margin-right: 150px;
@@ -906,9 +942,12 @@ div#footer{
     div#top-bar div.container {
         max-width: 1400px;
     }
+    div#fundo-oval {
+        background-size: contain;
+    }
 }
 
-@media(max-width: 1240px){
+@media(max-width: 1280px){
     div#fundo-oval{
         background-size: contain;
     }
@@ -916,13 +955,13 @@ div#footer{
         max-width: 1200px;
     }
     img#circulos-grande {
-        right: -45px;
+        right: -65px;
     }
     img#iphones {
         right: 90px;
     }
     div#fundo-oval-invertido {
-        height: 338px;
+        height: 349px;
     }
     #footer .container.flex {
         margin-right: 50px;
@@ -980,5 +1019,21 @@ div#footer{
     }
     img#depo03 {
         right: 10px;
+    }
+    #contato .formulario{
+        right: 0px;
+    }
+    div#texto {
+        top: 420px;
+        left: 16px;
+    }    
+}
+
+@media(max-width: 768px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
     }
 }
