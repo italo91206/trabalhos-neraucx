@@ -36,9 +36,9 @@
     </div>
 
     <div id="main">
-        <div id="venda-mais" class="relative">
+        <div id="venda-mais">
             <div class="background">
-                <div class="container flex">
+                <div class="container flex relative">
                     <div class="div-esquerda">
                         <h2>Venda ainda mais<br/>para sua audiência</h2>
                         <p>
@@ -72,8 +72,8 @@
                     ao nao ter um checkout inteligente
                 </h2>
                 <p>
-                    eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium<br/>
-                    viverra suspendisse potenti nullam ac tortor vitae purus
+                    eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl<br/>
+                    pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus
                 </p>
             </div>
             <div id="benefits-bar" class="container flex text-center">
@@ -119,14 +119,15 @@
             </div>
 
             <div id="fundo-oval">
+
                 <div id="image-field" class="relative container flex">
-                    <img src="./assets/depo-01.png" alt="" class="depoimento">
-                    <img src="./assets/depo-02.png" alt="" class="depoimento">
-                    <img src="./assets/depo-03.png" alt="" class="depoimento">
-                    <img src="./assets/depo-04.png" alt="" class="depoimento">
-                    <img src="./assets/depo-05.png" alt="" class="depoimento">
-                    <img src="./assets/depo-06.png" alt="" class="depoimento">
-                    <img src="./assets/depo-07.png" alt="" class="depoimento">
+                    <img src="./assets/depo-01.png" id="depo01" alt="" class="depoimento">
+                    <img src="./assets/depo-02.png" id="depo02" alt="" class="depoimento">
+                    <img src="./assets/depo-03.png" id="depo03" alt="" class="depoimento">
+                    <img src="./assets/depo-04.png" id="depo04" alt="" class="depoimento">
+                    <img src="./assets/depo-05.png" id="depo05" alt="" class="depoimento">
+                    <img src="./assets/depo-06.png" id="depo06" alt="" class="depoimento">
+                    <img src="./assets/depo-07.png" id="depo07" alt="" class="depoimento">
                 </div>
                 
                 <div class="container flex">
@@ -167,11 +168,13 @@
 
             <div class="container flex">
                 <div class="divisao1">
-
+                    <img src="./assets/browser.png" alt="">
                 </div>
                 <div class="divisao2">
                     <div class="flex">
-                        <div class="circle-white"></div>
+                        <div class="circle-white">
+                            <img src="./assets/instalacao.png" alt="">
+                        </div>
                         <div>
                             <h3>Meio de pagamento</h3>
                             <p>netus et malesuada fames ac turpis<br/>egestas maecenas pharetra convallis</p>
@@ -179,7 +182,9 @@
                     </div>
 
                     <div class="flex">
-                        <div class="circle-white"></div>
+                        <div class="circle-white">
+                            <img src="./assets/instalacao.png" alt="">
+                        </div>
                         <div>
                             <h3>Visual Personalizado</h3>
                             <p>netus et malesuada fames ac turpis<br/>egestas maecenas pharetra convallis</p>
@@ -187,7 +192,9 @@
                     </div>
 
                     <div class="flex">
-                        <div class="circle-purple"></div>
+                        <div class="circle-purple">
+                            <img src="./assets/conversao.png" alt="">
+                        </div>
                         <div>
                             <h3>Acesso Imediato</h3>
                             <p>netus et malesuada fames ac turpis<br/>egestas maecenas pharetra convallis</p>
@@ -206,6 +213,8 @@
                     <img src="./assets/woo-commerce.png" alt="">
                 </div>
             </div>
+
+            <div id="fundo-oval-invertido"></div>
         </div>
 
         <div id="planos">
@@ -220,7 +229,7 @@
             <div class="container flex">
                 <div class="plano text-center">
                     <h4>Básico</h4>
-                    <p><span>R$</span>200<span>/mês</span></p>
+                    <p><span class="moeda">R$</span>200<span class="mensalidade">/mês</span></p>
                     <ul>
                         <li>100% white label <i class="fa fa-check"></i></li>
                         <li>100% white label <i class="fa fa-check"></i></li>
@@ -232,7 +241,7 @@
 
                 <div class="plano selected text-center">
                     <h4>Plus</h4>
-                    <p><span>R$</span>300<span>/mês</span></p>
+                    <p><span class="moeda">R$</span>300<span class="mensalidade">/mês</span></p>
                     <ul>
                         <li>100% white label <i class="fa fa-check"></i></li>
                         <li>100% white label <i class="fa fa-check"></i></li>
@@ -244,7 +253,7 @@
 
                 <div class="plano text-center">
                     <h4>Premium</h4>
-                    <p><span>R$</span>400<span>/mês</span></p>
+                    <p><span class="moeda">R$</span>400<span class="mensalidade">/mês</span></p>
                     <ul>
                         <li>100% white label <i class="fa fa-check"></i></li>
                         <li>100% white label <i class="fa fa-check"></i></li>
@@ -264,12 +273,12 @@
                     Não tem problema, nós<br/>
                     estamos aqui para ajudar
                 </h2>
-                <p>
-                    eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl<br/> pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus
+                <p class="text-center">
+                    eget felis eget nunc lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl<br/> 
+                    pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus
                 </p>
             </div>
             
-
             <div class="flex container">
                 <div class="card">
                     <p class="questao">Posso mudar de <br/>plano futuramente?</p>
@@ -294,7 +303,36 @@
             </div>
         </div>
 
-        <div id="contato"></div>
+        <div id="contato">
+            <div id="fundo-circular" class="container relative">
+                <img id="form-circle" src="./assets/circulo-form.png" alt="" />
+                <div class="formulario">
+                    <form action="">
+                        <div class="flex">
+                            <input type="text" placeholder="Nome"/>
+                            <input type="text" placeholder="Email"/>
+                        </div>
+                        <div class="flex">
+                            <input type="text" placeholder="Telefone"/>
+                            <input type="text" placeholder="Website da sua loja"/>
+                        </div>
+                        <div class="text-area text-center">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar Mensagem &gt;" class="magic-button"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container flex">
+            <a href="" class="circle-black"><i class="fa fa-whatsapp"></i></a>
+            <a href="" class="circle-blue"><i class="fa fa-linkedin"></i></a>
+            <a href="" class="circle-black"><i class="fa fa-instagram"></i></a>
+            <a href="" class="circle-blue"><i class="fa fa-facebook-f"></i></a>
+        </div>
     </div>
 </body>
 </html>
