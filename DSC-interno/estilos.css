@@ -15,7 +15,9 @@ body {
     position: relative;
 }
 .flex{
+    flex-wrap: wrap;
     display: flex;
+    width: 100%;
 }
 .text-center{
     text-align: center;
@@ -39,6 +41,9 @@ body {
 }
 .mobile{
     display: none;
+}
+div#top-bar {
+    padding: 5px 0;
 }
 .magic-button {
     width: 213px;
@@ -174,6 +179,7 @@ p.origem {
     text-align: center;
     margin-top: 55px;
     margin-bottom: 70px;
+    font-weight: 100;
 }
 
 
@@ -444,9 +450,6 @@ body {
 .relative{
     position: relative;
 }
-.flex{
-    display: flex;
-}
 .text-center{
     text-align: center;
 }
@@ -463,12 +466,6 @@ body {
     text-align: center;
     line-height: 22px;
     border: none;
-}
-
-#nossos-clientes img{
-    max-width: 200px;
-    max-height: 50px;
-    margin: 0 auto;
 }
 p.benefit-text {
     font-family: Raleway;
@@ -578,15 +575,6 @@ p.origem {
 div#page-links ul li {
     float: right;
     margin: 15px;
-}
-
-#page-links ul li a {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 600;
-    color: #353535;
-    letter-spacing: 0;
-    line-height: 22px;
 }
 
 #page-links ul li a,
@@ -1035,5 +1023,193 @@ button.no-background {
     }
     .mobile{
         display: block;
+    }
+    .container{
+        max-width: 720px;
+    }
+    div#logo img {
+        width: 120px;
+    }
+    
+    #page-links ul {
+        margin-top: 0px;
+    }
+    
+    #page-links ul li a {
+        font-size: 12px;
+    }
+    
+    div#page-links ul li {
+        margin: 10px;
+    }
+    
+    div#login-signup ul {
+        margin-top: 0px;
+    }
+    
+    div#login-signup ul li {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+    
+    button.button-cadastro {
+        height: 40px;
+        font-size: 14px;
+    }
+    div#top-bar div.container {
+        max-width: 750px;
+    }
+    #venda-mais .div-esquerda{
+        z-index: 1;
+    }
+    #como-funciona .divisao1 {
+        max-width: 80%;
+        margin: 0 auto;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    #como-funciona .divisao1 img {
+        width: 100%;
+     }
+    img#iphones {
+        top: 127px;
+        right: -24px;
+    }
+    #nossos-clientes img {
+        width: 150px;
+        height: 40px;
+    }
+    #nossos-clientes img{
+        width: 150px;
+        height: 40px;
+    }
+    #integramos h3{
+        font-weight: 100;
+    }
+    #integramos h3,
+    #duvidas h2,
+    #planos h2,
+    #como-funciona h2,
+    #venda-mais h2,
+    #conheca-vantagens #primeiro-bloco h2,
+    #depoimentos h2{
+        font-size: 40px;
+    }
+    #duvidas p.text-center,
+    #planos .container >p,
+    #venda-mais p,
+    #conheca-vantagens #primeiro-bloco > p{
+        font-size: 14px !important;
+    }
+    .benefit{
+        width: 30%;
+    }
+    p.benefit-text{
+        font-size: 12px;
+    }
+    h3.benefit-tittle{
+        min-height: 48px;
+    }
+    img#depo07 {
+        right: 190px;
+    }
+    img#depo06 {
+        left: 0;
+    }	
+    img#depo05 {
+        left: 110px;
+    }
+    img#depo04 {
+        right: 70px;
+    }
+    img#depo03 {
+        right: 10px;
+    }
+    img#depo02 {
+        left: 310px;
+    }
+    img#depo01 {
+        left: 240px;
+    }
+    #depoimentos p.texto{
+        font-size: 12px;
+        min-height: 110px;
+    }
+    #como-funciona .divisao2{
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    #como-funciona .step {
+        flex: 0 0 30%;
+        max-width: 30%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .circle-white, .circle-purple {
+        margin: 0 auto;
+    }
+    .circle-white img, .circle-purple img {
+        height: 30px;
+        padding-left: 0px;
+        padding-top: 19px;
+    }
+    #como-funciona .container .mobile {
+        margin-top: 30px;
+    }
+    div#fundo-oval-invertido {
+        height: 209px;
+    }
+    .card {
+        width: 100%;
+    }
+    #duvidas p.resposta {
+        width: 670px;
+        padding: 30px 0;
+        margin: 0px 30px;
+    }
+    #duvidas p.questao{
+        margin-bottom: 0px;
+    }
+    .card {
+        width: 100%;
+        height: 200px;
+        margin: 5px 0;
+    }
+    div#texto {
+        top: unset;
+        left: unset;
+        position: relative;
+    }
+    #contato #texto h4.titulo {
+        text-align: center;
+    }
+    #contato h2 {
+        font-family: Questrial;
+        font-size: 40px;
+        color: #24355A;
+        letter-spacing: 0;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 30px;
+    }
+    #contato p {
+        color: #24355A;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    div#texto {
+        padding: 40px 0;
+    }
+    #contato .formulario{
+        right: unset;
+        top: unset;
+        position: relative;
+    }
+    #footer .container.flex{
+        margin-right: 0px;
     }
 }
