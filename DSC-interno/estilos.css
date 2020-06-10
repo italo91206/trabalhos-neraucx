@@ -45,6 +45,9 @@ body {
 div#top-bar {
     padding: 5px 0;
 }
+.hidden{
+    display: none;
+}
 .magic-button {
     width: 213px;
     height: 50px;
@@ -1018,6 +1021,9 @@ button.no-background {
 }
 
 @media(max-width: 768px){
+    #top-bar .mobile {
+        display: none;
+    }
     .desktop{
         display: none;
     }
@@ -1211,5 +1217,242 @@ button.no-background {
     }
     #footer .container.flex{
         margin-right: 0px;
+    }
+}
+
+@media(max-width: 425px){
+    .desktop{
+        display: none;
+    }
+    #duvidas p.resposta {
+        width: 380px;
+    }
+    #top-bar .mobile {
+        display: block;
+    }
+    #top-bar .container.flex.relative {
+        display: none;
+    }
+    
+    .card {
+        height: 250px;
+        width: 98%;
+    }
+    
+    .formulario {
+        width: 400px;
+    }
+    
+    form {
+        width: 400px;
+    }
+    
+    #contato .formulario textarea {
+        width: 220px;
+    }
+    
+    .formulario {
+        width: 400px;
+    }
+    
+    #contato .formulario {
+        width: 400px !important;
+        padding: 0;
+    }
+    
+    .benefit {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    img#iphones {
+        right: 0;
+    }
+    
+    .container {
+        max-width: 400px;
+    }
+
+    img#iphones {
+        right: 0;
+        top: 0;
+    }
+
+    .div-esquerda {
+        margin-top: 536px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    #nossos-clientes img {
+        width: 20%;
+        height: 20px;
+    }
+
+    div#nossos-clientes {
+        padding-top: 60px;
+    }
+    
+    #duvidas h2,
+    #planos h2,
+    #como-funciona h2,
+    #depoimentos h2,
+    #conheca-vantagens h2 {
+        font-size: 24px !important;
+    }
+    h3.benefit-tittle {
+        margin-top: 20px;
+        margin-bottom: -30px;
+    }
+    .benefit {
+        margin-bottom: 20px;
+    }
+    div#benefits-bar{
+        padding-bottom: 0px;
+    }
+    #depoimentos div#image-field {
+        display: none;
+    }
+    div#fundo-oval {
+        padding-top: 82px;
+    }
+    p.nome {
+        margin-top: 0px;
+    }
+    #como-funciona h4.titulo{
+        padding-top: 50px;
+    }
+    .step p {
+        font-size: 12px;
+        text-align: justify;
+    }
+    #integramos img {
+        width: 25%;
+    }
+    div#fundo-oval-invertido {
+        height: 116px;
+    }
+    .plano h4 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+    #planos .plano p {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .plano {
+        width: 100%;
+        height: 315px;
+    }
+    
+    .plano.selected {
+        height: 315px;
+        margin-top: 25px;
+        box-shadow: 6px 3px 20px 0 rgba(0,0,0,0.10);
+    }
+    
+    .plano.selected button.plano {
+        box-shadow: 3px 5px 17px 0 rgba(52,37,244,0.50);
+    }
+
+    div#planos {
+        padding-bottom: 10px;
+    }
+
+    #duvidas p.resposta {
+        width: 350px;
+    }
+    
+    #contato form input[type="text"] {
+        width: 340px;
+    }
+    
+    #contato .formulario textarea {
+        width: 310px;
+    }
+    
+    form {
+        padding-top: 30px;
+        width: 400px;
+        height: 634px;
+        background: #fff;
+    }
+    
+    div#footer {
+        padding-bottom: 50px;
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 375px){
+    #contato form input[type="text"] {
+        width: 300px;
+    }
+    
+    #contato .formulario textarea {
+        width: 275px;
+    }
+    
+    form {
+        width: 350px;
+    }
+    
+    #contato .formulario {
+        width: 350px !important;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    #duvidas p.resposta {
+        width: 280px;
+    }
+
+    #duvidas p.text-center {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .plano, .plano.selected {
+        width: 90%;
+    }
+
+    #planos .container >p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    div#fundo-oval-invertido {
+        height: 102px;
+    }
+
+    .step h3 {
+        font-size: 16px;
+    }
+
+    #conheca-vantagens #primeiro-bloco h2 {
+        font-size: 20px !important;
+    }
+
+    #conheca-vantagens #primeiro-bloco > p {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    img#iphones {
+        width: 300px;
+        right: 30px;
+    }
+
+    #venda-mais .div-esquerda {
+        margin-top: 440px;
     }
 }
