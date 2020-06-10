@@ -88,6 +88,8 @@ p.benefit-text {
     line-height: 22px;
     margin-bottom: 0px;
     margin-top: 10px;
+    width: 50%;
+    margin: 0 auto;
 }
 div#benefit-draw-1 {
     background-image: linear-gradient(242deg, #3425F4 6%, #7052DB 100%);
@@ -121,6 +123,7 @@ p.texto {
     color: #5A5A5A;
     letter-spacing: 0;
     line-height: 22px;
+    width: 80%;
 }
 
 p.nome {
@@ -140,6 +143,7 @@ p.origem {
 
 .depoimento {
     margin: 0 auto;
+    width: 49%;
 }
 
 .circle-white {
@@ -410,11 +414,13 @@ div#top-bar div.container {
     font-family: Questrial;
     font-size: 52px;
     color: #24355a;
+    width: 50%;
 }
 
 #venda-mais p {
     color: #5a5a5a;
     margin: 0px 0px 35px;
+    width: 50%;
 }
 
 img#circulos-grande {
@@ -494,14 +500,6 @@ div#benefit-draw-1 {
     height: 140px;
     width: 140px;
     margin: 0 auto;
-}
-
-p.texto {
-    font-family: Raleway;
-    font-size: 16px;
-    color: #5A5A5A;
-    letter-spacing: 0;
-    line-height: 22px;
 }
 
 p.nome {
@@ -896,6 +894,55 @@ button.no-background {
     border: 1px solid #fff;
     font-weight: 600;
 }
+.divisao1 {
+    width: 60%;
+}
+
+.divisao2 {
+    width: 29%;
+}
+
+.divisao1 img {
+    width: 100%;
+}
+#bar .logo img {
+    padding-left: 20px;
+}
+
+i.fa {
+    padding-top: 19px;
+    margin-left: 160px;
+    font-size: 30px;
+    color: #674cdf;
+}
+
+div#menu {
+    width: 100%;
+    background-color: #f2f1fe;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    transition: display 0.5s;
+}
+
+#menu ul li a:focus,
+#menu ul li a:hover,
+#menu ul li a:active,
+#menu ul li a:visited,
+#menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+#menu ul {
+    list-style: none;
+    padding-inline-start: 20px;
+}
+
+#menu ul li {
+    padding: 10px 0 10px 10px;
+    border-bottom: 2px solid white;
+    width: 90%;
+}
 
 @media(max-width: 2560px){
     div#fundo-oval {
@@ -1233,7 +1280,12 @@ button.no-background {
     #top-bar .container.flex.relative {
         display: none;
     }
-    
+    .depoimento {
+        width: 100%;
+    }
+    p.texto {
+        width: 100%;
+    }
     .card {
         height: 250px;
         width: 98%;
@@ -1385,6 +1437,26 @@ button.no-background {
         padding-bottom: 50px;
         padding-top: 60px;
     }
+    #conheca-vantagens #primeiro-bloco > p,
+    #venda-mais p,
+    #venda-mais h2{
+        width: unset;
+    }
+    div#top-bar {
+        background-color: #fff;
+    }
+}
+
+@media(max-width: 411px){
+    div#fundo-oval-invertido {
+        height: 112px;
+    }
+    #nossos-clientes img:first-child {
+        margin-left: auto;
+    }
+    #nossos-clientes img:last-child {
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 375px){
@@ -1454,5 +1526,78 @@ button.no-background {
 
     #venda-mais .div-esquerda {
         margin-top: 440px;
+    }
+}
+
+@media(max-width: 320px){
+    form {
+        width: 300px;
+    }
+    #contato .formulario {
+        width: 300px !important;
+    }
+    #contato form input[type="text"] {
+        width: 250px;
+    }
+    #contato .formulario textarea {
+        width: 222px;
+    }
+    .card {
+        height: 245px;
+    }
+    #duvidas p.resposta {
+        margin-left: 10px;
+        width: 277px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    #duvidas p.questao {
+        margin-left: 10px;
+        margin-bottom: 0px;
+    }
+    #duvidas p.text-center {
+        width: 90%;
+    }
+    #contato h2{
+        font-size: 35px;
+    }
+    #integramos h3, #duvidas h2, #planos h2, #como-funciona h2, #depoimentos h2, #conheca-vantagens h2 {
+        font-size: 22px !important;
+    }
+    div#fundo-oval-invertido {
+        height: 87px;
+    }
+    #como-funciona .step {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .step p{
+        width: 60%;
+        margin: 0 auto;
+    }
+    #depoimentos p.nome,
+    #depoimentos p.origem,
+    #depoimentos p.texto {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .depoimento {
+        margin-bottom: 20px;
+    }
+
+    #venda-mais p {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    #conheca-vantagens h4.titulo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    div#benefits-bar {
+        margin-top: 40px;
     }
 }

@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSC - Interno</title>
     <link rel="stylesheet" href="./estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./myscripts.js"></script>
+    
 </head>
 <body>
     <div id="top-bar">
@@ -36,10 +39,18 @@
         <div class="mobile">
             <div id="bar" class="flex">
                 <div class="logo"><img src="./assets/logo.png" alt=""></div>
-                <div class="opcao"><i class="fa fa-close"></i></div>
+                <div class="opcao"><i class="fa fa-bars"></i></div>
             </div>
             
-            <div id="menu" class="hidden"></div>
+            <div id="menu" class="hidden">
+                <ul>
+                    <li><a href="#conheca-vantagens">Vantagens</a></li>
+                    <li><a href="#integramos">Integrações</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#duvidas">Dúvidas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
         </div>
         
     </div>
@@ -49,13 +60,14 @@
             <div class="background">
                 <div class="container flex relative">
                     <div class="div-esquerda">
-                        <h2>Venda ainda mais<br/>para sua audiência</h2>
+                        <h2>Venda ainda mais para sua audiência</h2>
                         <p>
-                            Conquiste verdadeiros fãs que trazem indicações e chegam<br/>
-                            até o final do seu curso com vontade de devorar mais<br/>conteúdo ainda.
+                            Conquiste verdadeiros fãs que trazem indicações e chegam
+                            até o final do seu curso com vontade de devorar mais conteúdo ainda.
                         </p>
                         <a href=""><button class="magic-button">Quero saber mais &gt;</button></a>
                     </div>
+
                     <div class="div-direita">
                         <img src="./assets/circulo-grande.png" alt="" id="circulos-grande" class="desktop">
                         <img src="./assets/iphones.png" alt="" id="iphones">
@@ -142,9 +154,9 @@
                 <div class="container flex">
                     <div class="depoimento">
                         <p class="texto">
-                            "Escuto muitos elogios dos meus alunos pela minha aposta na<br/>
-                            MemberKit. É a melhor plataforma de cursos que existe. Muito<br/>
-                            bom mesmo, interface amigável e fácil de integrar com outros<br/>
+                            "Escuto muitos elogios dos meus alunos pela minha aposta na
+                            MemberKit. É a melhor plataforma de cursos que existe. Muito
+                            bom mesmo, interface amigável e fácil de integrar com outros
                             serviços. O suporte também sempre presente quando precisei."
                         </p>
                         <p class="nome">Luiz Mazini</p>
@@ -153,10 +165,10 @@
 
                     <div class="depoimento">
                         <p class="texto">
-                            "Posso subir arquivos bem mais rápido do que a outra<br/>
-                            plataforma que abandonei. Consigo organizar todos os meus<br/>
-                            cursos em um único painel na minha área de membros. A<br/>
-                            usabilidade e customização da MemberKit é incomparável<br/>
+                            "Posso subir arquivos bem mais rápido do que a outra
+                            plataforma que abandonei. Consigo organizar todos os meus
+                            cursos em um único painel na minha área de membros. A
+                            usabilidade e customização da MemberKit é incomparável
                             também."
                         </p>
                         <p class="nome">Rafael Guandalini</p>
@@ -401,5 +413,6 @@
             <a href="" class="circle-blue"><i class="fa fa-facebook-f"></i></a>
         </div>
     </div>
+    
 </body>
 </html>
