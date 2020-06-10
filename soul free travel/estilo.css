@@ -1019,3 +1019,35 @@ i#fecharMenu {
 li.topbar-item.login-item {
     margin-right: 0px !important;
 }
+
+a.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+a.float i.fa.fa-whatsapp {
+    padding: 0px !important;
+    margin: 0px !important;
+    background: none;
+    color: white;
+    font-size: 30px !important;
+    padding-top: 15px !important;
+}
+@media (max-width: 425px){
+    a.float{
+        right: 20px;
+    }
+}
