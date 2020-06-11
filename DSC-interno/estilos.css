@@ -949,6 +949,7 @@ div#menu {
     width: 90%;
 }
 
+
 @media(max-width: 2560px){
     div#fundo-oval {
         background-size: cover;
@@ -1450,6 +1451,10 @@ div#menu {
     div#top-bar {
         background-color: #fff;
     }
+
+    #bar .opcao {
+        margin-left: 160px;
+    }
 }
 
 @media(max-width: 411px){
@@ -1461,6 +1466,10 @@ div#menu {
     }
     #nossos-clientes img:last-child {
         margin-right: auto;
+    }
+
+    #bar .opcao {
+        margin-left: 140px;
     }
 }
 
@@ -1532,6 +1541,18 @@ div#menu {
     #venda-mais .div-esquerda {
         margin-top: 440px;
     }
+
+    #bar .opcao {
+        margin-left: 160px;
+    }
+
+    #bar .logo img {
+        width: 150px;
+    }
+
+    .opcao i.fa {
+        padding-top: 12px;
+    }
 }
 
 @media(max-width: 320px){
@@ -1602,7 +1623,21 @@ div#menu {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
     div#benefits-bar {
         margin-top: 40px;
+    }
+
+    #bar .logo img {
+        padding-left: 10px;
+        width: 120px;
+    }
+
+    #bar .opcao {
+        margin-left: 150px;
+    }
+
+    .opcao i.fa {
+        padding-top: 8px;
     }
 }
