@@ -915,7 +915,7 @@ button.no-background {
     padding-left: 20px;
 }
 
-i.fa {
+#bar i.fa {
     padding-top: 19px;
     font-size: 30px;
     color: #674cdf;
@@ -1469,7 +1469,7 @@ div#menu {
     }
 
     #bar .opcao {
-        margin-left: 140px;
+        margin-left: 130px;
     }
 }
 
@@ -1640,4 +1640,29 @@ div#menu {
     .opcao i.fa {
         padding-top: 8px;
     }
+}
+
+@media (max-width: 411px){
+    .container {
+        max-width: 380px;
+    }    
+    #contato .formulario {
+        width: 380px !important;
+        padding: 0;
+    }
+    #contato form input[type="text"] {
+        width: 340px;
+    }
+    form {
+        width: 380px;
+    }
+    #duvidas p.resposta,    
+    #duvidas p.questao {
+        margin-left: 15px;
+    }
+}
+@media (max-width: 375px){
+    .container {
+        max-width: 350px;
+    }    
 }
