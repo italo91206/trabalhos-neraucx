@@ -1133,10 +1133,11 @@ div#menu {
     
     div#page-links ul li {
         margin: 10px;
+        margin-top: 25px;
     }
     
     div#login-signup ul {
-        margin-top: 0px;
+        margin-top: 15px;
     }
     
     div#login-signup ul li {
