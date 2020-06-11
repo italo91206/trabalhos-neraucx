@@ -257,9 +257,10 @@ p.origem {
     border: 1px solid #DDDFE7;
     border-radius: 5px;
     margin: 25px auto 0;
+    transition: all .5s ease-in-out;
 }
 
-.plano.selected {
+.plano:hover {
     background: #FFFFFF;
     box-shadow: 40px 40px 80px 0 rgba(0,0,0,0.10);
     border-radius: 5px;
@@ -268,7 +269,7 @@ p.origem {
     margin-top: 0px;
 }
 
-button.plano {
+.button-plano{
     background: #FFFFFF;
     font-family: Raleway;
     font-size: 16px;
@@ -280,9 +281,9 @@ button.plano {
     font-weight: 600;
 }
 
-.plano.selected button.plano {
+.plano:hover .button-plano {
     background-image: linear-gradient(241deg, #3425F4 6%, #7052DB 100%);
-    box-shadow: 10px 20px 60px 0 rgba(52,37,244,0.50);
+    box-shadow: 5px 5px 15px 0px rgba(52,37,244,0.50);
     border-radius: 10px;
     font-family: Raleway;
     font-size: 16px;
@@ -291,6 +292,8 @@ button.plano {
     text-align: center;
     line-height: 22px;
     border: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .plano ul li {
