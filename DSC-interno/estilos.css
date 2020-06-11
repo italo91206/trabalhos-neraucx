@@ -65,7 +65,16 @@ div#top-bar {
     border: none;
     font-family: Raleway;
     font-size: 16px;
+    transition: all .2s ease-in-out;
 }
+
+input.magic-button:hover,
+button.no-background:hover, 
+button.magic-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 #login-signup button.magic-button {
     width: 150px;
     height: 45px;
@@ -829,6 +838,7 @@ input.magic-button {
     margin-right: 8px;
     margin-top: 16px;
     box-shadow: none;
+    transition: all .2s ease-in-out;
 }
 
 img#form-circle {
@@ -917,6 +927,7 @@ button.no-background {
     border-radius: 10px;
     border: 1px solid #fff;
     font-weight: 600;
+    transition: all .2s ease-in-out;
 }
 .divisao1 {
     width: 60%;
