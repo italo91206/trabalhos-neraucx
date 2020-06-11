@@ -162,7 +162,7 @@ i.fa.fa-instagram,
 i.fa.fa-facebook-f, 
 i.fa.fa-whatsapp, 
 i.fa.fa-youtube, 
-i.fa.fa-google-plus, i.fa.fa-skype {
+.social-icons i.fa.fa-google-plus, i.fa.fa-skype {
     font-size: 28px;
     padding: 11px 17px;
     height: 50px;
@@ -180,7 +180,7 @@ i.fa.fa-skype {
 i.fa.fa-instagram {
     padding-left: 13px;
 }
-i.fa.fa-google-plus {
+.social-icons i.fa.fa-google-plus {
     padding-left: 10px;
 }
 .wpb_column.column_container.col-md-3:nth-child(1) {
@@ -525,7 +525,7 @@ div#sticky-nav {
 @media(max-width: 1024px){
     i.fa.fa-instagram, i.fa.fa-facebook-f, 
     i.fa.fa-whatsapp, i.fa.fa-youtube, 
-    i.fa.fa-google-plus, i.fa.fa-skype {
+    .social-icons i.fa.fa-google-plus, i.fa.fa-skype {
         font-size: 20px !important;
         padding: 10px 13px !important;
         height: 40px !important;
@@ -534,7 +534,7 @@ div#sticky-nav {
     i.fa.fa-instagram {
         padding-left: 11px !important;
     }
-    i.fa.fa-google-plus {
+    .social-icons i.fa.fa-google-plus {
         padding-left: 9px !important;
     }
     i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-skype {
