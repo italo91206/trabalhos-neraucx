@@ -22,6 +22,7 @@ body {
 .text-center{
     text-align: center;
 }
+
 .button-cadastro {
     height: 50px;
     width: 110px;
@@ -36,6 +37,12 @@ body {
     line-height: 22px;
     border: none;
 }
+
+#logo img {
+    width: 140px;
+    margin-top: 16px;
+}
+
 .desktop{
     display: block;
 }
@@ -58,6 +65,13 @@ div#top-bar {
     border: none;
     font-family: Raleway;
     font-size: 16px;
+}
+#login-signup button.magic-button {
+    width: 150px;
+    height: 45px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 #nossos-clientes img{
     max-width: 200px;
@@ -325,7 +339,7 @@ div#login-signup ul li {
 
 #page-links ul li a {
     font-family: Raleway;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #353535;
     letter-spacing: 0;
@@ -401,6 +415,7 @@ h4 {
 div#login-signup {
     position: absolute;
     right: 0;
+    font-size: 14px;
 }
 
 div#top-bar div.container {
@@ -572,10 +587,6 @@ p.origem {
     width: 360px;
     height: 262px;
     margin: 0 auto;
-}
-div#page-links ul li {
-    float: right;
-    margin: 15px;
 }
 
 #page-links ul li a,

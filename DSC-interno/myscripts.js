@@ -12,4 +12,12 @@ window.onload = function(){
             jQuery("#menu").addClass("hidden");
         }
     });
+    jQuery("a").click(function () { // Use all anchor tags with an href that starts with #
+        var href = $(this).attr('href'); // Get the href for the clicked anchor.
+        jQuery(href).addClass( "animated swing" ); // The href is the same as the id.
+        jQuery('html, body').animate({
+            scrollTop: jQuery(href).offset().top
+        }, 500);
+        return false;
+    });
 }
