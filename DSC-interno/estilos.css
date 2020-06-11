@@ -72,6 +72,7 @@ div#top-bar {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    box-shadow: 3px 3px 10px 0px rgba(52,37,244,0.50);
 }
 #nossos-clientes img{
     max-width: 200px;
@@ -850,6 +851,12 @@ a.circle-black {
     background-color: #222221;
     border-radius: 100%;
     color: white;
+    transition: background-color 0.5s;
+}
+
+a.circle-black:hover{
+    background-color: #3425f4;
+    transition: background-color 0.5s;
 }
 
 #footer i.fa {
@@ -973,9 +980,19 @@ div#menu {
 
 @media(max-width: 1980px){
     div#fundo-oval-invertido {
-        height: 513px;
+        height: 540px;
+    }
+    div#fundo-oval {
         background-size: contain;
-        background-repeat: no-repeat;
+    }
+}
+
+@media(max-width: 1920px){
+    div#fundo-oval-invertido {
+        height: 523px;
+    }
+    div#fundo-oval {
+        background-size: contain;
     }
 }
 
