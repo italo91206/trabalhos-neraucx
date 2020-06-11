@@ -826,24 +826,30 @@ img#form-circle {
 }
 
 a.circle-blue {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background-color: #3425f4;
     border-radius: 100%;
     color: white;
 }
 
 a.circle-black {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background-color: #222221;
     border-radius: 100%;
     color: white;
 }
 
 #footer i.fa {
-    padding-top: 7px;
-    padding-left: 8px;
+    padding-top: 8px;
+    padding-left: 9px;
+    color: #fff;
+    font-size: 25px;
+}
+
+#footer i.fa.fa-facebook-f {
+    padding-left: 12px;
 }
 
 #footer a {
@@ -911,7 +917,6 @@ button.no-background {
 
 i.fa {
     padding-top: 19px;
-    margin-left: 160px;
     font-size: 30px;
     color: #674cdf;
 }
