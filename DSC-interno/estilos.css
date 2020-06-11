@@ -115,14 +115,7 @@ p.benefit-text {
     width: 50%;
     margin: 0 auto;
 }
-div#benefit-draw-1 {
-    background-image: linear-gradient(242deg, #3425F4 6%, #7052DB 100%);
-    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
-    border-radius: 10px;
-    height: 140px;
-    width: 140px;
-    margin: 0 auto;
-}
+
 h4.titulo {
     font-family: Raleway;
     font-weight: bold;
@@ -404,13 +397,20 @@ div#login-signup ul li a:focus{
     margin: 40px 30px;
 }
 
-div#benefit-draw-2 {
+div#benefit-draw {
     background-color: #fff;
     box-shadow: 0px 7px 20px 0 rgba(21,9,97,0.40);
     border-radius: 10px;
     height: 140px;
     width: 140px;
     margin: 0 auto;
+}
+
+div#benefit-draw:hover {
+    background-color: #3425F4;
+    background-image: linear-gradient(242deg, #fff0 6%, #7052DB 100%);
+    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
+    transition: background-color .2s ease-in-out;
 }
 
 div#conheca-vantagens,
@@ -478,21 +478,6 @@ img#iphones {
     margin-right: 0px;
 }
 
-*{
-    font-family: 'Raleway', sans-serif;
-}
-body {
-    margin: 0px;
-}
-#top-bar{
-    width: 100%;
-}
-.relative{
-    position: relative;
-}
-.text-center{
-    text-align: center;
-}
 .button-cadastro {
     height: 50px;
     width: 110px;
@@ -522,15 +507,6 @@ p.benefit-text {
     font-weight: 100;
     margin-bottom: 0px;
     margin-top: 0px;
-}
-
-div#benefit-draw-1 {
-    background-image: linear-gradient(242deg, #3425F4 6%, #7052DB 100%);
-    box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
-    border-radius: 10px;
-    height: 140px;
-    width: 140px;
-    margin: 0 auto;
 }
 
 p.nome {
