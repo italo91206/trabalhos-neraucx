@@ -173,17 +173,20 @@ p.origem {
 .circle-white {
     height: 67px;
     width: 67px;
-    background: #FFFFFF;
+    background-color: #fff;
     box-shadow: 0 20px 40px 0 rgba(21,9,97,0.15);
     border-radius: 67px;
+    
 }
 
-.circle-purple {
+.circle-white:hover {
     height: 67px;
     width: 67px;
-    background-image: linear-gradient(241deg, #3425F4 6%, #7052DB 100%);
+    background-image: linear-gradient(241deg, #ffffff00 6%, #7052DB 100%);
     box-shadow: 0 20px 40px 0 rgba(21,9,97,0.40);
     border-radius: 67px;
+    background-color: #3425F4;
+    transition: background-color .2s linear;
 }
 
 #como-funciona .divisao2 h3 {
