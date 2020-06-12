@@ -19,7 +19,7 @@ li.vc_tta-tab.vc_active {
     background-color: #c6eaea;
 }
 .hotel-alone .menu-style-2 .menu .current-menu-ancestor>a{
- background: transparent !important;   
+ background: transparent !important;    
 }
 .footer-custom a{
  color: #333;   
@@ -1050,4 +1050,10 @@ a.float i.fa.fa-whatsapp {
     a.float{
         right: 20px;
     }
+}
+
+.st-checkout-page input::-webkit-outer-spin-button,
+.st-checkout-page input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
