@@ -28,6 +28,7 @@ form#calculator{
 form#calculator h2 {
     font-family: Camber-Sb;
     font-weight: 500;
+    margin-top: 10px;
 }
 form#calculator input[type="submit"] {
     width: 100%;
@@ -40,5 +41,29 @@ form#calculator input[type="submit"] {
     padding: 5px 0;
 }
 form#calculator .cmd-4 {
-    padding: 30px 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+form#calculator select {
+    color: #555;
+    background-color: #bfe2ff;
+    border-color: #0086c8;
+}
+form#calculator .cmd-4:nth-child(1), form#calculator .cmd-4:nth-child(2) {
+    border-right: 1px solid black;
+}
+.form-label {
+    background-color: #032e5a;
+    color: white;
+    font-size: 35px;
+    width: 350px;
+    padding: 5px 45px;
+}
+
+.form-label i.fa.fa-calculator {
+    color: #bfe2ff;
+    padding-right: 10px;
 }
