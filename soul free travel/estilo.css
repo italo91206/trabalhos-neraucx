@@ -1057,3 +1057,6 @@ a.float i.fa.fa-whatsapp {
   -webkit-appearance: none;
   margin: 0;
 }
+.descricao p {
+    font-size: 12px;
+}
