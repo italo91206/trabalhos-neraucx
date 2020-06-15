@@ -26,7 +26,7 @@ window.onload = function(){
         final = final.concat(".com.br/");
         final = final.concat(partes[1]);
         param = new URL(final);
-        param.searchParams.set("currency", "BRL");
+        param.searchParams.set("currency", "EUR");
         this.console.log("Tinha!");
         signup.html("sign up +");
         login.html("login +");
