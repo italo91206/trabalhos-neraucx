@@ -57,9 +57,10 @@ window.onload = function(){
     elem.append(`<li class="mobile" style="color: grey;" id="social-menu-list-item">`+
         `<a href="https://www.instagram.com/soulfreetravels/" class="margin-left-fix"><i class="fa fa-instagram"></i></a>`+
         `<a href="https://www.facebook.com/soulfreetravelss/"><i class="fa fa-facebook-f"></i></a>`+
-        `<a href="https://wa.me/5511986974949"><i class="fa fa-whatsapp"></i></a>`+
-        `<i class="fa fa-youtube"></i>`+
-        `<i class="fa fa-skype"></i>`+
+        `<a href="https://wa.me/393477588178"><i class="fa fa-whatsapp"></i></a>`+
+        `<a href="mailto:info@soulfreetravel.com.br"><i class="fa fa-envelope"></i></a>` +
+        `<a href=""><i class="fa fa-youtube"></i></a>`+
+        `<a href=""><i class="fa fa-skype"></i></a>`+
     `</li>`);
 
     var loginLink = jQuery("a.login");

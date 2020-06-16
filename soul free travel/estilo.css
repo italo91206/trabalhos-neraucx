@@ -158,11 +158,9 @@ i.fa.fa-envelope {
     height: 41.226px;
     padding: 5px 5px;
 }
-i.fa.fa-instagram, 
-i.fa.fa-facebook-f, 
-i.fa.fa-whatsapp, 
-i.fa.fa-youtube, 
-.social-icons i.fa.fa-google-plus, i.fa.fa-skype {
+.social-icons i.fa.fa-youtube-play, .social-icons i.fa.fa-envelope, .social-icons i.fa.fa-instagram, 
+.social-icons i.fa.fa-facebook-f, .social-icons i.fa.fa-whatsapp, .social-icons i.fa.fa-youtube, 
+.social-icons i.fa.fa-google-plus, .social-icons i.fa.fa-skype {
     font-size: 28px;
     padding: 11px 17px;
     height: 50px;
@@ -172,12 +170,21 @@ i.fa.fa-youtube,
     border-radius: 44px;
     color: #848484;
 }
-i.fa.fa-whatsapp,
-i.fa.fa-youtube,
-i.fa.fa-skype {
+
+.social-icons i.fa.fa-envelope{
+    padding-left: 11px;
+}
+
+.social-icons i.fa.fa-youtube-play {
+    padding-left: 12px;
+}
+
+.social-icons i.fa.fa-whatsapp,
+.social-icons i.fa.fa-youtube,
+.social-icons i.fa.fa-skype {
     padding-left: 14px;
 }
-i.fa.fa-instagram {
+.social-icons i.fa.fa-instagram {
     padding-left: 13px;
 }
 .social-icons i.fa.fa-google-plus {
@@ -523,21 +530,27 @@ div#sticky-nav {
     }
 }
 @media(max-width: 1024px){
-    i.fa.fa-instagram, i.fa.fa-facebook-f, 
-    i.fa.fa-whatsapp, i.fa.fa-youtube, 
-    .social-icons i.fa.fa-google-plus, i.fa.fa-skype {
+
+    .social-icons i.fa.fa-youtube-play, .social-icons i.fa.fa-envelope, .social-icons i.fa.fa-instagram, 
+    .social-icons i.fa.fa-facebook-f, .social-icons i.fa.fa-whatsapp, .social-icons i.fa.fa-youtube, 
+    .social-icons i.fa.fa-google-plus, .social-icons i.fa.fa-skype {
         font-size: 20px !important;
         padding: 10px 13px !important;
         height: 40px !important;
         width: 40px !important;
     }
-    i.fa.fa-instagram {
+    .social-icons i.fa.fa-youtube-play,
+    .social-icons i.fa.fa-envelope {
+        padding-left: 10px !important;
+    }
+    .social-icons i.fa.fa-skype,
+    .social-icons i.fa.fa-instagram {
         padding-left: 11px !important;
     }
     .social-icons i.fa.fa-google-plus {
         padding-left: 9px !important;
     }
-    i.fa.fa-whatsapp, i.fa.fa-youtube, i.fa.fa-skype {
+    .social-icons i.fa.fa-whatsapp, .social-icons i.fa.fa-youtube, .social-icons i.fa.fa-skype {
         padding-left: 11px !important;
     }
     .search-result-page .tour-search-form-home .form-button button {
@@ -600,6 +613,9 @@ div#sticky-nav {
     }
 }
 @media(max-width: 425px){
+    li#social-menu-list-item a {
+        margin: 0 10px;
+    }
     #main-footer{
         padding-top: 0px;
     }
@@ -913,6 +929,7 @@ li.dropdown.dropdown-currency.hidden-xs.hidden-sm a {
 li#social-menu-list-item .fa {
     color: grey !important;
     margin: 0px 0px;
+    font-size: 25px;
 }
 #social-menu-list-item .margin-left-fix {
     margin-left: 45%;
@@ -926,7 +943,7 @@ li#social-menu-list-item .fa {
         padding-right: 20px;
     }
     #social-menu-list-item .margin-left-fix {
-        margin-left: 45%;
+        margin-left: 65%;
     }
 }
 @media (max-width: 425px){
@@ -944,22 +961,22 @@ li#social-menu-list-item .fa {
         padding-right: 65px;
     }
     #social-menu-list-item .margin-left-fix {
-        margin-left: 45%;
+        margin-left: 28%;
     }
 }
 @media (max-width: 411px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 40%;
+        margin-left: 25%;
     }
 }
 @media (max-width: 375px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 30%;
+        margin-left: 15%;
     }
 }
 @media (max-width: 320px){
     #social-menu-list-item .margin-left-fix {
-        margin-left: 20%;
+        margin-left: 0%;
     }
 }
 .modal.modal-aberto{
