@@ -7,6 +7,14 @@
     src: url("./fonts/axiforma-regular.woff") format('woff');
 }
 
+*{
+    font-family: 'axiforma-rg';
+}
+
+html{
+    background-color: #000000bf;
+}
+
 body{
     margin:0px;
 }
@@ -48,4 +56,129 @@ section#se-top-header {
     padding-left: 13px;
     font-family: 'axiforma-rg';
     font-size: 12px;
+}
+
+#se-header img#se-logo {
+    width: 205px;
+    height: 76px;
+    margin-top: 25px;
+}
+
+form#se-busca-home {
+    width: 473px;
+    height: 46px;
+    border: 1px solid #E0E0E0;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+form#se-busca-home input[type="text"] {
+    border: none;
+    width: 360px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #8CA2A6;
+}
+
+form#se-busca-home button {
+    background-color: #2BBAFE;
+    border: none;
+    width: 90px;
+    height: 46px;
+    border-radius: 5px;
+    color: white;
+}
+
+form#se-busca-home input[type="text"]:focus {
+    outline: none;
+}
+
+img#se-guest-profile-pic {
+    width: 40px;
+    height: 40px;
+}
+
+#se-header #user-nav h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #2B85C1;
+}
+
+#user-nav a {
+    color: #2BBAFE;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+div#se-favoritos {
+    height: 40px;
+    width: 40px;
+    background-color: #FFE6FA;
+    color: #D0A6C7;
+    border-radius: 100%;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+div#se-favoritos i.fa {
+    padding-left: 10px;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+div#se-cart-icon {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+
+#se-cart-icon .overlay {
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    background-color: #2BBAFE;
+    border-radius: 100%;
+    color: white;
+    top: 0;
+    right: -15px;
+}
+
+#se-cart-icon .circle {
+    height: 40px;
+    width: 40px;
+    background-color: #ECF7FE;
+    color: #8DC0E1;
+    border-radius: 100%;
+}
+
+#se-cart-icon .circle i.fa {
+    font-size: 20px;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+#se-cart-icon .overlay span {
+    padding-left: 9px;
+    font-size: 13px;
+}
+
+section#se-header {
+    height: 130px;
+    background-color: #fff;
+}
+
+div#user-nav {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#user-nav .text {
+    margin-left: 10px;
+    letter-spacing: 2px;
 }
