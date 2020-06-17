@@ -204,3 +204,16 @@ nav#se-nav ul.menu {
     padding-inline-start: 0;
     display: flex;
 }
+
+#se-after-main p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px;
+    letter-spacing: 0.3px;
+}
+
+section#se-after-main {
+    background-color: #001C3E;
+    color: #fff;
+}
