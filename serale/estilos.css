@@ -1,4 +1,51 @@
+@font-face {
+    font-family: "axiforma-bd";
+    src: url("./fonts/axiforma-bold.woff") format('woff');
+}
+@font-face {
+    font-family: "axiforma-rg";
+    src: url("./fonts/axiforma-regular.woff") format('woff');
+}
+
+body{
+    margin:0px;
+}
 .se-container{
     max-width: 1200px;
     margin: 0 auto;
+}
+section#se-top-header {
+    background-color: #ECF7FE;
+    color: #2B85C1;
+    height: 50px;
+}
+
+.se-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.se-item {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.se-fa-circle {
+    height: 38px;
+    width: 38px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.se-item .se-fa-circle i.fa {
+    padding-left: 12px;
+    padding-top: 10px;
+}
+
+.se-text {
+    padding-top: 13px;
+    padding-left: 13px;
+    font-family: 'axiforma-rg';
+    font-size: 12px;
 }
