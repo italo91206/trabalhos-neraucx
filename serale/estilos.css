@@ -18,10 +18,16 @@ html{
 body{
     margin:0px;
 }
+
 .se-container{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.se-relative{
+    position: relative;
+}
+
 section#se-top-header {
     background-color: #ECF7FE;
     color: #2B85C1;
@@ -216,4 +222,80 @@ nav#se-nav ul.menu {
 section#se-after-main {
     background-color: #001C3E;
     color: #fff;
+}
+
+section#se-dummy {
+    height: 500px;
+}
+
+section#newsletter {
+    background-color: #2B85C1;
+    height: 130px;
+}
+
+#newsletter span.discount {
+    font-size: 60px;
+    color: #A7FFEF;
+    text-transform: uppercase;
+}
+
+#newsletter span.discount-text {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    font-size: 16px;
+}
+
+#newsletter input[type="text"] {
+    border: none;
+    border-radius: 5px;
+    width: 275px;
+    height: 52px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #8CA2A6;
+    margin-right: 22px;
+}
+
+#newsletter input[type="text"]:focus{
+    outline: none;
+}
+
+#newsletter select {
+    width: 78px;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 20px;
+    color: #8CA2A6;
+}
+
+#newsletter select:focus{
+    outline: none;
+}
+
+#newsletter button {
+    width: 180px;
+    height: 46px;
+    background-color: #2BBAFE;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border-radius: 5px;
+}
+
+#newsletter button:focus{
+    outline: none;
+}
+
+#newsletter form{
+    margin-top: 40px;
+}
+
+#newsletter .se-text.se-relative {
+    margin-right: 23px;
+    padding-top: 40px;
+    height: 88px;
 }
