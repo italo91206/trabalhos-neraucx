@@ -195,12 +195,6 @@ nav#se-nav {
     border-top: solid 1px #EBEBEB;
 }
 
-nav#se-nav ul.menu li {
-    float: left;
-    margin: 0 auto;
-    font-size: 14px;
-}
-
 nav#se-nav ul.menu {
     list-style-type: none;
     margin-block-start: 20px;
@@ -209,6 +203,14 @@ nav#se-nav ul.menu {
     margin-inline-end: 0px;
     padding-inline-start: 0;
     display: flex;
+    position: relative;
+}
+
+nav#se-nav ul.menu li {
+    float: left;
+    margin: 0 auto;
+    font-size: 14px;
+    transition: all .1s ease;
 }
 
 #se-after-main p {
@@ -328,7 +330,6 @@ ul.se-footer-list {
     font-size: 14px;
 }
 
-.se-footer-list a:hover,
 .se-footer-list a:visited,
 .se-footer-list a:focus,
 .se-footer-list a:active,
@@ -336,6 +337,16 @@ ul.se-footer-list {
     text-decoration: none;
     color: #5A6672;
     font-size: 14px;
+}
+
+.se-footer-list a:hover i.fa {
+    text-decoration: none;
+    color: #5A6672;
+}
+
+.se-footer-list a:hover {
+    font-weight: bold;
+    color: #8294a7;
 }
 
 section#footer-links section {
@@ -504,4 +515,49 @@ img#nerau-logo {
     width: 88px;
     height: 28px;
     margin-top: 27px;
+}
+
+nav#se-nav ul.menu li:hover {
+    border-bottom: 5px solid #2BBAFE;
+    color: #2BBAFE;
+}
+
+div.submenu {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    display: none;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#se-nav ul.menu li:hover div.submenu {
+    top: 40px;
+    left: 0;
+    width: 1200px;
+    display: block;
+    opacity: 1;
+    transition: opacity 1s ease;
+    border-top: 1px solid #97979770;
+}
+
+#se-nav ul.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#newsletter form button:hover,
+form#se-busca-home button:hover {
+    cursor: pointer;
+    background-color: #14a1e4;
+    transition: background-color .1s linear;
+}
+
+.se-footer-list a:hover .se-circle {
+    transform: scale(1.1);
+    transition: all .1s linear;
+    -webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.26);
 }
