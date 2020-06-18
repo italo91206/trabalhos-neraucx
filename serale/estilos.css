@@ -371,3 +371,21 @@ section#atendimento {
     padding-top: 10px;
     font-size: 20px;
 }
+
+#fale-conosco .se-footer-list i.fa {
+    color: #fff;
+    margin-right: 10px;
+}
+
+#fale-conosco .se-footer-list i.fa {
+    color: #fff;
+    margin-right: 10px;
+}
+
+ul.se-footer-list li:first-child {
+    margin-top: 10px;
+}
+
+#redes-sociais ul.se-footer-list li:first-child {
+    margin-top: 30px;
+}
