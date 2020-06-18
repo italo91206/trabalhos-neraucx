@@ -299,3 +299,75 @@ section#newsletter {
     padding-top: 40px;
     height: 88px;
 }
+
+img#img-newsletter {
+    height: 130px;
+    position: absolute;
+    left: 160px;
+}
+
+section#footer-links {
+    background-color: #212E3C;
+    min-height: 300px;
+    border-bottom: 1px solid #979797;
+}
+
+section#footer-links h3 {
+    margin: 0;
+    color: white;
+    font-family: axiforma-bd;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+ul.se-footer-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+    color: #5A6672;
+    font-size: 14px;
+}
+
+.se-footer-list a:hover,
+.se-footer-list a:visited,
+.se-footer-list a:focus,
+.se-footer-list a:active,
+.se-footer-list a {
+    text-decoration: none;
+    color: #5A6672;
+    font-size: 14px;
+}
+
+section#footer-links section {
+    margin: 50px auto 0;
+}
+
+#fale-conosco ul {
+    width: 80%;
+}
+
+section#redes-sociais ul.se-footer-list li {
+    float: left;
+    margin-right: 50px;
+}
+
+ul.se-footer-list li {
+    margin-top: 30px;
+}
+
+section#atendimento {
+    max-width: 225px;
+}
+
+.se-circle {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.se-footer-list .se-circle i.fa {
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+}
