@@ -1,14 +1,5 @@
-@font-face {
-    font-family: "axiforma-bd";
-    src: url("./fonts/axiforma-bold.woff") format('woff');
-}
-@font-face {
-    font-family: "axiforma-rg";
-    src: url("./fonts/axiforma-regular.woff") format('woff');
-}
-
 *{
-    font-family: 'axiforma-rg';
+    font-family: 'Axiforma-Regular';
 }
 
 html{
@@ -287,6 +278,8 @@ button.se-button-blue {
     text-transform: uppercase;
     letter-spacing: 1.25px;
     border-radius: 5px;
+    font-size: 16px;
+    line-height: 50px;
 }
 
 button.se-button-blue:focus{
@@ -650,8 +643,7 @@ aside#se-cart {
     top: 0;
     right: 0;
     height: 100%;
-    padding-top: 20px;
-    background-color: #fff;
+    background-color: #F1F9FF;
     width: 491px;
     overflow-x: hidden;
 }
@@ -688,7 +680,7 @@ section.se-sacola {
 }
 
 .se-cart-item {
-    width: 448px;
+    width: 100%;
     height: 146px;
     background-color: #FBFBFB;
     border: solid 2px #EDEDED;
@@ -761,4 +753,112 @@ p.se-preco {
     font-size: 20px;
     color: #2BBAFE;
     margin-top: 6px;
+}
+
+.se-frete-fundo {
+    background-color: #001C3E;
+    width: 100%;
+    height: 76px;
+    position: relative;
+}
+
+.se-frete-preenchimento {
+    height: 76px;
+    background-color: #2BBAFE;
+    width: 50%;
+    transition: width 1s linear;
+}
+
+.se-frete-text {
+    position: absolute;
+    top: 9px;
+    left: 22px;
+}
+
+.se-frete-text i.fa.fa-truck {
+    font-size: 50px;
+    color: white;
+    margin-right: 35px;
+    padding-top: 4px;
+}
+
+p.se-quanto-falta {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+p.se-recopmensa {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+p.se-quanto-falta span {
+    color: #A7FFEF;
+    margin-left: 20px;
+}
+
+p.se-recopmensa span {
+    color: #FEC417;
+    text-transform: uppercase;
+}
+
+section.total {
+    padding: 15px;
+}
+
+p.se-subtotal {
+    font-size: 20px;
+    color: #5A6672;
+}
+
+p.se-subtotal span {
+    right: 15px;
+    position: absolute;
+    color: #2BBAFE;
+}
+
+label.se-cupom-input {
+    font-size: 16px;
+    color: #5A6672;
+    padding-top: 6px;
+}
+
+input#se-cupom-desconto {
+    width: 267px;
+    height: 32px;
+    border: solid 1px #D1DBE0;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+section.total button.se-button-blue {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.se-share-purchase p {
+    margin: 0;
+    font-size: 10px;
+    color: #2B85C1;
+    margin-left: 9px;
+    margin-top: 1px;
+}
+
+.se-share-purchase a.se-flex {
+    margin-top: 37px;
+    margin-left: 155px;
+}
+
+.se-share-purchase a,
+.se-share-purchase a:active,
+.se-share-purchase a:hover,
+.se-share-purchase a:focus,
+.se-share-purchase a:visited {
+    text-decoration: none;
+}
+
+.se-share-purchase i.fa.fa-share-alt {
+    color: #2B85C1;
 }

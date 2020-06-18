@@ -6,7 +6,7 @@
     <title>Seralle - PWA</title>
     <link rel="stylesheet" href="./estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./fonts/axiforma-bold.woff">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
     <script src="./myscripts.js"></script>
 </head>
 <body>
@@ -223,12 +223,39 @@
            
         </section>
 
-        <section class="frete">
-            <p>testestetstetests</p>
+        <section class="se-frete">
+            <div class="se-frete-fundo">
+                <div class="se-frete-preenchimento"></div>
+                <div class="se-frete-text se-flex">
+                    <i class="fa fa-truck"></i>
+                    <div>
+                        <p class="se-quanto-falta">Faltam <span>R$ XXX,XX</span></p>
+                        <p class="se-recopmensa">para você ganhar <span>frete grátis</span></p>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
         <section class="total">
-            <p>testestetstetests</p>
+            <div class="se-flex">
+                <p class="se-subtotal">Subtotal: <span>R$ 300,00</span></p>
+            </div>
+
+            <div class="se-flex">
+                <label for="se-cupom-desconto" class="se-cupom-input">Cupom de desconto:</label>
+                <input type="text" name="se-cupom-desconto" id="se-cupom-desconto" placeholder="Digite seu cupom" />
+            </div>
+
+            <button type="submit" class="se-button-blue">Finalizar compra</button>
+
+            <div class="se-share-purchase">
+                <a href="" class="se-flex">
+                    <i class="fa fa-share-alt"></i>
+                    <p>Compartilhe sua sacola</p>
+                </a>
+            </div>
+
         </section>
     </aside>
 
