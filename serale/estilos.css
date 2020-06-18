@@ -389,3 +389,78 @@ ul.se-footer-list li:first-child {
 #redes-sociais ul.se-footer-list li:first-child {
     margin-top: 30px;
 }
+
+section#footer-after-links {
+    background-color: #212e3c;
+    min-height: 230px;
+}
+
+img#compra-segura {
+    height: 27px;
+    width: 89px;
+    opacity: 0.6;
+    margin-top: 30px;
+}
+
+img#e-bit {
+    width: 90px;
+    height: 95px;
+    margin-left: 30px;
+}
+
+img#empresa-associada {
+    width: 75px;
+    height: 95px;
+    margin-left: 30px;
+}
+
+section#a-seralle {
+    width: 384px;
+}
+
+section#footer-after-links h3 {
+    font-size: 16px;
+    font-family: axiforma-bd;
+    color: #fff;
+}
+
+#a-seralle p {
+    color: #5A6672;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: 'axiforma-bd';
+}
+
+section#formas-pagamento {
+    max-width: 345px;
+}
+
+#formas-pagamento img {
+    margin: 0 5px 5px 0;
+    width: 57px;
+    height: 35px;
+}
+
+#footer-after-links section {
+    margin: 0 auto;
+}
+
+section#seguranca {
+    width: 315px;
+}
+
+section#footer-links section:first-child {
+    margin-left: 0px;
+}
+
+section#footer-links section:last-child {
+    margin-right: 0px;
+}
+
+section#footer-after-links section:first-child {
+    margin-left: 0px;
+}
+
+section#footer-after-links section:last-child {
+    margin-right: 0px;
+}
