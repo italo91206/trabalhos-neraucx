@@ -136,6 +136,7 @@ div#se-favoritos i.fa {
     padding-left: 10px;
     font-size: 20px;
     padding-top: 10px;
+    color: #D0A6C7;
 }
 
 div#se-cart-icon {
@@ -523,22 +524,24 @@ nav#se-nav ul.menu li:hover {
 }
 
 div.submenu {
+    top: 0;
+    left: 0;
     position: absolute;
-    height: 300px;
-    width: 500px;
-    background-color: #fff;
+    padding-top: 40px;
     display: none;
     opacity: 0;
     transition: all 1s ease;
 }
 
 #se-nav ul.menu li:hover div.submenu {
-    top: 40px;
-    left: 0;
-    width: 1200px;
     display: block;
     opacity: 1;
-    transition: opacity 1s ease;
+}
+
+.submenu-content {
+    width: 1200px;
+    height: 300px;
+    background-color: white;
     border-top: 1px solid #97979770;
 }
 
