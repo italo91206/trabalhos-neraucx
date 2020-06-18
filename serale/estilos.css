@@ -278,7 +278,7 @@ section#newsletter {
     outline: none;
 }
 
-#newsletter button {
+button.se-button-blue {
     width: 180px;
     height: 46px;
     background-color: #2BBAFE;
@@ -289,7 +289,7 @@ section#newsletter {
     border-radius: 5px;
 }
 
-#newsletter button:focus{
+button.se-button-blue:focus{
     outline: none;
 }
 
@@ -540,9 +540,9 @@ div.submenu {
 
 .submenu-content {
     width: 1200px;
-    height: 300px;
     background-color: white;
     border-top: 1px solid #97979770;
+    padding: 15px 45px 35px;
 }
 
 #se-nav ul.menu li a {
@@ -550,7 +550,7 @@ div.submenu {
     color: inherit;
 }
 
-#newsletter form button:hover,
+.se-button-blue:hover,
 form#se-busca-home button:hover {
     cursor: pointer;
     background-color: #14a1e4;
@@ -563,4 +563,82 @@ form#se-busca-home button:hover {
     -webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.26);
+}
+
+.submenu-content .se-coluna-direita {
+    flex: 0 0 32%;
+    max-width: 100%;
+}
+
+.submenu-content .se-coluna-esquerda {
+    flex: 0 0 68%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.se-banner img {
+    width: 384px;
+    height: 396px;
+}
+
+.se-banner .se-text {
+    position: absolute;
+    bottom: 15px;
+}
+
+.se-banner .se-text p {
+    font-family: axiforma-rg;
+    font-size: 30px;
+    width: 326px;
+    line-height: 36.3px;
+    color: #fff;
+}
+
+.submenu-content h3 {
+    margin: 0 0 0 25px;
+    font-family: axiforma-rg;
+    font-weight: 100;
+    color: #001C3E;
+}
+
+ul.se-category-list li {
+    float: none;
+}
+
+nav#se-nav ul.se-category-list li {
+    float: initial;
+    color: #5A6672;
+    list-style: none;
+    margin-inline-start: -33px;
+    margin-bottom: 18px;
+}
+
+nav#se-nav ul.se-category-list li:hover {
+    border: none;
+    color: #3c4956;
+    font-weight: 800;
+}
+
+nav#se-nav ul.se-more-category-links li {
+    float: initial;
+    margin-inline-start: -33px;
+    margin-bottom: 18px;
+    list-style: none;
+}
+
+nav#se-nav ul.se-more-category-links li:hover {
+    border: none;
+    color: #0b96d8;
+    font-weight: 800;
+}
+
+div.se-coluna-esquerda section {
+    width: 20%;
+}
+
+div#se-cart-icon:hover,
+div#se-favoritos:hover {
+    transform: scale(1.1);
+    transition: all .1s linear;
 }
