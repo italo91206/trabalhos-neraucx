@@ -472,3 +472,21 @@ section#footer-after-links section:last-child {
 #se-top-header .se-item:last-child {
     margin-right: 0px;
 }
+
+#footer-copyright h3 {
+    margin: 0;
+    font-size: 10px;
+    font-family: axiforma-rg;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 1.3px;
+    line-height: 15.5px;
+    padding-top: 30px;
+}
+
+section#footer-copyright {
+    height: 110px;
+    background-color: #1B2530;
+    border-top: 1px solid #97979770;
+}
