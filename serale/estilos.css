@@ -464,3 +464,11 @@ section#footer-after-links section:first-child {
 section#footer-after-links section:last-child {
     margin-right: 0px;
 }
+
+#se-top-header .se-item:first-child {
+    margin-left: 0px;
+}
+
+#se-top-header .se-item:last-child {
+    margin-right: 0px;
+}
