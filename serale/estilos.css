@@ -490,3 +490,18 @@ section#footer-copyright {
     background-color: #1B2530;
     border-top: 1px solid #97979770;
 }
+
+section#nerau-bar {
+    background-color: #F0F0F0;
+    height: 80px;
+}
+
+#nerau-bar .se-container {
+    text-align: center;
+}
+
+img#nerau-logo {
+    width: 88px;
+    height: 28px;
+    margin-top: 27px;
+}
