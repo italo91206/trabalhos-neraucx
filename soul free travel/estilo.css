@@ -1113,3 +1113,29 @@ h4.service-title.plr15 {
 .you-might-like .owl-nav, .you-might-like .owl-dots {
     display: none;
 }
+div#icones-pra-add .fa-hidden {
+    margin: auto auto;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    color: white;
+    font-size: 14px;
+    border-radius: 100%;
+    padding: 6px;
+    padding-top: 8px;
+}
+p.price {
+    text-align: left;
+    max-width: 93px;
+}
+.st-search-form-tour .tour-search-form-home .search-form .form {
+    background-color: #fff;
+}
+
+button.btn.btn-primary.btn-search {
+    margin-right: 50px;
+}
+
+.form-group.form-date-field.form-date-search-new.clearfix.has-icon {
+    margin: auto 0px !important;
+}
