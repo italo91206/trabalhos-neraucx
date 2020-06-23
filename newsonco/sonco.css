@@ -1144,3 +1144,64 @@ body .newsletter-container .block.newsletter .content .special-financing a
     background: #ff1e2f !important;
     font-family: Camber-Rg;
 }
+/* 
+==========================
+  here starts the loose CSS within blocks
+========================== 
+*/
+
+.block-customer-login .form-login .field.password {
+  margin: 0 0 20px !important;
+}
+.block-customer-login .field.email.required {
+  margin: 0 0 20px !important;
+}
+button#send2 {
+  width: 147px;
+margin-top: 0px;
+}
+.form-login .g-recaptcha {
+  margin-top: 20px;
+}
+.block-new-customer .block-content .actions-toolbar {
+  margin-top: 90px;
+}
+.block-customer-login .fieldset:last-child{
+margin-bottom: 0px !important;
+}
+@media(min-width: 769px){
+  .category-info .page-title-wrapper {
+      display: none;
+  }
+}
+
+/* 
+==========================
+  loose CSS from public-sector-menu
+========================== 
+*/
+
+@media (max-width: 1024px) {
+  body .page_full.intermediary_full .page_container .banner_internal_page {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body .page_full.intermediary_full .page_container .banner_internal_page .widget {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  body .page_full.intermediary_full .page_container .banner_internal_page .banner_slide {
+    margin: 0 !important;
+    padding-bottom: 20px;
+  }
+
+  body .page_full.intermediary_full .page_container .internal_text p {
+    text-align: justify;
+  }
+}
+.box_products_full .box_product .product_info .product_title span {
+  font-family: 'Raleway';
+}
