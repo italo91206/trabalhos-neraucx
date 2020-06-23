@@ -29,7 +29,7 @@ li.vc_tta-tab.vc_active {
     color: #3e3e3e !important;
     border: none !important;
     padding: 0px !important;
-    font-size: 30px !important;
+    font-size: 20px !important;
     text-decoration: none !important;
 }
 #header .header .header-left #st-main-menu {
@@ -161,10 +161,10 @@ i.fa.fa-envelope {
 .social-icons i.fa.fa-youtube-play, .social-icons i.fa.fa-envelope, .social-icons i.fa.fa-instagram, 
 .social-icons i.fa.fa-facebook-f, .social-icons i.fa.fa-whatsapp, .social-icons i.fa.fa-youtube, 
 .social-icons i.fa.fa-google-plus, .social-icons i.fa.fa-skype {
-    font-size: 28px;
-    padding: 11px 17px;
-    height: 50px;
-    width: 50px;
+    font-size: 14px;
+    padding-top: 8px;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
     background: white;
     border-radius: 44px;
@@ -172,20 +172,23 @@ i.fa.fa-envelope {
 }
 
 .social-icons i.fa.fa-envelope{
-    padding-left: 11px;
+    padding-left: 9px;
 }
 
 .social-icons i.fa.fa-youtube-play {
-    padding-left: 12px;
+    padding-left: 9px;
 }
 
 .social-icons i.fa.fa-whatsapp,
 .social-icons i.fa.fa-youtube,
 .social-icons i.fa.fa-skype {
-    padding-left: 14px;
+    padding-left: 9px;
 }
 .social-icons i.fa.fa-instagram {
-    padding-left: 13px;
+    padding-left: 9px;
+}
+.social-icons i.fa.fa-facebook-f {
+    padding-left: 11px;
 }
 .social-icons i.fa.fa-google-plus {
     padding-left: 10px;
@@ -203,8 +206,8 @@ i.fa.fa-envelope {
     font-size: 17px;
     color: white;
 }
-i.fa.fa-envelope, i.fa.fa-link {
-    font-size: 30px;
+.footer-row i.fa.fa-envelope, .footer-row i.fa.fa-link {
+    font-size: 14px;
     margin-right: 10px;
 }
 .mailchimp {
@@ -935,6 +938,9 @@ li#social-menu-list-item .fa {
     margin-left: 45%;
 }
 @media (max-width: 768px){
+    i.input-icon.field-icon.fa {
+        padding-left: 20px;
+    }
     #header .header{
         margin-bottom: 35px;
     }
@@ -943,7 +949,10 @@ li#social-menu-list-item .fa {
         padding-right: 20px;
     }
     #social-menu-list-item .margin-left-fix {
-        margin-left: 65%;
+        margin-left: 79%;
+    }
+    .footer-icons {
+        display: none !important;
     }
 }
 @media (max-width: 425px){
