@@ -1099,6 +1099,17 @@ a.float i.fa.fa-whatsapp {
     max-width: 100% !important;
     display: none !important;
 }
+#st-content-wrapper.st-single-tour .grid-item .service-border{
+display: table;
+}
 h4.service-title.plr15 {
     height: 44px;
+}
+#st-content-wrapper.st-single-tour .grid-item .section-footer {
+    height: unset;
+    width: unset;
+    display: table-footer-group;
+}
+.you-might-like .owl-nav, .you-might-like .owl-dots {
+    display: none;
 }
