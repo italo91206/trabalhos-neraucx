@@ -1,0 +1,62 @@
+<!-- block identifier: about-us -->
+<div class="about-pagelinks">
+    <div class="about_box">
+        <a href="{{config path='web/secure/base_url'}}locations">
+            <span class="about_img"> <img src="{{media url='wysiwyg/newsonco/about-top/location.png'}}" alt="Location" /> </span>
+            <span class="box_text"><p>Locations</p></span>
+        </a>
+    </div>
+    <div class="about_box">
+        <a href="{{config path='web/secure/base_url'}}contact">
+            <span class="about_img"> <img src="{{media url='wysiwyg/newsonco/about-top/contact.png'}}" alt="Contact" /> </span>
+            <span class="box_text"><p>Contact</p></span>
+        </a>
+    </div>
+    <div class="about_box">
+        <a href="{{store direct_url="customers"}}">
+            <span class="about_img"> <img src="{{media url='wysiwyg/newsonco/about-top/design.png'}}" alt="Partners" /> </span>
+            <span class="box_text"><p>Customers</p></span>
+        </a>
+    </div>
+    <div class="about_box">
+        <a href="{{config path='web/secure/base_url'}}careers">
+            <span class="about_img"> <img src="{{media url="wysiwyg/newsonco/careers.png"}}" alt="Careers" /> </span>
+            <span class="box_text"><p>Careers</p></span>
+        </a>
+    </div>
+</div>
+<div class="about-description">
+    <p class="about-title">About us</p>
+    <p class="about-content">Since 1976, U.S. industry leader SONCO Worldwide has provided businesses with quality service and steel-strength job site, crowd control and traffic control solutions. We offer construction barriers, fence screen, OSHA signs, traffic barricades, and more, as well as custom-printed products. Shop now or <a href="{{config path='web/secure/base_url'}}about-us"><span style="text-decoration: underline;">learn more about SONCO.</span></a></p>
+</div>
+<script type="text/javascript">
+require([ 'jquery', 'jquery/ui'], function($){ 
+            $( ".header-contact i.fa" ).addClass('fas');
+});
+</script>
+<style>
+body .full_home .banner_home_full .bx-controls {
+    height: auto !important;
+}
+
+body .full_home .banner_home_full .bx-controls .bx-controls-direction {
+    top: 145px;
+}
+
+@media (max-width: 374px) {
+    body .full_home .banner_home_full .bx-controls .bx-controls-direction {
+        top: 3em;
+    }
+}
+@media (min-width: 375px) and (max-width: 467px) {
+    body .full_home .banner_home_full .bx-controls .bx-controls-direction {
+        top: 4em;
+    }
+}
+@media (min-width: 468px) and (max-width: 770px) {
+    body .full_home .banner_home_full .bx-controls .bx-controls-direction {
+        top: 10em;
+    }
+}
+</style>
+<!-- /block identifier: about-us -->
