@@ -1438,4 +1438,35 @@ div#se-setima-linha {
     img#img-newsletter {
         left: 65px;
     }
+
+    #redes-sociais ul.se-footer-list li {
+        margin-right: 10px !important;
+    }
+
+    .se-footer-list .se-circle {
+        height: 35px;
+        width: 35px;
+    }
+
+    .se-footer-list .se-circle i.fa {
+        padding-left: 11px;
+    }
+
+    section#footer-links section {
+        margin-left: 15px !important;
+    }
+
+    #footer-after-links div.se-container section {
+        width: 30%;
+    }
+
+    img#e-bit {
+        width: 70px;
+        height: 80px;
+    }
+
+    img#empresa-associada {
+        width: 60px;
+        height: 80px;
+    }
 }
