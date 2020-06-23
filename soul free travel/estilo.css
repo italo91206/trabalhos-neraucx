@@ -154,8 +154,8 @@ i.fa.fa-envelope {
     display: flex;
 }
 .footer-payment-types .custom-row img {
-    width: 158px;
-    height: 41.226px;
+    width: 40%;
+    height: unset;
     padding: 5px 5px;
 }
 .social-icons i.fa.fa-youtube-play, .social-icons i.fa.fa-envelope, .social-icons i.fa.fa-instagram, 
@@ -803,20 +803,20 @@ p.price {
 
 div#icones-pra-add .fa {
     margin: auto auto;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     background-color: #2e53a4;
     color: white;
-    font-size: 17px;
+    font-size: 14px;
     border-radius: 100%;
-    padding: 11px;
+    padding: 6px;
+    padding-top: 8px;
 }
-i.fa.fa-bicycle {
-    padding-left: 9px !important;
-}
+
 .item-service.grid-item.has-matchHeight {
     text-align: center;
 }
+
 .section-footer button {
     background-color: #c2151b;
     border: none;
@@ -1089,4 +1089,7 @@ a.float i.fa.fa-whatsapp {
     flex-wrap: wrap;
     max-width: 100% !important;
     display: none !important;
+}
+h4.service-title.plr15 {
+    height: 44px;
 }
