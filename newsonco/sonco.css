@@ -1205,3 +1205,56 @@ margin-bottom: 0px !important;
 .box_products_full .box_product .product_info .product_title span {
   font-family: 'Raleway';
 }
+
+/* 
+==========================
+  loose CSS from newsonco-footer-links
+========================== 
+*/
+
+@media (max-width: 732px){
+  body .footer.content .footer_full .box_full .box_footer {
+      width: 36.33%;
+      padding: 0 !important;
+  }
+  body .footer.content .footer_full {
+
+      padding: 20px 12px 40px !important;
+  }
+  .desktop-footer
+  {
+      display: none;
+  }
+  .mobile-adjust-footer
+  {
+          margin-top: 36px;
+  }
+}
+@media(min-width: 733px){
+  .mobile-footer{
+      display: none;
+  }
+}
+.text-center
+{
+  text-align: center;
+}
+.copy-footer
+{
+      margin-top: 18px;
+      font-size: 13px;
+      margin-bottom: -36px;
+      color: black;
+}
+body .footer.content .footer_full .box_full .box_footer ul.box_links li a.link_item
+{
+      font-size:12px !important;
+font-family: Camber-Rg;
+
+}
+
+@media (max-width: 768px) {
+#topratedlocal-widget {
+  display: none;
+}    
+}
