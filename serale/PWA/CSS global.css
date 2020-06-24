@@ -701,7 +701,6 @@ div#se-favoritos:hover {
 }
 
 aside#se-cart {
-	display: none;
 	position: fixed;
 	z-index: 3;
 	top: 0;
@@ -710,10 +709,14 @@ aside#se-cart {
 	background-color: #F1F9FF;
 	width: 491px;
 	overflow-x: hidden;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s linear;
 }
 
 aside#se-cart.se-aparece {
-	display: block !important;
+	visibility: visible;
+    opacity: 1;
 }
 
 .se-sacola p {
@@ -1187,9 +1190,9 @@ p.se-black-blue {
     line-height: 34px;
 }
 
-.se-cmd-4, .se-cmd-6, .se-cmd-12 {
+/* .se-cmd-4, .se-cmd-6, .se-cmd-12 {
     margin: 0 auto;
-}
+} */
 
 main#se-main-page {
     background-color: #fff;
@@ -1202,13 +1205,9 @@ main#se-main-page {
 }
 
 div#se-slide-holder {
-    flex: 0 0 20%;
-    margin: auto;
-}
-
-div#se-slide-holder {
-    flex: 0 0 20%;
-    margin: auto;
+	flex: 0 0 20%;
+	padding: 15px;
+    /* margin: auto; */
 }
 
 .se-card-slide:hover {
@@ -1496,4 +1495,69 @@ div#se-setima-linha {
 }
 span.fa.fa-shopping-cart.se-mobile {
 	margin: 15px 0;
+}
+.se-right,
+.se-left{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #001C3E;
+    color: #fff;
+    border-radius: 100%;
+    top: 50%;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.se-right {
+    right: 10px;
+    left: auto;
+}
+
+.se-left {
+    left: 10px;
+    right: auto;
+}
+
+span.fa.fa-chevron-left {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+span.fa.fa-chevron-right {
+    padding-top: 15px;
+    padding-left: 17px;
+    font-size: 12px;
+}
+div#se-slide1-home {
+    flex: 0 0 70%;
+    max-width: 100%;
+}
+div#se-slide2-home {
+    flex: 0 0 70%;
+    max-width: 100%;
+}
+#se-slide2-home .swiper-slide.se-card-slide,
+#se-slide1-home .swiper-slide.se-card-slide {
+    opacity: 0.2;
+    transition: opacity .2s linear;
+}
+
+#se-slide2-home .swiper-slide.se-card-slide.swiper-slide-next,
+#se-slide1-home .swiper-slide.se-card-slide.swiper-slide-next {
+    opacity: 1;
+}
+#se-slide3-home img {
+    width: 110px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#se-slide3-home .swiper-slide {
+    height: unset !important;
+    width: 25% !important;
+    text-align: center;
+    border: none;
 }

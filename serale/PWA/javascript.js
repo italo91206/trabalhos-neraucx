@@ -82,6 +82,13 @@ window.PWA.toggle = {
                 elem.classList.remove('ativado');
             else
                 elem.classList.add('ativado');
+        },
+        ativaMenu: function(){
+            var elem = document.getElementById('se-nav');
+            if(elem.classList.contains('ativado'))
+                elem.classList.remove('ativado');
+            else
+                elem.classList.add('ativado');
         }
     }
     
