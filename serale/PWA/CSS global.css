@@ -1372,10 +1372,10 @@ div#se-setima-linha {
     margin-right: 15px;
     margin-top: 15px;
 }
-
-#se-header .fa.fa-search {
+#se-header .fa.fa-search.se-mobile {
     margin-left: 15px;
     margin-top: 15px;
+    margin-right: 15px;
 }
 @media(max-width: 1280px){
     .se-container{
@@ -1490,4 +1490,10 @@ div#se-setima-linha {
 }
 .swiper-container{
 	z-index: 0 !important;
+}
+#se-header button .fa.fa-search {
+    margin: 0px;
+}
+span.fa.fa-shopping-cart.se-mobile {
+	margin: 15px 0;
 }
