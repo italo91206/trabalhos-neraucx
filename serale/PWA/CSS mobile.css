@@ -1,0 +1,355 @@
+@media(max-width: 768px){
+    img#e-bit {
+        margin-left: 5px;
+        width: 60px;
+        height: 70px;
+    }
+
+    img#empresa-associada {
+        margin-left: 5px;
+        width: 50px;
+        height: 70px;
+    }
+    section#footer-links section:last-child {
+        flex: 0 0 99%;
+        max-width: 100%;
+        text-align: center;
+        margin: 25px 0;
+    }
+    #newsletter form {
+        display: none;
+    }
+    .se-container{
+        max-width: 750px;
+    }
+    .se-desktop{
+        display: none !important;
+    }
+    .se-mobile{
+        display: block !important;
+    }
+    section#se-top-header {
+        display: none;
+    }
+
+    #se-nav ul.menu {
+        display: none !important;
+    }
+
+    div#user-nav,
+    div#se-favoritos,
+    div#se-cart-icon,
+    form#se-busca-home {
+        display: none;
+    }
+    #se-header img#se-logo {
+        width: unset;
+        height: 40px;
+        margin-top: 0px;
+    }
+    
+    
+    #se-header a {
+        margin: 10px auto 0px;
+    }
+    
+    section#se-header {
+        height: auto;
+    }
+    
+    nav#se-nav {
+        display: none;
+    }
+    .se-cmd-6 {
+        flex: 0 0 49%;
+        max-width: 100%;
+        padding: 0px;
+    }
+    .se-cmd-6 {
+        flex: 0 0 49%;
+        max-width: 100%;
+        padding: 0px;
+     }
+    .se-banner-inside-text {
+        top: 15px;
+        left: 15px;
+    }
+
+    .se-banner-inside-text p.se-offering-what {
+        margin-top: 5px;
+    }
+
+    .se-cmd-4 {
+        padding: 5px;
+    }
+
+    .se-banner4-inside-text {
+        top: 15px;
+        left: 15px;
+    }
+
+    .se-banner4-inside-text button.se-white-background {
+        margin-top: 5px;
+    }
+
+    #footer-copyright h3 {
+        width: 759px;
+    }
+
+    .se-banner12-inside-text button.se-white-background {
+        margin-top: 0px;
+    }
+
+    .se-banner12-inside-text {
+        top: 15px;
+        left: 20px;
+    }
+
+    .se-banner6-inside-text {
+        top: 0px;
+        left: 15px;
+    }
+
+    .se-banner6-inside-text button.se-white-background {
+        margin-top: 0px;
+    }
+}
+@media(max-width: 425px){
+    .se-container{
+        max-width: 405px;
+    }
+    .se-cmd-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .se-cmd-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #footer-copyright h3 {
+        max-width: 405px;
+    }
+
+    .se-banner-inside-text {
+        top: 25px;
+        left: 20px;
+    }
+
+    div#se-slide-holder {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    div#se-slide3-home,
+    div#se-slide2-home,
+    div#se-slide1-home {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .se-cmd-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .se-banner6-inside-text {
+        top: 5px;
+        left: 5px;
+    }
+
+    div#se-segunda-linha {
+        padding-top: 5px;
+    }
+
+    div#se-quarta-linha {
+        padding-top: 5px;
+    }
+
+    div#se-setima-linha {
+        padding: 5px 0;
+    }
+
+    #footer-after-links div.se-container section {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 97%;
+        margin-left: 5px !important;
+        margin-bottom: 25px;
+    }
+
+    section#footer-links section {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-left: 0px !important;
+        margin-top: 15px;
+        /* text-align: center; */
+    }
+    section#se-top-header {
+        display: none;
+    }
+
+    #se-nav ul.menu {
+        display: none !important;
+    }
+
+    div#user-nav,
+    div#se-favoritos,
+    div#se-cart-icon,
+    form#se-busca-home {
+        display: none;
+    }
+
+    #se-header img#se-logo {
+        width: unset;
+        height: 40px;
+        margin-top: 0px;
+    }
+    
+    
+    #se-header a {
+        margin: 10px auto 0px;
+    }
+    
+    section#se-header {
+        height: auto;
+    }
+    
+    nav#se-nav {
+        display: none;
+    }
+    #newsletter input[type="text"] {
+        width: 45%;
+        margin-right: 0px !important;
+    }
+
+    #newsletter input[type="text"]:first-child {
+        margin-right: 5px !important;
+    }
+
+    #newsletter select {
+        width: 49%;
+        margin-right: 5px;
+    }
+
+    #newsletter button.se-button-blue {
+        width: 181px;
+        margin-top: 5px;
+    }
+
+    #newsletter form {
+        margin-top: 10px;
+    }
+
+    section#newsletter {
+        height: 65px;
+    }
+
+    img#img-newsletter {
+        height: 65px;
+        left: 0px;
+    }
+
+    #newsletter .se-text.se-relative {
+        padding-top: 0px;
+        padding-left: 100px;
+    }
+
+    #newsletter span.discount-text {
+        left: 100px;
+    }
+
+    #a-seralle p {
+        width: 380px;
+    }
+
+    #footer-copyright h3 {
+        padding: 15px 0;
+    }
+
+    #newsletter form {
+        display: none;
+    }
+
+    section#footer-links section:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    #se-quinta-linha img.se-w100 {
+        height: 230px;
+    }
+
+    .se-banner12-inside-text {
+        left: 15px;
+    }
+
+    div#se-terceira-linha {
+        padding-top: 5px;
+    }
+
+    div#se-quinta-linha {
+        padding-top: 5px;
+    }
+
+    div#se-sexta-linha {
+        padding-top: 5px;
+    }
+
+    .se-banner-grande-overlay.se-container {
+        display: none;
+    }
+}
+@media(max-width: 414px){
+   .se-container{
+        max-width: 395px;
+    }
+   #footer-copyright h3 {
+        max-width: 395px;
+    } 
+}
+@media(max-width: 411px){
+    .se-container{
+        max-width: 395px;
+    }
+    #footer-copyright h3 {
+        max-width: 395px;
+    }
+}
+@media(max-width: 395px){
+    .se-container{
+        max-width: 375px;
+    }
+    #footer-copyright h3 {
+        max-width: 375px;
+    }
+}
+@media(max-width: 375px){
+    .se-container{
+        max-width: 345px;
+    }
+    #footer-copyright h3 {
+        max-width: 345px;
+    }
+    #a-seralle p {
+        width: 340px;
+    }
+    section#footer-copyright {
+        height: auto;
+    }
+}
+@media(max-width: 320px){
+    .se-container{
+        max-width: 305px;
+    }
+    #footer-copyright h3 {
+        max-width: 305px;
+    }
+    #a-seralle p {
+        width: 300px;
+    }
+}

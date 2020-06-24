@@ -1358,7 +1358,25 @@ div#se-setima-linha {
     padding-top: 57px;
     padding-bottom: 68px;
 }
+.se-mobile{
+	display: none !important;
+}
+.se-desktop{
+	display: block !important;
+}
+#se-header span.fa {
+    font-size: 25px;
+	color: #007ac0;
+}
+#se-header .fa.fa-bars {
+    margin-right: 15px;
+    margin-top: 15px;
+}
 
+#se-header .fa.fa-search {
+    margin-left: 15px;
+    margin-top: 15px;
+}
 @media(max-width: 1280px){
     .se-container{
         max-width: 1200px;
@@ -1469,4 +1487,7 @@ div#se-setima-linha {
         width: 60px;
         height: 80px;
     }
+}
+.swiper-container{
+	z-index: 0 !important;
 }
