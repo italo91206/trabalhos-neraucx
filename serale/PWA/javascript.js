@@ -76,6 +76,17 @@ window.PWA.toggle = {
             }
             });
         },
+        createSlideMarcas: function () {
+            window.PWA.createSlide('se-slide-brand-home', {
+            slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+            spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.se-brand-slide-next',
+                prevEl: '.se-brand-slide-prev'
+            }
+            });
+        },
         ativaFormBusca: function(){
             var elem = document.getElementById('se-busca-home');
             if(elem.classList.contains('ativado'))
@@ -93,6 +104,7 @@ window.PWA.toggle = {
     }
     
     window.PWA.buildStart('home', function () {
+      window.PWA.custom.createSlideMarcas();
       window.PWA.custom.createSlide1Home();
       window.PWA.custom.createSlide2Home();
       window.PWA.custom.createSlide3Home();
@@ -100,6 +112,7 @@ window.PWA.toggle = {
     });
     
     window.PWA.previewStart('home', function () {
+        window.PWA.custom.createSlideMarcas();
       window.PWA.custom.createSlide1Home();
       window.PWA.custom.createSlide2Home();
       window.PWA.custom.createSlide3Home();

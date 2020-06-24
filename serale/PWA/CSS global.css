@@ -1561,3 +1561,29 @@ div#se-slide2-home {
     text-align: center;
     border: none;
 }
+
+div#se-slide-brand-home {
+    width: 510px;
+    margin-top: 20px;
+}
+#se-slide-brand-home img {
+    width: 56px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#se-slide-brand-home .swiper-slide {
+    height: unset !important;
+    width: 25% !important;
+    text-align: center;
+    border: none;
+}
+
+#se-slide-brand-home span.fa.fa-chevron-left {
+    color: white !important;
+    font-size: 14px !important;
+}
+#se-slide-brand-home span.fa.fa-chevron-right {
+    color: white !important;
+    font-size: 14px !important;
+}
