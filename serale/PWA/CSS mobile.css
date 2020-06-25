@@ -606,6 +606,68 @@
     }
 }
 @media(max-width: 320px){
+    .se-banner4-inside-text {
+        top: 35px;
+    }
+    
+    .se-banner6-inside-text p.se-is-off {
+        font-size: 23px;
+    }
+    
+    #newsletter .se-text.se-relative {
+        padding-left: 0px;
+    }
+    
+    #newsletter span.discount-text {
+        left: 0;
+        bottom: 34px;
+    }
+    .se-item-image img {
+        width: 60px;
+        height: 55px;
+    }
+    
+    .se-item-text {
+        margin-top: 2px;
+    }
+    .se-banner12-inside-text p.se-offering-what {
+        width: 295px !important;
+    }
+    .swiper-slide.se-card-slide {
+        width: 300px !important;
+    }
+    .se-right {
+        right: 5px !important;
+    }
+    .se-card-slide img.se-w100 {
+        margin-left: 0;
+    }
+    .se-banner6-inside-text p.se-is-off {
+        font-size: 35px;
+        margin-top: -8px;
+    }
+    
+    .se-banner-inside-text p.se-offering-what {
+        margin-top: 0px;
+    }
+    
+    .se-banner-inside-text p.se-is-off {
+        font-size: 20px;
+    }
+    
+    .se-banner-inside-text {
+        left: 10px;
+    }
+
+    div#se-slide-holder img {
+        width: 305px;
+    }
+
+    div#se-quarta-linha,
+    div#se-segunda-linha {
+        padding-left: 7.5px;
+    }
+
     .se-container{
         max-width: 305px;
     }
