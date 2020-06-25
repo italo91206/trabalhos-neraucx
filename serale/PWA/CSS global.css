@@ -1028,7 +1028,7 @@ input#se-cupom-desconto:focus {
 .se-cmd-6{
     flex: 0 0 47%;
     max-width: 50%;
-    padding: 15px;
+    padding: 12px;
 }
 
 .se-cmd-4{
@@ -1205,9 +1205,9 @@ main#se-main-page {
 }
 
 div#se-slide-holder {
-	flex: 0 0 20%;
-	padding: 15px;
-    /* margin: auto; */
+	position: absolute;
+    z-index: 1;
+    top: 129px;
 }
 
 .se-card-slide:hover {
@@ -1511,7 +1511,7 @@ span.fa.fa-shopping-cart.se-mobile {
 }
 
 .se-right {
-    right: 10px;
+    right: 215px;
     left: auto;
 }
 
@@ -1531,24 +1531,13 @@ span.fa.fa-chevron-right {
     padding-left: 17px;
     font-size: 12px;
 }
+div#se-slide2-home,
 div#se-slide1-home {
-    flex: 0 0 70%;
-    max-width: 100%;
-}
-div#se-slide2-home {
-    flex: 0 0 70%;
-    max-width: 100%;
-}
-#se-slide2-home .swiper-slide.se-card-slide,
-#se-slide1-home .swiper-slide.se-card-slide {
-    opacity: 0.2;
-    transition: opacity .2s linear;
+	width: 1180px;
+    margin-right: 0px;
+    margin-left: 80px;
 }
 
-#se-slide2-home .swiper-slide.se-card-slide.swiper-slide-next,
-#se-slide1-home .swiper-slide.se-card-slide.swiper-slide-next {
-    opacity: 1;
-}
 #se-slide3-home img {
     width: 110px;
     margin: 0 auto;
@@ -1586,4 +1575,34 @@ div#se-slide-brand-home {
 #se-slide-brand-home span.fa.fa-chevron-right {
     color: white !important;
     font-size: 14px !important;
+}
+div#se-slide-holder img {
+    width: 282px;
+    height: 291px;
+}
+.se-swiper-gradient {
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 428px;
+    right: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+}
+.se-slide2-prev .se-swiper-gradient,
+.se-slide1-prev .se-swiper-gradient {
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(0, 0, 0, 0) 100%);
+}
+.se-slider-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 200px;
+}
+#se-slide2-home .se-left,
+#se-slide1-home .se-left{
+    left: 220px;
+    right: auto;
 }

@@ -253,6 +253,7 @@
     div#se-slide-holder {
         flex: 0 0 100%;
         max-width: 100%;
+        padding: 0px;
     }
     div#se-slide3-home,
     div#se-slide2-home,
