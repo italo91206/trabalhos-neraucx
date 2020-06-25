@@ -1669,3 +1669,10 @@ div#se-slide-brand-masculino-home {
 .se-relative.se-cmd-4 {
     margin: 0 auto;
 }
+
+.se-slide01-wrapper { 
+    display: flex !important; 
+    flex-flow: row !important; 
+    justify-content: flex-start !important; 
+    align-items: center !important; 
+}
