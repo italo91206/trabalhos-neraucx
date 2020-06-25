@@ -541,6 +541,36 @@
     }
 }
 @media(max-width: 375px){
+
+    .se-banner6-inside-text p.se-is-off {
+        font-size: 35px;
+        margin-top: -8px;
+    }
+
+    .se-card-slide img.se-w100 {
+        margin-left: 24px;
+    }
+
+    .se-banner-inside-text p.se-is-off {
+        font-size: 35px;
+    }
+
+    .swiper-slide.se-card-slide {
+        width: 345px !important;
+    }
+    
+    button.se-white-background {
+        margin-top: 0px;
+    }
+
+    div#se-slide-holder img {
+        width: 346px;
+    }
+
+    div#se-quarta-linha, 
+    div#se-segunda-linha {
+        padding-left: 15px;
+    }
     .se-item-image {
         flex: 0 0 20%;
         max-width: 100%;
