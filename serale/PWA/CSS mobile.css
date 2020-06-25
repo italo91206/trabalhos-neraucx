@@ -527,6 +527,12 @@
     }
 }
 @media(max-width: 395px){
+    .swiper-slide.se-card-slide {
+        width: 375px !important;
+    }
+    .se-right {
+        right: 5px !important;
+    }
     .se-banner-inside-text {
         top: 12px;
     }
