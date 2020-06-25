@@ -87,6 +87,28 @@ window.PWA.toggle = {
             }
             });
         },
+        createSlideMarcasFeminino: function () {
+          window.PWA.createSlide('se-slide-brand-feminino-home', {
+          slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+          spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+          grabCursor: true,
+          navigation: {
+              nextEl: '.se-brand-feminino-slide-next',
+              prevEl: '.se-brand-feminino-slide-prev'
+          }
+          });
+        },
+        createSlideMarcasMasculino: function () {
+          window.PWA.createSlide('se-slide-brand-masculino-home', {
+          slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+          spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+          grabCursor: true,
+          navigation: {
+              nextEl: '.se-slide-brand-masculino-next',
+              prevEl: '.se-slide-brand-masculino-prev'
+          }
+          });
+        },
         ativaFormBusca: function(){
             var elem = document.getElementById('se-busca-home');
             if(elem.classList.contains('ativado'))
@@ -109,12 +131,16 @@ window.PWA.toggle = {
       window.PWA.custom.createSlide2Home();
       window.PWA.custom.createSlide3Home();
       window.PWA.custom.createSlideGrandeHome();
+      window.PWA.custom.createSlideMarcasMasculino();
+      window.PWA.custom.createSlideMarcasFeminino();
     });
     
     window.PWA.previewStart('home', function () {
-        window.PWA.custom.createSlideMarcas();
+      window.PWA.custom.createSlideMarcas();
       window.PWA.custom.createSlide1Home();
       window.PWA.custom.createSlide2Home();
       window.PWA.custom.createSlide3Home();
       window.PWA.custom.createSlideGrandeHome();
+      window.PWA.custom.createSlideMarcasMasculino();
+      window.PWA.custom.createSlideMarcasFeminino();
     });
