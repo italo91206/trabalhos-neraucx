@@ -2532,3 +2532,94 @@ hr{
   margin-top: 21px;
   margin-bottom: 20px !important;
 }
+/* 
+==========================
+  loose CSS from casestudy_23rd
+========================== 
+*/
+section.veteran23-content {
+  background-color: #002d47;
+  height: 1120px;
+  padding-top: 1px;
+}
+
+.veteran23-content .container {
+  max-width: 1280px;
+}
+
+.veteran23-content .how-stray {
+  padding-left: 0px;
+  margin-bottom: 1rem !important;
+}
+
+img.stray-one {
+  width: auto;
+  height: auto;
+  left: -230px;
+  top: 33px;
+}
+
+img.stray-two {
+  width: auto;
+  height: auto;
+  z-index: 4;
+  top: 348px;
+  right: 49px;
+}
+
+img.stray-three {
+  width: auto;
+  height: auto;
+  right: 67px;
+  top: 39px;
+}
+
+img.case_barrier {
+  margin-top: 210px;
+  margin-left: 100px;
+}
+
+.veteran23-content button.button.action.red-main.custom-margin-button {
+  margin-left: 0px;
+}
+
+p.subdescription {
+  color: #fff;
+  font-size: 17px;
+}
+
+.strayfigure-mobile .coloured-content {
+  width: 100%;
+  background-color: #002d47;
+  margin: auto; 
+  min-height: auto;
+}
+
+.strayfigure-mobile .case_image {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.veteran23-content .brands-imgs-orange {
+  padding-left: 139px;
+  margin-top: 50px !important;
+  align-items: center;
+}
+
+.veteran23-content .line-separation-orange {
+  background-color: #023450;
+}
+
+@media (max-width: 1279px) {
+  .strayfigure-mobile.mobile {
+      display: block !important;
+  }
+  .veteran23-content.desktop {
+      display: none;
+  }
+  .strayfigure-mobile .cmd-6 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
