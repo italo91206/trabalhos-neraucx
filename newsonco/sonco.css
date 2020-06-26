@@ -2117,4 +2117,241 @@ p.subdescription {
         max-width: 100%;
     }
 }
-/* teste */
+/* 
+==========================
+  loose CSS from shop by events
+========================== 
+*/
+@media (max-width: 800px){
+  .mobile{
+      display: none !important;
+  }
+}
+@media (max-width: 1440px){
+  .rodape-image{
+      margin-left: 50px !important;
+      margin-top: 65px !important;
+  }
+  .rodape-text{
+      font-size: 18px !important;
+  }
+  .learn-more{
+      font-size: 10px !important;
+  }
+}    
+@media (max-width: 1080px) {
+  .rodape-image {
+      margin-left: 50px !important;
+      margin-top: 65px !important;
+  }
+
+  .rodape-text {
+      font-size: 18px !important;
+  }
+
+  .learn-more {
+      font-size: 10px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .rodape-image {
+      margin-top: 55px !important;
+  }
+}
+@media (max-width: 768px) {
+  .rodape-image {
+      margin-top: 38px !important;
+      margin-left: 40px !important;
+  }
+
+  .rodape-titulo {
+      font-size: 1.0rem !important;
+      margin-bottom: 10px !important;
+  }
+
+  .rodape-text {
+      font-size: 13px !important;
+  }
+
+  .learn-more {
+      margin-top: -15px !important;
+  }
+}
+@media (max-width: 425px) {
+  .rodape-image {
+      margin-top: 39px !important;
+  }
+
+  .learn-more {
+      margin-top: -8px !important;
+  }
+}
+/* mobile definido pelo cliente */
+@media (max-width: 799px){
+  /* things that should disappear */
+  .desktop,
+  #sumir-texto,
+  #sumir-video,
+  #buynowpaylater-desktop,
+  #banner-desktop{
+      display: none !important;
+  }
+  /* things that should appear */
+  .mobile,
+  .video-mobile,
+  .btn-mobile{
+      display:contents !important;
+  }
+  /* things that should scale when mobile */
+  .line_main .separation-default{
+      margin: auto;
+  }
+  .line_main
+  {
+      margin: auto;
+  }
+  article .cmd-6 h1{
+      font-size: 20px !important;
+  }
+  body .btn_box a{
+      padding-right: 35%;
+      padding-left: 35%;
+  }
+  .btn_full{
+      margin-top: 20px;
+      width: 100%;
+  }
+  .btn_box{
+      float:left;
+      width: 100%;
+  }
+  .btn_box a{
+      width: 100%;
+  }
+  .cmd-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .lastest_posts, .lastest_post{
+      width: 100% !important;
+      float: none !important;
+      padding-top: 0px !important;
+      padding: 20px 0 !important;
+  }
+  .ba-slider .mobile {
+      display: block !important;
+  }
+}
+.rodape-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
+.learn-more {
+  color: #e62332;
+  margin-top: 1px;
+}
+
+.rodape-text {
+  font-weight: 500;
+  margin: auto;
+  font-size: 20px;
+}
+
+.rodape-titulo {
+  color: #bcbec0;
+  margin-bottom: 14px;
+}
+
+.rodape-titulo span {
+  color: #e62332;
+  font-weight: 800;
+}
+
+
+.cd-6 p{
+  font-size: 5vw;
+  text-align: center;
+  line-height: 5vw;
+}
+
+.cd-6 img{
+  width: 100%;
+}
+
+hr{
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: 35px;
+}
+.button-orange-mobile{
+  background-color: #ffffff !important;
+  border: none !important;
+  width: 172px !important;
+  text-transform: capitalize !important;
+  font-size: 13px !important;
+  height: 42px !important;
+  margin-top: 21px;
+  margin-bottom: 20px !important;
+}
+.how-stray {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 0px;
+  font-size: 27px;
+  width: 96%;
+  padding-top: 49px;
+}
+button.button.action.red-main {
+  background-color: #e62332 !important;
+  border: none !important;
+  width: 172px !important;
+  margin-left: 0px;
+  text-transform: capitalize !important;
+  font-size: 13px !important;
+  height: 42px !important;
+  margin-top: 21px;
+  margin-bottom: 20px !important;
+}
+.strayfigure-content .cmd-6{
+  margin: 45px 0;
+}
+.stray-two {
+  position: absolute;
+  width: 65%;
+  top: 160px;
+  z-index: 1;
+  right: -14px;
+}
+.stray-one {
+  width: 70%;
+  position: absolute;
+  z-index: 2;
+  left: -99px;
+}
+.stray-three {
+  position: absolute;
+  right: 45px;
+  width: 30%;
+  top: 35px;
+}
+@media (min-width: 801px){
+  .breadcrumbs a, .breadcrumbs .item:after {
+      font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight: 700 !important;
+      color: #333 !important;
+      text-transform: uppercase !important;
+      margin: 0 !important;
+  }
+  .breadcrumbs {
+      margin: 1em 0 0 !important;
+  }
+  .after_breadcrumbs .separation-default {
+      margin-top: 1em !important;
+  }    
+}
