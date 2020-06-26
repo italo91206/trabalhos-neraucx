@@ -220,6 +220,23 @@
 }
 @media(max-width: 425px){
 
+    div#se-setima-linha {
+        padding:20px 10px;
+    }
+
+    #se-sexta-linha,
+    #se-primeira-linha {
+        padding-top: 20px;
+    }
+
+    #se-quinta-linha,
+    #se-quarta-linha,
+    #se-segunda-linha,
+    #se-terceira-linha {
+        padding: 20px 10px 0;
+    }
+
+
     .se-banner12-inside-text {
         top: 35px;
     }
@@ -230,7 +247,7 @@
     }
 
     div#se-slide-holder img {
-        width: 400px;
+        width: 100%;
         height: auto;
     }
 
