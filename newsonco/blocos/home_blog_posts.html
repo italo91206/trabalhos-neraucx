@@ -1,0 +1,114 @@
+<div class="blog_title">
+    <div class="title">SONCO BLOG</div>
+    <div class="subtitle">Learn what's new at Sonco Perimeter Security!</div>
+  </div>
+  <div class="blog_posts">
+    <div class="lastest_post">
+      <h2 class="title">LATEST FROM BLOG</h2>
+      <div id="last_container"></div>
+    </div>
+    <div class="lastest_posts">
+      <h2 class="title">RECENT POSTS</h2>
+      <div id="recent_container"></div>
+    </div>
+  </div>
+  <script type="text/javascript" xml="space">// <![CDATA[
+  require([
+      'jquery'
+  ], function (jQuery) {
+      jQuery(document).ready(function ($) {
+          jQuery.get('https://safetysticklers.com/wp-json/wp/v2/posts',function(data, status) {
+        var posts = data;
+        if (posts[0]) {
+          var last = posts[0];
+          jQuery('#last_container').append(`<div class="post">
+            <img src="" id="featured`+last.id+`" alt="" class="featured" />
+            <div id="title" class="title">`+last.title.rendered+`</div>
+            <div id="content" class="content">`+last.excerpt.rendered+`</div>
+            <div class="action">
+              <a href="`+last.link+`" target="_blank" class="see_more">See more</a>
+            </div>
+          </div>
+          `);
+          jQuery.get(last._links['wp:featuredmedia'][0].href,function(mediaData, status) {
+            jQuery('#featured' + last.id).attr('src',mediaData.source_url);
+          });
+          }
+  
+          for (var i = 1; i <= 4; i++) {
+            if (posts[i]) {
+            var post = posts[i];
+            loadPost(post);
+            }
+          }
+      });
+        function loadPost(post) {
+          jQuery('#recent_container').append(`<div class="post">
+          <img src="" id="featured`+post.id+`" alt="" class="featured" />
+          <div id="title" class="title">`+post.title.rendered+`</div>
+          <div id="content" class="content">`+post.excerpt.rendered+`</div>
+          <div class="action">
+            <a href="`+post.link+`" target="_blank" class="see_more">See more</a>
+          </div>
+        </div>
+        `);
+        jQuery.get(post._links['wp:featuredmedia'][0].href,function(mediaData, status) {
+          jQuery('#featured' + post.id).attr('src',mediaData.source_url);
+        });
+        }
+      });
+  });
+  // ]]>
+  </script>
+  <style xml="space"><!--
+  .blog_posts .lastest_post {
+      padding-left: 0px !important;
+  }
+  .blog_posts .lastest_posts {
+    padding-right: 0px !important;
+  }
+  .post .featured {
+    width: 100%;
+    max-width: 100%;
+  }
+  .lastest_posts .post .featured {
+    width: 120px;
+    float: left;
+    height: 92px;
+    margin: 5px 15px 0 0;
+  }
+  .lastest_posts .post {
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+      padding: 10px 0;
+  }
+  .lastest_posts .post:first-of-type {
+    padding-top: 0px;
+  }
+  .blog_posts .lastest_post, .blog_posts .lastest_posts {
+    width: 47%;
+    padding: 0 20px 20px;
+    float: left;
+  }
+  .post .title {
+      font-weight: bold;
+      color: #444;
+  }
+  .lastest_posts .post .content {
+      margin-left: 135px;
+      margin-bottom: 10px;
+  }
+  .post .action {
+      text-align: right;
+  }
+  @media (max-width: 767px) {
+    .blog_posts .lastest_post, .blog_posts .lastest_posts {
+      width: 100%;
+      float: none;
+      padding: 20px 0;
+    }
+    .blog_posts .lastest_post {
+      padding-top: 0px;
+    }
+  }
+  --></style>
