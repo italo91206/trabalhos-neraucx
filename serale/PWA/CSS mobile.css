@@ -1,13 +1,10 @@
 @media(max-width: 768px){
-
-    div#se-quinta-linha,
-    div#se-terceira-linha {
-        padding-top: 20px;
-    }
-
     div#se-setima-linha {
-        padding-top: 20px;
+        padding-top: 40px;
         padding-bottom: 20px;
+    }
+    div#se-sexta-linha {
+        padding-top: 40px;
     }
 
     .se-cmd-4 {
@@ -31,8 +28,10 @@
     }
 
     div#se-quarta-linha,
-    div#se-segunda-linha {
-        padding-top: 20px;
+    div#se-segunda-linha,
+    div#se-quinta-linha, 
+    div#se-terceira-linha {
+        padding-top: 30px;
         padding-left: 15px;
     }
     
@@ -95,12 +94,14 @@
         visibility: hidden;
         opacity: 0;
         transition: all .5s;
+        padding: 0px;
     }
     form#se-busca-home.ativado {
         margin: 10px auto;
         opacity: 1 !important;
         visibility: visible !important;
         transition: all .5s;
+        padding: 0px;
     }
     form#se-busca-home input[type="text"] {
         border: solid 1px #8CA2A6;
