@@ -2350,6 +2350,7 @@ button.button.action.red-main {
   }
   .breadcrumbs {
       margin: 1em 0 0 !important;
+      width: 1240px;
   }
   .after_breadcrumbs .separation-default {
       margin-top: 1em !important;
@@ -3135,4 +3136,30 @@ iframe.stray-iframe {
 
 #case-study-stray h3 {
   color: #Fff;
+}
+/* 
+==========================
+  loose CSS from customers
+========================== 
+*/
+@media (min-width: 801px) {
+
+  #customers-page .breadcrumbs a,
+  .breadcrumbs .item:after {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      color: #5b5b5f;
+      text-transform: uppercase;
+      margin: 0 !important;
+      color: #5b5b5f;
+  }
+
+  #customers-page .breadcrumbs {
+      margin: 1em auto 0;
+      width: 1240px;
+  }
+
+  #customers-page .after_breadcrumbs .separation-default {
+      margin-top: 1em !important;
+  }
 }
