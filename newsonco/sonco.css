@@ -2772,3 +2772,13 @@ span.item-advantage_ {
       display: none !important;
   }
 }
+/* 
+==========================
+  loose CSS from category_customsigns_slider
+========================== 
+*/
+@media (max-width: 799px){
+  #slider-customsigns-slider{
+      display: none !important;
+  }
+}
