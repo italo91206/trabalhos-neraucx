@@ -2802,3 +2802,13 @@ span.item-advantage_ {
       display: none !important;
   }
 }
+/* 
+==========================
+  loose CSS from category_trafficsafety-slider
+========================== 
+*/
+@media (max-width: 799px) {
+  #slider-trafficsafety-slider {
+      display: none !important;
+  }
+}
