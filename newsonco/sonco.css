@@ -2784,11 +2784,21 @@ span.item-advantage_ {
 }
 /* 
 ==========================
-  loose CSS from category_customsigns_slider
+  loose CSS from category_fencesolutions-slider
 ========================== 
 */
 @media (max-width: 799px){
   #slider-fencesolutions-slider{
+      display: none !important;
+  }
+}
+/* 
+==========================
+  loose CSS from category_stanchions-slider
+========================== 
+*/
+@media (max-width: 799px) {
+  #slider-stanchions-slider {
       display: none !important;
   }
 }
