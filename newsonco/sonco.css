@@ -3163,3 +3163,101 @@ iframe.stray-iframe {
       margin-top: 1em !important;
   }
 }
+/* 
+==========================
+  loose CSS from case-study-harley
+========================== 
+*/
+section.harley-figure-harley-content {
+  background-color: #525f69;
+  height: 930px;
+  padding-top: 1px;
+}
+
+.harley-figure-harley-content .container {
+  max-width: 1280px;
+}
+
+.harley-figure-harley-content .how-harley- {
+  padding-left: 0px;
+  margin-bottom: 1rem !important;
+}
+
+img.harley--one {
+  width: auto;
+  height: auto;
+  left: -230px;
+  top: 33px;
+}
+
+img.harley--two {
+  width: auto;
+  height: auto;
+  z-index: 4;
+  top: 317px;
+  right: 49px;
+}
+
+img.harley--three {
+  width: auto;
+  height: auto;
+  right: 130px;
+  top: 90px;
+}
+
+img.case_barrier {
+  margin-top: 175px;
+  margin-left: 50px;
+}
+
+.harley-figure-harley-content button.button.action.red-main.custom-margin-button {
+  margin-left: 0px;
+}
+
+p.subdescription {
+  color: #fff;
+  font-size: 17px;
+}
+
+.harley-figure-mobile .coloured-content {
+  width: 100%;
+  background-color: #525f69;
+  margin: auto; 
+  min-height: auto;
+}
+
+.harley-figure-mobile .case_image {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.harley-figure-harley-content .brands-imgs-orange {
+  padding-left: 139px;
+  margin-top: 50px !important;
+  align-items: center;
+}
+
+.harley-figure-harley-content .line-separation-orange {
+  background-color: #023450;
+}
+
+.harley-figure-harley-content .line_main {
+  margin-left: 0px !important;
+}
+
+@media (max-width: 1279px) {
+  .harley-figure-mobile.mobile {
+      display: block !important;
+  }
+  .harley-figure-harley-content.desktop {
+      display: none;
+  }
+  .harley-figure-mobile .cmd-6 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  button.button.action.red-main {
+      margin-left: 0px !important;
+  }
+}
