@@ -2762,3 +2762,13 @@ span.item-advantage_ {
       width: 24% !important;
   }
 }
+/* 
+==========================
+  loose CSS from barricade-slider
+========================== 
+*/
+@media (max-width: 799px){
+  #barricades-slider-slider{
+      display: none !important;
+  }
+}
