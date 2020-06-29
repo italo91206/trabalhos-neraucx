@@ -1,0 +1,184 @@
+<div class="sonco-benefits">
+    <span class="item-advantage_">
+        <img src="{{media url=wysiwyg/product/icon-shipping-nationwide.png}}" alt="Shipping Nationwide" />
+        <div class="pop-advantage" style="display: none;">
+            <span class="close-pop">X</span>
+            <div class="title-pop">
+                <div>Shipping Nationwide </div>
+            </div>
+            We ship anywhere in the USA, straight from one of our warehouses. <br /><br />
+            <a href="{{store direct_url="locations"}}" class="pull-right">View more &amp;raquo;</a>
+        </div>
+    </span>
+    <span class="item-advantage_">
+        <img src="{{media url=wysiwyg/product/icon-buy-now-pay-later.png}}" alt="Buy Now. Pay Later" />
+        <div class="pop-advantage" style="display: none;">
+            <span class="close-pop">X</span>
+            <div class="title-pop">
+                <div>Buy Now. Pay Later</div>
+            </div>
+            Sonco Apruve Credit program is here to make this process easier for you.<br /><br />
+            <a href="{{store direct_url="buy-now-pay-later"}}" class="pull-right">View more &amp;raquo;</a>
+        </div>
+    </span>
+    <span class="item-advantage_">
+        <img src="{{media url=wysiwyg/product/icon-price-match.png}}" alt="Price Match" />
+        <div class="pop-advantage" style="display: none;">
+            <span class="close-pop">X</span>
+            <div class="title-pop">
+                <div>Price Match</div>
+            </div>
+            Our price match guarantee applies no matter how you choose to pay.<br /><br />
+            <a href="{{store direct_url="customer-support-benefits-and-guarantees"}}#price-match"
+                class="pull-right">View more &amp;raquo;</a>
+        </div>
+    </span>
+    <span class="item-advantage_">
+        <img src="{{media url=wysiwyg/product/icon-need-help.png}}" alt="Need Help" />
+        <div class="pop-advantage" style="display: none;">
+            <span class="close-pop">X</span>
+            <div class="title-pop">
+                <div>Need Help?</div>
+            </div>
+            Talk to a real, live member of our sales team - we are on standby to help you out.<br /><br />
+            <a href="{{store direct_url="contact"}}" class="pull-right">View more &amp;raquo;</a>
+        </div>
+    </span>
+</div>
+
+<style>
+    .pop-advantage {
+        border: 1px solid #eae9e5;
+        position: absolute;
+        border-radius: 8px;
+        height: 190px;
+        background: white;
+        top: -58px;
+        box-shadow: 0px 1px 5px #999;
+        padding: 23px;
+        width: 224px;
+        left: -225px;
+        z-index: 90;
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .pop-advantage::before {
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        z-index: 2;
+        border-width: 15px;
+        border-color: transparent transparent transparent #ffffff;
+        top: 66px;
+        right: -30px;
+        border-style: solid;
+        border-image: initial;
+    }
+
+    .pop-advantage::after {
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        border-width: 15px;
+        border-color: transparent transparent transparent #999;
+        top: 66px;
+        /* border: 1px solid black; */
+        right: -30.2px;
+        border-style: solid;
+        border-image: initial;
+    }
+
+    span.close-pop {
+        right: 11px;
+        cursor: pointer;
+        position: absolute;
+        text-shadow: 0px 1px 1px #999;
+        top: 9px;
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    .sonco-benefits span.item-advantage_ {
+        display: inline-block;
+        margin: 0;
+        width: 24%;
+    }
+
+    span.item-advantage_ {
+        position: relative;
+    }
+
+    .pop-advantage div.title-pop img {
+        float: left;
+    }
+
+    .pop-advantage div.title-pop div {
+        font-size: 15px;
+        padding-bottom: 6px;
+        padding-top: 9px;
+        font-weight: bold;
+        text-align: left;
+        color: black;
+    }
+
+    .pop-advantage div.title-pop {
+        min-height: 51px;
+    }
+
+    .price-match {
+        padding-left: 65px !important;
+    }
+
+    @media (max-width: 799px) {
+        span.item-advantage_ {
+            position: initial;
+        }
+
+        .pop-advantage {
+            top: 49px;
+            z-index: 9000;
+            left: calc(80% - 225px);
+            top: calc(50% - 190px);
+            position: fixed;
+        }
+
+        .pop-advantage:before,
+        .pop-advantage:after {
+            display: none;
+        }
+    }
+
+    @media(max-width: 1024px){
+        .sonco-benefits span.item-advantage_{
+            padding-left: 0px;
+        }
+        span.item-advantage_:nth-child(2) {
+            width: 24% !important;
+        }
+    }
+</style>
+
+<script>
+    require([
+        'jquery'
+    ], function (jQuery) {
+        jQuery('.sonco-benefits img').on('click', function () {
+            var toshow = jQuery(this).parent()[0];
+            jQuery('.pop-advantage').hide();
+            jQuery(toshow).find('.pop-advantage').show();
+        })
+
+        jQuery('.close-pop').on('click', function () {
+            var tohide = jQuery(this).parent()[0];
+            jQuery(tohide).hide();
+            console.log(tohide);
+        })
+    })
+</script>
