@@ -2052,7 +2052,7 @@ body .full_home .banner_home_full .bx-controls .bx-controls-direction {
   loose CSS from casestudy_wt
 ========================== 
 */
-section.strayfigure-content {
+#case-study-wt section.strayfigure-content {
     background-color: #cc4c14;
     height: 982px;
 }
@@ -2066,14 +2066,14 @@ section.strayfigure-content {
     margin-bottom: 1rem !important;
 }
 
-img.stray-one {
+#case-study-wt img.stray-one {
     width: auto;
     height: auto;
     left: -254px;
     top: 33px;
 }
 
-img.stray-two {
+#case-study-wt img.stray-two {
     width: auto;
     height: auto;
     z-index: 4;
@@ -2081,37 +2081,37 @@ img.stray-two {
     right: 49px;
 }
 
-img.stray-three {width: auto;height: auto;right: 67px;top: 39px;}
+#case-study-wt img.stray-three {width: auto;height: auto;right: 67px;top: 39px;}
 
-img.case_barrier {
+#case-study-wt img.case_barrier {
     margin-top: 95px;
     margin-left: 50px;
 }
 
-.strayfigure-content button.button.action.red-main.custom-margin-button {
+#case-study-wt.strayfigure-content button.button.action.red-main.custom-margin-button {
     background-color: #fff !important;
     color: #cc4c13;
     margin-left: 0px;
 }
 
-p.subdescription {
+#case-study-wt p.subdescription {
     color: #fff;
     font-size: 17px;
 }
 
-.strayfigure-mobile .orange-content {
+#case-study-wt .strayfigure-mobile .orange-content {
     width: 100%;
     background-color: #cc4c14;
 }
 
 @media (max-width: 1279px) {
-    .strayfigure-mobile.mobile {
+    #case-study-wt .strayfigure-mobile.mobile {
         display: block !important;
     }
-    .strayfigure-content.desktop {
+    #case-study-wt .strayfigure-content.desktop {
         display: none;
     }
-    .strayfigure-mobile .cmd-6 {
+    #case-study-wt .strayfigure-mobile .cmd-6 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -3032,4 +3032,107 @@ iframe.stray-iframe {
       flex: 0 0 100%;
       max-width: 100%;
   }
+}
+/* 
+==========================
+  loose CSS from casestudy_stray
+========================== 
+*/
+#case-study-stray button.button.action.red-main {
+  background-color: #e62332 !important;
+  border: none !important;
+  width: 172px !important;
+  margin-left: 0px;
+  text-transform: capitalize !important;
+  font-size: 13px !important;
+  height: 42px !important;
+  margin-top: 21px;
+  margin-bottom: 20px !important;
+  color: #fff;
+}
+#case-study-stray #case-study-stray #case-study-stray .case-stray {
+  padding-bottom: 10px;
+  background-color: #032e5a;
+}
+
+#case-study-stray #case-study-stray #case-study-stray .case-stray h3 {
+  color: #fff;
+  font-size: 1.7em;
+  font-family: Camber-Sb;
+  font-weight: normal;
+  margin-bottom: 2vh;
+  text-transform: uppercase;
+}
+
+#case-study-stray #case-study-stray #case-study-stray .strayfigure-content .container {
+  max-width: 1280px;
+}
+
+#case-study-stray #case-study-stray #case-study-stray .strayfigure-content .how-stray {
+  padding-left: 0px;
+  margin-bottom: 1rem !important;
+}
+
+#case-study-stray #case-study-stray #case-study-stray .strayfigure-content .cmd-6{
+  margin: 45px 0;
+}
+
+#case-study-stray #case-study-stray #case-study-stray .stray-two {
+  position: absolute;
+  width: 65%;
+  top: 160px;
+  z-index: 1;
+  right: -14px;
+}
+
+#case-study-stray #case-study-stray .stray-one {
+  width: 70%;
+  position: absolute;
+  z-index: 2;
+  left: -99px;
+}
+
+#case-study-stray #case-study-stray .stray-three {
+  position: absolute;
+  right: 45px;
+  width: 30%;
+  top: 35px;
+}
+
+#case-study-stray #case-study-stray p.subdescription {
+  color: #fff;
+  font-size: 17px;
+}
+
+#case-study-stray #case-study-stray .case-stray .stray-iframe {
+  margin-top: 46px;
+  width: 133%;
+}
+
+#case-study-stray .strayfigure-mobile .coloured-content {
+  background-color: #032e5a;
+}
+
+#case-study-stray .strayfigure-mobile .stray-iframe {
+  max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1279px) {
+  #case-study-stray .strayfigure-mobile.mobile {
+      display: block !important;
+  }
+  #case-study-stray .strayfigure-content.desktop {
+      display: none;
+  }
+  #case-study-stray .strayfigure-mobile .cmd-6 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+#case-study-stray h3 {
+  color: #Fff;
 }
