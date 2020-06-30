@@ -1131,3 +1131,43 @@ button.btn.btn-primary.btn-search {
 .form-group.form-date-field.form-date-search-new.clearfix.has-icon {
     margin: auto 0px !important;
 }
+@media (max-width: 1920px){
+    div#covid-19-bar {
+        position: absolute;
+        top: 891px;
+        width: 1920px;
+        left: 0;
+    }
+}
+@media(max-width: 1480px){
+    div#covid-19-bar {
+        position: absolute;
+        top: 891px;
+        width: 1495px;
+        left: 0;
+    }
+}
+@media(max-width: 1440px){
+    div#covid-19-bar {
+        position: absolute;
+        top: 891px;
+        width: 1480px;
+        left: 0;
+    }
+}
+@media(max-width: 1280px){
+    div#covid-19-bar {
+        position: absolute;
+        top: 891px;
+        width: 1280px;
+        left: 0;
+    }
+}
+@media(max-width: 1024px){
+    div#covid-19-bar {
+        position: absolute;
+        top: 844px;
+        width: 1040px;
+        left: 0;
+    }
+}
