@@ -1,446 +1,177 @@
-<script type="text/javascript" xml="space">// <![CDATA[
-    require([
-        'jquery'
-    ], function (jQuery) {
-        jQuery(document).ready(function ($) {
-            // Toggle de classes para abrir e fechar a sidebar em mobile
-            jQuery('.customer-support__toggle__button').click( function () {
-                jQuery(this).toggleClass('customer-support__toggle__button--active');
-                jQuery('.customer-support__contents').toggleClass('customer-support__contents--open-sidebar');
-            })
-        });
-    });
-    // ]]>
-</script>
-    
-<style xml="space"><!--
-    .customer-support {
-      font-family: 'Raleway', sans-serif;
-      color: #58595b;
-      padding: 0px 0 0;
-    }
-    .customer-support__header {
-      background-color: #e8e5e0;
-      padding: 0px 15px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__header {
-        padding: 40px;
-        margin-bottom: 0;
-      }
-    }
-    .customer-support__title {
-      font-family: Camber-Sb;
-        font-size: 30px !important;
-        color: #e62332;
-      font-weight: bold;
-      margin-bottom: 0;
-      text-transform: uppercase;
-    }
-    
-    .customer-support__featured-list {
-      -webkit-box-align: stretch;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      display: none;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__featured-list {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-      }
-    }
-    .customer-support__feature {
-      display: block;
-      color: #ff1d2f;
-      text-decoration: none;
-      text-align: center;
-      padding: 15px;
-      font-size: 10px;
-      text-transform: uppercase;
-      border: 2px solid #ff1d2f;
-      margin: 7px;
-    }
-    .customer-support__feature:visited {
-      color: #c21f24;
-    }
-    .customer-support__feature:hover {
-      text-decoration: none;
-    }
-    .customer-support__feature__icon {
-      margin-bottom: 3px;
-    }
-    .customer-support__feature__text {
-      font-weight: bold;
-      display: block;
-    }
-    @media screen and (max-width: 780px) {
-      .customer-support__feature {
-        width: 100%;
-        margin: 7px auto;
-      }
-    }
-    .customer-support__columns {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-      flex-flow: column wrap;
-      -webkit-box-align: stretch;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 0;
-      max-width: 1080px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__columns {
-        margin: 40px auto;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-      }
-    }
-    .customer-support__column {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__column {
-        width: 32.3%;
-      }
-    }
-    .customer-support__topic__title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #c21f24;
-      text-transform: uppercase;
-      margin: 0 0 8px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__topic__title {
-        font-size: 20px;
-      }
-    }
-    .customer-support__topic__link {
-      font-family: Camber-Rg !important;
-      font-size: 27px !important;
-      color: #1d2b5a !important;
-      text-decoration: none;
-    }
-    .customer-support__topic__link:visited {
-      font-family: Camber-Rg !important;
-      font-size: 27px !important;
-      color: #1d2b5a !important;
-      text-decoration: none;
-    }
-    .customer-support__subtopics {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__subtopics {
-        font-size: 17px;
-      }
-    }
-    .customer-support__subtopic__item {
-      margin-bottom: 5px;
-    }
-    .customer-support__subtopic__link {
-       font-family: Camber-Rg !important;
-      font-size: 20px !important;
-      color: #1d2b5a !important;
-    }
-    .customer-support__subtopic__link:visited {
-       font-family: Camber-Rg !important;
-      font-size: 20px !important;
-      color: #1d2b5a !important;
-    }
-    .customer-support__subtopic__link:hover {
-      color: #c21f24;
-      text-decoration: underline;
-    }
-    .customer-support__subtopic__link:hover:after {
-      content: " >";
-    }
-    .customer-support__toggle {
-      padding: 10px 20px;
-      background-color: #cccccc;
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__toggle {
-        display: none;
-      }
-    }
-    .customer-support__toggle__button {
-      color: white;
-      background-color: #58595b;
-      border: 1px solid #58595b;
-      padding: 7px 15px;
-      margin: 0;
-    }
-    .customer-support__toggle__button:hover,
-    .customer-support__toggle__button:focus,
-    .customer-support__toggle__button:active {
-      border: 1px solid #58595b;
-      padding: 7px 15px;
-      margin: 0;
-    }
-    .customer-support__toggle__button--active {
-      background-color: transparent;
-      color: #58595b;
-    }
-    .customer-support__toggle__button--active:before {
-      content: "X ";
-    }
-    .customer-support__back-link {
-      font-size: 18px;
-      font-weight: bold;
-      color: #6d6e71;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-      display: none;
-    }
-    .customer-support__back-link:visited {
-      color: #6d6e71;
-    }
-    .customer-support__back-link:hover {
-      text-decoration: none;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__back-link {
-        font-size: 20px;
-        display: block;
-      }
-    }
-    .customer-support__contents {
-      position: relative;
-      min-height: 750px;
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__contents {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: column wrap;
-        -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-        -webkit-box-align: stretch;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        margin: 0 auto;
-        padding: 0;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-      }
-    }
-    .customer-support__contents--open-sidebar .customer-support__sidebar {
-      right: 40px;
-      left: 0;
-      opacity: 1;
-    }
-    .customer-support__sidebar {
-      -webkit-transition: ease 0.3s all;
-      transition: ease 0.3s all;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 15px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -100%;
-      right: 100%;
-      background-color: #e2e4e7;
-      overflow: auto;
-      opacity: 0;
-      z-index: 3;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__sidebar {
-        background-color: white;
-        position: static;
-        width: 32.3%;
-        border-right: 1px solid #9b9b9b;
-        padding: 40px 20px 30px;
-        overflow: visible;
-        opacity: 1;
-      }
-    }
-    .customer-support__content {
-      max-width: 100%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 20px;
-    }
-    @media screen and (min-width: 781px) {
-      .customer-support__content {
-        font-size: 18px;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-        width: 67.7%;
-        padding: 45px 65px;
-      }
-    }
-    .customer-support__content h1 {
-      text-transform: uppercase;
-      color: #c21f24;
-      font-size: 25px!important;
-      margin-bottom: 2rem;
-    }
-    .customer-support__content h2 {
-      margin-bottom: 5px;
-      font-size: 25px !important;
-    }
-    .customer-support__content p,
-    .customer-support__content ul {
-      margin-bottom: 3rem;
-    }
-    .customer-support__featured-paragraph {
-      padding-left: 60px;
-      position: relative;
-      margin-bottom: 30px;
-    }
-    .customer-support__featured-paragraph__image {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    --></style>
+<!-- page identifier: customer-support -->
+<div id="customer-support">
     <div class="page_full">
-    <div class="customer-support">
-    <div class="customer-support__header">
-    <h1 class="customer-support__title">How Can We Help?</h1>
-    <p class="customer-support__subtitle">Answers to the most frequently asked questions</p>
-    <div class="customer-support__featured-list"><a class="customer-support__feature" href="/customer-support-ordering-information"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-truck.png" alt="" /> <span class="customer-support__feature__text">Check Order Status</span> <!-- @todo: trocar cor do ícone --> </a> <a class="customer-support__feature" href="/customer-support-returns-and-exchanges"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-cart.png" alt="" /> <span class="customer-support__feature__text">Returns and Refunds</span> </a> <a class="customer-support__feature" href="/contact"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-customer.png" alt="" /> <span class="customer-support__feature__text">Customer Support</span> </a></div>
-    </div>
-    <div class="breadcrumbs">
-        <ul class="items">
-            <li class="item home">
-                <a href="{{store direct_url=""}}" title="">Home</a>
-            </li>
-            <li class="item">
-                <a href="{{store direct_url="customer-service"}}" title="Customer Service">Customer Service</a>
-            </li>
-        </ul>
-    </div>
-    <style>
-    @media (min-width: 801px){
-        .breadcrumbs a, .breadcrumbs .item:after {
-            font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-            font-weight: 700;
-            color: #5b5b5f;
-            text-transform: uppercase;
-            margin: 0 !important;
-            color: #5b5b5f;
-        }
-        .breadcrumbs {
-            margin: 1em 0 0;
-            padding: 0;  
-        }
-        .after_breadcrumbs .separation-default {
-            margin-top: 1em !important;
-        }    
-    }
-    </style>
-    <div class="customer-support__columns">
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-benefits-and-guarantees"> Benefits &amp; Guarantees </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#safe-shopping-guarantee"> Safe Shopping Guarantees </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#price-match"> Price Match </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#the-sonco-difference"> The Sonco Difference </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#sonco-connect-portal"> Sonco Design Services </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#credit-program"> Sonco Apruve Credit </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#cashback-program"> Sonco Cashback Program </a></li>
-    </ul>
-    </div>
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-returns-and-exchanges"> Returns &amp; Exchanges </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-returns-and-exchanges#order-problem"> What if there is a problem with my order? </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-returns-and-exchanges#damage-product"> What if I receive a defective product? </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-returns-and-exchanges#hassle-return-policy"> "No Hassle" Return Policy </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-returns-and-exchanges#how-make-return"> How to make a return </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-returns-and-exchanges#non-returnable-items"> Non-returnable items </a></li>
-    </ul>
-    </div>
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-your-rights-and-legal-info"> Your Rights &amp; Legal Info </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-your-rights-and-legal-info#privacy-policy"> Privacy Policy </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-your-rights-and-legal-info#terms-and-conditions"> Terms and Conditions </a></li>
-    </ul>
-    </div>
-    </div>
-    <div class="customer-support__columns">
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-shipping-and-delivery"> Shipping &amp; Delivery </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#freeshipping"> FREE Shipping </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#additionalshippingoptions"> Additional Shipping Options </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#deliverytimes"> Delivery Times </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#shippingrestrictions"> Shipping Restrictions </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#checkyourorderstatusonline"> Check Your Order Status </a></li>
-    </ul>
-    </div>
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-ordering-information"> Ordering Information </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#how-to-order-from-sonco"> How to Order from Sonco </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#talk-to-a-product-expert"> Talk to a Product Expert </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#how-to-cancel-or-change-an-order"> How to Cancel or Change an Order </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#accepted-payment-methods"> Accepted Payment Methods </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#when-will-my-credit-be-charged"> When will my Credit Card be charged? </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#what-about-sales-tax"> What about Sales Tax? </a></li>
-    </ul>
-    </div>
-    <div class="customer-support__column">
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/contact"> Customer Service </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Support </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Feedback Center </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Product Suggestions </a></li>
-    </ul>
-    </div>
-    </div>
-    </div>
+        <div class="customer-support">
+            <div class="customer-support__header">
+                <h1 class="customer-support__title">How Can We Help?</h1>
+                <p class="customer-support__subtitle">Answers to the most frequently asked questions</p>
+                <div class="customer-support__featured-list"><a class="customer-support__feature"
+                        href="/customer-support-ordering-information"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-truck.png" alt="" /> <span
+                            class="customer-support__feature__text">Check Order Status</span>
+                        <!-- @todo: trocar cor do ícone --> </a> <a class="customer-support__feature"
+                        href="/customer-support-returns-and-exchanges"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-cart.png" alt="" /> <span
+                            class="customer-support__feature__text">Returns and Refunds</span> </a> <a
+                        class="customer-support__feature" href="/contact"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-customer.png" alt="" /> <span
+                            class="customer-support__feature__text">Customer Support</span> </a></div>
+            </div>
+            <div class="breadcrumbs">
+                <ul class="items">
+                    <li class="item home">
+                        <a href="{{store direct_url=""}}" title="">Home</a>
+                    </li>
+                    <li class="item">
+                        <a href="{{store direct_url="customer-service"}}" title="Customer Service">Customer Service</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="customer-support__columns">
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-benefits-and-guarantees"> Benefits &amp; Guarantees </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#safe-shopping-guarantee"> Safe Shopping
+                                Guarantees </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#price-match"> Price Match </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#the-sonco-difference"> The Sonco
+                                Difference
+                            </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#sonco-connect-portal"> Sonco Design
+                                Services
+                            </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#credit-program"> Sonco Apruve Credit
+                            </a>
+                        </li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#cashback-program"> Sonco Cashback
+                                Program
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-returns-and-exchanges"> Returns &amp; Exchanges </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-returns-and-exchanges#order-problem"> What if there is a problem
+                                with my order? </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-returns-and-exchanges#damage-product"> What if I receive a
+                                defective
+                                product? </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-returns-and-exchanges#hassle-return-policy"> "No Hassle" Return
+                                Policy </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-returns-and-exchanges#how-make-return"> How to make a return
+                            </a>
+                        </li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-returns-and-exchanges#non-returnable-items"> Non-returnable
+                                items
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-your-rights-and-legal-info"> Your Rights &amp; Legal Info </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-your-rights-and-legal-info#privacy-policy"> Privacy Policy </a>
+                        </li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-your-rights-and-legal-info#terms-and-conditions"> Terms and
+                                Conditions </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="customer-support__columns">
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-shipping-and-delivery"> Shipping &amp; Delivery </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#freeshipping"> FREE Shipping </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#additionalshippingoptions"> Additional
+                                Shipping Options </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#deliverytimes"> Delivery Times </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#shippingrestrictions"> Shipping
+                                Restrictions
+                            </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#checkyourorderstatusonline"> Check Your
+                                Order
+                                Status </a></li>
+                    </ul>
+                </div>
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-ordering-information"> Ordering Information </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#how-to-order-from-sonco"> How to Order from
+                                Sonco </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#talk-to-a-product-expert"> Talk to a
+                                Product
+                                Expert </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#how-to-cancel-or-change-an-order"> How to
+                                Cancel or Change an Order </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#accepted-payment-methods"> Accepted Payment
+                                Methods </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#when-will-my-credit-be-charged"> When will
+                                my
+                                Credit Card be charged? </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#what-about-sales-tax"> What about Sales
+                                Tax?
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="customer-support__column">
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/contact">
+                            Customer Service </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Support </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Feedback Center </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Product Suggestions </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <link rel="stylesheet" type="text/css" media="all" href="/media/wysiwyg/politics-page/estilo.css">
+
+    <script type="text/javascript" xml="space">// <![CDATA[
+        require([
+            'jquery'
+        ], function (jQuery) {
+            jQuery(document).ready(function ($) {
+                // Toggle de classes para abrir e fechar a sidebar em mobile
+                jQuery('.customer-support__toggle__button').click(function () {
+                    jQuery(this).toggleClass('customer-support__toggle__button--active');
+                    jQuery('.customer-support__contents').toggleClass('customer-support__contents--open-sidebar');
+                })
+            });
+        });
+        // ]]>
+    </script>
+</div>
+<!-- page identifier: customer-support -->
