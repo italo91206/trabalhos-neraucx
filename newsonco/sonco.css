@@ -3663,3 +3663,29 @@ p.subdescription {
       margin-top: 1em !important;
   }
 }
+/* 
+==========================
+  loose CSS from customer-support-shipping-and-delivery
+========================== 
+*/
+@media (min-width: 801px) {
+
+  #customer-support-shipping-and-delivery .breadcrumbs a,
+  .breadcrumbs .item:after {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      color: #5b5b5f;
+      text-transform: uppercase;
+      margin: 0 !important;
+      color: #5b5b5f;
+  }
+
+  #customer-support-shipping-and-delivery .breadcrumbs {
+      margin: 0 0 1em;
+      padding: 0;
+  }
+
+  .after_breadcrumbs .separation-default {
+      margin-top: 1em !important;
+  }
+}
