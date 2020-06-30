@@ -3689,3 +3689,28 @@ p.subdescription {
       margin-top: 1em !important;
   }
 }
+/* 
+==========================
+  loose CSS from design-services
+========================== 
+*/
+@media (min-width: 801px) {
+
+  #design-services .breadcrumbs a,
+  .breadcrumbs .item:after {
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      color: #5b5b5f;
+      text-transform: uppercase;
+      margin: 0 !important;
+      color: #5b5b5f;
+  }
+
+  #design-services .breadcrumbs {
+      margin: 1em 0 0;
+  }
+
+  .after_breadcrumbs .separation-default {
+      margin-top: 1em !important;
+  }
+}
