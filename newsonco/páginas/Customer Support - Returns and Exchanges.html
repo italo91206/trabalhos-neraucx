@@ -1,149 +1,218 @@
-<script type="text/javascript" xml="space">// <![CDATA[
-    require([
-        'jquery'
-    ], function (jQuery) {
-        jQuery(document).ready(function ($) {
-            // Toggle de classes para abrir e fechar a sidebar em mobile
-            jQuery('.customer-support__toggle__button').click( function () {
-                jQuery(this).toggleClass('customer-support__toggle__button--active');
-                jQuery('.customer-support__contents').toggleClass('customer-support__contents--open-sidebar');
-            })
-    
-            // Rolagem de tela até tópico em questão
-            jQuery('.customer-support__subtopic__link_local').click( function (e) {
-                e.preventDefault();
-                var url = jQuery(this).attr('href');
-                var hash = url.substring(url.indexOf('#') + 1);
-                
-                if ( jQuery('#'+hash).length > 0 ) {
-                    var target_scroll = jQuery('#'+hash).offset().top;
-                    
-                    jQuery('html, body').animate({
-                        scrollTop: target_scroll - 50
-                    });
-    
-                    // Fecha a sidebar após abrir o tópico
-                    if ( jQuery('.customer-support__contents').hasClass('customer-support__contents--open-sidebar') ) {
-                        jQuery('.customer-support__contents').removeClass('customer-support__contents--open-sidebar')
+<!-- page identifier: customer-support-returns-and-exchanges -->
+<div id="customer-support-returns-and-exchanges">
+    <script type="text/javascript" xml="space">// <![CDATA[
+        require([
+            'jquery'
+        ], function (jQuery) {
+            jQuery(document).ready(function ($) {
+                // Toggle de classes para abrir e fechar a sidebar em mobile
+                jQuery('.customer-support__toggle__button').click(function () {
+                    jQuery(this).toggleClass('customer-support__toggle__button--active');
+                    jQuery('.customer-support__contents').toggleClass('customer-support__contents--open-sidebar');
+                })
+
+                // Rolagem de tela até tópico em questão
+                jQuery('.customer-support__subtopic__link_local').click(function (e) {
+                    e.preventDefault();
+                    var url = jQuery(this).attr('href');
+                    var hash = url.substring(url.indexOf('#') + 1);
+
+                    if (jQuery('#' + hash).length > 0) {
+                        var target_scroll = jQuery('#' + hash).offset().top;
+
+                        jQuery('html, body').animate({
+                            scrollTop: target_scroll - 50
+                        });
+
+                        // Fecha a sidebar após abrir o tópico
+                        if (jQuery('.customer-support__contents').hasClass('customer-support__contents--open-sidebar')) {
+                            jQuery('.customer-support__contents').removeClass('customer-support__contents--open-sidebar')
+                        }
+
+                        if (jQuery('.customer-support__toggle__button').hasClass('customer-support__toggle__button--active')) {
+                            jQuery('.customer-support__toggle__button').removeClass('customer-support__toggle__button--active')
+                        }
                     }
-    
-                    if ( jQuery('.customer-support__toggle__button').hasClass('customer-support__toggle__button--active') ) {
-                        jQuery('.customer-support__toggle__button').removeClass('customer-support__toggle__button--active')
-                    }
-                }
-            })
+                })
+            });
         });
-    });
     // ]]></script>
-    <link  rel="stylesheet" type="text/css"  media="all" href="/media/wysiwyg/politics-page/estilo.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/media/wysiwyg/politics-page/estilo.css" />
     <div class="page_full">
-    <div class="customer-support">
-    <div class="customer-support__header">
-    <h1 class="customer-support__title">How Can We Help?</h1>
-    <p class="customer-support__subtitle">Answers to the most frequently asked questions</p>
-    <div class="customer-support__featured-list"><a class="customer-support__feature" href="/customer-support-ordering-information"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-truck.png" alt=""> <span class="customer-support__feature__text">Check Order Status</span> <!-- @todo: trocar cor do ícone --> </a> <a class="customer-support__feature" href="/customer-support-returns-and-exchanges"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-cart.png" alt=""> <span class="customer-support__feature__text">Returns and Refunds</span> </a> <a class="customer-support__feature" href="/contact"> <img class="customer-support__feature__icon" src="/media/wysiwyg/politics-page/imgs/icon-customer.png" alt=""> <span class="customer-support__feature__text">Customer Support</span> </a></div>
+        <div class="customer-support">
+            <div class="customer-support__header">
+                <h1 class="customer-support__title">How Can We Help?</h1>
+                <p class="customer-support__subtitle">Answers to the most frequently asked questions</p>
+                <div class="customer-support__featured-list"><a class="customer-support__feature"
+                        href="/customer-support-ordering-information"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-truck.png" alt=""> <span
+                            class="customer-support__feature__text">Check Order Status</span>
+                        <!-- @todo: trocar cor do ícone --> </a> <a class="customer-support__feature"
+                        href="/customer-support-returns-and-exchanges"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-cart.png" alt=""> <span
+                            class="customer-support__feature__text">Returns and Refunds</span> </a> <a
+                        class="customer-support__feature" href="/contact"> <img class="customer-support__feature__icon"
+                            src="/media/wysiwyg/politics-page/imgs/icon-customer.png" alt=""> <span
+                            class="customer-support__feature__text">Customer Support</span> </a></div>
+            </div>
+            <div class="customer-support__toggle"><button class="customer-support__toggle__button"> Table of Contents
+                </button></div>
+            <div class="customer-support__contents">
+                <div class="customer-support__sidebar">
+                    <div class="breadcrumbs">
+                        <ul class="items">
+                            <li class="item home">
+                                <a href="{{store direct_url="customer-support"}}" title="Customer Support">Customer
+                                    Support</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{store direct_url="customer-support-returns-and-exchanges"}}"
+                                    title="Returns and Exchanges">Returns and Exchanges</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- a class="customer-support__back-link" href="customer-support"> &lt; Back to help </a -->
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-benefits-and-guarantees"> Benefits &amp; Guarantees </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#safe-shopping-guarantee"> Safe Shopping
+                                Guarantees </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#price-match"> Price Match </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#the-sonco-difference"> The Sonco
+                                Difference </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#sonco-connect-portal"> Sonco Design
+                                Services </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#credit-program"> Sonco Apruve Credit
+                            </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-benefits-and-guarantees#cashback-program"> Sonco Cashback
+                                Program </a></li>
+                    </ul>
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-your-rights-and-legal-info"> Your Rights &amp; Legal Info </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-your-rights-and-legal-info#privacy-policy"> Privacy Policy </a>
+                        </li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-your-rights-and-legal-info#terms-and-conditions"> Terms and
+                                Conditions </a></li>
+                    </ul>
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-shipping-and-delivery"> Shipping &amp; Delivery </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#free-shipping"> FREE Shipping </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#additional-shipping-options"> Additional
+                                Shipping Options </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#delivery-times"> Delivery Times </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#shipping-restrictions"> Shipping
+                                Restrictions </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-shipping-and-delivery#check-your-order-status-online"> Check
+                                Your Order Status </a></li>
+                    </ul>
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link"
+                            href="/customer-support-ordering-information"> Ordering Information </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#how-to-order-from-sonco"> How to Order from
+                                Sonco </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#talk-to-a-product-expert"> Talk to a
+                                Product Expert </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#how-to-cancel-or-change-an-order"> How to
+                                Cancel or Change an Order </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#accepted-payment-methods"> Accepted Payment
+                                Methods </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#when-will-my-credit-be-charged"> When will
+                                my Credit Card be charged? </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/customer-support-ordering-information#what-about-sales-tax"> What about Sales
+                                Tax? </a></li>
+                    </ul>
+                    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/contact">
+                            Customer Service </a></h2>
+                    <ul class="customer-support__subtopics">
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Support </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Feedback Center </a></li>
+                        <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link"
+                                href="/contact"> Product Suggestions </a></li>
+                    </ul>
+                </div>
+                <div class="customer-support__content">
+                    <h1 id="order-problem">What if there is a problem with my order?</h1>
+                    <p>If you receive an order acknowledgement from Sonco, the first thing to do is call your Sales
+                        Account Executive or complete our <a href="/contact">online support request form</a>. We will
+                        take care of you, no matter what. The only policy we have is we'll do whatever it takes to fix
+                        the problem and make you happy.</p>
+                    <h1 id="damage-product">What if I receive a damaged or defective product?</h1>
+                    <p>If you believe you've received a damaged product <span style="color: #000000;"><strong>you have
+                                48 hours to contact our support team</strong></span> by simply completing our <a
+                            href="/contact">online support request form</a> and we'll respond quickly with assistance or
+                        to provide you with a return authorization (RA) number. If we determine the unit was damaged in
+                        transit our failed under warranty, we will cover shipping costs within the U.S. to replace the
+                        unit for you.</p>
+                    <p>Please refer to our <a
+                            href="/customer-support-your-rights-and-legal-info#terms-and-conditions">terms and
+                            condition</a> for further information.</p>
+                    <h1 id="hassle-return-policy">"No Hassle" Return Policy</h1>
+                    <p>We want you to be completely happy with your purchase. If you are not satisfied with any product,
+                        for any reason, you may return <span style="color: #000000;"><strong>unused product in its
+                                original packaging</strong></span>, for a refund of the purchase price, an in-house
+                        credit, or exchange for another product within a fair amount of time from the shipping date
+                        (usually 30 days). Outbound shipping, including purchases eligible for free shipping, the
+                        shipping cost will be deducted from your credit or refund.</p>
+                    <h1 id="how-make-return">How to Make a Return</h1>
+                    <p>We're sorry your purchase didn't work out for you. To make a return, please contact Sonco
+                        <strong>support team</strong> by simply completing our <a href="/contact">online support request
+                            form</a> to arrange for an RA (Return Authorization) number. Next, to ensure your exchange
+                        or credit is processed as quickly as possible and to help you avoid a return adjustment, please
+                        follow the below checklist:</p>
+                    <ul>
+                        <li>If you have redeemed a manufacturer rebate or promotion, your return will be subject to a
+                            restocking fee.</li>
+                        <li>Items must be returned in the condition they were received, including all accessories,
+                            documentation, and packaging materials.</li>
+                        <li>The product should be packed in the original product box with the UPC codes intact.</li>
+                        <li>We will send you a return label our information from a 3rd party carrier who will be picking
+                            up the material.</li>
+                        <li>If your return is approved, we will provide paperwork with instructions on how to return the
+                            material.</li>
+                        <li>Remember that outbound shipping, including purchases eligible for free shipping, the
+                            shipping cost will be deducted from your credit or refund.</li>
+                    </ul>
+                    <p>Once we've received your return, we'll process it as quickly as possible, but it can take 7-10
+                        business days for the credit to be applied by the issuer of the credit card. Feel free to reach
+                        out to customer service directly with any questions or concerns.</p>
+                    <h1 id="non-returnable-items">Non-returnable Items</h1>
+                    <p>While we maintain the most liberal return policy in the industry, there are certain items that
+                        cannot be returned for very specific reasons. These items include:</p>
+                    <ul>
+                        <li>Special orders</li>
+                        <li>Branding or Custom printed products</li>
+                        <li>Oversized or overweight items</li>
+                        <li>Discontinued products, closeouts, and used products</li>
+                        <li>Made to order products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/customer-support-interactions.js" type="text/javascript" xml="space"></script>
     </div>
-    <div class="customer-support__toggle"><button class="customer-support__toggle__button"> Table of Contents </button></div>
-    <div class="customer-support__contents">
-    <div class="customer-support__sidebar">
-    <div class="breadcrumbs">
-        <ul class="items">
-            <li class="item home">
-                <a href="{{store direct_url="customer-support"}}" title="Customer Support">Customer Support</a>
-            </li>
-            <li class="item">
-                <a href="{{store direct_url="customer-support-returns-and-exchanges"}}" title="Returns and Exchanges">Returns and Exchanges</a>
-            </li>
-        </ul>
-    </div>
-    <style>
-    @media (min-width: 801px){
-        .breadcrumbs a, .breadcrumbs .item:after {
-            font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-            font-weight: 700;
-            color: #5b5b5f;
-            text-transform: uppercase;
-            margin: 0 !important;
-            color: #5b5b5f;
-        }
-        .breadcrumbs {
-            margin: 0 0 1em;
-            padding: 0;  
-        }
-        .after_breadcrumbs .separation-default {
-            margin-top: 1em !important;
-        }    
-    }
-    </style>
-    <!-- a class="customer-support__back-link" href="customer-support"> &lt; Back to help </a -->
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-benefits-and-guarantees"> Benefits &amp; Guarantees </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#safe-shopping-guarantee"> Safe Shopping Guarantees </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#price-match"> Price Match </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#the-sonco-difference"> The Sonco Difference </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#sonco-connect-portal"> Sonco Design Services </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#credit-program"> Sonco Apruve Credit </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-benefits-and-guarantees#cashback-program"> Sonco Cashback Program </a></li>
-    </ul>
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-your-rights-and-legal-info"> Your Rights &amp; Legal Info </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-your-rights-and-legal-info#privacy-policy"> Privacy Policy </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-your-rights-and-legal-info#terms-and-conditions"> Terms and Conditions </a></li>
-    </ul>
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-shipping-and-delivery"> Shipping &amp; Delivery </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#free-shipping"> FREE Shipping </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#additional-shipping-options"> Additional Shipping Options </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#delivery-times"> Delivery Times </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#shipping-restrictions"> Shipping Restrictions </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-shipping-and-delivery#check-your-order-status-online"> Check Your Order Status </a></li>
-    </ul>
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/customer-support-ordering-information"> Ordering Information </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#how-to-order-from-sonco"> How to Order from Sonco </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#talk-to-a-product-expert"> Talk to a Product Expert </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#how-to-cancel-or-change-an-order"> How to Cancel or Change an Order </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#accepted-payment-methods"> Accepted Payment Methods </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#when-will-my-credit-be-charged"> When will my Credit Card be charged? </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/customer-support-ordering-information#what-about-sales-tax"> What about Sales Tax? </a></li>
-    </ul>
-    <h2 class="customer-support__topic__title"><a class="customer-support__topic__link" href="/contact"> Customer Service </a></h2>
-    <ul class="customer-support__subtopics">
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Support </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Feedback Center </a></li>
-    <li class="customer-support__subtopic__item"><a class="customer-support__subtopic__link" href="/contact"> Product Suggestions </a></li>
-    </ul>
-    </div>
-    <div class="customer-support__content">
-    <h1 id="order-problem">What if there is a problem with my order?</h1>
-    <p>If you receive an order acknowledgement from Sonco, the first thing to do is call your Sales Account Executive or complete our <a href="/contact">online support request form</a>. We will take care of you, no matter what. The only policy we have is we'll do whatever it takes to fix the problem and make you happy.</p>
-    <h1 id="damage-product">What if I receive a damaged or defective product?</h1>
-    <p>If you believe you've received a damaged product <span style="color: #000000;"><strong>you have 48 hours to contact our support team</strong></span> by simply completing our <a href="/contact">online support request form</a> and we'll respond quickly with assistance or to provide you with a return authorization (RA) number. If we determine the unit was damaged in transit our failed under warranty, we will cover shipping costs within the U.S. to replace the unit for you.</p>
-    <p>Please refer to our <a href="/customer-support-your-rights-and-legal-info#terms-and-conditions">terms and condition</a> for further information.</p>
-    <h1 id="hassle-return-policy">"No Hassle" Return Policy</h1>
-    <p>We want you to be completely happy with your purchase. If you are not satisfied with any product, for any reason, you may return <span style="color: #000000;"><strong>unused product in its original packaging</strong></span>, for a refund of the purchase price, an in-house credit, or exchange for another product within a fair amount of time from the shipping date (usually 30 days). Outbound shipping, including purchases eligible for free shipping, the shipping cost will be deducted from your credit or refund.</p>
-    <h1 id="how-make-return">How to Make a Return</h1>
-    <p>We're sorry your purchase didn't work out for you. To make a return, please contact Sonco <strong>support team</strong> by simply completing our <a href="/contact">online support request form</a> to arrange for an RA (Return Authorization) number. Next, to ensure your exchange or credit is processed as quickly as possible and to help you avoid a return adjustment, please follow the below checklist:</p>
-    <ul>
-    <li>If you have redeemed a manufacturer rebate or promotion, your return will be subject to a restocking fee.</li>
-    <li>Items must be returned in the condition they were received, including all accessories, documentation, and packaging materials.</li>
-    <li>The product should be packed in the original product box with the UPC codes intact.</li>
-    <li>We will send you a return label our information from a 3rd party carrier who will be picking up the material.</li>
-    <li>If your return is approved, we will provide paperwork with instructions on how to return the material.</li>
-    <li>Remember that outbound shipping, including purchases eligible for free shipping, the shipping cost will be deducted from your credit or refund.</li>
-    </ul>
-    <p>Once we've received your return, we'll process it as quickly as possible, but it can take 7-10 business days for the credit to be applied by the issuer of the credit card. Feel free to reach out to customer service directly with any questions or concerns.</p>
-    <h1 id="non-returnable-items">Non-returnable Items</h1>
-    <p>While we maintain the most liberal return policy in the industry, there are certain items that cannot be returned for very specific reasons. These items include:</p>
-    <ul>
-    <li>Special orders</li>
-    <li>Branding or Custom printed products</li>
-    <li>Oversized or overweight items</li>
-    <li>Discontinued products, closeouts, and used products</li>
-    <li>Made to order products</li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    <script src="js/customer-support-interactions.js" type="text/javascript" xml="space"></script>
-    </div>
+</div>
+<!-- page identifier: customer-support-returns-and-exchanges -->
