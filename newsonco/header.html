@@ -1,0 +1,820 @@
+<meta name="google-site-verification" content="X_PGE_kBhXdaT9hHZvv1GzIWHUpNKRdF5fR_0aOWCg8" />
+
+<link  rel="stylesheet" type="text/css" href="/pub/media/css/sonco.css?v=2020062933" />
+<style>
+.products-grid .product-item-info .product-image-photo {
+    min-height: 143px !important;
+    max-height: 143px !important;
+}
+
+.page-title-wrapper .form-quote .quote .cart2quote-accept-checkout-btn {
+    margin-top: -32px !important;
+}
+
+button.action.primary.cart2quote-accept-checkout-btn {
+    margin-top: -53px !important;
+    margin-right: 28px;
+    float: right;
+}
+</style>
+<script type="text/x-magento-init">
+{
+                    "*": {
+                        "Magento_GoogleTagManager/js/google-tag-manager": {
+                            "gtmAccountId": "GTM-KT9WXQP",
+                            "storeCurrencyCode": "USD"
+                        }
+                    }
+                }
+</script>
+
+<script>
+window.__lo_site_id = 95276;
+
+    (function() {
+        var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+        wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+      })();
+
+</script>
+<script  type="text/javascript"  src="/pub/media/css/soncojs.js"></script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+mixpanel.init("e74ae2f394d2129d9c7492ce8cc18fea");</script><!-- end Mixpanel -->
+
+<style>
+@font-face {font-family: 'Camber-Rg';src: url('/media/new-fonts/3A75A8_A_0.ttf') format('truetype');}
+body,span,p {
+  font-family: Camber-Rg !important;
+}
+.cms-page-view h3 {
+    color: #444;
+}
+.page-title-wrapper .form-quote .quote .cart2quote-accept-checkout-btn {
+    margin-top: -32px !important;
+}
+button.action.primary.cart2quote-accept-checkout-btn {
+    margin-top: -53px !important;
+    margin-right: 28px;
+    float: right;
+}
+</style>
+<script>
+require(['jquery', 'jquery/ui'], function($){
+    var insertall = 0;
+    var urlpath = window.location.pathname;
+    var backtocart = `
+        <div class="w-100 backtocart" style="position: relative;">
+            <a href="/checkout/cart" style="
+            position: absolute;
+            top: 11px;
+            z-index: 20;
+        ">&lt; Back to cart</a>
+        </div>
+    `;
+    var backtoship = `
+    <div class="w-100 backtoship"  style="position: relative;">
+            <a style="
+            position: absolute;
+            top: 11px;
+            z-index: 20;
+        ">&lt; Back to Shipping</a>
+        </div>
+    `;
+    jQuery(document).ajaxComplete(function(){
+        if(urlpath.includes('checkout') && urlpath.includes('cart') == false) {
+            var myvar = setInterval(function() {
+                console.log('numero = ' + insertall);
+                if (jQuery('.customBread').length == 0 && jQuery('.opc-progress-bar').length > 0 ) { 
+                    console.log('insert customBread')
+                    var item = jQuery(jQuery('.opc-progress-bar-item')[0]).clone();
+                    jQuery(item).find('span').html('Cart');
+                    jQuery(item).addClass('customBread');
+                    jQuery(item).removeClass('_active');
+                    jQuery(item).prependTo('ul.opc-progress-bar');  
+                    insertall++;    
+                }
+
+                if(!jQuery('.security-layer').length) {
+                    jQuery('#maincontent.page-main').prepend(
+                        `
+                        <div class="w-100 security-layer">
+                                <div class="security container page-main">
+                                 <div style="float: right;position: relative;">
+                                    <span style="
+                                        top: 37px;
+                                        position: absolute;
+                                        left: -117px;
+                                        margin-top: -20px;
+                                    ">Secure Checkout</span><img src="/media/wysiwyg/security-checkout.png">
+                                    </div>
+                                </div>
+                            </div>
+                    `);
+                    insertall++;
+                }
+                if(jQuery('.newbutton-total').length == 0 && jQuery('.grand.totals span.price').length > 0 ) {
+                    jQuery('.opc-block-summary').append(`
+                        <div class="primary">
+                            <button style="float:right" class="action primary checkout newbutton-total" type="submit" title="Order Total">
+                                <span data-bind="i18n: 'Place Order'">`+jQuery('.grand.totals span.price').html()+`</span>
+                            </button>
+                        </div>
+                    `);
+                    insertall++;
+                }
+
+                if(window.location.href.includes('#payment') == false && jQuery('.backtocart').length == 0 ) {
+                    clearBack();
+                    jQuery(backtocart).insertBefore('.opc-progress-bar');
+                    insertall++;
+                } else if(jQuery('.backtoship').length == 0 && window.location.href.includes('#payment') == true) {
+                    clearBack();
+                    jQuery(backtoship).insertBefore('.opc-progress-bar');
+                    insertall++;
+                }
+
+                if(!jQuery('.contactus-tel').length) {
+                    jQuery('#about-div-link').prepend(
+                    `
+                        <div class="w-100 contactus-tel" style="
+                            text-align: right;
+                            font-weight: 600;
+                            color: white;
+                            padding-top: 7px;
+                            padding-right: 8%;
+                        ">Need help ? Contact us 888 766-2615</div>
+                    `);
+                    insertall++;
+                }
+
+                if (!jQuery('.opc-block-summary .items-in-cart').hasClass('active')) {
+                    jQuery('.opc-block-summary .items-in-cart > .title').click();
+                    jQuery('.opc-block-summary .items-in-cart .product .toggle').each(function(item){
+                        jQuery(this).click();
+                    });
+                }
+                
+                if(insertall > 5) {
+                    console.log('clearInterval');
+                    clearInterval(myvar);
+                }
+
+            }, 100);
+        }
+        jQuery('.backtoship').on('click',function(){
+            console.log('backtopship')
+            var elem = jQuery(jQuery('.opc-progress-bar').children()[1]).find('span');
+            jQuery(elem).click();
+            clearBack();
+            jQuery(backtocart).insertBefore('.opc-progress-bar');
+        })
+    });
+            
+    function clearBack() {
+        jQuery('.backtocart').remove();
+        jQuery('.backtoship').remove();
+    }
+    
+    window.onhashchange = function() { 
+        var newurl = window.location.pathname;
+        if(window.location.href.includes('#payment')) { 
+            if(window.location.href.includes('#payment') == false && jQuery('.backtocart').length ) {
+                clearBack();
+                jQuery(backtocart).insertBefore('.opc-progress-bar');
+            } else if(jQuery('.backtoship').length == 0 && window.location.href.includes('#payment') == true) {
+                clearBack();
+                jQuery(backtoship).insertBefore('.opc-progress-bar');
+            }
+        }
+    }
+
+    var checkMiniCartQuote = setInterval(function(){
+        var cartQty = jQuery('.minicart-wrapper .counter-number').text();
+        var quoteQty = jQuery('.miniquote-wrapper .counter-number').text();
+        if (jQuery('.cart-mobile .counter').length == 0) {
+            jQuery('.cart-mobile').append('<span class="counter">(<span class="counter-number">' + cartQty + '</span>)</span>');
+            jQuery('.quote-mobile').append('<span class="counter">(<span class="counter-number">' + quoteQty + '</span>)</span>');
+        } else {
+            var cartMobileQty = jQuery('.cart-mobile .counter-number').text();
+            if (cartQty != cartMobileQty) {
+                jQuery('.cart-mobile .counter').remove();
+                jQuery('.cart-mobile').append('<span class="counter">(<span class="counter-number">' + cartQty + '</span>)</span>');
+            }
+
+            var quoteMobileQty = jQuery('.quote-mobile .counter-number').text();
+            if (quoteQty != quoteMobileQty) {
+                jQuery('.quote-mobile .counter').remove();
+                jQuery('.quote-mobile').append('<span class="counter">(<span class="counter-number">' + quoteQty + '</span>)</span>');
+            }
+        }
+    },100);
+});
+</script>
+<link  rel="stylesheet" type="text/css" href="/media/css/product-page.css" />
+<!-- POS GO LIVE FIXES - ANDERSON -->
+<style>
+.fotorama__caption {
+    display: none;
+}
+
+body #about-div-link .top_account_box ul li.mysonco_dropdown:first-child {
+    color: #fff;
+    font-weight: bold;
+    border-right: none !important;
+    position: relative;
+    overflow: visible;
+    top: -10px;
+    left: 0px;
+    text-align: right;
+    line-height: 35px;
+}
+body #about-div-link .mysonco_dropdown:hover .mysonco_menu {
+    display: block !important;
+    position: absolute !important;
+    top: 25px;
+    right: -26px !important;
+    color: #e62332;
+    width: 235px;
+    border: 2px solid #e62332;
+    z-index: 9000;
+    background: #fff;
+    border-top: 1px #fff solid;
+}
+
+body #about-div-link .top_account_box .mysonco_dropdown .mysonco_menu li.menu_item {
+    display: block !important;
+    float: none;
+    clear: both;
+    text-align: left;
+    padding: 8px 15px 0;
+}
+
+body #about-div-link .top_account_box .mysonco_dropdown .mysonco_menu li.menu_item a {
+    color: #e62332 !important;
+    text-transform: capitalize;
+}
+
+body #about-div-link .mysonco_dropdown .mysonco_menu li.welcome {
+    background: #e62332;
+    display: block !important;
+    float: none !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 8px 15px !important;
+    color: #fff !important;
+    text-align: center;
+    border-right: none !important;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .page-with-filter .columns .sidebar-main {
+        order: 0 !important;
+        -ms-flex-order: 0 !important;
+        -webkit-order: 0 !important;
+    }
+
+    .filter-title {
+        display: block;
+        /* position: relative; */
+    }
+
+    .page-products .columns {
+        padding-top: 60px !important;
+    }
+
+    body.page-products .filter-title strong {
+        margin-top: 20px;
+    }
+
+    .toolbar.toolbar-products {
+        display: none;
+    }
+
+    .products.wrapper ~ .toolbar {
+        display: block !important;
+    }
+
+    .filter.block {
+        margin-bottom: 0 !important;
+    }
+
+    #narrow-by-list {
+        display: none;
+    }
+}
+body.account .sidebar.sidebar-additional,
+.block-collapsible-nav .item:nth-child(3),
+.block-collapsible-nav .item:nth-child(4),
+.block-collapsible-nav .item:nth-child(11) {
+    display: none;
+}
+@media (max-width: 767px) {
+    button.button.action.red-main.full-width {
+        width: 100% !important;
+    }
+}
+#algolia-autocomplete-container {
+    width: 95% !important;
+    max-width: 95% !important;
+}
+#algolia-autocomplete-container .aa-dropdown-menu {
+    min-width: 75% !important;
+}
+@media (max-width: 1279px) {
+    .application .ba-slider .mobile {
+        display: block !important;
+    }
+    .application .ba-slider .desktop {
+        display: none !important;
+    }
+}
+.miniquote-wrapper .action.showquote .counter.qty {
+    position: relative !important;
+    display: block;
+    top: 0;
+    text-align: center;
+    left: 0 !important;
+}
+
+.miniquote-wrapper {
+    width: 55px !important;
+    text-align: center;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.minicart-wrapper {
+    width: 55px !important;
+    text-align: center;
+}
+
+.minicart-wrapper .action.showcart .counter.qty {
+    margin-left: 0px !important;
+    text-align: center;
+    position: relative !important;
+    top: 0 !important;
+    display: block !important;
+    margin-top: 2px !important;
+}
+
+.minicart-wrapper .action.showcart:before {
+    display: block !important;
+}
+
+.inserthere-quotecart {
+    padding-right: 0px !important;
+}
+
+.category-shop-by-application .column.main {
+    display: none;
+}
+.opc-block-summary .primary {
+    display: none;
+    height: 55px;
+    margin-top: 8px;
+}
+.checkout-payment-method .payment-methods .actions-toolbar .primary {
+    padding-left: 0px !important;
+}
+
+.checkout-index-index .modal-content #opc-sidebar .opc-block-summary {
+    height: auto !important;
+}
+
+span.item-advantage_ {
+    width: 25%;
+}
+
+span.item-advantage_:nth-child(2) {
+    padding-left: 30px;
+    width: 26% !important;
+}
+
+span.item-advantage_:nth-child(3) {
+    padding-left: 15px;
+}
+
+span.item-advantage_:nth-child(4) {
+    width: 20%;
+    padding-left: 14px;
+}
+
+@media (max-width: 799px) {
+    body.catalogsearch-result-index .page-wrapper .page-main .columns .column.main .toolbar.toolbar-products, 
+    body.catalog-category-view .page-wrapper .page-main .columns .column.main .toolbar.toolbar-products {
+        display: block;
+    }
+    .page-products .sorter,
+    body.catalog-category-view .page-wrapper .page-main .columns .column.main .toolbar.toolbar-products .toolbar-amount {
+        display: none;
+    }
+.block-authentication .actions-toolbar {
+    min-height: 40px;
+}
+
+.actions-toolbar > .primary .action {
+    margin-top: 0px !important;
+}
+}
+.fotorama__nav__frame.fotorama__nav__frame--thumb {
+    border: 1px solid #fff;
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 3px
+}
+
+.fotorama__nav__frame.fotorama__nav__frame--thumb:hover,
+.fotorama__nav__frame.fotorama__nav__frame--thumb.fotorama__active {
+    border: 1px solid #ff5501;
+}
+
+.fotorama__thumb-border {
+    display: none !important;
+}
+
+.fotorama__nav--thumbs .fotorama__nav__frame {
+    padding-right: 0px !important;
+}
+
+body.customer-account-login a.action.create.primary {
+    width: 210px !important;
+}
+
+:root .inserthere-quotecart a.action.showquote span.counter.qty {
+   top: 0px !important;
+}
+
+@media (max-width: 768px){
+    body .newsletter-container .block.newsletter .content .special-financing {
+        padding-right: 0px;
+    }
+
+    .block-static-block span.item-advantage_ {
+        padding-left: 0px !important;
+        width: 21% !important;
+    }
+
+    span.item-advantage_:nth-child(1) {
+        width: 25% !important;
+    }
+
+    body .footer.content .footer_full .box_full .box_footer:nth-child(2) {
+        width: 25%;
+    }
+
+    body .footer.content .footer_full .box_full .box_footer:nth-child(6) {
+        width: 37%;
+    }
+
+    body .footer.content .footer_full .box_full .box_footer img {
+        margin-left: 13%
+    }
+}
+
+.inserthere-quotecart {
+    display: flex;
+}
+
+img.callfor {
+    align-self: baseline;
+    margin-right: 5px;
+}
+
+.minicart-wrapper {
+    display: inline-flex !important;
+    order: 1;
+}
+
+.quote-mobile .counter-label,
+.cart-mobile .counter-label {
+    display: none;
+}
+
+a.lupa-mobile {
+    padding-right: 0px;
+}
+
+a.quote-mobile,
+a.cart-mobile {
+    display: inline-block;
+    text-align: center;
+    padding-right: 0px;
+    min-width: 30px;
+}
+
+.quote-mobile span.counter,
+.cart-mobile span.counter {
+    display: block;
+    text-align: center;
+    margin-top: -10px;
+    color: #032e5a !important;
+}
+
+.cart-mobile::before,
+.quote-mobile::before {
+    background-position: center top
+}
+
+/** LOGIN PAGE **/
+body.customer-account-login h1.page-title {
+    padding-top: 35px;
+    color: #1d2b5a;
+}
+
+body.customer-account-login .login-container .block-title strong#block-customer-login-heading, 
+body.customer-account-login .login-container .block-title strong#block-new-customer-heading {
+    font-size: 22px !important;
+}
+
+body.customer-account-login .login-container .block-title {
+    border: none !important;
+}
+
+body.customer-account-login .login-container input#email,
+body.customer-account-login .login-container input#pass {
+    border-radius: 10px;
+    padding: 32px 20px 20px;
+}
+
+body.customer-account-login .login-container .field.email label.label,
+body.customer-account-login .login-container .field.password label.label {
+    position: absolute;
+    left: 21px;
+    font-size: 12px !important;
+    top: 2px;
+    z-index: 9;
+}
+
+body.customer-account-login .login-container .field.email.required,
+body.customer-account-login .login-container .field.password.required {
+    position: relative;
+}
+
+body.customer-account-login .login-container .field.email .label:after,
+body.customer-account-login .login-container .field.password .label:after {
+    display: none;
+}
+
+body.customer-account-login .login-container .block-content p {
+    margin-top: 0px !important;
+}
+
+body.customer-account-login .login-container .customer-account-login .field.note {
+    margin-top: 13px !important;
+}
+
+body.customer-account-login .login-container .field.email.required label span,
+body.customer-account-login .login-container .field.password.required label span {
+    font-size: 12px !important;
+}
+
+body.customer-account-login .login-container .block-customer-login .form-login .actions-toolbar .secondary {
+    width: 40%;
+    margin-top: 0px;
+}
+/** END LOGIN PAGE **/
+.mysonco_register_menu i.fa.fa-plus {
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 14px;
+    color: #000;
+}
+
+body #about-div-link .top_account_box .mysonco_dropdown .mysonco_menu li.menu_item {
+    color: #000;
+}
+
+.menu_buttons button.button.action.red-main {
+    width: auto !important;
+    height: auto !important;
+}
+
+.menu_buttons a.link_signin {
+    margin-left: 10px;
+}
+
+ul.mysonco_menu.mysonco_register_menu {
+    width: 280px !important;
+}
+
+.minicart-items .product .toggle > span,
+.action.viewcart span,
+.minimal-price-link .price-wrapper,
+.minimal-price-link .aitoc-puq-units {
+    color: #ff1e2f !important;
+}
+
+.custom-whysonco,
+.custom-resources,
+.custom-support {
+    top: 45px !important;
+}
+
+body.catalog-category-view span.aitoc-puq-units {
+    display: none !important;
+}
+
+.aitoc-puq-units {
+    font-size: 22px;
+}
+
+body.catalog-product-view .page-wrapper .page-main .columns .product-info-main .product.attibute.overview {
+    text-indent: 0px !important;
+}
+
+body.catalog-product-view .page-wrapper .breadcrumbs {
+    padding-top: 0px !important;
+    margin: -5px 0 0 !important;	
+}
+
+#shipping-new-address-form fieldset.field legend
+ {
+     margin-bottom: 0px !important;
+ }
+
+ul.opc-progress-bar li.opc-progress-bar-item {
+    text-align: left;
+    padding-left: 30px;
+    width: auto !important;
+    padding-right: 50px;
+}
+
+ul.opc-progress-bar li.opc-progress-bar-item span:before {
+    left: 0;
+    margin: 0 !important;
+    top: 43px !important;
+}
+
+ul.opc-progress-bar li.opc-progress-bar-item span:after {
+    left: 2px;
+    top: 45px !important;
+    margin: 0 !important;
+    text-align: center;
+}
+
+img.product-image-photo {
+    border-bottom: 0px !important;
+}
+
+.product.attibute.description .value p span,
+.product.attibute.description .value p,
+.product.attibute.description .value ul li {
+    font-size: 16px !important;
+}
+
+.product.attibute.description .value h1,
+.product.attibute.description .value h2,
+.product.attibute.description .value h2 span {
+    font-size: 18px !important;
+}
+
+body.catalog-category-view .page-wrapper .page-main .columns .column.main .products.products-grid .products.product-items .product-item .product-item-info .product-item-details .product-tags {
+   height: 80px !important;
+}
+
+.value[itemprop="product_tags"] p {
+    display: inline-block;
+}
+
+body.category-winter-buy h1#page-title-heading {
+    text-indent: -9999px;
+}
+
+h2.titcontent {
+    color: #ff0000;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+p.subtitcontent {
+color: #000000;
+font-weight: 700;
+font-size: 18px;
+text-transform: uppercase;
+}
+
+.contbd {
+color: #000000;
+font-size: 16px;
+}
+
+h3.titcontent3 {
+color: #000000;
+font-weight: 700;
+font-size: 18px;
+}
+.minicart-items .aitoc-puq-units {
+    display: none;
+}
+</style>
+
+<script>
+require(['jquery', 'jquery/ui'], function($){
+	var htmlLabel = '<div class="label-winter-buy"><img src="/media/amasty/amlabel/badge_open_for_business.png" /></di>';
+	jQuery('.category-524 .product-image-container').each(function(elm){
+		jQuery(this).append(htmlLabel);
+	});
+	jQuery('.categorypath-open-for-business .product.media').each(function(elm){
+		jQuery(this).append(htmlLabel);
+	});
+});
+</script>
+<style>
+.category-292 .product-image-container,
+.category-524 .product-image-container {
+	position: relative;
+}
+.label-winter-buy {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 999;
+	width: 50px;
+}
+.product.media .label-winter-buy {
+	width: 100px;
+}
+.product.media {
+    position: relative;
+}
+.catalog-product-view .product.pricing {
+    display: none;
+}
+.category-image {
+    margin-top: 10px;
+}
+.category-description .container {
+    max-width: 1280px;
+}
+
+.category-description {
+    padding: 0px !important;
+    text-align: justify;
+}
+
+.cart.table-wrapper .item .col.item {
+    display: flex;
+}
+
+.cart.table-wrapper .product-item-details {
+    width: 60%;
+}
+
+.titcontent4 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+a.action.link.rss {
+    display: none;
+}
+@media (min-width: 1024px) {
+    .categorypath-open-for-business .category-info .page-title {
+        display: none;
+    }
+    .menu-sonco { padding-top: 20px; }
+    .menu-sonco.menu-fixo { padding-top: 0px !important }
+.category-info .page-title-wrapper {
+display: block !important;
+}
+.categorypath-reopen.category-reopen .category-info .page-title-wrapper {
+display: none !important;
+}
+}
+</style>
+
+<script>
+(function(){
+
+window.ldfdr = window.ldfdr || {};
+(function(d, s, ss, fs){
+fs = d.getElementsByTagName(s)[0];
+
+function ce(src){
+var cs = d.createElement(s);
+cs.src = src;
+setTimeout(function(){fs.parentNode.insertBefore(cs,fs)}, 1);
+}
+
+ce(ss);
+})(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_X0n7aEZ4446gNpPG.js');
+})();
+</script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("AQSY8nGokC1orEV1oL6Z7A1jfZ3cN6Cv");
+  analytics.page();
+  }}();
+</script>
