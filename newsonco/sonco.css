@@ -3287,3 +3287,24 @@ p.subdescription {
 .cms-request-a-quote-success .top-container, .cms-request-a-quote-success .breadcrumbs {
   display: none;
 }
+/* 
+==========================
+  loose CSS from buy-now-pay-later
+========================== 
+*/
+@media (min-width: 801px){
+  #buy-now-pay-later .breadcrumbs a, .breadcrumbs .item:after {
+      font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      color: #5b5b5f;
+      text-transform: uppercase;
+      margin: 0 !important;
+      color: #5b5b5f;
+  }
+  #buy-now-pay-later .breadcrumbs{
+      margin: 1em 0 0;
+  }
+  #buy-now-pay-later .after_breadcrumbs .separation-default {
+      margin-top: 1em !important;
+  }    
+}
