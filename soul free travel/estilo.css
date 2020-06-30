@@ -1089,10 +1089,11 @@ a.float i.fa.fa-whatsapp {
     display: flex;
     flex-wrap: wrap;
     max-width: 100% !important;
-    display: none !important;
+    margin-top: 60px;
 }
+
 #st-content-wrapper.st-single-tour .grid-item .service-border{
-display: table;
+    display: table;
 }
 h4.service-title.plr15 {
     height: 44px;
