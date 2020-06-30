@@ -3261,3 +3261,21 @@ p.subdescription {
       margin-left: 0px !important;
   }
 }
+/* 
+==========================
+  loose CSS from case-study-harley
+========================== 
+*/
+@media (max-width: 1279px) {
+  .titansfigure-mobile.mobile {
+      display: block !important;
+  }
+  .titansfigure-content.desktop {
+      display: none;
+  }
+  .titansfigure-mobile .cmd-6 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
