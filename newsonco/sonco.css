@@ -3279,3 +3279,11 @@ p.subdescription {
       max-width: 100%;
   }
 }
+/* 
+==========================
+  loose CSS from request-a-quote-success
+========================== 
+*/
+.cms-request-a-quote-success .top-container, .cms-request-a-quote-success .breadcrumbs {
+  display: none;
+}
