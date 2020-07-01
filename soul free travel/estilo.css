@@ -207,7 +207,7 @@ div#footer-row {
 .instagram-block {
 	margin-top: 35px;
 	padding: 15px;
-	font-size: 20px;
+	font-size: 17px;
 	color: white;
 }
 
@@ -1388,7 +1388,7 @@ button.btn.btn-primary.btn-search {
 .instagram-gallery p b {
 	margin-top: 35px;
 	padding: 15px;
-	font-size: 20px;
+	font-size: 17px;
 	color: white;
 	padding-left: 0px;
 }
@@ -1461,4 +1461,9 @@ span.icon-hiking {
 	border-radius: 100%;
 	padding: 6px;
 	padding-top: 8px;
+}
+
+#covid-19-bar a:active, #covid-19-bar a:focus, #covid-19-bar a:hover, #covid-19-bar a:visited, #covid-19-bar a {
+    text-decoration: none;
+    color: unset;
 }
