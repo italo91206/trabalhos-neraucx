@@ -1,3 +1,43 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./../fonts/icomoon.eot?k6uusj');
+    src:  url('./../fonts/icomoon.eot?k6uusj#iefix') format('embedded-opentype'),
+      url('./../fonts/icomoon.ttf?k6uusj') format('truetype'),
+      url('./../fonts/icomoon.woff?k6uusj') format('woff'),
+      url('./../fonts/icomoon.svg?k6uusj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cartao:before {
+    content: "\e900";
+    color: #2bbafe;
+  }
+  .icon-entrega-expresso:before {
+    content: "\e901";
+    color: #2bbafe;
+  }
+  .icon-sacola:before {
+    content: "\e902";
+    color: #2bbafe;
+  }
+  
+
 section.se-coluna-esquerda {
     flex: 0 0 280px;
     max-width: 100%;
@@ -370,4 +410,47 @@ div#se-category-last-banner-holder {
 
 .se-text-center {
     text-align: center;
+}
+
+section#se-category-footer {
+    background-color: #EEF5F8;
+    height: 171px;
+}
+
+#se-category-footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #2B85C1;
+    margin-top: 16px;
+}
+
+#se-category-footer h2 {
+    margin: 0;
+    font-family: axiforma-bold;
+    font-size: 20px;
+    color: #2BBAFE;
+}
+
+#se-category-footer .se-cmd-4 {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 43px;
+}
+
+#se-category-footer p.se-gray {
+    color: #8CA2A6;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+span.icon-cartao {
+    font-size: 25px;
+}
+
+span.icon-entrega-expresso {
+    font-size: 25px;
+}
+
+span.icon-sacola {
+    font-size: 25px;
 }
