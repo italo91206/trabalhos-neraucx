@@ -1,1004 +1,693 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seralle - PWA</title>
-    <link rel="stylesheet" href="./../estilos.css">
-    <link rel="stylesheet" href="./CSS global.css">
-    <link rel="stylesheet" href="./categoria-teste.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./../fonts/stylesheet.css">
-    <script src="./myscripts.js"></script>
-</head>
-<body>
-    <div id="bg-total"></div>
-
-    <header id="se-header">
-        <section id="se-top-header">
-            <div class="se-container se-flex">
-                <div class="se-item">
-                    <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
-                    <div class="se-text">Pague em até 12x sem juros</div>
-                </div>
-
-                <div class="se-item">
-                    <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
-                    <div class="se-text">Compre aqui e retire na loja</div>
-                </div>
-
-                <div class="se-item">
-                    <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
-                    <div class="se-text">Entrega expressa em até 1 dia útil</div>
-                </div>
-
-                <div class="se-item">
-                    <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
-                    <div class="se-text">Atendimento</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="se-header">
-            <div class="se-flex se-container">
-                <a href="">
-                    <img src="./../assets/logo.png" alt="" id="se-logo">
-                </a>
-
-                <form action="" id="se-busca-home">
-                    <input type="text" placeholder="O que você precisa?"/>
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-
-                <div id="user-nav" class="se-flex">
-                    <id class="image">
-                        <img src="./../assets/guest-profile-pic.png" alt="" id="se-guest-profile-pic">
-                    </id>
-                    <div class="text">
-                        <h2>Olá!</h2>
-                        <a href="">Acesse sua conta</a>
-                    </div>
-                </div>
-
-                
-                <div id="se-favoritos">
-                    <a href="">
-                        <i class="fa fa-heart-o"></i>
-                    </a>
-                </div>
-
-                <div id="se-cart-icon">
-                    <a href="">
-                        <div class="circle">
-                            <i class="fa fa-shopping-bag"></i>
-                        </div>
-                        
-                        <div class="overlay">
-                            <span>1</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </header>
-
-    <nav id="se-nav">
+<main id="se-category-page">
+    <section id="se-after-main">
         <div class="se-container">
-            <ul class="menu">
-                <li>
-                    Masculino
-                    <div class="submenu">
-                        <div class="submenu-content se-flex">
-                            <div class="se-coluna-esquerda">
-                                <section>
-                                    <h3>Calçados</h3>
-                                    <ul class="se-category-list">
-                                        <li><a href="">Tênis</a></li>
-                                        <li><a href="">Coturno</a></li>
-                                        <li><a href="">Chinelo</a></li>
-                                        <li><a href="">Sapatênis</a></li>
-                                        <li><a href="">Sapato</a></li>
-                                        <li><a href="">Infantil</a></li>
-                                    </ul>
-                                    <ul class="se-more-category-links">
-                                        <li><a href="">+ Novidades</a></li>
-                                        <li><a href="">+ Ofertas</a></li>
-                                    </ul>
-                                </section>
-                            </div>
-
-                            <div class="se-coluna-direita">
-                                <div class="se-banner se-relative">
-                                    <img src="./../assets/olympus-runners.png" alt="">
-                                    <div class="se-text">
-                                        <p>
-                                            Olympikus com preços acessíveis.<br/>
-                                            A partir de R$ 89,99    
-                                        </p>
-                                        <a href=""><button class="se-button-blue">Compre agora</button></a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    Feminino
-                    <div class="submenu">
-                        <div class="submenu-content se-flex">
-                            <div class="se-coluna-esquerda">
-                                <section>
-                                    <h3>Calçados</h3>
-                                    <ul class="se-category-list">
-                                        <li><a href="">Tênis</a></li>
-                                        <li><a href="">Rasteira</a></li>
-                                        <li><a href="">Sapatilha</a></li>
-                                        <li><a href="">Sapato</a></li>
-                                        <li><a href="">Bota</a></li>
-                                        <li><a href="">Tamanco</a></li>
-                                        <li><a href="">Slip on</a></li>
-                                        <li><a href="">Chinelo</a></li>
-                                        <li><a href="">Infantil</a></li>
-                                    </ul>
-                                    <ul class="se-more-category-links">
-                                        <li><a href="">+ Novidades</a></li>
-                                        <li><a href="">+ Ofertas</a></li>
-                                    </ul>
-                                </section>
-
-                                <section>
-                                    <h3>Acessórios</h3>
-                                    <ul class="se-category-list">
-                                        <li><a href="">Bolsa</a></li>
-                                        <li><a href="">Carteira</a></li>
-                                        <li><a href="">Mochila</a></li>
-                                    </ul>
-                                </section>
-                            </div>
-
-                            <div class="se-coluna-direita">
-                                <div class="se-banner se-relative">
-                                    <img src="./../assets/women-shoes.png" alt="">
-                                    <div class="se-text">
-                                        <p>
-                                            3 sapatilhas femininas<br/>
-                                            por R$ 60,90    
-                                        </p>
-                                        <a href=""><button class="se-button-blue">Compre agora</button></a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="">Infantil</a></li>
-                <li><a href="">Lançamentos</a></li>
-                <li><a href="">Esportes</a></li>
-                <li><a href="">Marcas</a></li>
-                <li><a href="">Promoção</a></li>
-            </ul>
+            <p>Frete grátis acima de R$ 199,00</p>
         </div>
-    </nav>
+    </section>
 
-    <div id="bg-meio"></div>
+    <section class="se-breadcrumb se-container">
+        <p><span class="se-underline">Home</span> / <span>Feminino</span></p>
+    </section>
 
-    <main id="se-category-page">
-        <section id="se-after-main">
-            <div class="se-container">
-                <p>Frete grátis acima de R$ 199,00</p>
+    <section id="inner-category-section" class="se-container se-flex">
+        <section class="se-coluna-esquerda">
+            <div class="se-filtros">
+                <div class="se-filters-header">
+                    <h2>Filtros selecionados</h2>
+                    <h3>Nenhum filtro selecionado</h3>
+                </div>
+
+                <div class="se-filter-options se-marcas">
+                    <h2>Marcas</h2>
+                    <form action="" id="se-busca-marca">
+                        <input type="text" placeholder="Busque a marca">
+                        <button><span class="fa fa-search"></span></button>
+                    </form>
+                    <form action="">
+                        <ul class="blue-scroll">
+                            <li>
+                                <input type="checkbox" value="" name="accona"/>
+                                <label for="accona">Accona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="acero"/>
+                                <label for="accona">Acero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="adaptacion"/>
+                                <label for="accona">Adaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="accona">Aistep</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baccona"/>
+                                <label for="baccona">BAccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="bacero"/>
+                                <label for="baccona">BAcero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="badaptacion"/>
+                                <label for="baccona">BAdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baistep"/>
+                                <label for="baistep">BAistep</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cccona"/>
+                                <label for="cccona">Cccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="ccero"/>
+                                <label for="ccona">Ccero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cdaptacion"/>
+                                <label for="cdaptacion">Cdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="cistep">Cistep</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-marcas">
+                    <h2>Modelo do calçado</h2>
+                    <form action="">
+                        <ul class="blue-scroll">
+                            <li>
+                                <input type="checkbox" value="" name="accona"/>
+                                <label for="accona">Cano baixo</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="acero"/>
+                                <label for="accona">Cano alto</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="adaptacion"/>
+                                <label for="accona">Chelsea</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="accona">Biker</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baccona"/>
+                                <label for="baccona">BAccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="bacero"/>
+                                <label for="baccona">BAcero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="badaptacion"/>
+                                <label for="baccona">BAdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baistep"/>
+                                <label for="baistep">BAistep</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cccona"/>
+                                <label for="cccona">Cccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="ccero"/>
+                                <label for="ccona">Ccero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cdaptacion"/>
+                                <label for="cdaptacion">Cdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="cistep">Cistep</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-marcas">
+                    <h2>Modelo do bolsa</h2>
+                    <form action="">
+                        <ul class="blue-scroll">
+                            <li>
+                                <input type="checkbox" value="" name="accona"/>
+                                <label for="accona">Cano baixo</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="acero"/>
+                                <label for="accona">Cano alto</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="adaptacion"/>
+                                <label for="accona">Chelsea</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="accona">Biker</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baccona"/>
+                                <label for="baccona">BAccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="bacero"/>
+                                <label for="baccona">BAcero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="badaptacion"/>
+                                <label for="baccona">BAdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="baistep"/>
+                                <label for="baistep">BAistep</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cccona"/>
+                                <label for="cccona">Cccona</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="ccero"/>
+                                <label for="ccona">Ccero</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="cdaptacion"/>
+                                <label for="cdaptacion">Cdaptacion</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="aistep"/>
+                                <label for="cistep">Cistep</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-marcas">
+                    <h2>Numeração</h2>
+                    
+                    <div class="se-flex blue-scroll">
+                        <button class="se-square-box">33</button>
+                        <button class="se-square-box">34</button>
+                        <button class="se-square-box">35</button>
+                        <button class="se-square-box">36</button>
+                        <button class="se-square-box">37</button>
+                        <button class="se-square-box">38</button>
+                        <button class="se-square-box">39</button>
+                        <button class="se-square-box">40</button>
+                        <button class="se-square-box">41</button>
+                        <button class="se-square-box">42</button>
+                    </div>
+                    
+                </div>
+
+                <div class="se-filter-options se-marcas">
+                    <h2>Tamanho</h2>
+                    
+                    <div class="se-flex blue-scroll">
+                        <button class="se-square-box">P</button>
+                        <button class="se-square-box">M</button>
+                        <button class="se-square-box">G</button>
+                        <button class="se-square-box">GG</button>
+                    </div>
+                    
+                </div>
+    
+                <div class="se-filter-options se-cores">
+                    <h2>Cor</h2>
+                    <form action="">
+                        <ul class="blue-scroll">
+                            <li>
+                                <button class="se-color-option red"></button>
+                                <p>Vermelho</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option pink"></button>
+                                <p>Rosa</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option purple"></button>
+                                <p>Roxo</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option green"></button>
+                                <p>Verde</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option red"></button>
+                                <p>Vermelho</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option pink"></button>
+                                <p>Rosa</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option purple"></button>
+                                <p>Roxo</p>
+                            </li>
+                            <li>
+                                <button class="se-color-option green"></button>
+                                <p>Verde</p>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-promocoes">
+                    <h2>Promoçoes</h2>
+                    <form action="">
+                        <ul class="blue-scroll">
+                            <li>
+                                <input type="checkbox" value="" name="accona"/>
+                                <label for="accona">Promoção 3 por 1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="" name="acero"/>
+                                <label for="accona">Botas a R$ 99,90</label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-precos">
+                    <h2>Preço</h2>
+                    <form action="">
+                        <label for="price-from">De R$</label>
+                        <input type="number" name="price-from" class="se-price-filter"/>
+                        <label for="price-to">até R$</label>
+                        <input type="number" name="price-to" class="se-price-filter"/>
+                    </form>
+                </div>
+
+                <div class="se-filter-options se-material">
+                    <h2>Material</h2>
+                </div>
             </div>
         </section>
 
-        <section class="se-breadcrumb se-container">
-            <p><span class="se-underline">Home</span> / <span>Feminino</span></p>
-        </section>
-
-        <section id="inner-category-section" class="se-container se-flex">
-            <section class="se-coluna-esquerda">
-                <div class="se-filtros">
-                    <div class="se-filters-header">
-                        <h2>Filtros selecionados</h2>
-                        <h3>Nenhum filtro selecionado</h3>
+        <section class="se-coluna-direita">
+            <div class="se-banner-holder">
+                <img pwa-src="category-feminino" alt="" class="se-w100">
+            </div>
+            <div class="se-category-inner-info">
+                <div class="se-flex">
+                    <div class="se-products-total-find">
+                        <p><span>6439</span> produtos</p>
                     </div>
 
-                    <div class="se-filter-options se-marcas">
-                        <h2>Marcas</h2>
-                        <form action="" id="se-busca-marca">
-                            <input type="text" placeholder="Busque a marca">
-                            <button><span class="fa fa-search"></span></button>
-                        </form>
+                    <div class="se-products-filter">
                         <form action="">
-                            <ul class="blue-scroll">
-                                <li>
-                                    <input type="checkbox" value="" name="accona"/>
-                                    <label for="accona">Accona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="acero"/>
-                                    <label for="accona">Acero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="adaptacion"/>
-                                    <label for="accona">Adaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="accona">Aistep</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baccona"/>
-                                    <label for="baccona">BAccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="bacero"/>
-                                    <label for="baccona">BAcero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="badaptacion"/>
-                                    <label for="baccona">BAdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baistep"/>
-                                    <label for="baistep">BAistep</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cccona"/>
-                                    <label for="cccona">Cccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="ccero"/>
-                                    <label for="ccona">Ccero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cdaptacion"/>
-                                    <label for="cdaptacion">Cdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="cistep">Cistep</label>
-                                </li>
-                            </ul>
+                            <label for="filter">Ordenar por:</label>
+                            <select name="filter" id="se-filter">
+                                <option value="">Mais populares</option>
+                                <option value="">Mais vendidos</option>
+                                <option value="">Mais baratos</option>
+                                <option value="">Mais caros</option>
+                                <option value="">Something</option>
+                                <option value="">Something</option>
+                                <option value="">Something</option>
+                            </select>
                         </form>
                     </div>
+                </div>
 
-                    <div class="se-filter-options se-marcas">
-                        <h2>Modelo do calçado</h2>
-                        <form action="">
-                            <ul class="blue-scroll">
-                                <li>
-                                    <input type="checkbox" value="" name="accona"/>
-                                    <label for="accona">Cano baixo</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="acero"/>
-                                    <label for="accona">Cano alto</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="adaptacion"/>
-                                    <label for="accona">Chelsea</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="accona">Biker</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baccona"/>
-                                    <label for="baccona">BAccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="bacero"/>
-                                    <label for="baccona">BAcero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="badaptacion"/>
-                                    <label for="baccona">BAdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baistep"/>
-                                    <label for="baistep">BAistep</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cccona"/>
-                                    <label for="cccona">Cccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="ccero"/>
-                                    <label for="ccona">Ccero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cdaptacion"/>
-                                    <label for="cdaptacion">Cdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="cistep">Cistep</label>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-
-                    <div class="se-filter-options se-marcas">
-                        <h2>Modelo do bolsa</h2>
-                        <form action="">
-                            <ul class="blue-scroll">
-                                <li>
-                                    <input type="checkbox" value="" name="accona"/>
-                                    <label for="accona">Cano baixo</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="acero"/>
-                                    <label for="accona">Cano alto</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="adaptacion"/>
-                                    <label for="accona">Chelsea</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="accona">Biker</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baccona"/>
-                                    <label for="baccona">BAccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="bacero"/>
-                                    <label for="baccona">BAcero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="badaptacion"/>
-                                    <label for="baccona">BAdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="baistep"/>
-                                    <label for="baistep">BAistep</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cccona"/>
-                                    <label for="cccona">Cccona</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="ccero"/>
-                                    <label for="ccona">Ccero</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="cdaptacion"/>
-                                    <label for="cdaptacion">Cdaptacion</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="aistep"/>
-                                    <label for="cistep">Cistep</label>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-
-                    <div class="se-filter-options se-marcas">
-                        <h2>Numeração</h2>
+                <div id="category-products-find" class="se-flex">
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
                         
-                        <div class="se-flex blue-scroll">
-                            <button class="se-square-box">33</button>
-                            <button class="se-square-box">34</button>
-                            <button class="se-square-box">35</button>
-                            <button class="se-square-box">36</button>
-                            <button class="se-square-box">37</button>
-                            <button class="se-square-box">38</button>
-                            <button class="se-square-box">39</button>
-                            <button class="se-square-box">40</button>
-                            <button class="se-square-box">41</button>
-                            <button class="se-square-box">42</button>
-                        </div>
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
                         
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
 
-                    <div class="se-filter-options se-marcas">
-                        <h2>Tamanho</h2>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
                         
-                        <div class="se-flex blue-scroll">
-                            <button class="se-square-box">P</button>
-                            <button class="se-square-box">M</button>
-                            <button class="se-square-box">G</button>
-                            <button class="se-square-box">GG</button>
-                        </div>
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
                         
-                    </div>
-        
-                    <div class="se-filter-options se-cores">
-                        <h2>Cor</h2>
-                        <form action="">
-                            <ul class="blue-scroll">
-                                <li>
-                                    <button class="se-color-option red"></button>
-                                    <p>Vermelho</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option pink"></button>
-                                    <p>Rosa</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option purple"></button>
-                                    <p>Roxo</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option green"></button>
-                                    <p>Verde</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option red"></button>
-                                    <p>Vermelho</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option pink"></button>
-                                    <p>Rosa</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option purple"></button>
-                                    <p>Roxo</p>
-                                </li>
-                                <li>
-                                    <button class="se-color-option green"></button>
-                                    <p>Verde</p>
-                                </li>
-                            </ul>
-                        </form>
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
 
-                    <div class="se-filter-options se-promocoes">
-                        <h2>Promoçoes</h2>
-                        <form action="">
-                            <ul class="blue-scroll">
-                                <li>
-                                    <input type="checkbox" value="" name="accona"/>
-                                    <label for="accona">Promoção 3 por 1</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" value="" name="acero"/>
-                                    <label for="accona">Botas a R$ 99,90</label>
-                                </li>
-                            </ul>
-                        </form>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
 
-                    <div class="se-filter-options se-precos">
-                        <h2>Preço</h2>
-                        <form action="">
-                            <label for="price-from">De R$</label>
-                            <input type="number" name="price-from" class="se-price-filter"/>
-                            <label for="price-to">até R$</label>
-                            <input type="number" name="price-to" class="se-price-filter"/>
-                        </form>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
 
-                    <div class="se-filter-options se-material">
-                        <h2>Material</h2>
-                    </div>
-                </div>
-            </section>
-
-            <section class="se-coluna-direita">
-                <div class="se-banner-holder">
-                    <img src=".././assets/category-feminino.png" alt="" class="se-w100">
-                </div>
-                <div class="se-category-inner-info">
-                    <div class="se-flex">
-                        <div class="se-products-total-find">
-                            <p><span>6439</span> produtos</p>
-                        </div>
-
-                        <div class="se-products-filter">
-                            <form action="">
-                                <label for="filter">Ordenar por:</label>
-                                <select name="filter" id="se-filter">
-                                    <option value="">Mais populares</option>
-                                    <option value="">Mais vendidos</option>
-                                    <option value="">Mais baratos</option>
-                                    <option value="">Mais caros</option>
-                                    <option value="">Something</option>
-                                    <option value="">Something</option>
-                                    <option value="">Something</option>
-                                </select>
-                            </form>
-                        </div>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
 
-                    <div id="category-products-find" class="se-flex">
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="product-find">
-                            <a href="">
-                                <button class="se-add-to-favorite">
-                                    <span class="fa fa-heart-o"></span>
-                                </button>
-                                <div class="se-price-off">10% OFF</div>
-                                <div class="se-shipping-free">Frete grátis</div>
-                            
-                                <img src="https://d18d1e4ae0fjeq.cloudfront.net/testcase_pwa4all_com5ee8c9130472895d074b1102/resources/cart-sample-item.png?v=0.3.31" alt="Blusas" class="se-w100">
-                                <article class="se-card-overlay">
-                                    <button class="se-button-blue">confira</button>
-                                </article>
-                                <article class="se-card-title">
-                                    <p class="se-card-title">Colcci</p>
-                                    <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                                    <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
-                                            class="se-card-price-actual">R$ 245,00</span></p>
-                                    <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                                </article>
-                            </a>
-                        </div>
-
-                        <div class="se-cmd-12" id="se-category-last-banner-holder">
-                            <img src="./../assets/nova-colecao-categoria-feminina.png" alt="" class="se-w100">
-                        </div>
-
-                        <section class="se-cmd12" id="se-category-last-banner-holder-text">
-                            <h3>Feminino</h3>
-                            <p>
-                                Calçados ou acessórios? Tudo que toda mulher precisa está aqui na Serallê. Se deseja presentear os seus pés com o que há de melhor, nós temos vários produtos só esperando o seu pedido para qualquer ocasião. Como é a sua rotina? Tênis, rasteiras e sapatilhas te acompanham a cada passo? Ou você prefere aquele Slip On, perfeito para qualquer situação? Fique à vontade para fazer suas melhores escolhas. Estamos aqui para ajudar.
-                            </p>
-                        </section>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
                     </div>
-                </div>
-            </section>
-        </section>
 
-        <section class="se-container">
-            <h2 class="se-text-center">Você também vai gostar</h2>
-        </section>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
 
-        <section id="se-category-footer">
-            <section class="se-container se-flex">
-                <div class="se-cmd-4">
-                    <span class="icon-cartao"></span>
-                    <p>Pague em até</p>
-                    <h2>12x no cartão</h2>
-                </div>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
 
-                <div class="se-cmd-4">
-                    <span class="icon-sacola"></span>
-                    <p>Compre aqui e</p>
-                    <h2>retire na loja</h2>
-                </div>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
 
-                <div class="se-cmd-4">
-                    <span class="icon-entrega-expresso"></span>
-                    <p>Entrega expressa</p>
-                    <h2>em até 1 dia útil</h2>
-                    <p class="se-gray">Consulte as cidades</p>
-                </div>
-                
-            </section>
-        </section>
-    </main>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
 
-    <footer id="se-footer">
-        <section id="newsletter" class="se-relative">
-            <img src="./../assets/newsletter-image.png" alt="" id="img-newsletter">
-            <div class="se-container se-flex">
-                <div class="se-text se-relative">
-                    <span class="discount">15% Off</span>
-                    <span class="discount-text">Na sua primeira compra</span>
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="product-find">
+                        <a href="">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                        
+                            <img pwa-src="cart-sample-item" alt="Blusas" class="se-w100">
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span
+                                        class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="se-cmd-12" id="se-category-last-banner-holder">
+                        <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+                    </div>
+
+                    <section class="se-cmd12" id="se-category-last-banner-holder-text">
+                        <h3>Feminino</h3>
+                        <p>
+                            Calçados ou acessórios? Tudo que toda mulher precisa está aqui na Serallê. Se deseja presentear os seus pés com o que há de melhor, nós temos vários produtos só esperando o seu pedido para qualquer ocasião. Como é a sua rotina? Tênis, rasteiras e sapatilhas te acompanham a cada passo? Ou você prefere aquele Slip On, perfeito para qualquer situação? Fique à vontade para fazer suas melhores escolhas. Estamos aqui para ajudar.
+                        </p>
+                    </section>
                 </div>
-                <form action="">
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="E-mail">
-                    <select name="genero">
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="nao-revelar">Não quero revelar</option>
-                    </select>
-                    <button type="submit" class="se-button-blue">Cadastrar</button>
-                </form>
             </div>
         </section>
-        
-        <section id="footer-links">
-            <div class="se-container se-flex">
-                <section id="institucional">
-                    <h3>Institucional</h3>
-                    <ul class="se-footer-list">
-                        <li><a href="">Quem somos</a></li>
-                        <li><a href="">Encontre uma loja</a></li>
-                        <li><a href="">Trabalhe conosco</a></li>
-                    </ul>
-                </section>
+    </section>
 
-                <section id="ajuda">
-                    <h3>Ajuda</h3>
-                    <ul class="se-footer-list">
-                        <li><a href="">Acompanhe seu pedido</a></li>
-                        <li><a href="">Trocas e devoluções</a></li>
-                        <li><a href="">Dúvidas frequentes</a></li>
-                        <li><a href="">Atendimento</a></li>
-                    </ul>
-                </section>
+    <section class="se-container">
+        <h2 class="se-text-center">Você também vai gostar</h2>
+    </section>
 
-                <section id="redes-sociais">
-                    <h3>Redes sociais</h3>
-                    <ul class="se-footer-list">
-                        <li><a href=""><div class="se-circle"><i class="fa fa-facebook-f"></i></div></a></li>
-                        <li><a href=""><div class="se-circle"><i class="fa fa-facebook-f"></i></div></a></li>
-                        <li><a href=""><div class="se-circle"><i class="fa fa-facebook-f"></i></div></a></li>
-                        <li><a href=""><div class="se-circle"><i class="fa fa-facebook-f"></i></div></a></li>
-                    </ul>
-                </section>
-
-                <section id="fale-conosco">
-                    <h3>Fale agora conosco</h3>
-                    <ul class="se-footer-list">
-                        <li><a href=""><i class="fa fa-comment"></i>WhatsApp (11) 4004-8008</a></li>
-                        <li><a href=""><i class="fa fa-phone"></i>Televendas (11) 4004-6006</a></li>
-                        <li><a href=""><i class="fa fa-headphones"></i>Chat</a></li>
-                    </ul>
-                </section>
-
-                <section id="atendimento">
-                    <h3>Horário de atendimento</h3>
-                    <ul class="se-footer-list">
-                        <li>Segunda à sexta: 8h às 12h e das 14h às 18h30</li>
-                    </ul>
-                </section>
+    <section id="se-category-footer">
+        <section class="se-container se-flex">
+            <div class="se-cmd-4">
+                <span class="icon-cartao"></span>
+                <p>Pague em até</p>
+                <h2>12x no cartão</h2>
             </div>
-        </section>
 
-        <section id="footer-after-links">
-            <div class="se-container se-flex">
-                <section id="formas-pagamento">
-                    <h3>Formas de pagamento</h3>
-                    <div class="se-flex">
-                        <img src="./../assets/visa.png" alt="">
-                        <img src="./../assets/mastercard.png" alt="">
-                        <img src="./../assets/american-express.png" alt="">
-                        <img src="./../assets/i-something.png" alt="">
-                        <img src="./../assets/elo.png" alt="">
-                        <img src="./../assets/hiper.png" alt="">
-                        <img src="./../assets/hipercard.png" alt="">
-                        <img src="./../assets/paypal.png" alt="">
-                        <img src="./../assets/boleto.png" alt="">
-                    </div>
-                </section>
-                
-                <section id="seguranca">
-                    <h3>Segurança</h3>
-                    <div class="se-flex">
-                        <img src="./../assets/compra-segura.png" alt="" id="compra-segura">
-                        <img src="./../assets/e-bit.png" alt="" id="e-bit">
-                        <img src="./../assets/empresa-associada.png" alt="" id="empresa-associada">
-                    </div>
-                </section>
-                
-                <section id="a-seralle">
-                    <h3>A Serallê</h3>
-                    <p>
-                        Com XX anos de muita história para contar, hoje temos 12 lojas espalhadas por todo o estado do Paraná. A nossa trajetória, desde o início, só acontece com um único objetivo: levar aos seus pés o que há de melhor e do jeito mais acessível possível.
-                    </p>
-                </section>
+            <div class="se-cmd-4">
+                <span class="icon-sacola"></span>
+                <p>Compre aqui e</p>
+                <h2>retire na loja</h2>
             </div>
-        </section>
 
-        <section id="footer-copyright">
-            <div class="se-container">
-                <h3>
-                    © Serallê 2020 . Todos os direitos reservados. Conheça nossa Política de Privacidade | *Frete Grátis: Confira as regras.<br/>
-                    GFG COMÉRCIO DIGITAL LTDA. - CNPJ: 11.200.418/0004-01 - Rod. Vice-Prefeito Hermenegildo Tonolli, 2.000, Distrito Industrial, CEP: 13213-086, Jundiaí, SP, Brasil.
-                </h3>
+            <div class="se-cmd-4">
+                <span class="icon-entrega-expresso"></span>
+                <p>Entrega expressa</p>
+                <h2>em até 1 dia útil</h2>
+                <p class="se-gray">Consulte as cidades</p>
             </div>
+            
         </section>
-
-        <section id="nerau-bar">
-            <div class="se-container">
-                <a href="">
-                    <img src="./../assets/nerau-logo.png" alt="" id="nerau-logo">
-                </a>
-            </div>
-        </section>
-    </footer>
-</body>
-</html>
+    </section>
+</main>
