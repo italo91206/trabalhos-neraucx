@@ -43,7 +43,7 @@ span.se-underline {
     color: #2BBAFE;
 }
 
-section.se-coluna-esquerda {
+.se-filtros {
     border: solid 1px #F1F1F1;
     border-radius: 5px;
     -webkit-box-shadow: 0px 12px 18px -2px rgba(0,0,0,0.75);
@@ -188,4 +188,69 @@ img.se-w100 {
 
 .product-find .se-card-title p.se-card-parcelas {
     margin-bottom: 7px;
+}
+button.se-color-option {
+    height: 29px;
+    width: 29px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.se-color-option.red {
+    background-color: #FF5A5A;
+}
+
+button.se-color-option.pink {
+    background-color: #FF99F4;
+}
+
+button.se-color-option.purple {
+    background-color: #DAE0FF;
+}
+
+button.se-color-option.green {
+    background-color: #97FFA4;
+}
+.se-cores .blue-scroll li {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+.se-cores li p {
+    margin: auto auto;
+    margin-left: 5px;
+}
+
+.se-cores .blue-scroll {
+    height: 138px;
+}
+
+button.se-color-option:focus {
+    outline: none;
+}
+
+input.se-price-filter {
+    height: 28px;
+    width: 68px;
+    border: 1px solid #2BBAFE;
+    background-color: #DAF3FF;
+    border-radius: 5px;
+}
+
+.se-filter-options li {
+    color: #8CA2A6;
+    font-size: 14px;
+}
+
+.se-filter-options label {
+    color: #8CA2A6;
+    font-size: 14px;
+}
+
+.se-promocoes {
+    height: 103px !important;
+}
+
+.se-material {
+    height: 17px;
 }
