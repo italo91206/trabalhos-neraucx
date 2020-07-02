@@ -1,4 +1,17 @@
 @media(max-width: 768px){
+    .se-breadcrumb p {
+        margin-left: 0;
+    }
+    .product-find:nth-child(3), .product-find:nth-child(6), .product-find:nth-child(9), .product-find:nth-child(12), .product-find:nth-child(15) {
+        margin-right: auto !important;
+    }
+    .product-find:nth-child(1), .product-find:nth-child(4), .product-find:nth-child(7), .product-find:nth-child(10), .product-find:nth-child(13) {
+        margin-left: auto !important;
+    }
+    section#se-category-footer {
+        height: auto;
+        padding-bottom: 43px;
+    }
     div#se-slide-holder {
         padding-bottom: 20px !important;
     }
@@ -253,6 +266,14 @@
     }
 }
 @media(max-width: 425px){
+    p.se-card-full-title {
+        margin-left: 0px !important;
+        text-align: center;
+    }
+    
+    span.se-card-price-actual {
+        margin-left: 18px;
+    }
     .se-marcas input[type="text"] {
         width: 325px;
     }
