@@ -614,6 +614,29 @@
     }
 }
 @media(max-width: 395px){
+    .se-marcas input[type="text"] {
+        width: 298px;
+    }
+    .se-products-filter select#se-filter {
+        margin-left: 5px;
+        padding-left: 7px;
+    }
+    
+    .se-products-filter {
+        font-size: 15px;
+    }
+    
+    .se-products-total-find p {
+        margin-top: 19px;
+    }
+    
+    .se-card-title p.se-card-full-title {
+        width: 184px !important;
+    }
+    
+    span.se-card-price-actual {
+        margin-left: 12px;
+    }
     .swiper-slide.se-card-slide {
         width: 375px !important;
     }
