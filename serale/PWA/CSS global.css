@@ -1480,6 +1480,59 @@ div#se-setima-linha {
         width: 60px;
         height: 80px;
     }
+
+    /* ==================
+    seção da pagina de categoria
+    ================== */
+
+    section.se-coluna-esquerda {
+        flex: 0 0 28% !important;
+    }
+    
+    section.se-coluna-direita {
+        flex: 0 0 70% !important;
+        max-width: 70% !important;
+    }
+    
+    .product-find:nth-child(1), .product-find:nth-child(4), .product-find:nth-child(7), .product-find:nth-child(10), .product-find:nth-child(13) {
+        margin-left: 0 !important;
+    }
+    
+    .product-find:nth-child(3), .product-find:nth-child(6), .product-find:nth-child(9), .product-find:nth-child(12), .product-find:nth-child(15) {
+        margin-right: 0 !important;
+    }
+    
+    .product-find {
+        flex: 0 0 30% !important;
+        max-width: 30% !important;
+    }
+    
+    p.se-card-full-title {
+        width: 200px !important;
+        margin-left: 32px !important;
+    }
+    
+    span.se-card-price-before {
+        margin-left: 10px !important;
+    }
+    
+    span.se-card-price-actual {
+        font-size: 18px !important;
+        margin-top: 35px !important;
+    }
+    
+    .se-card-overlay button.se-button-blue {
+        top: 150px !important;
+        left: 35px !important;
+    }
+
+    #se-category-last-banner-holder-text p {
+        width: auto !important;
+    }
+
+    form#se-busca-home button{
+        width: 90px !important;
+    }
 }
 .swiper-container{
 	z-index: 0 !important;
