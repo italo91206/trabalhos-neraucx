@@ -144,6 +144,20 @@ window.PWA.toggle = {
                 elem.classList.remove('ativado');
             else
                 elem.classList.add('ativado');
+        },
+        abreFechaFiltros: function(){
+          const elem = document.querySelector("#se-opcoes-filtro");
+          if(elem.classList.contains("some")){
+            elem.classList.remove("some");
+            document.querySelector("#abre-fecha-handler").classList.remove("fa-bars");
+            document.querySelector("#abre-fecha-handler").classList.add("fa-times");
+          }
+          else{
+            elem.classList.add("some");
+            document.querySelector("#abre-fecha-handler").classList.remove("fa-times");
+            document.querySelector("#abre-fecha-handler").classList.add("fa-bars");
+          }
+
         }
     }
     
