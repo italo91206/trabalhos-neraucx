@@ -2138,3 +2138,15 @@ span.icon-entrega-expresso {
 span.icon-sacola {
     font-size: 25px;
 }
+
+#se-categoria-footer h2 {
+    margin-top: 63px;
+    margin-bottom: 35px;
+    font-family: Axiforma-bold;
+    font-size: 33px;
+    color: #2B85C1;
+}
+
+section#se-categoria-footer {
+    padding-bottom: 80px;
+}

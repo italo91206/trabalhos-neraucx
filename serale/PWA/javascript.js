@@ -98,6 +98,13 @@ window.PWA.toggle = {
           }
           });
         },
+        createSlideFinalCategoria: function () {
+          window.PWA.createSlide('se-slide-final-categoria-home', {
+          slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+          spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+          grabCursor: true
+          });
+        },
         createSlideMarcasMasculino: function () {
           window.PWA.createSlide('se-slide-brand-masculino-home', {
           slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
@@ -133,6 +140,7 @@ window.PWA.toggle = {
       window.PWA.custom.createSlideGrandeHome();
       window.PWA.custom.createSlideMarcasMasculino();
       window.PWA.custom.createSlideMarcasFeminino();
+      window.PWA.custom.createSlideFinalCategoria();
     });
     
     window.PWA.previewStart('home', function () {
@@ -143,4 +151,5 @@ window.PWA.toggle = {
       window.PWA.custom.createSlideGrandeHome();
       window.PWA.custom.createSlideMarcasMasculino();
       window.PWA.custom.createSlideMarcasFeminino();
+      window.PWA.custom.createSlideFinalCategoria();
     });
