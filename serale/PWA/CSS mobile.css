@@ -258,6 +258,7 @@
     div#se-opcoes-filtro.some {
         height: 0;
         opacity: 0;
+        display: none;
         transition: all 1s ease;
     }
 
@@ -597,6 +598,9 @@
     }
 }
 @media(max-width: 411px){
+    .se-products-total-find p {
+        margin-top: 18px;
+    }
     div#se-slide-holder img {
         width: 100%;
     }
