@@ -555,6 +555,9 @@
     }
 }
 @media(max-width: 414px){
+    .se-card-title p.se-card-full-title {
+        width: 194px !important;
+    }
     #se-sexta-linha,
     #se-quinta-linha,
     #se-quarta-linha,
@@ -585,6 +588,13 @@
     #footer-copyright h3 {
         max-width: 395px;
     } 
+    .se-marcas input[type="text"] {
+        width: 320px;
+    }
+    
+    .product-find {
+        margin-bottom: auto;
+    }
 }
 @media(max-width: 411px){
     div#se-slide-holder img {
