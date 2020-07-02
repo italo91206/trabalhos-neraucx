@@ -148,7 +148,7 @@ form#se-busca-home input[type="text"] {
 form#se-busca-home button {
 	background-color: #2BBAFE;
 	border: none;
-	width: 90px;
+	width: 94px;
 	height: 46px;
 	border-radius: 5px;
 	color: white;
@@ -1841,7 +1841,7 @@ form#se-busca-marca {
     margin-block-start: 17px;
     margin-inline-start: 0px;
     padding-inline-start: 0px;
-    height: 85px;
+    height: 82px;
     overflow: auto;
     margin-bottom: 0px;
 }
@@ -1884,7 +1884,7 @@ img.se-w100 {
 }
 
 .product-find {
-    flex: 0 0 30%;
+    flex: 0 0 282px;
     max-width: 100%;
     border: solid 1px #EBEBEB;
     margin: 0 auto;
@@ -1957,11 +1957,13 @@ button.se-color-option:focus {
 }
 
 input.se-price-filter {
-    height: 28px;
-    width: 68px;
+    height: 24px;
+    width: 62px;
     border: 1px solid #2BBAFE;
     background-color: #DAF3FF;
     border-radius: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .se-filter-options li {
@@ -1992,7 +1994,8 @@ input.se-price-filter {
 .se-products-filter {
     margin: 0 auto;
     margin-right: 0px;
-    margin-top: 16px;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 .se-products-total-find span {
@@ -2011,6 +2014,8 @@ input.se-price-filter {
     border-radius: 5px;
     background-color: #DAF3FF;
     color: #2B85C1;
+    margin-left: 18px;
+    padding-left: 10px;
 }
 
 .se-products-filter select#se-filter:focus {
@@ -2149,4 +2154,71 @@ span.icon-sacola {
 
 section#se-categoria-footer {
     padding-bottom: 80px;
+}
+
+.se-add-to-favorite span.fa.fa-heart-o {
+    padding: 2px;
+    padding-top: 4px;
+}
+
+.product-find:hover {
+    border: solid 1px #2BBAFE;
+    transition: all .2s linear;
+}
+
+.product-find:hover p.se-card-full-title {
+    text-decoration: underline;
+    color: #2BBAFE;
+    transition: all .1s linear;
+}
+
+.product-find:hover p.se-card-parcelas {
+    text-decoration: underline;
+    color: #2BBAFE;
+    transition: all .1s linear;
+}
+
+.product-find:hover .se-card-overlay button.se-button-blue {
+    display: block;
+}
+
+button.se-square-box:hover {
+    transform: scale(1.1);
+    transition: all .2s ease;
+}
+
+.se-filter-options label:hover {
+    font-weight: bold;
+    color: #496267;
+    transition: all .2s linear;
+}
+
+button.se-color-option:hover {
+    transform: scale(0.9);
+    transition: all .2s ease;
+}
+
+input.se-price-filter:focus {
+    outline: none;
+    border: 1px solid #226484;
+    transition: all .2s ease;
+}
+
+#se-category-last-banner-holder-text {
+    padding-top: 50px;
+}
+
+.swiper-pagination-bullets {
+    position: absolute !important;
+    bottom: 5px !important;
+    left: 45% !important;
+    z-index: 1;
+}
+
+#se-slide-banner6-home .se-right {
+    right: 15px !important;
+}
+
+#se-slide-banner6-home .swiper-pagination-bullet-active {
+    background: #ffffff7d !important;
 }
