@@ -657,7 +657,24 @@
     }
 }
 @media(max-width: 375px){
-
+    .se-marcas input[type="text"] {
+        width: 265px;
+    }
+    
+    .product-find {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    p.se-card-full-title {
+        width: 345px !important;
+    }
+    
+    span.se-card-price-actual {
+        margin-left: 120px;
+        font-size: 28px !important;
+    }
     .se-banner6-inside-text p.se-is-off {
         font-size: 35px;
         margin-top: -8px;
