@@ -299,6 +299,10 @@
     }
 }
 @media(max-width: 425px){
+    div#se-product-image {
+        flex: 0 0 100% !important;
+        overflow: hidden;
+    }
     p.se-card-full-title {
         margin-left: 0px !important;
         text-align: center;
