@@ -662,6 +662,16 @@
     .text-part {
         margin-left: 0px !important;
     }
+
+    /* ==========
+    seção da entrega expressa
+    ========== */
+
+    #se-entrega-expressa article.se-cmd-3 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        min-width: unset !important;
+    }
 }
 @media(max-width: 414px){
     .se-card-title p.se-card-full-title {
