@@ -2938,3 +2938,10 @@ seção do duvidas frequentes
 .se-acordions-section {
     margin-bottom: 80px;
 }
+
+main.se-faq .se-container.se-text-center h3 {
+    font-family: Axiforma-bold;
+    font-size: 30px;
+    color: #2B85C1;
+    padding-bottom: 28px;
+}
