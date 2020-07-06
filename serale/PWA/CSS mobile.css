@@ -265,6 +265,38 @@
     .se-marcas input[type="text"] {
         width: 675px;
     }
+
+    /* ===================
+    secao produto teste
+    =================== */
+
+    div#se-product-slider {
+        margin-right: 10px !important;
+    }
+    
+    div#se-product-image {
+        flex: 0 0 300px !important;
+        height: 300px !important;
+        margin-right: 10px !important;
+    }
+    
+    div#se-product-buy-info {
+        flex: 0 0 345px;
+    }
+    
+    button.se-button-consultar {
+        width: 150px;
+    }
+    
+    div#se-leve-junto-holder {
+        margin: 30px auto 0;
+    }
+    
+    #se-leve-junto-section .swiper-slide {
+        margin: 0 auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 @media(max-width: 425px){
     p.se-card-full-title {
