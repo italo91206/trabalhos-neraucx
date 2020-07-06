@@ -1566,6 +1566,21 @@ div#se-setima-linha {
     form#se-busca-home button{
         width: 90px !important;
     }
+    /* ===================
+    seção do quem somos
+    =================== */
+    .image-part {
+        width: 250px !important;
+    }
+    
+    .text-part {
+        margin-left: 15px !important;
+        width: 200px !important;
+    }
+    
+    #conheca-nossas-lojas article button {
+        margin-top: 11px !important;
+    }
 }
 .swiper-container{
 	z-index: 0 !important;
@@ -2653,4 +2668,90 @@ span.se-last {
     color: #2BBAFE;
     font-family: Axiforma-bold;
     font-size: 14px;
+}
+
+/* ============
+secao do quem somos
+============ */
+
+#quem-somos-banner{
+    background-image: pwa-url(shoes-battle-woman);
+    height: 275px;
+}
+
+#quem-somos-banner h4 {
+    margin-top: 0;
+    font-family: Axiforma-heavy;
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+#porque-comprar .se-wrapper {
+    max-width: 792px;
+    margin: 0 auto;
+}
+
+#porque-comprar h3 {
+    font-family: Axiforma-bold;
+    font-size: 30px;
+    color: #2B85C1;
+    padding-bottom: 28px;
+}
+
+#porque-comprar p {
+    text-align: justify;
+    font-size: 16px;
+    color: #5A6672;
+}
+
+.se-cmd-5 {
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+
+.image-part {
+    width: 282px;
+}
+
+.text-part h4 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: Axiforma-bold;
+    font-size: 20px;
+    color: #2BBAFE;
+}
+
+.text-part p {
+    color: #5A6672;
+    margin-top: 30px;
+    min-height: 63px;
+}
+
+.text-part {
+    margin-left: 24px;
+    width: 230px;
+}
+
+#conheca-nossas-lojas h3 {
+    margin-top: 75px;
+    font-family: Axiforma-bold;
+    color: #2B85C1;
+    font-size: 30px;
+    margin-bottom: 42px;
+}
+
+#conheca-nossas-lojas article {
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+#conheca-nossas-lojas article button {
+    margin-top: 37px;
+    width: 100%;
+}
+
+#conheca-nossas-lojas {
+    padding-bottom: 45px;
 }
