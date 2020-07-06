@@ -2755,3 +2755,122 @@ secao do quem somos
 #conheca-nossas-lojas {
     padding-bottom: 45px;
 }
+
+/* ============
+seção do carrinho teste
+============ */
+
+.se-product-row .image img {
+    width: 175px;
+    margin-left: 63px;
+}
+
+p.se-product-card-marca {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.0px;
+    font-family: axiforma-bold;
+    color: #001C3E;
+}
+
+.se-product-row {
+    border: solid 1px #E5E4E5;
+    border-radius: 5px;
+}
+
+.text-info {
+    margin-left: 65px;
+}
+
+p.se-product-card-name {
+    margin-top: 14px;
+    margin-bottom: 0px;
+    font-family: axiforma-bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #001C3E;
+    max-width: 344px;
+}
+
+p.se-product-card-remove {
+    color: #2B85C1;
+    font-size: 12px;
+    margin-top: 17px;
+}
+
+p.se-product-card-remove span {
+    font-size: 16px;
+}
+
+p.se-product-configuration-color {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #001C3E;
+}
+
+p.se-product-configuration-color span {
+    font-family: Axiforma-bold;
+    font-size: 14px;
+    color: #2BBAFE;
+}
+
+input[type="number"] {
+    width: 58px;
+    height: 32px;
+    border: none;
+    background-color: #DAF3FF;
+    border-radius: 5px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+div#se-linha-price-before {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #8CA2A6;
+}
+
+#se-linha-price-single p {
+    font-size: 12px;
+    color: #5A6672;
+}
+
+#se-linha-price-single h2 {
+    color: #2B85C1;
+    font-family: axiforma-bold;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#se-linha-price-single h3 {
+    color: #2BBAFE;
+    font-size: 12px;
+}
+
+#se-linha-subtotal h3 {
+    font-size: 12px;
+    color: #5A6672;
+}
+
+#se-linha-subtotal h2 {
+    color: #2BBAFE;
+    font-family: Axiforma-bold;
+    font-size: 33px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.product-card {
+    padding: 29px 18px 29px 34px;
+}
+
+.product-card-price {
+    border: solid 1px #E5E4E5;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+}
