@@ -1376,6 +1376,39 @@ div#se-setima-linha {
     }
 }
 @media(max-width: 1024px){
+    /* =======================
+    seção da /produto-teste
+    ======================= */
+    div#se-product-slider {
+        margin-left: 0px !important;
+        margin-right: 50px !important;
+        flex: 0 0 80px !important;
+    }
+    
+    div#se-product-image {
+        margin-right: 40px !important;
+        flex: 0 0 400px !important;
+        height: 400px !important;
+    }
+    
+    #se-leve-junto-section span.fa.fa-plus.se-m-auto {
+        margin: auto 10px;
+    }
+    
+    #se-leve-junto-section .swiper-slide {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    #se-leve-junto-section .swiper-slide:nth-child(2) {
+        margin-left: 10px;
+    }
+    
+    div#se-leve-junto-holder {
+        margin-left: auto;
+        margin-right: 0px;
+    }
+    /* ===== end ===== */
     .se-container{
         max-width: 980px;
     }
