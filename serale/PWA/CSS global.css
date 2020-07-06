@@ -2511,3 +2511,113 @@ div#se-product-slider img {
 .se-m-auto{
     margin: 0 auto;
 }
+
+.fa.fa-plus.se-m-auto {
+    margin: auto;
+    color: #2B85C1;
+    font-size: 23px;
+}
+
+#se-leve-junto-section .swiper-slide:first-child {
+    margin-left: 0px;
+}
+
+#se-leve-junto-holder h3 {
+    color: #2BBAFE;
+    font-size: 28px;
+    font-family: Axiforma-Bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#se-leve-junto-holder h4 {
+    font-family: Axiforma-Bold;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #2B85C1;
+}
+
+p.se-price-before {
+    font-size: 14px;
+    font-family: axiforma-bold;
+    color: #8CA2A6;
+    margin-top: 37px;
+    margin-bottom: 0px;
+}
+
+p.se-price-now {
+    font-family: axiforma-bold;
+    font-size: 33px;
+    color: #2BBAFE;
+    margin-top: 13px;
+    margin-bottom: 0px;
+}
+
+#se-leve-junto-holder button {
+    width: 100%;
+}
+
+#se-leve-junto-holder {
+    max-width: 305px;
+    margin: auto auto;
+    margin-right: 90px;
+    margin-left: 115px;
+    text-align: center;
+}
+
+#se-leve-junto-holder .se-button-blue {
+    margin-top: 40px;
+}
+
+#se-leve-junto-section .swiper-slide:last-child {
+    margin-right: 0px !IMPORTANT;
+}
+
+#se-leve-junto-section h2 {
+    font-family: Axiforma-bold;
+    font-size: 33px;
+    margin-bottom: 39px;
+}
+
+#product-details-section {
+    padding-top: 43px;
+    margin-top: 60px;
+    border-top: solid 1px #EEEEEE;
+}
+
+#se-voce-vai-gostar h2 {
+    font-size: 33px;
+    font-family: axiforma-bold;
+    margin-top: 0px;
+}
+
+#se-voce-vai-gostar {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: solid 1px #EEEEEE;
+    margin-bottom: 110px;
+}
+
+#voce-tambem-viu-section h2 {
+    font-size: 33px;
+    font-family: axiforma-bold;
+    margin-top: 0px;
+    margin-bottom: 34px;
+}
+
+section#voce-tambem-viu-section {
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
+
+#breadcrumb-section p {
+    color: #5A6672;
+    font-size: 14px;
+}
+
+span.se-last {
+    color: #2BBAFE;
+    font-family: Axiforma-bold;
+    font-size: 14px;
+}

@@ -1,10 +1,15 @@
 <main id="se-product-page">
 
-    <section class="se-container">
-        <p><span class="se-underline">Home</span> / <span class="se-underline">Feminino</span> / <span class="se-underline">Tênis</span> /<span class="se-last">Feminino</span></p>
+    <!-- O CSS desta página está especificada pra esta estrutura. Tentar repedir as mesmas classes ou divs podem acabar dando ruim, 
+    então se for alterar aqui infelizmente (e consequentemente) o CSS vai ter que ser modificado para caber no que é preciso. -->
+
+    <!-- breadcrumb section -->
+    <section class="se-container" id="breadcrumb-section">
+        <p><span class="se-underline">Home</span> / <span class="se-underline">Feminino</span> / <span class="se-underline">Tênis</span> / <span class="se-last">Feminino</span></p>
     </section>
 
-    <section class="se-container se-flex">
+    <!-- product 2-column section -->
+    <section class="se-container se-flex" id="product-info-section">
         <div id="se-product-slider">
             <img pwa-src="cart-sample-item" alt="" class="se-w100">
         </div>
@@ -73,6 +78,7 @@
         </div>
     </section>
 
+    <!-- aproveite e leve junto slider section -->
     <section class="se-container" id="se-leve-junto-section">
         <h2 class="se-text-center se-blue">Aproveite e leve junto</h2>
         <div class="se-flex">
@@ -123,7 +129,7 @@
             </div>
 
             <div class="se-cmd-4" id="se-leve-junto-holder">
-                <h3>Economie R$ 148,00</h3>
+                <h3>Economize R$ 148,00</h3>
                 <h4>Leve os 2 produtos</h4>
                 <p class="se-price-before">de R$ 403,88</p>
                 <p class="se-price-now">por R$ 255,99</p>
@@ -132,185 +138,189 @@
         </div>
     </section>
 
-    <section class="se-container">
-        <h2 class="se-text-center se-blue">Você também vai gostar</h2>
+    <!-- section com os 3 cmd-4 de informação -->
+    <section id="product-details-section">
+        <div class="se-container se-flex">
+            <section class="se-cmd-4 se-product-description">
+                <h3>Descrição</h3>
+                <p>
+                    Aumente sua adrenalina com a ajuda do Tênis Nike Downshifter 9 Feminino. Ideal para corridas leves e caminhadas, esse tênis feminino possui construção em mesh para circulação de ar, proporcionando maior conforto durante os seus treinos.
+                </p>
+            </section>
 
-        <div class="swiper-container" id="se-slide-produtos2">
-            <div class="swiper-wrapper">
-                
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
+            <section class="se-cmd-4 se-product-description">
+                <h3>Detalhes</h3>
+                <p>
+                    Tênis Nike Downshifter 9<br/>
+                    Rosa<br/>
+                    Tipo de Produto: Tênis<br/>
+                    Bico: Redondo<br/>
+                    Tamanho: 38<br/>
+                    Fechamento: Cadarço<br/>
+                    Material Externo: Têxtil<br/>
+                    Material Interno: Têxtil<br/>
+                    Material da Sola: Sintético
+                </p>
+            </section>
+
+            <section class="se-cmd-4 se-product-description">
+                <h3>Veja mais</h3>
+                <div class="se-flex">
+                    <a href="" class="se-link-tags se-reset">Tênis feminino</a>
+                    <a href="" class="se-link-tags se-reset">Nike</a>
+                    <a href="" class="se-link-tags se-reset">Tênis</a>
+                    <a href="" class="se-link-tags se-reset">Tênis de corrida</a>
                 </div>
+            </section>
+        </div>
+    </section>
 
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
+    <!-- você também vai gostar slider section -->
+    <section id="se-voce-vai-gostar">
+        <div class="se-container">
+            <h2 class="se-text-center se-blue">Você também vai gostar</h2>
+
+            <div class="swiper-container" id="se-slide-produtos2">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide se-card-slide">
+                        <a class="se-releases__card se-releases__card--left">
+                            <button class="se-add-to-favorite">
+                                <span class="fa fa-heart-o"></span>
+                            </button>
+                            <div class="se-price-off">10% OFF</div>
+                            <div class="se-shipping-free">Frete grátis</div>
+                            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+                            
+                            <article class="se-card-overlay">
+                                <button class="se-button-blue">confira</button>
+                            </article>
+                            
+                            <article class="se-card-title">
+                                <p class="se-card-title">Colcci</p>
+                                <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+                                <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
+                                <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+                            </article>
+                        </a>
+                    </div>
+
                 </div>
-
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
-                </div>
-
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
-                </div>
-
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
-                </div>
-
-                <div class="swiper-slide se-card-slide">
-                    <a class="se-releases__card se-releases__card--left">
-                        <button class="se-add-to-favorite">
-                            <span class="fa fa-heart-o"></span>
-                        </button>
-                        <div class="se-price-off">10% OFF</div>
-                        <div class="se-shipping-free">Frete grátis</div>
-                        <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
-                        
-                        <article class="se-card-overlay">
-                            <button class="se-button-blue">confira</button>
-                        </article>
-                        
-                        <article class="se-card-title">
-                            <p class="se-card-title">Colcci</p>
-                            <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
-                            <p class="se-card-price"><span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span></p>
-                            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-                        </article>
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section class="se-container se-flex">
-        <section class="se-cmd-4 se-product-description">
-            <h3>Descrição</h3>
-            <p>
-                Aumente sua adrenalina com a ajuda do Tênis Nike Downshifter 9 Feminino. Ideal para corridas leves e caminhadas, esse tênis feminino possui construção em mesh para circulação de ar, proporcionando maior conforto durante os seus treinos.
-            </p>
-        </section>
-
-        <section class="se-cmd-4 se-product-description">
-            <h3>Detalhes</h3>
-            <p>
-                Tênis Nike Downshifter 9<br/>
-                Rosa<br/>
-                Tipo de Produto: Tênis<br/>
-                Bico: Redondo<br/>
-                Tamanho: 38<br/>
-                Fechamento: Cadarço<br/>
-                Material Externo: Têxtil<br/>
-                Material Interno: Têxtil<br/>
-                Material da Sola: Sintético
-            </p>
-        </section>
-
-        <section class="se-cmd-4 se-product-description">
-            <h3>Veja mais</h3>
-            <div class="se-flex">
-                <a href="" class="se-link-tags se-reset">Tênis feminino</a>
-                <a href="" class="se-link-tags se-reset">Nike</a>
-                <a href="" class="se-link-tags se-reset">Tênis</a>
-                <a href="" class="se-link-tags se-reset">Tênis de corrida</a>
-            </div>
-        </section>
-
-        
-        
-    </section>
-
+    <!-- os 3 itens cmd-4 do footer (pague em ate 12x, retire na loja e entrega expressa) -->
     <section id="se-category-footer">
         <section class="se-container se-flex">
             <div class="se-cmd-4">
@@ -335,7 +345,8 @@
         </section>
     </section>
 
-    <section class="se-container">
+    <!-- último slider section 'você também viu' -->
+    <section class="se-container" id="voce-tambem-viu-section">
         <h2 class="se-text-center se-blue">Você também viu</h2>
 
         <div class="swiper-container" id="se-slide-produtos3">
