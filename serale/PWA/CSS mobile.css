@@ -667,6 +667,16 @@
     .product-find {
         margin-bottom: auto;
     }
+
+    div#se-product-image {
+        flex: 0 0 100% !important;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    button.se-button-consultar {
+        width: 200px;
+    }
 }
 @media(max-width: 411px){
     .se-products-total-find p {
