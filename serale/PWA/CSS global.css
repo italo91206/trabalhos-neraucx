@@ -2945,3 +2945,52 @@ main.se-faq .se-container.se-text-center h3 {
     color: #2B85C1;
     padding-bottom: 28px;
 }
+
+/* ===============
+seçao do entrega-expressa
+=============== */
+
+#se-entrega-expressa h3 {
+    font-family: Axiforma-bold;
+    font-size: 30px;
+    color: #2B85C1;
+    padding-bottom: 28px;
+}
+
+#se-entrega-expressa .se-wrapper {
+    max-width: 792px;
+    margin: 0 auto;
+}
+
+#se-entrega-expressa .se-wrapper p {
+    text-align: justify;
+    font-size: 16px;
+    color: #5A6672;
+}
+
+#lojas-disponiveis article {
+    max-width: 282px;
+    min-width: 220px;
+    margin: 0 auto;
+    height: 175px;
+}
+
+#lojas-disponiveis article h4 {
+    margin-bottom: 17px;
+    color: #2BBAFE;
+    font-size: 20px;
+    font-family: axiforma-bold;
+}
+
+#lojas-disponiveis article p {
+    color: #5A6672;
+}
+
+article.se-cmd-3 {
+    flex: 0 0 30%;
+    max-width: 100%;
+}
+
+section#lojas-disponiveis {
+    margin-bottom: 80px;
+}
