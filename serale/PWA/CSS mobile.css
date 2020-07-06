@@ -586,6 +586,45 @@
     .se-banner-grande-overlay.se-container {
         display: none;
     }
+
+    /* ============
+    secao do /produto-teste
+    ============ */
+
+    div#se-product-buy-info {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    
+    p#se-product-buy-info-name {
+        max-width: unset;
+        margin-top: 7px;
+    }
+    
+    p#se-product-buy-info-marca {
+        margin-top: 10px;
+    }
+    
+    p#se-product-buy-info-price-now {
+        margin-top: 0px;
+    }
+    
+    .se-product-option h3 {
+        text-align: left;
+    }
+    
+    button.se-button-consultar {
+        width: 215px;
+    }
+    
+    #se-leve-junto-section span.fa.fa-plus.se-m-auto {
+        margin: 0 auto;
+    }
+    
+    section#voce-tambem-viu-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 @media(max-width: 414px){
     .se-card-title p.se-card-full-title {
