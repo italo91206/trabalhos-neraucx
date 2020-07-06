@@ -650,6 +650,18 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+    /* ==============
+    seção do quem somos
+    ============== */
+
+    .image-part {
+        width: 100% !important;
+    }
+    
+    .text-part {
+        margin-left: 0px !important;
+    }
 }
 @media(max-width: 414px){
     .se-card-title p.se-card-full-title {
