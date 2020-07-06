@@ -2874,3 +2874,67 @@ div#se-linha-price-before {
     border-radius: 5px;
     background-color: #F9F9F9;
 }
+
+/* =============================
+seção do duvidas frequentes
+============================= */
+
+#duvidas-frequentes-banner{
+    background-image: pwa-url(faq-banner);
+    height: 275px;
+}
+
+#duvidas-frequentes-banner h4 {
+    margin-top: 0;
+    font-family: Axiforma-heavy;
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.se-acordion {
+    background-color: #eee;
+    color: #2B85C1;
+    cursor: pointer;
+    padding: 21px 30px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.se-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.se-acordion.type1 {
+    background-color: #CFEFFF;
+}
+
+.se-acordion.type2 {
+    background-color: #F9FDFF;
+}
+
+.se-acordion.type3 {
+    background-color: #2BBAFE;
+    color: #fff;
+}
+
+.se-panel p {
+    margin-top: 23px;
+    margin-left: 29px;
+    font-size: 16px;
+    color: #5A6672;
+}
+
+.se-acordions-section {
+    margin-bottom: 80px;
+}
