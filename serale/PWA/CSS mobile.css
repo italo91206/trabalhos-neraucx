@@ -297,6 +297,27 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    /* =================
+    seçao do quem somos
+    ================= */
+    #porque-comprar .se-wrapper {
+        max-width: 100%;
+        width: 90%;
+    }
+    #conheca-nossas-lojas article.se-cmd-5 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .image-part {
+        margin: 0 auto !important;
+        margin-right: 0px !important;
+    }
+    
+    .text-part {
+        width: 230px !important;
+        margin: 0 auto !important;
+    }
 }
 @media(max-width: 425px){
     div#se-product-image {
