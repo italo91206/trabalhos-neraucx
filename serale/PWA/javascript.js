@@ -192,7 +192,7 @@ window.PWA.buildStart('home', function () {
   window.PWA.custom.createSlide2Home();
   window.PWA.custom.createSlide3Home();
   window.PWA.custom.createSlideGrandeHome();
-  window.PWA.custom.createSlide6();
+  
 });
 
 window.PWA.previewStart('home', function () {
@@ -211,6 +211,7 @@ window.PWA.previewStart('home', function () {
 
 // estão de fora porque assim são geradas fora de qualquer rota possível.
 // mas o principal motivo e por nao funcionar no 'any' e por ai.
+window.PWA.custom.createSlide6();
 window.PWA.custom.createSlide7();
 window.PWA.custom.createSlide8();
 window.PWA.custom.createSlideFinalCategoria();
