@@ -1621,8 +1621,8 @@ div#se-setima-linha {
     }
     
     #se-category-page p.se-card-full-title {
-        width: 200px !important;
-        margin-left: 32px !important;
+        width: 175px !important;
+        padding-left: 32px !important;
     }
     
     span.se-card-price-before {
