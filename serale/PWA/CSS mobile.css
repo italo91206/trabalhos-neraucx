@@ -318,6 +318,13 @@
         width: 230px !important;
         margin: 0 auto !important;
     }
+    /* ============
+    seção do trocas e devoluções
+    ============ */
+    
+    #se-trocas-e-devolucoes-texto {
+        width: 90%;
+    }
 }
 @media(max-width: 425px){
     div#se-product-image {
