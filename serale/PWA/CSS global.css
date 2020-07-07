@@ -1408,6 +1408,12 @@ div#se-setima-linha {
         padding-left: 200px !important;
     }
 }
+@media(max-width: 1920px){
+    .se-banner-grande-overlay {
+        top: 156px !important;
+        left: 400px !important;
+    }
+}
 @media(max-width: 1440px){
     div#se-quarta-linha {
         padding-left: 120px !important;
