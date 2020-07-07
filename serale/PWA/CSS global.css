@@ -2994,3 +2994,49 @@ article.se-cmd-3 {
 section#lojas-disponiveis {
     margin-bottom: 80px;
 }
+
+/* ===================
+seçao do trocas e devolucoes
+=================== */
+
+#trocas-devolucoes-banner{
+    background-image: pwa-url(trocas-devolucoes);
+    height: 275px;
+}
+
+#trocas-devolucoes-banner h4 {
+    margin-top: 0;
+    font-family: Axiforma-heavy;
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+#se-trocas-e-devolucoes-texto h3 {
+    font-family: Axiforma-bold;
+    font-size: 30px;
+    color: #2B85C1;
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 33px;
+}
+
+#se-trocas-e-devolucoes-texto {
+    max-width: 792px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#se-trocas-e-devolucoes-texto h4 {
+    font-size: 20px;
+    font-family: axiforma-bold;
+    color: #001C3E;
+    margin-bottom: 21px;
+}
+
+#se-trocas-e-devolucoes-texto p {
+    font-size: 16px;
+    color: #5A6672;
+    padding-bottom: 38px;
+}
