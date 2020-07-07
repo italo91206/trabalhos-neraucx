@@ -1540,7 +1540,7 @@ div#se-setima-linha {
         max-width: 30% !important;
     }
     
-    p.se-card-full-title {
+    #se-category-page p.se-card-full-title {
         width: 200px !important;
         margin-left: 32px !important;
     }
@@ -1549,7 +1549,7 @@ div#se-setima-linha {
         margin-left: 10px !important;
     }
     
-    span.se-card-price-actual {
+    #se-category-page span.se-card-price-actual {
         font-size: 18px !important;
         margin-top: 35px !important;
     }
@@ -1581,6 +1581,29 @@ div#se-setima-linha {
     #conheca-nossas-lojas article button {
         margin-top: 11px !important;
     }
+    /* ==========
+    seção quickfix da home
+    ========== */
+
+    #se-main-page #se-primeira-linha article {
+        margin: 0 auto;
+    }
+    
+    div#se-segunda-linha {
+        padding-top: 50px;
+        padding-left: 32px;
+    }
+    
+    .se-banner4-inside-text {
+        top: 30px;
+        left: 17px;
+    }
+    
+    div#se-quarta-linha {
+        padding-top: 50px;
+        padding-left: 32px;
+    }
+
 }
 .swiper-container{
 	z-index: 0 !important;
@@ -1712,13 +1735,13 @@ div#se-slide-holder img {
     margin-right: 0px;
 }
 
-.se-relative.se-cmd-4 img {
+/* .se-relative.se-cmd-4 img {
     width: 384px;
-}
+} */
 
-.se-cmd-6 img.se-w100 {
+/* .se-cmd-6 img.se-w100 {
     width: 588px;
-}
+} */
 
 .se-container .se-cmd-6:first-child {
     padding-left: 0px;

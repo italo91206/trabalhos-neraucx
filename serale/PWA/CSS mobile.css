@@ -321,7 +321,7 @@
     /* ============
     seção do trocas e devoluções
     ============ */
-    
+
     #se-trocas-e-devolucoes-texto {
         width: 90%;
     }
@@ -331,12 +331,12 @@
         flex: 0 0 100% !important;
         overflow: hidden;
     }
-    p.se-card-full-title {
+    #se-category-page p.se-card-full-title {
         margin-left: 0px !important;
         text-align: center;
     }
     
-    span.se-card-price-actual {
+    #se-category-page span.se-card-price-actual {
         margin-left: 18px;
     }
     .se-marcas input[type="text"] {
@@ -679,9 +679,17 @@
         max-width: 50% !important;
         min-width: unset !important;
     }
+
+    /* ==============
+    seção do trocas e devolucoes
+    =============== */
+
+    #trocas-devolucoes-banner h4 {
+        padding-top: 80px;
+    }
 }
 @media(max-width: 414px){
-    .se-card-title p.se-card-full-title {
+    #se-category-page .se-card-title p.se-card-full-title {
         width: 194px !important;
     }
     #se-sexta-linha,
@@ -765,11 +773,11 @@
         margin-top: 19px;
     }
     
-    .se-card-title p.se-card-full-title {
+    #se-category-page .se-card-title p.se-card-full-title {
         width: 184px !important;
     }
     
-    span.se-card-price-actual {
+    #se-category-page span.se-card-price-actual {
         margin-left: 12px;
     }
     .swiper-slide.se-card-slide {
@@ -806,7 +814,7 @@
         width: 345px !important;
     }
     
-    span.se-card-price-actual {
+    #se-category-page span.se-card-price-actual {
         margin-left: 120px;
         font-size: 28px !important;
     }
