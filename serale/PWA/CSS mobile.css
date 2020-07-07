@@ -1,4 +1,7 @@
 @media(max-width: 768px){
+    #se-slide-banner6-home .swiper-slide {
+        width: 100% !important;
+    }
     .se-breadcrumb p {
         margin-left: 0;
     }
