@@ -401,6 +401,10 @@ require(['jquery', 'jquery/ui'], function($) {
   jQuery('.categorypath-open-for-business .product.media').each(function(elm) {
     jQuery(this).append(htmlLabel);
   });
+  // para a categoria do URL /reopen-test
+  jQuery('.category-643 .product-image-container').each(function(elm) {
+    jQuery(this).append(htmlLabel);
+  });
 });
 
 (function() {
