@@ -1276,6 +1276,7 @@ a.float i.fa.fa-whatsapp {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 100% !important;
+	margin-top: 14px !important;
 }
 
 #st-content-wrapper.st-single-tour .grid-item .service-border {
@@ -1466,4 +1467,8 @@ span.icon-hiking {
 #covid-19-bar a:active, #covid-19-bar a:focus, #covid-19-bar a:hover, #covid-19-bar a:visited, #covid-19-bar a {
     text-decoration: none;
     color: unset;
+}
+
+.footer-icons {
+    margin-top: -20px;
 }
