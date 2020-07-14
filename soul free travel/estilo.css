@@ -257,7 +257,8 @@ i.fa.fa-envelope {
 	padding-top: 8px;
 	height: 30px;
 	width: 30px;
-	margin-right: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
 	background: white;
 	border-radius: 44px;
 	color: #848484;
@@ -1471,4 +1472,46 @@ span.icon-hiking {
 
 .footer-icons {
     margin-top: -20px;
+}
+
+
+/* =====================
+parte arrumada dos reviews
+===================== */
+
+@media(max-width: 768px){
+    .tc-testimonial-style15{
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    .testi-footer {
+        flex: 0 0 100%;
+        max-width: 100% !important;
+        width: 100% !important;
+        float: unset !IMPORTANT;
+    }
+
+    .tc-testimonial-style15 .testi-desc {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        display: block !important;
+        float: unset !important;
+    }
+
+    .clearfix {
+        display: none;
+    }
+
+    .tc-testimonial-style15 .testi-ratings {
+        left: 0px;
+        top: 56px;
+    }
+}
+
+
+@media(max-width: 425px){
+    .tc-testimonial-style15 .testi-publish-date{
+        margin-left: 0px;
+    }
 }
