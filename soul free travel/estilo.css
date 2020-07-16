@@ -861,8 +861,9 @@ div#sticky-nav {
 		width: 48% !important;
 	}
 	.daterangepicker.dropdown-menu.ltr.show-calendar.respon-single.moveright.opensright {
-		top: 273px !important;
-		right: 0 !important;
+		top: 254px !important;
+		right: auto !important;
+		width: 100% !important;
 		left: unset !important;
 	}
 	.form-group.form-extra-field.dropdown.clearfix.field-detination.has-icon {
@@ -1497,12 +1498,8 @@ parte arrumada dos reviews
         width: 100% !important;
         display: block !important;
         float: unset !important;
-    }
-
-    .clearfix {
-        display: none;
-    }
-
+	}
+	
     .tc-testimonial-style15 .testi-ratings {
         left: 0px;
         top: 56px;
