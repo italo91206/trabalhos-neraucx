@@ -627,6 +627,7 @@ p.secondary{
 estilização do privacy-policy
 ====================== */
 
+#terms-and-conditions .secondary,
 #privacy-policy .secondary {
   font-family: Trebuchet-MS;
   padding-left: 32px;
@@ -648,9 +649,14 @@ estilização do privacy-policy
   max-width: 1030px;
 }
 
+#terms-and-conditions section.footer-links,
 #privacy-policy section.footer-links {
   margin-top: 0px !important;
 }
 #privacy-policy .list-privacy span.circle-privacy {
   top: 8px !important;
 }
+
+/* ======================
+estilização do terms & conditions
+====================== */
