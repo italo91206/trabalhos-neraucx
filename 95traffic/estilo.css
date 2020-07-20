@@ -644,7 +644,7 @@ estilização do privacy-policy
   font-weight: bold;
 }
 
-#privacy-policy .careers-pre-slider {
+.careers-pre-slider {
   margin: 20px auto;
   max-width: 1030px;
 }
@@ -660,3 +660,31 @@ estilização do privacy-policy
 /* ======================
 estilização do terms & conditions
 ====================== */
+
+/* ======================
+estilização do credit-program
+====================== */
+
+.hbspt-form {
+  max-width: 50%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page-footer{
+  margin-top: 0px !important;
+}
+.container-icons {
+  margin-bottom: 0px !important; 
+  padding-bottom: 35px !important;
+}
+.widget.block.block-static-block {
+  margin-bottom: 0px !important;
+}
+
+#credit-program h1.apply-title {
+  font-family: Trebuchet-MS;
+  text-transform: uppercase;
+  color: #eb1c23;
+  text-align: center;
+}
