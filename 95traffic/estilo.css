@@ -575,7 +575,49 @@ h1 {
 	margin: 40px 0 !important;
 }
 
+h2 {
+    color: #535353;
+	font-size: 27px !important;
+	font-weight: 700;
+}
+
 section.footer-95 h1 {
 	margin-top: 9px !important;
 	font-size: 22px!important;
+}
+
+#about-us .cmd-12{
+	padding: 0px;
+}
+
+#woman-based-company h2{
+	margin-top: 50px;
+}
+
+.together-text h2 {
+    min-height: 58px;
+}
+
+.together-text p.secondary {
+    min-height: 420px;
+}
+
+p.primary{
+	color: #67666b;
+    font-size: 27px !important;
+}
+
+p.secondary{
+	color: #67666b;
+    font-size: 21px !important;
+}
+
+.together-text .cmd-4:first-child {
+  padding-left: 0px;
+}
+
+@media (min-width: 765px){
+    .together-text .cmd-4:first-child {
+    padding-left: 0px;
+  }
 }
