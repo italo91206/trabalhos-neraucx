@@ -688,3 +688,12 @@ estilização do credit-program
   color: #eb1c23;
   text-align: center;
 }
+
+/* ======================
+estilização do price-match
+====================== */
+
+#price-match h1{
+  color: #67666b;
+  text-align: center;
+}
