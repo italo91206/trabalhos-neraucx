@@ -621,3 +621,36 @@ p.secondary{
     padding-left: 0px;
   }
 }
+
+
+/* ======================
+estilização do privacy-policy
+====================== */
+
+#privacy-policy .secondary {
+  font-family: Trebuchet-MS;
+  padding-left: 32px;
+}
+
+#privacy-policy h1 {
+  font-family: Trebuchet-MS;
+  color: #67666b;
+  text-align: left;
+}
+
+#privacy-policy p span.red-privacy {
+  color: #ee7073;
+  font-weight: bold;
+}
+
+#privacy-policy .careers-pre-slider {
+  margin: 20px auto;
+  max-width: 1030px;
+}
+
+#privacy-policy section.footer-links {
+  margin-top: 0px !important;
+}
+#privacy-policy .list-privacy span.circle-privacy {
+  top: 8px !important;
+}
