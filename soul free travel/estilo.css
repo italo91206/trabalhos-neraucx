@@ -1515,3 +1515,9 @@ parte arrumada dos reviews
         padding: 0px;
     }
 }
+
+@media (max-width: 768px){
+    a.share-item.social-share i.input-icon.field-icon.fa {
+        padding-left: unset;
+    }
+}
