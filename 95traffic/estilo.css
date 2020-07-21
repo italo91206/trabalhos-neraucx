@@ -917,3 +917,82 @@ div#careers-principal-text h1.text-center {
   margin: 20px auto;
   max-width: 1058px;
 }
+
+
+/* ================================
+things that were on header
+================================ */
+
+.modals-wrapper {
+  display: none;
+}
+
+small.copyright {
+  display: none;
+}
+
+.header-contact.responsive {
+  display: none;
+}
+
+body.catalog-category-view .page-wrapper .page-main .columns .column.main .products.products-grid .products.product-items .product-item .product-item-info .product-item-photo {
+  min-height: 250px;
+}
+
+.price-box.price-final_price {
+  visibility: hidden;
+}
+
+/*** HEADER CHANGES ***/
+.header-95 .topbuttons {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.header-95 .container {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.header-95 .toplinks {
+  position: absolute;
+  top: 0px;
+  left: 35px;
+}
+
+.header-95 h1.header-order {
+  margin-bottom: 15px;
+  margin-top: 30px !important;
+}
+
+.header-95 .get-a-quote {
+  padding-right: 0px;
+  text-align: right;
+  margin-top: 17px;
+  float: right;
+}
+
+.header-95 a.btn-customer, 
+.header-95 a.btn-quote {
+  width: 136px !important;
+  display: inline-block;
+  text-align: center;
+}
+
+.header-95 a.btn-customer {
+  margin-right: 10px;
+}
+
+.header-95 .block-search {
+  margin-top: 0px !important;
+}
+
+.header-95 ul.option-header li:nth-of-type(3) {
+  border-right: 2px solid #ee7073;
+}
+
+.header-95 ul.option-header li:nth-of-type(4) {
+  border-right: none
+}
