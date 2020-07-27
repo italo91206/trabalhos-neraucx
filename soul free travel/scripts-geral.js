@@ -87,7 +87,9 @@ window.onload = function(){
         jQuery("#fecharMenu").removeClass("hidden");
     });
 
-    
+    // ==================
+    // pra adicionar filtros
+    // ==================
 
-    
+    jQuery("#input_st_phone").mask('+000 (00) 00000-0000');
 }
