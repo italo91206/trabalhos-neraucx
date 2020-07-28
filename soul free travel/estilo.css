@@ -117,18 +117,6 @@ li.vc_tta-tab.vc_active {
 	padding: 0px;
 }
 
-.vc_item {
-	width: 33.3333% !important;
-	/* height: 877px !important; */
-}
-
-
-/* .vc_inner,
-    div#vc_images-carousel-1-1588593616, 
-    .vc_images_carousel .vc_carousel-inner {
-        height: 877px;
-    } */
-
 #main-footer>div {
 	width: unset !important;
 }
