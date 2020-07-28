@@ -1533,6 +1533,38 @@ formulário do /login
     max-width: unset;
 }
 
+
+/* ===================
+parte do tour search result 
+=================== */
+
 .full-row .vc_images_carousel .vc_carousel-control.vc_right {
     left: auto !important;
+}
+
+.search-result-page .search-form-wrapper {
+    background-color: rgb(46, 83, 164);
+}
+
+@media(min-width: 768px){
+	.search-form form {
+		 background-color: unset !important;
+		 box-shadow: none !important;
+	 }
+ 
+	 .search-form {
+		 box-shadow: none !important;
+	 }
+ 
+	 .st-search-form-tour .tour-search-form-home .search-form .form .form-button-new .btn-search {
+		 background: rgb(194, 21, 27);
+	 } 
+	 .st-render {
+		 margin-top: 10px;
+	 }
+ }
+@media(max-width: 768px){
+	.search-result-page.style-2 .tour-top-search {
+		margin-top: 0;
+	}
 }
