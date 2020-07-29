@@ -92,4 +92,5 @@ window.onload = function(){
     // ==================
 
     jQuery("#input_st_phone").mask('+000 (00) 00000-0000');
+    jQuery("#telephone-8962").mask('+000 (00) 00000-0000');
 }
