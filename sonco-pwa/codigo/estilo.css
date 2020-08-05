@@ -3821,9 +3821,61 @@ p.sc-topic-red {
 confirmed CSS from categories - barricade
 ==================== */
 
+#sc-category-barricades {
+  background-color: #eeeeee;
+}
 
+.sc-breadcrumbs {
+  width: 100%;
+  font-family: "camber-medium";
+  font-size: 18px;
+  color: #032E5A;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
 
+.sc-novo-container {
+  min-width: 1333px;
+  width: 100%;
+}
 
+#sc-category-barricades .sc-shipping {
+  position: relative;
+}
+
+.sc-slider-title {
+  font-size: 35px;
+  color: #032e5a;
+  font-family: "camber-medium";
+  line-height: 20px;
+  padding-top: 80px;
+  padding-bottom: 65px;
+}
+
+.sc-circle-categories-title {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.sc-big-circles-title {
+  padding-top: 90px;
+  padding-bottom: 22px;
+}
+
+.sc-4images-title {
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+
+.sc-gif-banner {
+  margin-top: 48px;
+}
+
+.sc-social-big {
+  height: unset !important;
+  max-height: 410px;
+}
 
 #sc-slide__banners-barricades .sc-construction-card-content::before {
 	background-image: linear-gradient(80deg, #eb2d2d 10%, transparent);
@@ -3853,7 +3905,7 @@ confirmed CSS from categories - barricade
 	width: 1333px;
 	margin-right: calc((100% - 1333px) / 2);
 	margin-left: calc((100% - 1333px) / 2);
-	margin-top: 90px;
+	margin-top: 20px;
 	background: #023059;
 	display: flex;
 	flex-flow: column;

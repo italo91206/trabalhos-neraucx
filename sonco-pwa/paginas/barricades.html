@@ -1,7 +1,7 @@
 <main id="sc-category-barricades">
 
   <!-- breadcrumbs -->
-  <section class="sc-breadcrumbs-list sc-container">
+  <section class="sc-breadcrumbs sc-container">
     <p>Home &gt; Category &gt; Barricades</p>
   </section>
 
@@ -19,29 +19,33 @@
     </div>
   </section>
 
-  <!-- category main slider -->
-  <section class="sc-category-slider sc-container">
+  <!-- SLIDER -->
+  <section class="sc-container sc-slide__industrial-01">
     <div class="swiper-container" id="sc-slide__category-barricades" pwa-hook="sc-slide__category-barricades">
       <div class="swiper-wrapper">
-
         <div class="swiper-slide">
-          <img pwa-src="free-shipping-on-bundles" class="sc-w100" alt="Banner 01">
+          <img pwa-src="free-shipping-on-bundles" alt="Banner 01" class="isdesktop">
+          <!-- <img pwa-src="banner-mobile-slide-01" alt="Banner 01" class="ismobile"> -->
+        </div>
+        
+        <div class="swiper-slide">
+          <img pwa-src="free-shipping-on-bundles" alt="Banner 01" class="isdesktop">
+          <!-- <img pwa-src="banner-mobile-slide-01" alt="Banner 01" class="ismobile"> -->
         </div>
 
         <div class="swiper-slide">
-          <img pwa-src="free-shipping-on-bundles" class="sc-w100" alt="Banner 01">
+          <img pwa-src="free-shipping-on-bundles" alt="Banner 01" class="isdesktop">
+          <!-- <img pwa-src="banner-mobile-slide-01" alt="Banner 01" class="ismobile"> -->
         </div>
-
       </div>
     </div>
     <!-- Add Arrows -->
-
-    <div class="sc-slide__category-barricades-next swiper-button-next sc-border-buttom sc-size-buttom"></div>
-    <div class="sc-slide__category-barricades-prev swiper-button-prev sc-border-buttom sc-size-buttom"></div>
+    <div class="sc-slide__category-barricades-next swiper-button-next"></div>
+    <div class="sc-slide__category-barricades-prev swiper-button-prev"></div>
   </section>
 
   <!-- circle subcategory links -->
-  <section class="sc-categories sc-container">
+  <section class="sc-categories sc-container sc-circles-categories">
     <article class="sc-categories-card">
       <div class="sc-categories-card__image">
         <img pwa-src="cart-bundles" alt="Cart Bundles" />
@@ -194,12 +198,15 @@
   </figure>
 
   <!-- SECTION SHIPPING -->
-  <section class="sc-shipping sc-container">
+  <section class="sc-container sc-novo-container sc-slider-title">
     <span class="sc-section-title">
       Free Shipping
       <a href="#">See all</a>
     </span>
+  </section>
 
+  <!-- SECTION SHIPPING PRODUCT SLIDER-->
+  <section class="sc-shipping sc-container sc-novo-container">
     <div class="sc-shipping-cards swiper-container" id="sc-slide__products-industrial-01"
       pwa-hook="sc-slide__products-industrial-01">
       <div class="swiper-wrapper">
@@ -300,6 +307,13 @@
     <div class="sc-slide__products-industrial-01-prev swiper-button-prev"></div>
   </section>
 
+  <section class="sc-container sc-novo-container sc-categories sc-circle-categories-title">
+    <span class="sc-section-title">
+      Barricade Cover Styles
+      <a href="#">See all</a>
+    </span>
+  </section>
+
   <!-- Barricade Cover Styles -->
   <section class="sc-categories sc-container">
     <article class="sc-categories-card">
@@ -383,12 +397,15 @@
     </article>
   </section>
 
-  <!-- Advertise & Monetize  -->
-  <section class="sc-new-age-products sc-container">
+  <section class="sc-container sc-novo-container sc-big-circles-title">
     <span class="sc-section-title">
       Advertising & Monetize
     </span>
+  </section>
 
+
+  <!-- Advertise & Monetize  -->
+  <section class="sc-new-age-products sc-container">
     <div class="sc-new-age-products-cards">
       <article class="sc-new-age-products-card">
         <figure class="sc-new-age-products-card-figure">
@@ -423,13 +440,16 @@
     </div>
   </section>
 
-  <!-- SECTION SHIPPING -->
-  <section class="sc-shipping sc-container">
+  <!-- hot deals -->
+  <section class="sc-container sc-novo-container sc-slider-title">
     <span class="sc-section-title">
       Hot Deals
       <a href="#">See all</a>
     </span>
+  </section>
 
+  <!-- SECTION SHIPPING -->
+  <section class="sc-shipping sc-container sc-novo-container">
     <div class="sc-shipping-cards swiper-container" id="sc-slide__barricades-products-01"
       pwa-hook="sc-slide__barricades-products-01">
       <div class="swiper-wrapper">
@@ -531,12 +551,14 @@
   </section>
 
   <!-- reopen -->
-  <section class="sc-reopen-product sc-container">
+  <section class="sc-container sc-novo-container sc-4images-title">
     <span class="sc-section-title">
       Reopen Product Series
       <a href="#">See all</a>
     </span>
+  </section>
 
+  <section class="sc-reopen-product sc-container">
     <div class="sc-reopen-product__content">
       <figure class="sc-reopen-product__image sc-space__reopen">
         <a href="#"><img pwa-src="barricades-social-distancing" alt="Social Distancing"></a>
@@ -557,12 +579,14 @@
   </section>
 
   <!-- Popular accessories -->
-  <section class="sc-shipping sc-container">
+  <section class="sc-container sc-novo-container sc-slider-title">
     <span class="sc-section-title">
       Popular Accessories
       <a href="#">See all</a>
     </span>
+  </section>
 
+  <section class="sc-shipping sc-container sc-novo-container">
     <div class="sc-shipping-cards swiper-container" id="sc-slide__barricades-products-02"
       pwa-hook="sc-slide__barricades-products-02">
       <div class="swiper-wrapper">
@@ -664,7 +688,7 @@
   </section>
 
   <!-- BANNER FOLLOW US -->
-  <section class="sc-banner-tile-info sc-banner-tile-info-facebook sc-container">
+  <section class="sc-banner-tile-info sc-banner-tile-info-facebook sc-container sc-gif-banner">
     <div class="sc-banner-banner-info__content">
       <img pwa-src="follow-us-banner">
     </div>
