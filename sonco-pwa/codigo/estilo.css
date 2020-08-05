@@ -3816,3 +3816,114 @@ p.sc-topic-red {
 .sc-whiting-sports-03 {
 	height: 290px !important;
 }
+
+/* ====================
+confirmed CSS from categories - barricade
+==================== */
+
+
+
+
+
+#sc-slide__banners-barricades .sc-construction-card-content::before {
+	background-image: linear-gradient(80deg, #eb2d2d 10%, transparent);
+}
+
+.sc-barricades-background-01 {
+	background-image: pwa-url(steel-barricades-banner) !important;
+}
+
+.sc-barricades-background-02 {
+	background-image: pwa-url(water-barriers-banner) !important;
+}
+
+.sc-barricades-background-03 {
+	background-image: pwa-url(plastic-barriers-banner) !important;
+}
+
+.sc-barricades-background-04 {
+	background-image: pwa-url(stage-barriers-banner) !important;
+}
+
+#sc-slide__banners-barricades .sc-construction-card__button {
+	background-color: #FF1E36 !important;
+}
+
+.sc-stray-productions {
+	width: 1333px;
+	margin-right: calc((100% - 1333px) / 2);
+	margin-left: calc((100% - 1333px) / 2);
+	margin-top: 90px;
+	background: #023059;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+	height: 1010px;
+	margin-bottom: 90px;
+}
+
+.sc-stray-productions-info {
+	width: 560px;
+	padding: 55px 0 0 40px;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	color: #fff;
+}
+
+.sc-stray-productions-info h2 {
+	color: #fff;
+	font-size: 1.7em;
+	font-family: Camber-Medium;
+	font-weight: 500;
+	margin-bottom: 2vh;
+	text-transform: uppercase;
+	line-height: 26px;
+}
+
+.sc-stray-productions-button {
+	background-color: #e62332!important;
+	border: none!important;
+	width: 172px!important;
+	margin-left: 0;
+	text-transform: capitalize!important;
+	font-size: 13px!important;
+	height: 42px!important;
+	margin-top: 21px;
+	margin-bottom: 20px!important;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sc-stray-productions-images img:nth-child(1) {
+	width: 437px;
+	position: absolute;
+	z-index: 2;
+	left: 555px;
+	top: 15px;
+}
+
+.sc-stray-productions-images img:nth-child(2) {
+	top: 450px;
+	position: absolute;
+	width: 406px;
+	height: 406px;
+	right: 40px;
+}
+
+.sc-stray-productions-images img:nth-child(3) {
+	position: absolute;
+	right: 70px;
+	top: 105px;
+}
+
+.sc-stray-productions .stray-iframe {
+	position: absolute;
+	bottom: 114px;
+	left: 40px;
+}
