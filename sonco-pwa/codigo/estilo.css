@@ -1044,7 +1044,8 @@ html {
 }
 
 .sc-construction-card-content:before,
-.sc-construction-card-content.sc-color-card__events:before {
+.sc-construction-card-content.sc-color-card__events:before,
+.sc-construction-card-content.sc-color-card__sports:before {
     content: '';
     background-image: linear-gradient(80deg, #ebca2d 10%, transparent);
     width: 100%;
@@ -1057,14 +1058,16 @@ html {
 }
 
 .sc-construction-card-content:hover:before,
-.sc-construction-card-content.sc-color-card__events:hover:before {
+.sc-construction-card-content.sc-color-card__events:hover:before,
+.sc-construction-card-content.sc-color-card__sports:hover:before {
     background-image: linear-gradient(55deg, #ebca2d 30%, transparent);
     transition: all .5s;
     opacity: 1;
 }
 
 .sc-construction-card-content:hover .sc-construction-card__button,
-.sc-construction-card-content.sc-color-card__events:hover .sc-construction-card__button.sc-color-buttom__events {
+.sc-construction-card-content.sc-color-card__events:hover .sc-construction-card__button.sc-color-buttom__events
+.sc-construction-card-content.sc-color-card__sports:hover .sc-construction-card__button.sc-color-buttom__sports {
   background-color: #333;
   transition: 0.5s;
 }
@@ -1833,7 +1836,7 @@ i.fa-plus {
   color: #032e5a;
   letter-spacing: 1px;
   margin-bottom: 40px;
-  line-height: 35px;
+  line-height: 43px;
 }
 
 .sc-info__safety .sc-info__safety-article p {
@@ -3426,7 +3429,7 @@ span.sc-product-value {
   margin-right: calc((100% - 1333px) / 2);
   margin-left: calc((100% - 1333px) / 2);
   padding: 55px 40px;
-  margin-top: -40px;
+  margin-bottom: 57px;
   background: #032E5A;
   display: flex;
   flex-flow: column;
@@ -3495,11 +3498,10 @@ span.sc-product-value {
   width: 418px;
 }
 
-.sc-how-stray-images img:nth-child(4) {
+.sc-how-stray-images iframe {
   height: 360px;
   width: 730px;
-  position: absolute;
-  top: 577px;
+  margin-top: 198px;
   left: 40px;
 }
 
@@ -3597,4 +3599,181 @@ p.sc-topic-red {
 /* BANNER SPACE JOB */
 .sc-space-jog__banner {
     margin-top: 40px;
+}
+
+/* BANNER EVENTS SOCIAL */
+.sc-space-banner__social-distancing {
+    margin-top: 23px !important;
+}
+
+
+
+/*
+* PAGE SHOP BY SPORTS
+*/
+.sc-image-background-01-sports {
+  background-image: pwa-url(card-crowd-sports) !important;
+}
+
+.sc-image-background-02-sports {
+   background-image: pwa-url(card-custom-sports) !important;
+}
+
+.sc-image-background-03-sports {
+   background-image: pwa-url(card-outdoor-sports) !important;
+}
+
+.sc-image-background-04-sports {
+  background-image: pwa-url(card-queue-sports) !important;
+}
+
+/* CARD CONSTRUCTION */
+.sc-construction-card-content.sc-color-card__sports:before {
+    background-image: linear-gradient(80deg, #139216 10%, transparent) !important;
+}
+
+.sc-construction-card-content.sc-color-card__sports:hover:before {
+    background-image: linear-gradient(55deg, #139216 30%, transparent) !important;
+}
+
+.sc-construction-card__button.sc-color-buttom__sports {
+    background-color: #139216 !important;
+}
+
+.sc-construction-card-content.sc-color-card__sports:hover .sc-construction-card__button.sc-color-buttom__sports {
+  background-color: #333 !important;
+  transition: 0.5s;
+}
+
+/* SECTION WHITING TURN */
+.sc-whiting__turner.sc-whiting__sports {
+    background-color: #002d47 !important;
+    height: 900px !important;
+}
+
+.sc-whiting__turner-button {
+    color: #002d47 !important;
+}
+
+.sc-whiting-sports-01 {
+    top: 36px !important;
+    right: 410px !important;
+}
+
+.sc-whiting-sports-02 {
+    top: 343px !important;
+    right: 118px !important;
+}
+
+.sc-whiting-sports-03 {
+    height: 290px !important;
+}
+
+
+
+/* ================
+categoria barricades
+================ */
+
+#sc-slide__banners-barricades .sc-construction-card-content::before {
+  background-image: linear-gradient(80deg, #eb2d2d 10%, transparent);
+}
+.sc-barricades-background-01 {
+  background-image: pwa-url(steel-barricades-banner) !important;
+}
+
+.sc-barricades-background-02 {
+   background-image: pwa-url(water-barriers-banner) !important;
+}
+
+.sc-barricades-background-03 {
+   background-image: pwa-url(plastic-barriers-banner) !important;
+}
+
+.sc-barricades-background-04 {
+  background-image: pwa-url(stage-barriers-banner) !important;
+}
+
+#sc-slide__banners-barricades .sc-construction-card__button {
+  background-color: #FF1E36 !important;
+}
+
+.sc-stray-productions {
+    width: 1333px;
+    margin-right: calc((100% - 1333px) / 2);
+    margin-left: calc((100% - 1333px) / 2);
+    margin-top: 90px;
+    background: #023059;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    height: 1010px;
+    margin-bottom: 90px;
+}
+
+.sc-stray-productions-info {
+    width: 560px;
+    padding: 55px 0 0 40px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.sc-stray-productions-info h2 {
+    color: #fff;
+    font-size: 1.7em;
+    font-family: Camber-Medium;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    line-height: 26px;
+}
+
+.sc-stray-productions-button {
+    background-color: #e62332!important;
+    border: none!important;
+    width: 172px!important;
+    margin-left: 0;
+    text-transform: capitalize!important;
+    font-size: 13px!important;
+    height: 42px!important;
+    margin-top: 21px;
+    margin-bottom: 20px!important;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sc-stray-productions-images img:nth-child(1) {
+    width: 437px;
+    position: absolute;
+    z-index: 2;
+    left: 555px;
+    top: 15px;
+}
+
+.sc-stray-productions-images img:nth-child(2) {
+    top: 450px;
+    position: absolute;
+    width: 406px;
+    height: 406px;
+    right: 40px;
+}
+
+.sc-stray-productions-images img:nth-child(3) {
+    position: absolute;
+    right: 70px;
+    top: 105px;
+}
+
+.sc-stray-productions .stray-iframe {
+    position: absolute;
+    bottom: 114px;
+    left: 40px;
 }

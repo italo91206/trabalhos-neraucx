@@ -1,0 +1,91 @@
+/* camber-regular */
+@font-face {
+    font-family: "camber-regular";
+    src: pwa-url(camber-regular-eot);
+    /* IE9 Compat Modes */
+    src: pwa-url(camber-regular-eot) format("embedded-opentype"),
+        /* IE6-IE8 */
+        pwa-url(camber-regular-otf) format("opentype"),
+        /* Open Type Font */
+        pwa-url(camber-regular-svg) format("svg"),
+        /* Legacy iOS */
+        pwa-url(camber-regular-ttf) format("truetype"),
+        /* Safari, Android, iOS */
+        pwa-url(camber-regular-woff) format("woff"),
+        /* Modern Browsers */
+        pwa-url(camber-regular-woff2) format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* camber-medium */
+@font-face {
+    font-family: "camber-medium";
+    src: pwa-url(camber-medium-eot);
+    /* IE9 Compat Modes */
+    src: pwa-url(camber-medium-eot) format("embedded-opentype"),
+        /* IE6-IE8 */
+        pwa-url(camber-medium-otf) format("opentype"),
+        /* Open Type Font */
+        pwa-url(camber-medium-svg) format("svg"),
+        /* Legacy iOS */
+        pwa-url(camber-medium-ttf) format("truetype"),
+        /* Safari, Android, iOS */
+        pwa-url(camber-medium-woff) format("woff"),
+        /* Modern Browsers */
+        pwa-url(camber-medium-woff2) format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  
+/* camber-semibold */
+@font-face{
+    font-family: "camber-semibold";
+    src: pwa-url(camber-semibold-eot);
+    /* IE9 Compat Modes */
+    src: pwa-url(camber-semibold-eot) format("embedded-opentype"),
+        /* IE6-IE8 */
+        pwa-url(camber-semibold-otf) format("opentype"),
+        /* Open Type Font */
+        pwa-url(camber-semibold-svg) format("svg"),
+        /* Legacy iOS */
+        pwa-url(camber-semibold-ttf) format("truetype"),
+        /* Safari, Android, iOS */
+        pwa-url(camber-semibold-woff) format("woff"),
+        /* Modern Browsers */
+        pwa-url(camber-semibold-woff2) format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* camber-bold */
+@font-face {
+    font-family: "camber-bold";
+    src: pwa-url(camber-bold-eot);
+    /* IE9 Compat Modes */
+    src: pwa-url(camber-bold-eot) format("embedded-opentype"),
+        /* IE6-IE8 */
+        pwa-url(camber-bold-otf) format("opentype"),
+        /* Open Type Font */
+        pwa-url(camber-bold-svg) format("svg"),
+        /* Legacy iOS */
+        pwa-url(camber-bold-ttf) format("truetype"),
+        /* Safari, Android, iOS */
+        pwa-url(camber-bold-woff) format("woff"),
+        /* Modern Browsers */
+        pwa-url(camber-bold-woff2) format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  html {
+    font-family: "camber-regular";
+  }
