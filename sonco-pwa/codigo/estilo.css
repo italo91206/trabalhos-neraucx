@@ -3979,3 +3979,32 @@ confirmed CSS from categories - barricade
 	bottom: 114px;
 	left: 40px;
 }
+
+.sc-stray-productions.ismobile {
+  width: 100%;
+  margin: 0;
+  height: unset;
+  margin-top: 90px;
+}
+
+.sc-stray-productions.ismobile .stray-iframe {
+  max-width: 395px;
+  max-height: 150px;
+  margin-top: unset;
+  margin-bottom: unset;
+  position: unset;
+  margin: 50px auto 15px auto;
+}
+
+.sc-stray-productions.ismobile h2 {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 0 auto;
+  font-weight: unset;
+}
+
+.sc-stray-productions.ismobile a {
+  margin: 20px auto;
+}
