@@ -3757,6 +3757,7 @@ confirmed CSS from categories - barricade
 
 #sc-category-barricades .sc-shipping {
   position: relative;
+  height: auto;
 }
 
 .sc-slider-title {
@@ -3771,10 +3772,11 @@ confirmed CSS from categories - barricade
 .sc-circle-categories-title {
   margin-top: 20px;
   margin-bottom: -20px;
+  height: unset;
 }
 
 .sc-big-circles-title {
-  padding-top: 90px;
+  padding-top: 45px;
   padding-bottom: 22px;
 }
 
@@ -3922,4 +3924,31 @@ confirmed CSS from categories - barricade
 
 .sc-stray-productions.ismobile a {
   margin: 20px auto;
+}
+
+#sc-category-barricades .sc-ind-description__01 {
+  font-family: "camber-semibold";
+  font-size: 55px;
+}
+
+#sc-category-barricades .sc-industrial-category__description p {
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 0px;
+  padding-bottom: 25px;
+}
+
+#sc-category-barricades .sc-ind-description {
+  font-family: "camber-medium";
+  font-size: 40px;
+  line-height: 45px;
+}
+
+#sc-category-barricades .sc-industrial-category__description ul li {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+#sc-category-barricades p.sc-topic-red{
+  padding-bottom: 0px !important;
 }
