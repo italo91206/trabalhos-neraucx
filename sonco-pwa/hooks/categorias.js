@@ -1,5 +1,9 @@
 {
-    /* BARRICADES CATEGORY */
+    /* 
+    ===================
+    BARRICADES CATEGORY 
+    ===================
+    */
     "--sc-slide__category-barricades": component => {
         component.$slide('#sc-slide__category-barricades', {
            slidesPerView: 1,
@@ -39,6 +43,34 @@
                 prevEl: '.sc-slide__barricades-products-02-prev',
             }
         });
+    },
+    /* 
+    ===================
+    CUSTOM SIGNS CATEGORY 
+    ===================
+    */
+    "--sc-slide__category-custom-signs": component => {
+        component.$slide('#sc-slide__category-custom-signs', {
+        slidesPerView: 1,
+            navigation: {
+                nextEl: '.sc-slide__category-custom-signs-next',
+                prevEl: '.sc-slide__category-custom-signs-prev',
+            }
+        });
+    },
+    // THE 4 BANNERS FROM CUSTOM SIGNS CATEGORY
+    "--sc-slide__banners-custom-signs": component => {
+        component.$slide('#sc-slide__banners-custom-signs', {
+        slidesPerView: 1,
+            navigation: {
+                nextEl: '.sc-slide__banners-custom-signs-next',
+                prevEl: '.sc-slide__banners-custom-signs-prev',
+            }
+        });
     }
+
+
+    
+   
     
 }
