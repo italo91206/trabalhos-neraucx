@@ -1045,7 +1045,8 @@ html {
 
 .sc-construction-card-content:before,
 .sc-construction-card-content.sc-color-card__events:before,
-.sc-construction-card-content.sc-color-card__sports:before {
+.sc-construction-card-content.sc-color-card__sports:before,
+.sc-construction-card-content.sc-color-card__estate:before {
     content: '';
     background-image: linear-gradient(80deg, #ebca2d 10%, transparent);
     width: 100%;
@@ -1059,15 +1060,17 @@ html {
 
 .sc-construction-card-content:hover:before,
 .sc-construction-card-content.sc-color-card__events:hover:before,
-.sc-construction-card-content.sc-color-card__sports:hover:before {
+.sc-construction-card-content.sc-color-card__sports:hover:before,
+.sc-construction-card-content.sc-color-card__estate:hover:before {
     background-image: linear-gradient(55deg, #ebca2d 30%, transparent);
     transition: all .5s;
     opacity: 1;
 }
 
 .sc-construction-card-content:hover .sc-construction-card__button,
-.sc-construction-card-content.sc-color-card__events:hover .sc-construction-card__button.sc-color-buttom__events
-.sc-construction-card-content.sc-color-card__sports:hover .sc-construction-card__button.sc-color-buttom__sports {
+.sc-construction-card-content.sc-color-card__events:hover .sc-construction-card__button.sc-color-buttom__events,
+.sc-construction-card-content.sc-color-card__sports:hover .sc-construction-card__button.sc-color-buttom__sports,
+.sc-construction-card-content.sc-color-card__estate:hover .sc-construction-card__button.sc-color-buttom__estate {
   background-color: #333;
   transition: 0.5s;
 }
@@ -3559,7 +3562,7 @@ p.sc-topic-red {
 
 
 
-/*
+/**************************
 * PAGE SHOP BY EVENTS
 */
 .sc-image-background-01-events {
@@ -3608,7 +3611,7 @@ p.sc-topic-red {
 
 
 
-/*
+/***************************
 * PAGE SHOP BY SPORTS
 */
 .sc-image-background-01-sports {
@@ -3669,6 +3672,64 @@ p.sc-topic-red {
     height: 290px !important;
 }
 
+
+/***********************
+* PAGE SHOP BY ESTATE
+*/
+.sc-image-background-01-estate {
+  background-image: pwa-url(card-covers-estate) !important;
+}
+
+.sc-image-background-02-estate {
+   background-image: pwa-url(card-outdoor-estate) !important;
+}
+
+.sc-image-background-03-estate {
+   background-image: pwa-url(card-plastic-estate) !important;
+}
+
+.sc-image-background-04-estate {
+  background-image: pwa-url(card-barriers-estate) !important;
+}
+
+/* CARD CONSTRUCTION */
+.sc-construction-card-content.sc-color-card__estate:before {
+    background-image: linear-gradient(80deg, #148D94 10%, transparent) !important;
+}
+
+.sc-construction-card-content.sc-color-card__estate:hover:before {
+    background-image: linear-gradient(55deg, #148D94 30%, transparent) !important;
+}
+
+.sc-construction-card__button.sc-color-buttom__estate {
+    background-color: #148D94 !important;
+}
+
+.sc-construction-card-content.sc-color-card__estate:hover .sc-construction-card__button.sc-color-buttom__estate {
+  background-color: #333 !important;
+  transition: 0.5s;
+}
+
+/* SECTION WHITING TURN */
+.sc-whiting__turner.sc-whiting__estate {
+    background-color: #77bc1f !important;
+    height: 900px !important;
+}
+
+.sc-whiting__turner-button.sc-buttom-color__estate {
+    background-color: #E62332;
+    color: #fff !important;
+}
+
+.sc-whiting-estate-01{
+    width: 34%;
+}
+
+.sc-whiting-estate-02 {
+    top: 591px !important;
+    width: 90% !important;
+    right: 78px !important;
+}
 
 
 /* ====================
