@@ -109,8 +109,37 @@
         prevEl: '.sc-slide__banners-fence-solutions-prev',
       }
     });
+  },
+  /* 
+  ===================
+  STANCHIONS CATEGORY 
+  ===================
+  */
+  "--sc-slide__category-stanchions": component => {
+    component.$slide('#sc-slide__category-stanchions', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__category-stanchions-next',
+        prevEl: '.sc-slide__category-stanchions-prev',
+      }
+    });
+  },
+  "--sc-slide__category-stanchions-01": component => {
+    component.$slide('#sc-slide__category-stanchions-01', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__category-stanchions-01-next',
+        prevEl: '.sc-slide__category-stanchions-01-prev',
+      }
+    });
+  },
+  "--sc-slide__banners-stanchions": component => {
+    component.$slide('#sc-slide__banners-stanchions', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__banners-stanchions-next',
+        prevEl: '.sc-slide__banners-stanchions-prev',
+      }
+    });
   }
-
-
-  
 }
