@@ -4290,3 +4290,74 @@ custom-signs
 #sc-category-custom-signs p.sc-topic-red {
 	padding-bottom: 0px !important;
 }
+
+/* ================
+fence solutions category
+================ */
+
+#sc-category-fence-solutions .sc-4images-title {
+	padding-top: 50px;
+}
+
+#sc-category-fence-solutions .sc-ind-description__01 {
+  font-family: "camber-semibold";
+  font-size: 55px;
+}
+
+#sc-category-fence-solutions .sc-industrial-category__description p {
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 0px;
+  padding-bottom: 25px;
+}
+
+#sc-category-fence-solutions .sc-ind-description {
+  font-family: "camber-medium";
+  font-size: 40px;
+  line-height: 45px;
+}
+
+#sc-category-fence-solutions .sc-industrial-category__description ul li {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+#sc-category-fence-solutions p.sc-topic-red {
+  padding-bottom: 0px !important;
+}
+
+#sc-category-fence-solutions {
+	background-color: #eeeeee;
+}
+
+.sc-fence-solutions-background-01{
+  background-image: pwa-url(fence-solutions-temporary-fences) !important;
+}
+
+.sc-fence-solutions-background-02{
+  background-image: pwa-url(fence-solutions-fence-screens) !important;
+}
+
+.sc-fence-solutions-background-03{
+  background-image: pwa-url(fence-solutions-safety-signs) !important;
+}
+
+.sc-fence-solutions-background-04{
+  background-image: pwa-url(fence-solutions-traffic-safety) !important;
+}
+
+#sc-slide__banners-fence-solutions .sc-construction-card-content::before {
+	background-image: linear-gradient(80deg, #eb2d2d 10%, transparent);
+}
+
+#sc-slide__banners-fence-solutions .sc-construction-card__button {
+	background-color: #FF1E36;
+}
+
+#sc-slide__banners-fence-solutions .sc-construction-card-content:hover .sc-construction-card__button {
+	background-color: #333!important;
+}
+
+#sc-category-fence-solutions .sc-banner-tile-info-facebook {
+  margin-top: 30px;
+}
