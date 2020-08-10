@@ -141,5 +141,39 @@
         prevEl: '.sc-slide__banners-stanchions-prev',
       }
     });
+  },
+  /* 
+  ===================
+  TRAFFIC SAFETY CATEGORY 
+  ===================
+  */
+  "--sc-slide__category-traffic-safety": component => {
+    component.$slide('#sc-slide__category-traffic-safety', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__category-traffic-safety-next',
+        prevEl: '.sc-slide__category-traffic-safety-prev',
+      }
+    });
+  },
+  "--sc-slide__banners-traffic-safety": component => {
+    component.$slide('#sc-slide__banners-traffic-safety', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__banners-traffic-safety-next',
+        prevEl: '.sc-slide__banners-traffic-safety-prev',
+      }
+    });
+  },
+  "--sc-slide__category-traffic-safety-02": component => {
+    component.$slide('#sc-slide__category-traffic-safety-02', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.sc-slide__category-traffic-safety-02-next',
+        prevEl: '.sc-slide__category-traffic-safety-02-prev',
+      }
+    });
   }
+
+  
 }
