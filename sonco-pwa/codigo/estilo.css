@@ -4732,3 +4732,36 @@ fence solutions category
 #sc-category-stanchions .sc-social-big {
   margin-top: 60px;
 }
+
+
+/* ====================
+categories - traffic safety
+==================== */
+
+.sc-traffic-safety-background-01 {
+	background-image: pwa-url(stanchions-retractable) !important;
+}
+
+.sc-traffic-safety-background-02 {
+	background-image: pwa-url(stanchions-wall-mout) !important;
+}
+
+.sc-traffic-safety-background-03 {
+	background-image: pwa-url(stanchions-stanchion-and-ropes) !important;
+}
+
+.sc-traffic-safety-background-04 {
+	background-image: pwa-url(stanchions-plastic-barriers) !important;
+}
+
+#sc-slide__banners-traffic-safety .sc-construction-card-content::before {
+	background-image: linear-gradient(80deg, #eb2d2d 10%, transparent);
+}
+
+#sc-slide__banners-traffic-safety .sc-construction-card__button {
+	background-color: #FF1E36;
+}
+
+#sc-slide__banners-traffic-safety .sc-construction-card-content:hover .sc-construction-card__button {
+	background-color: #333!important;
+}
