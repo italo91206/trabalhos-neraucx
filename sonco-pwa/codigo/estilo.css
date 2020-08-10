@@ -562,7 +562,7 @@ html {
 
 .sc-categories-card__image {
 	width: 140px;
-	height: 140px;
+	/* height: 140px; */
 	display: flex;
 	overflow: hidden;
 	background-color: #fff;
@@ -1102,7 +1102,8 @@ html {
 .sc-construction-card-content.sc-color-card__estate:before,
 .sc-construction-card-content.sc-color-card__public:before,
 .sc-construction-card-content.sc-color-card__schools:before,
-.sc-construction-card-content.sc-color-card__venues:before {
+.sc-construction-card-content.sc-color-card__venues:before,
+.sc-construction-card-content.sc-color-card__hospitality:before {
 	content: '';
 	background-image: linear-gradient(80deg, #ebca2d 10%, transparent);
 	width: 100%;
@@ -1120,7 +1121,8 @@ html {
 .sc-construction-card-content.sc-color-card__estate:hover:before,
 .sc-construction-card-content.sc-color-card__public:hover:before,
 .sc-construction-card-content.sc-color-card__schools:hover:before,
-.sc-construction-card-content.sc-color-card__venues:hover:before {
+.sc-construction-card-content.sc-color-card__venues:hover:before,
+.sc-construction-card-content.sc-color-card__hospitality:hover:before {
 	background-image: linear-gradient(55deg, #ebca2d 30%, transparent);
 	transition: all .5s;
 	opacity: 1;
@@ -1132,7 +1134,8 @@ html {
 .sc-construction-card-content.sc-color-card__estate:hover .sc-construction-card__button.sc-color-buttom__estate,
 .sc-construction-card-content.sc-color-card__public:hover .sc-construction-card__button.sc-color-buttom__public,
 .sc-construction-card-content.sc-color-card__schools:hover .sc-construction-card__button.sc-color-buttom__schools,
-.sc-construction-card-content.sc-color-card__venues:hover .sc-construction-card__button.sc-color-buttom__venues {
+.sc-construction-card-content.sc-color-card__venues:hover .sc-construction-card__button.sc-color-buttom__venues,
+.sc-construction-card-content.sc-color-card__hospitality:hover .sc-construction-card__button.sc-color-buttom__hospitality {
 	background-color: #333;
 	transition: 0.5s;
 }
@@ -1365,17 +1368,21 @@ html {
 .sc-new-age-products-cards {
 	display: flex;
 	flex-direction: row;
-	margin: 43px 0px 35px;
 }
 
 .sc-new-age-products-card {
 	/*width: 408px;
     height: 320px;*/
+    padding-bottom: 25px;
 	display: flex;
 	flex: 1;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.sc-edit-space-card {
+    margin-left: 73px;
 }
 
 .sc-new-age-products-card-figure {
@@ -1392,8 +1399,12 @@ html {
 
 .sc-new-age-products-card__image {
 	width: 87%;
-	height: 303px;
+	/* height: 303px; */
 	margin-bottom: 10px;
+}
+
+.sc-size-expert {
+    width: 56% !important;
 }
 
 .sc-new-age-products-card__info {
@@ -3627,7 +3638,7 @@ span.sc-product-value {
 	right: 338px;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
 	width: 498px;
-	height: 443px;
+	/* height: 443px; */
 }
 
 .sc-how-stray-images img:nth-child(3) {
@@ -3635,7 +3646,6 @@ span.sc-product-value {
 	top: 550px;
 	right: 40px;
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
-	height: 387px;
 	width: 418px;
 }
 
@@ -3678,7 +3688,7 @@ span.sc-product-value {
 
 p.sc-topic-red {
 	margin-bottom: 0 !important;
-	color: #FD1D35;
+	color: #FD1D35 !important;
 }
 
 .sc-industrial-category__description ul {
@@ -3929,11 +3939,6 @@ p.sc-topic-red {
 
 /* SECTION NEW  FEATURES PRODUCTS  */
 
-.sc-new-age-products-card__image.sc-new-age-public {
-	height: 380px !important;
-}
-
-
 /* SECTION WHITING  */
 
 .sc-how-stray__style-public-logo {
@@ -3995,18 +4000,14 @@ p.sc-topic-red {
 
 /* SECTION SCHOOL PRIDE */
 
-.sc-new-age-products-card__image#sc-new-age-products__schools {
-	width: 97% !important;
-}
-
 .sc-new-age-products-cards#sc-new-age-bottom__schools {
 	margin-bottom: 0 !important;
 }
 
-.sc-new-age-products-card__image#sc-new-age-edit__schools {
+/* .sc-new-age-products-card__image#sc-new-age-edit__schools {
 	width: 95%;
 	margin-left: 70px;
-}
+} */
 
 .sc-new-age-products-card__image#sc-new-age-products__schools-03 {
 	width: 75%;
@@ -4047,10 +4048,6 @@ p.sc-topic-red {
 /************
 * PAGE SHOP BY VENUES
 */
-
-
-/* CONSTRUCTION CARDS */
-
 .sc-image-background-01-venues {
 	background-image: pwa-url(card-barricade-venues) !important;
 }
@@ -4102,6 +4099,64 @@ p.sc-topic-red {
 	height: 205px !important;
 	left: 56px !important;
 }
+
+/***************
+* PAGE SHOP BY HOSPITALITY
+*/
+.sc-image-background-01-hospitality {
+	background-image: pwa-url(card-covers-hospitality) !important;
+}
+
+.sc-image-background-02-hospitality {
+	background-image: pwa-url(outdoor-hospitality) !important;
+}
+
+.sc-image-background-03-hospitality {
+	background-image: pwa-url(plastic-hospitality) !important;
+}
+
+.sc-image-background-04-hospitality {
+	background-image: pwa-url(steel-hospitality) !important;
+}
+
+.sc-construction-card-content.sc-color-card__hospitality:before {
+	background-image: linear-gradient(80deg, #1692CB 10%, transparent) !important;
+}
+
+.sc-construction-card-content.sc-color-card__hospitality:hover:before {
+	background-image: linear-gradient(55deg, #1692CB 30%, transparent) !important;
+}
+
+.sc-construction-card__button.sc-color-buttom__hospitality {
+	background-color: #1692CB !important;
+}
+
+.sc-construction-card-content.sc-color-card__hospitality:hover .sc-construction-card__button.sc-color-buttom__hospitality {
+	background-color: #333 !important;
+	transition: 0.5s;
+}
+
+/* BANNER REOPEN */
+.sc-space-banner-hospitality {
+    margin: 20px 0px 0px;
+}
+
+/* SECTION WITHING */
+.sc-whiting-hospitality-01 {
+    width: 475px !important;
+    right: 395px;;
+}
+
+.sc-whiting-hospitality-02 {
+    top: 495px !important;
+}
+
+.sc-whiting-hospitality-03 {
+    position: absolute;
+    top: 562px;
+    width: 692px !important;
+}
+
 
 
 /* ====================
@@ -4420,6 +4475,37 @@ custom-signs
 ===================== 
 */
 
+#sc-category-custom-signs .sc-banner-tile-info.sc-banner-tile-info-facebook.sc-container {
+    padding-top: 25px;
+}
+
+#sc-category-custom-signs .sc-big-circles-title {
+    padding-top: 85px;
+}
+
+#sc-category-custom-signs .sc-container.sc-novo-container.sc-categories.sc-circle-categories-title span {
+    padding-top: 0px;
+}
+
+#sc-category-custom-signs  .sc-section-title {
+    font-family: Camber-Medium;
+    font-size: 35px;
+    font-weight: unset;
+}
+
+#sc-category-custom-signs .sc-section-title a {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 35px;
+    font-family: camber-medium;
+    font-style: unset;
+}
+
+#sc-category-custom-signs .sc-categories {
+    height: auto;
+    margin-top: 50px;
+}
+
 #sc-category-custom-signs .sc-shipping {
 	height: auto !important;
 	margin-bottom: 25px;
@@ -4521,15 +4607,24 @@ custom-signs
 }
 
 #sc-category-custom-signs .sc-ind-description__01 {
-	font-family: "camber-semibold";
-	font-size: 55px;
+	font-size: 37px;
+    color: #032e5a;
+    letter-spacing: 1px;
+    font-family: "camber-bold";
+    margin-bottom: 40px;
+    line-height: 43px;
+    font-weight: unset;
 }
 
 #sc-category-custom-signs .sc-industrial-category__description p {
-	font-size: 30px;
-	line-height: 45px;
-	margin-bottom: 0px;
-	padding-bottom: 25px;
+	font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
+}
+
+#sc-category-custom-signs .sc-industrial-category__description p:last-child{
+     margin-bottom: 0px;
+    padding-bottom: 25px;
 }
 
 #sc-category-custom-signs .sc-ind-description {
@@ -4539,8 +4634,9 @@ custom-signs
 }
 
 #sc-category-custom-signs .sc-industrial-category__description ul li {
-	font-size: 30px;
-	line-height: 50px;
+	font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
 }
 
 #sc-category-custom-signs p.sc-topic-red {
@@ -4552,31 +4648,59 @@ custom-signs
 fence solutions category
 ================ */
 
+#sc-category-fence-solutions .sc-whiting__turner {
+    margin-bottom: 55px;
+    margin-top: 50px;
+}
+
+#sc-category-fence-solutions .sc-banner-tile-info.sc-banner-tile-info-facebook.sc-container {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
 #sc-category-fence-solutions .sc-4images-title {
-	padding-top: 25px;
+	padding-top: 50px;
+}
+
+#sc-category-fence-solutions .sc-categories {
+    height: auto;
+    margin-top: 55px;
 }
 
 #sc-category-fence-solutions .sc-ind-description__01 {
-	font-family: "camber-semibold";
-	font-size: 55px;
+	font-size: 37px;
+    color: #032e5a;
+    letter-spacing: 1px;
+    font-family: "camber-bold";
+    margin-bottom: 40px;
+    line-height: 43px;
+    font-weight: unset;
 }
 
 #sc-category-fence-solutions .sc-industrial-category__description p {
-	font-size: 30px;
-	line-height: 45px;
-	margin-bottom: 0px;
-	padding-bottom: 25px;
+	font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
+}
+
+#sc-category-fence-solutions  .sc-industrial-category__description p:last-child{
+    margin-bottom: 0px;
+    padding-bottom: 25px;
 }
 
 #sc-category-fence-solutions .sc-ind-description {
-	font-family: "camber-medium";
-	font-size: 40px;
-	line-height: 45px;
+	font-size: 37px;
+    font-weight: 100;
+    color: #032e5a;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    line-height: 43px;
 }
 
 #sc-category-fence-solutions .sc-industrial-category__description ul li {
-	font-size: 30px;
-	line-height: 50px;
+	font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
 }
 
 #sc-category-fence-solutions p.sc-topic-red {
@@ -4733,25 +4857,29 @@ fence solutions category
   margin-top: 60px;
 }
 
+#sc-category-stanchions .sc-ind-description__01 {
+    margin-top: 45px;
+}
+
 
 /* ====================
 categories - traffic safety
 ==================== */
 
 .sc-traffic-safety-background-01 {
-	background-image: pwa-url(stanchions-retractable) !important;
+	background-image: pwa-url(traffic-safety-chanelizer) !important;
 }
 
 .sc-traffic-safety-background-02 {
-	background-image: pwa-url(stanchions-wall-mout) !important;
+	background-image: pwa-url(traffic-safety-traffic-delineators) !important;
 }
 
 .sc-traffic-safety-background-03 {
-	background-image: pwa-url(stanchions-stanchion-and-ropes) !important;
+	background-image: pwa-url(traffic-safety-traffic-signs) !important;
 }
 
 .sc-traffic-safety-background-04 {
-	background-image: pwa-url(stanchions-plastic-barriers) !important;
+	background-image: pwa-url(traffic-safety-water-barriers) !important;
 }
 
 #sc-slide__banners-traffic-safety .sc-construction-card-content::before {
@@ -4764,4 +4892,69 @@ categories - traffic safety
 
 #sc-slide__banners-traffic-safety .sc-construction-card-content:hover .sc-construction-card__button {
 	background-color: #333!important;
+}
+
+#sc-category-traffic-safety .sc-categories {
+    height: auto;
+    margin-top: 60px;
+}
+
+#sc-category-traffic-safety {
+    background-color: #eeeeee;
+}
+
+#sc-category-traffic-safety  .sc-section-title {
+    font-family: Camber-Medium;
+    font-size: 35px;
+    font-weight: unset;
+}
+
+#sc-category-traffic-safety .sc-section-title a {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 35px;
+    font-family: camber-medium;
+    font-style: unset;
+}
+
+#sc-category-traffic-safety .sc-banner-tile-info-facebook {
+    margin-top: 50px;
+}
+
+#sc-category-traffic-safety .sc-whiting__turner {
+    margin-top: -30px;
+    margin-bottom: 55px;
+}
+
+#sc-category-traffic-safety .sc-industrial-category__description p:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+}
+
+#sc-category-traffic-safety .sc-ind-description__01 {
+    font-size: 37px;
+    color: #032e5a;
+    letter-spacing: 1px;
+    font-family: "camber-bold";
+    margin-bottom: 40px;
+    line-height: 43px;
+    font-weight: unset;
+}
+
+#sc-category-traffic-safety .sc-ind-description {
+    font-family: "camber-medium";
+    font-size: 40px;
+    line-height: 45px;
+}
+
+#sc-category-traffic-safety .sc-industrial-category__description ul li {
+    font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
+}
+
+#sc-category-traffic-safety .sc-industrial-category__description p{
+    font-size: 16px;
+    color: #5b5b5f;
+    line-height: 25px;
 }
