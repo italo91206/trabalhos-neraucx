@@ -3022,7 +3022,7 @@ table.sc-table-specifications {
 	display: flex;
 	list-style: none;
 	font-size: 14px;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	font-weight: 550;
 }
 
@@ -3031,7 +3031,6 @@ table.sc-table-specifications {
 }
 
 .sc-page-navegation {
-    height: 263px;
     display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
@@ -3049,7 +3048,7 @@ table.sc-table-specifications {
 
 .sc-content-categories {
 	display: flex;
-	margin-top: 30px;
+	margin-top: 67px;
 }
 
 .sc-column-options {
@@ -3078,15 +3077,15 @@ table.sc-table-specifications {
 }
 
 .sc-spotlight-title h1 {
+    font-family: "camber-semibold";
 	font-size: 17px;
-	color: #c32f3c;
-	font-weight: 550;
+	color: #FF0000;
 	text-transform: capitalize;
 }
 
 .sc-icon-title_category::after {
 	font-size: 10px;
-	color: #c32f3c;
+	color: #FF0000;
 	margin-left: 5px;
 	content: "\f078";
 	margin-top: 5px;
@@ -3104,7 +3103,6 @@ table.sc-table-specifications {
 	font-size: 13px;
 	color: #6a6969;
 	text-transform: uppercase;
-	font-weight: 500;
 	line-height: 19px;
 }
 
@@ -3115,7 +3113,6 @@ table.sc-table-specifications {
 }
 
 .sc-options,
-.sc-filter-prices,
 .sc-options-color,
 .sc-options-color-img,
 .sc-fabric-type-img,
@@ -3298,7 +3295,6 @@ button.sc-button__filter {
 }
 
 .sc-quanty-position {
-	margin-top: 43px;
 	display: flex;
 }
 
@@ -3347,19 +3343,22 @@ select.sc-order-product {
 
 
 /* SECTION CARD PRODUCTS */
-
 .sc-content-products__cat {
 	display: flex;
 	flex-flow: row wrap;
 	margin: 30px 0px 80px 0px;
 }
+.sc-content-products__cat-container {
+    display: flex;
+    width: 25%;
+}
 
 .sc-card-product {
 	flex: 1;
 	border: 1px solid #dddddd;
-	max-width: 25%;
-	min-width: 25%;
 	padding: 15px;
+    max-width: 100%;
+    min-width: 25%;
 }
 
 .sc-card-product__image {
@@ -3369,24 +3368,58 @@ select.sc-order-product {
 
 .sc-card-product__image img {
 	width: 100%;
-	height: 145px;
 }
 
 .sc-card-product__title {
-	font-weight: 550;
-	color: #5b5b5f;
-	margin-bottom: 50px;
+	font-family: "camber-bold";
+    color: #353535;
+    font-size: 15px;
+}
+
+.sc-card-title-descripition__product {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.sc-card-product__title {
+  font-family: "camber-bold";
+  color: #353535;
+  font-size: 15px;
+}
+
+.sc-card-product__title-descripition {
+   font-family: "camber-medium";
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.sc-card-sku-product {
+  text-transform: uppercase;
+  font-family: "camber-medium";
+  font-size: 10px;
+  color: #353535;
+  opacity: 60%;
+}
+
+.sc-card-price-ea {
+    display: flex;
+    margin-top: 26px;
+}
+
+.sc-card-product__ea {
+    font-size: 24px;
+    color: #8A8E8F;
+    font-family: "camber-medium";
 }
 
 .sc-card-product__price {
-	color: #555;
-	font-size: 20px;
-	font-weight: 500;
-	margin-bottom: 10px;
-	align-items: center;
+	color: #000;
+    font-family: "camber-medium";
+    font-size: 24px;
+    align-items: center;
 }
 
-.sc-product-icon1::after,
+/* .sc-product-icon1::after,
 .sc-product-icon2::after {
 	content: "\f07a";
 	font-family: fontAwesome;
@@ -3401,7 +3434,7 @@ select.sc-order-product {
 	content: "\f1ec";
 	margin-right: 10px;
 	padding: 8px 10px;
-}
+} */
 
 .sc-car-product__low {
 	font-size: 14px;
@@ -3423,12 +3456,12 @@ span.sc-product-value {
 .sc-button {
 	display: flex;
 	width: 100%;
+    padding: 10px 0px;
 	border: 2.5px solid #ff1d2f;
+    font-family: "camber-bold";
 	color: #ff1d2f;
-	padding: 10px 0px;
 	background-color: #fff;
-	font-size: 17px;
-	font-weight: 550;
+	font-size: 20px;
 	text-transform: capitalize;
 	justify-content: center;
 }
@@ -3442,13 +3475,13 @@ span.sc-product-value {
 /* SECTION CATEGORY DESCRIPTION */
 
 .sc-category-description {
-	margin-bottom: 60px;
+    margin: 55px 0px 60px;
 }
 
 .sc-title-description1 {
 	text-transform: uppercase;
 	color: #ff1d2f;
-	font-size: 20px;
+	font-size: 32px;
 	margin-bottom: 10px;
 }
 
@@ -3484,9 +3517,8 @@ span.sc-product-value {
 }
 
 .sc-category-descriptions ul li a {
-	color: #ff1d2f;
+    color: #000;
 }
-
 
 /*********************
   * INDUSTRIAL CATEGORY PAGE
@@ -4181,8 +4213,7 @@ categories - barricade
 	font-family: "camber-medium";
 	font-size: 18px;
 	color: #032E5A;
-	padding-top: 27px;
-	padding-bottom: 21px;
+	padding-bottom: 20px;
 	text-transform: uppercase;
 }
 
@@ -4410,6 +4441,11 @@ custom-signs
 ===================== 
 */
 
+#sc-category-custom-signs .swiper-button-next,
+#sc-category-custom-signs .swiper-button-prev {
+    top: 50%;
+}
+
 #sc-category-custom-signs .sc-banner-tile-info.sc-banner-tile-info-facebook.sc-container {
     padding-top: 25px;
 }
@@ -4432,7 +4468,7 @@ custom-signs
     margin-left: 10px;
     padding-left: 10px;
     font-size: 35px;
-    font-family: camber-medium;
+    font-family: camber-regular-italic;
     font-style: unset;
 }
 
@@ -4663,6 +4699,10 @@ fence solutions category
 fence solutions category
 ================ */
 
+#sc-category-stanchions #category-slider-holder{
+    margin-top:50px;
+}
+
 #sc-category-stanchions .sc-4images-title {
   padding-top: 65px;
   padding-bottom: 0px;
@@ -4785,6 +4825,13 @@ fence solutions category
 /* ====================
 categories - traffic safety
 ==================== */
+#sc-category-traffic-safety .sc-breadcrumbs {
+    padding-top: 20px;
+}
+#sc-category-traffic-safety .swiper-button-next, 
+#sc-category-traffic-safety .swiper-button-prev {
+    top: 50%;
+}
 
 .sc-traffic-safety-background-01 {
 	background-image: pwa-url(traffic-safety-chanelizer) !important;
@@ -4833,7 +4880,7 @@ categories - traffic safety
     margin-left: 10px;
     padding-left: 10px;
     font-size: 35px;
-    font-family: camber-medium;
+    font-family: camber-regular-italic;
     font-style: unset;
 }
 
@@ -4877,4 +4924,8 @@ categories - traffic safety
     font-size: 16px;
     color: #5b5b5f;
     line-height: 25px;
+}
+
+.sc-w100{
+    width: 100%;
 }
