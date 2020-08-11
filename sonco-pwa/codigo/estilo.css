@@ -34,7 +34,6 @@ html {
 /**************************************
   * HEADER 
   */
-
 .sc-header {
 	width: 100%;
 	display: flex;
@@ -110,7 +109,6 @@ html {
 /**************************************
   *   HEADER SEARCH
   */
-
 .sc-search {
 	width: 835px;
 	display: flex;
@@ -151,7 +149,6 @@ html {
 /**************************************
   * HEADER SIGN-IN
   */
-
 .sc-header-signin {
 	height: 37px;
 	color: #fff;
@@ -203,7 +200,6 @@ html {
 /**************************************
   * HEADER CALCULATOR AND CART
   */
-
 .sc-header-calc-cart {
 	height: 37px;
 	color: #fff;
@@ -258,7 +254,6 @@ html {
 /**************************************
   * TOP MENU - NAVIGATION
   */
-
 .sc-menu-container {
 	width: 100%;
 	height: 47px;
@@ -284,7 +279,6 @@ html {
 /**************************************
   * SHOW CATEGORY MENU ON HOVER
   */
-
 .sc-top-nav__item--categories:hover .sc-menu {
 	visibility: visible;
 	opacity: 1;
@@ -335,7 +329,6 @@ html {
 /**************************************
   * MENU
   */
-
 .sc-menu {
 	top: 47px;
 	z-index: 20;
@@ -460,7 +453,6 @@ html {
 /*
   * MENU SUB DIVS
   */
-
 .sc-menu-sub {
 	width: 100%;
 	display: flex;
@@ -540,7 +532,6 @@ html {
 /********************************
   * CATEGORIES
   */
-
 .sc-categories {
 	width: 100%;
 	height: 263px;
@@ -587,13 +578,6 @@ html {
 	cursor: pointer;
 	text-decoration: underline;
 }
-
-
-/*.sc-categories-card__description:hover  {
-      color: #1692CB;
-      cursor: pointer;
-      text-decoration: underline;
-  }*/
 
 
 /********************************
@@ -689,7 +673,6 @@ html {
 
 
 /* SECTION ICONS TOP HOME */
-
 .sc-icons-top__home {
 	display: flex;
 	width: 100%;
@@ -750,7 +733,6 @@ html {
 
 
 /* SECTION CAROUSEL HOME - 01 */
-
 .sc-slide__home-01 {
 	background-color: #F4F2F2;
 	padding-top: 0px !important;
@@ -776,7 +758,6 @@ html {
 
 
 /* SECTION BARRICADES */
-
 .sc-home-page {
 	width: 100% !important;
 	display: flex;
@@ -819,7 +800,6 @@ html {
 
 
 /* BUTTOM VIEW ALL */
-
 .sc-buttom-view__barricades {
 	flex: 1;
 	text-transform: capitalize;
@@ -839,7 +819,6 @@ html {
 
 
 /* SECTION SHOP BY APPLICATION */
-
 .sc-shop-by-application {
 	margin-top: 90px;
 }
@@ -854,7 +833,6 @@ html {
 
 
 /* SECTION CARD SHOP BY APPLICATION */
-
 .sc-card-shop {
 	display: flex;
 }
@@ -896,7 +874,6 @@ html {
 
 
 /* BANNER THE HELPING HANG */
-
 .sc-banner-helping {
 	margin-top: 90px;
 }
@@ -925,7 +902,6 @@ html {
 
 
 /* SECTION TWO ARTICLES */
-
 .sc-two-articles {
 	display: flex;
 	margin-top: 60px;
@@ -997,7 +973,6 @@ html {
 /********************************
   * PAGE INDUSTRIAL
   */
-
 .sc-slide__industrial-01 {
 	width: 100%;
 	padding-top: 30px;
@@ -1046,7 +1021,6 @@ html {
 }
 
 .sc-construction-card {
-	/* retirar */
 	background-color: #000 !important;
 	width: 650px !important;
 	height: 370px !important;
@@ -1202,21 +1176,18 @@ html {
 }
 
 
-/*
-  * SECTION TITLE
-  */
-
+/* SECTION TITLE */
 .sc-section-title {
 	font-size: 32px;
 	color: #032e5a;
-	font-family: "camber-bold";
+	font-family: "camber-semibold";
 	padding: 45px 35px 20px 0;
 }
 
 .sc-section-title a {
 	color: #032e5a;
 	font-size: 28px;
-	font-family: "camber-regular";
+	font-family: "camber-regular-italic";
 	font-style: italic;
 	margin-left: 20px;
 	padding-left: 20px;
@@ -1228,7 +1199,6 @@ html {
 /***************************
   * SECTION SHIPPING
   */
-
 .sc-shipping {
 	width: 100%;
 	height: 565px;
@@ -1927,7 +1897,7 @@ i.fa-plus {
 
 .sc-info__safety .sc-info__safety-article h2 {
 	font-size: 37px;
-	font-weight: 100;
+	font-family: "camber-bold";
 	color: #032e5a;
 	letter-spacing: 1px;
 	margin-bottom: 40px;
@@ -3045,8 +3015,8 @@ table.sc-table-specifications {
 
 
 /**************************************
-    * PAGE - CATEGORIES
-    */
+* PAGE - CATEGORIES NAVEGATION
+*/
 
 .sc-breadcrumbs-links {
 	display: flex;
@@ -3058,6 +3028,15 @@ table.sc-table-specifications {
 
 .sc-breadcrumbs-links li a {
 	color: #5e5e5e;
+}
+
+.sc-page-navegation {
+    height: 263px;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    background: #fff;
+    flex-direction: row;
 }
 
 .sc-breadcrumbs-product {
@@ -3082,9 +3061,7 @@ table.sc-table-specifications {
 	padding-left: 40px;
 }
 
-
 /* SECTION CATEGORIES AND OPTIONS */
-
 .sc-categories-content {
 	margin-top: 30px;
 }
@@ -3146,9 +3123,7 @@ table.sc-table-specifications {
 	margin-top: 15px;
 }
 
-
 /* SECTION FILTER PRICE */
-
 .sc-filter-price {
 	border: 0;
 	margin-top: 5px;
@@ -3202,9 +3177,7 @@ table.sc-table-specifications {
 	color: transparent;
 }
 
-
 /* INPUT RANGE */
-
 .sc-price-field input[type=range]::-webkit-slider-thumb {
 	position: relative;
 	-webkit-appearance: none;
@@ -3227,9 +3200,7 @@ table.sc-table-specifications {
 	border-radius: 5px;
 }
 
-
 /* INPUT VALUE BLOCK */
-
 .sc-price-wrap {
 	display: flex;
 	color: #000;
@@ -3273,7 +3244,6 @@ table.sc-table-specifications {
 
 
 /* SECTION QUANTY PRODUCT CATEGORY AND BUTTON FILTER */
-
 .sc-quanty-button__filter {
 	display: flex;
 	align-items: center;
@@ -3380,7 +3350,7 @@ select.sc-order-product {
 
 .sc-content-products__cat {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	margin: 30px 0px 80px 0px;
 }
 
@@ -3535,7 +3505,7 @@ span.sc-product-value {
 }
 
 .sc-construction-card.sc-steel-barricades {
-	background-image: pwa-urlsteel-barricades) !important;
+	background-image: pwa-url(steel-barricades) !important;
 }
 
 .sc-construction-card.sc-water-barriers {
@@ -3554,7 +3524,6 @@ span.sc-product-value {
 
 
 /* BANNER */
-
 .sc-banner-lookin,
 .sc-banner-lookin img {
 	width: 100%;
@@ -3573,9 +3542,7 @@ span.sc-product-value {
 	width: 100%;
 }
 
-
 /* HOW STRAY */
-
 .sc-how-stray {
 	width: 1333px;
 	margin-right: calc((100% - 1333px) / 2);
@@ -3656,9 +3623,7 @@ span.sc-product-value {
 	left: 40px;
 }
 
-
 /* WHAT MAKES SONCO */
-
 .sc-what-makes__sonco {
 	margin-top: 35px;
 	width: 100%;
@@ -3714,7 +3679,6 @@ p.sc-topic-red {
 /**************************
   * PAGE SHOP BY EVENTS
   */
-
 .sc-image-background-01-events {
 	background-image: pwa-url(card-signage-events) !important;
 }
@@ -3733,7 +3697,6 @@ p.sc-topic-red {
 
 
 /* CARD CONSTRUCTION */
-
 .sc-construction-card-content.sc-color-card__events:before {
 	background-image: linear-gradient(80deg, #691295 10%, transparent) !important;
 }
@@ -3753,14 +3716,12 @@ p.sc-topic-red {
 
 
 /* BANNER SPACE JOB */
-
 .sc-space-jog__banner {
 	margin-top: 40px;
 }
 
 
 /* BANNER EVENTS SOCIAL */
-
 .sc-space-banner__social-distancing {
 	margin-top: 23px !important;
 }
@@ -3769,7 +3730,6 @@ p.sc-topic-red {
 /***************************
   * PAGE SHOP BY SPORTS
   */
-
 .sc-image-background-01-sports {
 	background-image: pwa-url(card-crowd-sports) !important;
 }
@@ -3788,7 +3748,6 @@ p.sc-topic-red {
 
 
 /* CARD CONSTRUCTION */
-
 .sc-construction-card-content.sc-color-card__sports:before {
 	background-image: linear-gradient(80deg, #139216 10%, transparent) !important;
 }
@@ -3808,7 +3767,6 @@ p.sc-topic-red {
 
 
 /* SECTION WHITING TURN */
-
 .sc-whiting__turner.sc-whiting__sports {
 	background-color: #002d47 !important;
 }
@@ -3835,7 +3793,6 @@ p.sc-topic-red {
 /***********************
   * PAGE SHOP BY ESTATE
   */
-
 .sc-image-background-01-estate {
 	background-image: pwa-url(card-covers-estate) !important;
 }
@@ -3852,9 +3809,7 @@ p.sc-topic-red {
 	background-image: pwa-url(card-barriers-estate) !important;
 }
 
-
 /* CARD CONSTRUCTION */
-
 .sc-construction-card-content.sc-color-card__estate:before {
 	background-image: linear-gradient(80deg, #148D94 10%, transparent) !important;
 }
@@ -3874,7 +3829,6 @@ p.sc-topic-red {
 
 
 /* SECTION WHITING TURN */
-
 .sc-whiting__turner.sc-whiting__estate {
 	background-color: #77bc1f !important;
 	height: 900px !important;
@@ -3898,8 +3852,7 @@ p.sc-topic-red {
 
 /*******
   * PAGE SHOP BY PUBLIC
-  */
-
+*/
 .sc-image-background-01-public {
 	background-image: pwa-url(card-barricade-public) !important;
 }
@@ -3918,7 +3871,6 @@ p.sc-topic-red {
 
 
 /* CARD CONSTRUCTION */
-
 .sc-construction-card-content.sc-color-card__public:before {
 	background-image: linear-gradient(80deg, #AB050E 10%, transparent) !important;
 }
@@ -3936,11 +3888,7 @@ p.sc-topic-red {
 	transition: 0.5s;
 }
 
-
-/* SECTION NEW  FEATURES PRODUCTS  */
-
 /* SECTION WHITING  */
-
 .sc-how-stray__style-public-logo {
 	top: 75px !important;
 }
@@ -3952,11 +3900,7 @@ p.sc-topic-red {
 
 /************
   * PAGE SHOP BY SCHOOL
-  */
-
-
-/* CARD CONSTRUCTION */
-
+*/
 .sc-image-background-01-schools {
 	background-image: pwa-url(card-barricade-public) !important;
 }
@@ -3992,22 +3936,15 @@ p.sc-topic-red {
 
 
 /* BANNER SCHOOL SOCIAL DISTANCING */
-
 .sc-banner__helping-hand-image#sc-banner-space-schools {
 	margin-bottom: 0px !important;
 }
 
 
 /* SECTION SCHOOL PRIDE */
-
 .sc-new-age-products-cards#sc-new-age-bottom__schools {
 	margin-bottom: 0 !important;
 }
-
-/* .sc-new-age-products-card__image#sc-new-age-edit__schools {
-	width: 95%;
-	margin-left: 70px;
-} */
 
 .sc-new-age-products-card__image#sc-new-age-products__schools-03 {
 	width: 75%;
@@ -4019,7 +3956,6 @@ p.sc-topic-red {
 
 
 /* SECTION WHITING */
-
 .sc-whiting__turner.sc-whiting__schools {
 	background-color: #003930!important;
 	height: 1015px !important;
@@ -4083,7 +4019,6 @@ p.sc-topic-red {
 
 
 /* WHITING TURN  */
-
 .sc-whiting-venue-01 {
 	top: 36px !important;
 	height: 89%;
@@ -4648,23 +4583,8 @@ custom-signs
 fence solutions category
 ================ */
 
-#sc-category-fence-solutions .sc-whiting__turner {
-    margin-bottom: 55px;
-    margin-top: 50px;
-}
-
-#sc-category-fence-solutions .sc-banner-tile-info.sc-banner-tile-info-facebook.sc-container {
-    margin-top: 55px;
-    margin-bottom: 55px;
-}
-
 #sc-category-fence-solutions .sc-4images-title {
-	padding-top: 50px;
-}
-
-#sc-category-fence-solutions .sc-categories {
-    height: auto;
-    margin-top: 55px;
+	padding-top: 25px;
 }
 
 #sc-category-fence-solutions .sc-ind-description__01 {
