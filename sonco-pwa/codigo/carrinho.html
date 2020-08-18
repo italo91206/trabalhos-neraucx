@@ -1,0 +1,148 @@
+<section id="sc-cart" class="sc-cart">
+	<div>
+		<header class="sc-cart__header">
+			<a pwa-toggle-cart>
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</a>
+
+			<div>
+				<h2>Your Cart</h2>
+				<span pwa-has-items>{{ $$cart.count }}</span>
+			</div>
+		</header>
+	</div>
+	
+
+	<section pwa-not-items class="sc-cart__empty">
+		<i class="fa fa-heart" aria-hidden="true"></i>
+		Your cart is empty. <br> Check our offers!
+		<a pwa-to-page="/vestuario?pwaf_OrderByReleaseDateDESC=+"><span>See stuff</span></a>
+	</section>
+
+	<pwa-hidden>
+		<div pwa-is-loading class="my-loader" style="position:relative;height:400px">
+			<div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</pwa-hidden>
+
+	<ul pwa-has-items class="sc-cart__list">
+		<li pwa-each-item class="sc-cart__item">
+			<section class="sc-cart__row-bag">
+				<div>
+					<img pwa-src="product.image" alt="product.name">
+					<article class="sc-cart__row-pay">
+						<h3>{{ product.name }}</h3>
+						<span>Tamanho {{ product.skuName }}</span>
+						<section>
+							<div class="sc-input__number" pwa--if="(product.price - product.discount) > 0">
+								<span pwa-quantity-decrement class="sc-input__number-decrement">–</span>
+								<input pwa-quantity-box class="input-number">
+								<span pwa-quantity-increment class="sc-input__number-increment">+</span>
+							</div>
+							<small class="sc-cart__product-oldprice" pwa--if="(product.price - product.discount) > 0 && product.discount > 0">{{ product.price | price }}</small>
+							<small pwa--if="(product.price - product.discount) > 0">{{ (product.price - product.discount) | price }}</small>
+							<small pwa--if="(product.price - product.discount) <= 0">Grátis</small>
+						</section>
+					</article>
+				</div>
+
+				<a pwa-remove-item class="delete__item">
+					<i class="fa fa-trash-o" style="color: #898989; font-size: 13px !important;"></i>
+				</a>
+			</section>
+		</li>
+	</ul>
+
+	<div>
+		<footer pwa-has-items class="sc-cart__footer">
+			<div class="sc-cart__subtotal">
+				<h3>Subtotal</h3>
+				<span class="sc-cart__subtotal_flex-end">{{ $$cart.subtotal | price }}</span>
+			</div>
+		
+			<!--div class="column-addres-pay">
+					<div class="cep-title">
+						<h3>FRETE E ENTREGA</h3>
+						<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/">Não sei meu CEP</a>
+					</div>
+					<div class="sc-cart__frete-form">
+		        <div class="sc-form__input">
+		          <input pwa-freight-box type="text" placeholder="Ex.: 38300000"/>
+		        </div>
+		        <span pwa-each-freight>
+		          <small pwa--if="freight.price > 0">Frete: {{ freight.price | price }}</small>
+		          <small pwa--if="freight.price <= 0">Frete: Grátis</small>
+		        </span>
+		      </div>
+				</div-->
+		
+			<!--div class="input-float" id="frete-address-cart">
+					<select name="" id="frete-address-cart-item">
+		        <option value="">Normal Grátis - Entrega de 6 a 9 dias</option>
+		      </select>
+					<label for="frete-address-cart-item">Entrega</label>
+				</div-->
+		
+			<section class="sc-cart__discout">
+				<div class="sc-cart__discout-title">
+					<h3>Cupom<br>de desconto</h3>
+				</div>
+		
+				<div class="sc-form__input">
+					<input pwa-coupon-box required placeholder="ex.: MOR2020" id="discount-cart"/>
+					<button pwa-coupon-apply  pwa-without-coupon class="sc-form__coupon-btn">Aplicar</button>
+					<span pwa-with-coupon class="sc-form__input-checked">✓</span>
+				</div>
+		
+				<div class="sc-cart__gift-modal" id="sc-cart__gift" v-if="giftList.length > 0">
+					<div class="sc-cart__gitf-close" onclick="window.PWA.custom.openGiftModal()"></div>
+					<div class="sc-cart__gift-title">
+						<i class="fa fa-times" onclick="window.PWA.custom.openGiftModal()"></i>
+						<h2>Você pode escolher até 1 brinde!</h2>
+					</div>
+					<div class="sc-cart__gift-items">
+						<ul class="sc-cart__gift-ul">
+							<div class="sc-cart__gift-list">
+								<li v-for="(gift, gid) in giftList" :key="gid">
+									<img :src="gift.imageUrl.replace('http://', 'https://')" />
+									<h3>{{ gift.name }}</h3>
+									<input type="checkbox" :id="gid" style="display: none" :checked="$$cart.items.map(item => item.id).includes(gift.id)" @click="addGift(gift, gid)" onclick="window.PWA.custom.openGiftModal()"/>
+									<label :for="gid">Escolher Brinde</label>
+								</li>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</section>
+		
+			<div class="sc-cart__gift" v-if="giftList.length > 0" onclick="window.PWA.custom.openGiftModal()">
+				<a class="sc-gift__link">Escolha seu brinde <i class="fa fa-gift" aria-hidden="true"></i></a>
+			</div>
+		
+			<!--section pwa-with-coupon class="sc-cart__discout--success">
+					<h3>Cupom aplicado</h3>
+					<span>{{ $$cart.discount | price }}</span>
+				</section-->
+		
+			<section pwa-with-coupon class="sc-cart__discout--success">
+				<h3>Desconto</h3>
+				<span>-{{ $$cart.discount | price }}</span>
+			</section>
+		
+			<section class="sc-cart__total">
+				<h3>Total a pagar</h3>
+				<span>{{ $$cart.total | price }}</span>
+			</section>
+			<section pwa-has-items class="sc-cart__btn">
+				<a pwa-href="`https://checkout.morenarosa.com.br/checkout?orderFormId=${$$cart.id}#/email`">
+					FINALIZAR PEDIDO
+				</a>
+			</section>
+		</footer>
+	</div>
+	
+</section>

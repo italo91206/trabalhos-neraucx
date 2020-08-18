@@ -1,0 +1,773 @@
+<header class="sc-header">
+  <div id="sc-cart__darken" class="sc-cart__darken" style=""></div>
+  <!-- BANNER GIF -->
+  <figure class="sc-header-banner sc-container isdesktop">
+    <a href="#">
+      <img pwa-src="top_banner" alt="Banner Sonco reopen">
+    </a>
+  </figure>
+
+  <!-- SECTION HEADER CONTENT MOBILE -->
+  <section class="sc-header__content-mobile sc-container ismobile">
+    <section class="sc-header__content-mobile-row">
+      <section class="sc-header__content-mobile-icons-group">
+        <div class="sc-header__content-mobile-hamburger" onclick="openMenuMobile()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <a href="" class="sc-header__content-mobile-phone">
+        </a>
+      </section>
+
+      <a href="#" class="sc-header__content-mobile-logo" rel="noopener noreferrer">
+        <img pwa-src="logo-sonco-mobile" alt="Sonco">
+      </a>
+
+      <div class="sc-header__content-mobile-icons-group">
+        <a onclick="openSearchMobile()" class="sc-header__content-mobile-search">
+        </a>
+
+        <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
+        </a>
+
+        <a href="#" class="sc-header__content-mobile-calculator">
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <!-- SECTION HEADER CONTENT DESKTOP -->
+  <section class="sc-header-content sc-container">
+    <div class="sc-header-contact isdesktop">
+      <strong class="sc-header-contact__phone">Contact Us (888) 766-2615</strong>
+      <strong class="sc-header-contact__about">About Us</strong>
+    </div>
+
+    <div class="sc-header-content-inner" id="sc-header-content-inner">
+      <div class="sc-header-logos isdesktop">
+        <a href="#">
+          <img pwa-src="logo-sonco" alt="Logo Sonco" class="sc-header-logos--sonco">
+        </a>
+        <img pwa-src="est-1976" alt="est-1976" class="sc-header-logos--est">
+      </div>
+
+      <form action="#" class="sc-search">
+        <input type="text" class="sc-search__input" placeholder="Search for products, categories.." />
+        <span class="sc-search__icon"></span>
+      </form>
+
+      <div class="sc-header-signin isdesktop">
+        <div class="sc-header-signin__inner">
+          <strong>Sign in</strong>
+        </div>
+      </div>
+
+      <div class="sc-header-calc-cart isdesktop">
+        <div class="sc-header-calc-cart__calculator">
+          <span>(10)</span>
+        </div>
+
+        <div pwa-toggle-cart class="sc-header-calc-cart__cart">
+          <span>(1234)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHADOW DARK BEHIND MENU -->
+  <div class="sc-menu-container-dark ismobile" id="sc-menu-container-dark" onclick="closeMenuMobile()"></div>
+
+  <!-- MENU NAVIGATION -->
+  <nav class="sc-menu-container" id="sc-menu-container">
+    <header class="sc-menu-container-header ismobile">
+      <section class="sc-menu-container-header-items">
+        <div class="sc-menu-container-header-user">
+        </div>
+
+        <span class="fa fa-times" onclick="closeMenuMobile()"></span>
+      </section>
+    </header>
+
+    <ul class="sc-top-nav sc-container">
+      <li class="sc-top-nav__item sc-top-nav__item--categories">
+        <a class="sc-top-nav__link" onclick="openSubMenuMobile(this)">
+          <span class="sc-top-nav__span">Our</span>
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Products</span>
+        </a>
+
+        <!-- MENU CONTENT -->
+        <section class="sc-menu">
+          <strong class="sc-menu-main__strong" onclick="closeSubMenuMobile(this)">
+            <span class="fa fa-chevron-left ismobile"></span>
+            Shop by Category
+          </strong>
+
+          <div class="sc-menu-main">
+            <ul class="sc-menu-main__list">
+              <li class="sc-menu-main__item sc-menu-main__item--barricades sc-menu-main__item--active">
+                <div class="sc-menu-main__icon" onclick="openSubMenuMobile(this)">
+                  <img class="sc-menu-main__image" pwa-src="barricades_icon" alt="Barricades">
+                  Crowd Control
+                </div>
+
+                <!-- BARRICADES MENU CONTENT -->
+                <section class="sc-menu-sub--barricades">
+                  <div class="sc-menu-sub--back ismobile" onclick="closeSubMenuMobile(this)">
+                    <span class="fa fa-chevron-left"></span> Barricades
+                  </div>
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">Steel Barricades</strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link sc-menu-sub__link--new" href="">Covid-19 Response</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Hot Deals</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Heavy Duty Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Lightweight Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Cart Bundles</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Rack Bundles</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Barricade Covers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Powder-Coated</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Accessories</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">Stage Barriers</strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Straight Sections</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Corner Pieces</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Snake Runners</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Barricade Carts</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">Plastic Barricades</strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Vinyl Event Fences</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">ADA Pedestrian Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Safety Barricades</a></li>
+                        <li><a class="sc-menu-sub__link" href="">Expandable Barriers</a></li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">Water Filled Barriers</strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Hot Deals</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Barriers + Panel</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">36in. Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">42in. Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Heavy Weight Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Lightweight Barriers</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Fence Screens</a></li>
+                        <li class="sc-menu-sub__item"><a class="sc-menu-sub__link" href="">Barricade Lights</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <img class="sc-menu-sub__image" pwa-src="rectangle-532-02" alt="Free shipping">
+                  </div>
+                </section>
+              </li>
+
+              <li class="sc-menu-main__item sc-menu-main__item--signs">
+                <div class="sc-menu-main__icon">
+                  <img class="sc-menu-main__image" pwa-src="signs_icon" alt="Signs">
+                  Custom Signs
+                </div>
+
+
+                <!-- CUSTOM SIGNS MENU CONTENT -->
+                <section class="sc-menu-sub--signs">
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Steel Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link sc-menu-sub__link--new" href="">
+                            Heavy Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Light Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Police Barricades
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bike Rack Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Interlocking Barriers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Stage Barriers
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Versa Coner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Snake Runner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Hinged Gate
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty 90 Angle Flex Corner</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Stackable Stage Barrier Cart
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Traffic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Jersey Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Traffic Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bundles
+                          </a>
+                        </li>
+                        <li>
+                          <a class="sc-menu-sub__link" href="">
+                            Chain link Fence Topper
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Privacy Fence Screen
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Plastic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Avalon Plastic Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Vinyl Event Fence
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Poly Barrier</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">MultiGate Barricade</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Movit Barricade</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <img class="sc-menu-sub__image" pwa-src="rectangle-532-02" alt="Free shipping" />
+                  </div>
+                </section>
+              </li>
+
+              <li class="sc-menu-main__item sc-menu-main__item--fences">
+                <div class="sc-menu-main__icon">
+                  <img class="sc-menu-main__image" pwa-src="fences_icon" alt="Fences" />
+                  Fence Solutions
+                </div>
+
+                <!-- FENCE SOLUTIONS MENU CONTENT -->
+                <section class="sc-menu-sub--fences">
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Steel Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link sc-menu-sub__link--new" href="">
+                            Heavy Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Light Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Police Barricades
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bike Rack Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Interlocking Barriers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Stage Barriers
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Versa Coner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Snake Runner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Hinged Gate
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty 90 Angle Flex Corner</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Stackable Stage Barrier Cart
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Traffic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Jersey Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Traffic Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bundles
+                          </a>
+                        </li>
+                        <li>
+                          <a class="sc-menu-sub__link" href="">
+                            Chain link Fence Topper
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Privacy Fence Screen
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Plastic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Avalon Plastic Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Vinyl Event Fence
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Poly Barrier</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">MultiGate Barricade</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Movit Barricade</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <img class="sc-menu-sub__image" pwa-src="rectangle-532-02" alt="Free shipping" />
+                  </div>
+                </section>
+              </li>
+
+              <li class="sc-menu-main__item sc-menu-main__item--stanchions">
+                <div class="sc-menu-main__icon">
+                  <img class="sc-menu-main__image" pwa-src="stanchions_icon" alt="Stanchions" />
+                  Stanchions & Posts
+                </div>
+
+
+                <!-- STANCHIONS & POSTS MENU CONTENT -->
+                <section class="sc-menu-sub--stanchions">
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Steel Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link sc-menu-sub__link--new" href="">
+                            Heavy Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Light Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Police Barricades
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bike Rack Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Interlocking Barriers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Stage Barriers
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Versa Coner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Snake Runner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Hinged Gate
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty 90 Angle Flex Corner</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Stackable Stage Barrier Cart
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Traffic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Jersey Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Traffic Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bundles
+                          </a>
+                        </li>
+                        <li>
+                          <a class="sc-menu-sub__link" href="">
+                            Chain link Fence Topper
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Privacy Fence Screen
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Plastic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Avalon Plastic Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Vinyl Event Fence
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Poly Barrier</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">MultiGate Barricade</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Movit Barricade</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <img class="sc-menu-sub__image" pwa-src="rectangle-532-02" alt="Free shipping" />
+                  </div>
+                </section>
+              </li>
+
+              <li class="sc-menu-main__item sc-menu-main__item--traffic">
+                <div class="sc-menu-main__icon">
+                  <img class="sc-menu-main__image" pwa-src="traffic_icon" alt="Traffic" />
+                  Traffic Safety
+                </div>
+
+
+                <!-- STANCHIONS & POSTS MENU CONTENT -->
+                <section class="sc-menu-sub--traffic">
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Steel Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link sc-menu-sub__link--new" href="">
+                            Heavy Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Light Duty Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Police Barricades
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bike Rack Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Interlocking Barriers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Stage Barriers
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Versa Coner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Snake Runner
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty Hinged Gate
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Heavy Duty 90 Angle Flex Corner</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Stackable Stage Barrier Cart
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Traffic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Jersey Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Traffic Barriers
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Bundles
+                          </a>
+                        </li>
+                        <li>
+                          <a class="sc-menu-sub__link" href="">
+                            Chain link Fence Topper
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Privacy Fence Screen
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sc-menu-sub__div">
+                      <strong class="sc-menu-sub__strong">
+                        Plastic Barricades
+                      </strong>
+                      <ul class="sc-menu-sub__list">
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Avalon Plastic Barricade
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">
+                            Vinyl Event Fence
+                          </a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Poly Barrier</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">MultiGate Barricade</a>
+                        </li>
+                        <li class="sc-menu-sub__item">
+                          <a class="sc-menu-sub__link" href="">Movit Barricade</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sc-menu-sub">
+                    <img class="sc-menu-sub__image" pwa-src="rectangle-532-02" alt="Free shipping" />
+                  </div>
+                </section>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </li>
+
+      <li class="sc-top-nav__item" hidden>
+        <a href="" class="sc-top-nav__link">
+          <span class="sc-top-nav__span">Shop by</span>
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Application</span>
+        </a>
+      </li>
+
+      <li class="sc-top-nav__item" hidden>
+        <a href="" class="sc-top-nav__link">
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Financing</span>
+        </a>
+      </li>
+
+      <li class="sc-top-nav__item" hidden>
+        <a href="" class="sc-top-nav__link">
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Support</span>
+        </a>
+      </li>
+
+      <li class="sc-top-nav__item" hidden>
+        <a href="" class="sc-top-nav__link">
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Resources</span>
+        </a>
+      </li>
+
+      <li class="sc-top-nav__item" hidden>
+        <a href="" class="sc-top-nav__link">
+          <span class="sc-top-nav__span sc-top-nav__span--bold">Why Sonco</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <pwa-cart>
+</header>
