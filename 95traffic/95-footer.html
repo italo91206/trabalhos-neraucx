@@ -1,4 +1,4 @@
-<div class="footer-row" data-content-type="row" data-appearance="full-bleed" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-element="main" style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 10px; padding: 10px;"><div data-content-type="html" data-appearance="default" data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;"><section class="footer-95">
+<section class="footer-95">
 	<div class="container">
 		<div class="line_main">
 			<div class="cmd-3 social-footer relative">
@@ -6,15 +6,30 @@
 					<h1>FOLLOW US</h1>
 				</div>
 				<div class="w-100">
-					<a href="https://www.facebook.com/95-Traffic-Safety-Supply-112723970273656/"><img src="/media/wysiwyg/sonco-95/menu/imgs/facebook-icon.png" /></a> 
-					<a href="https://www.linkedin.com/company/64649682/"><img src="/media/wysiwyg/sonco-95/menu/imgs/linkedin-icon.png" /></a>
+					<a href="https://www.facebook.com/95-Traffic-Safety-Supply-112723970273656/"><img
+							src="/media/wysiwyg/sonco-95/menu/imgs/facebook-icon.png" /></a>
+					<a href="https://www.linkedin.com/company/64649682/"><img
+							src="/media/wysiwyg/sonco-95/menu/imgs/linkedin-icon.png" /></a>
 				</div>
 			</div>
 			<div class="cmd-5 join-footer">
 				<div class="w-100">
 					<h1>JOIN OUR MAILING LIST</h1>
 				</div>
-				<div class="w-100 relative mailing-campo"><input class="mailing-list" type="text" /> <a class="subscribe-button"> SUBSCRIBE </a></div>
+
+				<div class="w-100 relative mailing-campo">
+					<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js" xml="space"></script>
+					<script charset="utf-8" type="text/javascript" xml="space"> // <![CDATA[
+						hbspt.forms.create({
+							portalId: "6836360",
+							formId: "885d0600-8ad3-4994-9dec-9895ccd4d0cc"
+						});
+					// ]]>
+					</script>
+				</div>
 			</div>
 			<div class="cmd-4">
 				<div class="w-100 relative text-center">
@@ -72,75 +87,90 @@
 </section>
 
 <style>
-	section.footer-links div.line_main a:visited, 
-	section.footer-links div.line_main a:hover, 
+	section.footer-links div.line_main a:visited,
+	section.footer-links div.line_main a:hover,
 	section.footer-links div.line_main a:active {
 		text-decoration: none !important;
 		color: #eb1c23 !important;
 	}
 
-	@media (max-width: 768px){
-		.page-footer{
+	@media (max-width: 768px) {
+		.page-footer {
 			padding-bottom: 0px !important;
 		}
+
 		.h1-request-footer,
 		.join-footer h1,
-		section.footer-95 h1{
+		section.footer-95 h1 {
 			padding-right: 0px !important;
 		}
+
 		.mailing-campo {
 			padding-left: 0px !important;
 		}
-		div.footer-text-quote{
+
+		div.footer-text-quote {
 			padding-left: 10px !important;
 		}
-		input.mailing-list{
+
+		input.mailing-list {
 			width: 60% !important;
 		}
-		div.social-footer::before{
+
+		div.social-footer::before {
 			right: 18px;
 			height: 140px;
 			top: 24px;
 		}
-		.footer-95 .cmd-5.join-footer::before{
+
+		.footer-95 .cmd-5.join-footer::before {
 			right: 0px;
 			height: 140px;
 			top: 24px;
 		}
 	}
-	@media (max-width: 425px){
+
+	@media (max-width: 425px) {
 		section.footer-95 {
 			padding-top: 0px !important;
 		}
+
 		.footer-95 .cmd-3.social-footer.relative {
 			text-align: center !important;
 		}
-		.footer-95 .cmd-5.join-footer{
+
+		.footer-95 .cmd-5.join-footer {
 			text-align: center !important;
 		}
+
 		.footer-95 .cmd-4 {
 			text-align: center;
 		}
+
 		.relative.mailing-campo {
 			padding-right: 70px !important;
 		}
-		input.mailing-list{
+
+		input.mailing-list {
 			width: 60% !important;
 		}
+
 		a.subscribe-button.sub-quote {
-			left: 39%!important;
+			left: 39% !important;
 		}
 	}
-	@media (min-width: 768px){
+
+	@media (min-width: 768px) {
 		a.sub-quote {
 			margin-left: 120px !important;
 		}
-		div.footer-text-quote{
+
+		div.footer-text-quote {
 			padding-left: 120px !important;
 		}
 	}
-.footer-row {
+
+	.footer-row {
 		padding: 0px !important;
 	}
-		
-</style></div></div>
+</style>
