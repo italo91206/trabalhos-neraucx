@@ -1,0 +1,616 @@
+<style xml="space">
+    .request-quote {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .request-quote__header {
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: #58595b;
+        -webkit-background-size: cover;
+        background-size: cover;
+        padding: 20px 15px;
+        color: white;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__header {
+            background-image: url({{media url=wysiwyg/newsonco/cms-pages/request-quote-bg.jpg}});
+            padding: 40px 60px;
+        }
+    }
+
+    .request-quote__intro {
+        padding: 20px 15px;
+        color: #58595b;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__intro {
+            padding: 40px 60px;
+        }
+    }
+
+    .request-quote__title {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 35px !important;
+    }
+
+    .request-quote__combos {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin: 20px auto;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 450px) {
+        .request-quote__combos {
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .request-quote__combos {
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+    }
+
+    .request-quote__combo {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    @media screen and (min-width: 450px) {
+        .request-quote__combo {
+            width: 48%;
+        }
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__combo {
+            width: 32%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .request-quote__combo {
+            width: 19%;
+        }
+    }
+
+    .request-quote__combo__title {
+        text-transform: uppercase;
+        color: #c21f24;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .request-quote__combo__image {
+        margin-bottom: 10px;
+    }
+
+    .request-quote__input-wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    .request-quote__input-container {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__input-container--half {
+            width: 48%;
+        }
+    }
+
+    .request-quote__input-container--file {
+        padding: 15px;
+        border: 1px solid #c21f24;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__input-container--file {
+            width: 48%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+
+    .request-quote__label {
+        font-size: 17px;
+        color: black;
+    }
+
+    .request-quote__input--text,
+    .request-quote__input--textarea {
+        border: none !important;
+        background-color: #edf0ec !important;
+        font-weight: bold;
+        color: #b1baae;
+        font-size: 17px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .request-quote__input--textarea {
+        height: 180px;
+    }
+
+    .request-quote__input--checkbox {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        margin: 0 !important;
+        clip: 0, 0, 0, 0;
+        padding: 0;
+    }
+
+    .request-quote__input--checkbox:checked+.request-quote__checkbox-label:before {
+        content: "x";
+    }
+
+    .request-quote__button-container {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__button-container {
+            width: 20%;
+        }
+    }
+
+    .request-quote__button {
+        background-color: #c21f24;
+        color: white;
+        font-weight: normal;
+        font-family: 'Raleway', sans-serif;
+        line-height: 32px;
+        padding: 0 20px;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .request-quote__button:hover,
+    .request-quote__button:focus {
+        background-color: #df353a;
+    }
+
+    .request-quote__fieldset {
+        padding: 0;
+        border: 0;
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .request-quote__legend {
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .request-quote__checkbox-combo {
+        padding: 0;
+        margin: 0px;
+        list-style: none;
+    }
+
+    .request-quote__checkbox-combo__item {
+        padding-left: 23px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    .request-quote__checkbox-label {
+        font-style: normal;
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 1;
+        color: black;
+    }
+
+    .request-quote__checkbox-label:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        background-color: #edf0ec;
+        color: #c21f24;
+        font-weight: bold;
+        text-align: center;
+        line-height: 20px;
+        font-style: normal;
+    }
+
+    @media screen and (min-width: 781px) {
+        .request-quote__file__wrapper {
+            width: 47%;
+            margin-left: 2%;
+        }
+    }
+
+    .request-quote__file__hack {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        background-color: yellow;
+        width: 100%;
+    }
+
+    .request-quote__file__button {
+        background-color: #c21f24;
+        color: white;
+        font-weight: normal;
+        font-family: 'Raleway', sans-serif;
+        line-height: 32px;
+        padding: 0 20px;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+    }
+
+    .request-quote__file__button:hover,
+    .request-quote__file__button:focus {
+        background-color: #df353a;
+    }
+
+    .request-quote__file__input {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+    }
+
+    .request-quote__file__format {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<div class="page_full">
+    <div class="request-quote">
+        <div class="request-quote__header">
+            <h1 class="request-quote__title">Request a Quote</h1>
+        </div>
+        <div class="request-quote__intro">
+            <p>To get a personalized quote for any of our products or open an account with sonco please complete the
+                following form and we'll be in touch as soon as possible.</p>
+        </div>
+        <form id="custom-form" class="request-quote__form"
+            action="{{config path="web/secure/base_url"}}customform/index/quotepost" enctype="multipart/form-data"
+            method="post">
+            <div class="request-quote__combos">
+                <div class="request-quote__combo"><img class="request-quote__combo__image"
+                        src="{{media url=wysiwyg/Request_quote_Barricade.jpg}}" alt="barricade" /> <strong
+                        class="request-quote__combo__title">Barricades</strong>
+                    <ul class="request-quote__checkbox-combo">
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_1"
+                                class="request-quote__input--checkbox" name="request_quote_products_1" type="checkbox"
+                                value="Steel Barricades" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_1">Steel Barricades</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_2"
+                                class="request-quote__input--checkbox" name="request_quote_products_2" type="checkbox"
+                                value="Plastic Barricades" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_2">Plastic Barricades</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_3"
+                                class="request-quote__input--checkbox" name="request_quote_products_3" type="checkbox"
+                                value="Stage Barriers" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_3">Stage Barriers</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_4"
+                                class="request-quote__input--checkbox" name="request_quote_products_4" type="checkbox"
+                                value="Water Barriers" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_4">Traffic Barricades</label></li>
+                    </ul>
+                </div>
+                <div class="request-quote__combo"><img class="request-quote__combo__image"
+                        src="{{media url=wysiwyg/Request_quote_custom_signs.jpg}}" alt="custom signs" /> <strong
+                        class="request-quote__combo__title">Custom Signs</strong>
+                    <ul class="request-quote__checkbox-combo">
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_5"
+                                class="request-quote__input--checkbox" name="request_quote_products_5" type="checkbox"
+                                value="Barricades Covers" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_5">Barricades Covers</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_6"
+                                class="request-quote__input--checkbox" name="request_quote_products_6" type="checkbox"
+                                value="Custom Fence Screen" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_6">Fence Wraps</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_7"
+                                class="request-quote__input--checkbox" name="request_quote_products_7" type="checkbox"
+                                value="Custom Stage Signs" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_7">Stage Scrims</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_8"
+                                class="request-quote__input--checkbox" name="request_quote_products_8" type="checkbox"
+                                value="Corrugated Plastic Signs" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_8">Outdoor Displays</label></li>
+                    </ul>
+                </div>
+                <div class="request-quote__combo"><img class="request-quote__combo__image"
+                        src="{{media url=wysiwyg/Request_Quote_traffic-safety.jpg}}" alt="traffic safety " /> <strong
+                        class="request-quote__combo__title">Traffic Safety</strong>
+                    <ul class="request-quote__checkbox-combo">
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_9"
+                                class="request-quote__input--checkbox" name="request_quote_products_9" type="checkbox"
+                                value="Delineators, Cones" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_9"> Channelizer Drums</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_10"
+                                class="request-quote__input--checkbox" name="request_quote_products_10" type="checkbox"
+                                value="Construction Signs" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_10">Construction Signs</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_11"
+                                class="request-quote__input--checkbox" name="request_quote_products_11" type="checkbox"
+                                value="Ramps and Road Plates" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_11">Traffic Delineators</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_12"
+                                class="request-quote__input--checkbox" name="request_quote_products_12" type="checkbox"
+                                value="Traffic Barricades" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_12">Traffic Barriers</label></li>
+                    </ul>
+                </div>
+                <div class="request-quote__combo"><img class="request-quote__combo__image"
+                        src="{{media url=wysiwyg/Request_quote_Fence.jpg}}" alt="fence solutions" width="194"
+                        height="106" /> <strong class="request-quote__combo__title">Fence Solutions</strong>
+                    <ul class="request-quote__checkbox-combo">
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_13"
+                                class="request-quote__input--checkbox" name="request_quote_products_13" type="checkbox"
+                                value="Fence Screen" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_13">Construction Windscreens</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_14"
+                                class="request-quote__input--checkbox" name="request_quote_products_14" type="checkbox"
+                                value="Temporary Fence Panels" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_14">Temporary Fence</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_15"
+                                class="request-quote__input--checkbox" name="request_quote_products_15" type="checkbox"
+                                value="Safety Signs" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_15">Safety Signs</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_16"
+                                class="request-quote__input--checkbox" name="request_quote_products_16" type="checkbox"
+                                value="Construction StrongFence" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_16">Custom Screen</label></li>
+                    </ul>
+                </div>
+                <div class="request-quote__combo"><img class="request-quote__combo__image"
+                        src="{{media url=wysiwyg/Request_quote_stanchions-1.jpg}}" alt="stanchions" width="194"
+                        height="105" /> <strong class="request-quote__combo__title">Stanchions</strong>
+                    <ul class="request-quote__checkbox-combo">
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_17"
+                                class="request-quote__input--checkbox" name="request_quote_products_17" type="checkbox"
+                                value="Classic Rope Stanchion" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_17">Stanchion Posts</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_18"
+                                class="request-quote__input--checkbox" name="request_quote_products_18" type="checkbox"
+                                value="Retractable Belt Barriers" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_18">Retractable Belt Barriers</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_19"
+                                class="request-quote__input--checkbox" name="request_quote_products_19" type="checkbox"
+                                value="Queue Management Wall" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_19">Wall-mount belts</label></li>
+                        <li class="request-quote__checkbox-combo__item"><input id="request_quote_products_20"
+                                class="request-quote__input--checkbox" name="request_quote_products_20" type="checkbox"
+                                value="Signs &amp;amp; Merchandising" /> <label class="request-quote__checkbox-label"
+                                for="request_quote_products_20">Add-ons & Merchandising</label></li>
+                    </ul>
+                </div>
+            </div>
+            <fieldset class="request-quote__fieldset">
+                <legend class="request-quote__legend">Tell us About Your Needs</legend>
+                <div class="request-quote__input-wrapper">
+                    <div class="request-quote__input-container request-quote__input-container--half">
+                        <label class="request-quote__label" for="request_quote_form_firstname">First Name*</label>
+                        <input id="request_quote_form_firstname" class="request-quote__input--text"
+                            name="request_quote_form_firstname" required="" type="text"
+                            data-validate="{required:true}" />
+                        </div>
+                    <div class="request-quote__input-container request-quote__input-container--half">
+                        <label class="request-quote__label" for="request_quote_form_lastname">Last Name*</label>
+                        <input id="request_quote_form_lastname" class="request-quote__input--text"
+                            name="request_quote_form_lastname" required="" type="text"
+                            data-validate="{required:true}" />
+                        </div>
+                    <div class="request-quote__input-container request-quote__input-container--half"><label
+                            class="request-quote__label" for="request_quote_form_zip">Zip/Postal Code*</label> <input
+                            id="request_quote_form_zip" class="request-quote__input--text" name="request_quote_form_zip"
+                            required="" type="text" data-validate="{required:true, 'validate-zip-us':true}" /></div>
+                    <div class="request-quote__input-container request-quote__input-container--half"><label
+                            class="request-quote__label" for="request_quote_form_email">E-mail Address*</label> <input
+                            id="request_quote_form_email" class="request-quote__input--text"
+                            name="request_quote_form_email" required="" type="email"
+                            data-validate="{required:true, 'validate-email':true}" /></div>
+                    <div class="request-quote__input-container request-quote__input-container--half"><label
+                            class="request-quote__label" for="request_quote_form_phone">Phone #</label> <input
+                            id="request_quote_form_phone" class="request-quote__input--text"
+                            name="request_quote_form_phone" type="text" /></div>
+
+                    <!-- <div class="request-quote__input-container request-quote__input-container--half">
+                        <label class="request-quote__label" for="request_quote_form_fax">Fax #</label>
+                        <input
+                            id="request_quote_form_fax" class="request-quote__input--text" name="request_quote_form_fax"
+                            type="text" />
+                    </div> -->
+
+                    <!-- <div class="request-quote__input-container request-quote__input-container--half">
+                        <label class="request-quote__label" for="request_quote_form_industry">Industry</label>
+                        <select
+                            id="request_quote_form_industry" class="request-quote__input--text"
+                            name="request_quote_form_industry">
+                            <option disabled="disabled" selected="selected">Select your industry</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Apparel and Fashion Goods">Apparel and Fashion Goods</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Beauty and Personal Care">Beauty and Personal Care</option>
+                            <option value="Building and Construction">Building and Construction</option>
+                            <option value="Business Supplies">Business Supplies</option>
+                            <option value="Chemicals">Chemicals</option>
+                            <option value="Computer Hardware">Computer Hardware</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Consumer Electronics">Consumer Electronics</option>
+                            <option value="Consumer Goods">Consumer Goods</option>
+                            <option value="Corporate">Corporate</option>
+                            <option value="End User">End User</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Events">Events</option>
+                            <option value="Food and Beverage">Food and Beverage</option>
+                            <option value="Freight and Logistics">Freight and Logistics</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Health Care">Health Care</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Luxury Goods">Luxury Goods</option>
+                            <option value="Machinery">Machinery</option>
+                            <option value="Manufacturing and Parts">Manufacturing and Parts</option>
+                            <option value="Medical Devices">Medical Devices</option>
+                            <option value="Oil and Energy">Oil and Energy</option>
+                            <option value="Other">Other</option>
+                            <option value="Packaging and Containers">Packaging and Containers</option>
+                            <option value="Pet Products">Pet Products</option>
+                            <option value="Pharmaceuticals">Pharmaceuticals</option>
+                            <option value="Professional Services">Professional Services</option>
+                            <option value="Public Sector">Public Sector</option>
+                            <option value="Raw Materials">Raw Materials</option>
+                            <option value="Real Estate">Real Estate</option>
+                            <option value="Religion">Religion</option>
+                            <option value="Rental">Rental</option>
+                            <option value="Reseller">Reseller</option>
+                            <option value="Retail">Retail</option>
+                            <option value="School">School</option>
+                            <option value="Security">Security</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Sporting Good">Sporting Good</option>
+                            <option value="Textiles">Textiles</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Utility">Utility</option>
+                            <option value="Venues &amp;amp; Arenas">Venues &amp;amp; Arenas</option>
+                        </select>
+                    </div>
+
+                    <div class="request-quote__input-container request-quote__input-container--half">
+                        <label class="request-quote__label" for="request_quote_form_industry">Segment</label>
+                        <select
+                            id="request_quote_form_segment" class="request-quote__input--text"
+                            name="request_quote_form_segment">
+                            <option disabled="disabled" selected="selected">Select your Segment</option>
+                            <option value="Ad Agencies">Ad Agencies</option>
+                            <option value="Airport">Airport</option>
+                            <option value="Amusement">Amusement</option>
+                            <option value="Bar/Club/Lounge">Bar/Club/Lounge</option>
+                            <option value="Camp">Camp</option>
+                            <option value="Casino">Casino</option>
+                            <option value="Competitor">Competitor</option>
+                            <option value="CTC Rental">CTC Rental</option>
+                            <option value="Developers">Developers</option>
+                            <option value="Equip. Rental">Equip. Rental</option>
+                            <option value="Fence">Fence</option>
+                            <option value="Festivals">Festivals</option>
+                            <option value="General Contractor">General Contractor</option>
+                            <option value="Gov Agency">Gov Agency</option>
+                            <option value="High School">High School</option>
+                            <option value="Home Owner">Home Owner</option>
+                            <option value="Hospital">Hospital</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Lighting &amp;amp; Sound">Lighting &amp;amp; Sound</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Military">Military</option>
+                            <option value="Municipality">Municipality</option>
+                            <option value="Museum">Museum</option>
+                            <option value="Non-Profit">Non-Profit</option>
+                            <option value="Parks &amp;amp; Rec">Parks &amp;amp; Rec</option>
+                            <option value="Police Department">Police Department</option>
+                            <option value="Production Companies">Production Companies</option>
+                            <option value="Promotional Agency">Promotional Agency</option>
+                            <option value="Property Management">Property Management</option>
+                            <option value="Races">Races</option>
+                            <option value="Resellers">Resellers</option>
+                            <option value="Restaurant">Restaurant</option>
+                            <option value="Retailer">Retailer</option>
+                            <option value="Safety">Safety</option>
+                            <option value="Sports">Sports</option>
+                            <option value="University">University</option>
+                            <option value="Wrestling">Wrestling</option>
+                            <option value="Venues &amp;amp; Arenas">Venues &amp;amp; Arenas</option>
+                        </select>
+                    </div> -->
+
+                    <div class="request-quote__input-container"><label class="request-quote__label"
+                            for="request_quote_comments">Comments</label> <textarea id="request_quote_comments"
+                            class="request-quote__input--textarea" name="request_quote_form_comments"></textarea></div>
+                    <div class="request-quote__input-container request-quote__input-container--file"><label
+                            class="request-quote__label" for="request_quote_form_file">Include job site specs or art for
+                            custom-printed products with your quote request.</label>
+                        <div class="request-quote__file__wrapper">
+                            <div class="request-quote__file__hack"><button class="request-quote__file__button">Upload
+                                    file</button> <input id="request_quote_form_file" class="request-quote__file__input"
+                                    name="request_quote_form_file" type="file" /></div>
+                            <div class="request-quote__file__format">TIFF | PDF | JPG | AI | EPS</div>
+                        </div>
+                    </div>
+                    <div class="request-quote__button-container"><input class="request-quote__button" type="submit"
+                            value="Submit" />
+                        <div class="request-quote__details">* Required fields</div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<p>
+    <script type="text/javascript" xml="space">// <![CDATA[
+    require([
+        'jquery',
+        'mage/mage'
+    ], function ($) {
+
+        var dataForm = $('#custom-form');
+        dataForm.mage('validation', {});
+
+    });
+// ]]></script>
+</p>
+
+<link rel="stylesheet" type="text/css" media="all" href="/media/wysiwyg/politics-page/design-services.css">
