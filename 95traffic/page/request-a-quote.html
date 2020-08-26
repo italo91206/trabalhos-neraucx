@@ -1,0 +1,349 @@
+<div id="request-a-quote">
+    <link href="/media/wysiwyg/sonco-95/request-quote/estilo.css" rel="stylesheet" media="all" type="text/css" />
+    
+    <div class="careers-pre-slider" style="height: 51px;"><img
+        src="{{media url=&quot;wysiwyg/sonco-95/home/imgs/above-banner.png&quot;}}" />
+    </div>
+    
+    <section class="container"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/banner.png" />
+        <p class="text-privacy text-center" style="margin-top: 12px">Please complete the form below to get a personalized product quote or to
+            open a 95 Traffic Safety account.<br />We'll be in touch the same business day we receive your request. Our
+            Products: Please select the products<br />below that you want us to include in your quote.
+        </p>
+    </section>
+
+    <form id="contact-form" class="form contact" action="{{store direct_url="quoteform/index/post"}}" method="post" novalidate="novalidate" data-hasrequired="* Required Fields" style="padding-bottom: 1px">
+        <section class="container">
+            <div class="line_main" style="margin: 0 auto;">
+                
+                <div class="col-prod"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/icon-traffic-safety.png" />
+                    <h3>TRAFFIC SAFETY</h3>
+                    <div class="multiselect">
+                        <div class="selectBox"><select>
+                                <option>- Choose a product -</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes" class="hidde">
+                            <label for="traffic-cones"> <input id="traffic-cones" name="traffic-cones" type="checkbox" onclick="checkboxclick('Traffic Cones')"/>Traffic Cones</label>
+                            <label for="traffic-drums"><input id="traffic-drums" name="traffic-drums" type="checkbox" onclick="checkboxclick('Traffic Drums')"/>Traffic Drums</label>
+                            <label for="traffic-signs"> <input id="traffic-signs" type="checkbox" onclick="checkboxclick('Traffic Signs')"/>Traffic Signs</label>
+                            <label for="cone-signs"><input id="cone-signs" name="flashers" type="checkbox" onclick="checkboxclick('Cone Signs')"/>Cone Signs</label>
+                            <label for="flashers"> <input id="flashers" name="flashers" type="checkbox" onclick="checkboxclick('Flashers')"/>Flashers</label>
+                            <label for="flags"> <input id="flags" name="flags" type="checkbox" onclick="checkboxclick('Flags')"/>Flags</label>
+                            <label for="bases"> <input id="bases" name="bases" type="checkbox" onclick="checkboxclick('Bases')"/>Bases</label>
+                            <label for="sign-stands"> <input id="sign-stands" name="sign-stands" type="checkbox" onclick="checkboxclick('Sign Stands')"/>Sign Stands</label>
+                            <label for="extinguishers"> <input id="extinguishers" name="extinguishers" type="checkbox" onclick="checkboxclick('Extinguishers')"/>Extinguishers</label>
+                            <label for="flares"> <input id="flares" name="flares" type="checkbox" onclick="checkboxclick('Flares')"/>Flares</label>
+                            <label for="arrowboard"> <input id="arrowboard" name="arrowboard" type="checkbox" onclick="checkboxclick('Arrowboard')"/>Arrowboard</label>
+                            <label for="vms-board"> <input id="vms-board" name="vms-board" type="checkbox" onclick="checkboxclick('VMS Board')"/>VMS Board</label>
+                            <label for="sign-post"> <input id="sign-post" name="sign-post" type="checkbox" onclick="checkboxclick('Sign Post')"/>Sign Post</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-prod"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/icon-personal-safety.png" />
+                    <h3>PERSONAL SAFETY</h3>
+                    <div class="multiselect">
+                        <div class="selectBox"><select>
+                                <option>- Choose a product -</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes" class="hidde">
+                            <label for="safety-vests"><input id="safety-vests" name="safety-vests" type="checkbox" onclick="checkboxclick('Safety Vests')"/>Safety Vests</label>
+                            <label for="horn"><input id="horn" name="horn" type="checkbox" onclick="checkboxclick('Horn')"/>Horn</label>
+                            <label for="hard-hats"><input id="hard-hats" name="hard-hats" type="checkbox" onclick="checkboxclick('Hard Hats')"/>Hard Hats</label>
+                            <label for="fall-protection"><input id="fall-protection" name="fall-protection" type="checkbox" onclick="checkboxclick('Fall Protection')"/>Fall Protection</label>
+                            <label for="boots"><input id="boots" name="boots" type="checkbox" onclick="checkboxclick('Boots')"/>Boots</label>
+                            <label for="gloves"><input id="gloves" name="gloves" type="checkbox" onclick="checkboxclick('Gloves')"/>Gloves</label>
+                            <label for="foot-protection"><input id="foot-protection" name="foot-protection" type="checkbox" onclick="checkboxclick('>Foot Protection')"/>Foot Protection</label>
+                            <label for="coats"> <input id="coats" name="coats" type="checkbox" onclick="checkboxclick('Coats')"/>Coats</label>
+                            <label for="knee-pads"><input id="knee-pads" name="knee-pads" type="checkbox" onclick="checkboxclick('Knee Pads')"/>Knee Pads</label>
+                            <label for="rain-gear"><input id="rain-gear" name="rain-gear" type="checkbox" onclick="checkboxclick('Rain Gear')"/>Rain Gear</label>
+                            <label for="gas-can"><input id="gas-can" name="gas-can" type="checkbox" onclick="checkboxclick('Gas Can')"/>Gas Can</label>
+                            <label for="coolers"><input id="coolers" name="coolers" type="checkbox" onclick="checkboxclick('Coolers')"/>Coolers</label>
+                            <label for="eyewear"><input id="eyewear" name="eyewear" type="checkbox" onclick="checkboxclick('Eyewear')"/>Eyewear</label>
+                            <label for="face-protection"><input id="face-protection" name="face-protection" type="checkbox" onclick="checkboxclick('Face Protection')"/>Face Protection</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-prod"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/icon-hand-tools.png" />
+                    <h3>HAND TOOLS</h3>
+                    <div class="multiselect">
+                        <div class="selectBox"><select>
+                                <option>- Choose a product -</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        
+                        <div id="checkboxes" class="hidde">
+                            <label for="shovels"><input id="shovels" name="shovels" type="checkbox" onclick="checkboxclick('Shovels')"/>Shovels</label>
+                            <label for="hand-tamp"><input id="hand-tamp" name="hand-tamp" type="checkbox" onclick="checkboxclick('Hand Tamp')"/>Hand Tamp</label>
+                            <label for="hammers"> <input id="hammers" name="hammers" type="checkbox" onclick="checkboxclick('Hammers')"/>Hammers</label>
+                            <label for="brooms"> <input id="brooms" name="brooms" type="checkbox" onclick="checkboxclick('Brooms')"/>Brooms</label>
+                            <label for="axes"> <input id="axes" name="axes" type="checkbox" onclick="checkboxclick('Axes')"/>Axes</label>
+                            <label for="handles"> <input id="handles" name="handles" type="checkbox" onclick="checkboxclick('Handles')"/>Handles</label>
+                            <label for="levels"> <input id="levels" name="levels" type="checkbox" onclick="checkboxclick('Levels')"/>Levels</label>
+                            <label for="wheelbarrow"> <input id="wheelbarrow" name="wheelbarrow" type="checkbox" onclick="checkboxclick('Wheelbarrow')"/>Wheelbarrow</label>
+                            <label for="bars"><input id="bars" name="bars" type="checkbox" onclick="checkboxclick('Bars')"/>Bars</label>
+                            <label for="trash"> <input id="trash" name="trash" type="checkbox" onclick="checkboxclick('Trash')"/>Trash</label>
+                            <label for="brushes"> <input id="brushes" name="brushes" type="checkbox" onclick="checkboxclick('Brushes')"/>Brushes</label>
+                            <label for="cutters"> <input id="cutters" name="cutters" type="checkbox" onclick="checkboxclick('Cutters')"/>Cutters</label>
+                            <label for="pliers"> <input id="pliers" name="pliers" type="checkbox" onclick="checkboxclick('Pliers')"/>Pliers</label>
+                            <label for="wrenches"> <input id="wrenches" name="wrenches" type="checkbox" onclick="checkboxclick('Wrenches')"/>Wrenches</label>
+                            <label for="picks"> <input id="picks" name="picks" type="checkbox" onclick="checkboxclick('Picks')"/>Picks</label>
+                            <label for="rulers-tapes"><input id="rulers-tapes" name="rulers-tapes" type="checkbox" onclick="checkboxclick('Rulers/Tapes')"/>Rulers/Tapes</label>
+                            <label for="plumb-bob"><input id="plumb-bob" name="plumb-bob" type="checkbox" onclick="checkboxclick('Plumb Bob')"/>Plumb Bob</label>
+                            <label for="moil-point"><input id="moil-point" name="moil-point" type="checkbox" onclick="checkboxclick('Moil Point')"/>Moil Point</label>
+                            <label for="rake"><input id="rake" name="rake" type="checkbox" onclick="checkboxclick('Rake')"/>Rake</label>
+                            <label for="paint-rollers"> <input id="paint-rollers" name="paint-rollers"type="checkbox" onclick="checkboxclick('Paint/Roller')"/>Paint/Rollers</label>
+                            <label for="hoe"> <input id="hoe" name="hoe" type="checkbox" onclick="checkboxclick('Hoe')"/>Hoe</label>
+                            <label for="blades"> <input id="blades" name="blades" type="checkbox" onclick="checkboxclick('Blades')"/>Blades</label> 
+                            <label for="saws"><input id="saws" name="saws" type="checkbox" onclick="checkboxclick('Saws')"/>Saws</label> 
+                            <label for="scrapers"> <input id="scrapers" name="scrapers" type="checkbox" onclick="checkboxclick('Scrapers')"/>Scrapers</label> 
+                            <label for="landscaping"> <input id="landscaping" name="landscaping" type="checkbox" onclick="checkboxclick('Landscaping')"/>Landscaping</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-prod"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/icon-concrete.png" />
+                    <h3>CONCRETE</h3>
+                    <div class="multiselect">
+                        <div class="selectBox"><select>
+                                <option>- Choose a product -</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        
+                        <div id="checkboxes" class="hidde">
+                            <label for="cylinders"> <input id="cylinders" name="cylinders" type="checkbox" onclick="checkboxclick('Cylinders')"/>Cylinders</label>
+                            <label for="edgers"> <input id="edgers" name="edgers" type="checkbox" onclick="checkboxclick('Edgers')"/>Edgers</label>
+                            <label for="floats"> <input id="floats" name="floats" type="checkbox" onclick="checkboxclick('Floats')"/>Floats</label>
+                            <label for="groovers"> <input id="groovers" name="groovers" type="checkbox" onclick="checkboxclick('Groovers')"/>Groovers</label>
+                            <label for="knee-pads"> <input id="knee-pads" name="knee-pads" type="checkbox" onclick="checkboxclick('Knee Pads')"/>Knee Pads</label>
+                            <label for="screeds"> <input id="screeds" name="screeds" type="checkbox" onclick="checkboxclick('Screeds')"/>Screeds</label>
+                            <label for="trowels"> <input id="trowels" name="trowels" type="checkbox" onclick="checkboxclick('Trowels')"/>Trowels</label>
+                            <label for="bonding"> <input id="bonding" name="bonding" type="checkbox" onclick="checkboxclick('Bonding')"/>Bonding</label>
+                            <label for="rebar"> <input id="rebar" name="rebar" type="checkbox" onclick="checkboxclick('Rebar')"/>Rebar</label>
+                            <label for="wire"> <input id="wire" name="wire" type="checkbox" onclick="checkboxclick('Wire')"/>Wire</label>
+                            <label for="curing"> <input id="curing" name="curing" type="checkbox" onclick="checkboxclick('Curing')"/>Curing</label>
+                            <label for="concrete"> <input id="concrete" name="concrete" type="checkbox" onclick="checkboxclick('Concrete')"/>Concrete</label>
+                            <label for="forming-tube"> <input id="forming-tube" name="forming-tube" type="checkbox" onclick="checkboxclick('Forming Tub')"/>Forming Tube</label>
+                            <label for="cement"> <input id="cement" name="cement" type="checkbox" onclick="checkboxclick('Cement')"/>Cement</label>
+                            <label for="concrete-tools"><input id="concrete-tools" name="concrete-tools"type="checkbox" onclick="checkboxclick('Concrete Tools')"/>Concrete Tools</label>
+                            <label for="epoxy"> <input id="epoxy" name="epoxy" type="checkbox" onclick="checkboxclick('Epoxy')"/>Epoxy</label>
+                            <label for="grout"> <input id="grout" name="grout" type="checkbox" onclick="checkboxclick('Grout')"/>Grout</label>
+                            <label for="gravel"> <input id="gravel" name="gravel" type="checkbox" onclick="checkboxclick('Gravel')"/>Gravel</label>
+                            <label for="patching"> <input id="patching" name="patching"  type="checkbox" onclick="checkboxclick('Patching')"/>Patching</label>
+                            <label for="pails"> <input id="pails" name="pails"  type="checkbox" onclick="checkboxclick('Pails')"/>Pails</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-prod"><img src="/media/wysiwyg/sonco-95/request-quote/imgs/icon-erosion.png" />
+                    <h3>EROSION</h3>
+                    <div class="multiselect">
+                        <div class="selectBox"><select>
+                                <option>- Choose a product -</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        
+                        <div id="checkboxes" class="hidde">
+                            <label for="fabric"> <input id="fabric" name="fabric" type="checkbox" onclick="checkboxclick('Fabric')"/>Fabric</label>
+                            <label for="seed"> <input id="seed" name="seed" type="checkbox" onclick="checkboxclick('Seed')"/>Seed</label> 
+                            <label for="fertilizer"><input id="fertilizer" name="fertilizer" type="checkbox" onclick="checkboxclick('Fertilizer')"/>Fertilizer</label>
+                            <label for="stakes-nails"><input id="stakes-nails" name="stakes-nails" type="checkbox" onclick="checkboxclick('Stakes/Nails')"/>Stakes/Nails</label>
+                            <label for="poly"> <input id="poly" name="poly" type="checkbox" onclick="checkboxclick('Poly')"/>Poly</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container ">
+            <div class="w-100 input-espacamento" style="float: left; margin-top: 10px; margin-bottom: 0px">
+                <h1 class="title-request" style="margin-top: 45px !important; margin-bottom: 0px;">tell us about your needs</h1>
+            </div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="name" type="text" placeholder="FULL NAME *" /></div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="company" type="text" placeholder="COMPANY NAME *" /></div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="zipcode" type="text" placeholder="ZIP / POSTAL CODE *" /></div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="email" type="text" placeholder="E-MAIL ADDRESS *" /></div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="telephone" type="text" placeholder="PHONE *" /></div>
+            <div class="w-50 input-espacamento"><input class="contact-input" name="fax" type="text" placeholder="FAX *" /></div>
+            <div class="w-50 input-espacamento">
+                <select class="select-form" name="request_quote_form_industry">
+                    <option disabled="disabled" selected="selected">SELECT YOUR INDUSTRY</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Apparel and Fashion Goods">Apparel and Fashion Goods</option>
+                    <option value="Automotive">Automotive</option>
+                    <option value="Beauty and Personal Care">Beauty and Personal Care</option>
+                    <option value="Building and Construction">Building and Construction</option>
+                    <option value="Business Supplies">Business Supplies</option>
+                    <option value="Chemicals">Chemicals</option>
+                    <option value="Computer Hardware">Computer Hardware</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Consumer Electronics">Consumer Electronics</option>
+                    <option value="Consumer Goods">Consumer Goods</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="End User">End User</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Events">Events</option>
+                    <option value="Food and Beverage">Food and Beverage</option>
+                    <option value="Freight and Logistics">Freight and Logistics</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Health Care">Health Care</option>
+                    <option value="Hospitality">Hospitality</option>
+                    <option value="Luxury Goods">Luxury Goods</option>
+                    <option value="Machinery">Machinery</option>
+                    <option value="Manufacturing and Parts">Manufacturing and Parts</option>
+                    <option value="Medical Devices">Medical Devices</option>
+                    <option value="Oil and Energy">Oil and Energy</option>
+                    <option value="Other">Other</option>
+                    <option value="Packaging and Containers">Packaging and Containers</option>
+                    <option value="Pet Products">Pet Products</option>
+                    <option value="Pharmaceuticals">Pharmaceuticals</option>
+                    <option value="Professional Services">Professional Services</option>
+                    <option value="Public Sector">Public Sector</option>
+                    <option value="Raw Materials">Raw Materials</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Religion">Religion</option>
+                    <option value="Rental">Rental</option>
+                    <option value="Reseller">Reseller</option>
+                    <option value="Retail">Retail</option>
+                    <option value="School">School</option>
+                    <option value="Security">Security</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Sporting Good">Sporting Good</option>
+                    <option value="Textiles">Textiles</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Utility">Utility</option>
+                    <option value="Venues &amp; Arenas">Venues &amp; Arenas</option>
+                </select>
+            </div>
+            
+            <div class="w-50 input-espacamento">
+                <select class="select-form" name="request_quote_form_segment">
+                    <option disabled="disabled" selected="selected">SELECT YOUR SEGMENT</option>
+                    <option value="Ad Agencies">Ad Agencies</option>
+                    <option value="Airport">Airport</option>
+                    <option value="Amusement">Amusement</option>
+                    <option value="Bar/Club/Lounge">Bar/Club/Lounge</option>
+                    <option value="Camp">Camp</option>
+                    <option value="Casino">Casino</option>
+                    <option value="Competitor">Competitor</option>
+                    <option value="CTC Rental">CTC Rental</option>
+                    <option value="Developers">Developers</option>
+                    <option value="Equip. Rental">Equip. Rental</option>
+                    <option value="Fence">Fence</option>
+                    <option value="Festivals">Festivals</option>
+                    <option value="General Contractor">General Contractor</option>
+                    <option value="Gov Agency">Gov Agency</option>
+                    <option value="High School">High School</option>
+                    <option value="Home Owner">Home Owner</option>
+                    <option value="Hospital">Hospital</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="Lighting &amp; Sound">Lighting &amp; Sound</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Military">Military</option>
+                    <option value="Municipality">Municipality</option>
+                    <option value="Museum">Museum</option>
+                    <option value="Non-Profit">Non-Profit</option>
+                    <option value="Parks &amp; Rec">Parks &amp; Rec</option>
+                    <option value="Police Department">Police Department</option>
+                    <option value="Production Companies">Production Companies</option>
+                    <option value="Promotional Agency">Promotional Agency</option>
+                    <option value="Property Management">Property Management</option>
+                    <option value="Races">Races</option>
+                    <option value="Resellers">Resellers</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Retailer">Retailer</option>
+                    <option value="Safety">Safety</option>
+                    <option value="Sports">Sports</option>
+                    <option value="University">University</option>
+                    <option value="Wrestling">Wrestling</option>
+                    <option value="Venues &amp; Arenas">Venues &amp; Arenas</option>
+                </select>
+            </div>
+            
+            <div class="w-100 input-espacamento pull-left">
+                <textarea class="contact-textarea" name="comment" placeholder="IN ORDER TO RECEIVE AN ACCURATE QUOTE, PLEASE SPECIFY QUANTITIES FOR ITEMS SELECTED"></textarea>
+            </div>
+
+            <div class="w-100 input-espacamento text-center pull-left relative submit-campo">
+                <input id="hideit" name="hideit" type="hidden" value="" />
+                <input id="quote_95" name="quote_95" type="hidden" value="quote_95" />
+                <button class="button-submit" type="submit"> SUBMIT </button>
+                <span class="required-fields-text"> REQUIRED FIELDS *</span>
+            </div>
+
+            <div class="margin-espacamento"></div>
+        </section>
+    </form>
+</div>
+
+<script type="text/javascript" xml="space">
+    require([
+        'jquery'
+    ], function ($) {
+        var expanded = false;
+        $('.selectBox').on('click', function () {
+            var checkboxes = $($(this).parent()).find('#checkboxes');
+            if ($(checkboxes).hasClass('hidde')) {
+                $(checkboxes).removeClass('hidde');
+                expanded = true;
+            } 
+            // else {
+            //     $(checkboxes).addClass('hidde');
+            //     expanded = false;
+            // }
+        });
+        $('div#checkboxes').on('mouseleave', function () {
+            var checkboxes = $($(this).parent()).find('div#checkboxes');
+            $(checkboxes).addClass('hidde');
+        });
+    });
+    function checkboxclick(elem){
+        // console.log('Clicado: ' + elem);
+        var string = elem + ": quantity?\n";
+        jQuery(".contact-textarea").append(string);
+    }
+
+</script>
+
+<style xml="space">
+    .col-prod img {
+        max-height: 60px;
+    }
+    .careers-pre-slider {
+        margin: 20px auto;
+        max-width: 1030px;
+    }
+    /* div#request-a-quote {
+        background-color: white !important;
+    } */
+
+    /* div.page-bottom {
+        background-color: white;
+    } */
+
+    section.footer-links {
+        margin-top: 0px !important;
+    }
+
+    .multiselect {
+        margin: 0 auto !important;
+    }
+    #checkboxes {
+        z-index: 1;
+    }
+    .widget.block.block-static-block {
+        margin-bottom: 0px;
+    }
+    form#contact-form {
+        background: white;
+        padding-top: 25px;
+    }
+</style>
