@@ -116,7 +116,19 @@ li.vc_tta-tab.vc_active {
 #banner-vitrine .wpb_column.column_container.col-md-12.col-lg-12 {
 	padding: 0px;
 }
-	
+
+/* .vc_item {
+	width: 33.3333% !important;
+	height: 877px !important;
+} */
+
+
+/* .vc_inner,
+    div#vc_images-carousel-1-1588593616, 
+    .vc_images_carousel .vc_carousel-inner {
+        height: 877px;
+    } */
+
 #main-footer>div {
 	width: unset !important;
 }
@@ -1221,7 +1233,7 @@ a.float {
 	width: 60px;
 	height: 60px;
 	bottom: 40px;
-	right: 40px;
+	left: 40px;
 	background-color: #25d366;
 	color: #FFF;
 	border-radius: 50px;
@@ -1555,4 +1567,16 @@ parte do tour search result
 	.search-result-page.style-2 .tour-top-search {
 		margin-top: 0;
 	}
+}
+
+.form-row-wide {
+    width: 100% !important;
+}
+
+.st-woo-checkout-form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row#billing_address_1_field {
+    clear: unset !important;
+}
+
+.xoo-wsc-basket{
+	bottom: 30px;
 }
