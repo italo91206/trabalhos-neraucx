@@ -6,7 +6,7 @@
     </section>
 
     <!-- SECTION DOWNLOAD APP BANNER -->
-    <section class="sc-banner-tile-info sc-container">
+    <section class="sc-banner-tile-info sc-container" style="display: none">
       <div class="sc-banner-tile-info__content">
         <div class="sc-banner-tile-info-text-container">
           <span class="sc-banner-tile-info__text">
@@ -25,29 +25,36 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a pwa-to-page="/stanchions/free-shipping">
-              <img pwa-src="free-shipping-stanchions" alt="Banner 01" class="isdesktop">
-              <img pwa-src="free-shipping-stanchions-and-posts-mobile" alt="Banner 01" class="ismobile">
+              <img pwa-src="vitrine-stanchions-posts-1" alt="Banner 01" class="isdesktop">
+              <img pwa-src="vitrine-mobile-stanchions-posts-1" alt="Banner 01" class="ismobile">
             </a>
           </div>
 
           <div class="swiper-slide">
             <a pwa-to-page="/reopen/social-distance-stanchions/stanchion-real-estate-series">
-              <img pwa-src="free-shipping-stanchions" alt="Banner 01" class="isdesktop">
-              <img pwa-src="covid-19-stanchions-package-mobile" alt="Banner 01" class="ismobile">
-            </a> 
+              <img pwa-src="vitrine-stanchions-posts-2" alt="Banner 01" class="isdesktop">
+              <img pwa-src="vitrine-mobile-stanchions-posts-2" alt="Banner 01" class="ismobile">
+            </a>
           </div>
 
           <div class="swiper-slide">
             <a pwa-to-page="/stanchions/custom-printed">
-              <img pwa-src="free-shipping-stanchions" alt="Banner 01" class="isdesktop">
-              <img pwa-src="custom-printed-belts-mobile" alt="Banner 01" class="ismobile">
-            </a> 
+              <img pwa-src="vitrine-stanchions-posts-3" alt="Banner 01" class="isdesktop">
+              <img pwa-src="vitrine-mobile-stanchions-posts-3" alt="Banner 01" class="ismobile">
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a pwa-to-page="/stanchions/custom-printed">
+              <img pwa-src="vitrine-stanchions-posts-4" alt="Banner 01" class="isdesktop">
+              <img pwa-src="vitrine-mobile-stanchions-posts-4" alt="Banner 01" class="ismobile">
+            </a>
           </div>
         </div>
       </div>
       <!-- Add Arrows -->
-      <div class="sc-slide__category-stanchions-next swiper-button-next"></div>
-      <div class="sc-slide__category-stanchions-prev swiper-button-prev"></div>
+      <div class="sc-slide__category-stanchions-next swiper-button-next isdesktop"></div>
+      <div class="sc-slide__category-stanchions-prev swiper-button-prev isdesktop"></div>
     </section>
 
     <!-- circle subcategory links -->
@@ -125,76 +132,79 @@
 
     <!-- SECTION CONSTRUCTION -->
     <section class="sc-construction sc-container sc-slide__barricades">
-      <div class="swiper-container" id="sc-slide__banners-stanchions" pwa-hook="sc-slide__banners-stanchions">
-        <div class="sc-construction-cards swiper-wrapper">
-          <article class="sc-construction-card swiper-slide sc-stanchions-background-01">
-            <div class="sc-construction-card-content">
-              <div>
-                <p class="sc-construction-card__title">
-                  retractable<br />
-                  belt barriers
-                </p>
-                <span class="sc-construction-card__description">
-                  Highly effective form of crowd <br />
-                  control for lines &amp; queue
-                </span>
-              </div>
-              <a class="sc-construction-card__button" href=""></a>
+      <div class="sc-construction-cards" id="sc-slide__banners-stanchions" >
+        <article class="sc-construction-card sc-stanchions-background-01">
+          <div class="sc-construction-card-content">
+            <div>
+              <p class="sc-construction-card__title">
+                retractable<br />
+                belt barriers
+              </p>
+              <span class="sc-construction-card__description">
+                Highly effective form of crowd <br />
+                control for lines &amp; queue
+              </span>
             </div>
-          </article>
+            <a class="sc-construction-card__button" pwa-to-page="">
+              <span class="fas fa-chevron-right"></span>
+            </a>
+          </div>
+        </article>
 
-          <article class="sc-construction-card swiper-slide sc-stanchions-background-02">
-            <div class="sc-construction-card-content">
-              <div>
-                <p class="sc-construction-card__title">
-                  Wall-mount <br />
-                  Belts
-                </p>
-                <span class="sc-construction-card__description">
-                  Save money &amp; floor space by<br />
-                  wall-mounting retractable-belt barriers
-                </span>
-              </div>
-              <a class="sc-construction-card__button" href=""></a>
+        <article class="sc-construction-card sc-stanchions-background-02">
+          <div class="sc-construction-card-content">
+            <div>
+              <p class="sc-construction-card__title">
+                Wall-mount <br />
+                Belts
+              </p>
+              <span class="sc-construction-card__description">
+                Save money &amp; floor space by<br />
+                wall-mounting retractable-belt barriers
+              </span>
             </div>
-          </article>
+            <a class="sc-construction-card__button" pwa-to-page="">
+              <span class="fas fa-chevron-right"></span>
+            </a>
+          </div>
+        </article>
 
-          <article class="sc-construction-card swiper-slide sc-stanchions-background-03">
-            <div class="sc-construction-card-content">
-              <div>
-                <p class="sc-construction-card__title">
-                  Stanchion<br />
-                  and ropes
-                </p>
-                <span class="sc-construction-card__description">
-                  Great option to aesthetically<br />
-                  enhance the look of any space
-                </span>
-              </div>
-              <a class="sc-construction-card__button" href=""></a>
+        <article class="sc-construction-card sc-stanchions-background-03">
+          <div class="sc-construction-card-content">
+            <div>
+              <p class="sc-construction-card__title">
+                Stanchion<br />
+                and ropes
+              </p>
+              <span class="sc-construction-card__description">
+                Great option to aesthetically<br />
+                enhance the look of any space
+              </span>
             </div>
-          </article>
+            <a class="sc-construction-card__button" pwa-to-page="">
+              <span class="fas fa-chevron-right"></span>
+            </a>
+          </div>
+        </article>
 
-          <article class="sc-construction-card swiper-slide sc-stanchions-background-04">
-            <div class="sc-construction-card-content">
-              <div>
-                <p class="sc-construction-card__title">
-                  Plastic <br />
-                  Barriers
-                </p>
-                <span class="sc-construction-card__description">
-                  ChainBoss makes it easy to quickly set up<br />
-                  a barrier anywhere you may need
-                </span>
-              </div>
-              <a class="sc-construction-card__button" href=""></a>
+        <article class="sc-construction-card sc-stanchions-background-04">
+          <div class="sc-construction-card-content">
+            <div>
+              <p class="sc-construction-card__title">
+                Plastic <br />
+                Barriers
+              </p>
+              <span class="sc-construction-card__description">
+                ChainBoss makes it easy to quickly set up<br />
+                a barrier anywhere you may need
+              </span>
             </div>
-          </article>
-        </div>
+            <a class="sc-construction-card__button" pwa-to-page="">
+              <span class="fas fa-chevron-right"></span>
+            </a>
+          </div>
+        </article>
       </div>
-      <!-- Add Arrows -->
-      <div class="sc-slide__banners-stanchions-next swiper-button-next ismobile"></div>
-      <div class="sc-slide__banners-stanchions-prev swiper-button-prev ismobile"></div>
     </section>
 
     <!-- buy now pay later -->
@@ -205,7 +215,7 @@
       </a>
     </figure>
 
-    <!-- SECTION SHIPPING -->
+    <!-- Popular Accessories -->
     <section class="sc-container sc-novo-container sc-slider-title">
       <span class="sc-section-title">
         Popular Accessories
@@ -213,106 +223,20 @@
       </span>
     </section>
 
-    <!-- SECTION SHIPPING PRODUCT SLIDER-->
     <section class="sc-shipping sc-container sc-novo-container">
-      <div class="sc-shipping-cards swiper-container" id="sc-slide__products-industrial-01"
-        pwa-hook="sc-slide__products-industrial-01">
-        <div class="swiper-wrapper">
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
+      <pwa-product-list name="popular-accessories" filter="categories.url_key:'free-shipping'" size="15" class="sc-shipping sc-container sc-novo-container">
+        <div class="sc-shipping-cards swiper-container" id="sc-slide__category-stanchions-01" pwa-hook="sc-slide__category-stanchions-01">
+          <div class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide sc-shipping-card">
+              <pwa-product-card>
             </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-
-      <!-- Add Arrows -->
-      <div class="sc-slide__products-industrial-01-next swiper-button-next"></div>
-      <div class="sc-slide__products-industrial-01-prev swiper-button-prev"></div>
+  
+        <!-- Add Arrows -->
+        <div class="sc-slide__category-stanchions-01-next swiper-button-next isdesktop"></div>
+        <div class="sc-slide__category-stanchions-01-prev swiper-button-prev isdesktop"></div>
+      </pwa-product-list>
     </section>
 
     <!-- Custom Belts Text -->
@@ -322,107 +246,21 @@
         <a href="#">See all</a>
       </span>
     </section>
-
-    <!-- Custom Belts SLIDER-->
+    
     <section class="sc-shipping sc-container sc-novo-container">
-      <div class="sc-shipping-cards swiper-container" id="sc-slide__products-industrial-02"
-        pwa-hook="sc-slide__products-industrial-02">
-        <div class="swiper-wrapper">
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
+      <pwa-product-list name="custom-belts" filter="categories.url_key:'free-shipping'" size="15" class="sc-shipping sc-container sc-novo-container">
+        <div class="sc-shipping-cards swiper-container" id="sc-slide__category-stanchions-02" pwa-hook="sc-slide__category-stanchions-02">
+          <div class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide sc-shipping-card">
+              <pwa-product-card>
             </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-
-      <!-- Add Arrows -->
-      <div class="sc-slide__products-industrial-01-next swiper-button-next"></div>
-      <div class="sc-slide__products-industrial-01-prev swiper-button-prev"></div>
+  
+        <!-- Add Arrows -->
+        <div class="sc-slide__category-stanchions-02-next swiper-button-next isdesktop"></div>
+        <div class="sc-slide__category-stanchions-02-prev swiper-button-prev isdesktop"></div>
+      </pwa-product-list>
     </section>
 
     <!-- The helping hand -->
@@ -457,13 +295,12 @@
         </figure>
 
         <figure class="sc-reopen-product__image">
-          <a href="#"><img pwa-src="barricades-download" alt="Download Perimeter Blueprint"></a>
+          <a href="#"><img pwa-src="download" alt="Download Perimeter Blueprint"></a>
         </figure>
       </div>
     </section>
 
-
-    <!-- Rope Styles text -->
+    <!-- Rope Styles -->
     <section class="sc-container sc-novo-container sc-slider-title">
       <span class="sc-section-title">
         Rope Styles
@@ -471,109 +308,23 @@
       </span>
     </section>
 
-    <!-- Rope Styles products -->
     <section class="sc-shipping sc-container sc-novo-container">
-      <div class="sc-shipping-cards swiper-container" id="sc-slide__barricades-products-01"
-        pwa-hook="sc-slide__barricades-products-01">
-        <div class="swiper-wrapper">
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
+      <pwa-product-list name="rope-styles" filter="categories.url_key:'free-shipping'" size="15" class="sc-shipping sc-container sc-novo-container">
+        <div class="sc-shipping-cards swiper-container" id="sc-slide__category-stanchions-03" pwa-hook="sc-slide__category-stanchions-03">
+          <div class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide sc-shipping-card">
+              <pwa-product-card>
             </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-
-      <!-- Add Arrows -->
-      <div class="sc-slide__barricades-products-01-next swiper-button-next"></div>
-      <div class="sc-slide__barricades-products-01-prev swiper-button-prev"></div>
+  
+        <!-- Add Arrows -->
+        <div class="sc-slide__category-stanchions-03-next swiper-button-next isdesktop"></div>
+        <div class="sc-slide__category-stanchions-03-prev swiper-button-prev isdesktop"></div>
+      </pwa-product-list>
     </section>
 
-    <!-- Elegance line text -->
+    <!-- Elegance line -->
     <section class="sc-container sc-novo-container sc-slider-title">
       <span class="sc-section-title">
         Elegance Line
@@ -581,120 +332,31 @@
       </span>
     </section>
 
-    <!-- Elegance line products -->
     <section class="sc-shipping sc-container sc-novo-container">
-      <div class="sc-shipping-cards swiper-container" id="sc-slide__barricades-products-02"
-        pwa-hook="sc-slide__barricades-products-02">
-        <div class="swiper-wrapper">
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
+      <pwa-product-list name="elegance-line" filter="categories.url_key:'free-shipping'" size="15" class="sc-shipping sc-container sc-novo-container">
+        <div class="sc-shipping-cards swiper-container" id="sc-slide__category-stanchions-04" pwa-hook="sc-slide__category-stanchions-04">
+          <div class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide sc-shipping-card">
+              <pwa-product-card>
             </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
-
-          <article class="swiper-slide sc-shipping-card">
-            <div class="sc-shipping-card__image">
-              <img pwa-src="product-industrial" alt="" />
-            </div>
-            <div class="sc-shipping-card__info">
-              <p class="sc-shipping-card__description">
-                8 ft Linemaster Crowd Control Barrier | 30-Rack Bundle
-              </p>
-              <p class="sc-shipping-card__value">$2,650.00</p>
-              <p class="sc-shipping-card__warranty">1 Year Warranty</p>
-              <p class="sc-shipping-card__weight">Super Heavy Duty</p>
-              <p class="sc-shipping-card__expire">Offer Ends Soon</p>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-
-      <!-- Add Arrows -->
-      <div class="sc-slide__barricades-products-02-next swiper-button-next"></div>
-      <div class="sc-slide__barricades-products-02-prev swiper-button-prev"></div>
+  
+        <!-- Add Arrows -->
+        <div class="sc-slide__category-stanchions-04-next swiper-button-next isdesktop"></div>
+        <div class="sc-slide__category-stanchions-04-prev swiper-button-prev isdesktop"></div>
+      </pwa-product-list>
     </section>
 
     <!-- BANNER FOLLOW US -->
-    <section class="sc-banner-tile-info sc-banner-tile-info-facebook sc-container">
-      <div class="sc-banner-tile-info__content">
-        <div class="sc-banner-tile-info-text-container">
-          <span class="sc-banner-tile-info__text">
-            FOLLOW US ON
-          </span>
-        </div>
-        <span class="sc-banner-tile-info__text sc-banner-tile-info__text--darkblue">
-          FACEBOOK
-        </span>
-      </div>
+    <section class="sc-banner-tile-info sc-banner-tile-info-facebook sc-container isdesktop">
+      <figure class="sc-banner-banner-info__content">
+        <img pwa-src="follow-us-banner">
+      </figure>
+    </section>
+
+    <section class="sc-title-social-icons__mobile ismobile">
+      <h1 class="sc-title-social-icons-mobile">FOLLOW US ON</h1>
     </section>
 
     <!-- REDES SOCIAIS -->
@@ -702,7 +364,7 @@
       <div class="sc-social-big__content">
         <article class="sc-social-big__item">
           <a href="#" class="sc-social-big__background-image sc-social__facebook">
-            <span class="fa fa-facebook-square sc-social-big__icon"></span>
+            <span class="fab fa-facebook-square sc-social-big__icon"></span>
             <!-- <img pwa-src="social-facebook" alt="Facebook"> -->
           </a>
           <p class="sc-social-big__text">Facebook</p>
@@ -710,7 +372,7 @@
 
         <article class="sc-social-big__item">
           <a href="#" class="sc-social-big__background-image sc-social__instagram">
-            <span class="fa fa-instagram sc-social-big__icon"></span>
+            <span class="fab fa-instagram sc-social-big__icon"></span>
             <!-- <img pwa-src="social-instagram" alt="Instagram"> -->
           </a>
           <p class="sc-social-big__text">Instagram</p>
@@ -718,7 +380,7 @@
 
         <article class="sc-social-big__item">
           <a href="#" class="sc-social-big__background-image sc-social__youtube">
-            <span class="fa fa-youtube-play sc-social-big__icon"></span>
+            <span class="fab fa-youtube sc-social-big__icon"></span>
             <!-- <img pwa-src="social-youtube" alt="Youtube"> -->
           </a>
           <p class="sc-social-big__text">Youtube</p>
@@ -726,7 +388,7 @@
 
         <article class="sc-social-big__item">
           <a href="#" class="sc-social-big__background-image sc-social__linkedin">
-            <span class="fa fa-linkedin-square sc-social-big__icon"></span>
+            <span class="fab fa-linkedin sc-social-big__icon"></span>
             <!--  <img pwa-src="social-linkedin" alt="Linkedin"> -->
           </a>
           <p class="sc-social-big__text">Linkedin</p>
@@ -743,13 +405,25 @@
             Plus Free Shipping
           </h1>
           <p>
-            <br/>
-            Crowd control stanchion ropes and posts are the ideal method of directing pedestrian foot traffic and organizing lines for service. Sonco offers several types of rope stanchions and retractable-belt stanchion posts in a wide range of materials, colors, and finishes. The variety of choices and freedom to customize without limits make stanchion products from Sonco ideal for any industry, from hospitality and retail to sports and events. Easily find the items that fit your exact needs, enjoy the best prices on the market, and get it all shipped to you for free. The most exciting aspect of a Sonco stanchion is the versatility. Here, stanchion and posts are developed for specific purposes, from outdoor longevity to adaptable, retractable indoor belt barriers. The various accessories include custom signs, literature holders, custom printed wraps, and carts for easier transportation and storage. It’s all under one roof at Sonco, with products made in American factories as well as in-house design and printing teams and a host of industry experts. For deals going on right now, call us today at (888) 766-2615.
+            <br />
+            Crowd control stanchion ropes and posts are the ideal method of directing pedestrian foot
+            traffic and organizing lines for service. Sonco offers several types of rope stanchions and
+            retractable-belt stanchion posts in a wide range of materials, colors, and finishes. The variety
+            of choices and freedom to customize without limits make stanchion products from Sonco ideal for
+            any industry, from hospitality and retail to sports and events. Easily find the items that fit
+            your exact needs, enjoy the best prices on the market, and get it all shipped to you for free.
+            The most exciting aspect of a Sonco stanchion is the versatility. Here, stanchion and posts are
+            developed for specific purposes, from outdoor longevity to adaptable, retractable indoor belt
+            barriers. The various accessories include custom signs, literature holders, custom printed
+            wraps, and carts for easier transportation and storage. It’s all under one roof at Sonco, with
+            products made in American factories as well as in-house design and printing teams and a host of
+            industry experts. For deals going on right now, call us today at (888) 766-2615.
           </p>
         </article>
 
         <article class="sc-industrial-category__description">
-          <iframe src="https://player.vimeo.com/video/329377625" height="315" frameborder="0" allowfullscreen="" style="width:100%;"></iframe>
+          <iframe src="https://player.vimeo.com/video/329377625" height="315" frameborder="0" allowfullscreen=""
+            style="width:100%;"></iframe>
         </article>
       </div>
     </section>
