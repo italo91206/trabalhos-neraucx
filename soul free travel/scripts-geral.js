@@ -93,4 +93,22 @@ window.onload = function(){
 
     jQuery("#input_st_phone").mask('+000 (00) 00000-0000');
     jQuery("#telephone-8962").mask('+000 (00) 00000-0000');
+
+
+    // ========================
+    // para controlar o modal de cadastro
+    // ========================
+
+    var modalCadastro = document.getElementById('st-register-form');
+    var botaoCadastro = document.getElementsByClassName('signup-item');
+    botaoCadastro = botaoCadastro[0];
+
+    botaoCadastro.addEventListener("click", function(){
+        if(!modalCadastro.classList.contains('ativo'))
+            modalCadastro.classList.add('ativo');
+        else
+            modalCadastro.classList.remove('ativo');
+    })
+    
+
 }

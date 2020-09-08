@@ -117,6 +117,7 @@ li.vc_tta-tab.vc_active {
 	padding: 0px;
 }
 
+
 /* .vc_item {
 	width: 33.3333% !important;
 	height: 877px !important;
@@ -523,6 +524,12 @@ div#about-us-text {
 }
 
 @media(max-width: 425px) {
+	a.float {
+		bottom: 140px !important;
+	}
+	.xoo-wsc-basket {	
+		bottom: 60px !important;
+	}
 	#social-menu-list-item {
 		display: block !important;
 	}
@@ -1160,7 +1167,7 @@ li#social-menu-list-item .fa {
 }
 
 .modal.modal-aberto {
-	display: block !important;
+	display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -1469,13 +1476,17 @@ span.icon-hiking {
 	padding-top: 8px;
 }
 
-#covid-19-bar a:active, #covid-19-bar a:focus, #covid-19-bar a:hover, #covid-19-bar a:visited, #covid-19-bar a {
-    text-decoration: none;
-    color: unset;
+#covid-19-bar a:active,
+#covid-19-bar a:focus,
+#covid-19-bar a:hover,
+#covid-19-bar a:visited,
+#covid-19-bar a {
+	text-decoration: none;
+	color: unset;
 }
 
 .footer-icons {
-    margin-top: -20px;
+	margin-top: -20px;
 }
 
 
@@ -1483,54 +1494,52 @@ span.icon-hiking {
 parte arrumada dos reviews
 ===================== */
 
-@media(max-width: 768px){
-    .tc-testimonial-style15{
-        display: flex !important;
-        flex-wrap: wrap;
-    }
-    .testi-footer {
-        flex: 0 0 100%;
-        max-width: 100% !important;
-        width: 100% !important;
-        float: unset !IMPORTANT;
-    }
-
-    .tc-testimonial-style15 .testi-desc {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        display: block !important;
-        float: unset !important;
+@media(max-width: 768px) {
+	.tc-testimonial-style15 {
+		display: flex !important;
+		flex-wrap: wrap;
 	}
-	
-    .tc-testimonial-style15 .testi-ratings {
-        left: 0px;
-        top: 56px;
-    }
-}
-
-
-@media(max-width: 425px){
-    .tc-testimonial-style15 .testi-publish-date{
-        margin-left: 0px;
+	.testi-footer {
+		flex: 0 0 100%;
+		max-width: 100% !important;
+		width: 100% !important;
+		float: unset !IMPORTANT;
 	}
-	.tc-testimonial-style15{
-        padding: 0px;
-    }
+	.tc-testimonial-style15 .testi-desc {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+		width: 100% !important;
+		display: block !important;
+		float: unset !important;
+	}
+	.tc-testimonial-style15 .testi-ratings {
+		left: 0px;
+		top: 56px;
+	}
 }
 
-@media (max-width: 768px){
-    a.share-item.social-share i.input-icon.field-icon.fa {
-        padding-left: unset;
-    }
+@media(max-width: 425px) {
+	.tc-testimonial-style15 .testi-publish-date {
+		margin-left: 0px;
+	}
+	.tc-testimonial-style15 {
+		padding: 0px;
+	}
 }
+
+@media (max-width: 768px) {
+	a.share-item.social-share i.input-icon.field-icon.fa {
+		padding-left: unset;
+	}
+}
+
 
 /* =================
 formulário do /login
 ================= */
 
 .um-8963.um {
-    max-width: unset;
+	max-width: unset;
 }
 
 
@@ -1539,44 +1548,75 @@ parte do tour search result
 =================== */
 
 .full-row .vc_images_carousel .vc_carousel-control.vc_right {
-    left: auto !important;
+	left: auto !important;
 }
 
 .search-result-page .search-form-wrapper {
-    background-color: rgb(46, 83, 164);
+	background-color: rgb(46, 83, 164);
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
 	.search-form form {
-		 background-color: unset !important;
-		 box-shadow: none !important;
-	 }
- 
-	 .search-form {
-		 box-shadow: none !important;
-	 }
- 
-	 .st-search-form-tour .tour-search-form-home .search-form .form .form-button-new .btn-search {
-		 background: rgb(194, 21, 27);
-	 } 
-	 .st-render {
-		 margin-top: 10px;
-	 }
- }
-@media(max-width: 768px){
+		background-color: unset !important;
+		box-shadow: none !important;
+	}
+	.search-form {
+		box-shadow: none !important;
+	}
+	.st-search-form-tour .tour-search-form-home .search-form .form .form-button-new .btn-search {
+		background: rgb(194, 21, 27);
+	}
+	.st-render {
+		margin-top: 10px;
+	}
+	
+}
+
+@media(max-width: 768px) {
+	a.float {
+		bottom: 70px;
+	}
+	.xoo-wsc-basket {
+		bottom: 60px;
+	}
 	.search-result-page.style-2 .tour-top-search {
 		margin-top: 0;
 	}
 }
 
 .form-row-wide {
-    width: 100% !important;
+	width: 100% !important;
 }
 
 .st-woo-checkout-form .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row#billing_address_1_field {
-    clear: unset !important;
+	clear: unset !important;
+}
+
+.xoo-wsc-basket {
+	bottom: 30px;
+}
+
+a.float{
+	height: 40px !important;
+	width: 40px !important;  
+	left: auto !important;
+	right: 40px !important;
+	bottom: 100px ;  
+}   
+
+a.float i.fa.fa-whatsapp{
+	padding-top: 0px !important;
 }
 
 .xoo-wsc-basket{
-	bottom: 30px;
+	padding: 4px !important;
+}
+
+
+div#st-register-form.ativo {
+    display: block !important;
+}
+
+.modal .modal-content .modal-body .advanced {
+    display: none;
 }
