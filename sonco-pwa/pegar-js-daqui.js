@@ -1,80 +1,5 @@
-
-// =============
-// Loose JS from home_blog_posts
-// =============
-
-/* require([
-    'jquery'
-], function (jQuery) {
-    jQuery(document).ready(function ($) {
-        if (jQuery('#last_container')) {
-            jQuery.get('https://safetysticklers.com/wp-json/wp/v2/posts', function (data, status) {
-                var posts = data;
-                if (posts[0]) {
-                    var last = posts[0];
-                    jQuery('#last_container').append(`<div class="post">
-        <img src="" id="featured`+ last.id + `" alt="" class="featured" />
-        <div id="title" class="title">`+ last.title.rendered + `</div>
-        <div id="content" class="content">`+ last.excerpt.rendered + `</div>
-        <div class="action">
-        <a href="`+ last.link + `" target="_blank" class="see_more">See more</a>
-        </div>
-    </div>
-    `);
-                    jQuery.get(last._links['wp:featuredmedia'][0].href, function (mediaData, status) {
-                        jQuery('#featured' + last.id).attr('src', mediaData.source_url);
-                    });
-                }
-
-                for (var i = 1; i <= 4; i++) {
-                    if (posts[i]) {
-                        var post = posts[i];
-                        loadPost(post);
-                    }
-                }
-            });
-        }
-        function loadPost(post) {
-            jQuery('#recent_container').append(`<div class="post">
-<img src="" id="featured`+ post.id + `" alt="" class="featured" />
-<div id="title" class="title">`+ post.title.rendered + `</div>
-<div id="content" class="content">`+ post.excerpt.rendered + `</div>
-<div class="action">
-    <a href="`+ post.link + `" target="_blank" class="see_more">See more</a>
-</div>
-</div>
-`);
-            jQuery.get(post._links['wp:featuredmedia'][0].href, function (mediaData, status) {
-                jQuery('#featured' + post.id).attr('src', mediaData.source_url);
-            });
-        }
-    });
-});*/
-
-// =============
-// Loose JS from new home sonco
-// =============
-
-/* require([
-    'jquery'
-], function (jQuery) {
-    jQuery(document).ready(function ($) {
-        if (jQuery('#last_container_new_sonco')) {
-            jQuery.get('https://safetysticklers.com/wp-json/wp/v2/posts', function (data, status) {
-                var posts = data;
-                if (posts[0]) {
-                    var last = posts[0];
-                    var html = '<div class="post"><div id="content" class="content">' + last.excerpt.rendered;
-                    html = html + '<' + '/div><div class="action"><a href="' + last.link;
-                    html = html + '" target="_blank" class="see_more">View More <i class="fa fa-chevron-right"><' + '/i><' + '/a><' + '/div><' + '/div>';
-                    jQuery('#last_container_new_sonco').append(html);
-                }
-            });
-        }
-    });
-}); */
-
 require(['jquery', 'jquery/ui'], function ($) {
+
     /** ========= TRANSITION FOR DO BANNER ============== **/
     jQuery('document').ready(function () {
         addTransitionFor();
@@ -82,12 +7,9 @@ require(['jquery', 'jquery/ui'], function ($) {
             spanTransitionMobile(10, 2000);
         else
             spanTransitionDesktop(11, 2000);
-
-
     });
 
     function spanTransitionDesktop(position, timer) {
-
         setTimeout(function () {
             addTransitionFor();
             jQuery('.forrepetition').css({ "transform": "translateY(-" + position + "%)" });
@@ -109,19 +31,13 @@ require(['jquery', 'jquery/ui'], function ($) {
             }
 
         }, timer);
-
-
     }
 
     function spanTransitionMobile(position, timer) {
-
         setTimeout(function () {
             addTransitionFor();
             jQuery('.forrepetition').css({ "transform": "translateY(-" + position + "%)" });
-
             position += 10;
-
-
             if (position >= 90) {
                 setTimeout(function () {
                     removeTransitionFor();
@@ -130,15 +46,14 @@ require(['jquery', 'jquery/ui'], function ($) {
                 }, 500);
             } else {
                 spanTransitionMobile(position, 2000);
-
             }
-
         }, timer);
     }
 
     function addTransitionFor() {
         jQuery('.forrepetition').addClass('transition-for');
     }
+
     function removeTransitionFor() {
         jQuery('.forrepetition').removeClass('transition-for');
     }
@@ -166,6 +81,7 @@ require(['jquery', 'jquery/ui'], function ($) {
     var position_slider = 800;
     var qtd_cliques = 1;
     var wait = 0;
+    
     jQuery(document).ready(function () {
         removeTransition();
         jQuery('.column-slider-shop').append(jQuery('.firsts-sliders-shopby').clone().removeClass('firsts-sliders-shopby'));
@@ -285,14 +201,10 @@ require(['jquery', 'jquery/ui'], function ($) {
         jQuery('.circulos_ .cmd-bullet').removeClass('active-overcircle');
         jQuery(element).addClass('active-overcircle');
         for (var i = 0; i < jQuery('.circulos_').children().length && continue_ == true; i++) {
-
-
-
             if (element == jQuery('.circulos_').children()[i]) {
                 continue_ = false;
                 key_ = i;
             }
-
         }
 
         if (key_ >= 0) {
@@ -390,7 +302,6 @@ require(['jquery', 'jquery/ui'], function ($) {
     };
 
     jQuery(document).ready(function () {
-
         jQuery('.circulos_ .cmd-bullet .circle_bar').addClass('less-circle');
         var element = jQuery(jQuery('.circulos_').children()[0]).children()[0];
         jQuery(element).removeClass('less-circle');
@@ -399,10 +310,12 @@ require(['jquery', 'jquery/ui'], function ($) {
         //makeTransitionContent(jQuery('.circulos_').children()[0]); 
         timeout_transitions(1);
     });
+
     function removeTransitionBullet() {
         jQuery('.circulos_').removeClass('transition-option');
         jQuery('.circle_bar').addClass('withoutransition');
     }
+    
     function addTransitionBullet() {
         jQuery('.circulos_').addClass('transition-option');
         jQuery('.circle_bar').removeClass('withoutransition');

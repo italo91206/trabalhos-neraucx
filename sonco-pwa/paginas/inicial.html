@@ -18,123 +18,407 @@
 	</section>
 
 	<!-- SECTION ICONS TOP HOME -->
-	<section class="sc-icons-top__home sc-container">
+	<section class="sc-icons-top__home sc-container" pwa-hook="bulletsAnimation">
 		<article class="sc-icon__content">
-			<div class="sc-dashedline">
-				<figure class="sc-icon-top">
-					<img class="sc-img-barricades" pwa-src="icon-barricades" alt="Icone Barricades">
-				</figure>
-			</div>
-			<p>Barricades</p>
+			<div id="one-circle" class="circle_bar firstimgcircle dashedline pass-left">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle" data-anim="base left"></div>
+                    <div class="circle" data-anim="base right"></div>
+                </div>
+
+                <div class="image-content">
+                    <span class="icon-sc-ico-fence-solutions"></span>
+                </div>
+
+                <div class="over-content">
+                    <div class="overcircle"></div>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="w-100 title-icons barricades-bullet">
+                <span class="text-icons">Barricades</span>
+            </div>
 		</article>
 
 		<article class="sc-icon__content">
-			<div class="sc-dashedline">
-				<figure class="sc-icon-top">
-					<img class="sc-img-custom" pwa-src="icon-custom" alt="Icone Custom">
-				</figure>
-			</div>
-			<p>Custom Sigs</p>
+			<div class="circle_bar circle_bar_margin middle_circle dashedline less-circle pass-left" id="second-circle">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle" data-anim="base left"></div>
+                    <div class="circle" data-anim="base right"></div>
+                </div>
+
+                <div class="image-content">
+                    <span class="icon-sc-ico-custom-signs"></span>
+                </div>
+
+                <div class="over-content">
+                    <div class="overcircle"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="w-100 title-icons">
+                <span class="text-icons">Custom Signs</span>
+            </div>
 		</article>
 
 		<article class="sc-icon__content">
-			<div class="sc-dashedline">
-				<figure class="sc-icon-top">
-					<img class="sc-icon-fence" pwa-src="icon-fence" alt="Icone Fence">
-				</figure>
-			</div>
-			<p>Fence Solutions</p>
+			<div class="circle_bar circle_bar_margin middle_circle dashedline less-circle pass-left" id="third-circle">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle" data-anim="base left"></div>
+                    <div class="circle" data-anim="base right"></div>
+                </div>
+
+                <div class="image-content">
+                    <span class="icon-sc-ico-fence-solutions-1"></span>
+                </div>
+
+                <div class="over-content">
+                    <div class="overcircle"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="w-100 title-icons">
+                <span class="text-icons">Fence Solutions</span>
+            </div>
 		</article>
 
 		<article class="sc-icon__content">
-			<div class="sc-dashedline">
-				<figure class="sc-icon-top">
-					<img class="sc-icon-stanchions" pwa-src="icon-stanchions" alt="Icone Stanchions">
-				</figure>
-			</div>
-			<p>Stanchions & Posts</p>
+			<div class="circle_bar circle_bar_margin middle_circle dashedline less-circle pass-left" id="fourth-circle">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle" data-anim="base left"></div>
+                    <div class="circle" data-anim="base right"></div>
+                </div>
+
+                <div class="image-content">
+                    <span class="icon-sc-ico-stanchions"></span>
+                </div>
+
+                <div class="over-content">
+                    <div class="overcircle"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="w-100 title-icons stanchion-bullet">
+                <span class="text-icons">Stanchions & Posts</span>
+            </div>
 		</article>
 
 		<article class="sc-icon__content">
-			<figure class="sc-icon-top">
-				<img class="sc-icon-traffic" pwa-src="icon-traffic" alt="Icone Barricades">
-			</figure>
-			<p>Traffic Safety</p>
+			<div class="circle_bar circle_bar_margin middle_circle dashedline less-circle pass-left" id="fifth-circle">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle" data-anim="base left"></div>
+                    <div class="circle" data-anim="base right"></div>
+                </div>
+
+                <div class="image-content">
+                    <span class="icon-sc-ico-traffic-safety"></span>
+                </div>
+
+                <div class="over-content">
+                    <div class="overcircle"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="w-100 title-icons">
+                <span class="text-icons">Traffic Safety</span>
+            </div>
 		</article>
 	</section>
 
 	<!-- CAROUSEL HOME 1 -->
-	<section class="sc-slide__home-01 sc-container">
-		<div class="swiper-container" id="sc-slide__home-01" pwa-hook="sc-slide__home-01">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<a pwa-to-page="barricades">
-						<img pwa-src="banner-home-slide-01" alt="Banner 01">
-					</a>
-				</div>
-			</div>
-		</div>
-		<!-- Add Arrows -->
-		<div class="sc-slide__home-01-next swiper-button-next sc-border-buttom sc-size-buttom"></div>
-		<div class="sc-slide__home-01-prev swiper-button-prev sc-border-buttom sc-size-buttom"></div>
+	<section class="sc-relative" id="sc-bullets-slider">
+        <div class="sc-slide__home-01-next swiper-button-next sc-border-buttom sc-size-buttom"></div>
+        <div class="sc-slide__home-01-prev swiper-button-prev sc-border-buttom sc-size-buttom"></div>
+        
+        <section class="content-bullet-0 content-block-bullet active-content-bullet desktop-home">
+            <div class="banner_container sc-container sc-novo-container">
+                <div class="sc-container sc-novo-container">
+                    <a href="/category-barricades">
+                        <div class="banner-title">
+                            <h3>MEETING THE TOUGHEST DEMANDS</h3>
+                            <p>Sonco Perimeter Security, pioneering crowd control products since 1976.</p>
+                        </div>
+                        <img pwa-src="home-barricades-banner" alt="Banner Barricades" class="banner-image" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="sc-container sc-novo-container sc-flex">
+                <article>
+                    <a pwa-to-page="/barricades/steel-barricades">
+                        <img pwa-src="home-steel-barricades" alt="Steel barricades" />
+                        <h3>Steel barricades</h3>
+                        <p>Classic crowd<br> control barriers</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/barricades/stage-barriers">
+                        <img pwa-src="home-stage-barriers" alt="Stage Barries" class="stage-barriers-image" />
+                        <h3 class="title-bullet title-stage-barriers">Stage Barriers</h3>
+                        <p class="subtitle-bullet">Durable aluminum<br> concert barriers</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/barricades/water-filled-barriers">
+                        <img pwa-src="home-traffic-barricades" alt="Water Barrier" />
+                        <h3 class="title-bullet">Traffic Barricades</h3>
+                        <p class="subtitle-bullet">Portable water filled<br> jersey-style barriers</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/barricades/plastic-barricades">
+                        <img pwa-src="home-plastic-barricades" alt="Plastic Barricades" />
+                        <h3 class="title-bullet">Plastic Barricades</h3>
+                        <p class="subtitle-bullet">Lightweight barriers available<br> in multiple color options</p>
+                    </a>
+                </article>
+
+            </div>
+
+            <div class="sc-container sc-novo-container">
+                <a pwa-to-page="/category-barricades">
+                    <button class="sc-red-button"> View all</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-bullet-1  content-block-bullet desktop-home">
+            <div class="banner_container sc-container sc-novo-container">
+                <div class="container">
+                    <a href="/category-custom-signs">
+                        <div class="banner-title">
+                            <h3>BUILT TO STAND OUT FROM THE CROWD</h3>
+                            <p>Create new streams of revenue or raise brand awareness with custom signs for fencing,
+                                event tents, and crowd control signage.</p>
+                        </div>
+                        <img pwa-src="home-custom-signs-banner" alt="Custom Signs" class="banner-image" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="sc-container sc-novo-container sc-flex">
+                <article>
+                    <a pwa-to-page="/custom-signs/barricade-covers">
+                        <img pwa-src="home-barricade-covers" alt="Barricade Covers" />
+                        <h3>Barricade covers</h3>
+                        <p>Full-color jackets turn your<br/>barriers into billboards</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/custom-signs/custom-fence-screen">
+                        <img pwa-src="home-fence-wraps" alt="Custom Fence Screen" />
+                        <h3>Fence Wraps</h3>
+                        <p>Advertise & monetize on</br>custom printed screens.</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/custom-signs/custom-stage-signs">
+                        <img pwa-src="home-stage-scrims"alt="Custom Stage Scrim" />
+                        <h3>Stage Scrims</h3>
+                        <p>Vibrant graphics printed on<br/>high-quality fabrics</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/custom-signs/outdoor-display">
+                        <img pwa-src="home-outdoor-displays" alt="Outdoor Displays" />
+                        <h3>Outdoor displays</h3>
+                        <p>Fantastic displays for both<br/>indoor and outdoor events</p>
+                    </a>
+                </article>
+            </div>
+            
+            <div class="sc-container sc-novo-container">
+                <a pwa-to-page="/category-custom-signs">
+                    <button class="sc-button-red" style="margin-top: 5px"> View all</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-bullet-2  content-block-bullet desktop-home">
+            <div class="banner_container sc-container sc-novo-container">
+                <div class="sc-container sc-novo-container">
+                    <a pwa-to-page="/fence-solutions">
+                        <div class="banner-title">
+                            <h3>PERIMETER SECURITY LEADERS SINCE 1976</h3>
+                            <p>Experts turn to Sonco’s long-standing knowledge in fence manufacturing to get the job
+                                done right.</p>
+                        </div>
+                        <img pwa-src="home-fence-solutions-banner" alt="Fence Solutions" class="banner-image" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="sc-container sc-novo-container sc-flex">
+                <article>
+                    <a pwa-to-page="/fence-solutions/temporary-fence-panels">
+                        <img pwa-src="home-temporary-fence-panels" alt="Fence Panels" />
+                        <h3>Temporary fence panels</h3>
+                        <p>Increase job site security with<br/>portable fences</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/fence-solutions/construction-fence-screen">
+                        <img pwa-src="home-construction-windscreens" alt="Fence Screen" />
+                        <h3>Construction Windscreens</h3>
+                        <p>Easy to install, store and<br/>transport privacy screens</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/fence-solutions/safety-signs">
+                        <img pwa-src="home-safety-signs" alt="Safety Signs" />
+                        <h3>Safety Signs</h3>
+                        <p>Improve job site safety &amp;<br/>reduce accidents</p>
+                    </a>
+                </article>
+
+
+                <article>
+                    <a pwa-to-page="/fence-solutions/custom-fence-screen">
+                        <img pwa-src="home-custom-fence-screens" alt="Custom Fence" />
+                        <h3>Custom fence screens</h3>
+                        <p>Fence wraps to promote your<br/>brand & projects</p>
+                    </a>
+                </article>
+            </div>
+
+            <div class="sc-container sc-novo-container">
+                <a pwa-to-page="/fence-solutions">
+                    <button class="sc-button-red"> View all</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-bullet-3 content-block-bullet desktop-home">
+            <div class="banner_container sc-container sc-novo-container">
+                <div class="container">
+                    <a pwa-to-page="/category-stanchions">
+                        <div class="banner-title">
+                            <h3>SPEED CUSTOMER FLOW</h3>
+                            <p>Custom stanchions and posts from Sonic make it easy to manage foot traffic and lines
+                                at airports, theatres, malls, banks, museums, and stores.</p>
+                        </div>
+                        <img pwa-src="home-stanchions-and-posts-banner" alt="Stanchions Psts" class="banner-image" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="sc-container sc-novo-container">
+                <article>
+                    <a pwa-to-page="/stanchions/retractable-belt-barriers">
+                        <img pwa-src="home-belt-barriers" alt="Retractable Belt Barries" />
+                        <h3>Retractable belt barriers</h3>
+                        <p>Best for waiting<br> line management</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/stanchions/classic-rope-and-stanchion-systems">
+                        <img pwa-src="home-stanchion-posts" alt="Classic Stanchions" />
+                        <h3>Stanchion Posts</h3>
+                        <p>Elevated queue<br> management options</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/stanchions/retractable-wall-mounts">
+                        <img pwa-src="home-wall-mount-belts" alt="Retractable Wall Mounts" />
+                        <h3>Wall-Mount Belts</h3>
+                        <p>Post-free retractable<br> belt barrier mounts</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/stanchions/accessories-and-merchandising">
+                        <img pwa-src="home-merchandising" alt="Accessories & Merchandising" />
+                        <h3>Add-Ons & Merchandising</h3>
+                        <p>Increase sales &amp;<br> customer satisfaction</p>
+                    </a>
+                </article>
+            </div>
+            
+            <div class="sc-container sc-novo-container">
+                <a pwa-to-page="/category-stanchions">
+                    <button class="sc-button-red"> View all</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="content-bullet-4 content-block-bullet desktop-home">
+            <div class="banner_container sc-container sc-novo-container">
+                <div class="container">
+                    <a pwa-to-page="/traffic-safety">
+                        <div class="banner-title">
+                            <h3>INCREASE VISIBILITY & SAFETY</h3>
+                            <p>Find the most effective traffic safety products for construction and road repair at
+                                Sonco.</p>
+                        </div>
+                        <img pwa-src="home-traffic-safety-banner" alt="Traffic Safety" class="banner-image" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="container sc-container sc-novo-container">                
+                <article>
+                    <a pwa-to-page="/traffic-safety/traffic-barricades-and-barriers">
+                        <img pwa-src="home-water-barriers" alt="Water Barrier" />
+                        <h3>Water Barriers</h3>
+                        <p>Road work traffic<br> safety barriers</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/traffic-safety/channelizer-drums">
+                        <img pwa-src="home-chanelizer-drums" alt="Plastic Drums" />
+                        <h3>Channelizer Drums </h3>
+                        <p>Increase road work<br> traffic safety</p>
+                    </a>
+                </article>
+
+                <article>
+                    <a pwa-to-page="/traffic-safety/traffic-cones-and-delineators">
+                        <img pwa-src="home-traffic-delineators" alt="Traffic Cones & Delineators" />
+                        <h3>Traffic delineators</h3>
+                        <p>Best for perimeter safety<br> with large traffic</p>
+                    </a>
+                </article>
+                
+                <article>
+                    <a pwa-to-page="/traffic-safety/construction-signs">
+                        <img pwa-src="home-construction-signs" alt="Construction Signs" />
+                        <h3>Construction signs</h3>
+                        <p>Road work traffic<br> safety signs</p>
+                    </a>
+                </article>                
+            </div>
+
+            <div class="sc-container sc-novo-container">
+                <a href="/category-traffic-safety">
+                    <button class="sc-button-red"> View all</button>
+                </a>
+            </div>
+        </section>
 	</section>
 
 	<!-- SECTION SC-CONTAINER -->
 	<section class="sc-home-page sc-container">
-		<!-- SECTION BARICADES -->
-		<section class="sc-barricades-products">
-			<section class="sc-barricades-products__content">
-				<article class="sc-barricades__article">
-					<a pwa-to-page="barricades/steel-barricades">
-						<figure class="sc-barricades__image">
-							<img pwa-src="steel_barricades-home" alt="img-barricades">
-						</figure>
-
-						<h1>Steel Barricades</h1>
-						<p>Classic crowd<br>control barriers</p>
-					</a>
-				</article>
-
-				<article class="sc-barricades__article">
-					<a pwa-to-page="barricades/stage-barriers">
-
-						<figure class="sc-barricades__image">
-							<img pwa-src="stage_barries-home" alt="img-barricades">
-						</figure>
-
-						<h1>Stage Barrier</h1>
-						<p>Durable aluminum<br>concert barriers</p>
-					</a>
-				</article>
-
-				<article class="sc-barricades__article">
-					<a pwa-to-page="barricades/water-filled-barriers">
-						<figure class="sc-barricades__image">
-							<img pwa-src="plastic-barricades" alt="img-barricades">
-						</figure>
-
-						<h1>Water Barrier</h1>
-						<p>Durable aluminum<br>concert barriers</p>
-					</a>
-				</article>
-
-				<article class="sc-barricades__article">
-					<a pwa-to-page="barricades/plastic-barricades">
-						<figure class="sc-barricades__image">
-							<img pwa-src="plastic-barricades" alt="img-barricades">
-						</figure>
-
-						<h1>Plastic Barricades</h1>
-						<p>Durable aluminum<br>concert barriers</p>
-					</a>
-				</article>
-			</section>
-
-			<div class="sc-buttom-view__barricades">
-				<a pwa-to-page="barricades">view all</a>
-			</div>
-		</section>
-
 		<!-- PAY LATER BANNER -->
 		<figure class="sc-paylater-banner">
 			<a pwa-to-page="buy-now-pay-later">
