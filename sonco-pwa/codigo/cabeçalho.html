@@ -1,10 +1,14 @@
-<header class="sc-header">
+<header pwa-class="{ 'sc-header-home': $route.name === 'home' ? true : false , 'sc-header-not-home': $route.name != 'home' ? true : false }">
+
 	<div id="sc-cart__darken" class="sc-cart__darken" style=""></div>
   
   <!-- BANNER GIF -->
-	<figure class="sc-header-banner sc-container isdesktop">
-		<a pwa-to-page="/our-commitment"><img pwa-src="top_banner" alt="Banner Sonco reopen"></a>
-	</figure>
+	<section class="sc-header-banner sc-container isdesktop">
+    <a pwa-to-page="/our-commitment" class="sc-flex">
+      <h2>Helping America Reopen</h2>
+      <article><h3>The new Normal Product Series</h3></article>
+    </a>
+  </section>
 
   <div id="sc-about-top" class="isdesktop" pwa-hook="ativadorTopBar" >
     <div class="sc-about_box_full">
@@ -104,16 +108,16 @@
 	<!-- SECTION HEADER CONTENT DESKTOP -->
 	<section class="sc-header-content sc-container">
 		<div class="sc-header-contact isdesktop">
-			<strong class="sc-header-contact__phone">Contact Us (888) 766-2615</strong>
-			<strong class="sc-header-contact__about">About Us</strong>
+			<strong class="sc-header-contact__phone"><span class="fas fa-phone-alt"></span>(888) 766-2615</strong>
+			<strong class="sc-header-contact__about">About Sonco<span class="fas fa-angle-up"></span></strong>
 		</div>
 
 		<div class="sc-header-content-inner" id="sc-header-content-inner">
 			<div class="sc-header-logos isdesktop">
-				<a pwa-to-page="/home">
-					<img pwa-src="logo-sonco" alt="Logo Sonco" class="sc-header-logos--sonco">
-                </a>
-				<img pwa-src="est-1976" alt="est-1976" class="sc-header-logos--est">
+				<a pwa-to-page="/">
+					<img pwa-src="logo-sonco-alt" alt="Logo Sonco" class="sc-header-logos--sonco">
+        </a>
+				<img pwa-src="est-1976-alt" alt="est-1976" class="sc-header-logos--est">
 			</div>
 
 			<pwa-search-form action="#" class="sc-search">
@@ -177,8 +181,7 @@
 			<!-- OUR PRODUCTS -->
 			<li class="sc-top-nav__item sc-top-nav__item--categories">
 				<a class="sc-top-nav__link" onclick="openSubMenuMobile(this)">
-					<span class="sc-top-nav__span">Our</span>
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Products</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Our Products<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<!-- MENU CONTENT -->
@@ -1078,8 +1081,7 @@
 			<!-- SHOP BY -->
 			<li class="sc-top-nav__item sc-top-nav__item--shopby">
 				<a href="" class="sc-top-nav__link">
-					<span class="sc-top-nav__span">Shop by</span>
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Application</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Shop by Application<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<section class="sc-applications-menu" id="sc-applications-menu">
@@ -1172,7 +1174,7 @@
 			<!-- WHY SONCO -->
 			<li class="sc-top-nav__item sc-top-nav__item--why-sonco">
 				<a href="" class="sc-top-nav__link">
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Why Sonco</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Why Sonco<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<section id="sc-why-sonco-menu">
@@ -1190,7 +1192,7 @@
 			<!-- SUPPORT -->
 			<li class="sc-top-nav__item sc-top-nav__item--support">
 				<a href="" class="sc-top-nav__link">
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Support</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Support<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<section id="sc-support-menu">
@@ -1208,7 +1210,7 @@
 			<!-- RESOURCES -->
 			<li class="sc-top-nav__item sc-top-nav__item--resources">
 				<a href="" class="sc-top-nav__link">
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Resources</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Resources<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<section id="sc-resources-menu">
@@ -1223,7 +1225,7 @@
 			<!-- REOPEN -->
 			<li class="sc-top-nav__item sc-top-nav__item--reopen">
 				<a href="" class="sc-top-nav__link">
-					<span class="sc-top-nav__span sc-top-nav__span--bold">Reopen</span>
+					<p class="sc-top-nav__span sc-top-nav__span--bold">Reopen<span class="fas fa-angle-down"></span></p>
 				</a>
 
 				<section id="sc-reopen-menu">
