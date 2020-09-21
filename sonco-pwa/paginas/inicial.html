@@ -1,12 +1,14 @@
 <main id="sc-home">
-	
 	<!-- SECTION BANNER 1 -->
 	<section class="sc-banner-home">
 		<section class="sc-videomain">
 			<div class="sc-video-vimeo">
 				<iframe loading="lazy"
-					src="https://player.vimeo.com/video/384601175?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1"
+					src="https://player.vimeo.com/video/459443070?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1"
 					frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <!-- <iframe loading="lazy"
+					src="https://player.vimeo.com/video/384601175?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1"
+					frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
 			</div>
 		</section>
 
@@ -38,7 +40,7 @@
             <br />
 
             <div class="w-100 title-icons barricades-bullet">
-                <span class="text-icons">Barricades</span>
+                <span class="text-icons">Crowd Control</span>
             </div>
 		</article>
 
@@ -135,8 +137,8 @@
 		</article>
 	</section>
 
-	<!-- CAROUSEL HOME 1 -->
-	<section class="sc-relative" id="sc-bullets-slider">
+	<!-- BULLET SLIDERS -->
+    <section id="sc-bullets-slider" class="sc-relative isdesktop">
         <div class="sc-slide__home-01-next swiper-button-next sc-border-buttom sc-size-buttom"></div>
         <div class="sc-slide__home-01-prev swiper-button-prev sc-border-buttom sc-size-buttom"></div>
         
@@ -188,7 +190,7 @@
 
             </div>
 
-            <div class="sc-container sc-novo-container">
+            <div class="sc-bullet-button sc-container sc-novo-container">
                 <a pwa-to-page="/category-barricades">
                     <button class="sc-red-button"> View all</button>
                 </a>
@@ -243,9 +245,9 @@
                 </article>
             </div>
             
-            <div class="sc-container sc-novo-container">
+            <div class="sc-bullet-button sc-container sc-novo-container">
                 <a pwa-to-page="/category-custom-signs">
-                    <button class="sc-button-red" style="margin-top: 5px"> View all</button>
+                    <button class="sc-red-button" style="margin-top: 5px"> View all</button>
                 </a>
             </div>
         </section>
@@ -299,9 +301,9 @@
                 </article>
             </div>
 
-            <div class="sc-container sc-novo-container">
+            <div class="sc-bullet-button sc-container sc-novo-container">
                 <a pwa-to-page="/fence-solutions">
-                    <button class="sc-button-red"> View all</button>
+                    <button class="sc-red-button"> View all</button>
                 </a>
             </div>
         </section>
@@ -320,7 +322,7 @@
                 </div>
             </div>
 
-            <div class="sc-container sc-novo-container">
+            <div class="sc-container sc-novo-container sc-flex">
                 <article>
                     <a pwa-to-page="/stanchions/retractable-belt-barriers">
                         <img pwa-src="home-belt-barriers" alt="Retractable Belt Barries" />
@@ -354,9 +356,9 @@
                 </article>
             </div>
             
-            <div class="sc-container sc-novo-container">
+            <div class="sc-bullet-button sc-container sc-novo-container">
                 <a pwa-to-page="/category-stanchions">
-                    <button class="sc-button-red"> View all</button>
+                    <button class="sc-red-button"> View all</button>
                 </a>
             </div>
         </section>
@@ -375,7 +377,7 @@
                 </div>
             </div>
 
-            <div class="container sc-container sc-novo-container">                
+            <div class="container sc-container sc-novo-container sc-flex">                
                 <article>
                     <a pwa-to-page="/traffic-safety/traffic-barricades-and-barriers">
                         <img pwa-src="home-water-barriers" alt="Water Barrier" />
@@ -409,9 +411,9 @@
                 </article>                
             </div>
 
-            <div class="sc-container sc-novo-container">
+            <div class="sc-bullet-button sc-container sc-novo-container">
                 <a href="/category-traffic-safety">
-                    <button class="sc-button-red"> View all</button>
+                    <button class="sc-red-button"> View all</button>
                 </a>
             </div>
         </section>
@@ -434,33 +436,54 @@
 
 		<!-- SECTION CARD SHOP BY APPLICATION -->
 		<section class="sc-card-shop">
-			<article class="sc-card-shop__application sc-style-border">
-				<a pwa-to-page="construction">
-					<img pwa-src="construction" alt="card-construction">
-					<p class="sc-border-text__card">construction</p>
-				</a>
-			</article>
-
-			<article class="sc-card-shop__application" id="sc-top-diference-topic">
-				<a pwa-to-page="events">
-					<img pwa-src="events" alt="card-construction">
-					<p>events</p>
-				</a>
-			</article>
-
-			<article class="sc-card-shop__application" id="sc-top-diference-topic-sports-01">
-				<a pwa-to-page="sports">
-					<img pwa-src="sports-01" alt="card-construction">
-					<p class="sc-border-text__card">Sports</p>
-				</a>
-			</article>
-
-			<article class="sc-card-shop__application" id="sc-top-diference-topic-sports-02">
-				<a pwa-to-page="real-estate">
-					<img pwa-src="sports-02" alt="card-construction">
-					<p>Sports</p>
-				</a>
-			</article>
+            <div class="swiper-container" id="sc-slider__industrial-home" pwa-hook="sc-slider__industrial-home">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide">
+                        <a pwa-to-page="construction">
+                            <div><img pwa-src="construction" alt="card-construction" id="sc-card-img-construction"></div>
+                            <div><span>construction</span></div>
+                        </a>
+                    </article>
+        
+                    <article class="swiper-slide">
+                        <a pwa-to-page="events">
+                            <div><img pwa-src="events" alt="card-construction"  id="sc-card-img-events"></div>
+                            <div><span>events</span></div>
+                        </a>
+                    </article>
+        
+                    <article class="swiper-slide">
+                        <a pwa-to-page="sports">
+                            <div><img pwa-src="sc-card-img-venues" alt="card-construction" id="sc-card-img-venues"></div>
+                            <div><span>Venues &amp; Arenas</span></div>
+                        </a>
+                    </article>
+        
+                    <article class="swiper-slide">
+                        <a pwa-to-page="real-estate">
+                            <div><img pwa-src="sc-card-img-public" alt="card-construction" id="sc-card-img-public-sector"></div>
+                            <div><span>Public Sector</span></div>
+                        </a>
+                    </article>
+        
+                    <article class="swiper-slide">
+                        <a pwa-to-page="real-estate">
+                            <div><img pwa-src="sc-card-img-schools" alt="card-construction" id="sc-card-img-schools"></div>
+                            <div><span>Schools</span>  </div>
+                        </a>
+                    </article>
+        
+                    <article class="swiper-slide">
+                        <a pwa-to-page="real-estate">
+                            <div><img pwa-src="sc-card-img-hospitality" alt="card-construction" id="sc-card-img-hospitality"></div>
+                            <div><span>Hospitality</span></div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="sc-slide__industrial-home-next isdesktop"><img pwa-src="set-right" alt=""></div>
+            <div class="sc-slide__industrial-home-prev isdesktop"><img pwa-src="set-left" alt=""></div>
 		</section>
 
 		<!-- BANNER THE HELPING HANG -->
@@ -502,6 +525,8 @@
 			<article class="sc-article-home">
 				<div class="sc-image-article__home">
 					<!-- <img pwa-src="iframe-careers" alt="Image Article"> -->
+                    <!-- <iframe src="https://player.vimeo.com/video/454797559" width="640" height="400" frameborder="0"
+						allow="autoplay; fullscreen" class="stray-iframe" allowfullscreen=""></iframe> -->
 					<iframe src="https://player.vimeo.com/video/331871217" width="640" height="400" frameborder="0"
 						allow="autoplay; fullscreen" class="stray-iframe" allowfullscreen=""></iframe>
 				</div>
