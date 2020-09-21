@@ -64,7 +64,7 @@
                 Since 1976, U.S. industry leader SONCO Worldwide has provided businesses with quality
                 service and steel-strength job site, crowd control and traffic control solutions. We offer construction
                 barriers, fence screen, OSHA signs, traffic barricades, and more, as well as custom-printed products.
-                Shop now or <a href="https://www.soncocrowdcontrol.com/about-us"><span style="text-decoration: underline;">learn more about SONCO.</span></a>
+                Shop now or <a pwa-to-page="/about-us"><span style="text-decoration: underline;">learn more about SONCO.</span></a>
             </p>
         </div>
     </div>
@@ -94,11 +94,11 @@
                     <span class="fas fa-search"></span>
                 </a>
 
-                <a pwa-to-page="/request-a-quote" class="sc-header__content-mobile-calculator">
+                <a  pwa-toggle-second-cart class="sc-header__content-mobile-calculator">
                     <span class="fas fa-calculator"></span>
                 </a>
 
-                <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
+                <a pwa-toggle-cart class="sc-header__content-mobile-cart">
                     <span class="fas fa-shopping-cart"></span>
                 </a>
             </div>
@@ -132,7 +132,7 @@
 
 							<section class="sc-search-nav-found-products-cards-info">
 								<h3>{{ suggest.name }}</h3>
-								<span>em {{ suggest.categories_string }}</span>
+								<!-- <span>em {{ suggest.categories_string }}</span> -->
 								<label>{{ suggest.skus[0].sale_price | price }}</label>
 							</section>
 						</article>
@@ -140,7 +140,7 @@
 				</section>
 			</pwa-search-form>
 
-			<div class="sc-header-signin isdesktop">
+			<div class="sc-header-signin isdesktop" pwa-not-logged pwa-to-auth>
 				<div class="sc-header-signin__inner">
 					<span class="fas fa-user-circle"></span>
 					<strong>Sign in</strong>
@@ -148,15 +148,25 @@
 				</div>
 			</div>
 
+            <div class="sc-header-signin isdesktop" pwa-is-logged pwa-to-account>
+				<div class="sc-header-signin__inner">
+					<span class="fas fa-user-circle"></span>
+					<strong>Hi, {{ $$user.firstname }} !</strong>
+					<span class="fas fa-chevron-down"></span>
+				</div>
+			</div>
+
 			<div class="sc-header-calc-cart isdesktop">
 				<div pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
 					<span class="fas fa-calculator"></span>
-					<span>{{ $$secondCart.count }}</span>
+					<span pwa--if="$$secondCart.count > 0">{{ $$secondCart.count }}</span>
+                    <span pwa--else style="visibility: hidden">0</span>
 				</div>
 
 				<div pwa-toggle-cart class="sc-header-calc-cart__cart">
 					<span class="fas fa-shopping-cart"></span>
-					<span>{{ $$cart.count }}</span>
+					<span pwa--if="$$cart.count > 0">{{ $$cart.count }}</span>
+                    <span pwa--else style="visibility: hidden">0</span>
 				</div>
 			</div>
 		</div>
@@ -177,7 +187,7 @@
 			</section>
 		</header>
 
-		<ul class="sc-top-nav sc-container isdesktop">
+		<ul class="sc-top-nav sc-container isdesktop" id="sc-desktop-nav-bar">
 			<!-- OUR PRODUCTS -->
 			<li class="sc-top-nav__item sc-top-nav__item--categories">
 				<a class="sc-top-nav__link" onclick="openSubMenuMobile(this)">
@@ -194,8 +204,7 @@
 					<div class="sc-menu-main">
 						<ul class="sc-menu-main__list">
 							<li class="sc-menu-main__holder">
-                                <span class="sc-top-nav__span">Our</span>
-                                <span class="sc-top-nav__span sc-top-nav__span--bold">Products</span>
+                                <span class="sc-top-nav__span sc-top-nav__span--bold">Our Products<span class="fas fa-angle-down"></span></span>
                             </li>
 
 							<li class="sc-menu-main__item sc-menu-main__item--barricades">
@@ -222,7 +231,7 @@
                                             </strong>
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/barricades/steel-barricades/covid-19-response">Covid-19 Response</a>
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/barricades/steel-barricades/covid-19-response">Covid-19 Response</a>
 												</li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link" pwa-to-page="/barricades/steel-barricades/hot-deals">Hot Deals</a>
@@ -270,9 +279,7 @@
                                             </strong>
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a
-														class="sc-menu-sub__link sc-menu-sub__link--vip" pwa-to-page="/barricades/plastic-barricades/vinyl-event-fences">Vinyl
-                                                        Event Fences</a>
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--vip" pwa-to-page="/barricades/plastic-barricades/vinyl-event-fences">Vinyl Event Fences</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link" pwa-to-page="/barricades/plastic-barricades/ada-pedestrian-barriers">ADA
@@ -293,9 +300,10 @@
 
 									<div class="sc-menu-sub">
 										<div class="sc-menu-sub__div" id="sub-menu-list-stage-barriers">
-											<strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
+											<strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
                                                 <a pwa-to-page="/barricades/stage-barriers">Stage Barriers</a>
-                                            </strong>
+											</strong>
+											
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link"
@@ -365,8 +373,8 @@
 									</div>
 
 									<div class="sc-menu-sub">
-										<img class="sc-menu-sub__image" pwa-src="submenu-crowd-control" alt="Free shipping on bundles">
-				                  </div>
+										<img class="sc-menu-sub__image" pwa-src="submenu-crowd-control-alt" alt="Free shipping on bundles">
+				                  	</div>
 								</section>
 							</li>
 
@@ -427,7 +435,10 @@
 										</div>
 
 										<div class="sc-menu-sub__div" id="sub-menu-list-outdoor-displays">
-											<strong class="sc-menu-sub__strong"><a pwa-to-page="/custom-signs/outdoor-display">Outdoor Displays</a></strong>
+											<strong class="sc-menu-sub__strong">
+												<a pwa-to-page="/custom-signs/outdoor-display">Outdoor Displays</a>
+											</strong>
+
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link sc-menu-sub__link--new"
@@ -458,13 +469,13 @@
 
 									<div class="sc-menu-sub">
 										<div class="sc-menu-sub__div" id="sub-menu-list-custom-screen">
-											<strong class="sc-menu-sub__strong">
+											<strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
                                                 <a pwa-to-page="/custom-signs/custom-screen">Custom Screen</a>
-                                            </strong>
+											</strong>
+											
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a
-														class="sc-menu-sub__link sc-menu-sub__link--new"
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new"
                                                         pwa-to-page="/custom-signs/custom-screen/covid-19-response">Covid-19 Response</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
@@ -527,7 +538,7 @@
 										</div>
 									</div>
 									<div class="sc-menu-sub">
-										<img class="sc-menu-sub__image" pwa-src="submenu-custom-signs" alt="All Free Shipping & Design Services" />
+										<img class="sc-menu-sub__image" pwa-src="submenu-custom-signs-alt" alt="All Free Shipping & Design Services" />
 				                  </div>
 								</section>
 							</li>
@@ -579,11 +590,11 @@
                                                     </a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/fence-solutions/chainlink-panels/heavy-duty-panels">Heavy
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping" pwa-to-page="/fence-solutions/chainlink-panels/heavy-duty-panels">Heavy
                                                         Duty Panels</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link"
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new"
 														pwa-to-page="/fence-solutions/chainlink-panels/jersey-barrier-toppers">Jersey Barrier
                                                         Toppers</a>
                                                 </li>
@@ -597,11 +608,11 @@
 
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/fence-solutions/accessories/fence-bracing">Fence
+                                                    <a class="sc-menu-sub__link" pwa-to-page="/fence-solutions/accessories/fence-bracing">Fence
                                                         Bracing</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/fence-solutions/accessories/new-age-products">New
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/fence-solutions/accessories/new-age-products">New
                                                         Age Products</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
@@ -647,15 +658,15 @@
                                                         x 50ft. Screen</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/fence-solutions/fence-screens/8ft-x-50ft-screen">8ft. x
+                                                    <a class="sc-menu-sub__link" pwa-to-page="/fence-solutions/fence-screens/8ft-x-50ft-screen">8ft. x
                                                         50ft. Screen</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/fence-solutions/fence-screens/jobsite-safety">Jobsite
+                                                    <a class="sc-menu-sub__link" pwa-to-page="/fence-solutions/fence-screens/jobsite-safety">Jobsite
                                                         Safety</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping sc-menu-sub__link--new"
 														pwa-to-page="/fence-solutions/fence-screens/custom-wraps">Custom
                                                         Wraps</a>
                                                 </li>
@@ -686,7 +697,7 @@
 									</div>
 
 									<div class="sc-menu-sub">
-										<img class="sc-menu-sub__image" pwa-src="submenu-fence-solutions" alt="Free shipping on bundles" />
+										<img class="sc-menu-sub__image" pwa-src="submenu-fence-solutions-alt" alt="Free shipping on bundles" />
 				                  </div>
 								</section>
 							</li>
@@ -712,16 +723,19 @@
 
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/hot-deals">Hot
-                                                        Deals</a>
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/hot-deals">
+														Hot Deals
+													</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/stanchions&posts/retractable-belt-barriers/single-line-belt-posts">Single
-                                                        Line Belt Posts</a>
+													<a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/stanchions&posts/retractable-belt-barriers/single-line-belt-posts">
+														Single Line Belt Posts
+													</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/twin-line-belt-posts">Twin
-                                                        Line Belt Posts</a>
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/twin-line-belt-posts">
+														Twin Line Belt Posts
+													</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link"
@@ -738,7 +752,7 @@
 														pwa-to-page="/stanchions&posts/retractable-belt-barriers/safety-series">Safety Series</a>
 												</li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/cone-pro-stanchion">Accessories</a>
+                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/retractable-belt-barriers/cone-pro-stanchion">Cone Pro Stanchion</a>
                                                 </li>
 											</ul>
 										</div>
@@ -760,27 +774,6 @@
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/customizing-options/post-signage">Posts
                                                         Signage</a>
-                                                </li>
-											</ul>
-										</div>
-
-										<div class="sc-menu-sub__div" id="sub-menu-list-wall-mounts">
-											<strong class="sc-menu-sub__strong">
-                                                <a pwa-to-page="/stanchions&posts/wall-mounts">Wall Mounts</a>
-                                            </strong>
-
-											<ul class="sc-menu-sub__list">
-												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/abs-housing">ABS Housing</a>
-                                                </li>
-
-												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/steel-housing">Steel Housing</a>
-                                                </li>
-
-												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/specialty-wall-mounts">Specialty Wall
-                                                        Mounts</a>
                                                 </li>
 											</ul>
 										</div>
@@ -841,29 +834,52 @@
 												</li>
 											</ul>
 										</div>
+									</div>
 
-										<div class="sc-menu-sub__div" id="sub-menu-list-storage-carts">
+									<div class="sc-menu-sub">
+										<div class="sc-menu-sub__div" id="sub-menu-list-wall-mounts">
 											<strong class="sc-menu-sub__strong">
-                                                <a pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Carts</a>
-                                            </strong>
+												<a pwa-to-page="/stanchions&posts/wall-mounts">Wall Mounts</a>
+											</strong>
+										
 											<ul class="sc-menu-sub__list">
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" pwa-to-page="/stanchions/storage-carts/cart-12-posts">Cart 12 Posts</a>
-                                                </li>
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/abs-housing">ABS Housing</a>
+												</li>
+										
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link"
-                                                        pwa-to-page="/stanchions/storage-carts/cart-18-posts">Cart 18 Posts</a>
-                                                </li>
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/steel-housing">Steel Housing</a>
+												</li>
+										
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link"
-														pwa-to-page="/stanchions/storage-carts/cart-21-posts">Cart 21 Posts</a>
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions&posts/wall-mounts/specialty-wall-mounts">Specialty Wall
+														Mounts</a>
 												</li>
 											</ul>
 										</div>
 
+										<div class="sc-menu-sub__div" id="sub-menu-list-storage-carts">
+											<strong class="sc-menu-sub__strong">
+												<a pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Carts</a>
+											</strong>
+											<ul class="sc-menu-sub__list">
+												<li class="sc-menu-sub__item">
+													<a class="sc-menu-sub__link" pwa-to-page="/stanchions/storage-carts/cart-12-posts">Cart 12 Posts</a>
+												</li>
+												<li class="sc-menu-sub__item">
+													<a class="sc-menu-sub__link"
+														pwa-to-page="/stanchions/storage-carts/cart-18-posts">Cart 18 Posts</a>
+												</li>
+												<li class="sc-menu-sub__item">
+													<a class="sc-menu-sub__link"
+														pwa-to-page="/stanchions/storage-carts/cart-21-posts">Cart 21 Posts</a>
+												</li>
+											</ul>
+										</div>
 									</div>
+
 									<div class="sc-menu-sub">
-										<img class="sc-menu-sub__image" pwa-src="submenu-stanchions" alt="Free shipping all stanchions and retractable belts" />
+										<img class="sc-menu-sub__image" pwa-src="submenu-stanchions-alt" alt="Free shipping all stanchions and retractable belts" />
 				                  </div>
 								</section>
 							</li>
@@ -882,9 +898,8 @@
 								<section class="sc-menu-sub--traffic">
 									<div class="sc-menu-sub">
 										<div class="sc-menu-sub__div" id="sub-menu-list-traffic-cones">
-											<strong class="sc-menu-sub__strong">
-                                                <a pwa-to-page="/traffic-safety/traffic-cones
-                                                ">Traffic Cones</a>
+											<strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
+                                                <a pwa-to-page="/traffic-safety/traffic-cones">Traffic Cones</a>
                                             </strong>
 
 											<ul class="sc-menu-sub__list">
@@ -893,7 +908,7 @@
                                                         Deals</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link"
+                                                    <a class="sc-menu-sub__link sc-menu-sub__link--new"
 														pwa-to-page="/traffic-safety/traffic-cones/nchrp-350-mutcd">NCHRP-350 | MUTCD</a>
 												</li>
 												<li class="sc-menu-sub__item">
@@ -904,6 +919,10 @@
                                                     <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/traffic-cones/eva-traffic-cone
                                                     ">EVA
                                                         Traffic Cone</a>
+												</li>
+												<li class="sc-menu-sub__item">
+                                                    <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/traffic-cones/eva-traffic-cone
+                                                    ">PE Traffic Cone</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/traffic-cones/pvc-traffic-cone">PVC
@@ -922,10 +941,14 @@
 
 										<div class="sc-menu-sub__div" id="sub-menu-list-tools-supplies">
 											<strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
-                                                <a pwa-to-page="/traffic-safety/tools-supplies">Tools &amp; Supplies<br/>Constructions Signs</a>
+                                                <a pwa-to-page="/traffic-safety/tools-supplies">Tools &amp; Supplies</a>
                                             </strong>
 
 											<ul class="sc-menu-sub__list">
+												<li class="sc-menu-sub__item">
+                                                    <a class="sc-menu-sub__link"
+														pwa-to-page="">Constructions Signs</a>
+												</li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link"
 														pwa-to-page="/traffic-safety/constructions-signs/roll-up-signs">Roll-Up Signs</a>
@@ -948,7 +971,7 @@
 
 									<div class="sc-menu-sub">
 										<div class="sc-menu-sub__div" id="sub-menu-list-parking-safety">
-                                            <strong class="sc-menu-sub__strong">
+                                            <strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
                                                 <a pwa-to-page="/traffic-safety/parking-safety">Parking Safety</a>
                                             </strong>
 
@@ -958,17 +981,13 @@
                                                         Bumps &amp; Humps</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link sc-menu-sub__link--comming-soon"
+                                                    <a class="sc-menu-sub__link"
 														pwa-to-page="/traffic-safety/parking-safety/wheel-stops">Wheel
                                                         Stops</a>
                                                 </li>
 												<li class="sc-menu-sub__item">
                                                     <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/parking-safety/wheel-chocks
                                                     ">Wheel  Chocks</a>
-                                                </li>
-												<li class="sc-menu-sub__item">
-                                                    <a class="sc-menu-sub__link" href="">Chain
-                                                        link Fence Topper</a>
                                                 </li>
 											</ul>
 										</div>
@@ -1069,7 +1088,7 @@
 										</div>
 									</div>
 									<div class="sc-menu-sub">
-										<img class="sc-menu-sub__image" pwa-src="submenu-traffic-safety" alt="Free shipping on bulk orders" />
+										<img class="sc-menu-sub__image" pwa-src="submenu-traffic-safety-alt" alt="Free shipping on bulk orders" />
 				                  </div>
 								</section>
 							</li>
@@ -1085,16 +1104,12 @@
 				</a>
 
 				<section class="sc-applications-menu" id="sc-applications-menu">
-					<div class="sc-application-menu-header">
-						<span class="sc-top-nav__span">Shop by</span>
-						<span class="sc-top-nav__span sc-top-nav__span--bold">Application</span>
-					</div>
 					<div class="sc-flex">
 						<!-- shop by construction -->
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/construction">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="construction-shopby" alt="">
+									<img pwa-src="construction-shopby-alt" alt="">
                                 </div>
 
                                 <div class="sc-shop-by-application-overtext">
@@ -1107,7 +1122,7 @@
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/events">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="events-shopby" alt="">
+									<img pwa-src="events-shopby-alt" alt="">
                                 </div>
 
 									<div class="sc-shop-by-application-overtext">
@@ -1120,7 +1135,7 @@
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/venues-arenas">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="venues-shopby" alt="">
+									<img pwa-src="venues-shopby-alt" alt="">
                                 </div>
 
 									<div class="sc-shop-by-application-overtext">
@@ -1133,7 +1148,7 @@
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/public-sector">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="public-sector-shopby" alt="">
+									<img pwa-src="public-sector-shopby-alt" alt="">
                                 </div>
 
 									<div class="sc-shop-by-application-overtext">
@@ -1146,7 +1161,7 @@
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/schools">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="schools-shopby" alt="">
+									<img pwa-src="schools-shopby-alt" alt="">
                                 </div>
 
 									<div class="sc-shop-by-application-overtext">
@@ -1159,7 +1174,7 @@
 						<article class="sc-shop-by-application-block">
 							<a pwa-to-page="/hospitality">
 								<div class="sc-shop-by-application-image-holder">
-									<img pwa-src="hospitality-shopby" alt="">
+									<img pwa-src="hospitality-shopby-alt" alt="">
                                 </div>
 
 									<div class="sc-shop-by-application-overtext">
