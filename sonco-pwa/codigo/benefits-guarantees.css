@@ -1,4 +1,6 @@
-/** PAGE - BENEFITS & GUARANTEES **/
+/* =======================
+PAGE - BENEFITS & GUARANTEES
+======================= */
 
 #sc-benefits-guarantees {
     margin: 30px 0;
@@ -16,7 +18,7 @@
 
 .sc-how-can-we-help h2 {
     font-size: 30px;
-    color: #e62332;
+    color: #e62a32;
     font-family: Camber-Bold;
     text-transform: uppercase;
 }
@@ -39,12 +41,12 @@
     padding: 15px;
     font-size: 10px;
     text-transform: uppercase;
-    border: 2px solid #ff1d2f;
+    border: 2px solid #e62a32;
     margin: 7px;
 }
 
 .sc-benefits-list a {
-    color: #ff182b;
+    color: #e62a32;
     font-weight: 700;
 }
 
@@ -120,26 +122,26 @@
 
 .sc-benefits-content-right h2 {
     font-size: 30px;
-    color: #1d2b5a;
+    color: #002e5a;
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
 .sc-benefits-content-right h3 {
     font-size: 27px;
-    color: #1d2b5a;
+    color: #002e5a;
     font-family: camber-semibold;
 }
 
 .sc-benefits-content-right p {
     font-size: 20px;
-    color: #1d2b5a;
+    color: #002e5a;
     margin-bottom: 2rem;
 }
 
 .sc-benefits-content-right ul {
     padding-left: 40px;
-    color: #1d2b5a;
+    color: #002e5a;
     font-size: 20px;
     margin-bottom: 2rem;
 }
