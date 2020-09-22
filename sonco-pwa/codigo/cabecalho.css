@@ -274,10 +274,9 @@ SHOW CATEGORY MENU ON HOVER
 
 .sc-menu-sub__link--new::after {
     color: #fff;
-    content: "NEW";
-    margin: 3px 5px;
-    padding: 0 5px;
-    font-size: 12px;
+    content: "New";
+    margin: 8px 5px;
+    font-size: 10px;
     position: absolute;
     align-items: center;
     display: inline-flex;
@@ -285,18 +284,19 @@ SHOW CATEGORY MENU ON HOVER
     justify-content: center;
     background-color: #FEA729;
     font-family: "camber-bold";
-    height: 20px;
+    line-height: 30px;
+    height: 15px;
     width: 40px;
 }
 
 .sc-menu-sub__link--free-shipping::after {
     color: #fff;
     content: "Free Shipping";
-    margin: 5px 5px;
+    margin: 8px 5px;
     padding: 0 5px;
-    font-size: 12px;
-    width: 90px;
-    height: 20px;
+    font-size: 10px;
+    width: 77px;
+    height: 14px;
     font-weight: 900;
     position: absolute;
     align-items: center;
@@ -312,10 +312,6 @@ SHOW CATEGORY MENU ON HOVER
     content: "Comming soon";
     margin: 3px 5px;
     padding: 0 5px;
-    font-size: 12px;
-    width: 98px;
-    height: 20px;
-    font-weight: 900;
     position: absolute;
     align-items: center;
     display: inline-flex;
@@ -323,6 +319,10 @@ SHOW CATEGORY MENU ON HOVER
     justify-content: center;
     background-color: #07AC40;
     font-family: "camber-bold";
+    width: 84px;
+    height: 14px;
+    font-size: 10px;
+    line-height: 31px;
 }
 
 .sc-menu-sub__strong.sc-menu-sub__link--comming-soon::after,
@@ -336,35 +336,33 @@ SHOW CATEGORY MENU ON HOVER
     color: #fff;
     content: "VIP";
     margin: 5px 5px;
-    padding: 8px 5px;
-    font-size: 12px;
-    font-weight: 900;
-    position: absolute;
+    font-size: 10px;
     align-items: center;
     display: inline-flex;
     vertical-align: middle;
     justify-content: center;
     background-color: #0c0c0c;
-    width: 34px;
-    height: 15px;
+    width: 40px;
+    height: 14px;
     font-family: "camber-bold";
+    line-height: 30px;
 }
+
 .sc-menu-sub__link--offers::after {
     color: #fff;
     content: "Offers End Soon";
-    margin: 4px 5px;
-    padding: 0 5px;
-    font-size: 12px;
-    font-weight: 900;
-    position: absolute;
+    margin: 5px 5px;
+    font-size: 10px;
     align-items: center;
     display: inline-flex;
     vertical-align: middle;
     justify-content: center;
     background-color: #2375E6;
     font-family: "camber-bold";
-    height: 18px;
-    width: 105px;
+    height: 14px;
+    width: 84px;
+    line-height: 30px;
+    letter-spacing: -0.2px;
 }
 
 .sc-menu-main__item .icon-sc-ico-fence-solutions {
@@ -435,6 +433,7 @@ div#sub-menu-list-fence-gates {
 
 div#sub-menu-list-wall-mounts {
     padding-top: 15px;
+    max-height: 135px;
 }
 
 div#sub-menu-list-retractable-belt-barriers {
@@ -475,11 +474,11 @@ div#sub-menu-list-ppe-gear {
     padding-top: 25px;
 }
 
-.sc-menu-sub--traffic .sc-menu-sub__link--comming-soon::after {
+/* .sc-menu-sub--traffic .sc-menu-sub__link--comming-soon::after {
     font-size: 10px;
     width: 90px;
     height: 15px;
-}
+} */
 
 .sc-menu-sub--traffic {
     width: 1069px;
@@ -504,7 +503,7 @@ li.sc-top-nav__item.sc-top-nav__item--shopby {
     padding-top: 41px;
     left: -25px;
     width: 948px;
-    height: 515px;
+    height: 555px;
     background: #ffffff00;
     border-radius: 21px;
     z-index: 20;
@@ -514,6 +513,10 @@ li.sc-top-nav__item.sc-top-nav__item--shopby {
     overflow: hidden;
     border-top-left-radius: unset;
     border-top-right-radius: unset;
+}
+
+.sc-shop-by-application-image-holder img {
+    height: 258px;
 }
 
 .sc-shop-by-application-block {
@@ -1261,9 +1264,9 @@ svg.svg-inline--fa.fa-angle-up.fa-w-10{
 }
 
 .sc-menu-sub__strong a {
-    font-size: 14px;
-    font-family: camber-bold;
-    color: #909090;
+    font-size: 15px;
+    font-family: camber-semibold;
+    color: #6F6F6F;
     line-height: 31px;
 }
 

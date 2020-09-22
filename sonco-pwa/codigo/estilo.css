@@ -1967,7 +1967,7 @@ i.fa-plus {
     user-select: none;
 }
 
-.sc-spotlight-title h1 {
+.sc-spotlight-title span {
     font-family: "camber-semibold";
 	font-size: 17px;
 	color: #FF0000;
@@ -2293,7 +2293,7 @@ select.sc-order-product {
     color: #353535;
     font-size: 15px;
     text-align: left;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 .sc-card-title-descripition__product {

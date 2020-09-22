@@ -43,7 +43,8 @@
 .sc-icons-top__home .icon-sc-ico-stanchions,
 .sc-icons-top__home .icon-sc-ico-traffic-safety{
     font-size: 35px;
-    color: #fff
+    color: #fff;
+    z-index: 5;
 }
 
 .sc-icons-top__home .icon-sc-ico-fence-solutions{
@@ -84,7 +85,7 @@
 }
 
 #sc-bullets-slider .swiper-button-next, #sc-bullets-slider .swiper-button-prev {
-    top: 25%;
+    top: 180px;
 }
 
 .content-block-bullet {
@@ -417,4 +418,109 @@ img.banner-image {
 	color: #032E5A;
 	text-transform: capitalize;
     font-family: "camber-medium";
+}
+
+.content-bullet-2 .sc-container:nth-child(2) {
+    margin-top: 77px;
+}
+
+.content-bullet-1 div:nth-child(2) {
+    margin-top: 16px;
+}
+
+.sc-bullet-button {
+    display: flex;
+}
+
+.sc-bullet-button a {
+    margin: 25px auto 0;
+}
+
+#sc-slider__industrial-home .swiper-slide {
+    height: 350px;
+    background-color: #E3E5E2;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 25% !important;
+    transition: 0.5s;
+    min-width: 315px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.sc-card-shop img {
+    max-height: 214px;
+    margin-bottom: 10px;
+}
+
+#sc-slider__industrial-home .swiper-slide:hover {
+    box-shadow: 2px 4px 9px 0 #8a8988;
+    background: 0 0;
+}
+
+#sc-slider__industrial-home .swiper-slide:hover p {
+    border-bottom: 2px solid red;
+}
+
+#sc-slider__industrial-home .swiper-slide:hover span {
+    border-bottom: 2px solid red;
+}
+
+.sc-card-shop a {
+    color: unset;
+}
+
+
+.sc-card-shop article div:nth-child(2) {
+    margin-bottom: -17px;
+    margin-top: 30px;
+}
+
+.sc-card-shop span {
+    color: #022A5B;
+    text-transform: capitalize;
+    font-family: camber-medium;
+    font-size: 20px;
+}
+
+.sc-card-shop{
+    margin-top: 50px;
+}
+
+.sc-slide__industrial-home-next {
+    position: absolute;
+    z-index: 1;
+    left: auto;
+    right: -42px;
+    top: 50%;
+}
+
+.sc-slide__industrial-home-prev {
+    position: absolute;
+    z-index: 1;
+    left: -35px;
+    right: auto;
+    top: 50%;
+}
+
+.sc-slide__industrial-home-prev:hover,
+.sc-slide__industrial-home-next:hover{
+    cursor: pointer;
+}
+
+.sc-slide__industrial-home-prev.swiper-button-prev.sc-border-buttom.sc-size-buttom.isdesktop {
+    background: unset;
+}
+
+.sc-slide__industrial-home-next.swiper-button-next.sc-border-buttom.sc-size-buttom.isdesktop {
+    background: unset;
+    right: -35px !important;
+}
+
+.content-bullet-2 .sc-novo-container.sc-flex img {
+    min-width: 154px;
 }
