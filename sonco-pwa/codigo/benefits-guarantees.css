@@ -1,0 +1,237 @@
+/** PAGE - BENEFITS & GUARANTEES **/
+
+#sc-benefits-guarantees {
+    margin: 30px 0;
+}
+
+#sc-benefits-guarantees .sc-container{
+    width: 100% !important;
+}
+
+.sc-how-can-we-help {
+    background-color: #e8e5e0;
+    padding: 40px;
+    text-align: center;
+}
+
+.sc-how-can-we-help h2 {
+    font-size: 30px;
+    color: #e62332;
+    font-family: Camber-Bold;
+    text-transform: uppercase;
+}
+
+.sc-how-can-we-help p {
+    color: #58595b;
+    font-size: 18px;
+}
+
+.sc-benefits-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sc-check-order-status,
+.sc-returns-and-refunds,
+.sc-customer-support {
+    padding: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border: 2px solid #ff1d2f;
+    margin: 7px;
+}
+
+.sc-benefits-list a {
+    color: #ff182b;
+    font-weight: 700;
+}
+
+.sc-benefits-list img {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 10px;
+}
+
+.sc-breadcrumb {
+    display: flex;
+}
+
+.sc-breadcrumb a {
+    color: #333;
+    font-weight: normal !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0px 3px;
+}
+
+.sc-benefits-content .sc-breadcrumb h1 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.sc-breadcrumb a:hover{
+    text-decoration: underline;
+}
+
+.sc-benefits-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.sc-benefits-topic a {
+    color: #1d2b5a!important;
+}
+
+.sc-benefits-topic h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.sc-benefits-subtopic {
+    display: flex;
+    flex-direction: column;
+}
+
+.sc-benefits-subtopic a {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.sc-benefits-content-left {
+    padding: 40px 20px 30px;
+    width: 30%;
+    border-right: 1px solid #9b9b9b;
+}
+
+.sc-benefits-subtopic a:hover {
+    text-decoration: underline;
+}
+
+.sc-benefits-subtopic a:hover:after {
+    content: ">"; 
+}
+
+.sc-benefits-content-right {
+    width: 67.7%;
+    padding: 45px 65px;
+}
+
+.sc-benefits-content-right h2 {
+    font-size: 30px;
+    color: #1d2b5a;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.sc-benefits-content-right h3 {
+    font-size: 27px;
+    color: #1d2b5a;
+    font-family: camber-semibold;
+}
+
+.sc-benefits-content-right p {
+    font-size: 20px;
+    color: #1d2b5a;
+    margin-bottom: 2rem;
+}
+
+.sc-benefits-content-right ul {
+    padding-left: 40px;
+    color: #1d2b5a;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.sc-benefits-content-right ul li {
+    margin-bottom: 1rem;
+}
+
+.sc-benefits-content-right img {
+    position: absolute;
+    margin-left: -70px;
+}
+
+.sc-benefits-content-right article {
+    padding-left: 70px;
+}
+
+.sc-table-contents {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #sc-benefits-guarantees {
+        margin: 60px 0;
+    }
+
+    .sc-benefits-list {
+        display: none;
+    }
+
+    .sc-how-can-we-help {
+        padding: 40px 20px;
+    }
+
+    .sc-breadcrumb {
+        display: none;
+    }
+
+    .sc-benefits-content {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .sc-benefits-content-left {
+        padding: 15px 15px 30px;
+        width: 80%;
+        border-right: 0px solid #9b9b9b;
+        background-color: #e2e4e7;
+        -webkit-transition: ease .3s all;
+        transition: ease .3s all;
+        position: absolute;
+        z-index: 2;
+        left: -10px;
+        bottom: 0;
+        top: 0;
+        display: none;
+    }
+
+    .sc-benefits-content-right {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .sc-benefits-content-right h2 {
+        margin-bottom: 1rem;
+    }
+
+    .sc-table-contents {
+        padding: 20px 20px;
+        background-color: #ccc;
+        margin-left: -6px;
+        margin-right: -6px;
+        display: block;
+        margin-bottom: -10px;
+    }
+
+    .sc-table-contents span {
+        border: 1px solid #58595b;
+        padding: 7px 15px;
+        margin: 0;
+        background-color: #7d7d7d;
+        color: #fff;
+        font-family: camber-semibold;
+        font-size: 14px;
+    }
+
+    .sc-benefits-content-left.sc-benefits-content-left-show {
+        display: block;
+    }
+
+    .sc-article-left-margin {
+        padding-left: 0px !important;
+    }
+}
