@@ -634,6 +634,7 @@ resto dos menu basicos
 .sc-sonco-header-list li a {
     text-decoration: none;
     color: unset;
+    text-transform: capitalize;
 }
 
 .sc-sonco-header-list span {

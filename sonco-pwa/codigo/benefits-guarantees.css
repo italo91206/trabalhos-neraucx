@@ -71,6 +71,7 @@ PAGE - BENEFITS & GUARANTEES
 .sc-benefits-content .sc-breadcrumb h1 {
     font-size: 14px;
     font-weight: normal;
+    line-height: 16px;
 }
 
 .sc-breadcrumb a:hover{
@@ -83,7 +84,7 @@ PAGE - BENEFITS & GUARANTEES
 }
 
 .sc-benefits-topic a {
-    color: #1d2b5a!important;
+    color: #002e5a !important;
 }
 
 .sc-benefits-topic h2 {
