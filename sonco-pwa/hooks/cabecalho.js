@@ -59,27 +59,54 @@
         var items = menu.children
         var submenu = document.getElementsByClassName("sc-submenu")
         var botoesRetorno = document.getElementsByClassName("sc-top-nav__getback")
+        var subitem = document.getElementsByClassName('sc-top-nav__subitem')
 
-        for (var i = 0; i <= (items.length - 1); i++) {
+        function qualApertei(elem){
+            var resultado = 0;
+            for(var i=0; i< items.length && items[i] != elem; i++){
+                resultado++;
+            }
+            return resultado;
+        }
+
+        function abreSubMenu(num){
+            menu.classList.add('sc-submenu-closed');
+            submenu[num].classList.remove('sc-submenu-closed');
+        }
+
+        function fechaSubMenu(){
+            for(var i=0; i< items.length; i++){
+                if(!submenu[i].classList.contains('sc-submenu-closed'))
+                    submenu[i].classList.add('sc-submenu-closed');
+            }
+            menu.classList.remove('sc-submenu-closed');
+        }
+
+        for (var i = 0; i < items.length; i++) {
             items[i].addEventListener("click", function () {
-
-                if (!menu.classList.contains('sc-submenu-closed'))
-                    menu.classList.add('sc-submenu-closed');
-
-                if (submenu[i - 1].classList.contains('sc-submenu-closed'))
-                    submenu[i - 1].classList.remove('sc-submenu-closed')
-            })
+                var num = qualApertei(this);
+                abreSubMenu(num);
+            });
         }
 
-        for (var i = 0; i <= (botoesRetorno.length - 1); i++) {
+        for (var i = 0; i < botoesRetorno.length; i++) {
             botoesRetorno[i].addEventListener("click", function () {
-                for (var j = 0; j <= items.lenght - 1; j++) {
-                    if (!submenu[j].classList.contains('sc-submenu-closed'))
-                        submenu[j].classList.add('sc-submenu-closed')
-                }
-                menu.classList.remove('sc-submenu-closed')
+                fechaSubMenu();
             })
         }
+
+        function zerarEstado(){
+            for(var i=0; i<botoesRetorno.length; i++)
+                botoesRetorno[i].click();
+            closeMenuMobile();
+        }
+
+        for(var i=0; i<subitem.length; i++){
+            subitem[i].addEventListener("click", function(){
+                zerarEstado();
+            })
+        }
+        
     },
     "--ativadorTopBar": component =>{
         var about_us = document.getElementsByClassName('sc-header-contact__about')

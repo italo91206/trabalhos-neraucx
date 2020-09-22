@@ -210,6 +210,62 @@
       }, 10000);
     }
 
+    function addTransitionFor() {
+      document.getElementsByClassName('forrepetition')[0].classList.add('transition-for');
+    }
+
+    function removeTransitionFor() {
+      document.getElementsByClassName('forrepetition')[0].classList.remove('transition-for');
+    }
+
+    function spanTransitionDesktop(position, timer) {
+      setTimeout(function () {
+          addTransitionFor();
+          document.getElementsByClassName('forrepetition')[0].style.transform = "translateY(-" + position + "%)";
+          if (position >= 66)
+            position += 11.5;
+          else 
+            position += 11;
+
+          if (position >= 99) {
+            setTimeout(function () {
+                removeTransitionFor();
+                document.getElementsByClassName('forrepetition')[0].style.transform = "translateY(0%)";
+                spanTransitionDesktop(11, 1500);
+            }, 500);
+          }
+          else 
+            spanTransitionDesktop(position, 2000);
+      }, timer);
+    }
+
+    function spanTransitionMobile(position, timer) {
+      setTimeout(function () {
+          addTransitionFor();
+          document.getElementsByClassName('forrepetition')[0].style.transform = "translateY(-" + position + "%)";
+          position += 10;
+
+          if (position >= 90) {
+            setTimeout(function () {
+              removeTransitionFor();
+              document.getElementsByClassName('forrepetition')[0].style.transform = "translateY(0%)";
+              spanTransitionMobile(10, 1500);
+            }, 500);
+          }
+          else 
+            spanTransitionMobile(position, 2000);
+          
+
+      }, timer);
+    }
+
+    addTransitionFor();
+    
+    if (document.getElementsByTagName('HTML')[0].clientWidth <= 700)
+      spanTransitionMobile(10, 2000);
+    else
+      spanTransitionDesktop(11, 2000);
+
     timeout_transitions(1)
   } 
 }
