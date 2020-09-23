@@ -16,7 +16,6 @@
         stanchions_button = stanchions_button[0];
         traffic_button = traffic_button[0];
 
-        
         crowdcontrol_buttton.addEventListener("mouseover", function () {
             submenu.style.width = "1130px"
         })
@@ -52,6 +51,17 @@
             submenu.style.width = "256px"
         })
 
+        var applicationsMenu = document.getElementById('sc-applications-menu')
+        var buttonShopBy = document.getElementsByClassName('sc-top-nav__item--shopby')[0];
+
+        buttonShopBy.addEventListener("mouseover", function(){
+            if(!applicationsMenu.classList.contains('ativo'))
+                applicationsMenu.classList.add('ativo');
+        })
+
+        applicationsMenu.addEventListener("mouseleave", function(){
+            applicationsMenu.classList.remove('ativo');
+        })
         
     },
     "--menuMobilePreparation": component => {

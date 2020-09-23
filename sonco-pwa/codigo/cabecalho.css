@@ -499,17 +499,17 @@ li.sc-top-nav__item.sc-top-nav__item--shopby {
 
 #sc-applications-menu {
     position: absolute;
-    top: 2px;
-    padding-top: 41px;
+    top: 41px;
+    /* padding-top: 41px; */
     left: -25px;
     width: 948px;
-    height: 555px;
+    height: 516px;
     background: #ffffff00;
     border-radius: 21px;
     z-index: 20;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 16px 1001px 0px 60em rgba(0, 0, 0, 0.6);
+    box-shadow: 16px 960px 0px 60em rgba(0, 0, 0, 0.6);
     overflow: hidden;
     border-top-left-radius: unset;
     border-top-right-radius: unset;
@@ -578,7 +578,9 @@ li.sc-top-nav__item.sc-top-nav__item--shopby {
     font-family: camber-regular;
 }
 
-li.sc-top-nav__item--shopby:hover #sc-applications-menu {
+/* li.sc-top-nav__item--shopby:hover #sc-applications-menu  */
+#sc-applications-menu.ativo
+{
     opacity: 1 !important;
     /* transition: opacity .4s ease; */
     visibility: visible;
