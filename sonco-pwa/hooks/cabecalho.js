@@ -135,5 +135,21 @@
                 top_bar.classList.remove('active');  
             }
         })
+    },
+    "--ajuste-menu-ourProducts": component =>{
+        var buton = document.getElementsByClassName('sc-top-nav__item--categories')[0];
+        var menu = document.getElementsByClassName('sc-menu')[0];
+        var links = document.getElementsByClassName('sc-menu-sub__link')
+
+        buton.addEventListener("mouseover", function(){
+            menu.classList.add("ativo");
+        })
+        menu.addEventListener("mouseleave", function(){
+            menu.classList.remove("ativo");
+        })
+        for (var i=0; i<links.length; i++)
+            links[i].addEventListener("click", function(){
+                menu.classList.remove("ativo");
+            })
     }
 }

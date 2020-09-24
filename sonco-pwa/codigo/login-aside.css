@@ -1,0 +1,30 @@
+.p4a-authentication-header .p4a-authentication-header__title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #032e5a;
+}
+
+.p4a-style__primary--border {
+    border: unset !important;
+    border-color: unset !important;
+    background: #032e5a;
+}
+
+.p4a-style__primary--background:disabled {
+    background: #032e5a;
+    color: #fff;
+}
+
+.p4a-input__label {
+    color: #032e5a !important;
+    font-size: 14px !important;
+}
+
+.p4a-input__field.p4a-input__field--invalid {
+    border-color: #032e5a;
+}
+
+.p4a-style__primary--background {
+    background-color: #032e5a;
+}

@@ -2,7 +2,8 @@
 SHOW CATEGORY MENU ON HOVER
 ================================ */
 
-.sc-top-nav__item--categories:hover .sc-menu {
+/* .sc-top-nav__item--categories:hover .sc-menu  */
+.sc-menu.ativo{
 	visibility: visible;
 	opacity: 1;
 	transition: all .4s;
@@ -1260,7 +1261,8 @@ svg.svg-inline--fa.fa-angle-up.fa-w-10{
     animation: des-rotate-icon 500ms ease-out;
 }
 
-.sc-top-nav__item--categories:hover .sc-menu-main__holder svg.svg-inline--fa.fa-angle-down.fa-w-10 {
+/* .sc-top-nav__item--categories:hover .sc-menu-main__holder svg.svg-inline--fa.fa-angle-down.fa-w-10 */
+.sc-menu.ativo .sc-menu-main__holder svg.svg-inline--fa.fa-angle-down.fa-w-10{
     animation: rotate-icon 500ms ease-out;
     animation-fill-mode: forwards;
     transform-origin: center;
