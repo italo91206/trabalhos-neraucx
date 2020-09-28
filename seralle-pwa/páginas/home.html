@@ -1,0 +1,229 @@
+<main id="se-main-page">
+
+  <!-- Slide Principal -->
+  <section class="se-full-banner" id="banner-slider-principal">
+    <section class="swiper-container" id="se-slidebanner-home" pwa-hook="se-slidebanner-home">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="i in 2" :key="i">
+          <a class="se-releases__card se-releases__card--left" pwa-to-page="/masculino">
+            <img pwa-src="bigslider-shoes" class="se-w100" alt="Blusas">
+
+            <div class="se-banner-grande-overlay se-container">
+              <p class="se-titulo">Nova coleção Serallê As melhores marcas</p>
+              <p class="se-juros">em até 12x Sem juros</p>
+              <button class="se-white-background">confira</button>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="se-slidebanner-next">
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="se-slidebanner-prev">
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+  </section>
+
+  <!--  CONTEUDO SEMANA DO CONSUMIDOR  -->
+  <section class="se-container se-flex" id="se-primeira-linha">
+    <article class="se-cmd-6 se-relative">
+      <img pwa-src="banner-shoes-rosa" class="se-w100" />
+      <div class="se-banner-inside-text">
+        <p class="se-week se-black-pink">semana do consumidor serallê</p>
+        <p class="se-offering-what">Calçados Femininos</p>
+        <p class="se-is-off">com até 35% off</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </article>
+
+    <article class="se-cmd-6 se-relative">
+      <img pwa-src="banner-shoes-azul" class="se-w100" />
+      <div class="se-banner-inside-text">
+        <p class="se-week se-black-blue">semana do consumidor serallê</p>
+        <p class="se-offering-what">Calçados Masculinos</p>
+        <p class="se-is-off">com até 25% off</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- PRIMEIRO SLIDER DE PRODUTOS -->
+  <pwa-product-list name="ofertas" filter="categories.name: 'menino'" size="12"
+    class="se-slider-container se-flex se-relative" id="se-segunda-linha">
+
+    <div id="se-slide-holder">
+      <img pwa-src="ofertas-slide-holder" class="se-w100" />
+    </div>
+
+    <div class="swiper-container" id="se-slide1-home" pwa-hook="se-slide1-home">
+      <div class="swiper-wrapper">
+        <div pwa-each-product class="swiper-slide se-card-slide">
+          <pwa-product-card>
+        </div>
+      </div>
+
+      <div class="se-slide1-next">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-right">
+          <span class="fa fa-chevron-right"></span>
+        </div>
+      </div>
+
+      <div class="se-slide1-prev">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-left">
+          <span class="fa fa-chevron-left"></span>
+        </div>
+      </div>
+    </div>
+  </pwa-product-list>
+
+  <div class="se-container se-flex" id="se-terceira-linha">
+    <div class="se-relative se-cmd-4">
+      <img pwa-src="girl-square-red" class="se-w100" />
+      <div class="se-banner4-inside-text">
+        <p class="se-offering-what">Calcci com preços imbatíveis</p>
+        <p class="se-how-much">A partir de R$ 129,99</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+    <div class="se-relative se-cmd-4">
+      <img pwa-src="olympikus-square-green" class="se-w100" />
+      <div class="se-banner4-inside-text">
+        <p class="se-offering-what">Olympikus com preços imbatíveis</p>
+        <p class="se-how-much">A partir de R$ 79,99</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+    <div class="se-relative se-cmd-4">
+      <img pwa-src="square-shoes-yellow" class="se-w100" />
+      <div class="se-banner4-inside-text">
+        <p class="se-offering-what">As melhores marcas com</p>
+        <p class="se-how-much">Até 75% OFF</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEGUNDO SLIDER DE PRODUTOS -->
+  <pwa-product-list name="ofertas" filter="categories.name: 'Sapatos'" size="15"
+    class="se-slider-container se-relative se-flex" id="se-quarta-linha">
+
+    <div id="se-slide-holder">
+      <img pwa-src="ofertas-slide-holder" class="se-w100" />
+    </div>
+
+    <div class="swiper-container" id="se-slide2-home" pwa-hook="se-slide2-home">
+
+      <div class="swiper-wrapper">
+        <div pwa-each-product class="swiper-slide se-card-slide">
+          <pwa-product-card>
+        </div>
+      </div>
+
+      <div class="se-slide2-next">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-right">
+          <span class="fa fa-chevron-right"></span>
+        </div>
+      </div>
+
+      <div class="se-slide2-prev">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-left">
+          <span class="fa fa-chevron-left"></span>
+        </div>
+      </div>
+    </div>
+  </pwa-product-list>
+
+  <div class="se-container se-flex" id="se-quinta-linha">
+    <div class="se-relative se-cmd-12">
+      <img pwa-src="guy-showing-shoes" class="se-w100">
+      <div class="se-banner12-inside-text">
+        <p class="se-offering-what">Chegou na Serallê Adidas Ultra Boost</p>
+        <p class="se-how-much">A partir de R$ 299,99</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER DE MARCAS -->
+  <div class="se-container se-flex" id="se-sexta-linha">
+
+    <div class="swiper-container" id="se-slide3-home" pwa-hook="se-slide3-home">
+
+      <div class="swiper-wrapper se-slide01-wrapper">
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="adidas-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="mizuno-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="oasics-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="puma-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="adidas-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="mizuno-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="oasics-logo">
+        </div>
+
+        <div class="swiper-slide se-card-slide">
+          <img pwa-src="puma-logo">
+        </div>
+      </div>
+
+      <div class="se-slide3-next">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-right">
+          <span class="fa fa-chevron-right"></span>
+        </div>
+      </div>
+
+      <div class="se-slide3-prev">
+        <div class="se-swiper-gradient"></div>
+        <div class="se-left">
+          <span class="fa fa-chevron-left"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="se-container se-flex" id="se-setima-linha">
+    <div class="se-relative se-cmd-6">
+      <img pwa-src="shoes-podium-yellow" class="se-w100" />
+      <div class="se-banner6-inside-text">
+        <p class="se-what se-heavy">3 sapatilhas femininas</p>
+        <p class="se-is-off se-cyan">por R$ 149,99</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+
+    <div class="se-relative se-cmd-6">
+      <img pwa-src="shoes-podium-cyan" class="se-w100" />
+      <div class="se-banner6-inside-text">
+        <p class="se-what">Toda a coleção de sandálias:</p>
+        <p class="se-is-off">Compre 1 Leve 2</p>
+        <button class="se-white-background">compre agora</button>
+      </div>
+    </div>
+  </div>
+</main>

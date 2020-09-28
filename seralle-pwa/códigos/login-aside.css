@@ -22,6 +22,7 @@
     background-color: #2BBAFE !important;
     border-color: unset !important;
     color: #fff;
+    border: unset !important;
 }
 
 .p4a-authentication input:focus {

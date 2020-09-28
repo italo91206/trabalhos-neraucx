@@ -43,20 +43,22 @@
       </pwa-search-form>
 
       <div id="user-nav" class="se-flex">
-        <id class="image">
+        <div class="image">
           <img pwa-src="guest-profile-pic" alt="" id="se-guest-profile-pic">
-        </id>
-        <div class="text" pwa-not-logged pwa-to-auth>
-          <h2>Olá!</h2>
-          <a>Acesse sua conta</a>
         </div>
+
+        <div class="text" pwa-not-logged >
+          <h2>Olá!</h2>
+          <a pwa-to-auth>Acesse sua conta</a>
+        </div>
+
         <div class="text" pwa-is-logged pwa-to-account>
           <h2>Bem vindo!</h2>
-          <a> {{ $$user.name }}</a>
+          <a> {{ $$user.firstname }}</a>
         </div>
       </div>
 
-      <div id="se-favoritos" pwa-to-wishlist>
+      <div pwa-is-logged id="se-favoritos" pwa-to-wishlist>
         <a>
           <i class="fa fa-heart-o"></i>
         </a>

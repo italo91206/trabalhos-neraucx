@@ -1,0 +1,67 @@
+<aside id="se-cart" class="">
+  <section class="se-sacola">
+    <div id="title" class="se-flex">
+      <i pwa-toggle-cart class="fa fa-times"></i>
+      <p>Sua Sacola</p>
+    </div>
+
+    <ul pwa-has-items class="se-cart-item-ul">
+      <li pwa-each-item class="se-cart-item se-flex se-relative">
+        <div pwa-remove-item class="se-remove-se-cart-item">
+          <i class="fa fa-trash"></i>
+        </div>
+
+        <div class="se-item-image">
+          <img pwa--if="product.images && product.images !== []" pwa-src="product.images[0]" pwa-alt="product.name">
+        </div>
+        <div class="se-item-text">
+          <p class="se-marca">nike</p>
+          <p class="se-titulo">{{ product.name.length > 30 ? product.name.substr(0, 30) + '...' : product.name }}</p>
+          <p class="se-tamanho">Tam. {{ product.skuName }}</p>
+          <p class="se-quantidade">Quantidade
+            <span> <span pwa-quantity-decrement>-</span> <input pwa-quantity-box> <span
+                pwa-quantity-increment>+</span></span>
+          </p>
+          <p class="se-preco">{{ product.price | price }}</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="se-frete">
+    <div class="se-frete-fundo">
+      <div class="se-frete-preenchimento"></div>
+      <div class="se-frete-text se-flex">
+        <i class="fa fa-truck"></i>
+        <div>
+          <p class="se-quanto-falta">Faltam <span>R$ XXX,XX</span></p>
+          <p class="se-recopmensa">para você ganhar <span>frete grátis</span></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="total">
+    <div class="se-flex">
+      <p class="se-subtotal">Subtotal: <span>R$ 300,00</span></p>
+    </div>
+
+    <div class="se-flex">
+      <label for="se-cupom-desconto" class="se-cupom-input">Cupom de desconto:</label>
+      <input pwa-coupon-box required id="se-cupom-desconto" placeholder="Digite seu cupom" />
+    </div>
+
+    <button pwa-coupon-apply pwa-without-coupon class="se-button-blue">Finalizar compra</button>
+
+    <span pwa-with-coupon class="mr-form__input-checked">✓</span>
+
+    <div class="se-share-purchase">
+      <a href="" class="se-flex">
+        <i class="fa fa-share-alt"></i>
+        <p>Compartilhe sua sacola</p>
+      </a>
+    </div>
+
+  </section>
+</aside>
