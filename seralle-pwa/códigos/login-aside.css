@@ -1,0 +1,33 @@
+.p4a-authentication-header strong {
+    font-family: 'Axiforma-bold' !important;
+    font-size: 28px !important;
+    text-transform: capitalize !important;
+}
+
+.p4a-authentication {
+    width: 491px;
+}
+
+.p4a-authentication-text {
+    font-size: 16px;
+    color: #5A6672;
+}
+
+.p4a-style__primary--background {
+    background-color: #2BBAFE !important;
+    border-color: unset !important;
+}
+
+.p4a-style__primary--background:disabled {
+    background-color: #2BBAFE !important;
+    border-color: unset !important;
+    color: #fff;
+}
+
+.p4a-authentication input:focus {
+    outline: unset !important;
+}
+
+.p4a-authentication input {
+    color: #2B85C1 !important;
+}
