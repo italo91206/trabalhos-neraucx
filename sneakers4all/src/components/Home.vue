@@ -8,16 +8,19 @@
     </div>
 
     <div id="tabela-resultado" class="container">
-        <table>
-            <tr class="table-headers">
-                <th>Site</th>
-                <th>Produto</th>
-                <th>Situação</th>
-                <th>Preço</th>
-                <th>Link</th>
-                <th>Opções</th>
-            </tr>
-        </table>
+      <table>
+          <tr class="table-headers">
+              <th>Site</th>
+              <th>Produto</th>
+              <th>Situação</th>
+              <th>Preço</th>
+              <th>Link</th>
+              <th>Opções</th>
+          </tr>
+      </table>
+      <p>
+        {{info}}
+      </p>
     </div>
   </main>
 </template>
@@ -29,18 +32,19 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      HTPP: axios.create({
-        baseURL: `http://localhost/sneakers4all/API/controle.php`,
-        headers: {
-          Authorization: 'Bearer {token}'
-        }
-      })
+      info: ''
     }
   },
   mounted(){
-      this.HTTP
-      .get('http://localhost/sneakers4all/API/controle.php?fn=listar')
+    this.listar();
+  },
+  methods: {
+    listar: function(){
+      axios
+      .get(`http://localhost/sneakers4all/API/controle.php?fn=listar`, {'Access-Control-Allow-Origin':'*'})
       .then(response => (this.info = response))
+      .catch(error => console.log(error))
+    }
   }
 }
 </script>
