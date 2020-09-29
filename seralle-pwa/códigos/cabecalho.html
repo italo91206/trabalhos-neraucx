@@ -81,7 +81,7 @@
   <nav id="se-nav">
     <div class="se-container">
       <ul class="menu">
-        <li>
+        <li class="se-menu-item">
           <a pwa-to-page="/masculino">Masculino</a>
           <div class="submenu">
             <div class="submenu-content se-flex">
@@ -115,8 +115,8 @@
               </div>
 
               <section class="se-brand-line se-desktop">
-                <div class="swiper-container" id="se-slide-brand-masculino-home">
-
+                <!-- Add sliders -->
+                <div class="swiper-container" id="se-slide-brand-masculino-home" pwa-hook="se-slide-brand-masculino-home">
                   <div class="swiper-wrapper">
 
                     <div class="swiper-slide se-brand-slide">
@@ -153,25 +153,16 @@
 
 
                   </div>
-
-                  <div class="se-slide-brand-masculino-next">
-                    <div class="se-right">
-                      <span class="fa fa-chevron-right"></span>
-                    </div>
-                  </div>
-
-                  <div class="se-slide-brand-masculino-prev">
-                    <div class="se-left">
-                      <span class="fa fa-chevron-left"></span>
-                    </div>
-                  </div>
-
+   
+                  <!-- Add navigation -->
+                  <div class="se-slide-brand-masculino-next"><span class="fa fa-chevron-right"></span></div>
+                  <div class="se-slide-brand-masculino-prev"><span class="fa fa-chevron-left"></span></div>
                 </div>
               </section>
             </div>
           </div>
         </li>
-        <li>
+        <li class="se-menu-item">
           <a pwa-to-page="/feminino">Feminino</a>
           <div class="submenu">
             <div class="submenu-content se-flex">
@@ -274,11 +265,11 @@
             </div>
           </div>
         </li>
-        <li><a href="">Infantil</a></li>
-        <li><a href="">Lançamentos</a></li>
-        <li><a pwa-to-page="/esporte">Esportes</a></li>
-        <li><a href="">Marcas</a></li>
-        <li><a href="">Promoção</a></li>
+        <li class="se-menu-item"><a pwa-to-page="">Infantil</a></li>
+        <li class="se-menu-item"><a pwa-to-page="">Lançamentos</a></li>
+        <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
+        <li class="se-menu-item"><a pwa-to-page="">Marcas</a></li>
+        <li class="se-menu-item"><a pwa-to-page="">Promoção</a></li>
       </ul>
     </div>
   </nav>

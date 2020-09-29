@@ -194,10 +194,122 @@ nav#se-nav ul.menu {
 	position: relative;
 }
 
-nav#se-nav ul.menu li {
+/* nav#se-nav ul.menu li {
 	float: left;
 	margin: 0 auto;
 	font-size: 14px;
 	transition: all .1s ease;
 	color: #001C3E;
+} */
+
+.submenu ul.menu li {
+    float: initial;
+    color: #5A6672;
+    list-style: none;
+    /* margin-inline-start: -38px; */
+    margin-bottom: 18px;
+}
+
+.se-category-list li {
+    float: initial;
+    color: #5A6672;
+    list-style: none;
+    /* margin-inline-start: -38px; */
+    margin-bottom: 18px;
+}
+
+.se-category-list {
+    padding-inline-start: 0px;
+}
+
+.submenu-content h3 {
+    margin-block-start: 6px;
+    margin-block-end: 17px;
+}
+
+.se-category-list li {
+    line-height: 30px;
+}
+
+.se-more-category-links {
+    padding-inline-start: 0px;
+}
+
+.se-category-list li:last-child {
+    margin-bottom: 30px !important;
+}
+
+.se-menu-item {
+    float: left;
+    margin: 0 auto;
+    font-size: 14px;
+    transition: all .1s ease;
+    color: #001C3E;
+}
+
+.se-more-category-links li {
+	float: initial;
+	/* margin-inline-start: -33px; */
+	margin-bottom: 18px;
+	list-style: none;
+}
+
+.se-more-category-links li:hover {
+	border: none;
+	color: #0b96d8;
+	font-weight: 800;
+}
+
+.se-brand-line {
+    position: relative;
+}
+
+.se-slide-brand-masculino-next {
+    position: absolute;
+    right: 0px;
+    top: 25%;
+}
+
+.se-slide-brand-masculino-prev {
+    position: absolute;
+    top: 25%;
+    left: 0px;
+}
+
+.se-slide-brand-masculino-prev,
+.se-slide-brand-masculino-next{
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+	display: flex;
+	z-index: 1;
+}
+
+.se-slide-brand-masculino-next .fa,
+.se-slide-brand-masculino-prev .fa{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	margin: 0 auto;
+}
+
+.se-brand-slide img {
+	width: 100%;
+	max-width: 50px;
+}
+
+#se-slide-brand-masculino-home {
+	width: 560px;
+	height: 90px;
+}
+
+#se-slide-brand-masculino-home .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }

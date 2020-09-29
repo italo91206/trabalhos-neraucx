@@ -2,6 +2,11 @@ html {
 	background-color: #fff;
 }
 
+a, a:active, a:hover, a:visited, a:focus {
+    color: unset;
+    text-decoration: none;
+}
+
 body {
 	margin: 0px;
 }
@@ -328,7 +333,7 @@ img#nerau-logo {
 	margin-top: 27px;
 }
 
-nav#se-nav ul.menu li:hover {
+.se-menu-item:hover {
 	border-bottom: 5px solid #2BBAFE;
 	color: #2BBAFE;
 }
@@ -406,33 +411,6 @@ form#se-busca-home button:hover {
 
 ul.se-category-list li {
 	float: none;
-}
-
-nav#se-nav ul.se-category-list li {
-    float: initial;
-    color: #5A6672;
-    list-style: none;
-    margin-inline-start: -38px;
-    margin-bottom: 18px;
-}
-
-nav#se-nav ul.se-category-list li:hover {
-	border: none;
-	color: #3c4956;
-	font-weight: 800;
-}
-
-nav#se-nav ul.se-more-category-links li {
-	float: initial;
-	margin-inline-start: -33px;
-	margin-bottom: 18px;
-	list-style: none;
-}
-
-nav#se-nav ul.se-more-category-links li:hover {
-	border: none;
-	color: #0b96d8;
-	font-weight: 800;
 }
 
 div.se-coluna-esquerda section {
@@ -704,10 +682,6 @@ section.total button.se-button-blue {
     margin: 0 auto;
     text-align: center;
     padding: 8px 0 5px 0;
-}
-
-nav#se-nav ul.se-category-list li:last-child {
-    margin-bottom: 40px;
 }
 
 .se-more-category-links li {
@@ -1109,10 +1083,10 @@ div#se-setima-linha {
 .se-desktop{
 	display: block !important;
 }
-#se-header span.fa {
+/* #se-header span.fa {
     font-size: 25px;
 	color: #007ac0;
-}
+} */
 #se-header .fa.fa-bars {
     margin-right: 15px;
     margin-top: 15px;
@@ -1462,7 +1436,7 @@ span.fa.fa-shopping-cart.se-mobile {
     right: auto;
 }
 
-span.fa.fa-chevron-left {
+/* span.fa.fa-chevron-left {
     padding-top: 15px;
     padding-left: 15px;
     font-size: 12px;
@@ -1472,7 +1446,8 @@ span.fa.fa-chevron-right {
     padding-top: 15px;
     padding-left: 17px;
     font-size: 12px;
-}
+} */
+
 div#se-slide2-home,
 div#se-slide1-home {
 	width: 1180px;
@@ -1607,14 +1582,6 @@ section.se-brand-line {
 .swiper-slide.se-brand-slide {
     width: 25%;
     margin: 0 auto;
-}
-
-.se-brand-slide img {
-    width: 100%;
-}
-
-div#se-slide-brand-masculino-home {
-    width: 560px;
 }
 
 .se-relative.se-cmd-4 {
