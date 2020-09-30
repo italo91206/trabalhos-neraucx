@@ -6,6 +6,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="i in 2" :key="i">
           <a class="se-releases__card se-releases__card--left" pwa-to-page="/masculino">
+            <!-- <img pwa-src="banner-shoes-azul-alt" class="se-w100" alt="Blusas"> -->
             <img pwa-src="bigslider-shoes" class="se-w100" alt="Blusas">
 
             <div class="se-banner-grande-overlay se-container">
@@ -51,7 +52,7 @@
   </section>
 
   <!-- PRIMEIRO SLIDER DE PRODUTOS -->
-  <pwa-product-list name="ofertas" filter="categories.name: 'masculino'" size="12"
+  <pwa-product-list name="ofertas" filter="categories.name: 'esporte'" size="12"
     class="se-slider-container se-flex se-relative" id="se-segunda-linha">
 
     <div id="se-slide-holder">
@@ -65,18 +66,15 @@
         </div>
       </div>
 
-      <div class="se-slide1-next">
+      <!-- adicionar navegação -->
+      <div class="se-slide1-next isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-right">
-          <span class="fa fa-chevron-right"></span>
-        </div>
+        <span class="fa fa-chevron-right"></span>
       </div>
 
-      <div class="se-slide1-prev">
+      <div class="se-slide1-prev isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-left">
-          <span class="fa fa-chevron-left"></span>
-        </div>
+        <span class="fa fa-chevron-left"></span>
       </div>
     </div>
   </pwa-product-list>
@@ -90,6 +88,7 @@
         <button class="se-white-background">compre agora</button>
       </div>
     </div>
+
     <div class="se-relative se-cmd-4">
       <img pwa-src="olympikus-square-green" class="se-w100" />
       <div class="se-banner4-inside-text">
@@ -98,6 +97,7 @@
         <button class="se-white-background">compre agora</button>
       </div>
     </div>
+
     <div class="se-relative se-cmd-4">
       <img pwa-src="square-shoes-yellow" class="se-w100" />
       <div class="se-banner4-inside-text">
@@ -109,7 +109,7 @@
   </div>
 
   <!-- SEGUNDO SLIDER DE PRODUTOS -->
-  <pwa-product-list name="ofertas" filter="categories.name: 'feminino'" size="15" class="se-slider-container se-relative se-flex" id="se-quarta-linha">
+  <pwa-product-list name="ofertas" filter="categories.name: 'esporte'" size="15" class="se-slider-container se-relative se-flex" id="se-quarta-linha">
 
     <div id="se-slide-holder">
       <img pwa-src="ofertas-slide-holder" class="se-w100" />
@@ -123,18 +123,14 @@
         </div>
       </div>
 
-      <div class="se-slide2-next">
+      <div class="se-slide2-next isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-right">
-          <span class="fa fa-chevron-right"></span>
-        </div>
+        <span class="fa fa-chevron-right"></span>
       </div>
 
-      <div class="se-slide2-prev">
+      <div class="se-slide2-prev isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-left">
-          <span class="fa fa-chevron-left"></span>
-        </div>
+        <span class="fa fa-chevron-left"></span>
       </div>
     </div>
   </pwa-product-list>
@@ -190,18 +186,15 @@
         </div>
       </div>
 
-      <div class="se-slide3-next">
+      <!-- navigation -->
+      <div class="se-slide3-next isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-right">
-          <span class="fa fa-chevron-right"></span>
-        </div>
+        <span class="fa fa-chevron-right"></span>
       </div>
 
-      <div class="se-slide3-prev">
+      <div class="se-slide3-prev isdesktop">
         <div class="se-swiper-gradient"></div>
-        <div class="se-left">
-          <span class="fa fa-chevron-left"></span>
-        </div>
+        <span class="fa fa-chevron-left"></span>
       </div>
     </div>
   </div>

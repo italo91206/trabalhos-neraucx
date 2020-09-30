@@ -33,7 +33,7 @@
         <img pwa-src="logo" alt="" id="se-logo">
       </a>
 
-      <span class="fa fa-search se-mobile" pwa-hook.click="ativa-form-busca"></span>
+      <span id="se-busca-mobile" class="fa fa-search se-mobile" pwa-hook="ativa-busca-mobile"></span>
 
       <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart></span>
 
@@ -89,16 +89,16 @@
                 <section>
                   <h3>Calçados</h3>
                   <ul class="se-category-list">
-                    <li><a href="">Tênis</a></li>
-                    <li><a href="">Coturno</a></li>
-                    <li><a href="">Chinelo</a></li>
-                    <li><a href="">Sapatênis</a></li>
-                    <li><a href="">Sapato</a></li>
-                    <li><a href="">Infantil</a></li>
+                    <li><a pwa-to-page="/tenis">Tênis</a></li>
+                    <li><a pwa-to-page="/coturno">Coturno</a></li>
+                    <li><a pwa-to-page="/chinelo">Chinelo</a></li>
+                    <li><a pwa-to-page="/sapatenis">Sapatênis</a></li>
+                    <li><a pwa-to-page="/sapato">Sapato</a></li>
+                    <li><a pwa-to-page="/tenis">Infantil</a></li>
                   </ul>
                   <ul class="se-more-category-links">
-                    <li><a href="">+ Novidades</a></li>
-                    <li><a href="">+ Ofertas</a></li>
+                    <li><a pwa-to-page="">+ Novidades</a></li>
+                    <li><a pwa-to-page="">+ Ofertas</a></li>
                   </ul>
 
               </div>
@@ -170,28 +170,28 @@
                 <section>
                   <h3>Calçados</h3>
                   <ul class="se-category-list">
-                    <li><a href="">Tênis</a></li>
-                    <li><a href="">Rasteira</a></li>
-                    <li><a href="">Sapatilha</a></li>
-                    <li><a href="">Sapato</a></li>
-                    <li><a href="">Bota</a></li>
-                    <li><a href="">Tamanco</a></li>
-                    <li><a href="">Slip on</a></li>
-                    <li><a href="">Chinelo</a></li>
-                    <li><a href="">Infantil</a></li>
+                    <li><a pwa-to-page="/tenis">Tênis</a></li>
+                    <li><a pwa-to-page="/rasteira">Rasteira</a></li>
+                    <li><a pwa-to-page="/sapatilha">Sapatilha</a></li>
+                    <li><a pwa-to-page="/sapato">Sapato</a></li>
+                    <li><a pwa-to-page="/tenis">Bota</a></li>
+                    <li><a pwa-to-page="/tamanco">Tamanco</a></li>
+                    <li><a pwa-to-page="/tenis">Slip on</a></li>
+                    <li><a pwa-to-page="/chinelo">Chinelo</a></li>
+                    <li><a pwa-to-page="/tenis">Infantil</a></li>
                   </ul>
                   <ul class="se-more-category-links">
-                    <li><a href="">+ Novidades</a></li>
-                    <li><a href="">+ Ofertas</a></li>
+                    <li><a pwa-to-page="">+ Novidades</a></li>
+                    <li><a pwa-to-page="">+ Ofertas</a></li>
                   </ul>
                 </section>
 
                 <section>
                   <h3>Acessórios</h3>
                   <ul class="se-category-list">
-                    <li><a href="">Bolsa</a></li>
-                    <li><a href="">Carteira</a></li>
-                    <li><a href="">Mochila</a></li>
+                    <li><a pwa-to-page="/bolsa">Bolsa</a></li>
+                    <li><a pwa-to-page="/carteira">Carteira</a></li>
+                    <li><a pwa-to-page="/mochila">Mochila</a></li>
                   </ul>
                 </section>
               </div>
@@ -265,11 +265,11 @@
             </div>
           </div>
         </li>
-        <li class="se-menu-item"><a pwa-to-page="">Infantil</a></li>
-        <li class="se-menu-item"><a pwa-to-page="">Lançamentos</a></li>
+        <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
+        <li class="se-menu-item"><a pwa-to-page="/tenis">Lançamentos</a></li>
         <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
-        <li class="se-menu-item"><a pwa-to-page="">Marcas</a></li>
-        <li class="se-menu-item"><a pwa-to-page="">Promoção</a></li>
+        <li class="se-menu-item"><a pwa-to-page="/tenis">Marcas</a></li>
+        <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
       </ul>
     </div>
   </nav>

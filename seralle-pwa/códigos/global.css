@@ -1511,7 +1511,9 @@ div#se-slide-holder img {
     left: -20px;
     box-shadow: -130px 0 250px 380px #fff;
 }
-.se-slide2-prev .se-swiper-gradient, .se-slide1-next .se-swiper-gradient {
+
+.se-slide2-next .se-swiper-gradient, 
+.se-slide1-next .se-swiper-gradient {
     right: -20px;
     left: unset;
     box-shadow: 100px 0 250px 380px #fff;

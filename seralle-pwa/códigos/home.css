@@ -1,0 +1,55 @@
+.se-slide2-next .fa-chevron-right,
+.se-slide1-next .fa-chevron-right {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+}
+
+.se-slide2-prev .fa-chevron-left,
+.se-slide1-prev .fa-chevron-left {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+}
+
+.se-slide2-next .fa-chevron-right,
+.se-slide2-prev .fa-chevron-left,
+.se-slide1-prev .fa-chevron-left,
+.se-slide1-next .fa-chevron-right{
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+}
+
+
+.se-slide3-prev .fa-chevron-left{
+    position: absolute;
+    left: 0;
+    top: 25%;
+}
+.se-slide3-next .fa-chevron-right{
+    position: absolute;
+    right: 0px;
+    top: 25%;
+}
+
+.se-slide3-next .fa-chevron-right,
+.se-slide3-prev .fa-chevron-left{
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+}
