@@ -1,5 +1,6 @@
 <header id="se-header">
   <pwa-cart />
+  <div id="se-cart__darken" class="se-cart__darken" style="" pwa-hook="cart-background"></div>
 
   <section id="se-top-header">
     <div class="se-container se-flex">
@@ -35,7 +36,7 @@
 
       <span id="se-busca-mobile" class="fa fa-search se-mobile" pwa-hook="ativa-busca-mobile"></span>
 
-      <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart></span>
+      <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart pwa-hook="cart-background"></span>
 
       <pwa-search-form id="se-busca-home">
         <input pwa-search-box placeholder="O que você precisa?">
@@ -65,7 +66,7 @@
       </div>
 
       <div pwa-toggle-cart id="se-cart-icon">
-        <a>
+        <a id="se-cart-open-button">
           <div class="circle">
             <i class="fa fa-shopping-bag"></i>
           </div>
@@ -78,7 +79,56 @@
     </div>
   </section>
 
-  <nav id="se-nav">
+  <pwa-category-list name="main-menu" size="12" level="2" id="se-nav">
+    <div class="se-container">
+        <ul class="menu">
+            <li pwa-each-category class="se-menu-item">
+                <a pwa-to-category-page>{{ category.name }}</a>
+    
+                <div class="submenu">
+                    <div class="submenu-content se-flex">
+                        <div>
+                            <div class="se-coluna-esquerda">
+                                <h3>{{ category.name }}</h3>
+                                <pwa-subcategory-list size="90">
+                                    <ul class="se-category-list">
+                                        <li pwa-each-subcategory>
+                                            <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
+                                        </li>
+                                    </ul>
+                                </pwa-subcategory-list>
+                                <ul class="se-more-category-links">
+                                    <li><a pwa-to-page="">+ Novidades</a></li>
+                                    <li><a pwa-to-page="">+ Ofertas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="se-coluna-direita">
+                            <div class="se-banner se-relative">
+                            <img pwa-src="olympus-runners" alt="">
+                            <div class="se-text">
+                                <p class="se-banner-tittle"> Olympikus com preços acessíveis.</p>
+                                <p class="se-banner-subtittle">A partir de R$ 89,99</p>
+                                <button class="se-button-blue">Compre agora</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
+            <li class="se-menu-item"><a pwa-to-page="/tenis">Lançamentos</a></li>
+            <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
+            <li class="se-menu-item"><a pwa-to-page="/tenis">Marcas</a></li>
+            <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li> -->
+        </ul>
+    </div>
+</pwa-category-list>
+
+  <!-- <nav id="se-nav">
     <div class="se-container">
       <ul class="menu">
         <li class="se-menu-item">
@@ -86,7 +136,6 @@
           <div class="submenu">
             <div class="submenu-content se-flex">
               <div class="se-coluna-esquerda">
-                <section>
                   <h3>Calçados</h3>
                   <ul class="se-category-list">
                     <li><a pwa-to-page="/tenis">Tênis</a></li>
@@ -115,7 +164,6 @@
               </div>
 
               <section class="se-brand-line se-desktop">
-                <!-- Add sliders -->
                 <div class="swiper-container" id="se-slide-brand-masculino-home" pwa-hook="se-slide-brand-masculino-home">
                   <div class="swiper-wrapper">
 
@@ -154,7 +202,6 @@
 
                   </div>
    
-                  <!-- Add navigation -->
                   <div class="se-slide-brand-masculino-next"><span class="fa fa-chevron-right"></span></div>
                   <div class="se-slide-brand-masculino-prev"><span class="fa fa-chevron-left"></span></div>
                 </div>
@@ -272,7 +319,7 @@
         <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
   <section id="se-after-nav">
     <div class="se-container">

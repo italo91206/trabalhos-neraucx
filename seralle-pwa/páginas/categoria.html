@@ -1,0 +1,254 @@
+<main id="se-category-page">
+  <section class="se-breadcrumb se-container">
+    <p><span class="se-underline">Home</span> / <span>{{ bc.name }}</span></p>
+  </section>
+
+  <section id="inner-category-section" class="se-container se-flex">
+    <section class="se-coluna-esquerda">
+      <div class="se-filtros">
+        <pwa-tags-filter>
+          <div pwa-has-filters class="sc-remove__filter">
+            <div pwa-each-filter class="sc-remove__filter-item">
+              {{ filter.value  }}
+              <a pwa-remove-filter="click"><span class="fas fa-window-close"></span></a>
+            </div>
+          </div>
+
+          <!-- <div pwa-not-filters class="se-filters-header se-relative">
+            <h2>Filtros selecionados</h2>
+            <h3>Nenhum filtro selecionado</h3>
+            <div class="se-abre-fecha-menu">
+              <span id="abre-fecha-handler" class="se-mobile fa fa-bars" pwa-hook.click="open-close-filters"></span>
+            </div>
+          </div> -->
+        </pwa-tags-filter>
+
+        <div id="se-opcoes-filtro" class="some">
+          <pwa-attribute-filter static attribute="product_brands" class="se-filter-options se-marcas">
+            <h2 pwa-has-filters>Marcas</h2>
+
+            <form pwa-has-filters action="" id="se-busca-marca">
+              <input type="text" placeholder="Busque a marca">
+              <button><span class="fa fa-search"></span></button>
+            </form>
+
+            <ul pwa-has-filters class="blue-scroll">
+              <li pwa-each-filter>
+                <input pwa-filter-input="checked" type="checkbox" name="marca" />
+                <label for="marca">{{ filter.label }} ({{ filter.count }})</label>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+
+          <pwa-attribute-filter static attribute="referencia" class="se-filter-options se-marcas">
+            <h2 pwa-has-filters>Modelo</h2>
+            <ul pwa-has-filters class="blue-scroll">
+              <li pwa-each-filter>
+                <input pwa-filter-input="checked" type="checkbox" name="modelo" />
+                <label for="modelo">{{ filter.label }} ({{ filter.count }})</label>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+
+          <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-marcas">
+						<h2 pwa-has-filters>Modelo da bolsa</h2>
+                        <ul pwa-has-filters class="blue-scroll">
+                            <li pwa-each-filter>
+                                <input pwa-filter-input="checked" type="checkbox" name="blusa"/>
+                                <label for="blusa">{{ filter.label }} ({{ filter.count }})</label>
+                            </li>
+                        </ul>
+					</pwa-attribute-filter> -->
+
+          <pwa-attribute-filter static attribute="tamanho" class="se-filter-options se-marcas">
+            <h2 pwa-has-filters>Tamanho</h2>
+
+            <div pwa-has-filters class="se-flex blue-scroll">
+              <button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
+            </div>
+          </pwa-attribute-filter>
+
+          <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-marcas">
+						<h2 pwa-has-filters>Tamanho</h2>
+
+						<div pwa-has-filters class="se-flex blue-scroll">
+							<button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
+						</div>
+
+					</pwa-attribute-filter> -->
+
+          <pwa-attribute-filter static attribute="color" class="se-filter-options se-cores">
+            <h2 pwa-has-filters>Cor</h2>
+            <ul pwa-has-filters class="blue-scroll">
+              <li pwa-each-filter>
+                <button pwa-filter-input="checked" class="se-color-option red"></button>
+                <p>{{ filter.label }} ({{ filter.count }})</p>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+
+          <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-promocoes">
+						<h2 pwa-has-filters>Promoçoes</h2>
+                        <ul pwa-has-filters class="blue-scroll">
+                            <li pwa-each-filter>
+                                <input pwa-filter-input="checked"  type="checkbox" name="proomocao"/>
+                                <label for="proomocao">{{ filter.label }} ({{ filter.count }})</label>
+                            </li>
+                        </ul>
+					</pwa-attribute-filter> -->
+
+          <pwa-price-filter class="se-filter-options se-precos">
+            <h2 pwa-has-filters>Preço</h2>
+
+            <div>
+                <label for="price-from">De R$</label>
+                <input v-model="component.min" type="number" name="price-from" class="se-price-filter">
+        
+                <label for="price-to">até R$</label>
+                <input v-model="component.max" type="number" name="price-to" class="se-price-filter">
+            </div>
+          </pwa-price-filter>
+
+          <!-- <div class="se-filter-options se-material">
+						<h2>Material</h2>
+					</div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="se-coluna-direita">
+      <div class="se-banner-holder">
+        <img pwa-src="category-feminino" alt="" class="se-w100">
+      </div>
+      <div class="se-category-inner-info">
+        <div class="se-flex">
+          <div class="se-products-total-find">
+            <p><span>{{ results_count }} </span> produtos</p>
+          </div>
+
+          <div class="se-products-filter">
+            <pwa-manual-filter>
+              <label for="filter">Ordenar por:</label>
+              <select pwa-filter-input name="filter" id="se-filter">
+                <option value="product_id:-">Lançamentos</option>
+                <!-- <option value="ranking:-">Mais vendidos</option> -->
+                <option value="price:+">Mais baratos</option>
+                <option value="price:-">Mais caros</option>
+              </select>
+            </pwa-manual-filter>
+          </div>
+        </div>
+
+        <pwa-result-list size="36" automatic-scrolls="0" id="category-products-find" class="se-flex">
+          <div pwa-each-product class="product-find">
+            <pwa-product-card>
+          </div>
+
+          <div class="swiper-container" id="se-slide-banner-categoria" pwa-hook="se-slide-banner-categoria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+
+              <div class="swiper-slide se-banner-slide">
+                <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
+              </div>
+            </div>
+
+            <div class="se-slide6-pagination"></div>
+
+            <div class="se-slide6-next"><span class="fa fa-chevron-right"></span></div>
+            <div class="se-slide6-prev"><span class="fa fa-chevron-left"></span></div>
+          </div>
+
+          <section class="se-cmd12" id="se-category-last-banner-holder-text">
+            <h3>Feminino</h3>
+            <p>
+              Calçados ou acessórios? Tudo que toda mulher precisa está aqui
+              na Serallê. Se deseja presentear os seus pés com o que há de
+              melhor, nós temos vários produtos só esperando o seu pedido para
+              qualquer ocasião. Como é a sua rotina? Tênis, rasteiras e
+              sapatilhas te acompanham a cada passo? Ou você prefere aquele
+              Slip On, perfeito para qualquer situação? Fique à vontade para
+              fazer suas melhores escolhas. Estamos aqui para ajudar.
+            </p>
+          </section>
+        </pwa-result-list>
+      </div>
+    </section>
+  </section>
+
+  <section class="se-container" id="se-categoria-footer">
+    <h2 class="se-text-center">Você também vai gostar</h2>
+
+    <div class="swiper-container" id="se-slide-final-categoria" pwa-hook="se-slide-final-categoria">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide se-card-slide" v-for="i in 10">
+          <a class="se-releases__card se-releases__card--left">
+            <button class="se-add-to-favorite">
+              <span class="fa fa-heart-o"></span>
+            </button>
+            <div class="se-price-off">10% OFF</div>
+            <div class="se-shipping-free">Frete grátis</div>
+            <img pwa-src="cart-sample-item" class="se-w100" alt="Blusas">
+
+            <article class="se-card-overlay">
+              <button class="se-button-blue">confira</button>
+            </article>
+
+            <article class="se-card-title">
+              <p class="se-card-title">Colcci</p>
+              <p class="se-card-full-title">Bota cano alto Colcci tratorada caramelo</p>
+              <p class="se-card-price">
+                <span class="se-card-price-before">R$ 245,00</span><span class="se-card-price-actual">R$ 245,00</span>
+              </p>
+              <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+            </article>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="se-category-footer">
+    <section class="se-container se-flex">
+      <div class="se-cmd-4">
+        <span class="icon-cartao"></span>
+        <p>Pague em até</p>
+        <h2>12x no cartão</h2>
+      </div>
+
+      <div class="se-cmd-4">
+        <span class="icon-sacola"></span>
+        <p>Compre aqui e</p>
+        <h2>retire na loja</h2>
+      </div>
+
+      <div class="se-cmd-4">
+        <span class="icon-entrega-expresso"></span>
+        <p>Entrega expressa</p>
+        <h2>em até 1 dia útil</h2>
+        <p class="se-gray">Consulte as cidades</p>
+      </div>
+
+    </section>
+  </section>
+</main>

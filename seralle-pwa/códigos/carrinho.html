@@ -1,7 +1,7 @@
-<aside id="se-cart" class="">
+<aside id="se-cart" class="" pwa-hook="cart-background">
   <section class="se-sacola">
     <div id="title" class="se-flex">
-      <i pwa-toggle-cart class="fa fa-times"></i>
+      <i id="se-carrinho-fechar-button" pwa-toggle-cart class="fa fa-times"></i>
       <p>Sua Sacola</p>
     </div>
 
@@ -19,8 +19,11 @@
           <p class="se-titulo">{{ product.name.length > 30 ? product.name.substr(0, 30) + '...' : product.name }}</p>
           <p class="se-tamanho">Tam. {{ product.skuName }}</p>
           <p class="se-quantidade">Quantidade
-            <span> <span pwa-quantity-decrement>-</span> <input pwa-quantity-box> <span
-                pwa-quantity-increment>+</span></span>
+            <span>
+              <span pwa-quantity-decrement>-</span>
+              <input pwa-quantity-box>
+              <span pwa-quantity-increment>+</span>
+            </span>
           </p>
           <p class="se-preco">{{ product.price | price }}</p>
         </div>
@@ -30,12 +33,13 @@
 
   <section class="se-frete">
     <div class="se-frete-fundo">
-      <div class="se-frete-preenchimento"></div>
+      <div class="se-frete-preenchimento" pwa-hook="cart-transformer"></div>
       <div class="se-frete-text se-flex">
         <i class="fa fa-truck"></i>
         <div>
-          <p class="se-quanto-falta">Faltam <span>R$ XXX,XX</span></p>
-          <p class="se-recopmensa">para você ganhar <span>frete grátis</span></p>
+          <p pwa--if="199 - $$cart.subtotal  > 0" class="se-quanto-falta">Faltam <span>{{ (199 - $$cart.subtotal )| price }}</span></p>
+          <p pwa--if="199 - $$cart.subtotal  <= 0" class="se-quanto-falta">Você ganhou frete grátis!</span></p>
+          <p pwa--if="199 - $$cart.subtotal  > 0"  class="se-recopmensa">para você ganhar <span>frete grátis</span></p>
         </div>
       </div>
     </div>
@@ -44,7 +48,7 @@
 
   <section class="total">
     <div class="se-flex">
-      <p class="se-subtotal">Subtotal: <span>R$ 300,00</span></p>
+      <p class="se-subtotal">Subtotal: <span>{{ $$cart.subtotal | price }}</span></p>
     </div>
 
     <div class="se-flex">
@@ -52,7 +56,7 @@
       <input pwa-coupon-box required id="se-cupom-desconto" placeholder="Digite seu cupom" />
     </div>
 
-    <button pwa-coupon-apply pwa-without-coupon class="se-button-blue">Finalizar compra</button>
+    <button pwa-checkout class="se-button-blue">Finalizar compra</button>
 
     <span pwa-with-coupon class="mr-form__input-checked">✓</span>
 

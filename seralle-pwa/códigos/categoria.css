@@ -1,0 +1,236 @@
+.product-find {
+    flex: 0 0 282px;
+    max-width: 100%;
+    border: solid 1px #EBEBEB;
+    margin: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    /* justify-content: center;
+    align-items: flex-start; */
+}
+
+/* .product-find:nth-child(1),
+.product-find:nth-child(4),
+.product-find:nth-child(7),
+.product-find:nth-child(10),
+.product-find:nth-child(13) {
+    margin-left: 0px;
+}
+
+.product-find:last-child {
+    margin-right: 0px;
+}
+
+.product-find:nth-child(3),
+.product-find:nth-child(6),
+.product-find:nth-child(9),
+.product-find:nth-child(12),
+.product-find:nth-child(15) {
+    margin-right: 0px;
+} */
+
+.product-find .se-card-title p.se-card-parcelas {
+    margin-bottom: 7px;
+}
+button.se-color-option {
+    height: 29px;
+    width: 29px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.se-color-option.red {
+    background-color: #FF5A5A;
+}
+
+button.se-color-option.pink {
+    background-color: #FF99F4;
+}
+
+button.se-color-option.purple {
+    background-color: #DAE0FF;
+}
+
+button.se-color-option.green {
+    background-color: #97FFA4;
+}
+.se-cores .blue-scroll li {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+.se-cores li p {
+    margin: auto auto;
+    margin-left: 5px;
+}
+
+.se-cores .blue-scroll {
+    height: 138px;
+}
+
+button.se-color-option:focus {
+    outline: none;
+}
+
+input.se-price-filter {
+    height: 24px;
+    width: 62px;
+    border: 1px solid #2BBAFE;
+    background-color: #DAF3FF;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.se-filter-options li {
+    color: #8CA2A6;
+    font-size: 14px;
+}
+
+.se-filter-options label {
+    color: #8CA2A6;
+    font-size: 14px;
+}
+
+.se-promocoes {
+    height: 103px !important;
+}
+
+.se-material {
+    height: 17px;
+}
+
+.se-products-total-find {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    color: #8CA2A6;
+}
+
+.se-products-filter {
+    margin: 0 auto;
+    margin-right: 0px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.se-products-total-find span {
+    color: #2B85C1;
+    font-weight: 800;
+}
+
+.se-products-filter label {
+    color: #8CA2A6;
+}
+
+.se-products-filter select#se-filter {
+    width: 152px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DAF3FF;
+    color: #2B85C1;
+    margin-left: 18px;
+    padding-left: 10px;
+}
+
+.se-products-filter select#se-filter:focus {
+    outline: none;
+}
+
+.product-find {
+    min-height: 415px;
+}
+
+.se-slide6-next {
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    position: absolute;
+    top: 137px;
+    right: 1px;
+}
+
+#se-slide-banner6-home {
+    position: relative;
+}
+
+.se-slide6-prev {
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    position: absolute;
+    top: 117px;
+    left: 1px;
+}
+
+.se-slide6-next:hover, .se-slide6-prev:hover {
+    cursor: pointer;
+}
+
+.se-remove__filter .fa-times {
+    color: #007ac0;
+}
+
+.se-remove__filter .fa-times:hover {
+    cursor: pointer;
+}
+
+.se-filters-header.se-relative {
+    min-height: 72px;
+}
+
+.se-filters-header.se-relative .se-remove__filter:first-child {
+    margin-top: 20px;
+}
+
+.se-filter-parameter {
+    display: flex;
+    position: relative;
+}
+
+.se-filter-parameter:hover {
+    cursor: pointer;
+}
+
+.se-filter-parameter:before {
+    content: '';
+    position: relative;
+    display: flex;
+    margin-right: 7px;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #2BBAFE;
+    background: #DAF3FF;
+    border-radius: 4px;
+}
+
+.blue-scroll input[type="checkbox"] {
+    display: none;
+}
+
+li.se-filter-parameter.checked:after {
+    content: 'x';
+    position: absolute;
+    left: 2px;
+    top: -10px;
+    color: #2bbafe;
+    font-size: 22px;
+}

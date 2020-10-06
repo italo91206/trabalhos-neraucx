@@ -9,11 +9,6 @@
       <pwa-newsletter action="">
         <input type="text" placeholder="Nome">
         <input type="text" placeholder="E-mail">
-        <select name="genero">
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-          <option value="nao-revelar">Não quero revelar</option>
-        </select>
         <button type="submit" class="se-button-blue">Cadastrar</button>
       </pwa-newsletter>
     </div>
@@ -24,16 +19,16 @@
       <section id="institucional">
         <h3>Institucional</h3>
         <ul class="se-footer-list">
-          <li><a href="">Quem somos</a></li>
-          <li><a href="">Encontre uma loja</a></li>
-          <li><a href="">Trabalhe conosco</a></li>
+          <li><a pwa-to-page="quem-somos">Quem somos</a></li>
+          <li><a pwa-to-page="entrega-expressa">Encontre uma loja</a></li>
+          <li><a pwa-to-page="entrega-expressa">Trabalhe conosco</a></li>
         </ul>
       </section>
 
       <section id="ajuda">
         <h3>Ajuda</h3>
         <ul class="se-footer-list">
-          <li><a href="">Acompanhe seu pedido</a></li>
+          <li><a pwa-to-page="entrega-expressa">Acompanhe seu pedido</a></li>
           <li><a pwa-to-page="trocas-devolucoes">Trocas e devoluções</a></li>
           <li><a pwa-to-page="duvidas-frequentes">Dúvidas frequentes</a></li>
           <li><a pwa-to-page="quem-somos">Atendimento</a></li>
@@ -43,18 +38,26 @@
       <section id="redes-sociais">
         <h3>Redes sociais</h3>
         <ul class="se-footer-list">
-          <li><a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
+          <li>
+            <a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
               <div class="se-circle"><i class="fa fa-facebook-f"></i></div>
-            </a></li>
-          <li><a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/seralle_oficial/?hl=pt-br" target="_blank">
+              <div class="se-circle"><i class="fa fa-instagram"></i></div>
+            </a>
+          </li>
+          <li style="opacity: 0;">
+            <a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
               <div class="se-circle"><i class="fa fa-facebook-f"></i></div>
-            </a></li>
-          <li><a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
+            </a>
+          </li>
+          <li style="opacity: 0;">
+            <a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
               <div class="se-circle"><i class="fa fa-facebook-f"></i></div>
-            </a></li>
-          <li><a href="https://www.facebook.com/serallecalcadosoficial/" target="_blank">
-              <div class="se-circle"><i class="fa fa-facebook-f"></i></div>
-            </a></li>
+            </a>
+          </li>
         </ul>
       </section>
 
@@ -126,7 +129,7 @@
 
   <section id="nerau-bar">
     <div class="se-container">
-      <a href="">
+      <a href="https://www.nerau.com.br">
         <img pwa-src="nerau-logo" alt="" id="nerau-logo">
       </a>
     </div>

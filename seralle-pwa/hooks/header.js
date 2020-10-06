@@ -22,5 +22,21 @@
       else
       busca.classList.remove("ativado");
     });
+  },
+  "--cart-background": component =>{
+    var abrir = document.getElementById('se-cart-open-button');
+    var fechar = document.getElementById('se-carrinho-fechar-button');
+    var bkg = document.getElementById('se-cart__darken');
+
+    abrir.addEventListener("click", function(){
+      bkg.style.display="block";
+    })
+    fechar.addEventListener("click", function(){
+      bkg.style.display="none";
+    })
+    bkg.addEventListener("click", function(){
+        fechar.click();
+        bkg.style.display="none";
+    })
   }
 }
