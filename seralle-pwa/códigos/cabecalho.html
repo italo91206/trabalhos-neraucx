@@ -1,26 +1,28 @@
 <header id="se-header">
   <pwa-cart />
   <div id="se-cart__darken" class="se-cart__darken" style="" pwa-hook="cart-background"></div>
+  <!-- <pwa-cart open-on-add />
+  <div id="se-cart__darken" class="se-cart__darken" style="" pwa-toggle-cart></div> -->
 
   <section id="se-top-header">
     <div class="se-container se-flex">
       <div class="se-item">
-        <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
+        <div class="se-fa-circle"><img pwa-src="icon-pagamento-parcelado" alt="Pague em até 12x sem juros"></div>
         <div class="se-text">Pague em até 12x sem juros</div>
       </div>
 
       <div class="se-item">
-        <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
+        <div class="se-fa-circle"><img pwa-src="icon-retirada-loja" alt="Compre aqui e retire na loja"></div>
         <div class="se-text">Compre aqui e retire na loja</div>
       </div>
 
       <div class="se-item">
-        <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
+        <div class="se-fa-circle"><img pwa-src="icon-entrega-expressa" alt="Entrega expressa em até 1 dia útil"></div>
         <div class="se-text">Entrega expressa em até 1 dia útil</div>
       </div>
 
       <div class="se-item">
-        <div class="se-fa-circle"><i class="fa fa-credit-card"></i></div>
+        <div class="se-fa-circle"><img pwa-src="icon-atendimento" alt="Atendimento"></div>
         <div class="se-text"><a href="">Atendimento</a></div>
       </div>
     </div>
@@ -36,7 +38,8 @@
 
       <span id="se-busca-mobile" class="fa fa-search se-mobile" pwa-hook="ativa-busca-mobile"></span>
 
-      <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart pwa-hook="cart-background"></span>
+      <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart"></span>
+
 
       <pwa-search-form id="se-busca-home">
         <input pwa-search-box placeholder="O que você precisa?">
@@ -48,7 +51,7 @@
           <img pwa-src="guest-profile-pic" alt="" id="se-guest-profile-pic">
         </div>
 
-        <div class="text" pwa-not-logged >
+        <div class="text" pwa-not-logged>
           <h2>Olá!</h2>
           <a pwa-to-auth>Acesse sua conta</a>
         </div>
@@ -81,54 +84,98 @@
 
   <pwa-category-list name="main-menu" size="12" level="2" id="se-nav">
     <div class="se-container">
-        <ul class="menu">
-            <li pwa-each-category class="se-menu-item">
-                <a pwa-to-category-page>{{ category.name }}</a>
-    
-                <div class="submenu">
-                    <div class="submenu-content se-flex">
-                        <div>
-                            <div class="se-coluna-esquerda">
-                                <h3>{{ category.name }}</h3>
-                                <pwa-subcategory-list size="90">
-                                    <ul class="se-category-list">
-                                        <li pwa-each-subcategory>
-                                            <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
-                                        </li>
-                                    </ul>
-                                </pwa-subcategory-list>
-                                <ul class="se-more-category-links">
-                                    <li><a pwa-to-page="">+ Novidades</a></li>
-                                    <li><a pwa-to-page="">+ Ofertas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        
+      <ul class="menu">
+        <li pwa-each-category class="se-menu-item" pwa-hook="menu-preparation">
+          <a pwa-to-category-page>{{ category.name }}</a>
 
-                        <div class="se-coluna-direita">
-                            <div class="se-banner se-relative">
-                            <img pwa-src="olympus-runners" alt="">
-                            <div class="se-text">
-                                <p class="se-banner-tittle"> Olympikus com preços acessíveis.</p>
-                                <p class="se-banner-subtittle">A partir de R$ 89,99</p>
-                                <button class="se-button-blue">Compre agora</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="submenu isdesktop">
+            <div class="submenu-content se-flex">
+              <div class="se-coluna-esquerda">
+                <h3>{{ category.name }}</h3>
+                <pwa-subcategory-list size="90">
+                  <ul class="se-category-list">
+                    <li pwa-each-subcategory class="se-submenu-item">
+                      <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
+                    </li>
+                  </ul>
+                </pwa-subcategory-list>
+                <ul class="se-more-category-links">
+                  <li class="se-submenu-item"><a pwa-to-page="">+ Novidades</a></li>
+                  <li class="se-submenu-item"><a pwa-to-page="">+ Ofertas</a></li>
+                </ul>
+              </div>
+
+              <div class="se-coluna-direita">
+                <div class="se-banner se-relative">
+                  <img pwa-src="olympus-runners" alt="">
+                  <div class="se-text">
+                    <p class="se-banner-tittle"> Olympikus com preços acessíveis.</p>
+                    <p class="se-banner-subtittle">A partir de R$ 89,99</p>
+                    <button class="se-button-blue">Compre agora</button>
+                  </div>
                 </div>
-            </li>
+              </div>
 
-            <!-- <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
+              <section class="se-brand-line se-desktop">
+                <div class="swiper-container" pwa-id="`se-slide-brand-${category.name}`">
+                  <div class="swiper-wrapper">
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="adidas-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="mizuno-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="oasics-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="puma-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="adidas-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="mizuno-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="oasics-logo">
+                    </div>
+
+                    <div class="swiper-slide se-brand-slide">
+                      <img pwa-src="puma-logo">
+                    </div>
+
+
+                  </div>
+   
+                  <div pwa-class="`se-slide-brand-${category.name}-next`"><div class="se-swiper-gradient"></div><span class="fa fa-chevron-right"></span></div>
+                  <div pwa-class="`se-slide-brand-${category.name}-prev`"><div class="se-swiper-gradient"></div><span class="fa fa-chevron-left"></span></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </li>
+
+        <!-- 
+          <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
             <li class="se-menu-item"><a pwa-to-page="/tenis">Lançamentos</a></li>
             <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
             <li class="se-menu-item"><a pwa-to-page="/tenis">Marcas</a></li>
-            <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li> -->
-        </ul>
+            <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
+           -->
+      </ul>
     </div>
-</pwa-category-list>
+  </pwa-category-list>
 
-  <!-- <nav id="se-nav">
+  <!-- 
+    <nav id="se-nav">
     <div class="se-container">
       <ul class="menu">
         <li class="se-menu-item">
@@ -319,11 +366,13 @@
         <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
       </ul>
     </div>
-  </nav> -->
-
+  </nav> 
+  -->
+    
   <section id="se-after-nav">
     <div class="se-container">
       <p>Frete grátis acima de R$ 199,00</p>
     </div>
   </section>
+  <div id="se-header-background"></div>
 </header>

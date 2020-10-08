@@ -1,0 +1,12 @@
+#newsletter {
+	background-color: #2B85C1;
+	height: 130px;
+    z-index: 0;
+}
+.se-footer-list .se-circle i.fa.fa-instagram {
+    padding-left: 12px;
+}
+
+#se-footer .se-container {
+    max-width: 1200px;
+}

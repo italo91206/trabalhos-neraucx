@@ -35,8 +35,48 @@
       bkg.style.display="none";
     })
     bkg.addEventListener("click", function(){
-        fechar.click();
+        document.getElementById('se-cart').classList.remove('se-aparece')
         bkg.style.display="none";
     })
+  },
+  "--menu-preparation": (component, element) => {
+    var categorias = ['ESPORTE', 'FEMININO', 'MASCULINO', 'MENINA', 'MENINO']
+    for( var i = 0; i < categorias.length; i++){
+      component.$slide('#se-slide-brand-'+categorias[i], {
+        slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+        spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+        loop: true,
+        loopedSlides: 4,
+        navigation: {
+          nextEl: '.se-slide-brand-'+ categorias[i] +'-next',
+          prevEl: '.se-slide-brand-'+ categorias[i] +'-next'
+        }
+      });
+    }
+
+    element.addEventListener("mouseover", function(){
+      this.classList.add("ativo");
+    });
+
+    element.addEventListener("mouseleave", function(){
+      this.classList.remove("ativo")
+    });
+
+    // element.addEventListener("click", function(){
+    //     this.classList.remove("ativo");
+    // });
+
+    // element.querySelector('.submenu').addEventListener("click", function(){
+    //     console.log("Entrei neste click");
+    //     this.closest('.se-menu-item').classList.remove("ativo");
+    // });
+
+    var elem = document.getElementsByClassName('se-submenu-item')
+    for(var i=0; i < elem.length; i++){
+        elem[i].addEventListener("click", function(){
+            console.log("Entrei neste click");
+            this.closest('.se-menu-item').classList.remove("ativo");
+        })
+    }
   }
 }

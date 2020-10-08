@@ -4,14 +4,26 @@
   <section class="se-full-banner" id="banner-slider-principal">
     <section class="swiper-container" id="se-slidebanner-home" pwa-hook="se-slidebanner-home">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="i in 2" :key="i">
-          <a class="se-releases__card se-releases__card--left" pwa-to-page="/masculino">
-            <!-- <img pwa-src="banner-shoes-azul-alt" class="se-w100" alt="Blusas"> -->
-            <img pwa-src="bigslider-shoes" class="se-w100" alt="Blusas">
 
+        <div class="swiper-slide">
+          <a class="se-releases__card se-releases__card--left" pwa-to-search="tenis">
+            <!-- <img pwa-src="banner-shoes-azul-alt" class="se-w100" alt="Blusas"> -->
+            <img pwa-src="banner-1920x600px-2" class="se-w100" alt="Blusas">
             <div class="se-banner-grande-overlay se-container">
-              <p class="se-titulo">Nova coleção Serallê As melhores marcas</p>
-              <p class="se-juros">em até 12x Sem juros</p>
+              <p class="se-titulo">A maior rede de calçados do Paraná,</p>
+              <p class="se-juros">agora online</p>
+              <button class="se-white-background">confira</button>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a class="se-releases__card se-releases__card--left" pwa-to-search="/grendene">
+            <!-- <img pwa-src="banner-shoes-azul-alt" class="se-w100" alt="Blusas"> -->
+            <img pwa-src="banner-1920x600px" class="se-w100" alt="Blusas">
+            <div class="se-banner-grande-overlay se-container">
+              <p class="se-titulo" style="color: #1C1C1C">Aqui a brincadeira está garantida com Sandália + Brinde,</p>
+              <p class="se-juros" style="color: #FF1493">à partir de 59,90</p>
               <button class="se-white-background">confira</button>
             </div>
           </a>
@@ -25,35 +37,39 @@
       <div class="se-slidebanner-prev">
         <div class="swiper-button-prev"></div>
       </div>
+
     </section>
   </section>
 
   <!--  CONTEUDO SEMANA DO CONSUMIDOR  -->
   <section class="se-container se-flex" id="se-primeira-linha">
     <article class="se-cmd-6 se-relative">
-      <img pwa-src="banner-shoes-rosa" class="se-w100" />
-      <div class="se-banner-inside-text">
-        <p class="se-week se-black-pink">semana do consumidor serallê</p>
-        <p class="se-offering-what">Calçados Femininos</p>
-        <p class="se-is-off">com até 35% off</p>
-        <button class="se-white-background">compre agora</button>
-      </div>
+      <a pwa-to-search="molekinha">
+        <img pwa-src="banner-602x298px-1" class="se-w100" />
+        <div class="se-banner-inside-text">
+          <p class="se-week se-black-pink">Dia das Crianças Serallê</p>
+          <p class="se-offering-what">Molekinha</p>
+          <p class="se-is-off">à partir de 59,90</p>
+          <button class="se-white-background">compre agora</button>
+        </div>
+      </a>
     </article>
 
     <article class="se-cmd-6 se-relative">
-      <img pwa-src="banner-shoes-azul" class="se-w100" />
-      <div class="se-banner-inside-text">
-        <p class="se-week se-black-blue">semana do consumidor serallê</p>
-        <p class="se-offering-what">Calçados Masculinos</p>
-        <p class="se-is-off">com até 25% off</p>
-        <button class="se-white-background">compre agora</button>
-      </div>
+      <a pwa-to-search="molekinha">
+        <img pwa-src="banner-602x298px-2" class="se-w100" />
+        <div class="se-banner-inside-text">
+          <p class="se-week se-black-blue">Dia das Crianças Serallê</p>
+          <p class="se-offering-what">Molekinho</p>
+          <p class="se-is-off">à partir de 59,90</p>
+          <button class="se-white-background">compre agora</button>
+        </div>
+      </a>
     </article>
   </section>
 
   <!-- PRIMEIRO SLIDER DE PRODUTOS -->
-  <pwa-product-list name="ofertas" filter="categories.name: 'esporte'" size="12"
-    class="se-slider-container se-flex se-relative" id="se-segunda-linha">
+  <pwa-product-list name="ofertas" filter="categories.name: 'menina'" size="12" class="se-slider-container se-flex se-relative" id="se-segunda-linha">
 
     <div id="se-slide-holder">
       <img pwa-src="ofertas-slide-holder" class="se-w100" />
@@ -81,35 +97,36 @@
 
   <div class="se-container se-flex" id="se-terceira-linha">
     <div class="se-relative se-cmd-4">
-      <img pwa-src="girl-square-red" class="se-w100" />
+      <img pwa-src="banner-384x291px-1" class="se-w100" />
       <div class="se-banner4-inside-text">
-        <p class="se-offering-what">Calcci com preços imbatíveis</p>
+        <p class="se-offering-what">Combina com seu estilo</p>
         <p class="se-how-much">A partir de R$ 129,99</p>
         <button class="se-white-background">compre agora</button>
       </div>
     </div>
 
     <div class="se-relative se-cmd-4">
-      <img pwa-src="olympikus-square-green" class="se-w100" />
+      <img pwa-src="ramarim-384x-291px" class="se-w100" />
       <div class="se-banner4-inside-text">
-        <p class="se-offering-what">Olympikus com preços imbatíveis</p>
+        <p class="se-offering-what">Rmarim SNK</p>
         <p class="se-how-much">A partir de R$ 79,99</p>
         <button class="se-white-background">compre agora</button>
       </div>
     </div>
 
     <div class="se-relative se-cmd-4">
-      <img pwa-src="square-shoes-yellow" class="se-w100" />
+      <img pwa-src="banner-384x291px-3" class="se-w100" />
       <div class="se-banner4-inside-text">
-        <p class="se-offering-what">As melhores marcas com</p>
-        <p class="se-how-much">Até 75% OFF</p>
+        <p class="se-offering-what">Verão 2020</p>
+        <p class="se-how-much">Até 15% OFF</p>
         <button class="se-white-background">compre agora</button>
       </div>
     </div>
   </div>
 
   <!-- SEGUNDO SLIDER DE PRODUTOS -->
-  <pwa-product-list name="ofertas" filter="categories.name: 'esporte'" size="15" class="se-slider-container se-relative se-flex" id="se-quarta-linha">
+  <pwa-product-list name="ofertas" filter="categories.name: 'menino'" size="15"
+    class="se-slider-container se-relative se-flex" id="se-quarta-linha">
 
     <div id="se-slide-holder">
       <img pwa-src="ofertas-slide-holder" class="se-w100" />
@@ -154,18 +171,25 @@
       <div class="swiper-wrapper se-slide01-wrapper">
 
         <div class="swiper-slide se-card-slide">
-          <img pwa-src="adidas-logo">
+          <a pwa-to-search="adidas">
+            <img pwa-src="adidas-logo">
+          </a>
         </div>
 
         <div class="swiper-slide se-card-slide">
-          <img pwa-src="mizuno-logo">
+          <a pwa-to-search="mizuno">
+            <img pwa-src="mizuno-logo">
+          </a>
         </div>
 
         <div class="swiper-slide se-card-slide">
-          <img pwa-src="oasics-logo">
+          <a pwa-to-search="oasics">
+            <img pwa-src="oasics-logo">
+          </a>
         </div>
 
         <div class="swiper-slide se-card-slide">
+          
           <img pwa-src="puma-logo">
         </div>
 

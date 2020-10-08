@@ -1,10 +1,44 @@
 @media(max-width: 768px){
+    .se-menu-item .submenu-content {
+        display: none !important;
+    }
+    #se-nav {
+        height: 0px;
+        transition: height .2s ease;
+        overflow: hidden;
+    }
+
+    #se-nav.ativado {
+        height: 141px;
+        transition: height .2s ease;
+    }
+    .se-menu-item {
+        float: right;
+        padding: 0px;
+        text-align: left;
+        margin: 5px 0px;
+        display: block;
+    }
+
+    #se-nav .se-container {
+        height: 100%;
+    }
+    
+    #se-nav ul.menu {
+        flex-direction: column;
+        display: block;
+    }
+    
+    #se-nav ul.menu li a {
+        float: none;
+    }
     .isdesktop{
         display: none;
     }
     #se-busca-home{
-        width: 100%;
+        width: 100% !important;
         height: 0px !important;
+        margin-left: 0px !important;
         transition: all .5s ease;
         overflow: hidden;
         padding: 0px;
@@ -24,33 +58,24 @@
     .se-breadcrumb p {
         margin-left: 0;
     }
-    /* .product-find:nth-child(3), 
-    .product-find:nth-child(6), 
-    .product-find:nth-child(9), 
-    .product-find:nth-child(12), 
-    .product-find:nth-child(15) {
-        margin-right: auto !important;
-    } */
-    /* .product-find:nth-child(1), 
-    .product-find:nth-child(4), 
-    .product-find:nth-child(7), 
-    .product-find:nth-child(10), 
-    .product-find:nth-child(13) {
-        margin-left: auto !important;
-    } */
-    section#se-category-footer {
+    
+    #se-category-footer {
         height: auto;
         padding-bottom: 43px;
     }
-    div#se-slide-holder {
+
+    #se-slide-holder {
         padding-bottom: 20px !important;
     }
-    div#se-setima-linha {
+
+    #se-setima-linha {
         padding-top: 40px;
         padding-bottom: 20px;
     }
-    div#se-sexta-linha {
+    
+    #se-sexta-linha {
         padding-top: 40px;
+        padding-bottom: 75px;
     }
 
     .se-cmd-4 {
@@ -110,14 +135,11 @@
         border-bottom: solid 1px #EBEBEB;
         transition: all .5s linear;
     }
+
     nav#se-nav.ativado{
         display: block;
         opacity: 1;
         visibility: visible;
-    }
-    #se-nav.ativado ul.menu{
-        display: block !important;
-        padding-block-end: 20px !important;
     }
 
     nav#se-nav.ativado ul.menu li {
@@ -174,10 +196,10 @@
         height: 70px;
     }
     section#footer-links section:last-child {
-        flex: 0 0 99%;
-        max-width: 100%;
+        max-width: unset;
         text-align: center;
         margin: 25px 0;
+        width: 100%;
     }
     #newsletter form {
         display: none;
@@ -373,14 +395,66 @@
     }
     
     #se-primeira-linha {
-        margin-top: 30px;
+        padding-top: 78px;
     }
 
     .se-banner-grande-overlay.se-container {
         display: none;
     }
+
+    #se-main-page #se-primeira-linha article{
+        margin: 0 auto;
+    }
+
+    #se-primeira-linha article.se-cmd-6:first-child{
+        margin-left: 0px !important;
+    }
+    
+    #se-primeira-linha article.se-cmd-6:last-child{
+        margin-right: 0px !important;
+    }
+
+    .se-container .se-cmd-4:first-child{
+        margin-left: 0px !important;
+    }
+
+    .se-container .se-cmd-4:last-child{
+        margin-right: 0px !important;
+    }
+
+    #se-setima-linha .se-cmd-6:first-child {
+        margin: 0 auto;
+        margin-left: 0px !important;
+    }
+    
+    #se-setima-linha .se-cmd-6:last-child {
+        margin: 0 auto;
+        margin-right: 0px !important;
+    }
+
+    #se-quinta-linha .se-cmd-12{
+        margin: 0;
+    }
 }
 @media(max-width: 425px){
+    #se-category-footer{
+        height: unset;
+        padding-top: 43px;
+    }
+    section#se-primeira-linha {
+        padding-top: 0px;
+        margin-top: 10px;
+    }
+    #se-primeira-linha .se-cmd-6:last-child {
+        padding-top: 10px;
+    }
+    .se-footer-list .se-circle i.fa.fa-facebook-f {
+        padding-top: 8px;
+    }
+    .se-footer-list .se-circle i.fa.fa-instagram {
+        padding-top: 8px;
+        padding-left: 9px;
+    }
     #se-slide3-home .swiper-slide{
         width: 100% !important;
     }
@@ -388,9 +462,15 @@
         flex: 0 0 100% !important;
         overflow: hidden;
     }
-    #se-category-page p.se-card-full-title {
-        margin-left: 0px !important;
+    #se-category-page .se-card-full-title {
         text-align: center;
+        width: 240px !important;
+        padding-left: 0px !important;
+    }
+    .se-card-title .se-card-price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     #se-category-page span.se-card-price-actual {
@@ -409,9 +489,29 @@
         padding: 20px 10px !important;
     }
 
-    #se-sexta-linha,
-    #se-primeira-linha {
-        padding-top: 20px;
+    #se-sexta-linha{
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #se-terceira-linha .se-cmd-4 {
+        margin-bottom: 15px !important;
+    }
+    
+    #se-terceira-linha .se-cmd-4:last-child {
+        margin-bottom: 0px !important;
+    }
+
+    #se-setima-linha .se-cmd-6 {
+        margin-bottom: 15px;
+    }
+    
+    #se-setima-linha .se-cmd-6:last-child {
+        margin-bottom: 0px;
+    }
+    
+    #se-quarta-linha {
+        padding-top: 0px;
     }
 
     div#se-quarta-linha, 
@@ -567,8 +667,8 @@
 
     #footer-after-links div.se-container section {
         flex: 0 0 100%;
-        max-width: 100%;
-        width: 97%;
+        max-width: unset;
+        width: 100%;
         margin-left: 5px !important;
         margin-bottom: 25px;
     }
@@ -747,8 +847,12 @@
     }
 }
 @media(max-width: 414px){
+    #se-busca-home input[type="search"]{
+        width: 100%;
+    }
     #se-category-page .se-card-title p.se-card-full-title {
         width: 194px !important;
+        overflow: hidden;
     }
     #se-sexta-linha,
     #se-quinta-linha,
@@ -831,8 +935,8 @@
         margin-top: 19px;
     }
     
-    #se-category-page .se-card-title p.se-card-full-title {
-        width: 184px !important;
+    #se-category-page .se-card-title .se-card-full-title {
+        width: 240px !important;
     }
     
     #se-category-page span.se-card-price-actual {
@@ -873,7 +977,6 @@
     }
     
     #se-category-page span.se-card-price-actual {
-        margin-left: 120px;
         font-size: 28px !important;
     }
     .se-banner6-inside-text p.se-is-off {
@@ -994,7 +1097,7 @@
     }
 
     div#se-slide-holder img {
-        width: 305px;
+        width: 100%;
     }
 
     div#se-quarta-linha,

@@ -3,7 +3,6 @@
 }
 
 #se-cart-icon .overlay span {
-	padding-left: 9px;
 	font-size: 13px;
 }
 
@@ -26,6 +25,9 @@
 }
 
 .se-fa-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 	height: 38px;
 	width: 38px;
 	border-radius: 100%;
@@ -40,7 +42,7 @@
 .se-text {
 	padding-top: 13px;
 	padding-left: 13px;
-	font-family: 'axiforma-bold';
+	font-family: 'axiforma-regular';
 	font-size: 12px;
 }
 
@@ -59,6 +61,7 @@
 	margin-top: 40px;
 	margin-left: 80px;
     position: relative;
+    transition: .1s ease;
 }
 
 #se-busca-home input[type="search"] {
@@ -68,6 +71,10 @@
 	padding-left: 15px;
 	font-size: 12px;
 	color: #8CA2A6;
+}
+
+#se-busca-home:focus-within {
+    border-color: #b6b6b6;
 }
 
 #se-busca-home button {
@@ -146,7 +153,10 @@ div#se-cart-icon {
 	border-radius: 100%;
 	color: white;
 	top: 0;
-	right: -15px;
+    right: -15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #se-cart-icon .circle {
@@ -192,7 +202,8 @@ div#user-nav {
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
 	padding-inline-start: 0;
-	display: flex;
+    display: flex;
+    justify-content: space-around;
 	position: relative;
 	height: 100%;
 }
@@ -213,13 +224,18 @@ div#user-nav {
     margin-bottom: 18px;
 }
 
+.submenu ul.menu li a {
+    transition: all .4s ease;
+}
+
 .submenu {
 	top: 60px;
 	left: 0;
 	position: absolute;
-	display: none;
-	opacity: 0;
-	transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+	transition: all .4s ease;
 }
 
 .se-category-list li {
@@ -252,12 +268,13 @@ div#user-nav {
 }
 
 .se-menu-item {
-    float: left;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
     padding: 21px;
     font-size: 14px;
     transition: all .1s ease;
 	color: #001C3E;
-	margin: 0 auto;
 }
 
 .se-more-category-links li {
@@ -339,4 +356,117 @@ div#user-nav {
     position: fixed;
     display: none;
     animation: none;
+}
+
+
+
+/* ===============
+PARTE DOS SUBMENUS
+ESPORTE, FEMININO, MASCULINO, MENINA, MENINO
+=============== */
+
+#se-slide-brand-MENINO,
+#se-slide-brand-MENINA,
+#se-slide-brand-MASCULINO,
+#se-slide-brand-FEMININO,
+#se-slide-brand-ESPORTE {
+    position: relative;
+}
+
+.se-slide-brand-MENINO-next,
+.se-slide-brand-MENINA-next,
+.se-slide-brand-MASCULINO-next,
+.se-slide-brand-FEMININO-next,
+.se-slide-brand-ESPORTE-next{
+    position: absolute;
+    top: 0px;
+	right: 0px;
+	z-index: 2;
+}
+
+.se-slide-brand-MENINO-prev,
+.se-slide-brand-MENINA-prev,
+.se-slide-brand-MASCULINO-prev,
+.se-slide-brand-FEMININO-prev,
+.se-slide-brand-ESPORTE-prev{
+    position: absolute;
+    top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+.se-slide-brand-MENINO-next .fa-chevron-right,
+.se-slide-brand-MENINA-next .fa-chevron-right,
+.se-slide-brand-MASCULINO-next .fa-chevron-right,
+.se-slide-brand-FEMININO-next .fa-chevron-right,
+.se-slide-brand-ESPORTE-next .fa-chevron-right {
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+}
+
+.se-slide-brand-MENINO-prev .fa-chevron-left,
+.se-slide-brand-MENINA-prev .fa-chevron-left,
+.se-slide-brand-MASCULINO-prev .fa-chevron-left,
+.se-slide-brand-FEMININO-prev .fa-chevron-left,
+.se-slide-brand-ESPORTE-prev .fa-chevron-left {
+    background-color: #001C3E;
+    border-radius: 120px;
+    height: 48px;
+    width: 48px;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+}
+
+#se-slide-brand-MENINO .swiper-wrapper,
+#se-slide-brand-MENINA .swiper-wrapper,
+#se-slide-brand-MASCULINO .swiper-wrapper,
+#se-slide-brand-FEMININO .swiper-wrapper,
+#se-slide-brand-ESPORTE .swiper-wrapper {
+    width: 494px;
+	height: 90px;
+	z-index: 1;
+}
+
+#se-slide-brand-MENINO .swiper-slide,
+#se-slide-brand-MENINA .swiper-slide,
+#se-slide-brand-MASCULINO .swiper-slide,
+#se-slide-brand-FEMININO .swiper-slide,
+#se-slide-brand-ESPORTE .swiper-slide {
+    margin-top: 12px;
+}
+
+#se-slide-brand-MENINO,
+#se-slide-brand-MENINA,
+#se-slide-brand-MASCULINO,
+#se-slide-brand-FEMININO,
+#se-slide-brand-ESPORTE {
+    margin-top: 47px;
+}
+
+.se-slide-brand-MENINO-next:hover,
+.se-slide-brand-MENINA-next:hover,
+.se-slide-brand-MASCULINO-next:hover,
+.se-slide-brand-FEMININO-next:hover,
+.se-slide-brand-ESPORTE-next:hover {
+    cursor: pointer;
+}
+
+.se-slide-brand-MENINO-prev:hover,
+.se-slide-brand-MENINA-prev:hover,
+.se-slide-brand-MASCULINO-prev:hover,
+.se-slide-brand-FEMININO-prev:hover,
+.se-slide-brand-ESPORTE-prev:hover {
+    cursor: pointer;
 }

@@ -4,6 +4,8 @@
             slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
             spaceBetween: window.innerWidth < 1024 ? 0 : 20,
             grabCursor: true,
+            loop: true,
+            loopedSlides: 4,
             navigation: {
                 nextEl: '.se-slidebanner-next',
                 prevEl: '.se-slidebanner-prev'
