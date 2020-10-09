@@ -229,9 +229,9 @@
         display: none;
     }
     #se-header img#se-logo {
-        width: unset;
-        height: 40px;
-        margin-top: 0px;
+        width: unset !important;
+        height: 40px !important;
+        margin-top: 0px !important;
     }
     
     

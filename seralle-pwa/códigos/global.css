@@ -286,13 +286,13 @@ section#footer-after-links section:last-child {
     margin-left: 26px;
 }
 
-#se-top-header .se-item:first-child {
+/* #se-top-header .se-item:first-child {
 	margin-left: 0px;
 }
 
 #se-top-header .se-item:last-child {
 	margin-right: 0px;
-}
+} */
 
 #footer-copyright h3 {
     font-size: 10px;
@@ -916,7 +916,8 @@ main#se-main-page {
 .se-card-slide {
     width: 280px !important;
     height: 426px !important;
-    border: solid 1px #EBEBEB;
+    border: solid 2px #EBEBEB;
+    border-radius: 5px;
 }
 
 div#se-slide-holder {
@@ -926,7 +927,7 @@ div#se-slide-holder {
 }
 
 .se-card-slide:hover {
-    border: solid 1px #2BBAFE;
+    border: solid 2px #2BBAFE;
     transition: all .2s linear;
 }
 
@@ -1113,6 +1114,21 @@ div#se-quinta-linha {
     }
 }
 @media(max-width: 1280px){
+    #se-header img#se-logo{
+        margin-left: 40px !important;
+    }
+    #se-busca-home{
+        margin-left: 70px !important;
+    }
+    #user-nav{
+        margin-left: 35px !important;
+    }
+    #se-cart-icon{
+        margin: 46px 40px 0 0 !important;
+    }
+    #se-favoritos{
+        margin: 46px 20px 0 35px !important;
+    }
     /* =================
     seçao fix do menu
     ================= */
@@ -1154,6 +1170,17 @@ div#se-quinta-linha {
     }
 }
 @media(max-width: 1024px){
+    #se-header img#se-logo{
+        margin-left: 0px !important;
+    }
+    #user-nav{
+        margin-left: 10px !important;
+    }
+    #se-header img#se-logo {
+        width: 165px !important;
+        height: 62px !important;
+        margin-top: 35px !important;
+    }
     .submenu{
         left: -22px !important;
     }
@@ -1168,7 +1195,7 @@ div#se-quinta-linha {
         width: 470px !important;
     }
     #se-favoritos {
-        margin-left: 10px !important;
+        margin-left: 0px !important;
     }
     #user-nav {
         margin-left: 20px !important;
@@ -1224,7 +1251,8 @@ div#se-quinta-linha {
     }
 
     div#se-cart-icon {
-        margin-left: 18px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
     }
     .se-banner-grande-overlay {
         position: absolute;
@@ -1951,7 +1979,7 @@ section#se-categoria-footer {
 }
 
 .product-find:hover {
-    border: solid 1px #2BBAFE;
+    border: solid 2px #2BBAFE;
     transition: all .2s linear;
 }
 
