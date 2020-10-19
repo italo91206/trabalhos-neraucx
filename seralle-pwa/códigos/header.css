@@ -474,3 +474,41 @@ ESPORTE, FEMININO, MASCULINO, MENINA, MENINO
 .se-slide-brand-ESPORTE-prev:hover {
     cursor: pointer;
 }
+
+#se-after-nav .se-frete-fundo {
+	height: 30px;
+	overflow: hidden;
+}
+
+#se-after-nav .se-frete-preenchimento {
+    height: 30px;
+}
+
+#se-after-nav .se-frete-text {
+    position: absolute;
+    top: 5px;
+    left: 40%;
+}
+
+#se-after-nav .se-quanto-falta span {
+    margin-left: 0px;
+}
+
+#se-after-nav .se-quanto-falta {
+    font-size: 14px;
+    font-family: 'axiforma-bold';
+    letter-spacing: .28px;
+}
+
+#se-after-nav .se-quanto-falta span:first-child {
+    color: #A7FFEF;
+}
+
+#se-after-nav .se-quanto-falta span:last-child {
+    color: #FEC417;
+    text-transform: uppercase;
+}
+
+#se-cart-icon:hover {
+    cursor: pointer;
+}

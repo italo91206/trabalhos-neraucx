@@ -1,117 +1,132 @@
 <main id="se-category-page">
   <section class="se-breadcrumb se-container">
-    <p><span class="se-underline">Home</span> / <span>{{ bc.name }}</span></p>
+    <p><span class="se-underline">Home</span> <span pwa-breadcumb-item>{{ bc.name }}</span></p>
   </section>
 
   <section id="inner-category-section" class="se-container se-flex">
     <section class="se-coluna-esquerda">
       <div class="se-filtros">
         <pwa-tags-filter>
-          <div pwa-has-filters class="sc-remove__filter">
-            <div pwa-each-filter class="sc-remove__filter-item">
-              {{ filter.value  }}
-              <a pwa-remove-filter="click"><span class="fas fa-window-close"></span></a>
+          <div class="se-filters-header se-relative">
+            <div pwa-has-filters class="se-remove__filter">
+              <div pwa-each-filter class="se-remove__filter-item">
+                {{ filter.value  }}
+                <a pwa-remove-filter="click"><span class="fa fa-times"></span></a>
+              </div>
+            </div>
+
+            <div pwa-not-filters class="se-filters-placeholder">
+              <h2>Filtros selecionados</h2>
+              <h3>Nenhum filtro selecionado</h3>
+              <div class="se-abre-fecha-menu">
+                <span id="abre-fecha-handler" class="se-mobile fa fa-bars" pwa-hook.click="open-close-filters"></span>
+              </div>
             </div>
           </div>
-
-          <!-- <div pwa-not-filters class="se-filters-header se-relative">
-            <h2>Filtros selecionados</h2>
-            <h3>Nenhum filtro selecionado</h3>
-            <div class="se-abre-fecha-menu">
-              <span id="abre-fecha-handler" class="se-mobile fa fa-bars" pwa-hook.click="open-close-filters"></span>
-            </div>
-          </div> -->
         </pwa-tags-filter>
 
         <div id="se-opcoes-filtro" class="some">
-          <pwa-attribute-filter static attribute="product_brands" class="se-filter-options se-marcas">
-            <h2 pwa-has-filters>Marcas</h2>
+          <pwa-attribute-filter static attribute="product_brands">
+            <div pwa-has-filters class="se-filter-options se-marcas">
+              <h2>Marcas</h2>
 
-            <form pwa-has-filters action="" id="se-busca-marca">
-              <input type="text" placeholder="Busque a marca">
-              <button><span class="fa fa-search"></span></button>
-            </form>
+              <form action="" id="se-busca-marca">
+                <input type="text" placeholder="Busque a marca">
+                <button><span class="fa fa-search"></span></button>
+              </form>
 
-            <ul pwa-has-filters class="blue-scroll">
-              <li pwa-each-filter>
-                <input pwa-filter-input="checked" type="checkbox" name="marca" />
-                <label for="marca">{{ filter.label }} ({{ filter.count }})</label>
-              </li>
-            </ul>
+              <ul class="blue-scroll">
+                <li pwa-each-filter class="se-filter-parameter">
+                  <input pwa-filter-input="checked" type="checkbox" name="marca" />
+                  <label for="marca">{{ filter.label }} ({{ filter.count }})</label>
+                </li>
+              </ul>
+            </div>
           </pwa-attribute-filter>
 
-          <pwa-attribute-filter static attribute="referencia" class="se-filter-options se-marcas">
-            <h2 pwa-has-filters>Modelo</h2>
-            <ul pwa-has-filters class="blue-scroll">
-              <li pwa-each-filter>
-                <input pwa-filter-input="checked" type="checkbox" name="modelo" />
-                <label for="modelo">{{ filter.label }} ({{ filter.count }})</label>
-              </li>
-            </ul>
-          </pwa-attribute-filter>
-
-          <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-marcas">
-						<h2 pwa-has-filters>Modelo da bolsa</h2>
-                        <ul pwa-has-filters class="blue-scroll">
-                            <li pwa-each-filter>
-                                <input pwa-filter-input="checked" type="checkbox" name="blusa"/>
-                                <label for="blusa">{{ filter.label }} ({{ filter.count }})</label>
-                            </li>
-                        </ul>
-					</pwa-attribute-filter> -->
-
-          <pwa-attribute-filter static attribute="tamanho" class="se-filter-options se-marcas">
-            <h2 pwa-has-filters>Tamanho</h2>
-
-            <div pwa-has-filters class="se-flex blue-scroll">
-              <button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
+          <pwa-attribute-filter static attribute="referencia" class="">
+            <div pwa-has-filters class="se-filter-options se-marcas">
+              <h2>Modelo</h2>
+              <ul class="blue-scroll">
+                <li pwa-each-filter class="se-filter-parameter">
+                  <input pwa-filter-input="checked" type="checkbox" name="modelo" />
+                  <label for="modelo">{{ filter.label }} ({{ filter.count }})</label>
+                </li>
+              </ul>
             </div>
           </pwa-attribute-filter>
 
           <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-marcas">
-						<h2 pwa-has-filters>Tamanho</h2>
+          <h2 pwa-has-filters>Modelo da bolsa</h2>
+                      <ul pwa-has-filters class="blue-scroll">
+                          <li pwa-each-filter>
+                              <input pwa-filter-input="checked" type="checkbox" name="blusa"/>
+                              <label for="blusa">{{ filter.label }} ({{ filter.count }})</label>
+                          </li>
+                      </ul>
+        </pwa-attribute-filter> -->
 
-						<div pwa-has-filters class="se-flex blue-scroll">
-							<button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
-						</div>
+          <pwa-variation-filter static multiple code="color" class="">
+            <div pwa-has-filters class="se-filter-options se-marcas">
+              <h2>Cor</h2>
+              <ul class="blue-scroll">
+                <li pwa-each-filter class="se-filter-parameter">
+                  <input pwa-filter-input="checked" type="checkbox" name="modelo" />
+                  <label for="modelo">{{ filter.label }} ({{ filter.count }})</label>
+                </li>
+              </ul>
+            </div>
+          </pwa-variation-filter>
 
-					</pwa-attribute-filter> -->
+          <pwa-variation-filter static multiple code="tamanho">
+            <div pwa-has-filters class="se-filter-options se-marcas">
+              <h2>Tamanho</h2>
 
-          <pwa-attribute-filter static attribute="color" class="se-filter-options se-cores">
-            <h2 pwa-has-filters>Cor</h2>
-            <ul pwa-has-filters class="blue-scroll">
-              <li pwa-each-filter>
+              <div class="se-flex blue-scroll">
+                <button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
+              </div>
+            </div>
+          </pwa-variation-filter>
+
+          <!-- <pwa-variation-filter static multiple code="color">
+          <div pwa-has-filters class="se-filter-options se-cores">
+            <h2>Cor</h2>
+            <ul class="blue-scroll">
+              <li pwa-each-filter class="se-filter-parameter">
                 <button pwa-filter-input="checked" class="se-color-option red"></button>
                 <p>{{ filter.label }} ({{ filter.count }})</p>
               </li>
             </ul>
-          </pwa-attribute-filter>
+          </div>
+        </pwa-variation-filter> -->
 
           <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-promocoes">
-						<h2 pwa-has-filters>Promoçoes</h2>
-                        <ul pwa-has-filters class="blue-scroll">
-                            <li pwa-each-filter>
-                                <input pwa-filter-input="checked"  type="checkbox" name="proomocao"/>
-                                <label for="proomocao">{{ filter.label }} ({{ filter.count }})</label>
-                            </li>
-                        </ul>
-					</pwa-attribute-filter> -->
+          <h2 pwa-has-filters>Promoçoes</h2>
+            <ul pwa-has-filters class="blue-scroll">
+              <li pwa-each-filter>
+                <input pwa-filter-input="checked"  type="checkbox" name="proomocao"/>
+                <label for="proomocao">{{ filter.label }} ({{ filter.count }})</label>
+              </li>
+            </ul>
+        </pwa-attribute-filter> -->
 
-          <pwa-price-filter class="se-filter-options se-precos">
-            <h2 pwa-has-filters>Preço</h2>
+          <pwa-price-filter max-size="5">
+            <div class="se-filter-options se-precos">
+              <h2>Preço</h2>
 
-            <div>
+              <form action="">
                 <label for="price-from">De R$</label>
-                <input v-model="component.min" type="number" name="price-from" class="se-price-filter">
-        
+                <input type="number" name="price-from" class="se-price-filter">
+
                 <label for="price-to">até R$</label>
-                <input v-model="component.max" type="number" name="price-to" class="se-price-filter">
+                <input type="number" name="price-to" class="se-price-filter">
+              </form>
             </div>
           </pwa-price-filter>
 
           <!-- <div class="se-filter-options se-material">
-						<h2>Material</h2>
-					</div> -->
+          <h2>Material</h2>
+        </div> -->
         </div>
       </div>
     </section>
@@ -123,15 +138,15 @@
       <div class="se-category-inner-info">
         <div class="se-flex">
           <div class="se-products-total-find">
-            <p><span>{{ results_count }} </span> produtos</p>
+            <p><span>{{ $$paginate.count }} </span> produtos</p>
           </div>
 
           <div class="se-products-filter">
             <pwa-manual-filter>
               <label for="filter">Ordenar por:</label>
               <select pwa-filter-input name="filter" id="se-filter">
-                <option value="product_id:-">Lançamentos</option>
-                <!-- <option value="ranking:-">Mais vendidos</option> -->
+                <option value="releaseDate:-">Lançamentos</option>
+                <option value="ranking:-">Mais vendidos</option>
                 <option value="price:+">Mais baratos</option>
                 <option value="price:-">Mais caros</option>
               </select>
@@ -144,7 +159,7 @@
             <pwa-product-card>
           </div>
 
-          <div class="swiper-container" id="se-slide-banner-categoria" pwa-hook="se-slide-banner-categoria">
+          <!-- <div class="swiper-container" id="se-slide-banner-categoria" pwa-hook="se-slide-banner-categoria">
             <div class="swiper-wrapper">
               <div class="swiper-slide se-banner-slide">
                 <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
@@ -170,15 +185,14 @@
                 <img pwa-src="nova-colecao-categoria-feminina" alt="" class="se-w100">
               </div>
             </div>
-
-            <div class="se-slide6-pagination"></div>
-
-            <div class="se-slide6-next"><span class="fa fa-chevron-right"></span></div>
-            <div class="se-slide6-prev"><span class="fa fa-chevron-left"></span></div>
-          </div>
+            <div class="se-swiper-pagination isdesktop"></div>
+            <div class="se-slide6-next isdesktop"><span class="fa fa-chevron-right"></span></div>
+            <div class="se-slide6-prev isdesktop"><span class="fa fa-chevron-left"></span></div>
+          </div> -->
 
           <section class="se-cmd12" id="se-category-last-banner-holder-text">
-            <h3>Feminino</h3>
+            <div pwa--html="category.description"></div>
+            <!-- <h3>Feminino</h3>
             <p>
               Calçados ou acessórios? Tudo que toda mulher precisa está aqui
               na Serallê. Se deseja presentear os seus pés com o que há de
@@ -187,14 +201,14 @@
               sapatilhas te acompanham a cada passo? Ou você prefere aquele
               Slip On, perfeito para qualquer situação? Fique à vontade para
               fazer suas melhores escolhas. Estamos aqui para ajudar.
-            </p>
+            </p> -->
           </section>
         </pwa-result-list>
       </div>
     </section>
   </section>
 
-  <section class="se-container" id="se-categoria-footer">
+  <!-- <section class="se-container" id="se-categoria-footer">
     <h2 class="se-text-center">Você também vai gostar</h2>
 
     <div class="swiper-container" id="se-slide-final-categoria" pwa-hook="se-slide-final-categoria">
@@ -226,9 +240,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="se-category-footer">
+  <section id="se-category-footer" pwa-hook="preparar-filtros">
     <section class="se-container se-flex">
       <div class="se-cmd-4">
         <span class="icon-cartao"></span>

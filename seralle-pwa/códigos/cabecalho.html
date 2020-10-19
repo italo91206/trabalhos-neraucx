@@ -62,7 +62,13 @@
         </div>
       </div>
 
-      <div id="se-favoritos" pwa-to-wishlist>
+      <div id="se-favoritos" pwa-is-logged pwa-to-wishlist>
+        <a>
+          <i class="fa fa-heart-o"></i>
+        </a>
+      </div>
+
+      <div id="se-favoritos" pwa-not-logged pwa-to-wishlist style="opacity: 0; visibility: hidden;">
         <a>
           <i class="fa fa-heart-o"></i>
         </a>
@@ -370,8 +376,13 @@
   -->
     
   <section id="se-after-nav">
-    <div class="se-container">
-      <p>Frete grátis acima de R$ 199,00</p>
+    <div class="se-frete-fundo">
+      <div class="se-frete-preenchimento" pwa-hook="cart-transformer"></div>
+      <div class="se-frete-text se-flex">
+        <!-- <p pwa--if="199 - $$cart.subtotal == 199" class="se-aviso-quantia-frete">Frete grátis acima de R$ 199,00</p> -->
+          <p pwa--if="199 - $$cart.subtotal  > 0" class="se-quanto-falta">Faltam <span>{{ (199 - $$cart.subtotal )| price }}</span> para você ganhar <span>frete grátis</span></p>
+          <p pwa--if="199 - $$cart.subtotal  <= 0" class="se-quanto-falta">Você ganhou frete grátis!</span></p>
+      </div>
     </div>
   </section>
   <div id="se-header-background"></div>

@@ -1,6 +1,6 @@
 <main id="se-category-page">
   <section class="se-breadcrumb se-container">
-    <p><span class="se-underline">Home</span> / <span>Feminino</span></p>
+    <p><span class="se-underline">Home</span> <span>{{ title }}</span></p>
   </section>
 
   <section id="inner-category-section" class="se-container se-flex">
@@ -66,7 +66,19 @@
                         </ul>
 					</pwa-attribute-filter> -->
 
-          <pwa-attribute-filter static attribute="tamanho">
+          <pwa-variation-filter multiple code="color" class="">
+            <div pwa-has-filters class="se-filter-options se-marcas">
+              <h2>Cor</h2>
+              <ul class="blue-scroll">
+                <li pwa-each-filter class="se-filter-parameter">
+                  <input pwa-filter-input="checked" type="checkbox" name="modelo"/>
+                  <label for="modelo">{{ filter.label }} ({{ filter.count }})</label>
+                </li>
+              </ul>
+            </div>
+          </pwa-variation-filter>
+
+          <pwa-variation-filter multiple code="tamanho">
             <div pwa-has-filters class="se-filter-options se-marcas">
               <h2>Tamanho</h2>
 
@@ -74,28 +86,7 @@
                 <button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
               </div>
             </div>
-          </pwa-attribute-filter>
-
-          <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-marcas">
-						<h2 pwa-has-filters>Tamanho</h2>
-
-						<div pwa-has-filters class="se-flex blue-scroll">
-							<button pwa-each-filter class="se-square-box">{{ filter.label }}</button>
-						</div>
-
-					</pwa-attribute-filter> -->
-
-          <pwa-attribute-filter static attribute="color">
-            <div pwa-has-filters class="se-filter-options se-cores">
-              <h2>Cor</h2>
-              <ul class="blue-scroll">
-                <li pwa-each-filter class="se-filter-parameter">
-                  <button pwa-filter-input="checked" class="se-color-option red"></button>
-                  <p>{{ filter.label }} ({{ filter.count }})</p>
-                </li>
-              </ul>
-            </div>
-          </pwa-attribute-filter>
+          </pwa-variation-filter>
 
           <!-- <pwa-attribute-filter static attribute="categories.name" class="se-filter-options se-promocoes">
 						<h2 pwa-has-filters>Promoçoes</h2>
@@ -135,7 +126,7 @@
       <div class="se-category-inner-info">
         <div class="se-flex">
           <div class="se-products-total-find">
-            <p><span>{{ results_count }} </span> produtos</p>
+            <p><span>{{ $$paginate.count }} </span> produtos</p>
           </div>
 
           <div class="se-products-filter">

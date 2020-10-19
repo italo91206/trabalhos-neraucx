@@ -1,4 +1,38 @@
 @media(max-width: 768px){
+    #se-slide-produtos3 {
+        width: 100%;
+    }
+    #formas-pagamento {
+        margin-left: 0px !important;
+    }
+    
+    #a-seralle {
+        margin-left: 0px !important;
+    }
+    #se-newsletter-image-holder{
+        margin-left: 0px !important;
+    }
+
+    #newsletter input[type="text"]{
+        width: 133px !important;
+    }
+
+    #institucional {
+        margin-left: 0px !important;
+    }
+
+    section#footer-links section:last-child {
+        max-width: unset !important;
+        text-align: left !important;
+        width: unset !important;
+    }
+    #a-seralle {
+        width: 100%;
+        margin-left: 15px;
+    }
+    #inner-category-section .se-coluna-direita {
+        margin-left: 0px !important;
+    }
     .se-menu-item .submenu-content {
         display: none !important;
     }
@@ -201,9 +235,7 @@
         margin: 25px 0;
         width: 100%;
     }
-    #newsletter form {
-        display: none;
-    }
+
     .se-container{
         max-width: 750px;
     }
@@ -327,7 +359,24 @@
     }
 
     .se-marcas input[type="text"] {
-        width: 675px;
+        width: 670px;
+    }
+
+    #se-category-last-banner-holder-text {
+        padding-top: 20px ;
+    }
+
+    .product-find{
+        margin-right: 31px !important;
+    }
+
+    .product-find:nth-child(3n) {
+        margin-right: 0px !important;
+    }
+
+    #se-slide-banner-categoria {
+        margin-top: 0px;
+        height: unset;
     }
 
     /* ===================
@@ -437,6 +486,9 @@
     }
 }
 @media(max-width: 425px){
+    html,body {
+        overflow-x: hidden;
+    }
     #se-category-footer{
         height: unset;
         padding-top: 43px;
@@ -701,17 +753,17 @@
         margin: 10px auto 0px;
     }
     
-    section#se-header {
+    #se-header {
         height: auto;
+    }
+
+    #newsletter {
+        height: unset !important;
     }
     
     #newsletter input[type="text"] {
-        width: 45%;
-        margin-right: 0px !important;
-    }
-
-    #newsletter input[type="text"]:first-child {
-        margin-right: 5px !important;
+        width: calc(100% - 15px) !important;
+        margin-bottom: 5px;
     }
 
     #newsletter select {
@@ -720,8 +772,8 @@
     }
 
     #newsletter button.se-button-blue {
-        width: 181px;
-        margin-top: 5px;
+        width: 100%;
+        margin-bottom: 5px;
     }
 
     #newsletter form {
@@ -743,7 +795,8 @@
     }
 
     #newsletter span.discount-text {
-        left: 100px;
+        left: 0px;
+        bottom: 0px;
     }
 
     #a-seralle p {
@@ -752,10 +805,6 @@
 
     #footer-copyright h3 {
         padding: 15px 0;
-    }
-
-    #newsletter form {
-        display: none;
     }
 
     section#footer-links section:last-child {
@@ -795,10 +844,6 @@
         margin-top: 10px;
     }
     
-    p#se-product-buy-info-price-now {
-        margin-top: 0px;
-    }
-    
     .se-product-option h3 {
         text-align: left;
     }
@@ -836,6 +881,15 @@
         flex: 0 0 50% !important;
         max-width: 50% !important;
         min-width: unset !important;
+    }
+
+    #se-entrega-expressa #duvidas-frequentes-banner {
+    display: flex;
+    align-items: center;
+}
+
+    #se-entrega-expressa #duvidas-frequentes-banner h4 {
+        padding-top: 40px !important;
     }
 
     /* ==============

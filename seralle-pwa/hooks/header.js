@@ -62,21 +62,16 @@
       this.classList.remove("ativo")
     });
 
-    // element.addEventListener("click", function(){
-    //     this.classList.remove("ativo");
-    // });
-
-    // element.querySelector('.submenu').addEventListener("click", function(){
-    //     console.log("Entrei neste click");
-    //     this.closest('.se-menu-item').classList.remove("ativo");
-    // });
-
     var elem = document.getElementsByClassName('se-submenu-item')
-    for(var i=0; i < elem.length; i++){
-        elem[i].addEventListener("click", function(){
-            console.log("Entrei neste click");
-            this.closest('.se-menu-item').classList.remove("ativo");
-        })
-    }
+    for(var i=0; i < elem.length; i++)
+      elem[i].addEventListener("click", function(){
+        this.closest('.se-menu-item').classList.remove("ativo");
+      })
+
+    var menu = document.getElementsByClassName('se-menu-item')
+    for(var i=0; i< menu.length; i++)
+      menu[i].addEventListener("click", function(){
+        this.classList.remove("ativo");
+      })
   }
 }
