@@ -64,40 +64,40 @@
       }
     });
 
-        component.$slide('.slider-products-look', {
+    component.$slide('.slider-products-look', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: '.slider-product-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        720: {
           slidesPerView: 2,
           spaceBetween: 30,
-          pagination: {
-            el: '.slider-product-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            900: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            720: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            }
-          }
-        });
+        }
+      }
+    });
 
-        component.$slide('.slider-images-block-product-details', {
-          // loop: false,
-          navigation: {
-            nextEl: '.next-slider-images-block-product-details',
-            prevEl: '.prev-slider-images-block-product-details',
-          },
-        });
-
-        const lightbox = GLightbox({
-          selector: '.glightbox',
-          width: '80vw',
-          height: 'auto',
-          videosWidth: '80vw'
-        });
+    component.$slide('.slider-images-block-product-details', {
+      // loop: false,
+      navigation: {
+        nextEl: '.next-slider-images-block-product-details',
+        prevEl: '.prev-slider-images-block-product-details',
       },
+    });
+
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      width: '80vw',
+      height: 'auto',
+      videosWidth: '80vw'
+    });
+  },
 
   "on-page-product": component => {
     component.$slide('#nb-product-gallery', {
