@@ -1,0 +1,509 @@
+<main id="main">
+
+  <div class="spacer-menu-fixed"></div>
+
+  <section class="block-product-details">
+    <div class="container wrapper gap30">
+      <div class="span7 s-span12" style="overflow: hidden">
+        <div class="slider-images-block-product-details swiper-container" id="nb-product-gallery">
+          <div class="swiper-wrapper">
+            <pwa-loop params="7">
+              <div pwa-each-image class="swiper-slide">
+                <img pwa-preview-src="product-example" pwa-src="image" class="se-image-zoom" data-zoom-image="image">
+              </div>
+            </pwa-loop>
+            <!-- <div class="swiper-slide" pwa-each-image>
+              <img pwa-src="image" pwa-alt="product.name" />
+            </div>
+             -->
+          </div>
+          <!-- Add Arrows -->
+          <div class="next-slider-images-block-product-details">
+            <img pwa-src="button-next">
+          </div>
+
+          <div class="prev-slider-images-block-product-details">
+            <img pwa-src="button-prev">
+          </div>
+        </div>
+      </div>
+      <div class="info-block-product-details span5 s-span12">
+        <ul class="breadcrumbs">
+          <li><a pwa-to-page="home">Início</a></li>
+          <li pwa-breadcumb-item><a pwa-to-page="bc.url">{{ bc.name }}</a></li>
+          <li><b>{{ product.name }}</b></li>
+        </ul>
+        <div class="maxw400">
+          <div class="label">New In</div>
+          <img pwa-src="icon-fav" class="favorite-product">
+        </div>
+        <h1 class="name-product">{{ product.name }}</h1>
+        <div class="spacer20"></div>
+        <div class="price-product">{{ product.price | price }}</div>
+        <!-- <div class="spacer20"></div>
+          <div class="label-attr-product">Rosa</div>
+          <ul class="list-attr-product">
+            <li class="active"><a href="#" style="background-color: #FFD9D5"></a></li>
+            <li><a href="#" style="background-color: #BFE1C2"></a></li>
+            <li><a href="#" style="background-color:#FE7C6E"></a></li>
+            <li><a href="#" style="background-color: #ECAA6E"></a></li>
+          </ul> -->
+
+        <!-- <div class="spacer20"></div> -->
+        
+        <pwa-product-configurations-bundle>
+        </pwa-product-configurations-bundle>
+
+        <!-- <div class="label-attr-product">Escolha  a cor</div>
+            <div attribute="skus.Cor.0" class="list-attr-product">
+                <div pwa-each-configuration pwa-is-selected.class="active" class="item-attr-product"
+                    pwa-data-disabled="configuration.sale_price === 0" >
+                    <a pwa--if="configuration.Cor[0] === 'Preto'" style="background-color: #000"></a>
+                    
+                    {{ configuration.Cor[0] }}
+                </div>
+            </div>
+          <div class="spacer20"></div>
+
+          <div class="label-attr-product">Escolha o tamanho</div>
+            <div attribute="skus.Tamanho.0" class="list-attr-product attr-size">
+                <div pwa-each-configuration pwa-is-selected.class="active" class="item-attr-product"
+                    pwa-data-disabled="configuration.sale_price === 0">
+                    {{ configuration.Tamanho[0] }}
+                </div>
+            </div> -->
+
+        <!-- <div class="spacer20"></div>
+          <div class="label-attr-product">Escolha o tamanho</div>
+          <ul class="list-attr-product attr-size">
+            <li class="active"><a href="#">P</a></li>
+            <li><a href="#">M</a></li>
+            <li class="inactive"><a href="#">G</a></li>
+          </ul> -->
+        <div class="spacer40"></div>
+        <button class="btn btn-add-to-cart" pwa-add-in-cart>Adicionar à Sacola</button>
+        <div class="spacer40"></div>
+        <div class="list-details">
+          <h5>Detalhes do Produto</h5>
+          <p>{{ product.description }}</p>
+          <!-- <ul class="list">
+              <li><img pwa-src="icon-yoga"> <b>Feito para Yoga</b></li> 
+              <li><img pwa-src="icon-star"> <b>Best Seller</b></li> 
+              <li><img pwa-src="icon-sun"> <b>UV 50+</b></li> 
+              <li><img pwa-src="icon-read"> <b>Material e Cuidados</b></li> 
+            </ul> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="spacer80"></div>
+
+  <section class="container ">
+    <h4 class="subtitle text-center ">Complete o look</h4>
+
+    <div class="slider-look-product">
+      <div class="image-slider-look">
+        <img pwa-src="product.image.replace('http://', 'https://')" pwa-alt="product.name">
+      </div>
+
+      <pwa-product-linkeds type="suggestion" size="12" style="width: 70%; ">
+        <pwa-hidden>
+          <div pwa-is-loading class="loader">
+            <div class="loader-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+
+        <div pwa-not-loading class="slider-products-look swiper-container" id="" style="width: 100%; ">
+          <div pwa-not-empty class="swiper-wrapper">
+            <div pwa-each-linked class="swiper-slide">
+              <pwa-product-card>
+            </div>
+          </div>
+          <div class="slider-product-pagination swiper-pagination"></div>
+
+        </div>
+      </pwa-product-linkeds>
+
+      <!--<div class="slider-products-look swiper-container">
+          <div class="swiper-wrapper">
+             <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <div class="label">New In</div>
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <div class="label">New In</div>
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <div class="label">New In</div>
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+            <div class="card-product swiper-slide">
+              <div class="images-slider-product">
+                <img pwa-src="icon-fav" class="favorite-product">
+                <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+                <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+                <span class="heart"></span>
+              </div>
+              <div class="info-slider-product">
+                <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                <div class="price">R$132,82</div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product-pagination swiper-pagination"></div>
+        </div>-->
+
+    </div>
+
+  </section>
+
+  <div class="spacer180"></div>
+
+  <section class="bcg-gray">
+    <div class="block01-description-product container wrapper">
+      <div class="content-block01-description-product span6 s-span12">
+        <h2 class="title">Por que colocar na sua sacola?</h2>
+        <div class="slider-description-product swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
+                recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
+                respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
+            </div>
+            <div class="swiper-slide">
+              <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
+                recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
+                respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
+            </div>
+            <div class="swiper-slide">
+              <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
+                recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
+                respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
+            </div>
+            <div class="swiper-slide">
+              <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
+                recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
+                respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
+            </div>
+            <div class="swiper-slide">
+              <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
+                recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
+                respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
+            </div>
+          </div>
+          <div class="controller-slider">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div class="spacer40"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="image-block01-description-product">
+        <img pwa-src="image1-description-product" alt="Sabrina Sato">
+      </div>
+    </div>
+    <div class="block02-description-product container wrapper gap30">
+      <div class="span6 s-span12">
+        <a href="#">
+          <img pwa-src="image2-description-product" alt="Sabrina Sato">
+        </a>
+      </div>
+      <div class="span6 s-span12 text-left">
+        <h2 class="subtitle">UV 50+</h2>
+        <p>As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até
+          98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor
+          solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio
+          da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de
+          UVA quanto UVB.</p>
+        <p>Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te
+          proteger durante práticas externas de exercícios.</p>
+
+        <div class="spacer40"></div>
+
+        <h2 class="subtitle">LYCRA® Black Tecnhnology</h2>
+        <p>A tecnologia BLACK da marca LYCRA® foi desenvolvida no primeiro elastano verdadeiramente preto da indústria,
+          o fio LYCRA® T275Z, uma fibra resistente ao cloro que tem sua cor profunda derivada do pigmento preto. Os
+          tecidos apresentam tons mais fortes e escuros que conservam toda a integridade da cor. Ainda é possível
+          combinar a tecnologia com um nylon colorido para um tecido não tingido com total solidez e sem sangria de cor.
+        </p>
+        <p>A tecnologia BLACK também fornece uma solução altamente eficaz para o problema de brilho e efeito
+          “grin-through” do elastano.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer80"></div>
+
+  <section class="block03-description-product container wrapper">
+    <div class="span1 hide-only-small"></div>
+    <div class="span10 s-span12">
+      <div class="card-description">
+        <div class="header-card-description">
+          <h4 class="title text-cenetr">Materiais e Cuidados</h4>
+        </div>
+        <div class="content-card-description">
+          <div class="col-left">
+            <div class="title">Materiais</div>
+            <ul class="list">
+              <li>100% poliester</li>
+            </ul>
+          </div>
+          <div class="col-right">
+            <div class="title">Cuidados</div>
+            <ul class="list-cols">
+              <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
+              <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
+              <li><img pwa-src="icon-seco"> Não lave a seco</li>
+              <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
+              <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
+              <li><img pwa-src="icon-seco"> Não lave a seco</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span1 hide-only-small"></div>
+
+  </section>
+
+  <div class="spacer80" style="display: none"></div>
+
+  <p class="text-center" style="display: none">[AVALIAÇÕES]</p>
+
+  <div class="spacer80"></div>
+
+  <section class="container">
+    <h4 class="subtitle text-center">Você vai amar</h4>
+
+    <pwa-product-list size="12" class="">
+      <pwa-hidden>
+        <div pwa-is-loading class="loader">
+          <div class="loader-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </pwa-hidden>
+
+      <div class="slider-products swiper-container" id="">
+        <div pwa-not-loading class="swiper-wrapper">
+          <div pwa-each-product class="swiper-slide">
+            <pwa-product-card>
+          </div>
+        </div>
+
+      </div>
+    </pwa-product-list>
+
+    <!-- <div class="slider-products swiper-container">
+        <div class="swiper-wrapper">
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <div class="label">New In</div>
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <div class="label">New In</div>
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <div class="label">New In</div>
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+          <div class="card-product swiper-slide">
+            <div class="images-slider-product">
+              <img pwa-src="icon-fav" class="favorite-product">
+              <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products">
+              <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products">
+              <span class="heart"></span>
+            </div>
+            <div class="info-slider-product">
+              <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+              <div class="price">R$132,82</div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-product-pagination swiper-pagination"></div>
+      </div> -->
+  </section>
+
+
+  <div class="spacer80"></div>
+
+  <section id="nb-newsletter" class="block-newsletter bkg-salmao">
+    <div class="container-block-newsletter">
+      <h5>Além de muito sol, tem novidades e<br />promoções esperando por você</h5>
+      <form class="form-block-newsletter">
+        <div class="input-container-block-newsletter">
+          <label for="cNameNewsletter">Nome</label>
+          <input type="text" class="input-form" name="cNameNewsletter" id="cNameNewsletter"
+            placeholder="Ex.: Vanessa Ferty">
+        </div>
+        <div class="input-container-block-newsletter">
+          <label for="cEmailNewsletter">E-mail</label>
+          <input type="text" class="input-form" name="cEmailNewsletter" id="cEmailNewsletter"
+            placeholder="Ex.: seuemail@email.com">
+        </div>
+        <button type="submit" class="btn">Receber Novidades</button>
+      </form>
+    </div>
+  </section>
+
+
+</main>

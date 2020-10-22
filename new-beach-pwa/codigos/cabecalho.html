@@ -1,0 +1,284 @@
+<header id="header">
+  <div class="lf-cart__darken" id="lf-cart__darken" pwa-toggle-cart></div>
+  <pwa-cart open-on-add in-background />
+  <div class="header-topbar">
+    <div class="container text-center">
+      Aproveite o FRETE GRÁTIS nos pedidos a partir de R$150
+    </div>
+  </div>
+
+  <div class="header-menu">
+    <div class="container header-menu-container">
+      <div class="header-logo-mobile show-only-small">
+        <div ontouchstart="openMobileSearch()">
+          <img pwa-src="icon-search">
+        </div>
+        <div>
+          <img pwa-src="icon-heart">
+        </div>
+        <div class="logo">
+          <a pwa-to-page="home">
+            <!-- <img pwa-src="logo-newbeach" alt="Newbeach"> -->
+            <img pwa-src="newbeach-logo" alt="Newbeach">
+          </a>
+        </div>
+        <div class="icon-bag" pwa-toggle-cart>
+          <img pwa-src="icon-bag">
+          <span class="label-cart">{{ $$cart.count }}</span>
+        </div>
+
+        <div >
+          <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
+          <a pwa-is-logged pwa-to-account><img pwa-src="icon-user"></a>
+        </div>
+
+      </div>
+      <div class="header-logo hide-only-small">
+        <a pwa-to-page="home" title="Ir para a página inicial">
+          <!-- <img pwa-src="logo-newbeach" alt="Logo Newbeach" class="logo"> -->
+          <img pwa-src="newbeach-logo" alt="Newbeach">
+        </a>
+      </div>
+
+      <nav class="nav-menu isdesktop">
+        <ul class="menu-list">
+          <li class="menu-item" onmouseover="openSubmenu(this)" ontouchstart="toggleSubmenu(this)" pwa-to-page="/new-beach">Feminino</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/plus-size">Plus</li>
+          <li class="menu-item" pwa-to-page="/new-beach/masculino">Masculino</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/fitness/acessorios">Acessórios</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/collab">Collab</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/cia-do-broto">Cia do Broto</li>
+          <li class="menu-item nb-destaque">Coleção #01</li>
+          <!-- <li class="menu-item">Dia das Mães</li> -->
+        </ul>
+        <div class="submenu-list">
+          <div class="container-submenu-list container wrapper" onmouseleave="closeSubmenu(this)" onclick="closeSubmenu(this)">
+            <div class="item-container-submenu-list span2 s-span12 br-gray">
+              <ul class="list active">
+                <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
+                <li><a pwa-to-page="/new-beach/bestsellers">Bestsellers</a></li>
+                <li><a pwa-to-page="/new-beach/tecidos-leves">Tecidos leves</a></li>
+                <li><a pwa-to-page="/new-beach/at-home">At home</a></li>
+                <li><a pwa-to-page="/new-beach/meninas">Meninas</a></li>
+              </ul>
+            </div>
+
+            <div class="item-container-submenu-list span2 s-span12 active" id="subFemininoFitness">
+              <div class="title-submenu-list">Fitness <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
+                <li><a pwa-to-page="/new-beach/calça">Calça</a></li>
+                <li><a pwa-to-page="/new-beach/top">Top</a></li>
+                <li><a pwa-to-page="/new-beach/t-shirt">T-shirt</a></li>
+                <li><a pwa-to-page="/new-beach/cropped">Cropped</a></li>
+                <li><a pwa-to-page="/new-beach/regata">Regata</a></li>
+                <li><a pwa-to-page="/new-beach/shorts">Shorts</a></li>
+                <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
+                <li><a pwa-to-page="/new-beach/jaqueta-e-colete">Jaqueta e colete</a></li>
+                <li><a pwa-to-page="/new-beach/macacao">Macacão</a></li>
+              </ul>
+            </div>
+
+            <div class="item-container-submenu-list span2 s-span12">
+              <div class="title-submenu-list">Beachwear <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/biquini">Biquíni</a></li>
+                <li><a pwa-to-page="/new-beach/maio">Maiô</a></li>
+                <li><a pwa-to-page="/new-beach/saida-de-praia">Saída de praia</a></li>
+                <li><a pwa-to-page="/new-beach/busto">Busto</a></li>
+                <li><a pwa-to-page="/new-beach/tanga">Tanga</a></li>
+              </ul>
+            </div>
+
+            <div class="item-container-submenu-list span2 s-span12">
+              <div class="title-submenu-list">Atividades <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/academia-e-treino">Academia e treino</a></li>
+                <li><a pwa-to-page="/new-beach/outdoor">Outdoor</a></li>
+                <li><a pwa-to-page="/new-beach/running">Running</a></li>
+                <li><a pwa-to-page="/new-beach/swing">Swing</a></li>
+                <li><a pwa-to-page="/new-beach/yoga">Yoga</a></li>
+                <li><a pwa-to-page="/new-beach/pilates">Pilates</a></li>
+              </ul>
+            </div>
+
+            <div class="banner-content-submenu-list span4 hide-only-small">
+              <img pwa-src="image-submenu-legging" alt="Legging">
+              <div class="description">Bring new energy to your practice.</div>
+              <button class="btn">Shop Leggings</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-menu-user hide-only-small">
+
+        <pwa-search-form size="5" class="search">
+          <form class="form-search">
+            <input pwa-search-box name="cSearch" class="input-form" placeholder="Qual seu estilo?" />
+            <button pwa-search-button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
+          </form>
+        </pwa-search-form>
+
+        <ul class="menu-list">
+          <li class="menu-item" id="btn-search" onclick="openSubmenuSearch()">
+            <img pwa-src="icon-search">
+          </li>
+          <li class="menu-item">
+            <img pwa-src="icon-heart">
+          </li>
+          <li class="menu-item icon-bag" pwa-toggle-cart>
+            <img pwa-src="icon-bag">
+            <span class="label-cart">{{ $$cart.count }}</span>
+          </li>
+          <li class="menu-item">
+            <div >
+              <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
+              <a pwa-is-logged pwa-to-account><img pwa-src="icon-user"></a>
+            </div>
+          </li>
+        </ul>
+        <div class="submenu-search">
+          <div class="container-submenu-search container wrapper" onmouseleave="closeSubmenuSearch()">
+            <div class="span9">
+              <div class="nb-submenu-first-line">
+                <h2>Sugestões para você</h2>
+              </div>
+
+              <div class="list-products-search wrapper gap30">
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
+                  </div>
+                </div>
+
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
+                  </div>
+                </div>
+
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nb-submenu-last-line">
+                <a pwa-to-search="/new-beach/top">
+                  <img pwa-src="plus-icon" alt="">
+                  Ver todas as opções</a>
+              </div>
+            </div>
+            <div class="span3 bl-gray">
+              <div class="title-submenu-search">Mais acessados</div>
+              <ul class="list">
+                <li><a href="#">Maiô Alto Giro Lycra Life Swimming</a></li>
+                <li><a href="#">Macaquinho Lycra com Bojo</a></li>
+                <li><a href="#">Macaquinho Lycra termo</a></li>
+                <li><a href="#">Sunga Lycra<br/>Termo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-mobile">
+    <div class="bcg-menu-mobile" onclick="hideMenuMobile()"></div>
+    <div class="container-menu-mobile">
+      <div class="search-menu-mobile">
+        <form class="form-search-menu-mobile">
+          <input type="text" name="cSearch" class="input-form" placeholder="Qual seu estilo?">
+          <button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
+        </form>
+        
+      </div>
+      <nav class="menu-list-mobile">
+        <ul>
+          <li class="menu-item"
+            onclick="document.querySelector('#submenu-mobile-feminino').classList.toggle('active'); this.classList.toggle('active')">
+            <span>Feminino <img pwa-src="icon-arrow-down"></span>
+            <div class="submenu-list-mobile" id="submenu-mobile-feminino">
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
+                <li><a pwa-to-page="/new-beach/bestsellers">Bestsellers</a></li>
+                <li><a pwa-to-page="/new-beach/tecidos-leves">Tecidos leves</a></li>
+                <li><a pwa-to-page="/new-beach/at-home">At home</a></li>
+                <li><a pwa-to-page="/new-beach/meninas">Meninas</a></li>
+              </ul>
+
+              <ul class="list-subitens list">
+                <li class="title-submenu-list-mobile">Fitness</li>
+                <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
+                <li><a pwa-to-page="/new-beach/calca">Calça</a></li>
+                <li><a pwa-to-page="/new-beach/top">Top</a></li>
+                <li><a pwa-to-page="/new-beach/t-shirt">T-shirt</a></li>
+                <li><a pwa-to-page="/new-beach/cropped">Cropped</a></li>
+                <li><a pwa-to-page="/new-beach/regata">Regata</a></li>
+                <li><a pwa-to-page="/new-beach/shorts">Shorts</a></li>
+                <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
+                <li><a pwa-to-page="/new-beach/jaqueta-e-colete">Jaqueta e colete</a></li>
+                <li><a pwa-to-page="/new-beach/macacao">Macacão</a></li>
+              </ul>
+
+              <ul class="list-subitens list">
+                <li class="title-submenu-list-mobile">Beachwear</li>
+                <li><a pwa-to-page="/new-beach/biquini">Biquíni</a></li>
+                <li><a pwa-to-page="/new-beach/maio">Maiô</a></li>
+                <li><a pwa-to-page="/new-beach/saida-de-praia">Saída de praia</a></li>
+                <li><a pwa-to-page="/new-beach/busto">Busto</a></li>
+                <li><a pwa-to-page="/new-beach/tanga">Tanga</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item"><span>Plus <img pwa-src="icon-arrow-down"></span></li>
+          <li class="menu-item"><span>Masculino <img pwa-src="icon-arrow-down"></span></li>
+          <li class="menu-item"><span>Acessórios <img pwa-src="icon-arrow-down"></span></li>
+          <li class="menu-item"><span>Collab <img pwa-src="icon-arrow-down"></span></li>
+          <li class="menu-item"><span>Cia do Broto <img pwa-src="icon-arrow-down"></span></li>
+          <li class="menu-item"><span>Coleção #01</span></li>
+        </ul>
+      </nav>
+      <nav class="menu-list-mobile">
+        <ul class="user-menu-list-mobile">
+          <li class="menu-item"><span><img pwa-src="icon-heart"> Meus Favoritos</span></li>
+          <li class="menu-item"><span><img pwa-src="icon-user"> Minha Conta</span></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>

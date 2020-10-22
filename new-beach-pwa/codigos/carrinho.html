@@ -1,0 +1,86 @@
+<section id="lf-cart" class="lf-cart">
+  <header class="lf-cart__header">
+    <a pwa-toggle-cart>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+
+    <div>
+      <h2>Meu carrinho</h2>
+      <span pwa-has-items>({{ (+$$cart.count).toFixed(0) }})</span>
+    </div>
+  </header>
+
+  <pwa-hidden>
+    <div pwa-is-loading class="my-loader" style="position:relative;height:400px">
+      <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </pwa-hidden>
+
+  <ul pwa-has-items class="lf-cart__list">
+    <li pwa-each-item class="lf-cart__item">
+      <section class="lf-cart__row-bag">
+        <div>
+          <img pwa-src="product.image" pwa-alt="product.name">
+          <article class="lf-cart__row-pay">
+            <h3>{{ product.name }}</h3>
+            <span class="cart-item-sku" pwa--if="product.product">Tipo {{ product.product.sku }}</span>
+            <section class="qty">
+              <div class="lf-input__number number-input" pwa--if="product.price > 0">
+                <button pwa-quantity-decrement class="minus"><img pwa-src="icon-minus"></button>
+                <input pwa-quantity-box readonly class="quantity">
+                <button pwa-quantity-increment class="plus"><img pwa-src="icon-plus-cart"></button>
+              </div>
+              <small pwa--if="product.price > 0" class="cart-item-price">{{ product.price | price }}</small>
+              <small pwa--if="product.price <= 0">Grátis</small>
+            </section>
+          </article>
+        </div>
+
+        <a pwa-remove-item class="delete__item">
+          <img pwa-src="icon-trash">
+        </a>
+      </section>
+    </li>
+  </ul>
+
+  <footer pwa-has-items class="lf-cart__footer">
+    <div class="lf-cart__subtotal form-discount">
+      <input pwa-coupon-box class="input-form" placeholder="Cupom de desconto" style="margin-right: 15px" />
+      <section pwa-without-coupon class="" style="margin: 0px">
+        <a pwa-coupon-apply class="btn">Aplicar</a>
+      </section>
+
+      <section pwa-with-coupon class="" style="margin: 0px">
+        <a pwa-coupon-discard class="btn" style="margin: 0px; padding: 13px 30px">
+          Remover
+        </a>
+      </section>
+    </div>
+
+    <div class="lf-cart__subtotal">
+      <h3>Subtotal</h3>
+      <span class="lf-cart__subtotal_flex-end">{{ $$cart.subtotal | price }}</span>
+    </div>
+
+    <div pwa-with-coupon class="lf-cart__subtotal">
+      <h3>Desconto Cupom</h3>
+      <span class="lf-cart__subtotal_flex-end">- {{ $$cart.discount | price }}</span>
+    </div>
+
+    <section class="lf-cart__total">
+      <h3>Total a pagar</h3>
+      <span>{{ $$cart.total | price }}</span>
+    </section>
+
+    <section pwa-has-items class="btn-checkout-cart btn text-center">
+      <a pwa-checkout>
+        Fechar Pedido
+      </a>
+    </section>
+
+  </footer>
+</section>

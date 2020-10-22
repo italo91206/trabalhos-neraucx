@@ -1,0 +1,153 @@
+.breadcrumbs {
+	list-style: none;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+	padding: 5px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.breadcrumbs li a {
+	display: block;
+	text-decoration: none;
+    color: var(--color-custom-black300);
+    font-family: 'Montserrat';
+}
+
+.breadcrumbs li a:after {
+	content: "/";
+	display: inline;
+	padding: 0px 10px 0px 15px;
+}
+
+.breadcrumbs li a:hover {
+	color: var(--color-custom-black);
+}
+
+.breadcrumbs b {
+    color: #E27C73;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.content-block-header-pages {
+	position: relative;
+	background: #fff;
+	padding: 30px;
+    min-height: 480px;
+    margin-top: 63px;
+}
+
+#nb-category-img-holder {
+    padding-top: 63px;
+    background: #fcf3ea;
+}
+
+.link-all-products {
+    display: flex;
+}
+
+.content-block-header-pages .title {
+    font-size: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0px 0px 20px 0px;
+    font-family: 'Barlow';
+    font-weight: 400;
+    color: #E27C73;
+}
+
+.content-block-header-pages .description {
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-custom-black400);
+	margin: 0px 0px 20px 0px;
+}
+
+.content-block-header-pages .list-subcategories {
+	list-style: none;
+	margin: 0px 0px 40px 0px;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-block-header-pages .link-all-products img {
+	margin-left: 10px;
+    transition: .3s all ease-in-out;
+    width: 6.25px;
+    height: 10.50px;
+    margin-top: 4px;
+}
+
+.nb-cmd-3.nb-category-rectangles {
+    max-width: 394px;
+    margin: 0 auto;
+}
+
+.nb-category-rectangles h2 {
+    font-family: 'Barlow';
+    font-size: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    color: #E79B75;
+    margin-top: 36px;
+    margin-bottom: 19px;
+}
+
+.nb-category-rectangles p {
+    font-size: 25px;
+    font-family: 'Montserrat';
+    color: #586A6A;
+    font-weight: 400;
+    text-align: center;
+    max-width: 394px;
+}
+
+.nb-cmd-3.nb-category-rectangles:first-child {
+    margin-left: 0px;
+}
+
+.nb-cmd-3.nb-category-rectangles:last-child {
+    margin-right: 0px;
+}
+
+#nb-category-rectangles-line {
+    margin-top: 95px;
+}
+
+#nb-category-tecnologias {
+    margin-top: 147px;
+}
+
+#nb-category-tecnologias h2 {
+    color: #E79B75;
+}
+
+#nb-category-tecnologias .block-info-image-left .block-info-image-content {
+    left: 353px;
+}
+
+#nb-category-tecnologias .block-info-image-left .description {
+	width: 548px;
+    justify-content: unset;
+}
+
+#nb-category-tecnologias .block-info-image .block-info-image-content .description p {
+    color: #767575;
+}
+
+#nb-category-page .bkg-salmao .container.wrapper:last-child .title:before {
+    border: 1px solid #A4A3A3;
+}
+
+#nb-category-page .block-list-products {
+    margin-top: 113px;
+}
