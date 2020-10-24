@@ -1,0 +1,22 @@
+<div class="card-product">
+  <div class="images-slider-product">
+
+    <div pwa-is-logged>
+      <a pwa-add-wishlist><img pwa-src="icon-fav" class="favorite-product"></a>
+      <a pwa-remove-wishlist><img pwa-src="icon-faved" class="favorite-product"></a>
+    </div>
+    <div class="label">New In</div>
+    <img pwa-src="product.image" pwa-alt="product.name" pwa-to-product-page>
+    <!-- <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness" class="primary-image-slider-products"> -->
+    <!-- <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness" class="secondary-image-slider-products"> -->
+    <div class="nb-product-card-color-swatch nb-flex">
+      <div class="nb-swatch-red selected"></div>
+      <div class="nb-swatch-cyan"></div>
+      <div class="nb-swatch-brown"></div>
+    </div>
+  </div>
+  <div class="info-slider-product">
+    <h4 class="product-name">{{product.name}}</h4>
+    <div class="price">{{product.price | price }}</div>
+  </div>
+</div>
