@@ -1,38 +1,35 @@
 <header id="header">
   <div class="lf-cart__darken" id="lf-cart__darken" pwa-toggle-cart></div>
+  
   <pwa-cart open-on-add in-background />
+  
   <div class="header-topbar">
-    <div class="container text-center">
+    <div class="nb-container text-center">
       Aproveite o FRETE GRÁTIS nos pedidos a partir de R$150
     </div>
   </div>
 
-  <div class="header-menu">
-    <div class="container header-menu-container">
+  <div class="header-menu" pwa-hook="preparaMenu">
+    <div class="nb-container header-menu-container">
       <div class="header-logo-mobile show-only-small">
-        <div ontouchstart="openMobileSearch()">
-          <img pwa-src="icon-search">
+        
+        <div class="nb-mobile-menu-bar" pwa-hook="ativaMenuMobile">
+          <span class="fa fa-bars"></span>
         </div>
-        <div>
-          <img pwa-src="icon-heart">
-        </div>
+        
         <div class="logo">
           <a pwa-to-page="home">
             <!-- <img pwa-src="logo-newbeach" alt="Newbeach"> -->
             <img pwa-src="newbeach-logo" alt="Newbeach">
           </a>
         </div>
+
         <div class="icon-bag" pwa-toggle-cart>
           <img pwa-src="icon-bag">
           <span class="label-cart">{{ $$cart.count }}</span>
         </div>
-
-        <div >
-          <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
-          <a pwa-is-logged pwa-to-account><img pwa-src="icon-user"></a>
-        </div>
-
       </div>
+
       <div class="header-logo hide-only-small">
         <a pwa-to-page="home" title="Ir para a página inicial">
           <!-- <img pwa-src="logo-newbeach" alt="Logo Newbeach" class="logo"> -->
@@ -51,10 +48,11 @@
           <li class="menu-item nb-destaque">Coleção #01</li>
           <!-- <li class="menu-item">Dia das Mães</li> -->
         </ul>
+
         <div class="submenu-list">
-          <div class="container-submenu-list container wrapper" onmouseleave="closeSubmenu(this)" onclick="closeSubmenu(this)">
+          <div class="container-submenu-list container wrapper">
             <div class="item-container-submenu-list span2 s-span12 br-gray">
-              <ul class="list active">
+              <ul class="list">
                 <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
                 <li><a pwa-to-page="/new-beach/bestsellers">Bestsellers</a></li>
                 <li><a pwa-to-page="/new-beach/tecidos-leves">Tecidos leves</a></li>
@@ -124,13 +122,16 @@
           <li class="menu-item" id="btn-search" onclick="openSubmenuSearch()">
             <img pwa-src="icon-search">
           </li>
+
           <li class="menu-item">
             <img pwa-src="icon-heart">
           </li>
+
           <li class="menu-item icon-bag" pwa-toggle-cart>
             <img pwa-src="icon-bag">
             <span class="label-cart">{{ $$cart.count }}</span>
           </li>
+
           <li class="menu-item">
             <div >
               <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
@@ -138,6 +139,7 @@
             </div>
           </li>
         </ul>
+
         <div class="submenu-search">
           <div class="container-submenu-search container wrapper" onmouseleave="closeSubmenuSearch()">
             <div class="span9">
@@ -216,21 +218,27 @@
     </div>
   </div>
 
-  <div class="menu-mobile">
+  <div class="menu-mobile" pwa-hook="preparaMenuMobile">
     <div class="bcg-menu-mobile" onclick="hideMenuMobile()"></div>
+
     <div class="container-menu-mobile">
-      <div class="search-menu-mobile">
+      
+      <pwa-search-form class="search-menu-mobile">
         <form class="form-search-menu-mobile">
-          <input type="text" name="cSearch" class="input-form" placeholder="Qual seu estilo?">
-          <button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
+          <input pwa-search-box name="cSearch" class="input-form" placeholder="Qual seu estilo?">
+          <button pwa-search-button type="submit" class="btn-search"><img pwa-src="icon-search" onclick="hideMenuMobile()"></button>
         </form>
-        
-      </div>
+      </pwa-search-form>
+
       <nav class="menu-list-mobile">
         <ul>
-          <li class="menu-item"
-            onclick="document.querySelector('#submenu-mobile-feminino').classList.toggle('active'); this.classList.toggle('active')">
-            <span>Feminino <img pwa-src="icon-arrow-down"></span>
+
+          <li class="menu-item nb-flex" onclick="document.querySelector('#submenu-mobile-feminino').classList.toggle('active'); this.classList.toggle('active')">
+            <div class="nb-flex">
+              <span>Feminino </span>
+              <img pwa-src="icon-black-arrow-right">
+            </div>
+            
             <div class="submenu-list-mobile" id="submenu-mobile-feminino">
               <ul class="list-subitens list">
                 <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
@@ -264,14 +272,51 @@
               </ul>
             </div>
           </li>
-          <li class="menu-item"><span>Plus <img pwa-src="icon-arrow-down"></span></li>
-          <li class="menu-item"><span>Masculino <img pwa-src="icon-arrow-down"></span></li>
-          <li class="menu-item"><span>Acessórios <img pwa-src="icon-arrow-down"></span></li>
-          <li class="menu-item"><span>Collab <img pwa-src="icon-arrow-down"></span></li>
-          <li class="menu-item"><span>Cia do Broto <img pwa-src="icon-arrow-down"></span></li>
-          <li class="menu-item"><span>Coleção #01</span></li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/plus-size">
+              <span>Plus</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/masculino">
+              <span>Masculino</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/acessorios">
+              <span>Acessórios</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/collab">
+              <span>Collab</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/cia-do-broto">
+              <span>Cia do Broto</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>  
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/colecao-01">
+              <span>Coleção #01</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
         </ul>
       </nav>
+
       <nav class="menu-list-mobile">
         <ul class="user-menu-list-mobile">
           <li class="menu-item"><span><img pwa-src="icon-heart"> Meus Favoritos</span></li>

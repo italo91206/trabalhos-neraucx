@@ -1,0 +1,130 @@
+#nb-pagina-pesquisa-resultados #nb-coluna-esquerda {
+    width: 293px;
+}
+
+#nb-pagina-pesquisa-resultados #nb-coluna-direita {
+    width: 924px;
+    margin-left: 23px;
+}
+
+.nb-pesquisa-filtros .list-filter {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#nb-pagina-pesquisa-resultados {
+    margin-top: 95px;
+}
+
+.nb-coluna-filtros-titulo {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #586A6A;
+    text-decoration: underline;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+#filter-size span {
+    color: #E27C73;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+#filter-size span img {
+    margin-left: 12px;
+}
+
+#submenu-filter-size ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+#submenu-filter-size ul li {
+    display: flex;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
+.list-filter input[type="checkbox"] {
+    display: none;
+}
+
+.list-filter .checkbox-item-filter:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: solid 2px #586A6A;
+    margin-right: 7px;
+}
+
+.list-filter #filter-size li:hover {
+    cursor: pointer;
+}
+
+#filter-size {
+    border-top: solid 1px #D1D1D1;
+    padding-top: 24px;
+    margin-bottom: 24px;
+}
+
+#filter-size .nb-filter-option-tittle {
+    margin-bottom: 14px;
+    margin-left: 0px;
+}
+
+.bar-filter {
+	border-bottom: 1px solid #D1D1D1;
+}
+
+#filter-order {
+    display: flex;
+    margin: 0 auto;
+    margin-right: 0px;
+}
+
+#submenu-filter-order {
+    display: none;
+}
+
+#filter-order b {
+    color: #e79b75;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+.list-filter li span {
+    display: flex;
+    text-decoration: unset;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.total-results p {
+    margin-bottom: 8px;
+    margin-top: 0px;
+    text-decoration: underline;
+}
+
+#filter-order p {
+    margin-top: 0px;
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
+
+.bar-filter .total-results b {
+    color: #e79b75;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#filter-size span .fa {
+    color: #494747;
+    font-size: 15px;
+    margin-left: 12px;
+}

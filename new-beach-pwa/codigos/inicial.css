@@ -349,3 +349,39 @@
     margin-top: 106px;
     margin-bottom: 108px;
 }
+
+@media(max-width: 375px){
+    #new-beach-home-products-slider {
+     max-width: 350px;
+    }        
+}
+
+@media(max-width: 395px){
+    #new-beach-home-products-slider {
+        max-width: 375px;
+    }
+    .block-info-image .block-info-image-content .title h2{
+        font-size: 55px;
+        line-height: 75.8px;
+        text-align: left;
+    }
+}
+
+@media(max-width: 425px){
+    #segundo-cluster {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+    .block-columns-item.span4.s-span12.text-center:last-child p {
+        margin-bottom: 0px;
+    }
+    
+    .block-columns-itens p {
+        margin-bottom: 20px;
+    }
+
+    .block-info-image .block-info-image-content .description p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}

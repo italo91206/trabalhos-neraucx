@@ -1,0 +1,47 @@
+.nb-product-card-color-swatch {
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    background: #D1D1D1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nb-swatch-red {
+    background: #F5685F;
+}
+
+.nb-swatch{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: solid 3px #fff;
+}
+
+.nb-swatch-cyan {
+    background: #A1E1AF;
+}
+
+.nb-swatch-brown {
+    background: #AC9F7E;
+}
+
+.nb-swatch.nb-swatch-selected {
+    border: solid 2px #545454;
+}
+
+.nb-product-card-color-swatch div {
+    margin-right: 10px;
+}
+
+.nb-product-card-color-swatch div:last-child {
+    margin-right: 0px;
+}
+
+.card-product:hover .nb-product-card-color-swatch{
+    opacity: 1;
+    height: 52px;
+    transition: all .2s ease;
+}

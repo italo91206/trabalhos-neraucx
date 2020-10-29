@@ -1,7 +1,4 @@
-<main id="main">
-
-  <div class="spacer-menu-fixed"></div>
-
+<main id="nb-product-page">
   <section class="block-product-details">
     <div class="container wrapper gap30">
       <div class="span7 s-span12" style="overflow: hidden">
@@ -30,61 +27,32 @@
           </a>
         </div>
       </div>
+
       <div class="info-block-product-details span5 s-span12">
         <ul class="breadcrumbs">
           <li><a pwa-to-page="home">Início</a></li>
           <li pwa-breadcumb-item><a pwa-to-page="bc.url">{{ bc.name }}</a></li>
           <li><b>{{ product.name }}</b></li>
         </ul>
-        <div class="maxw400">
-          <div class="label">New In</div>
+
+        <div class="nb-flex">
+          <div class="label"><p>New In</p></div>
           <img pwa-src="icon-fav" class="favorite-product">
         </div>
-        <h1 class="name-product">{{ product.name }}</h1>
-        <div class="spacer20"></div>
-        <div class="price-product">{{ product.price | price }}</div>
-        <!-- <div class="spacer20"></div>
-          <div class="label-attr-product">Rosa</div>
-          <ul class="list-attr-product">
-            <li class="active"><a href="#" style="background-color: #FFD9D5"></a></li>
-            <li><a href="#" style="background-color: #BFE1C2"></a></li>
-            <li><a href="#" style="background-color:#FE7C6E"></a></li>
-            <li><a href="#" style="background-color: #ECAA6E"></a></li>
-          </ul> -->
 
-        <!-- <div class="spacer20"></div> -->
-        
+        <h1 class="name-product">{{ product.name }}</h1>
+        <div class="price-product">{{ product.price | price }}</div>
+
         <pwa-product-configurations-bundle>
         </pwa-product-configurations-bundle>
+        
+        <div id="nb-product-page-guia-tamanhos" class="nb-flex">
+          <strong>Guia de tamanhos</strong>
+          <p>A modelo mede 1,68 e usa P</p>
+        </div>
 
-        <!-- <div class="label-attr-product">Escolha  a cor</div>
-            <div attribute="skus.Cor.0" class="list-attr-product">
-                <div pwa-each-configuration pwa-is-selected.class="active" class="item-attr-product"
-                    pwa-data-disabled="configuration.sale_price === 0" >
-                    <a pwa--if="configuration.Cor[0] === 'Preto'" style="background-color: #000"></a>
-                    
-                    {{ configuration.Cor[0] }}
-                </div>
-            </div>
-          <div class="spacer20"></div>
-
-          <div class="label-attr-product">Escolha o tamanho</div>
-            <div attribute="skus.Tamanho.0" class="list-attr-product attr-size">
-                <div pwa-each-configuration pwa-is-selected.class="active" class="item-attr-product"
-                    pwa-data-disabled="configuration.sale_price === 0">
-                    {{ configuration.Tamanho[0] }}
-                </div>
-            </div> -->
-
-        <!-- <div class="spacer20"></div>
-          <div class="label-attr-product">Escolha o tamanho</div>
-          <ul class="list-attr-product attr-size">
-            <li class="active"><a href="#">P</a></li>
-            <li><a href="#">M</a></li>
-            <li class="inactive"><a href="#">G</a></li>
-          </ul> -->
-        <div class="spacer40"></div>
         <button class="btn btn-add-to-cart" pwa-add-in-cart>Adicionar à Sacola</button>
+
         <div class="spacer40"></div>
         <div class="list-details">
           <h5>Detalhes do Produto</h5>
@@ -100,10 +68,10 @@
     </div>
   </section>
 
-  <section class="container" id="compre-o-look">
+  <section class="nb-container" id="compre-o-look">
     <h4 class="subtitle text-center ">Complete o look</h4>
 
-    <div class="slider-look-product">
+    <!-- <div class="slider-look-product">
       <div class="image-slider-look">
         <img pwa-src="product.image.replace('http://', 'https://')" pwa-alt="product.name">
       </div>
@@ -126,60 +94,87 @@
             </div>
           </div>
           <div class="slider-product-pagination swiper-pagination"></div>
-
         </div>
       </pwa-product-linkeds>
-    </div>
 
+    </div> -->
+    
+    <pwa-product-list filter="brand: 'NEW BEACH'" size="7" class="">
+      <pwa-hidden>
+        <div pwa-is-loading class="loader">
+          <div class="loader-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </pwa-hidden>
+
+      <div class="swiper-container" id="new-beach-product-page-slider" pwa-hook="new-beach-product-page-slider">
+        <div pwa-not-loading class="swiper-wrapper">
+          <div pwa-each-product class="swiper-slide">
+            <pwa-product-card>
+          </div>
+        </div>
+
+        <div id="new-beach-product-page-navigation"></div>
+      </div>
+    </pwa-product-list>
   </section>
 
-  <div class="spacer180"></div>
-
-  <section class="bcg-gray">
-    <div class="block01-description-product container wrapper">
+  <section id="nb-product-page-detailed-info" class="bkg-salmao">
+    <div class="block01-description-product nb-container wrapper">
       <div class="content-block01-description-product span6 s-span12">
         <h2 class="title">Por que colocar na sua sacola?</h2>
-        <div class="slider-description-product swiper-container">
+        
+        <div class="slider-description-product swiper-container" pwa-hook="slider-description-product">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
                 recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
                 respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
             </div>
+
             <div class="swiper-slide">
               <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
                 recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
                 respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
             </div>
+
             <div class="swiper-slide">
               <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
                 recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
                 respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
             </div>
+
             <div class="swiper-slide">
               <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
                 recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
                 respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
             </div>
+
             <div class="swiper-slide">
               <p>Melhore o ritmo do seu treino com a Legging de tecido canelado. Ela possui textura e brilho leve, com
                 recortes estratégicos que valorizam a silhueta feminina. Os recortes em tela permitem maior
                 respirabilidade durante a prática de exercícios e otimizam a sua performance durante os treinos.</p>
             </div>
           </div>
+
           <div class="controller-slider">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="slider-description-button-next"><img pwa-src="icon-black-arrow-right" alt=""></div>
+            <div class="slider-description-button-prev"><img pwa-src="icon-black-arrow-left" alt=""></div>
           </div>
-          <div class="spacer40"></div>
-          <div class="swiper-pagination"></div>
+
+          <div class="slider-description-pagination"></div>
+          
         </div>
       </div>
       <div class="image-block01-description-product">
         <img pwa-src="image1-description-product" alt="Sabrina Sato">
       </div>
     </div>
-    <div class="block02-description-product container wrapper gap30">
+
+    <div class="block02-description-product nb-container wrapper gap30">
       <div class="span6 s-span12">
         <a href="#">
           <img pwa-src="image2-description-product" alt="Sabrina Sato">
@@ -209,50 +204,135 @@
     </div>
   </section>
 
-  <div class="spacer80"></div>
-
-  <section class="block03-description-product container wrapper">
+  <section id="nb-materiais-e-cuidados" class="block03-description-product nb-container">
     <div class="span1 hide-only-small"></div>
-    <div class="span10 s-span12">
-      <div class="card-description">
-        <div class="header-card-description">
-          <h4 class="title text-cenetr">Materiais e Cuidados</h4>
+
+    <div class="card-description">
+      <div class="header-card-description">
+        <h4 class="title text-cenetr">Materiais e Cuidados</h4>
+      </div>
+      <div class="content-card-description">
+        <div class="col-left">
+          <div class="title">Materiais</div>
+          <ul>
+            <li>100% poliester</li>
+          </ul>
         </div>
-        <div class="content-card-description">
-          <div class="col-left">
-            <div class="title">Materiais</div>
-            <ul class="list">
-              <li>100% poliester</li>
-            </ul>
-          </div>
-          <div class="col-right">
-            <div class="title">Cuidados</div>
-            <ul class="list-cols">
-              <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
-              <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
-              <li><img pwa-src="icon-seco"> Não lave a seco</li>
-              <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
-              <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
-              <li><img pwa-src="icon-seco"> Não lave a seco</li>
-            </ul>
-          </div>
+
+        <div class="col-right">
+          <div class="title">Cuidados</div>
+          <ul>
+            <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
+            <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
+            <li><img pwa-src="icon-seco"> Não lave a seco</li>
+            <li><img pwa-src="icon-ferro"> Não use ferro de passar</li>
+            <li><img pwa-src="icon-alvejante"> Não use alvejante</li>
+            <li><img pwa-src="icon-seco"> Não lave a seco</li>
+          </ul>
         </div>
       </div>
     </div>
+
     <div class="span1 hide-only-small"></div>
 
   </section>
 
-  <div class="spacer80" style="display: none"></div>
+  <section id="nb-avaliacoes" class="nb-container">
+    <h4 class="subtitle">Quem comprou</h4>
+    
+    <div class="nb-avaliacao-media nb-flex">
+      <img pwa-src="estrela-icon-salmao" alt="">
+      <span>4.8</span>
+      <p>1387 avaliações</p>
+    </div>
 
-  <p class="text-center" style="display: none">[AVALIAÇÕES]</p>
+    <div class="nb-avaliacaos-grafico-linha">
+      <div class="nb-flex">
+        <p>Justo</p>
+        <p>Larga</p>
+      </div>
+      <div class="nb-linha">
+        <div class="nb-preenchimento"></div>
+        <img pwa-src="icons-pin" class="nb-preenchimento-pin">
+      </div>
+    </div>
 
-  <div class="spacer80"></div>
+    <div class="nb-flex nb-avaliacoes-comment">
+      <div class="nb-flex nb-avaliacoes-comment-tittle">
+        <h4 class="">Avaliações</h4>
+        <p>Ordenar por</p>
+        <strong>Mais recentes</strong>
+      </div>
+    </div>
 
-  <section class="container">
+    <div class="nb-avaliacao">
+      <div class="nb-flex nb-avaliacao-pre-titulo">
+        <div class="nb-avaliacao-stars nb-flex">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-grey" alt="">
+        </div>
+        <p>4 de 5 estrelas. Michelle Lim</p><li></li><p>6 horas atrás</p>
+      </div>
+
+      <div class="nb-flex nb-avaliacao-titulo">
+        <h4>Great Workout Pants</h4>
+        <p class="nb-flex">
+          <img pwa-src="compra-verificada" alt="">
+          Compra Verificada
+        </p>
+      </div>
+
+      <div class="nb-avaliacao-text">
+        <p>
+          Overall it's a great workout pants and I love the Everlux material. The Chambray colour was also beautiful and squat proof though it's a light colour. However 1 small personal dislike is that the drawstring isn't very useful for me, and aesthetically it causes a muffin top :x
+        </p>
+      </div>
+    </div>
+
+    <div class="nb-avaliacao">
+      <div class="nb-flex nb-avaliacao-pre-titulo">
+        <div class="nb-avaliacao-stars nb-flex">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-black" alt="">
+          <img pwa-src="estrela-grey" alt="">
+        </div>
+        <p>4 de 5 estrelas. Michelle Lim</p><li></li><p>6 horas atrás</p>
+      </div>
+
+      <div class="nb-flex nb-avaliacao-titulo">
+        <h4>Great Workout Pants</h4>
+        <p class="nb-flex">
+          <img pwa-src="compra-verificada" alt="">
+          Compra Verificada
+        </p>
+      </div>
+
+      <div class="nb-avaliacao-text">
+        <p>
+          Overall it's a great workout pants and I love the Everlux material. The Chambray colour was also beautiful and squat proof though it's a light colour. However 1 small personal dislike is that the drawstring isn't very useful for me, and aesthetically it causes a muffin top :x<br/>
+          <br/>
+          <b>Em poucas palavras, o que você gostou?</b> Overall fit and appearance<br/>
+          <b>Em poucas palavras, o que você não gostou?</b> Sweat seeping through after workout<br/>
+          <b>Tamanho comprado</b> 6
+        </p>
+      </div>
+    </div>
+
+    <a pwa-to-page="" class="nb-flex nb-mais-avaliacoes">
+      <img pwa-src="icon-plus-cart" alt="">
+      Ver mais avaliações
+    </a>
+  </section>
+
+  <section class="nb-container nb-voce-vai-amar">
     <h4 class="subtitle text-center">Você vai amar</h4>
 
-    <pwa-product-list size="12" class="">
+    <pwa-product-list filter="brand: 'NEW BEACH'" size="7" class="">
       <pwa-hidden>
         <div pwa-is-loading class="loader">
           <div class="loader-facebook">
@@ -263,13 +343,13 @@
         </div>
       </pwa-hidden>
 
-      <div class="slider-products swiper-container" id="">
+      <div class="slider-products swiper-container" id="product-page-voce-vai-amar-slide" pwa-hook="product-page-voce-vai-amar-slide">
         <div pwa-not-loading class="swiper-wrapper">
           <div pwa-each-product class="swiper-slide">
             <pwa-product-card>
           </div>
         </div>
-
+        <div class="product-page-voce-vai-amar-navigation"></div>
       </div>
     </pwa-product-list>
 
@@ -378,9 +458,6 @@
       </div> -->
   </section>
 
-
-  <div class="spacer80"></div>
-
   <section id="nb-newsletter" class="block-newsletter bkg-salmao">
     <div class="container-block-newsletter">
       <h5>Além de muito sol, tem novidades e<br />promoções esperando por você</h5>
@@ -399,6 +476,4 @@
       </form>
     </div>
   </section>
-
-
 </main>
