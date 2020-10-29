@@ -1,389 +1,331 @@
-<header id="se-header">
-  <pwa-cart />
-  <div id="se-cart__darken" class="se-cart__darken" style="" pwa-hook="cart-background"></div>
-  <!-- <pwa-cart open-on-add />
-  <div id="se-cart__darken" class="se-cart__darken" style="" pwa-toggle-cart></div> -->
-
-  <section id="se-top-header">
-    <div class="se-container se-flex">
-      <div class="se-item">
-        <div class="se-fa-circle"><img pwa-src="icon-pagamento-parcelado" alt="Pague em até 12x sem juros"></div>
-        <div class="se-text">Pague em até 12x sem juros</div>
-      </div>
-
-      <div class="se-item">
-        <div class="se-fa-circle"><img pwa-src="icon-retirada-loja" alt="Compre aqui e retire na loja"></div>
-        <div class="se-text">Compre aqui e retire na loja</div>
-      </div>
-
-      <div class="se-item">
-        <div class="se-fa-circle"><img pwa-src="icon-entrega-expressa" alt="Entrega expressa em até 1 dia útil"></div>
-        <div class="se-text">Entrega expressa em até 1 dia útil</div>
-      </div>
-
-      <div class="se-item">
-        <div class="se-fa-circle"><img pwa-src="icon-atendimento" alt="Atendimento"></div>
-        <div class="se-text"><a href="">Atendimento</a></div>
-      </div>
+<header id="header">
+  <div class="lf-cart__darken" id="lf-cart__darken" pwa-toggle-cart></div>
+  <pwa-cart open-on-add in-background />
+  <div class="header-topbar">
+    <div class="container text-center">
+      Aproveite o FRETE GRÁTIS nos pedidos a partir de R$150
     </div>
-  </section>
+  </div>
 
-  <section id="se-header">
-    <div class="se-flex se-container">
-      <span class="fa fa-bars se-mobile" pwa-hook.click="ativa-menu"></span>
-
-      <a pwa-to-page="/">
-        <img pwa-src="logo" alt="" id="se-logo">
-      </a>
-
-      <span id="se-busca-mobile" class="fa fa-search se-mobile" pwa-hook="ativa-busca-mobile"></span>
-
-      <span class="fa fa-shopping-cart se-mobile" pwa-toggle-cart"></span>
-
-
-      <pwa-search-form id="se-busca-home">
-        <input pwa-search-box placeholder="O que você precisa?">
-        <button pwa-search-button><i class="fa fa-search"></i></button>
-      </pwa-search-form>
-
-      <div id="user-nav" class="se-flex">
-        <div class="image">
-          <img pwa-src="guest-profile-pic" alt="" id="se-guest-profile-pic">
+  <div class="header-menu">
+    <div class="container header-menu-container">
+      <div class="header-logo-mobile show-only-small">
+        
+        <div class="nb-mobile-menu-bar" pwa-hook="ativaMenuMobile">
+          <span class="fa fa-bars"></span>
+        </div>
+        
+        <div class="logo">
+          <a pwa-to-page="home">
+            <!-- <img pwa-src="logo-newbeach" alt="Newbeach"> -->
+            <img pwa-src="newbeach-logo" alt="Newbeach">
+          </a>
         </div>
 
-        <div class="text" pwa-not-logged>
-          <h2>Olá!</h2>
-          <a pwa-to-auth>Acesse sua conta</a>
+        <div ontouchstart="openMobileSearch()"><img pwa-src="icon-search"></div>
+
+        <div><img pwa-src="icon-heart"></div>
+
+        <div class="icon-bag" pwa-toggle-cart>
+          <img pwa-src="icon-bag">
+          <span class="label-cart">{{ $$cart.count }}</span>
         </div>
 
-        <div class="text" pwa-is-logged pwa-to-account>
-          <h2>Bem vindo!</h2>
-          <a> {{ $$user.firstname }}</a>
-        </div>
+        <!-- <div >
+          <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
+          <a pwa-is-logged pwa-to-account><img pwa-src="icon-user"></a>
+        </div> -->
+
       </div>
 
-      <div id="se-favoritos" pwa-is-logged pwa-to-wishlist>
-        <a>
-          <i class="fa fa-heart-o"></i>
+      <div class="header-logo hide-only-small">
+        <a pwa-to-page="home" title="Ir para a página inicial">
+          <!-- <img pwa-src="logo-newbeach" alt="Logo Newbeach" class="logo"> -->
+          <img pwa-src="newbeach-logo" alt="Newbeach">
         </a>
       </div>
 
-      <div id="se-favoritos" pwa-not-logged pwa-to-wishlist style="opacity: 0; visibility: hidden;">
-        <a>
-          <i class="fa fa-heart-o"></i>
-        </a>
-      </div>
+      <nav class="nav-menu isdesktop">
+        <ul class="menu-list">
+          <li class="menu-item" onmouseover="openSubmenu(this)" ontouchstart="toggleSubmenu(this)" pwa-to-page="/new-beach">Feminino</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/plus-size">Plus</li>
+          <li class="menu-item" pwa-to-page="/new-beach/masculino">Masculino</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/fitness/acessorios">Acessórios</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/collab">Collab</li>
+          <li class="menu-item" pwa-to-page="/new-beach/feminino/cia-do-broto">Cia do Broto</li>
+          <li class="menu-item nb-destaque">Coleção #01</li>
+          <!-- <li class="menu-item">Dia das Mães</li> -->
+        </ul>
+        <div class="submenu-list">
+          <div class="container-submenu-list container wrapper" onmouseleave="closeSubmenu(this)" onclick="closeSubmenu(this)">
+            <div class="item-container-submenu-list span2 s-span12 br-gray">
+              <ul class="list active">
+                <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
+                <li><a pwa-to-page="/new-beach/bestsellers">Bestsellers</a></li>
+                <li><a pwa-to-page="/new-beach/tecidos-leves">Tecidos leves</a></li>
+                <li><a pwa-to-page="/new-beach/at-home">At home</a></li>
+                <li><a pwa-to-page="/new-beach/meninas">Meninas</a></li>
+              </ul>
+            </div>
 
-      <div pwa-toggle-cart id="se-cart-icon">
-        <a id="se-cart-open-button">
-          <div class="circle">
-            <i class="fa fa-shopping-bag"></i>
-          </div>
+            <div class="item-container-submenu-list span2 s-span12 active" id="subFemininoFitness">
+              <div class="title-submenu-list">Fitness <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
+                <li><a pwa-to-page="/new-beach/calça">Calça</a></li>
+                <li><a pwa-to-page="/new-beach/top">Top</a></li>
+                <li><a pwa-to-page="/new-beach/t-shirt">T-shirt</a></li>
+                <li><a pwa-to-page="/new-beach/cropped">Cropped</a></li>
+                <li><a pwa-to-page="/new-beach/regata">Regata</a></li>
+                <li><a pwa-to-page="/new-beach/shorts">Shorts</a></li>
+                <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
+                <li><a pwa-to-page="/new-beach/jaqueta-e-colete">Jaqueta e colete</a></li>
+                <li><a pwa-to-page="/new-beach/macacao">Macacão</a></li>
+              </ul>
+            </div>
 
-          <div class="overlay">
-            <span>{{ $$cart.count }}</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+            <div class="item-container-submenu-list span2 s-span12">
+              <div class="title-submenu-list">Beachwear <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/biquini">Biquíni</a></li>
+                <li><a pwa-to-page="/new-beach/maio">Maiô</a></li>
+                <li><a pwa-to-page="/new-beach/saida-de-praia">Saída de praia</a></li>
+                <li><a pwa-to-page="/new-beach/busto">Busto</a></li>
+                <li><a pwa-to-page="/new-beach/tanga">Tanga</a></li>
+              </ul>
+            </div>
 
-  <pwa-category-list name="main-menu" size="12" level="2" id="se-nav">
-    <div class="se-container">
-      <ul class="menu">
-        <li pwa-each-category class="se-menu-item" pwa-hook="menu-preparation">
-          <a pwa-to-category-page>{{ category.name }}</a>
+            <div class="item-container-submenu-list span2 s-span12">
+              <div class="title-submenu-list">Atividades <span class="fa fa-chevron-right"></span></div>
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/academia-e-treino">Academia e treino</a></li>
+                <li><a pwa-to-page="/new-beach/outdoor">Outdoor</a></li>
+                <li><a pwa-to-page="/new-beach/running">Running</a></li>
+                <li><a pwa-to-page="/new-beach/swing">Swing</a></li>
+                <li><a pwa-to-page="/new-beach/yoga">Yoga</a></li>
+                <li><a pwa-to-page="/new-beach/pilates">Pilates</a></li>
+              </ul>
+            </div>
 
-          <div class="submenu isdesktop">
-            <div class="submenu-content se-flex">
-              <div class="se-coluna-esquerda">
-                <h3>{{ category.name }}</h3>
-                <pwa-subcategory-list size="90">
-                  <ul class="se-category-list">
-                    <li pwa-each-subcategory class="se-submenu-item">
-                      <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
-                    </li>
-                  </ul>
-                </pwa-subcategory-list>
-                <ul class="se-more-category-links">
-                  <li class="se-submenu-item"><a pwa-to-page="">+ Novidades</a></li>
-                  <li class="se-submenu-item"><a pwa-to-page="">+ Ofertas</a></li>
-                </ul>
-              </div>
-
-              <div class="se-coluna-direita">
-                <div class="se-banner se-relative">
-                  <img pwa-src="olympus-runners" alt="">
-                  <div class="se-text">
-                    <p class="se-banner-tittle"> Olympikus com preços acessíveis.</p>
-                    <p class="se-banner-subtittle">A partir de R$ 89,99</p>
-                    <button class="se-button-blue">Compre agora</button>
-                  </div>
-                </div>
-              </div>
-
-              <section class="se-brand-line se-desktop">
-                <div class="swiper-container" pwa-id="`se-slide-brand-${category.name}`">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-
-                  </div>
-   
-                  <div pwa-class="`se-slide-brand-${category.name}-next`"><div class="se-swiper-gradient"></div><span class="fa fa-chevron-right"></span></div>
-                  <div pwa-class="`se-slide-brand-${category.name}-prev`"><div class="se-swiper-gradient"></div><span class="fa fa-chevron-left"></span></div>
-                </div>
-              </section>
+            <div class="banner-content-submenu-list span4 hide-only-small">
+              <img pwa-src="image-submenu-legging" alt="Legging">
+              <div class="description">Bring new energy to your practice.</div>
+              <button class="btn">Shop Leggings</button>
             </div>
           </div>
-        </li>
+        </div>
+      </nav>
 
-        <!-- 
-          <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
-            <li class="se-menu-item"><a pwa-to-page="/tenis">Lançamentos</a></li>
-            <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
-            <li class="se-menu-item"><a pwa-to-page="/tenis">Marcas</a></li>
-            <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
-           -->
-      </ul>
-    </div>
-  </pwa-category-list>
+      <div class="header-menu-user hide-only-small">
 
-  <!-- 
-    <nav id="se-nav">
-    <div class="se-container">
-      <ul class="menu">
-        <li class="se-menu-item">
-          <a pwa-to-page="/masculino">Masculino</a>
-          <div class="submenu">
-            <div class="submenu-content se-flex">
-              <div class="se-coluna-esquerda">
-                  <h3>Calçados</h3>
-                  <ul class="se-category-list">
-                    <li><a pwa-to-page="/tenis">Tênis</a></li>
-                    <li><a pwa-to-page="/coturno">Coturno</a></li>
-                    <li><a pwa-to-page="/chinelo">Chinelo</a></li>
-                    <li><a pwa-to-page="/sapatenis">Sapatênis</a></li>
-                    <li><a pwa-to-page="/sapato">Sapato</a></li>
-                    <li><a pwa-to-page="/tenis">Infantil</a></li>
-                  </ul>
-                  <ul class="se-more-category-links">
-                    <li><a pwa-to-page="">+ Novidades</a></li>
-                    <li><a pwa-to-page="">+ Ofertas</a></li>
-                  </ul>
+        <pwa-search-form size="5" class="search">
+          <form class="form-search">
+            <input pwa-search-box name="cSearch" class="input-form" placeholder="Qual seu estilo?" />
+            <button pwa-search-button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
+          </form>
+        </pwa-search-form>
 
+        <ul class="menu-list">
+          <li class="menu-item" id="btn-search" onclick="openSubmenuSearch()">
+            <img pwa-src="icon-search">
+          </li>
+          
+          <li class="menu-item">
+            <img pwa-src="icon-heart">
+          </li>
+
+          <li class="menu-item icon-bag" pwa-toggle-cart>
+            <img pwa-src="icon-bag">
+            <span class="label-cart">{{ $$cart.count }}</span>
+          </li>
+          <li class="menu-item">
+            <div >
+              <a pwa-not-logged pwa-to-auth><img pwa-src="icon-user"></a>
+              <a pwa-is-logged pwa-to-account><img pwa-src="icon-user"></a>
+            </div>
+          </li>
+        </ul>
+        <div class="submenu-search">
+          <div class="container-submenu-search container wrapper" onmouseleave="closeSubmenuSearch()">
+            <div class="span9">
+              <div class="nb-submenu-first-line">
+                <h2>Sugestões para você</h2>
               </div>
 
-              <div class="se-coluna-direita">
-                <div class="se-banner se-relative">
-                  <img pwa-src="olympus-runners" alt="">
-                  <div class="se-text">
-                    <p class="se-banner-tittle"> Olympikus com preços acessíveis.</p>
-                    <p class="se-banner-subtittle">A partir de R$ 89,99</p>
-                    <button class="se-button-blue">Compre agora</button>
+              <div class="list-products-search wrapper gap30">
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
+                  </div>
+                </div>
+
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
+                  </div>
+                </div>
+
+                <div class="card-product span4">
+                  <div class="images-slider-product">
+                    <img pwa-src="icon-fav" class="favorite-product">
+                    <div class="label">New In</div>
+                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
+                      class="primary-image-slider-products">
+                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
+                      class="secondary-image-slider-products">
+                    <span class="heart"></span>
+                  </div>
+                  <div class="info-slider-product">
+                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
+                    <div class="price">R$132,82</div>
                   </div>
                 </div>
               </div>
 
-              <section class="se-brand-line se-desktop">
-                <div class="swiper-container" id="se-slide-brand-masculino-home" pwa-hook="se-slide-brand-masculino-home">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-
-                  </div>
-   
-                  <div class="se-slide-brand-masculino-next"><span class="fa fa-chevron-right"></span></div>
-                  <div class="se-slide-brand-masculino-prev"><span class="fa fa-chevron-left"></span></div>
-                </div>
-              </section>
+              <div class="nb-submenu-last-line">
+                <a pwa-to-search="/new-beach/top">
+                  <img pwa-src="plus-icon" alt="">
+                  Ver todas as opções</a>
+              </div>
+            </div>
+            <div class="span3 bl-gray">
+              <div class="title-submenu-search">Mais acessados</div>
+              <ul class="list">
+                <li><a href="#">Maiô Alto Giro Lycra Life Swimming</a></li>
+                <li><a href="#">Macaquinho Lycra com Bojo</a></li>
+                <li><a href="#">Macaquinho Lycra termo</a></li>
+                <li><a href="#">Sunga Lycra<br/>Termo</a></li>
+              </ul>
             </div>
           </div>
-        </li>
-        <li class="se-menu-item">
-          <a pwa-to-page="/feminino">Feminino</a>
-          <div class="submenu">
-            <div class="submenu-content se-flex">
-              <div class="se-coluna-esquerda">
-                <section>
-                  <h3>Calçados</h3>
-                  <ul class="se-category-list">
-                    <li><a pwa-to-page="/tenis">Tênis</a></li>
-                    <li><a pwa-to-page="/rasteira">Rasteira</a></li>
-                    <li><a pwa-to-page="/sapatilha">Sapatilha</a></li>
-                    <li><a pwa-to-page="/sapato">Sapato</a></li>
-                    <li><a pwa-to-page="/tenis">Bota</a></li>
-                    <li><a pwa-to-page="/tamanco">Tamanco</a></li>
-                    <li><a pwa-to-page="/tenis">Slip on</a></li>
-                    <li><a pwa-to-page="/chinelo">Chinelo</a></li>
-                    <li><a pwa-to-page="/tenis">Infantil</a></li>
-                  </ul>
-                  <ul class="se-more-category-links">
-                    <li><a pwa-to-page="">+ Novidades</a></li>
-                    <li><a pwa-to-page="">+ Ofertas</a></li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h3>Acessórios</h3>
-                  <ul class="se-category-list">
-                    <li><a pwa-to-page="/bolsa">Bolsa</a></li>
-                    <li><a pwa-to-page="/carteira">Carteira</a></li>
-                    <li><a pwa-to-page="/mochila">Mochila</a></li>
-                  </ul>
-                </section>
-              </div>
-
-              <div class="se-coluna-direita">
-                <div class="se-banner se-relative">
-                  <img pwa-src="women-shoes" alt="">
-                  <div class="se-text">
-                    <p class="se-banner-tittle"> 3 sapatilhas femininas</p>
-                    <p class="se-banner-subtittle"> por R$ 60,90 </p>
-                    <button class="se-button-blue">Compre agora</button>
-                  </div>
-                </div>
-
-              </div>
-
-              <section class="se-brand-line se-desktop">
-                <div class="swiper-container" id="se-slide-brand-feminino-home">
-
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="adidas-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="mizuno-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="oasics-logo">
-                    </div>
-
-                    <div class="swiper-slide se-brand-slide">
-                      <img pwa-src="puma-logo">
-                    </div>
-
-
-                  </div>
-
-                  <div class="se-brand-feminino-slide-next">
-                    <div class="se-right">
-                      <span class="fa fa-chevron-right"></span>
-                    </div>
-                  </div>
-
-                  <div class="se-brand-feminino-slide-prev">
-                    <div class="se-left">
-                      <span class="fa fa-chevron-left"></span>
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-            </div>
-          </div>
-        </li>
-        <li class="se-menu-item"><a pwa-to-page="/tenis">Infantil</a></li>
-        <li class="se-menu-item"><a pwa-to-page="/tenis">Lançamentos</a></li>
-        <li class="se-menu-item"><a pwa-to-page="/esporte">Esportes</a></li>
-        <li class="se-menu-item"><a pwa-to-page="/tenis">Marcas</a></li>
-        <li class="se-menu-item"><a pwa-to-page="/tenis">Promoção</a></li>
-      </ul>
-    </div>
-  </nav> 
-  -->
-    
-  <section id="se-after-nav">
-    <div class="se-frete-fundo">
-      <div class="se-frete-preenchimento" pwa-hook="cart-transformer"></div>
-      <div class="se-frete-text se-flex">
-        <!-- <p pwa--if="199 - $$cart.subtotal == 199" class="se-aviso-quantia-frete">Frete grátis acima de R$ 199,00</p> -->
-          <p pwa--if="199 - $$cart.subtotal  > 0" class="se-quanto-falta">Faltam <span>{{ (199 - $$cart.subtotal )| price }}</span> para você ganhar <span>frete grátis</span></p>
-          <p pwa--if="199 - $$cart.subtotal  <= 0" class="se-quanto-falta">Você ganhou frete grátis!</span></p>
+        </div>
       </div>
     </div>
-  </section>
-  <div id="se-header-background"></div>
+  </div>
+
+  <div class="menu-mobile">
+    <div class="bcg-menu-mobile" onclick="hideMenuMobile()"></div>
+
+    <div class="container-menu-mobile">
+      <div class="search-menu-mobile">
+        <form class="form-search-menu-mobile">
+          <input type="text" name="cSearch" class="input-form" placeholder="Qual seu estilo?">
+          <button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
+        </form>
+        
+      </div>
+
+      <nav class="menu-list-mobile">
+        <ul>
+
+          <li class="menu-item nb-flex" onclick="document.querySelector('#submenu-mobile-feminino').classList.toggle('active'); this.classList.toggle('active')">
+            <span>Feminino </span>
+            <img pwa-src="icon-black-arrow-right">
+            <div class="submenu-list-mobile" id="submenu-mobile-feminino">
+              <ul class="list-subitens list">
+                <li><a pwa-to-page="/new-beach/novidades">Novidades</a></li>
+                <li><a pwa-to-page="/new-beach/bestsellers">Bestsellers</a></li>
+                <li><a pwa-to-page="/new-beach/tecidos-leves">Tecidos leves</a></li>
+                <li><a pwa-to-page="/new-beach/at-home">At home</a></li>
+                <li><a pwa-to-page="/new-beach/meninas">Meninas</a></li>
+              </ul>
+
+              <ul class="list-subitens list">
+                <li class="title-submenu-list-mobile">Fitness</li>
+                <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
+                <li><a pwa-to-page="/new-beach/calca">Calça</a></li>
+                <li><a pwa-to-page="/new-beach/top">Top</a></li>
+                <li><a pwa-to-page="/new-beach/t-shirt">T-shirt</a></li>
+                <li><a pwa-to-page="/new-beach/cropped">Cropped</a></li>
+                <li><a pwa-to-page="/new-beach/regata">Regata</a></li>
+                <li><a pwa-to-page="/new-beach/shorts">Shorts</a></li>
+                <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
+                <li><a pwa-to-page="/new-beach/jaqueta-e-colete">Jaqueta e colete</a></li>
+                <li><a pwa-to-page="/new-beach/macacao">Macacão</a></li>
+              </ul>
+
+              <ul class="list-subitens list">
+                <li class="title-submenu-list-mobile">Beachwear</li>
+                <li><a pwa-to-page="/new-beach/biquini">Biquíni</a></li>
+                <li><a pwa-to-page="/new-beach/maio">Maiô</a></li>
+                <li><a pwa-to-page="/new-beach/saida-de-praia">Saída de praia</a></li>
+                <li><a pwa-to-page="/new-beach/busto">Busto</a></li>
+                <li><a pwa-to-page="/new-beach/tanga">Tanga</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/plus-size">
+              <span>Plus</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/masculino">
+              <span>Masculino</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/acessorios">
+              <span>Acessórios</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/collab">
+              <span>Collab</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/cia-do-broto">
+              <span>Cia do Broto</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>  
+          </li>
+
+          <li class="menu-item">
+            <a class="nb-flex" pwa-to-page="/new-beach/colecao-01">
+              <span>Coleção #01</span>
+              <img pwa-src="icon-black-arrow-right">
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="menu-list-mobile">
+        <ul class="user-menu-list-mobile">
+          <li class="menu-item"><span><img pwa-src="icon-heart"> Meus Favoritos</span></li>
+          <li class="menu-item"><span><img pwa-src="icon-user"> Minha Conta</span></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
 </header>

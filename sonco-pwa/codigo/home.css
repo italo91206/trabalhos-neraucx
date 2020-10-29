@@ -4,6 +4,7 @@
     height: 80px!important;
     position: relative;
     border-radius: 90px;
+    margin-bottom: 12px;
 }
 
 .circle {
@@ -104,7 +105,7 @@
 
 .banner-title {
     float: left;
-    width: 31%;
+    width: 34%;
     padding-left: 63px;
     padding-top: 62px;
 }
@@ -124,7 +125,7 @@ img.banner-image {
     right: 0%!important;
 }
 
-#sc-bullets-slider h3 {
+#sc-bullets-slider h2 {
     color: #032e5a;
     font-family: Camber-bold;
     font-size: 40px;
@@ -142,18 +143,16 @@ img.banner-image {
 
 #sc-bullets-slider article h3 {
     color: #e8280b;
-    font-weight: 700;
     text-transform: uppercase;
-    font-size: 15px!important;
+    font-size: 15px !important;
     margin-bottom: 0;
     padding-top: 16px;
     padding-bottom: 0;
-    font-family: camber-regular;
+    font-family: "camber-bold";
 }
 
 #sc-bullets-slider article p {
     font-size: 16px;
-    font-weight: 100;
     margin-top: 1px;
     color: #898989;
     line-height: 1.1;
@@ -162,6 +161,12 @@ img.banner-image {
 #sc-bullets-slider article {
     text-align: center;
     margin: 0 auto;
+    width: 300px;
+}
+
+#sc-bullets-slider article a img {
+    width: 100%;
+    height: auto;
 }
 
 .sc-red-button {
@@ -175,6 +180,7 @@ img.banner-image {
     margin-bottom: 20px!important;
     color: #fff;
     font-family: camber-semibold;
+    cursor: pointer;
 }
 
 .animate_progress div[data-anim~=base] {
@@ -321,14 +327,14 @@ img.banner-image {
     width: 100%;
 }
 
-.sc-text-banner h1 {
+.sc-text-banner h2 {
 	font-size: 60px;
     text-transform: uppercase;
     line-height: 78px;
     font-family: "camber-bold";
 }
 
-.sc-text-banner h2 {
+.sc-text-banner h3 {
     font-size: 35px;
     text-transform: uppercase;
     font-weight: unset;
@@ -346,7 +352,7 @@ img.banner-image {
 .sc-icons-top__home {
     display: flex;
 	width: 100%;
-	padding: 35px 12%;
+	padding: 35px 0px;
 	flex-wrap: wrap;
     background-color: #fff;
 }
@@ -436,10 +442,6 @@ img.banner-image {
     font-family: "camber-medium";
 }
 
-.content-bullet-2 .sc-container:nth-child(2) {
-    margin-top: 77px;
-}
-
 .content-bullet-1 div:nth-child(2) {
     margin-top: 16px;
 }
@@ -451,7 +453,7 @@ img.banner-image {
 }
 
 .sc-bullet-button a {
-    margin: 56px auto 0;
+    margin: 25px auto 0;
 }
 
 #sc-slider__industrial-home .swiper-slide {
@@ -459,20 +461,21 @@ img.banner-image {
     background-color: #E3E5E2;
     display: flex;
     justify-content: center;
-    flex: 1;
-    flex-direction: column;
-    margin-top: 50px;
+    flex: 1; 
+    flex-direction: column; 
+    margin-top: 50px; 
     cursor: pointer;
     width: 25% !important;
     transition: 0.5s;
     min-width: 315px;
-    margin: 10px;
-    overflow: hidden;
+    margin: 10px; 
+    overflow: hidden; 
+    position: relative;
 }
 
 .sc-card-shop img {
-    max-height: 214px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 #sc-slider__industrial-home .swiper-slide:hover {
@@ -490,19 +493,25 @@ img.banner-image {
 
 .sc-card-shop a {
     color: unset;
+    width: 100%;
 }
 
 
 .sc-card-shop article div:nth-child(2) {
     margin-bottom: -17px;
     margin-top: 30px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
 }
 
-.sc-card-shop span {
+.sc-card-shop h3 {
     color: #022A5B;
     text-transform: capitalize;
     font-family: camber-medium;
     font-size: 20px;
+    font-weight: normal;
 }
 
 .sc-card-shop{
@@ -586,4 +595,91 @@ testando
 .sc-icons-top__home .sc-novo-container {
     max-width: 1333px;
     margin: 0 auto;
+}
+
+
+/*************
+    MOBILE
+*/
+@media only screen and (max-width: 1024px) {
+    .sc-banner-home {
+        height: 50vh !important;
+    }
+
+    .sc-text-banner {
+        margin-bottom: 12px !important;
+    }
+
+    .sc-text-banner h2 {
+        margin-bottom: 30px;
+        line-height: 35px;
+        font-size: 22px !important;
+    }
+
+    .sc-card-shop {
+        margin-top: 10px;
+    }
+
+    #sc-home {
+        margin-bottom: 45px;
+    }
+
+    /*.sc-image-article__home {
+        height: 230px !important;
+    } */
+
+    .sc-image-article__home {
+        height: auto !important;
+    }
+
+    .sc-image-article__home iframe {
+        width: 100% !important;
+        height: 199px !important;
+    }
+}
+
+
+/*************
+    TABLET 
+*/
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+    .sc-banner-home {
+        height: 600px !important;
+    }
+
+    .sc-image-article__home {
+        height: auto !important;
+    }
+
+    .sc-image-article__home iframe {
+        width: 100%;
+        height: 559px !important;
+    }
+
+    .sc-icon__content {
+        max-width: 20% !important;
+        min-width: 20% !important;
+    }
+
+    #sc-home .sc-novo-container {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px) {
+    .sc-image-article__home iframe {
+        height: 430px !important;
+    }
+}
+
+
+/**********************
+* SAFARI STYLE
+*/
+h1, h2, h3, h4, p {
+    font-weight: normal;
+}
+
+.sc-safari .sc-banner-home {
+    padding-bottom: 50px;
 }

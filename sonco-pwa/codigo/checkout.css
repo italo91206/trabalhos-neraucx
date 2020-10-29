@@ -1,0 +1,141 @@
+#dsc-cart .dsc-cart__coupon {
+    display: none;
+}
+
+.dsc-icon__lock:before {
+    display: flex !important;
+    align-items: center !important;
+}
+
+#dsc-main-page .dsc-checkout__header--row #dsc-security-header  {
+    font-size: 0px;
+}
+
+
+#dsc-main-page .dsc-checkout__header--row #dsc-security-header i {
+    font-size: 14px;
+    display: flex;
+}
+
+#dsc-main-page .dsc-checkout__header--row #dsc-security-header i:after {
+    content: 'soncostore.com is secure and your details are protected';
+    font-size: 12px;
+    font-family: 'camber-semibold';
+    font-style: normal;
+    text-transform: lowercase;
+    margin-left: 6px;
+}
+
+#dsc-main-page #dsc-cart.dsc-cart {
+    background: #FFFFFF !important;
+    color: black !important;
+    border-left: solid 1px #CCCCCC;
+}
+
+#dsc-cart.dsc-cart .dsc-cart__main {
+    background: #fff !important;
+}
+
+#dsc-main-page .dsc-style__primary--background :not(input) {
+    background: #fff !important;
+    color: #4D4D4D !important;
+}
+
+#dsc-main-page .dsc-style__primary--background :not(input) h2 {
+    font-size: 20px !important;
+    font-family: 'camber-semibold' !important;
+    font-weight: bold !important;
+    color: #D90018 !important;
+}
+
+#dsc-main-page .dsc-style__primary--background .dsc-cart__title span {
+    color: #D90018 !important;
+}
+
+#dsc-main-page .dsc-style__primary--background .dsc-cart__title span label {
+    color: #D90018 !important;
+    font-family: camber-regular !important;
+}
+
+#dsc-cart .dsc-cart__product .dsc-cart__product-content h3 {
+    font-family: 'camber-medium' !important;
+    color: #4D4D4D !important;
+}
+
+#dsc-cart .dsc-cart__product-price span {
+    font-family: 'camber-semibold' !important;
+}
+
+#dsc-cart .dsc-cart__product-content span {
+    font-family: camber-semibold !important;
+}
+
+#dsc-cart .dsc-cart__footer-total span {
+    font-family: camber-semibold !important;
+}
+
+#dsc-main-page .dsc-cart__footer-total {
+    border-bottom: solid 1px #CCCCCC !important;
+}
+
+#dsc .dsc-style__primary--color {
+    color: #D90018 !important;
+}
+
+#dsc-main-page #dsc-profile {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-global__form-input label {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-global__form-input label#dsc-login-toggle-password {
+    background-color: rgb(2, 43, 74) !important;
+}
+
+#dsc #dsc-address {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-show__address .dsc-style__primary--background span {
+    background: #022b4a !important;
+    color: #fff !important;
+}
+
+#dsc .dsc-style__primary--border {
+    border-color: #D90018 !important;
+}
+
+#dsc .dsc-style__primary--color>* {
+    color: #d90018 !important;
+    background: unset !important;
+}
+
+#dsc .dsc-payment__content {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-checkout__header--row {
+    background: #FAFAFA !important;
+}
+
+#dsc #dsc-checkout__timeline {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-checkout__header--column {
+    background: #FAFAFA !important;
+}
+
+#dsc #dsc-verify {
+    background: #FAFAFA !important;
+}
+
+#dsc #dsc-login {
+    background: #FAFAFA !important;
+}
+
+#dsc .dsc-payment__form-input label {
+    background: #FAFAFA !important;
+}

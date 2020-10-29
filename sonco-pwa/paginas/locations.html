@@ -1,0 +1,83 @@
+<main id="sc-locations" class="sc-container-mobile">
+  <div class="sc-container">
+    <!-- 
+    <div class="sc-breadcrumb">
+        <a pwa-to-page="/">Home</a> > <a pwa-to-page="/locations"><h1>Locations</h1></a>
+    </div> 
+    -->
+
+    <!-- breadcrumbs -->
+    <div class="sc-breadcrumbs">
+      <p>Home >
+      <h1>Locations</h1>
+      </p>
+    </div>
+
+    <figure class="sc-banner-locations">
+      <img pwa-src="banner_locations" class="" alt="banner location">
+    </figure>
+
+    <div class="sc-map-container">
+      <section class="sc-container-left">
+        <div class="address-title">
+          <h2><img class="icon-locations" pwa-src="icon_locations"><strong>Headquarters:</strong></h2>
+          <h3>Washington DC Area</h3>
+        </div>
+
+        <div class="address-info"><span>6500 Ammendale RD</span> <span>Beltsville, MD 20705</span>
+          <div class="icon_contact">
+            <em class="fa fa-phone"></em> (888) 766-2615</div>
+          <span>Fax: (240) 487-2489</span>
+          <div class="icon_contact">
+            <em class="fa fa-envelope"></em>
+            <a href="mailto:support@soncostore.com">support@soncostore.com</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="rightSide">
+        <div id="soncoMap" pwa-hook="loading-map" style="background: #fff;"></div>
+      </div>
+    </div>
+
+
+    <div class="sc_locatins-col">
+      <article class="sc_locations-left">
+        <h2>SONCO’S LOCATIONS</h2>
+
+        <p> The SONCO Crowd & Traffic Control Store is part of the SONCO Worldwide
+          family of companies. We’ve been serving the traffic and crowd control
+          needs of construction companies, event agencies, federal and local
+          governments, schools, and other organizations across the US since 1976.</p>
+
+        <p> SONCO is headquartered in Beltsville, MD, just outside of Washington, DC.
+          We have 10 locations across the US—8 along the east coast and as far
+          west as Chicago, IL, 1 in Texas, and 1 in southern California. We ship
+          barricades, temporary fence, fence screen, custom signs, and other
+          crowd and traffic control supplies to businesses across the US. You can
+          also pick up your order from any of our locations or have us drop-ship
+          products directly to job sites and event locations. </p>
+
+        <p> To learn more about SONCO’s locations, click any red dot on the map
+          above. This page will refresh to display the selected office’s address, a
+          map of the area and other location details. </p>
+
+        <figure class="sc-locations-txt-left">
+          <img pwa-src="location" alt="locations">
+          <img pwa-src="locations" alt="locations">
+        </figure>
+      </article>
+
+      <div class="sc_locations-right">
+        <div id="sc-washigton-dc">
+          <span class="sc-title-wash">Washington DC </span><br>
+          <br>6500 Ammendale RD<br> Beltsville, MD 20705
+        </div>
+
+        <iframe id="location_googlemaps"
+          src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDawaiS7WIYV1SuptzAo8jf3yHjOKAjKDI&amp;q=6500+Ammendale+RD"
+          width="640" height="500"></iframe>
+      </div>
+    </div>
+  </div>
+</main>
