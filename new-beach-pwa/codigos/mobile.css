@@ -69,10 +69,7 @@ h1 {
         padding: 0;
         margin-top: 9px;
     }
-    
-    #segundo-cluster {
-        padding: 0px;
-    }
+
     
     #sb-inicial .btn-salmao {
         width: 100%;
@@ -80,6 +77,8 @@ h1 {
     
     #primeiro-cluster {
         margin-bottom: 20px;
+        height: unset;
+        background: unset;
     }
     .grid-gallery-photo01 .swiper-slide img {
         width: 100%;
@@ -94,9 +93,6 @@ h1 {
         padding-top: 0px;
         transform: unset;  
         height: auto;
-    }
-    #primeiro-cluster {
-        margin-bottom: 20px;
     }
     .header-menu-container:after{
         display: none;

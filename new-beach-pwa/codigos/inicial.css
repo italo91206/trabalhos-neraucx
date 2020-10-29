@@ -368,20 +368,41 @@
     #new-beach-home-products-slider {
         max-width: 375px;
     }
-    .block-info-image .block-info-image-content .title h2{
-        font-size: 55px;
-        line-height: 75.8px;
-        text-align: left;
-    }
+    
 }
 
 @media(max-width: 425px){
+    .block-info-image .block-info-image-content .title h2{
+        transform: unset;
+        margin-top: unset;
+        margin-bottom: unset;
+        margin-left: 0px;
+        font-size: 45px;
+        text-align: left;
+    }
+    #nb-plus-size-detalhes.bkg-salmao a {
+        text-decoration: unset;
+        color: unset;
+    }
     #segundo-cluster {
         padding: 0px;
         margin-bottom: 0px;
+        margin: 0;
+        margin-right: 0px;
+        width: 100%;
+        display: flex;
+        max-width: unset;
+        flex-wrap: wrap;
     }
-    .block-columns-item.span4.s-span12.text-center:last-child p {
-        margin-bottom: 0px;
+    #nb-inicial .block-columns-item.span4.s-span12.text-center img {
+        width: 100%;
+    }
+    #nb-plus-size-detalhes.bkg-salmao {
+        background: unset;
+    }
+
+    #nb-inicial .block-columns-item.span4.s-span12.text-center {
+        width: 100%;
     }
     
     .block-columns-itens p {
@@ -389,7 +410,7 @@
     }
 
     .block-info-image .block-info-image-content .description p {
-        font-size: 15px;
-        margin-bottom: 10px;
+        font-size: 25px;
+        margin-bottom: 50px;
     }
 }
