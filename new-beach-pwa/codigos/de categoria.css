@@ -151,3 +151,8 @@
 #nb-category-page .block-list-products {
     margin-top: 113px;
 }
+
+#nb-category-page .nb-category-rectangles a {
+    text-decoration: unset;
+    color: unset;
+}

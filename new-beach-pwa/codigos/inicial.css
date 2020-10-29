@@ -27,10 +27,18 @@
 }
 
 #primeiro-cluster {
-    background: #F7F7F9;
-    margin-bottom: 135px;
+    background: #FCF3EA;
+    margin-bottom: 195px;
+    height: 545px;
 }
 
+#segundo-cluster {
+    margin-bottom: 250px;
+}
+
+#new-beach-home-products{
+    margin-top: 108px;
+}
 
 .block-gallery-photos .grid-gallery-photos {
     padding-top: 80px;
