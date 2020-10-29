@@ -11,6 +11,7 @@
             <li><a pwa-to-page="home">Home</a></li>
             <li><b>New Beach</b></li>
           </ul>
+
           <h1 class="title">New Beach</h1>
           <p class="description">
             Academia, Yoga, Pilates, não importa. Sua prática favorita merece peças à altura de todos os cuidados que
@@ -18,18 +19,6 @@
             sempre pronto. Dos treinos à sua rotina, as melhores tecnologias disponíveis para otimizar a sua performance
             estão aqui. Faça suas escolhas e prepare-se para se movimentar.
           </p>
-
-          <!-- <pwa-category-list pwa-parent="category.id" class="">
-              <ul class="list-subcategories">
-                <li pwa-each-category pwa-to-category-page>{{ category.name }}</li>
-              </ul>
-            </pwa-category-list> -->
-
-          <!-- <pwa-category-list name="sc-category-bullet" size="99" pwa-parent="category.id" >
-              <a pwa-each-category pwa-to-category-page >
-                {{ category.name }}
-              </a>
-            </pwa-category-list> -->
 
           <ul class="list-subcategories">
             <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
@@ -45,7 +34,10 @@
             <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
           </ul>
 
-          <a href="#" class="link-all-products">Ver todos os produtos <img pwa-src="icon-black-arrow-right"></a>
+          <a href="#" class="link-all-products">
+            Ver todos os produtos 
+            <img pwa-src="icon-black-arrow-right">
+          </a>
         </div>
       </div>
     </div>
@@ -112,120 +104,6 @@
       <div class="span2 hide-only-small"></div>
     </div>
   </section>
-
-  <!-- <pwa-result-list size="32" automatic-scrolls="1" class="">
-  
-      <section class="bar-filter container wrapper" style="display: none">
-        <div class="total-results span4">
-          Encontramaos <b>{{ $$paginate.count }} PEÇAS</b> que fazem o seu estilo
-        </div>
-        <div class="btn-filter-compact span12 show-only-small text-center" onclick="openFilterMobile()">
-          <b><img pwa-src="icon-plus"> Ver filtros</b>
-        </div>
-        <div class="container-bar-filter span8">
-          <div class="bcg-container-bar-filter show-only-small" onclick="closeFilterMobile()"></div>
-          <div class="wrapper-container-bar-filter">
-            <div class="btn-filter-compact close-btn-filter-compact span12 show-only-small text-center"
-              onclick="closeFilterMobile()">
-              <b><img pwa-src="icon-plus"> Fechar</b>
-            </div>
-            <ul class="list-filter list-inline">
-              <li id="filter-price" onclick="openSubmenuFilterMobile(this)"><span>Preço <img pwa-src="icon-arrow-down"></span>
-                <div class="submenu-filter" id="submenu-filter-price">
-                  <ul>
-                    <li><span class="checkbox-item-filter"></span> de R$ XX,XX até R$ XX,XX</li>
-                    <li class="active"><span class="checkbox-item-filter"></span> de R$ XX,XX até R$ XX,XX</li>
-                    <li><span class="checkbox-item-filter"></span> de R$ XX,XX até R$ XX,XX</li>
-                    <li><span class="checkbox-item-filter"></span> de R$ XX,XX até R$ XX,XX</li>
-                    <li><span class="checkbox-item-filter"></span> mais de R$ XX,XX</li>
-                  </ul>
-                </div>
-              </li>
-              <li id="filter-size" onclick="openSubmenuFilterMobile(this)"><span>Tamanho <img pwa-src="icon-arrow-down"></span>
-                  <pwa-attribute-filter attribute="items.Tamanho" static multiple class="submenu-filter" id="submenu-filter-size">
-                  <ul pwa-has-filters>
-                      <li pwa-each-filter><input pwa-filter-input="checked" name="tamanho"  type="checkbox">  {{ filter.label }} </li>
-                  </ul>
-                  </pwa-attribute-filter>
-              </li>
-              <li id="filter-size" onclick="openSubmenuFilterMobile(this)"><span>Cores <img pwa-src="icon-arrow-down"></span>
-                  <pwa-attribute-filter attribute="items.Cor" static multiple class="submenu-filter" id="submenu-filter-size">
-                  <ul pwa-has-filters>
-                      <li pwa-each-filter><input pwa-filter-input="checked" name="tamanho"  type="checkbox">  {{ filter.label }} </li>
-                  </ul>
-                  </pwa-attribute-filter>
-              </li>
-              <li><span>Cores <img pwa-src="icon-arrow-down"></span></li>
-              <li><span>Coleção <img pwa-src="icon-arrow-down"></span></li>
-              <li id="filter-filters" onclick="openSubmenuFilterMobile(this)"><span>+ Filtros <img pwa-src="icon-arrow-down"></span>
-                <div class="submenu-filter" id="submenu-filter-filters">
-                  <ul>
-                    <li class="title-submenu-filter">Atividades</li>
-                    <li><span class="checkbox-item-filter"></span> Academia e treino</li>
-                    <li><span class="checkbox-item-filter"></span> Outdoor</li>
-                    <li><span class="checkbox-item-filter"></span> Running</li>
-                    <li><span class="checkbox-item-filter"></span> Swin</li>
-                    <li><span class="checkbox-item-filter"></span> Yoga</li>
-                    <li><span class="checkbox-item-filter"></span> Pilates</li>
-                  </ul>
-                  <ul>
-                    <li class="title-submenu-filter">Tecnologia</li>
-                    <li><span class="checkbox-item-filter"></span> CO2 Biodegradável</li>
-                    <li><span class="checkbox-item-filter"></span> Barriga Zero</li>
-                    <li><span class="checkbox-item-filter"></span> U.V 50+</li>
-                    <li><span class="checkbox-item-filter"></span> Alta compressão</li>
-                    <li><span class="checkbox-item-filter"></span> Breeze</li>
-                    <li><span class="checkbox-item-filter"></span> Detalhe refletivo</li>
-                    <li><span class="checkbox-item-filter"></span> Emana</li>
-                    <li><span class="checkbox-item-filter"></span> Térmico</li>
-                    <li><span class="checkbox-item-filter"></span> Seamless sem costura</li>
-                    <li><span class="checkbox-item-filter"></span> Unissex</li>
-                    <li><span class="checkbox-item-filter"></span> Lycra</li>
-                  </ul>
-                  <ul>
-                    <li class="title-submenu-filter">Tecidos</li>
-                    <li><span class="checkbox-item-filter"></span> Lycra</li>
-                    <li><span class="checkbox-item-filter"></span> Nulu</li>
-                    <li><span class="checkbox-item-filter"></span> Nulux</li>
-                    <li><span class="checkbox-item-filter"></span> Luxtreme</li>
-                    <li><span class="checkbox-item-filter"></span> Everlux</li>
-                    <li><span class="checkbox-item-filter"></span> Algodão</li>
-                  </ul>
-                </div>
-              </li>
-              <li id="filter-order" onclick="openSubmenuFilterMobile(this)">Ordenar por <b> destaques</b> <img pwa-src="icon-arrow-down">
-                  <pwa-manual-filter class="submenu-filter" id="submenu-filter-order">
-                  <ul>
-                      <li pwa-change-filter.click="price:-"><input class="checkbox-item-filter" name="por-preco" id="ag-maior-preco"  type="radio"> <label for="ag-maior-preco">Maior Preço</label></li>
-                      <li pwa-change-filter.click="price:+"><input class="checkbox-item-filter" name="por-preco"  id="ag-menor-preco" type="radio"> <label for="ag-menor-preco">Menor Preço</label></li>
-                  </ul>
-                  </pwa-manual-filter>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      
-  
-      <section class="block-list-products">
-  
-        <div class="list-block-list-produtos container wrapper">
-          <span class="span12" pwa-not-result style="padding: 100px 0px; text-align: center; width: 100%">
-            Sem resultados para mostrar
-          </span>
-          <div pwa-each-product class="span3 s-span12">
-            <pwa-product-card>
-          </div>
-        </div>
-  
-        <div pwa-not-loading>
-          <button class="load-more" pwa-not-last-page pwa-load-more>
-            <img pwa-src="icon-plus"> Ver mais peças
-          </button>
-        </div>
-      </section>
-  
-    </pwa-result-list> -->
 
   <section class="nb-container">
     <pwa-product-list filter="brand: 'NEW BEACH'" size="36" class="block-list-products">
