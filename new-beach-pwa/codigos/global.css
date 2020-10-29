@@ -1059,7 +1059,7 @@ button:hover {
 
 @media (max-width: 600px) {
 	#header {
-		position: fixed;
+		position: sticky;
 		top: 0;
 		z-index: 9997;
 		width: 100%;
@@ -1085,62 +1085,6 @@ button:hover {
 		height: auto;
 	}
 }
-
-
-
-@media (max-width: 1200px) {
-	.header-menu-container:after {
-		display: none;
-	}
-}
-
-
-@media (max-width: 1200px) {
-	.header-logo {
-		margin-right: 40px;
-		margin-left: 0px;
-	}
-	.header-logo img.menu {
-		float: left;
-		margin-left: -20px;
-	}
-}
-
-@media (max-width: 600px) {
-	.header-logo {
-		width: 100vw;
-		display: flex;
-		justify-content: space-between;
-		margin: 0 0 0 0;
-	}
-}
-
-
-
-@media (max-width: 1200px) {
-	.nav-menu {
-		overflow-x: scroll;
-	}
-}
-
-@media (max-width: 600px) {
-	.nav-menu {
-		margin-left: -30px;
-		padding: 10px;
-	}
-}
-
-
-
-.header-logo-mobile .logo img {
-	max-width: 95%;
-}
-
-.header-logo-mobile .label-cart {
-	top: 10px;
-}
-
-
 
 @media (max-width: 1200px) {
 	.header-menu-user {
@@ -1195,9 +1139,7 @@ button:hover {
 	z-index: 9999;
 }
 
-.submenu-list.active {
-	display: block;
-}
+
 
 .header-menu .header-menu-user .menu-item:hover:after {
     display: none;
@@ -1298,55 +1240,8 @@ button:hover {
     margin-bottom: 10px;
     line-height: 38px;
 }
-.submenu-list .btn {
-    background: #E79B75;
-    font-size: 23px;
-    font-family: 'Barlow';
-    font-weight: 700;
-    padding: 0;
-    height: 46px;
-    width: 193px;
-}
-.submenu-search {
-	display: none;
-	width: 100%;
-	position: absolute;
-	top: 124px;
-	left: 0px;
-	z-index: 9999;
-}
 
-.submenu-search.active {
-	display: block;
-}
 
-.submenu-search .list li {
-	margin-bottom: 10px;
-}
-
-.submenu-search .list li a:hover {
-	color: #000;
-}
-
-.menu-list-mobile ul li.active img {
-	padding-left: 10px;
-	transform: rotate(0deg);
-}
-
-.menu-list-mobile ul.user-menu-list-mobile li img {
-	transform: rotate(0deg);
-	padding-right: 0px;
-	margin-right: 10px;
-}
-
-.submenu-list-mobile {
-	display: none;
-	margin-left: 20px;
-}
-
-.submenu-list-mobile.active {
-	display: block;
-}
 
 @media (max-width: 600px) {
 	#footer .row-footer {
