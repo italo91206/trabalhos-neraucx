@@ -359,9 +359,9 @@
 }
 
 @media(max-width: 375px){
-    #new-beach-home-products-slider {
-     max-width: 350px;
-    }        
+    #new-beach-home-products-slider{
+        max-width: 350px !important;
+    }       
 }
 
 @media(max-width: 395px){

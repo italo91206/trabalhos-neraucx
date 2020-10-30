@@ -14,7 +14,7 @@ h1 {
     .block-gallery-photos .grid-gallery-photos .grid-gallery-photo05 {
           display: none;
       }
-  }
+}
 
 @media (max-width: 600px) {
       .block-gallery-photos {
@@ -30,10 +30,10 @@ h1 {
           font-size: 4vw;
           line-height: 4vw;
       }
-  }
+}
   
   
-  @media(max-width: 768px){
+@media(max-width: 768px){
       #nb-newsletter .input-form {
           width: 225px;
       }    
@@ -43,7 +43,7 @@ h1 {
       ismobile{
           display: block;
       }
-  }
+}
   
 @media(max-width: 425px){
     #new-beach-home-products-slider {
@@ -182,5 +182,16 @@ h1 {
     }
     .spacer-menu-fixed{
         height: 100px;
+    }
+}
+
+@media(max-width: 395px){
+    .nb-container{
+        max-width: 370px;
+    }
+}
+@media(max-width: 375px){
+    .nb-container{
+        max-width: 350px;
     }
 }

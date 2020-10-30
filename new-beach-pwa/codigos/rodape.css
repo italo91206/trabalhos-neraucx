@@ -106,7 +106,64 @@ button.nb-fale-conosco:hover {
 	padding: 40px;
 }
 
-#nb-newsletter .btn:hover {
-    transform: scale(1.05);
-    transition: all .2s ease;
+/* Newsletter */
+
+.input-container-block-newsletter {
+    margin: 0 20px 0 0 !important;
+    flex: 1;
+}
+
+#nb-newsletter .input-form {
+    width: 100% !important;
+}
+
+@media (max-width: 900px) {
+    .form-block-newsletter {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .input-container-block-newsletter {
+        margin: 0 0 20px 0 !important;
+    }
+
+    #nb-newsletter .btn {
+        width: 100%;
+    }
+}
+
+@media(max-width: 425px){
+    #footer .row-footer p.mt-20 {
+        text-align: left;
+    }
+
+    #footer .row-footer img {
+        display: flex;
+        margin: 0 auto;
+	}
+	
+	#footer .nb-fale-conosco {
+		margin: 0 auto;
+	}
+	
+	#footer .row-footer .nb-fale-conosco img {
+		margin: 0 10px 0 20px;
+	}
+
+	#nb-footer-contato ul li:first-child {
+		text-align: left;
+		display: flex;
+		margin: 0 auto;
+		width: 205px;
+	}
+
+	#nb-footer-seguranca h3 {
+		text-align: left;
+		margin-bottom: 16px;
+	}
+
+	#nb-footer-formas-pagamento h3 {
+		text-align: left;
+	}
+	
 }
