@@ -3315,3 +3315,7 @@ span.p4a-style__primary--color-hover {
 .swiper-pagination-bullets {
     height: 6px;
 }
+
+.ismobile{
+	display: none;
+}

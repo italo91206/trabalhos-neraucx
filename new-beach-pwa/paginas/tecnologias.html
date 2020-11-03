@@ -10,24 +10,14 @@
         <div class="content-block-header-pages span7 m-span10 s-span12">
           <ul class="breadcrumbs">
             <li><a pwa-to-page="/">Home</a></li>
-            <li><b>{{ title }}</b></li>
+            <li><b>Sobre a New Beach</b></li>
           </ul>
-          <h1 class="title">{{ title }}</h1>
+          <h1 class="title">Tecnologias</h1>
           <p class="description">
-            Academia, Yoga, Pilates, não importa. Sua prática favorita merece peças à altura de todos os cuidados que você precisa. Conforto e estilo se unem em roupas funcionais, da cabeça aos pés, para quem deseja estar sempre pronto. Dos treinos à sua rotina, as melhores tecnologias disponíveis para otimizar a sua performance estão aqui. Faça suas escolhas e prepare-se para se movimentar.
+            Confecção de roupa fitness e praia há 34 anos: é assim que a Alto Giro, do grupo Recco Co, escreveu sua história até agora. Toda a versatilidade e flexibilidade que a sua rotina pede, em looks confortáveis, para te acompanhar da academia a qualquer atividade do seu dia a dia.<br/>
+            <br/>
+            Para acompanhar a sua rotina, nossas peças contam com tecnologias elaboradas para te auxiliar em cada uma das suas atividades. Confira os detalhes de todas as tecnologias e descubra quais as melhores peças para você.
           </p>
-
-          <!-- <pwa-category-list pwa-parent="category.id" class="">
-            <ul class="list-subcategories">
-              <li pwa-each-category pwa-to-category-page>{{ category.name }}</li>
-            </ul>
-          </pwa-category-list> -->
-
-          <!-- <pwa-category-list name="sc-category-bullet" size="99" pwa-parent="category.id" >
-            <a pwa-each-category pwa-to-category-page >
-              {{ category.name }}
-            </a>
-          </pwa-category-list> -->
 
           <ul class="list-subcategories">
             <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
@@ -43,9 +33,197 @@
             <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
           </ul>
 
-          <a href="#" class="link-all-products">Ver todos os produtos <img pwa-src="icon-black-arrow-right"></a>
+          <!-- <a href="#" class="link-all-products">Ver todos os produtos <img pwa-src="icon-black-arrow-right"></a> -->
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="new-beach-uv50-plus">
+    <div class="nb-container nb-flex">
+      <section class="nb-tecnologias-slide-holder ismobile">
+        <h3>UV 50+</h3>
+        <p>
+          As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até 98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de UVA quanto UVB.<br/>
+          <br/>
+          Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te proteger durante práticas externas de exercícios.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+      
+      <pwa-product-list filter="brand: 'NEW BEACH'" size="5" class="nb-tecnologias-slider">
+        <pwa-hidden>
+          <div pwa-is-loading class="loader">
+            <div class="loader-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+
+        <div class="swiper-container" id="new-beach-uv50-plus-slider" pwa-hook="new-beach-uv50-plus-slider">
+          <div pwa-not-loading class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide">
+              <pwa-product-card>
+            </div>
+          </div>
+
+          <div id="new-beach-uv50-plus-navigation"></div>
+
+          <div class="new-beach-uv50-plus-next isdesktop"><img pwa-src="btn-next" alt=""></div>
+          <div class="new-beach-uv50-plus-prev isdesktop"><img pwa-src="btn-prev" alt=""></div>
+        </div>
+      </pwa-product-list>
+
+      <section class="nb-tecnologias-slide-holder isdesktop">
+        <h3>UV 50+</h3>
+        <p>
+          As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até 98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de UVA quanto UVB.<br/>
+          <br/>
+          Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te proteger durante práticas externas de exercícios.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+    </div>  
+  </section>
+
+  <section id="new-beach-lycra-black">
+    <div class="nb-container nb-flex">
+      <section class="nb-tecnologias-slide-holder">
+        <h3>Lycra&reg; Black Technology</h3>
+        <p>
+          A tecnologia BLACK da marca LYCRA® foi desenvolvida no primeiro elastano verdadeiramente preto da indústria, o fio LYCRA® T275Z, uma fibra resistente ao cloro que tem sua cor profunda derivada do pigmento preto. Os tecidos apresentam tons mais fortes e escuros que conservam toda a integridade da cor. Ainda é possível combinar a tecnologia com um nylon colorido para um tecido não tingido com total solidez e sem sangria de cor.<br/>
+          <br/>
+          A tecnologia BLACK também fornece uma solução altamente eficaz para o problema de brilho e efeito “grin-through” do elastano.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+      
+      <pwa-product-list filter="brand: 'NEW BEACH'" size="5" class="nb-tecnologias-slider">
+        <pwa-hidden>
+          <div pwa-is-loading class="loader">
+            <div class="loader-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+
+        <div class="swiper-container" id="new-beach-lycra-black-slider" pwa-hook="new-beach-lycra-black-slider">
+          <div pwa-not-loading class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide">
+              <pwa-product-card>
+            </div>
+          </div>
+
+          <div id="new-beach-lycra-black-navigation"></div>
+
+          <div class="new-beach-lycra-black-next isdesktop"><img pwa-src="btn-next" alt=""></div>
+          <div class="new-beach-lycra-black-prev isdesktop"><img pwa-src="btn-prev" alt=""></div>
+        </div>
+      </pwa-product-list>
+    </div>
+  </section>
+
+  <section id="new-beach-uv50-plus-copy">
+    <div class="nb-container nb-flex">
+      <section class="nb-tecnologias-slide-holder ismobile">
+        <h3>UV 50+</h3>
+        <p>
+          As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até 98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de UVA quanto UVB.<br/>
+          <br/>
+          Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te proteger durante práticas externas de exercícios.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+      
+      <pwa-product-list filter="brand: 'NEW BEACH'" size="5" class="nb-tecnologias-slider">
+        <pwa-hidden>
+          <div pwa-is-loading class="loader">
+            <div class="loader-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+
+        <div class="swiper-container" id="new-beach-uv50-plus-copy-slider" pwa-hook="new-beach-uv50-plus-copy-slider">
+          <div pwa-not-loading class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide">
+              <pwa-product-card>
+            </div>
+          </div>
+
+          <div id="new-beach-uv50-plus-copy-navigation"></div>
+
+          <div class="new-beach-uv50-plus-copy-next isdesktop"><img pwa-src="btn-next" alt=""></div>
+          <div class="new-beach-uv50-plus-copy-prev isdesktop"><img pwa-src="btn-prev" alt=""></div>
+        </div>
+      </pwa-product-list>
+
+      <section class="nb-tecnologias-slide-holder isdesktop">
+        <h3>UV 50+</h3>
+        <p>
+          As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até 98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de UVA quanto UVB.<br/>
+          <br/>
+          Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te proteger durante práticas externas de exercícios.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+    </div>
+  </section>
+
+  <section id="new-beach-lycra-black-copy">
+    <div class="nb-container nb-flex">
+      <section class="nb-tecnologias-slide-holder">
+        <h3>Lycra&reg; Black Technology</h3>
+        <p>
+          A tecnologia BLACK da marca LYCRA® foi desenvolvida no primeiro elastano verdadeiramente preto da indústria, o fio LYCRA® T275Z, uma fibra resistente ao cloro que tem sua cor profunda derivada do pigmento preto. Os tecidos apresentam tons mais fortes e escuros que conservam toda a integridade da cor. Ainda é possível combinar a tecnologia com um nylon colorido para um tecido não tingido com total solidez e sem sangria de cor.<br/>
+          <br/>
+          A tecnologia BLACK também fornece uma solução altamente eficaz para o problema de brilho e efeito “grin-through” do elastano.
+        </p>
+        <a pwa-to-page="">
+          <button class="nb-salmao">Confira peças com esta tecnologia</button>
+        </a>
+      </section>
+      
+      <pwa-product-list filter="brand: 'NEW BEACH'" size="5" class="nb-tecnologias-slider">
+        <pwa-hidden>
+          <div pwa-is-loading class="loader">
+            <div class="loader-facebook">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+
+        <div class="swiper-container" id="new-beach-lycra-black-copy-slider" pwa-hook="new-beach-lycra-black-copy-slider">
+          <div pwa-not-loading class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide">
+              <pwa-product-card>
+            </div>
+          </div>
+
+          <div id="new-beach-lycra-black-copy-navigation"></div>
+
+          <div class="new-beach-lycra-black-copy-next isdesktop"><img pwa-src="btn-next" alt=""></div>
+          <div class="new-beach-lycra-black-copy-prev isdesktop"><img pwa-src="btn-prev" alt=""></div>
+        </div>
+      </pwa-product-list>
     </div>
   </section>
 </main>

@@ -1,0 +1,374 @@
+#nb-tecnologias .nb-tecnologias-slider {
+    width: 795px;
+    position: relative;
+}
+
+.nb-tecnologias-slide-holder {
+    width: 407px;
+}
+
+#nb-tecnologias .card-product {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.nb-tecnologias-slide-holder h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #E27C73;
+    font-family: 'Barlow';
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.nb-tecnologias-slide-holder p {
+    margin-top: 21px;
+    margin-bottom: 0px;
+    color: #586A6A;
+    text-decoration: underline;
+}
+
+#new-beach-lycra-black {
+    background: #FCF3EA;
+    margin-top: 105px;
+    padding-top: 144px;
+    padding-bottom: 182px;
+}
+
+#new-beach-lycra-black-copy {
+    background: #FCF3EA;
+    padding-top: 144px;
+    padding-bottom: 134px;
+}
+
+#new-beach-uv50-plus {
+    margin-top: 125px;
+}
+
+#new-beach-uv50-plus-copy {
+    margin-top: 85px;
+    margin-bottom: 105px;
+}
+
+#nb-tecnologias .swiper-container {
+    margin: 0 95px;
+    position: unset;
+}
+
+.new-beach-uv50-plus-next {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    right: 0px;
+}
+
+.new-beach-uv50-plus-prev {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    left: 0;
+}
+
+.new-beach-uv50-plus-next:hover,
+.new-beach-uv50-plus-prev:hover{
+    cursor: pointer;
+}
+
+
+.new-beach-lycra-black-next {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    right: 0px;
+}
+
+.new-beach-lycra-black-prev {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    left: 0;
+}
+
+.new-beach-lycra-black-next:hover,
+.new-beach-lycra-black-prev:hover{
+    cursor: pointer;
+}
+
+.new-beach-uv50-plus-copy-next {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    right: 0px;
+}
+
+.new-beach-uv50-plus-copy-prev {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    left: 0;
+}
+
+.new-beach-uv50-plus-copy-next:hover,
+.new-beach-uv50-plus-copy-prev:hover{
+    cursor: pointer;
+}
+
+.new-beach-lycra-black-copy-next {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    right: 0px;
+}
+
+.new-beach-lycra-black-copy-prev {
+    position: absolute;
+    top: 178px;
+    z-index: 1;
+    left: 0;
+}
+
+.new-beach-lycra-black-copy-next:hover,
+.new-beach-lycra-black-copy-prev:hover{
+    cursor: pointer;
+}
+
+.nb-tecnologias-slide-holder a button {
+    margin-top: 43px;
+}
+
+#nb-tecnologias .nb-salmao {
+    width: 407px;
+    height: 75px;
+    background: #E79B75;
+    border: none;
+    font-size: 20px;
+    font-family: 'Barlow';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nb-tecnologias-slide-holder a button {
+    margin-top: 43px;
+}
+
+#nb-tecnologias .nb-salmao {
+    width: 407px;
+    height: 75px;
+    background: #E79B75;
+    border: none;
+    font-size: 20px;
+    font-family: 'Barlow';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+#new-beach-uv50-plus .nb-tecnologias-slide-holder {
+    margin-left: 38px;
+}
+
+#new-beach-lycra-black .nb-tecnologias-slide-holder {
+    margin-right: 38px;
+}
+
+#new-beach-uv50-plus-copy .nb-tecnologias-slide-holder {
+    margin-left: 38px;
+}
+
+#new-beach-lycra-black-copy .nb-tecnologias-slide-holder {
+    margin-right: 38px;
+}
+
+#new-beach-uv50-plus-navigation .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+#new-beach-uv50-plus-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+#new-beach-lycra-black-navigation .swiper-pagination-bullet{
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+#new-beach-lycra-black-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+.new-beach-uv50-plus-copy-navigation .swiper-pagination-bullet{
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+.new-beach-uv50-plus-copy-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+#new-beach-lycra-black-copy-navigation .swiper-pagination-bullet{
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+#new-beach-lycra-black-copy-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+#new-beach-uv50-plus-copy-navigation .swiper-pagination-bullet{
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+#new-beach-uv50-plus-copy-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+#nb-tecnologias .swiper-pagination-bullets {
+    z-index: 3;
+    position: relative;
+    height: auto;
+    bottom: 0;
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+@media(max-width: 768px){
+    #nb-tecnologias .container.wrapper.w-100 {
+        display: flex;
+    }
+    
+    .nb-tecnologias-slide-holder {
+        width: 100%;
+        margin: 0px !important;
+        padding: 95px;
+    }
+    
+    #new-beach-lycra-black {
+        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+    #new-beach-uv50-plus-copy {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    #new-beach-lycra-black-copy {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+    #nb-tecnologias .ismobile {
+        display: block;
+    }
+    
+    #new-beach-uv50-plus {
+        margin-top: 0px;
+    }
+    #nb-tecnologias .nb-tecnologias-slider {
+        width: 100%;
+    }
+}
+@media(max-width: 425px){
+    #nb-tecnologias .nb-tecnologias-slider {
+        width: 100%;
+    }
+    #new-beach-uv50-plus-copy .nb-tecnologias-slide-holder {
+        margin: 0px;
+        width: 100%;
+    }
+    
+    #nb-tecnologias .nb-salmao {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    #new-beach-uv50-plus .nb-tecnologias-slide-holder {
+        margin: 0;
+    }
+    
+    #nb-tecnologias .swiper-container {
+        margin: 0;
+    }
+
+    #nb-tecnologias .content-block-header-pages {
+        padding: 0px;
+        margin-top: 15px;
+    }
+    
+    #new-beach-uv50-plus {
+        margin-top: 0;
+        padding: 15px;
+    }
+    
+    #new-beach-lycra-black {
+        margin-top: 15px;
+        padding-top: 15px;
+        padding: 15px;
+    }
+    
+    #new-beach-lycra-black .nb-tecnologias-slide-holder {
+        width: 100%;
+        margin: 0px;
+    }
+    
+    #new-beach-uv50-plus-copy {
+        margin-top: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    #new-beach-lycra-black-copy {
+        padding-top: 15px;
+        margin-bottom: 0;
+        padding: 15px;
+    }
+    
+    #new-beach-lycra-black-copy .nb-tecnologias-slide-holder {
+        width: 100%;
+        margin: 0px;
+    }
+}

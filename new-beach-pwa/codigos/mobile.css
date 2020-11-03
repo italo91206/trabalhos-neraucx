@@ -46,6 +46,10 @@ h1 {
 }
   
 @media(max-width: 425px){
+    .ismobile{
+        display: block;
+    }
+    
     #new-beach-home-products-slider {
         width: 400px;
     }
