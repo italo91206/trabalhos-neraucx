@@ -1,0 +1,197 @@
+#sc-edit-address {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 0 20px !important;
+    margin: 0 auto;
+}
+
+#sc-edit-address .p4a-account-menu-container {
+    width: 20%;
+}
+
+#sc-edit-address .p4a-account-menu-option {
+    display: none;
+}
+
+#sc-edit-address .p4a-account-menu {
+    list-style: none;
+    width: 100%;
+}
+
+#sc-edit-address .p4a-account-menu__item {
+    font-size: 15px;
+}
+
+#sc-edit-address .p4a-account-menu .p4a-account-menu__item {
+    margin: 2px 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: .3s;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sc-edit-address {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#sc-edit-address h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 30px !important;
+    margin-top: 6px !important;
+    margin-bottom: 18px;
+    color: #898989;
+}
+#sc-edit-address .p4a-account-menu .p4a-account-menu__item.p4a-account-menu__item--active:before{
+    height: 100%;
+}
+
+#sc-edit-address fieldset {
+    width: 462px;
+    border: 0;
+    padding: 0;
+}
+
+#sc-edit-address legend {
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 20px;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+#sc-edit-address label {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#sc-edit-address .p4a-account-menu .p4a-account-menu__item.p4a-account-menu__item--active {
+    color: #444 !important;
+    position: relative;
+    font-weight: 700 !important;
+}
+
+#sc-edit-address .p4a-account-menu .p4a-account-menu__item.p4a-account-menu__item--active span {
+    font-weight: 700;
+}
+
+#sc-edit-address input {
+    background: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 1.42857143;
+    padding: 0 9px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#sc-edit-address .sc-aditional {
+    margin-top: 10px;
+}
+
+#sc-edit-address fieldset .sc-input-group {
+    margin-bottom: 50px;
+}
+
+#sc-edit-address select {
+    color: #555;
+    border: 1px solid #c2c2c2;
+    height: 36px;
+    width: 100%;
+    padding-right: 25px;
+    text-indent: .01em;
+    background: #fff;
+    background-clip: padding-box;
+    border-radius: 1px;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    padding: 5px 5px;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+.sc-edit-address {
+    margin-left: 15px;
+}
+
+#sc-edit-address fieldset:last-child {
+    margin-left: 39px;
+}
+
+.message.info {
+    margin: 0 0 10px;
+    padding: 12px 20px 12px 25px;
+    display: block;
+    background: #fdf0d5;
+    color: #6f4400;
+    padding-left: 45px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 1024px){
+    #sc-edit-address .p4a-account-menu-container {
+        width: 100%;
+    }
+    .sc-edit-address{
+        width: 100%;
+        
+    }
+    #sc-edit-address {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #sc-edit-address fieldset:first-child .sc-input-group:first-of-type {
+        margin-bottom: 27px;
+    }
+}
+
+@media(max-width: 768px){
+    #sc-edit-address fieldset{
+        width: 350px;
+    }
+}
+
+@media(max-width: 425px){
+    #sc-edit-address fieldset{
+        width: 100%;
+    }
+    .sc-edit-address {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+    #sc-edit-address fieldset {
+        width: 100%;
+    }
+    #sc-edit-address fieldset:last-child {
+        margin-left: 0px;
+    }
+    #sc-edit-address fieldset .sc-input-group {
+        margin-bottom: 25px;
+    }
+}

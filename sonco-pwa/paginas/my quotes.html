@@ -1,0 +1,102 @@
+<main v-hook="`load-quotes`" id="sc-quotes" class="sc-container sc-container-mobile">
+  <div class="p4a-account-menu-container">
+    <span class="p4a-account-menu-option" onclick="openOptionsMenuMobile_()">
+      My quotes <img pwa-src="sc-chevron-right" alt="Next" />
+    </span>
+
+    <ul class="p4a-account-menu">
+      <li pwa-to-page="my-account"
+        class="p4a-account-menu__item"
+      >
+        <span>My Account</span>
+      </li>
+
+      <li pwa-to-page="account-orders"
+        class="p4a-account-menu__item"
+      >
+        <span>My Orders </span>
+      </li>
+
+      <li class="p4a-account-menu__item p4a-account-menu__item--active">
+        <span>My Quotes </span>
+      </li>
+
+      <li pwa-hook.click="sc-logout" class="p4a-account-menu__item">
+        <span>Logout</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sc-myquotes-panel">
+      <h1>My quotes</h1>
+      <p v-if="$$globalState.myQuotesLoading">
+          <p4a-loader></p4a-loader>
+      </p>
+      <p v-if="!$$globalState.quotes">
+          <p4a-loader></p4a-loader>
+      </p>
+      <p v-else-if="($$globalState.quotes || []).length === 0">
+          Not quotations yet.
+      </p>
+
+      <table v-if="Array.isArray($$globalState.quotes)" class="sc-quotes__table">
+          <thead>
+          <tr>
+              <th>Quote #</th>
+              <th>Date</th>
+              <th>Quote Response Status</th>
+              <th>Total Price</th>
+              <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+              <tr v-for="quote in $$globalState.quotes" :key="quote.id">
+              <td>{{ quote.increment_id }}</td>
+              <td>{{ quote.created_at.split(' ')[0] }}</td>
+              <td>{{ quote.state }}</td>
+              <td>{{ quote.subtotal | price }}</td>
+              <td>
+                  <a v-hook.click="`to-quote`" :data-quote="quote.increment_id" style="color: #bf2932">
+                      View Quote
+                  </a>
+              </td>
+              <div :id="quote.increment_id" style="display: none">
+                  <div class="dc-quotes__details--darken"></div>
+                  <div class="dc-quotes__details">
+                      <small :data-quote="quote.increment_id" v-hook.click="`to-close-quote`" style="text-align: right;cursor:pointer">
+                          (close)
+                      </small>
+
+                      <div>
+                          <p><strong>{{quote.increment_id}}</strong></p>
+                          <p><strong>Remarkes with proposal</strong> <br> <pre>{{ quote.customer_note }}</pre></p>
+                          <p><strong>Items requested</strong></p>
+                           
+                      </div>
+
+                      <ul class="dc-quotes__items">
+                          <li v-for="item in quote.items" :key="item.item_id">
+                              <span>{{item.name}}</span>
+                              <span>{{item.sku}}</span>
+                              <span>{{item.price | price}}</span>
+                              <span>{{item.qty}}</span>
+                              <span>{{item.total | price}}</span>
+                          </li>
+                      </ul>
+
+                      <div class="dc-quotes__total">
+                            <button style="float:left" class="p4a-button p4a-button--half p4a-button--end p4a-style__primary--color p4a-style__primary--border p4a-style__primary--background" pwa-data-quote="quote.entity_id" pwa-hook.click="sign-quotation">Checkout</button>
+                          <p>Subtotal {{ quote.subtotal | price}}</p>
+                          <p><strong>Grand Total {{ quote.grand_total | price}}</strong></p>
+                      </div>
+
+
+                  </div>
+
+              </div>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</main>

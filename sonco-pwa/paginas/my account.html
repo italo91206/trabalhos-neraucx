@@ -1,0 +1,106 @@
+<main v-hook="`load-quotes`" id="sc-quotes" class="sc-container sc-container-mobile">
+  <div class="p4a-account-menu-container">
+    <span class="p4a-account-menu-option" onclick="openOptionsMenuMobile_()">
+      My quotes <img pwa-src="sc-chevron-right" alt="Next" />
+    </span>
+
+    <ul class="p4a-account-menu">
+      <li pwa-to-page="my-account" class="p4a-account-menu__item p4a-account-menu__item--active">
+        <span>My Account </span>
+      </li>
+
+      <li pwa-to-page="account-orders" class="p4a-account-menu__item">
+        <span>My Orders </span>
+      </li>
+
+      <li pwa-to-page="my-quotes" class="p4a-account-menu__item">
+        <span>My Quotes </span>
+      </li>
+
+      <li pwa-hook.click="sc-logout" class="p4a-account-menu__item">
+        <span>Logout</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sc-myquotes-panel" pwa-hook="load-addresses">
+    <h1>My Account</h1>
+    <p v-if="$$user === null">
+      <p4a-loader></p4a-loader>
+    </p>
+
+    <h2 class="sc-block-title">Account Information</h2>
+
+    <div v-if="$$user !== null" class="sc-block-content">
+      <div class="sc-box-information">
+        <h3 class="sc-box-title">Contact Information</h3>
+        <div class="sc-box-content">
+          <p>
+            {{ $$user.firstname }} {{ $$user.lastname }}<br>
+            {{ $$user.email }}<br>
+          </p>
+        </div>
+        <div class="sc-box-actions">
+          <a pwa-to-page="account-profile" style="color: #bf2932">
+            Edit
+          </a>
+        </div>
+      </div>
+
+      <div class="sc-box-newsletter">
+        <h3 class="sc-box-title">Newsletter</h3>
+        <div class="sc-box-content">
+          <p v-if="$$globalState.quotes">You subscribed to our newsletter. </p>
+          <p v-else="!$$globalState.quotes">You don't subscribe to our newsletter. </p>
+        </div>
+        <!-- <div class="sc-box-actions">
+                <a v-hook.click="`to-subscribe-newsletter`">
+                    Edit
+                </a>
+            </div> -->
+      </div>
+
+      <div pwa--if="![null, undefined].includes(state.addressOne)" class="sc-block-dashboard-addresses">
+        <h2 class="sc-block-title">Address Book</h2>
+        <div class="sc-block-content">
+          <div pwa--if="![null, undefined].includes(state.addressOne)" class="sc-box-billing-address">
+            <h3 class="sc-box-title">
+              Default Billing Address
+            </h3>
+            <div class="sc-box-content">
+              <address>
+                {{ $$user.firstname }} {{ $$user.lastname }}<br>
+                {{ state.addressOne.street }}<br>
+                {{ state.addressOne.cep }}<br>
+                United States<br>
+                T: {{ state.addressOne.phone }}
+              </address>
+            </div>
+            <!-- <div class="box-actions">
+                        <a class="action edit" v-hook.click="`to-edit-address`">Edit Address</a>
+                    </div> -->
+          </div>
+
+          <div pwa--if="![null, undefined].includes(state.addressTwo)" class="sc-box-shipping-address">
+            <h3 class="sc-box-title">
+              Default Shipping Address
+            </h3>
+            <div class="sc-box-content">
+              <div class="sc-box-content">
+                <address>
+                  {{ $$user.firstname }} {{ $$user.lastname }}<br>
+                  {{ state.addressTwo.street }}<br>
+                  {{ state.addressTwo.cep }}<br>
+                  United States<br>
+                  T: {{ state.addressTwo.phone }}
+                </address>
+              </div>
+            </div>
+            <!-- <div class="box-actions">
+                        <a class="action edit" v-hook.click="`to-edit-address`">Edit Address</a>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
