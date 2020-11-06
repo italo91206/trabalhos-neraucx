@@ -152,6 +152,10 @@
     margin-bottom: 5px;
 }
 
+#sc-edit-address fieldset:first-child .sc-input-group:first-of-type {
+    margin-bottom: 27px;
+}
+
 @media(max-width: 1024px){
     #sc-edit-address .p4a-account-menu--opened .p4a-account-menu-option img {
         transform: rotate(-90deg);
