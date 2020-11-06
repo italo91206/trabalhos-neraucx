@@ -3,7 +3,7 @@
     flex-flow: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 100px 0 20px !important;
+    padding: 100px 0 20px;
     margin: 0 auto;
 }
 
@@ -153,6 +153,34 @@
 }
 
 @media(max-width: 1024px){
+    #sc-edit-address .p4a-account-menu--opened .p4a-account-menu-option img {
+        transform: rotate(-90deg);
+        transition: all .3s;
+    }
+    #sc-edit-address .p4a-account-menu-option img {
+        transform: rotate(90deg);
+        width: 11px;
+        transition: all .3s;
+    }
+    #sc-edit-address .p4a-account-menu {
+        display: none;
+    }
+    #sc-edit-address .p4a-account-menu-container .p4a-account-menu-option {
+        display: flex;
+        width: calc(100% - 30px);
+        padding: 10px 15px;
+        justify-content: space-between;
+        box-sizing: unset;
+        font-size: 15px;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        background: #fff;
+    }
+
+    #sc-edit-address .p4a-account-menu--opened .p4a-account-menu {
+        display: block !important;
+    }
+
     #sc-edit-address .p4a-account-menu-container {
         width: 100%;
     }
@@ -177,6 +205,9 @@
 }
 
 @media(max-width: 425px){
+    #sc-edit-address {
+        padding-top: 0px;
+    }
     #sc-edit-address fieldset{
         width: 100%;
     }
