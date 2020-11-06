@@ -1,7 +1,7 @@
 <main id="sc-edit-address" class="sc-container sc-container-mobile">
   <div class="p4a-account-menu-container">
     <span class="p4a-account-menu-option" onclick="openOptionsMenuMobile_()">
-      My quotes <img pwa-src="sc-chevron-right" alt="Next" />
+      Edit Address <img pwa-src="sc-chevron-right" alt="Next" />
     </span>
 
     <ul class="p4a-account-menu">
@@ -13,8 +13,16 @@
         <span>My Orders </span>
       </li>
 
-      <li class="p4a-account-menu__item p4a-account-menu__item--active">
+      <li class="p4a-account-menu__item">
         <span>My Quotes </span>
+      </li>
+
+      <li pwa-to-page="edit-address" class="p4a-account-menu__item  p4a-account-menu__item--active">
+        <span>Edit Address</span>
+      </li>
+
+      <li pwa-to-page="account-information" class="p4a-account-menu__item">
+        <span>Account Information</span>
       </li>
 
       <li pwa-hook.click="sc-logout" class="p4a-account-menu__item">

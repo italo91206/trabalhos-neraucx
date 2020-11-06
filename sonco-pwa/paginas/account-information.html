@@ -1,0 +1,146 @@
+<main id="sc-account-information" class="sc-container sc-container-mobile">
+  <div class="p4a-account-menu-container">
+    <span class="p4a-account-menu-option" onclick="openOptionsMenuMobile_()">
+      Account Information <img pwa-src="sc-chevron-right" alt="Next" />
+    </span>
+
+    <ul class="p4a-account-menu">
+      <li pwa-to-page="my-account" class="p4a-account-menu__item">
+        <span>My Account</span>
+      </li>
+
+      <li pwa-to-page="account-orders" class="p4a-account-menu__item">
+        <span>My Orders </span>
+      </li>
+
+      <li class="p4a-account-menu__item">
+        <span>My Quotes </span>
+      </li>
+
+      <li pwa-to-page="edit-address" class="p4a-account-menu__item">
+        <span>Edit Address</span>
+      </li>
+
+      <li pwa-to-page="account-information" class="p4a-account-menu__item p4a-account-menu__item--active">
+        <span>Account Information</span>
+      </li>
+
+      <li pwa-hook.click="sc-logout" class="p4a-account-menu__item">
+        <span>Logout</span>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="sc-account-information">
+    <h2>Edit Account Information</h2>
+    
+    <form action="" class="sc-edit-account-information sc-flex" pwa-hook="troca-forms">
+      <fieldset id="sc-first-group">
+        <legend class="legend">
+          <span>Account Information</span>
+        </legend>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">First Name</label>
+          <input type="text" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Last Name</label>
+          <input type="text" placeholder="">
+        </div>
+
+        <div class="sc-input-group sc-flex sc-choice">
+          <input type="checkbox" class="sc-change-to-email" name="changeToEmailForm">
+          <label for="">Change Email</label>
+        </div>
+
+        <div class="sc-input-group sc-flex sc-choice">
+          <input type="checkbox" class="sc-change-to-password" name="changeToPasswordForm">
+          <label for="">Change Password</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="sc-email-only" class="sc-hidden">
+        <legend class="legend">
+          <span>Change Email</span>
+        </legend>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Email</label>
+          <input type="text" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Current Password</label>
+          <input type="password" placeholder="">
+        </div>
+      </fieldset>
+
+      <fieldset id="sc-password-only" class="sc-hidden">
+        <legend class="legend">
+          <span>Change Password</span>
+        </legend>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Current Password</label>
+          <input type="password" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">New Password</label>
+          <input type="password" placeholder="">
+          <div class="password-strength-meter-container">
+            <div class="password-strength-meter">
+              Password Strength: <span>none</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Confirm New Password</label>
+          <input type="password" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <p>
+            If you created this account using Amazon Pay, you might not know your site password. Request a password to change your account password.
+          </p>
+        </div>
+
+      </fieldset>
+
+      <fieldset id="sc-both" class="sc-hidden">
+        <legend class="legend">
+          <span>Change Email and Password</span>
+        </legend>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Email</label>
+          <input type="text" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Current Password</label>
+          <input type="password" placeholder="">
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">New Password</label>
+          <input type="password" placeholder="">
+          <div class="password-strength-meter-container">
+            <div class="password-strength-meter">
+              Password Strength: <span>none</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc-input-group">
+          <label for="" class="sc-required">Confirm New Password</label>
+          <input type="password" placeholder="">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</main>
