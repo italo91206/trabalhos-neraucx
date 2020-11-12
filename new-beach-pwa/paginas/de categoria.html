@@ -48,7 +48,7 @@
     </div>
   </section>
 
-  <section id="nb-category-rectangles-line" class="nb-container nb-flex">
+  <!-- <section id="nb-category-rectangles-line" class="nb-container nb-flex">
     <div class="nb-cmd-3 nb-category-rectangles">
       <a pwa-to-page="">
         <img pwa-src="leggings-rectangle" alt="">
@@ -72,9 +72,9 @@
         <p>Seu novo shorts<br />favorito chegou.</p>
       </a>
     </div>
-  </section>
+  </section> -->
 
-  <section id="nb-category-tecnologias" class="bkg-salmao">
+  <!-- <section id="nb-category-tecnologias" class="bkg-salmao">
     <div class="container wrapper">
       <div class="span1 hide-only-small"></div>
       <div class="span9 s-span12">
@@ -118,26 +118,91 @@
       </div>
       <div class="span2 hide-only-small"></div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="nb-new-beach-page-product-list" class="nb-container">
-    <pwa-product-list filter="brand: 'NEW BEACH'" size="36" class="block-list-products">
-      <pwa-hidden>
-        <div pwa-is-loading class="my-loader" style="position:relative;height:50px;">
-          <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
-            <div></div>
-            <div></div>
-            <div></div>
+  <section id="nb-pagina-pesquisa-resultados" class="nb-container nb-flex">
+    <div id="nb-coluna-esquerda">
+      <div class="nb-pesquisa-filtros">
+        <p class="nb-coluna-filtros-titulo">Filtros</p>
+
+        <ul class="list-filter">
+          <!-- Filtro de tamanho -->
+          <li id="filter-size" onclick="openSubmenuFilterMobile(this)">
+            <span class="nb-filter-option-tittle">Tamanho <span class="fa fa-chevron-down"></span></span>
+            <pwa-attribute-filter attribute="items.Tamanho" static multiple class="submenu-filter" id="submenu-filter-size">
+              <ul pwa-has-filters>
+                <li pwa-each-filter>
+                  <input pwa-filter-input="checked" name="tamanho" type="checkbox"> <span class="checkbox-item-filter"></span> {{ filter.label }} 
+                </li>
+              </ul>
+            </pwa-attribute-filter>
+          </li>
+
+          <!-- Filtro de cores -->
+          <li id="filter-size" onclick="openSubmenuFilterMobile(this)">
+            <span class="nb-filter-option-tittle">Cores <span class="fa fa-chevron-down"></span></span>
+            <pwa-attribute-filter attribute="items.Cor" static multiple class="submenu-filter" id="submenu-filter-size">
+              <ul pwa-has-filters>
+                <li pwa-each-filter><input pwa-filter-input="checked" name="tamanho" type="checkbox">
+                  <span class="checkbox-item-filter"></span> {{ filter.label }}
+                </li>
+              </ul>
+            </pwa-attribute-filter>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="nb-coluna-direita">
+      <section class="bar-filter nb-flex">
+        <div class="total-results nb-flex">
+          <p style="display: none;">Encontramos</p><b>{{ $$paginate.count }} PEÇA(S)</b><p>que fazem o seu estilo</p>
+        </div>
+
+        <div class="btn-filter-compact span12 show-only-small text-center" onclick="openFilterMobile()">
+          <b><img pwa-src="icon-plus"> Ver filtros</b>
+        </div>
+
+        <div class="container-bar-filter span8">
+          <div class="bcg-container-bar-filter show-only-small" onclick="closeFilterMobile()"></div>
+          <div class="wrapper-container-bar-filter">
+            <div class="btn-filter-compact close-btn-filter-compact span12 show-only-small text-center"
+              onclick="closeFilterMobile()">
+              <b><img pwa-src="icon-plus"> Fechar</b>
+            </div>
+            
           </div>
         </div>
-      </pwa-hidden>
-  
-      <div class="list-block-list-produtos container wrapper">
-        <div pwa-each-product class="span3 s-span12">
-          <pwa-product-card>
-        </div>
-      </div>
 
-    </pwa-product-list>
+        <!-- Filtro de ordenação (maior preço, menor preço) -->
+        <div id="filter-order" onclick="openSubmenuFilterMobile(this)">
+          <p class="nb-flex">Ordenar por <b>destaques</b><span class="fa fa-chevron-down"></span></p>
+          <div class="submenu-filter" id="submenu-filter-order">
+            <ul>
+              <li><span class="checkbox-item-filter"></span> Maior Preço</li>
+              <li><span class="checkbox-item-filter"></span> Menor Preço</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <pwa-product-list size="36" class="block-list-products">
+        <pwa-hidden>
+          <div pwa-is-loading class="my-loader" style="position:relative;height:50px;">
+            <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </pwa-hidden>
+    
+        <div class="list-block-list-produtos container wrapper">
+          <div pwa-each-product class="span3 s-span12">
+            <pwa-product-card>
+          </div>
+        </div>
+      </pwa-product-list>
+    </div>
   </section>
 </main>
