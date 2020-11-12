@@ -514,6 +514,10 @@ li.menu-item.nb-destaque:hover {
     margin-top: 2px;
 }
 
+.container-submenu-list.wrapper {
+    grid-template-columns: repeat(10, 1fr) !important;
+}
+
 @media(max-width: 425px){
 	.nb-container.header-menu-container {
 		max-width: unset;

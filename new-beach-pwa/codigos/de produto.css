@@ -85,7 +85,6 @@
     font-size: 64px;
     font-weight: 700;
     text-transform: uppercase;
-    width: 546px;
     color: #E27C73;
     /* position: absolute; */
 }
@@ -95,8 +94,6 @@
 }
 
 #nb-product-page-detailed-info .content-block01-description-product {
-    width: 606px;
-    height: 355px;
     margin-top: 0px;
     position: absolute;
     top: -40px;
@@ -142,6 +139,10 @@
     transform: translateY(100px);
 }
 
+#nb-product-page-detailed-info .block02-description-product .description-content {
+    padding: 20px;
+}
+
 #nb-product-page-detailed-info .block02-description-product .subtitle {
     font-family: 'Barlow', sans-serif;
     font-weight: normal;
@@ -154,7 +155,6 @@
 
 #nb-product-page-detailed-info .block02-description-product p {
     color: #586A6A;
-    width: 606px;
     text-decoration: underline;
     line-height: 19.5px;
 }
@@ -164,13 +164,30 @@
     margin-bottom: 29px;
 }
 
+#nb-product-page-detailed-info .controller-slider {
+    display: flex;
+    align-items: center;
+}
+
+#nb-product-page-detailed-info .slider-description-pagination {
+    margin: 0 10px;
+}
+
+#nb-product-page-detailed-info .controller-slider .swiper-pagination-bullets {
+    height: auto;
+}
+
+#nb-product-page-detailed-info .controller-slider .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 4px;
+}
+
 .card-description .content-card-description {
     background: #fff;
     border: 1px solid #D1D1D1;
     border-top: none;
     display: flex;
-    flex-wrap: wrap;
-    height: 190px;
+    justify-content: space-between;
+    padding: 50px 100px;
 }
 
 .card-description .header-card-description {
@@ -189,6 +206,11 @@
     color: #586A6A;
 }
 
+.card-description .content-card-description .col-left {
+    margin-right: 100px;
+}
+
+/*
 .card-description .content-card-description .col-right {
 	max-width: 556px;
     margin-top: 49px;
@@ -201,6 +223,7 @@
     margin-left: 106px;
     display: block;
 }
+*/
 
 #nb-materiais-e-cuidados ul {
     list-style-type: none;
@@ -213,19 +236,15 @@
 
 #nb-materiais-e-cuidados ul li {
     display: flex;
-    margin-right: 32px;
     font-size: 14px;
     margin-bottom: 10px;
     color: #494747;
+    flex: 0 0 33.3%;
 }
 
 #nb-materiais-e-cuidados .col-right ul {
     display: flex;
     flex-wrap: wrap;
-}
-
-#nb-materiais-e-cuidados ul li:nth-child(3n) {
-    margin-right: 0px;
 }
 
 #nb-materiais-e-cuidados ul li img {
@@ -272,7 +291,7 @@
 }
 
 .info-block-product-details {
-	padding-top: 16px;
+	padding: 20px;
 }
 
 #nb-product-page .breadcrumbs li {
@@ -313,6 +332,7 @@
 #nb-product-page .name-product {
     margin-top: 8px;
     color: #1B1919;
+    max-width: 471px;
 }
 
 #nb-product-page .price-product {
@@ -465,7 +485,7 @@
     color: #E27C73;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 533px;
+    max-width: 533px;
 }
 
 .nb-avaliacoes-comment-tittle p {
@@ -493,11 +513,12 @@
 }
 
 .nb-avaliacao {
-    width: 1030px;
+    max-width: 1030px;
     margin: 0 auto;
     border: solid 1px #F0F0F0;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
     margin-top: 22px;
+    padding: 50px;
 }
 
 .nb-avaliacao div:first-of-type {
@@ -513,11 +534,11 @@
 .nb-avaliacao-pre-titulo p {
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 24px;
 }
 
 .nb-avaliacao-stars {
     margin-top: 0px;
+    margin-right: 24px;
 }
 
 .nb-avaliacao-pre-titulo p {
@@ -542,17 +563,11 @@
     margin-left: 0px;
 }
 
-.nb-flex.nb-avaliacao-pre-titulo {
-    margin-top: 45px;
-    width: 818px;
-    margin: 0 auto;
-    padding-top: 43px;
-}
+.nb-flex.nb-avaliacao-pre-titulo {}
 
 .nb-avaliacao-titulo {
-    width: 818px;
-    margin: 0 auto;
     align-items: center;
+    justify-content: space-between;
     margin-top: 14px;
 }
 
@@ -562,16 +577,14 @@
     font-size: 20px;
     font-family: 'Montserrat';
     color: #E27C73;
-    width: 533px;
+    max-width: 533px;
 }
 
 .nb-avaliacao-titulo p {
     color: #27AE60;
     font-size: 14px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0;
     align-items: center;
-    margin-left: 136px;
 }
 
 .nb-avaliacao-titulo p img {
@@ -581,13 +594,10 @@
 }
 
 .nb-avaliacao-text {
-    width: 818px;
-    margin: 0 auto;
     color: #767575;
     font-size: 14px;
     font-family: 'Montserrat';
     margin-top: 18px;
-    padding-bottom: 43px;
 }
 
 .nb-avaliacao-text p {
@@ -616,4 +626,45 @@
 
 .nb-voce-vai-amar {
     margin-bottom: 100px;
+}
+
+#nb-product-gallery {
+    max-height: 863px;
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 900px) {
+    #nb-product-page-detailed-info .content-block01-description-product h2 {
+        position: static;
+        top: auto;
+        text-align: left;
+        right: auto;
+        font-size: 44px !important;
+        line-height: 1.3em !important;
+    }
+
+    .slider-description-product.swiper-container {
+        margin-top: 60px;
+    }
+
+    .card-description .content-card-description {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .card-description .content-card-description .col-left {
+        margin: 0 0 50px 0;
+    }
+
+    #nb-materiais-e-cuidados ul li {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #nb-materiais-e-cuidados ul li {
+        flex: 0 0 100%;
+    }
 }

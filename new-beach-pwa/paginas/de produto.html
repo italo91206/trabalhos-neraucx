@@ -1,7 +1,7 @@
 <main id="nb-product-page">
   <section class="block-product-details">
-    <div class="container wrapper gap30">
-      <div class="span7 s-span12" style="overflow: hidden">
+    <div class="nb-container wrapper gap30">
+      <div class="span7 m-span12" style="overflow: hidden">
         <div class="slider-images-block-product-details swiper-container" id="nb-product-gallery">
           <div class="swiper-wrapper">
             <pwa-loop params="7">
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="info-block-product-details span5 s-span12">
+      <div class="info-block-product-details span5 m-span12">
         <ul class="breadcrumbs">
           <li><a pwa-to-page="home">Início</a></li>
           <li pwa-breadcumb-item><a pwa-to-page="bc.url">{{ bc.name }}</a></li>
@@ -122,7 +122,7 @@
     </pwa-product-list>
   </section>
 
-  <section id="nb-product-page-detailed-info" class="bkg-salmao">
+  <!-- <section id="nb-product-page-detailed-info" class="bkg-salmao">
     <div class="block01-description-product nb-container wrapper">
       <div class="content-block01-description-product span6 s-span12">
         <h2 class="title">Por que colocar na sua sacola?</h2>
@@ -161,12 +161,10 @@
           </div>
 
           <div class="controller-slider">
-            <div class="slider-description-button-next"><img pwa-src="icon-black-arrow-right" alt=""></div>
-            <div class="slider-description-button-prev"><img pwa-src="icon-black-arrow-left" alt=""></div>
+              <div class="slider-description-button-prev"><img pwa-src="icon-black-arrow-left" alt=""></div>
+              <div class="slider-description-pagination"></div>
+              <div class="slider-description-button-next"><img pwa-src="icon-black-arrow-right" alt=""></div>
           </div>
-
-          <div class="slider-description-pagination"></div>
-          
         </div>
       </div>
       <div class="image-block01-description-product">
@@ -175,36 +173,38 @@
     </div>
 
     <div class="block02-description-product nb-container wrapper gap30">
-      <div class="span6 s-span12">
+      <div class="span6 m-span12">
         <a href="#">
           <img pwa-src="image2-description-product" alt="Sabrina Sato">
         </a>
       </div>
-      <div class="span6 s-span12 text-left">
-        <h2 class="subtitle">UV 50+</h2>
-        <p>As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até
-          98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor
-          solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio
-          da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de
-          UVA quanto UVB.</p>
-        <p>Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te
-          proteger durante práticas externas de exercícios.</p>
+      <div class="span6 m-span12 text-left">
+        <div class="description-content">
+          <h2 class="subtitle">UV 50+</h2>
+          <p>As peças com essa tecnologia oferecem proteção solar para a pele, com um fator acima de 50, bloqueando até
+            98% dos raios UVA e UVB. Para exemplificar, entenda a diferença entre a proteção das roupas e de um protetor
+            solar: cremes e loções de uso tópico trazem o Fator de Proteção Solar (FPS), que considera apenas o bloqueio
+            da radiação UVB. Já o Fator de Proteção Ultravioleta (FPU), utilizado em roupas, considera tanto o bloqueio de
+            UVA quanto UVB.</p>
+          <p>Além de tudo, é importante destacar que a proteção UV nas nossas peças é permanente, o que é perfeito para te
+            proteger durante práticas externas de exercícios.</p>
 
-        <div class="spacer40"></div>
+          <div class="spacer40"></div>
 
-        <h2 class="subtitle">LYCRA® Black Tecnhnology</h2>
-        <p>A tecnologia BLACK da marca LYCRA® foi desenvolvida no primeiro elastano verdadeiramente preto da indústria,
-          o fio LYCRA® T275Z, uma fibra resistente ao cloro que tem sua cor profunda derivada do pigmento preto. Os
-          tecidos apresentam tons mais fortes e escuros que conservam toda a integridade da cor. Ainda é possível
-          combinar a tecnologia com um nylon colorido para um tecido não tingido com total solidez e sem sangria de cor.
-        </p>
-        <p>A tecnologia BLACK também fornece uma solução altamente eficaz para o problema de brilho e efeito
-          “grin-through” do elastano.</p>
+          <h2 class="subtitle">LYCRA® Black Tecnhnology</h2>
+          <p>A tecnologia BLACK da marca LYCRA® foi desenvolvida no primeiro elastano verdadeiramente preto da indústria,
+            o fio LYCRA® T275Z, uma fibra resistente ao cloro que tem sua cor profunda derivada do pigmento preto. Os
+            tecidos apresentam tons mais fortes e escuros que conservam toda a integridade da cor. Ainda é possível
+            combinar a tecnologia com um nylon colorido para um tecido não tingido com total solidez e sem sangria de cor.
+          </p>
+          <p>A tecnologia BLACK também fornece uma solução altamente eficaz para o problema de brilho e efeito
+            “grin-through” do elastano.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="nb-materiais-e-cuidados" class="block03-description-product nb-container">
+  <!-- <section id="nb-materiais-e-cuidados" class="block03-description-product nb-container">
     <div class="span1 hide-only-small"></div>
 
     <div class="card-description">
@@ -235,9 +235,9 @@
 
     <div class="span1 hide-only-small"></div>
 
-  </section>
+  </section> -->
 
-  <section id="nb-avaliacoes" class="nb-container">
+  <!-- <section id="nb-avaliacoes" class="nb-container">
     <h4 class="subtitle">Quem comprou</h4>
     
     <div class="nb-avaliacao-media nb-flex">
@@ -327,7 +327,7 @@
       <img pwa-src="icon-plus-cart" alt="">
       Ver mais avaliações
     </a>
-  </section>
+  </section> -->
 
   <section class="nb-container nb-voce-vai-amar">
     <h4 class="subtitle text-center">Você vai amar</h4>
@@ -456,24 +456,5 @@
         </div>
         <div class="slider-product-pagination swiper-pagination"></div>
       </div> -->
-  </section>
-
-  <section id="nb-newsletter" class="block-newsletter bkg-salmao">
-    <div class="container-block-newsletter">
-      <h5>Além de muito sol, tem novidades e<br />promoções esperando por você</h5>
-      <form class="form-block-newsletter">
-        <div class="input-container-block-newsletter">
-          <label for="cNameNewsletter">Nome</label>
-          <input type="text" class="input-form" name="cNameNewsletter" id="cNameNewsletter"
-            placeholder="Ex.: Vanessa Ferty">
-        </div>
-        <div class="input-container-block-newsletter">
-          <label for="cEmailNewsletter">E-mail</label>
-          <input type="text" class="input-form" name="cEmailNewsletter" id="cEmailNewsletter"
-            placeholder="Ex.: seuemail@email.com">
-        </div>
-        <button type="submit" class="btn">Receber Novidades</button>
-      </form>
-    </div>
   </section>
 </main>
