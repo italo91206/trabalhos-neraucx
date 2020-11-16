@@ -103,19 +103,56 @@
             <div class="banner-content-submenu-list span4 hide-only-small">
               <img pwa-src="image-submenu-legging" alt="Legging">
               <div class="description">Bring new energy to your practice.</div>
-              <button class="btn">Shop Leggings</button>
+              <button class="btn" pwa-to-page="/meninas/fitness/leggings">
+                Shop Leggings
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
       <div class="header-menu-user hide-only-small">
+        <pwa-search-form params="3" class="search search-column" id="search-row">
+          <section id="search-row-click" class="search-row">
+            <form onsubmit="return false" role="search" class="form-search">
+              <i pwa-search-button class="icon icon-search" style="font-size: 25px;margin-top:5px;color: #ccc"></i>
+              <input pwa-search-box class="input-search-client" placeholder="Qual seu estilo?">
+              <div class="sc-buttom-close-input" onclick="closeSubmenuSearch()"></div>
+            </form>
+            <i class="icon icon-close" style="font-size: 25px; margin-top:5px; color: #ccc" pwa-hook.click="open-search"></i>
+          </section>
 
-        <pwa-search-form size="5" class="search">
-          <form class="form-search">
-            <input pwa-search-box name="cSearch" class="input-form" placeholder="Qual seu estilo?" />
-            <button pwa-search-button type="submit" class="btn-search"><img pwa-src="icon-search"></button>
-          </form>
+          <div class="submenu-search" pwa-has-suggest>
+            <div class="container-submenu-search container wrapper" onmouseleave="closeSubmenuSearch()">
+              <div class="span9">
+                <div class="list-products-search wrapper gap30">
+                  <div class="card-product span4" pwa-each-suggest>
+                    <div class="images-slider-products">
+                      <img pwa-src="icon-fav" class="favorite-product">
+                      <div class="label">New In</div>
+                      <img pwa-src="suggest.image" pwa-alt="suggest.name" class="primary-image-slider-products">
+                    </div>
+
+                    <div class="info-slider-product">
+                      <h4 class="product-name">{{ suggest.name }}</h4>
+                      <div class="price" pwa--if="suggest.activeSKU.sale_price > 0"> {{ suggest.activeSKU.sale_price | price }}</div>
+                      <h3 pwa--if="suggest.activeSKU.sale_price <= 0">Produto esgotado</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span3 bl-gray">
+                <div class="title-submenu-search">Mais acessado</div>
+                <ul class="list">
+                  <li><a href="#">Maiô Alto Giro Lycra Life Swimming</a></li>
+                  <li><a href="#">Macaquinho Lycra com Bojo</a></li>
+                  <li><a href="#">Macaquinho Lycra termo</a></li>
+                  <li><a href="#">Sunga Lycra Termo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </pwa-search-form>
 
         <ul class="menu-list">
@@ -140,81 +177,6 @@
             </div>
           </li>
         </ul>
-
-        <div class="submenu-search">
-          <div class="container-submenu-search container wrapper" onmouseleave="closeSubmenuSearch()">
-            <div class="span9">
-              <div class="nb-submenu-first-line">
-                <h2>Sugestões para você</h2>
-              </div>
-
-              <div class="list-products-search wrapper gap30">
-                <div class="card-product span4">
-                  <div class="images-slider-product">
-                    <img pwa-src="icon-fav" class="favorite-product">
-                    <div class="label">New In</div>
-                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
-                      class="primary-image-slider-products">
-                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
-                      class="secondary-image-slider-products">
-                    <span class="heart"></span>
-                  </div>
-                  <div class="info-slider-product">
-                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
-                    <div class="price">R$132,82</div>
-                  </div>
-                </div>
-
-                <div class="card-product span4">
-                  <div class="images-slider-product">
-                    <img pwa-src="icon-fav" class="favorite-product">
-                    <div class="label">New In</div>
-                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
-                      class="primary-image-slider-products">
-                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
-                      class="secondary-image-slider-products">
-                    <span class="heart"></span>
-                  </div>
-                  <div class="info-slider-product">
-                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
-                    <div class="price">R$132,82</div>
-                  </div>
-                </div>
-
-                <div class="card-product span4">
-                  <div class="images-slider-product">
-                    <img pwa-src="icon-fav" class="favorite-product">
-                    <div class="label">New In</div>
-                    <img pwa-src="image-product-slider" alt="Mulher vestindo um look fitness"
-                      class="primary-image-slider-products">
-                    <img pwa-src="image-secondary-product-slider" alt="Mulher vestindo um look fitness"
-                      class="secondary-image-slider-products">
-                    <span class="heart"></span>
-                  </div>
-                  <div class="info-slider-product">
-                    <h4 class="product-name">Top Alto Giro UP Co2 Crusade X</h4>
-                    <div class="price">R$132,82</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="nb-submenu-last-line">
-                <a pwa-to-search="/new-beach/top">
-                  <img pwa-src="plus-icon" alt="">
-                  Ver todas as opções</a>
-              </div>
-            </div>
-            <div class="span3 bl-gray">
-              <div class="title-submenu-search">Mais acessados</div>
-              <ul class="list">
-                <li><a href="#">Maiô Alto Giro Lycra Life Swimming</a></li>
-                <li><a href="#">Macaquinho Lycra com Bojo</a></li>
-                <li><a href="#">Macaquinho Lycra termo</a></li>
-                <li><a href="#">Sunga Lycra<br/>Termo</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -223,14 +185,6 @@
     <div class="bcg-menu-mobile" onclick="hideMenuMobile()"></div>
 
     <div class="container-menu-mobile">
-      
-      <pwa-search-form class="search-menu-mobile">
-        <form class="form-search-menu-mobile">
-          <input pwa-search-box name="cSearch" class="input-form" placeholder="Qual seu estilo?">
-          <button pwa-search-button type="submit" class="btn-search"><img pwa-src="icon-search" onclick="hideMenuMobile()"></button>
-        </form>
-      </pwa-search-form>
-
       <nav class="menu-list-mobile">
         <ul>
 
@@ -326,5 +280,4 @@
       </nav>
     </div>
   </div>
-
 </header>
