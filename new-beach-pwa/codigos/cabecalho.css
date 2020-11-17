@@ -110,7 +110,7 @@ li.menu-item.nb-destaque:hover {
 	background: var(--color-custom-a);
 	padding: 20px 0px;
 	width: 240px;
-	height: unset;
+	height: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -654,4 +654,11 @@ li.menu-item.nb-destaque:hover {
 	.nav-menu {
 		overflow-x: scroll;
 	}
+}
+
+@media(max-width: 1280px)
+{
+    .submenu-list.active {
+        left: 20px;
+    }
 }

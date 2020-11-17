@@ -1,0 +1,87 @@
+#nb-feminino-fitness-navigation .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 44px;
+    height: 2px;
+    background: #E0E0E0;
+    opacity: 1;
+    transition: all .2s ease;
+    margin-top: 2px;
+}
+
+#nb-feminino-fitness-navigation .swiper-pagination-bullet-active {
+    background: #F1B29C;
+    height: 6px;
+    transition: all .2s ease;
+    margin-top: 0px;
+}
+
+#nb-feminino-fitness-navigation {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    margin-bottom: 113px;
+}
+
+#nb-feminino-fitness-slider .card-product {
+    padding-bottom: 58px;
+}
+
+#nb-feminino-fitness-slider {
+    margin-top: 55px;
+}
+
+@media(max-width: 768px){
+    #nb-category-tecnologias .block-info-image-left .description {
+        width: unset;
+    }
+    .block-info-image-right .block-info-image-content .description {
+        width: unset;
+    }
+    .title.ismobile {
+        display: block;
+        width: 100%;
+    }
+    .title.isdestkop {
+        display: none;
+    }
+
+    .block-info-image-right .block-info-image-content .description:after,
+    .block-info-image-left .block-info-image-content .description:before {
+        display: none;
+    }
+
+    #nb-category-tecnologias .container.wrapper {
+        display: block;
+    }
+    
+    #nb-category-tecnologias .block-info-image-left .block-info-image-content {
+        display: block;
+        position: relative;
+        width: 49%;
+        left: 0;
+        max-width: unset;
+        text-align: left;
+    }
+    
+    #nb-category-tecnologias {
+        text-align: center;
+    }
+    
+    .block-info-image-left {
+        transform: unset;
+    }
+    
+    #nb-category-tecnologias .title.ismobile h2 {
+        margin-left: 20px;
+        font-family: 'Barlow';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 75.8px;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    
+    #nb-category-tecnologias img {
+        width: 50%;
+    }
+}
