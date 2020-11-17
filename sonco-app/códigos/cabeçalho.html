@@ -13,6 +13,8 @@
       <div class="sc-header-icons-right">
         <a href="#" pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
           <img pwa-src="icon-calc" alt="quote" class="sc-icon-quote">
+          <span pwa--if="$$secondCart.count > 0">{{ $$secondCart.count }}</span>
+          <span pwa--else>0</span>
         </a>
         <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
           <img pwa-src="icon-cart" alt="cart" class="sc-icon-cart">
@@ -72,6 +74,8 @@
         </a>
         <a href="#" pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
           <img pwa-src="icon-calc" alt="quote" class="sc-icon-quote">
+          <span pwa--if="$$secondCart.count > 0">{{ $$secondCart.count }}</span>
+          <span pwa--else>0</span>
         </a>
         <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
           <img pwa-src="icon-cart" alt="cart" class="sc-icon-cart">
