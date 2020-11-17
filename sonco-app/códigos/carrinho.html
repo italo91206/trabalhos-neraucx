@@ -1,23 +1,26 @@
 <section id="sc-cart" class="sc-cart">
 	<div>
 		<header class="sc-cart__header">
-			<a pwa-toggle-cart>
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</a>
+      <a pwa-toggle-cart>
+        <span class="fa fa-times" aria-hidden="true" style="color: #e8404c"></span>
+      </a>
 
-			<div>
-				<h2 pwa-is-first>Your Cart</h2>
-				<h2 pwa-is-second>Your Quote</h2>
-				<span pwa-has-items>{{ $$cart.count }}</span>
-			</div>
-		</header>
+      <div>
+        <h2 pwa-is-first><span class="fas fa-shopping-cart"></span>Your Cart</h2>
+        <h2 pwa-is-second><span class="fas fa-calculator"></span>Your Quote</h2>
+        <span pwa-is-first>[ {{ $$cart.count }} ]</span>
+      </div>
+    </header>
 	</div>
 
-
 	<section pwa-not-items class="sc-cart__empty">
-		<i class="fa fa-heart" aria-hidden="true"></i>
-		Your cart is empty. <br> Check our offers!
-		<a pwa-to-page="home"><span>See stuff</span></a>
+    <span>
+      You have <strong>no items</strong> in your 
+      <span pwa-is-first> shopping cart</span>
+      <span pwa-is-second> Quote cart</span>
+      .
+    </span>
+    <a pwa-toggle-cart id="sc-cont-shopping"><span>Continue Shopping</span></a>
 	</section>
 
 	<pwa-hidden>
@@ -28,75 +31,195 @@
 				<div></div>
 			</div>
 		</div>
-	</pwa-hidden>
+  </pwa-hidden>
+  
+  <pwa-hidden>
+    <div pwa-freight-loading class="my-loader" style="position:relative;height:400px">
+      <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </pwa-hidden>
+
+  <section pwa-is-first pwa-has-items class="sc-delivery-calculator">
+    <h2 pwa-freight-not-loading>Shipping Calculator (US Only)</h2>
+
+    <div pwa-freight-not-loading class="sc-delivery__calc-content">
+      <p>Please enter Delivery zip code:</p>
+
+      <div class="sc-delivery__calc-input">
+        <input pwa-freight-box class="sc-input-delivery-calc" placeholder="Ex. 20705">
+        <button @click="searchFreight"><span class="fas fa-angle-right sc-color-white"></span></button>
+      </div>
+    </div>
+
+    <ul>
+      <li pwa-each-freight>{{ freight.title }} - {{ freight.price | price }}</li>
+    </ul>
+  </section>
 
 	<ul pwa-has-items class="sc-cart__list">
 		<li pwa-each-item class="sc-cart__item">
 			<section class="sc-cart__row-bag">
+
 				<div class="sc-cart__row-bag-container">
-					<img pwa-src="product.thumbnail" alt="product.name">
-					<article class="sc-cart__row-pay">
-						<h3>{{ product.name }}</h3>
+          <figure class="sc-image-product-cart">
+            <img pwa-src="product.thumbnail" pwa-alt="product.name">
+          </figure>
 
-						<section class="sc-cart__row-bag-quantity-container">
-							<div class="sc-input__number">
-								<div class="sc-input__number-btns">
-									<span pwa-quantity-increment class="sc-input__number-increment">+</span>
-									<span pwa-quantity-decrement class="sc-input__number-decrement">–</span>
-								</div>
+          <article class="sc-cart__row-pay">
+            <div class="sc-name-delete-prod">
+              <h3>{{ product.name }}</h3>
 
-								<input pwa-quantity-box class="input-number">
-							</div>
+              <a pwa-remove-item class="delete__item">
+                <!-- <i class="fa fa-trash-o" style="color: #898989; font-size: 13px !important;"></i> -->
+                <span class="far fa-trash-alt"></span>
+              </a>
+            </div>
 
-								<span class="sc-cart__row-bag-comment-icon" pwa-is-second pwa-hook.click="open-quote-comment"> add comment</span>
-						</section>
-						<small class="sc-cart__product-oldprice" pwa-is-first>{{ product.price | price }}</small>
-						<textarea placeholder="Enter your comments at any time" class="sc-cart__row-bag-comment" id="sc-cart__row-bag-comment" pwa-is-second></textarea>
-					</article>
-				</div>
+            <section class="sc-cart__row-bag-quantity-container">
+              <div class="sc-cart__right">
+                <ul pwa--if="(product.options || {}).attributes_info" class="sc-cart__options">
+                  <li pwa--for="option in Object.values((product.options || {}).attributes_info || {})"
+                    pwa-key="option.value"><strong>{{ option.label }}:</strong> {{ option.value }}</li>
+                </ul>
 
-				<a pwa-remove-item class="delete__item">
-					<i class="fa fa-trash-o" style="color: #898989; font-size: 13px !important;"></i>
-				</a>
+                <ul pwa--if="(product.options || {}).options" class="sc-cart__options">
+                  <li pwa--for="option in Object.values((product.options || {}).options || {})" pwa-key="option.value">
+                    <strong>{{ option.label }}:</strong> {{ option.value }}</li>
+                </ul>
+              </div>
+
+              <div class="sc-inputs-price">
+                <div class="sc-input__number">
+                  <span pwa-quantity-decrement class="sc-input__number-decrement sc-input__number-btns">–</span>
+                  <input pwa-quantity-box class="input-number">
+                  <span pwa-quantity-increment class="sc-input__number-increment sc-input__number-btns">+</span>
+                </div>
+
+                <div class="sc-price-product-input">
+                  <small class="sc-cart__product-oldprice" pwa-is-first>{{ product.price | price }}</small>
+                </div>
+              </div>
+
+
+              <span class="sc-cart__row-bag-comment-icon" pwa-is-second pwa-hook.click="open-quote-comment"> add
+                comment</span>
+            </section>
+
+            <textarea pwa--model="notes[product.id]" placeholder="Enter your comments at any time"
+              class="sc-cart__row-bag-comment" id="sc-cart__row-bag-comment" pwa-is-second></textarea>
+          </article>
+        </div>
+        
 			</section>
 		</li>
 	</ul>
 
-	<div>
-		<footer pwa-has-items class="sc-cart__footer">
-			<div class="sc-cart__subtotal">
-				<h3>Subtotal</h3>
-				<span class="sc-cart__subtotal_flex-end">{{ $$cart.subtotal | price }}</span>
-			</div>
+  <div pwa-is-second pwa-has-items class="sc-text-area-field">
+    <form action="">
+      <textarea placeholder="Enter your comments at any time" id="sc-text-area-field-comment"></textarea>
+    </form>
+  </div>
 
-			<section class="sc-cart__discout">
-				<div class="sc-cart__discout-title">
-					<h3>Apply<br> Discount</h3>
-				</div>
+	<div pwa-has-items class="sc-footer-cart-content">
+    <footer pwa-has-items class="sc-cart__footer">
+      <section class="sc-cart__subtotal">
+        <h3>Total <span>( {{ $$cart.count }} items )</span></h3>
+        <span class="sc-cart__subtotal_flex-end">{{ $$cart.subtotal | price }}</span>
+      </section>
 
-				<div class="sc-form__input">
-					<input pwa-coupon-box required placeholder="ex.: MOR2020" id="discount-cart"/>
-					<button pwa-coupon-apply  pwa-without-coupon class="sc-form__coupon-btn">Apply</button>
-					<span pwa-with-coupon class="sc-form__input-checked">✓</span>
-				</div>
+      <section pwa-with-coupon class="sc-cart__discout--success">
+        <h3>Discount</h3>
+        <span>-{{ $$cart.discount | price }}</span>
+      </section>
 
-			</section>
+      <section pwa-has-items class="sc-cart__btn" pwa-is-first>
+        <a pwa-checkout>
+          Checkout
+        </a>
+      </section>
 
-			<section pwa-with-coupon class="sc-cart__discout--success">
-				<h3>Discount</h3>
-				<span>-{{ $$cart.discount | price }}</span>
-			</section>
+      <section pwa-is-first class="sc-continue-shopping">
+        <a id="sc-cont-shopping" pwa-toggle-cart>
+          Continue Shopping
+        </a>
+      </section>
 
-			<section class="sc-cart__total">
-				<h3>Total</h3>
-				<span>{{ $$cart.total | price }}</span>
-			</section>
-			<section pwa-has-items class="sc-cart__btn">
-				<a pwa-checkout>
-					Proceed to Checkout
-				</a>
-			</section>
-		</footer>
-	</div>
+      <section pwa-is-second class="sc-cart__btn">
+        <a pwa-checkout pwa-is-logged>
+          Request Quote
+        </a>
+
+        <a pwa-not-logged pwa-to-auth class="sc-cart__btn-not-logged">
+          Request Quote
+        </a>
+      </section>
+
+      <section pwa-is-second class="sc-continue-shopping">
+        <a id="sc-cont-shopping" pwa-toggle-cart>
+          Continue Shopping
+        </a>
+      </section>
+    </footer>
+
+    <section class="sc-bought-together" pwa-is-first pwa--if="($$globalState.bought || []).length > 0">
+      <h2>Frequently Bought Together</h2>
+
+      <ul>
+        <li pwa--for="(subitem, sid) in $$globalState.bought" pwa-key="sid" class="sc-bought-together-card">
+          <figure class="sc-bought-together-image">
+            <img pwa-src="subitem.images[0]" alt="img product">
+          </figure>
+
+          <div class="sc-inf-prod__bought-together">
+            <h3>{{ subitem.name }}</h3>
+
+            <div class="sc-prod__price-button">
+              <span>{{ subitem.price | price }}</span>
+              <a :href="$url.getHref(`/${subitem.url_key}`, null)"
+                @click.prevent="$url.go(`/${subitem.url_key}`, null)">+</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sc-bought-together" pwa-is-first pwa--if="($$globalState.also || []).length > 0">
+      <h2>Cutomers Also Bought</h2>
+
+      <ul>
+        <li pwa--for="(subitem, sid) in $$globalState.also" pwa-key="sid" class="sc-bought-together-card">
+          <figure class="sc-bought-together-image">
+            <img pwa-src="subitem.images[0]" alt="img product">
+          </figure>
+
+          <div class="sc-inf-prod__bought-together">
+            <h3>{{ subitem.name }}</h3>
+            <div class="sc-prod__price-button">
+              <span>{{ subitem.price | price }}</span> <a :href="$url.getHref(`/${subitem.url_key}`, null)"
+                @click.prevent="$url.go(`/${subitem.url_key}`, null)">+</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="sc-login-create__account-use" pwa-is-second pwa-not-logged>
+      <p>Please log in to request a quote</p>
+
+      <div class="sc-create-login-request">
+        <div class="sc-login-request">
+          <a pwa-to-auth>Log in</a>
+        </div>
+
+        <div class="sc-create-request">
+          <a pwa-to-auth>Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
