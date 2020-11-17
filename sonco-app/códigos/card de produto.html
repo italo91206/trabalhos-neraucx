@@ -1,0 +1,37 @@
+<article class="sc-card-product">
+  <div class="card-product-box">
+    <!--div class="badge-card">Best Seller</div-->
+    <div class="card-box-col">
+      <section class="sc-img-left">
+        <figure class="sc-card-product__image" pwa-to-product-page>
+          <img pwa-src="product.image" alt="image-product">
+        </figure>
+      </section>
+      <section class="sc-desc-right">
+        <h1 pwa-to-product-page>{{ product.name }}</h1>
+        <p>{{ product.subtitle_description }}</p>
+
+        <div class="sc-block-price">
+          <span class="sc-produc-price" pwa--if="activeSKU.sale_price">{{ activeSKU.sale_price | price }}</span>
+          <div pwa--if="product.tier_price" class="sc-info-discount">
+            <p pwa--for="(tier, index) in product.tier_price" pwa-key="index">
+              Buy {{ (+tier.qty).toFixed(0) }} for
+              <span class="sc-spotlight-text">{{ tier.price | price }}</span>
+              each and
+              <span class="sc-spotlight-text">
+                save
+                {{ ( (activeSKU.sale_price / +tier.price - 1) * 100 + '' ).split('.')[0] }}%
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sc-card-bottom">
+      <p pwa-to-product-page>More info</p>
+      <button class="btn-add-to-card" pwa-to-product-page> Add to card</button>
+      <!-- <img pwa-src="icon-heart-red"> -->
+    </div>
+  </div>
+</article>

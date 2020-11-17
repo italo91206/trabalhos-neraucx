@@ -1192,6 +1192,7 @@ FILTERS E OPTIONS
 
 .sc-column-options {
     margin-top: 78px;
+    padding-bottom: 78px;
     width: 90%;
     position: fixed;
     z-index: 999999;
