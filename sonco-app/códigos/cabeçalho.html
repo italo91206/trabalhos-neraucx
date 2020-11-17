@@ -1,0 +1,106 @@
+<header>
+  <div id="sc-cart__darken" class="sc-cart__darken" style=""></div>
+  <section pwa--if="$route.name === 'home'" class="sc-header-home">
+    <div class="sc-icons-block">
+      <div class="sc-header-icons-left">
+        <a href="mailto:contact@soncostore.com">
+          <img pwa-src="icon-mail" alt="email" class="sc-icon-mail">
+          <span class="sc-mail-count">0</span>
+        </a>
+        <a href="tel:(888)766-2616"><img pwa-src="icon-tel" alt="telephone" class="sc-icon-tel"></a>
+      </div>
+
+      <div class="sc-header-icons-right">
+        <a href="#" pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
+          <img pwa-src="icon-calc" alt="quote" class="sc-icon-quote">
+        </a>
+        <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
+          <img pwa-src="icon-cart" alt="cart" class="sc-icon-cart">
+          <span pwa--if="$$cart.count > 0" class="count-cart">{{ $$cart.count }}</span>
+          <span pwa--else class="count-cart">0</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="sc-logo">
+      <a pwa-to-page="home">
+        <img pwa-src="logo-home" alt="Crowd Control & Perimeter Security Solutions | Sonco">
+      </a>
+    </div>
+
+    <div class="sc-search">
+      <pwa-search-form action="#">
+        <span class="fas fa-search"></span>
+        <input pwa-search-box class="sc-search-input" id="sc-search-input" placeholder="Search" />
+
+        <section pwa-has-suggest class="sc-search-nav-found-products">
+          <pwa-loop params="8">
+            <article pwa-each-suggest class="sc-search-nav-found-products-cards">
+              <img pwa-src="suggest.image" pwa-alt="suggest.name">
+
+              <section class="sc-search-nav-found-products-cards-info">
+                <h3>{{ suggest.name }}</h3>
+                <!-- <span>em {{ suggest.categories_string }}</span> -->
+                <label>{{ suggest.skus[0].sale_price | price }}</label>
+              </section>
+            </article>
+          </pwa-loop>
+        </section>
+      </pwa-search-form>
+    </div>
+  </section>
+
+  <section pwa--if="$route.name !== 'home'" class="sc-header">
+    <div class="sc-icons-block">
+      <div class="sc-header-icons-left">
+        <a href="mailto:contact@soncostore.com">
+          <img pwa-src="icon-mail" alt="email" class="sc-icon-mail">
+          <span class="sc-mail-count2">0</span>
+        </a>
+        <a href="tel:(888)766-2616"><img pwa-src="icon-tel" alt="telephone" class="sc-icon-tel"></a>
+      </div>
+
+      <div class="sc-logo">
+        <a pwa-to-page="home">
+          <img pwa-src="logo" alt="Crowd Control & Perimeter Security Solutions | Sonco">
+        </a>
+      </div>
+
+      <div class="sc-header-icons-right" id="sc-header-icons-right">
+        <a onclick="openSearchMobile()" class="sc-header__content-mobile-search">
+          <span class="fas fa-search"></span>
+        </a>
+        <a href="#" pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
+          <img pwa-src="icon-calc" alt="quote" class="sc-icon-quote">
+        </a>
+        <a href="#" pwa-toggle-cart class="sc-header__content-mobile-cart">
+          <img pwa-src="icon-cart" alt="cart" class="sc-icon-cart">
+          <span pwa--if="$$cart.count > 0" class="count-cart">{{ $$cart.count }}</span>
+          <span pwa--else class="count-cart">0</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="sc-search" id="sc-header-content-inner">
+      <pwa-search-form action="#">
+        <span class="fas fa-search"></span>
+        <input pwa-search-box class="sc-search-input" id="sc-search-input" placeholder="Search" />
+
+        <section pwa-has-suggest class="sc-search-nav-found-products">
+          <pwa-loop params="8">
+            <article pwa-each-suggest class="sc-search-nav-found-products-cards">
+              <img pwa-src="suggest.image" pwa-alt="suggest.name">
+
+              <section class="sc-search-nav-found-products-cards-info">
+                <h3>{{ suggest.name }}</h3>
+                <!-- <span>em {{ suggest.categories_string }}</span> -->
+                <label>{{ suggest.skus[0].sale_price | price }}</label>
+              </section>
+            </article>
+          </pwa-loop>
+        </section>
+      </pwa-search-form>
+    </div>
+  </section>
+  <pwa-cart />
+</header>
