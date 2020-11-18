@@ -1,0 +1,672 @@
+<main pwa-hook="set-filter-swatch">
+  <div id="sc-column-options" class="sc-column-options">
+    <i class="fas fa-times" onclick="openFilter()"></i>
+    <!-- SECTION FILTER PRICE -->
+    <pwa-price-filter class="sc-filter-prices sc-border-cat">
+      <div class="sc-spotlight-title">
+        <span>price</span>
+      </div>
+
+      <fieldset class="sc-filter-price">
+        <!-- <div class="sc-price-wrap">
+                    <div class="sc-price-wrap-1">
+                        <label for="sc-one">{{ component.current.min | price }}</label>
+                        <input id="sc-one">
+                    </div>
+
+                    <div class="sc-price-wrap-2">
+                        <label for="sc-two">{{ component.current.max | price }}</label>
+                        <input id="sc-two">
+                    </div>
+                </div> -->
+
+        <div class="sc-price-field">
+          <range-slider v-model="component.current" :enable-cross="false" :min="component.min" :max="component.max"
+            tooltip="always" />
+        </div>
+
+        <div class="sc-quanty-button__filter">
+          <div class="sc-quanty-product__filter-category">
+            <p><span class="sc-quanty-product-filter">{{ $$paginate.count }}</span> products</p>
+          </div>
+
+          <div pwa-range-submit class="sc-buttom-filter">
+            <button class="sc-button__filter" onclick="openFilter()">OK</button>
+          </div>
+        </div>
+      </fieldset>
+    </pwa-price-filter>
+
+    <!-- SECTION CATEGORIES -->
+    <pwa-attribute-filter static attribute="categories.name" class="sc-options sc-border-cat">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span class="sc-icon-title_category">category</span>
+      </div>
+
+      <div pwa-has-filters class="sc-categories-options">
+        <ul pwa-has-filters id="category-toggle" class="sc-list-category">
+          <li pwa-each-filter class="sc-category" onclick="openFilter()">{{ filter.label }}
+            <span class="sc-quant-product-category">({{ filter.count }})</span>
+          </li>
+        </ul>
+
+        <button pwa--show="component.list.length > 7" pwa-hook.click="category-filter-toggle" class="sc-button"
+          style="padding: 1px 0px; font-size: 14px; margin-top: 5px">
+          See more
+        </button>
+      </div>
+    </pwa-attribute-filter>
+
+    <!-- SECTION OPTIONS COLOR -->
+    <pwa-attribute-filter static attribute="color" class="sc-options-color sc-border-cat">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span>color</span>
+      </div>
+
+      <div pwa-has-filters class="sc-options-color-img">
+        <a pwa-each-filter pwa--show="$$globalState.swatches[filter.label.trim()]"
+          :style="{background: $$globalState.swatches[filter.label.trim()]}" class="sc-filter-color"
+          onclick="openFilter()"></a>
+      </div>
+    </pwa-attribute-filter>
+
+    <!-- SECTION OPTIONS FABRIC TYPE -->
+    <pwa-attribute-filter static attribute="fabric_type" class="sc-type-fabric sc-border-cat">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span>fabric type</span>
+      </div>
+
+      <div pwa-has-filters class="sc-fabric-type-img">
+        <a pwa-each-filter pwa--show="$$globalState.swatches[filter.label.trim()]" class="sc-filter-fabric"
+          onclick="openFilter()">
+          <img :src="$$globalState.swatches[filter.label.trim()]" :alt="filter.label">
+        </a>
+      </div>
+    </pwa-attribute-filter>
+
+    <!-- SECTION FEET -->
+    <pwa-attribute-filter static attribute="feet" class="sc-options sc-border-cat">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span class="sc-icon-title_category">feet</span>
+      </div>
+
+      <div pwa-has-filters class="sc-categories-options">
+        <ul pwa-has-filters class="sc-list-category">
+          <li pwa-each-filter class="sc-category" onclick="openFilter()">{{ filter.label }}
+            <span class="sc-quant-product-category">({{ filter.count }})</span>
+          </li>
+        </ul>
+      </div>
+    </pwa-attribute-filter>
+
+    <!-- SECTION HEIGHT -->
+    <pwa-attribute-filter static attribute="ts_dimensions_height" class="sc-options sc-border-cat">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span class="sc-icon-title_category">height</span>
+      </div>
+
+      <div pwa-has-filters class="sc-categories-options">
+        <ul pwa-has-filters class="sc-list-category">
+          <li pwa-each-filter class="sc-category" onclick="openFilter()">{{ filter.label }}
+            <span class="sc-quant-product-category">({{ filter.count }})</span>
+          </li>
+        </ul>
+      </div>
+    </pwa-attribute-filter>
+
+    <!-- SECTION LENGHT -->
+    <pwa-attribute-filter static attribute="ts_dimensions_length" div class="sc-options">
+      <div pwa-has-filters pwa-hook.click="filter-toggle" class="sc-spotlight-title">
+        <span class="sc-icon-title_category">length</span>
+      </div>
+
+      <div pwa-has-filters class="sc-categories-options">
+        <ul pwa-has-filters class="sc-list-category">
+          <li pwa-each-filter class="sc-category" onclick="openFilter()">{{ filter.label }}
+            <span class="sc-quant-product-category">({{ filter.count }})</span>
+          </li>
+        </ul>
+      </div>
+    </pwa-attribute-filter>
+  </div>
+
+
+  <section class="sc-search-pg">
+    <section class="sc-container">
+      <div class="top-bar">
+        <button class="filter-sort" onclick="openFilter()">Filter & Sort</button>
+
+        <!-- CROWD CONTROL -->
+        <!-- STEEL BARRICADES -->
+        <div pwa--if="$route.path == '/barricades/steel-barricades'">
+          <div class="top-bar-right">
+            <a pwa-to-page="/barricades/stage-barriers" class="sc-topbar-left">Stage Barriers </a>
+            <a pwa-to-page="/barricades/water-filled-barriers" class="sc-topbar-center">Traffic Barriers </a>
+            <a pwa-to-page="/barricades/plastic-barricades" class="sc-topbar-right">Plastic Barriers </a>
+          </div>
+        </div>
+
+        <!-- STAGE BARRIERS -->
+        <div pwa--if="$route.path == '/barricades/stage-barriers'" class="top-bar-right">
+          <a pwa-to-page="/barricades/steel-barricades" class="sc-topbar-left">Stell Barricades </a>
+          <a pwa-to-page="/barricades/water-filled-barriers" class="sc-topbar-center">Traffic Barriers </a>
+          <a pwa-to-page="/barricades/plastic-barricades" class="sc-topbar-right">Plastic Barriers </a>
+        </div>
+
+        <!-- TRAFFIC BARRIERS -->
+        <div pwa--if="$route.path == '/barricades/water-filled-barriers'" class="top-bar-right">
+          <a pwa-to-page="/barricades/steel-barricades" class="sc-topbar-left">Stell Barricades </a>
+          <a pwa-to-page="/barricades/stage-barriers" class="sc-topbar-center">Stage Barriers </a>
+          <a pwa-to-page="/barricades/plastic-barricades" class="sc-topbar-right">Plastic Barriers </a>
+        </div>
+
+        <!-- PLASTIC BARRIERS -->
+        <div pwa--if="$route.path == '/barricades/plastic-barricades'" class="top-bar-right">
+          <a pwa-to-page="/barricades/steel-barricades" class="sc-topbar-left">Stell Barricades </a>
+          <a pwa-to-page="/barricades/stage-barriers" class="sc-topbar-center">Stage Barriers </a>
+          <a pwa-to-page="/barricades/water-filled-barriers" class="sc-topbar-right">Traffic Barriers </a>
+        </div>
+
+        <!-- CUSTOM SIGN -->
+        <!-- BARRICADE COVERS -->
+        <div pwa--if="$route.path == '/custom-signs/barricade-covers'" class="top-bar-right">
+          <a pwa-to-page="/custom-signs/custom-fence-screen" class="sc-topbar-left">Custom Screens </a>
+          <a pwa-to-page="/custom-signs/outdoor-display" class="sc-topbar-center">Outdoor Displays </a>
+          <a pwa-to-page="/custom-signs/safety-sings" class="sc-topbar-right">Safety Signs</a>
+        </div>
+
+        <!-- CUSTOM SCREENS -->
+        <div pwa--if="$route.path == '/custom-signs/custom-fence-screen'" class="top-bar-right">
+          <a pwa-to-page="/custom-signs/barricade-covers" class="sc-topbar-left">Barricade Covers </a>
+          <a pwa-to-page="/custom-signs/outdoor-display" class="sc-topbar-center">Outdoor Displays </a>
+          <a pwa-to-page="/custom-signs/safety-sings" class="sc-topbar-right">Safety Signs</a>
+        </div>
+
+        <!-- OUTDOOR DISPLAYS -->
+        <div pwa--if="$route.path == '/custom-signs/outdoor-display'" class="top-bar-right">
+          <a pwa-to-page="/custom-signs/barricade-covers" class="sc-topbar-left">Barricade Covers </a>
+          <a pwa-to-page="/custom-signs/custom-fence-screen" class="sc-topbar-center">Custom Screens </a>
+          <a pwa-to-page="/custom-signs/safety-sings" class="sc-topbar-right">Safety Signs</a>
+        </div>
+
+        <!-- SAFETY SIGNS -->
+        <div pwa--if="$route.path == '/custom-signs/safety-sings'" class="top-bar-right">
+          <a pwa-to-page="/custom-signs/barricade-covers" class="sc-topbar-left">Barricade Covers </a>
+          <a pwa-to-page="/custom-signs/custom-fence-screen" class="sc-topbar-center">Custom Screens </a>
+          <a pwa-to-page="/custom-signs/outdoor-display" class="sc-topbar-right">Outdoor Displays </a>
+        </div>
+
+        <!-- FENCE SOLUTIONS -->
+        <!-- CHAINLINK PANELS -->
+        <div pwa--if="$route.path == '/fence-solutions/chainlink-panels'" class="top-bar-right">
+          <a pwa-to-page="/fence-solutions/fence-screen/custom-fence-screen" class="sc-topbar-left">Fence Screens </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-center">Fence Gates </a>
+          <a pwa-to-page="/fence-solutions/accessories" class="sc-topbar-right">Acessories </a>
+        </div>
+
+        <!-- FENCE SCREENS -->
+        <div pwa--if="$route.path == '/fence-solutions/fence-screen/custom-fence-screen'" class="top-bar-right">
+          <a pwa-to-page="/fence-solutions/chainlink-panels" class="sc-topbar-left">Chainlink Panels </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-center">Fence Gates </a>
+          <a pwa-to-page="/fence-solutions/accessories" class="sc-topbar-right">Acessories </a>
+        </div>
+
+        <!-- FENCE GATES -->
+        <div pwa--if="$route.path == '/fence-solutions/fence-gates'" class="top-bar-right">
+          <a pwa-to-page="/fence-solutions/chainlink-panels" class="sc-topbar-left">Chainlink Panels </a>
+          <a pwa-to-page="/fence-solutions/fence-screen/custom-fence-screen" class="sc-topbar-center">Fence Screens </a>
+          <a pwa-to-page="/fence-solutions/accessories" class="sc-topbar-right">Acessories </a>
+        </div>
+
+        <!-- ACESSORIES -->
+        <div pwa--if="$route.path == '/fence-solutions/accessories'" class="top-bar-right">
+          <a pwa-to-page="/fence-solutions/chainlink-panels" class="sc-topbar-left">Chainlink Panels </a>
+          <a pwa-to-page="/fence-solutions/fence-screen/custom-fence-screen" class="sc-topbar-center">Fence Screens </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-right">Fence Gates</a>
+        </div>
+
+        <!-- STANCHIONS & POSTS -->
+        <!-- RETRACTABLE BELT -->
+        <div pwa--if="$route.path == '/stanchions/retractable-belt-barriers'" class="top-bar-right">
+          <a pwa-to-page="/category-stanchions/retractable-wall-mounts" class="sc-topbar-left">Wall-mount Belts </a>
+          <a pwa-to-page="/stanchions/classic-rope-and-stanchion-systems" class="sc-topbar-center">Stanchions and Ropes
+          </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-right">Plastic Barriers</a>
+        </div>
+
+        <!-- WALL-MOUNT BELTS -->
+        <div pwa--if="$route.path == '/category-stanchions/retractable-wall-mounts'" class="top-bar-right">
+          <a pwa-to-page="/stanchions/retractable-belt-barriers" class="sc-topbar-left">Retractable Belt </a>
+          <a pwa-to-page="/stanchions/classic-rope-and-stanchion-systems" class="sc-topbar-center">Stanchions and Ropes
+          </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-right">Plastic Barriers</a>
+        </div>
+
+        <!-- STANCHIONS AND ROPES -->
+        <div pwa--if="$route.path == '/stanchions/classic-rope-and-stanchion-systems'" class="top-bar-right">
+          <a pwa-to-page="/stanchions/retractable-belt-barriers" class="sc-topbar-left">Retractable Belt </a>
+          <a pwa-to-page="/category-stanchions/retractable-wall-mounts" class="sc-topbar-center">Wall-mount Belts </a>
+          <a pwa-to-page="/fence-solutions/fence-gates" class="sc-topbar-right">Plastic Barriers</a>
+        </div>
+
+        <!-- PLASTIC BARRIERS -->
+        <div pwa--if="$route.path == '/fence-solutions/accessories'" class="top-bar-right">
+          <a pwa-to-page="/stanchions/retractable-belt-barriers" class="sc-topbar-left">Retractable Belt </a>
+          <a pwa-to-page="/category-stanchions/retractable-wall-mounts" class="sc-topbar-center">Wall-mount Belts </a>
+          <a pwa-to-page="/stanchions/classic-rope-and-stanchion-systems" class="sc-topbar-right">Stanchions and Ropes
+          </a>
+        </div>
+
+        <!-- TRAFFIC SAFETY -->
+        <!-- CHANNELIZER DRUMS -->
+        <div pwa--if="$route.path == '/traffic-safety/channelizer-drums'" class="top-bar-right">
+          <a pwa-to-page="/traffic-safety/traffic-cones-and-delineators" class="sc-topbar-left">Traffic Delineators </a>
+          <a pwa-to-page="/traffic-safety/construction-signs" class="sc-topbar-center">Traffic Signs </a>
+          <a pwa-to-page="/category-traffic-safety/barriers" class="sc-topbar-right">Water Barriers </a>
+        </div>
+
+        <!-- TRAFFIC DELINEATORS -->
+        <div pwa--if="$route.path == '/traffic-safety/traffic-cones-and-delineators'" class="top-bar-right">
+          <a pwa-to-page="/traffic-safety/channelizer-drums" class="sc-topbar-left">Channelizer Drums </a>
+          <a pwa-to-page="/traffic-safety/construction-signs" class="sc-topbar-center">Traffic Signs </a>
+          <a pwa-to-page="/category-traffic-safety/barriers" class="sc-topbar-right">Water Barriers </a>
+        </div>
+
+        <!-- TRAFFIC SIGNS -->
+        <div pwa--if="$route.path == '/traffic-safety/construction-signs'" class="top-bar-right">
+          <a pwa-to-page="/traffic-safety/channelizer-drums" class="sc-topbar-left">Channelizer Drums </a>
+          <a pwa-to-page="/traffic-safety/traffic-cones-and-delineators" class="sc-topbar-center">Traffic Delineators
+          </a>
+          <a pwa-to-page="/category-traffic-safety/barriers" class="sc-topbar-right">Water Barriers </a>
+        </div>
+
+        <!-- Water Barriers -->
+        <div pwa--if="$route.path == '/category-traffic-safety/barriers'" class="top-bar-right">
+          <a pwa-to-page="/traffic-safety/channelizer-drums" class="sc-topbar-left">Channelizer Drums </a>
+          <a pwa-to-page="/traffic-safety/traffic-cones-and-delineators" class="sc-topbar-center">Traffic Delineators
+          </a>
+          <a pwa-to-page="/traffic-safety/construction-signs" class="sc-topbar-right">Traffic Signs </a>
+        </div>
+      </div>
+
+      <!-- HOT DEALS STEEL BARRICADES -->
+      <!--div pwa--if="$route.path == '/barricades/steel-barricades'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:660" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS STAGE BARRIERS -->
+      <!--div pwa--if="$route.path == '/barricades/stage-barriers'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS TRAFFIC BARRIERS -->
+      <!--div pwa--if="$route.path == '/barricades/water-filled-barriers'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS PLASTIC BARRIERS -->
+      <!--div pwa--if="$route.path == '/barricades/plastic-barricades'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS BARRICADE COVERS -->
+      <!--div pwa--if="$route.path == '/custom-signs/barricade-covers'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS CUSTOM SCREEN -->
+      <!--div pwa--if="$route.path == '/custom-signs/custom-fence-screen'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS OUTDOOR DISPLAYS-->
+      <!--div pwa--if="$route.path == ' /custom-signs/outdoor-display'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS SAFETY SIGNS -->
+      <!--div pwa--if="$route.path == ' /custom-signs/safety-sings'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS CHAINLINK PANELS -->
+      <!--div pwa--if="$route.path == ' /fence-solutions/chainlink-panels'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS FENCE SCREENS -->
+      <!--div pwa--if="$route.path == ' /fence-solutions/fence-screen/custom-fence-screen'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS FENCE GATES -->
+      <!--div pwa--if="$route.path == ' /fence-solutions/fence-gates'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS ACESSORIES -->
+      <!--div pwa--if="$route.path == '/fence-solutions/accessories'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS RETRACTABLE BELT -->
+      <!--div pwa--if="$route.path == '/stanchions/retractable-belt-barriers'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS WALL-MOUNT BELT -->
+      <!--div pwa--if="$route.path == '/category-stanchions/retractable-wall-mounts'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS STANCHIONS AND ROPES -->
+      <!--div pwa--if="$route.path == '/stanchions/classic-rope-and-stanchion-systems'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS PLASTIC BARRIERS -->
+      <!--div pwa--if="$route.path == '/fence-solutions/accessories'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS CHANNELIZER DRUMS -->
+      <!--div pwa--if="$route.path == '/traffic-safety/channelizer-drums'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS TRAFFIC DELINEATORS -->
+      <!--div pwa--if="$route.path == '/traffic-safety/traffic-cones-and-delineators'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS TRAFFIC SIGNS -->
+      <!--div pwa--if="$route.path == '/traffic-safety/construction-signs'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+      <!-- HOT DEALS WATER BARRIERS -->
+      <!--div pwa--if="$route.path == '/category-traffic-safety/barriers'" class="list-img">
+                <pwa-product-list name="hotdeals" filter="categories.code:" size="10" class="sc-list-hotdeals">
+                    <section pwa-not-loading id="cards-product-slide-2" class="swiper-container">
+                        <section class="sc-row-cards swiper-wrapper">
+                            <div pwa-each-product class="sc-card-hotdeals swiper-slide">
+                                <a pwa-to-product-page>
+                                    <figure class="sc-card-product__image" >
+                                        <img pwa-src="product.image" alt="image-product">
+                                    </figure>
+                                    <p>{{product.name}}</p>
+                                </a>
+                            </div>                   
+                        </section>
+                    </section>
+                </pwa-product-list>     
+            </div-->
+
+
+      <div class="view-result">
+        <!--p class="view-all"> < View All Barricades</p-->
+        <p class="results"> {{ $$paginate.count }} Results</p>
+      </div>
+
+      <!-- SECTION CARD PRODUCTS -->
+      <pwa-result-list size="8" automatic-scrolls="0">
+        <div class="sc-content-products__cat">
+          <!-- CONTENT PRODUCT -->
+          <div class="sc-content-products__cat-container" id="sc-card-product-navegation" pwa-each-product>
+            <pwa-product-card>
+          </div>
+        </div>
+
+        <button pwa-not-last-page pwa-load-more pwa-hook.click="clique-load-more" class="sc-button-loadmore"
+          style="margin-bottom: 15px">Load more</button>
+      </pwa-result-list>
+    </section>
+  </section>
+</main>
