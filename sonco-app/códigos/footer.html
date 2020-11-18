@@ -1,0 +1,195 @@
+<main id="footer">
+  <nav class="footer-menu">
+    <ul>
+      <li>
+        <a pwa-to-page="home" class="sc-footer-home">
+          <img pwa-src="footer-home" alt="home">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-page="/categories" class="sc-footer-shop" onclick="closeMenuMore()">
+          <img pwa-src="footer-shop" alt="shop">
+          <span>Shop</span>
+        </a>
+      </li>
+      <li>
+        <a class="sc-footer-account" pwa-not-logged pwa-to-auth onclick="closeMenuMore()">
+          <img pwa-src="footer-account" alt="account">
+          <span>Account</span>
+        </a>
+
+        <a class="sc-footer-account" pwa-is-logged pwa-to-account onclick="closeMenuMore()">
+          <img pwa-src="footer-account" alt="account">
+          <span>Account</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-page="locations" class="sc-footer-locations" onclick="closeMenuMore()">
+          <img pwa-src="footer-location" alt="location">
+          <span>Locations</span>
+        </a>
+      </li>
+      <li>
+        <a class="sc-footer-more" onclick="openMenuMore()">
+          <img pwa-src="icon-more" alt="more">
+          <span>More</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav pwa--if="$route.name === 'home'" id="sc-menu-more" class="sc-menu-more-home">
+    <ul>
+      <li>
+        <a pwa-to-page="">
+          <i class="fas fa-history"></i>
+          <span>Recently Viewed</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-not-logged pwa-to-auth>
+          <i class="fas fa-user-circle"></i>
+          <span>My Account</span>
+        </a>
+
+        <a pwa-is-logged pwa-to-account>
+          <i class="fas fa-user-circle"></i>
+          <span>My Account</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-page="">
+          <i class="far fa-envelope"></i>
+          <span>Message Center</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-wishlist>
+          <i class="far fa-heart"></i>
+          <span>Favorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/buy-now-pay-later">
+          <i class="far fa-credit-card"></i>
+          <span>Buy Now. Pay Later.</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support">
+          <i class="fas fa-comment-alt"></i>
+          <span>Customer Service</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.soncocrowdcontrol.com/customer-support-shipping-and-delivery#check-your-order-status-online">
+          <i class="far fa-compass"></i>
+          <span>Track your order</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support-returns-and-exchanges">
+          <i class="fas fa-reply"></i>
+          <span>Return Policy</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support-shipping-and-delivery#free-shipping">
+          <i class="fas fa-truck"></i>
+          <span>Free Shipping Policy</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/contact">
+          <i class="fas fa-thumbs-up"></i>
+          <span>Feedback Center</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav pwa--if="$route.name !== 'home'" id="sc-menu-more" class="sc-menu-more">
+    <ul>
+      <li>
+        <a pwa-to-page="">
+          <i class="fas fa-history"></i>
+          <span>Recently Viewed</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-not-logged pwa-to-auth>
+          <i class="fas fa-user-circle"></i>
+          <span>My Account</span>
+        </a>
+
+        <a pwa-is-logged pwa-to-account>
+          <i class="fas fa-user-circle"></i>
+          <span>My Account</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-page="">
+          <i class="far fa-envelope"></i>
+          <span>Message Center</span>
+        </a>
+      </li>
+      <li>
+        <a pwa-to-wishlist>
+          <i class="far fa-heart"></i>
+          <span>Favorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/buy-now-pay-later">
+          <i class="far fa-credit-card"></i>
+          <span>Buy Now. Pay Later.</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support">
+          <i class="fas fa-comment-alt"></i>
+          <span>Customer Service</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.soncocrowdcontrol.com/customer-support-shipping-and-delivery#check-your-order-status-online">
+          <i class="far fa-compass"></i>
+          <span>Track your order</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support-returns-and-exchanges">
+          <i class="fas fa-reply"></i>
+          <span>Return Policy</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/customer-support-shipping-and-delivery#free-shipping">
+          <i class="fas fa-truck"></i>
+          <span>Free Shipping Policy</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.soncocrowdcontrol.com/contact">
+          <i class="fas fa-thumbs-up"></i>
+          <span>Feedback Center</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</main>

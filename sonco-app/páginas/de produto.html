@@ -1,0 +1,280 @@
+<main id="sc-product">
+  <section class="sc-product-content sc-container">
+    <!-- SECTION BREADCRUMBS -->
+    <section class="sc-breadcrumbs">
+      <ul class="sc-breadcrumbs-links sc-breadcrumbs-product">
+        <li pwa--for="param in Object.values($route.params)" pwa-key="param" @click="$url.go(`/${param}`)"
+          pwa--show="param">
+          <a>{{ (param || '').replace(/-/g, ' ') }} |</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sc-col-info__product ">
+      <!-- SECTION INFO TOP AND IMAGE PRODUCT -->
+      <section class="sc-product-info">
+
+        <!-- CAROUSEL PRODUCT -->
+        <section class="sc-product-image-slide">
+          <section class="swiper-container sc-slide-product-image" pwa-hook="sc-slide-product-image">
+            <!-- SECTION SLIDE IMAGES PRODUCT -->
+            <section class="swiper-wrapper" id="sc-slide-page-product-01">
+              <pwa-loop params="7">
+                <figure class="swiper-slide sc-product-swiper-image" pwa-each-image>
+                  <img pwa-src="image" pwa-alt="product.name">
+                </figure>
+              </pwa-loop>
+            </section>
+            <!-- BUTTOM PREV AND NEXT -->
+            <div class="sc-next-carousel-page-product swiper-button-next"></div>
+            <div class="sc-prev-carousel-page-product swiper-button-prev"></div>
+
+
+            <!-- SECTION THUMBS PRODUCT -->
+            <!--section class="swiper-container sc-slide-thumbs-product" pwa-hook="sc-slide-thumbs-product">
+							<section class="swiper-wrapper" id="sc-slide-thumbs-product">
+								<pwa-loop params="7">
+									<figure class="swiper-slide sc-product-swiper-image" pwa-each-image>
+										<img pwa-src="image" pwa-alt="product.name">
+                                        </figure>
+								</pwa-loop>
+							</section>
+						</section-->
+          </section>
+
+          <!-- SECTION INFORMATIONS PRODUCT -->
+          <section class="sc-info-product-complet">
+            <article class="sc-info-content-product">
+              <h1 class="sc-title-product">{{ product.name }}</h1>
+
+              <article class="sc-info-product-col">
+                <div class="sc-info-product">
+                  <span class="sc-product-tags-page" pwa--html="product.specifications.product_tags"></span>
+                  <p class="sc-shipping-card__cod-topic-04 sc-product">
+                    <strong>SKU: </strong>{{ product.sku }}
+                  </p>
+                </div>
+              </article>
+
+              <h2 class="sc-title-description" pwa-if="product.subtitle_description"
+                pwa--html="product.subtitle_description"></h2>
+
+              <div class="sc-avaliacao" style="display: none">
+                <article class="sc-star-avaliacao">
+                  <div class="sc-questions">
+                    <p>Questions & Answers <span>(14)</span></p>
+                  </div>
+                </article>
+              </div>
+            </article>
+
+            <div class="sc-price-product" pwa--if="activeSKU.sale_price">
+              <span class="sc-product-price">{{ activeSKU.sale_price | price }}</span>
+              <p class="sc-product-price"> / ea</p>
+            </div>
+
+            <div pwa--if="product.tier_price" class="sc-info-discount">
+              <p pwa--for="(tier, index) in product.tier_price" pwa-key="index">
+                Buy {{ (+tier.qty).toFixed(0) }} for
+                <span class="sc-spotlight-text">{{ tier.price | price }}</span>
+                each and
+                <span class="sc-spotlight-text">
+                  save
+                  {{ ( (activeSKU.sale_price / +tier.price - 1) * 100 + '' ).split('.')[0] }}%
+                </span>
+              </p>
+            </div>
+
+            <!-- SECTION ICONS SEND -->
+            <article class="sc-info-send">
+              <div class="sc-info-send-icons">
+                <div class="sc-icon-send__content">
+                  <img pwa-src="icon-shipping" alt="icon-shipping" class="sc-icon-send">
+                  <p>shipping<br>nationwide</p>
+                </div>
+
+                <div class="sc-icon-send__content">
+                  <img pwa-src="icon-pay" alt="icon-shipping" class="sc-icon-send">
+                  <p>buy now<br>pay later</p>
+                </div>
+
+                <div class="sc-icon-send__content">
+                  <img pwa-src="icon-price" alt="icon-shipping" class="sc-icon-send">
+                  <p>price<br>match</p>
+                </div>
+
+                <div class="sc-icon-send__content">
+                  <img pwa-src="icon-need" alt="icon-shipping" class="sc-icon-send">
+                  <p>need<br>help?</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- SECTION DESCRIPTION COMPLET PRODUCT -->
+            <article class="sc-description-complet-product" pwa--if="product.short_description">
+              <p class="sc-description-complet-product-text" pwa--html="product.short_description"></p>
+            </article>
+
+            <pwa-product-configurations-bundle attribute="variation_bundle"></pwa-product-configurations-bundle>
+            <pwa-product-configurations-bundle attribute="custom_options"></pwa-product-configurations-bundle>
+
+            <div class="sc-button-cart">
+              <div class="sc-add-amout-product">
+                <button class="sc-add" pwa-quantity-increment> + </button>
+                <button class="sc-remove" pwa-quantity-decrement> - </button>
+              </div>
+
+              <div class="sc-amount-product">
+                <input class="sc-amount" pwa-quantity-box id="number1">
+              </div>
+
+              <div class="sc-button-add-cart">
+                <button class="sc-button-add" pwa-add-in-cart>add cart</button>
+                <button pwa-add-in-second-cart class="sc-button-add-quote">add to quote</button>
+              </div>
+            </div>
+
+            <!-- <div class="sc-download-brochure">
+								<a href="#" class="sc-link-download"><span class="fas fa-chevron-left"></span>Download brochure</a>
+								<a href="#" class="sc-link-download-template"><span class="fas fa-chevron-left"></span>Download brochure</a>
+							</div> -->
+          </section>
+        </section>
+
+        <!-- SECTION TAB INFO PRODUCT -->
+        <section class="sc-tab-info_product">
+          <!-- TAB OVERVIEW -->
+          <input id="sc-tab-overview" type="radio" name="sc-tab" checked>
+          <label class="sc-label-title" for="sc-tab-overview">overview</label>
+          <!-- CONTENT TAB - OVERVIEW -->
+          <article class="sc-content-tab">
+            <!-- SECTION INFO SAFETY PRODUCT -->
+            <section class="sc-description-product-overview">
+              <article class="sc-description-product-overview-complet" pwa--html="product.description">
+              </article>
+            </section>
+
+            <!-- SECTION VIDEO -->
+            <!-- <section class="sc-info__video ismobile">
+                            <iframe src="https://player.vimeo.com/video/368091286" width="100%" height="190" frameborder="0" allow="autoplay; fullscreen" class="stray-iframe" allowfullscreen=""></iframe>
+                        </section> -->
+
+            <!-- SECTION PARTNER -->
+            <section class="sc-partner">
+              <article class="sc-partner-content_article">
+                <h1>Partner with an Industry Leader</h1>
+
+                <p>Since 1976, we’ve been leading the way, setting the bar for consistent
+                  quality, product longevity, and reliable industry insights. SONCO was
+                  founded on delivering total peace of mind, and we’ve been consistent on
+                  that too for over four decades. Get proven, no-obligation advice from an
+                  experienced crowd management professional via phone or email. We can help
+                  you identify the products specific to your venue. That way, you buy the right
+                  equipment the first time, another huge benefit of partnering with SONCO.</p>
+              </article>
+
+              <div class="sc-button-partner">
+                <a href="#">request a quote</a>
+              </div>
+            </section>
+          </article>
+
+          <!-- TAB SPECIFICATIONS -->
+          <input id="sc-tab-specifications" type="radio" name="sc-tab">
+          <label class="sc-label-title sc-space-label" for="sc-tab-specifications">specifications</label>
+          <!-- CONTENT TAB - SPECIFICATIONS -->
+          <section class="sc-content-tab sc-specifications">
+            <h1>Specifications</h1>
+
+            <table class="sc-table-specifications">
+              <!-- TOPIC - TYPE -->
+              <tr class="sc-especifications-content ismobile">
+                <th class="sc-topic">type</th>
+                <td class="sc-description-topic">Aluminum</td>
+              </tr>
+
+              <!-- TOPIC - WEIGHT -->
+              <tr class="sc-especifications-content" pwa--if="product.weight">
+                <th class="sc-topic">weight</th>
+                <td class="sc-description-topic">{{ product.weight }}</td>
+              </tr>
+
+              <!-- TOPIC - MATERIAL TYPE -->
+              <tr class="sc-especifications-content ismobile">
+                <th class="sc-topic">material type</th>
+                <td class="sc-description-topic">Aluminum</td>
+              </tr>
+
+              <!-- TOPIC - WIDTH -->
+              <tr class="sc-especifications-content" pwa--if="product.width">
+                <th class="sc-topic">Width</th>
+                <td class="sc-description-topic">{{ product.width }}</td>
+              </tr>
+
+              <!-- TOPIC - FEET -->
+              <tr class="sc-especifications-content isdesktop" pwa--if="product.specifications.feet">
+                <th class="sc-topic">Feet</th>
+                <td class="sc-description-topic">{{ product.specifications.feet }}</td>
+              </tr>
+
+              <!-- TOPIC - HEIGTH -->
+              <tr class="sc-especifications-content" pwa--if="product.specifications.height">
+                <th class="sc-topic">heigth</th>
+                <td class="sc-description-topic">{{ product.specifications.height }}</td>
+              </tr>
+
+              <!-- TOPIC - HEIGTH -->
+              <tr class="sc-especifications-content" pwa--if="product.specifications.lenght">
+                <th class="sc-topic">length</th>
+                <td class="sc-description-topic">{{ product.specifications.lenght }}</td>
+              </tr>
+
+              <!-- TOPIC - FINISH -->
+              <tr class="sc-especifications-content isdesktop" pwa--if="product.specifications.finish">
+                <th class="sc-topic">finish</th>
+                <td class="sc-description-topic">{{ product.specifications.finish }}</td>
+              </tr>
+
+              <!-- TOPIC - COLOR -->
+              <tr class="sc-especifications-content" pwa--if="product.specifications.color">
+                <th class="sc-topic">color</th>
+                <td class="sc-description-topic">{{ product.specifications.color }}</td>
+              </tr>
+
+              <!-- TOPIC - SHORT DESCRIPTION -->
+              <tr class="sc-especifications-content isdesktop" pwa--if="product.short_description">
+                <th class="sc-topic">short description</th>
+                <td class="sc-description-topic" pwa--html="product.short_description"></td>
+              </tr>
+
+              <!-- TOPIC - PRODUCT TAGS -->
+              <tr class="sc-especifications-content">
+                <th class="sc-topic">product tags</th>
+
+                <td class="sc-description-topic">
+                  <div class="sc-description-topic isdesktop">
+                    <p class="sc-shipping-card__warranty-topic">1 Year Warranty</p>
+                    <p class="sc-shipping-card__weight-topic-02">Super Heavy Duty</p>
+                    <p class="sc-shipping-card__expire-topic-03">Offer Ends Soon</p>
+                  </div>
+
+                  <div class="sc-description-topic ismobile">
+                    <p>AWS Certified Quick Set Up</p>
+                  </div>
+
+                </td>
+              </tr>
+            </table>
+          </section>
+
+
+
+          <!-- TAB REQUEST A QUOTE -->
+          <div class="sc-request-quote">
+            <a pwa-to-page="#">request a quote</a>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
+</main>

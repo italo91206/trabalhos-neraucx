@@ -1,0 +1,49 @@
+.p4a-account-header__title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #032e5a;
+}
+
+.p4a-account-header {
+    padding: 0 15px;
+    padding-top: 10px;
+}
+
+.p4a-account-menu .p4a-account-menu__item {
+    color: #000000;
+    font-size: 16px;
+    font-family: 'camber-regular';
+}
+
+.p4a-account-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #032e5a;
+}
+
+.p4a-authentication-header__title {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: #032e5a;
+}
+
+.p4a-authentication-text {
+    font-size: 16px;
+    width: 100%;
+    white-space: nowrap;
+    list-style: none;
+    color: #6F6F6F;
+}
+
+button.p4a-button.p4a-style__primary--color.p4a-style__primary--border.p4a-style__primary--background {
+    background: #032e5a;
+    color: #fff;
+    border: unset;
+}
+
+.p4a-style__primary--background {
+    background: #032e5a !important;
+}
