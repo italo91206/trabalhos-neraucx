@@ -1,37 +1,37 @@
 <main id="footer">
-  <nav class="footer-menu">
+  <nav class="footer-menu" pwa-hook="footer-menu">
     <ul>
       <li>
-        <a pwa-to-page="home" class="sc-footer-home">
+        <a pwa-to-page="home" class="sc-footer-menu-option sc-footer-home">
           <img pwa-src="footer-home" alt="home">
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a pwa-to-page="/categories" class="sc-footer-shop" onclick="closeMenuMore()">
+        <a pwa-to-page="/categories" class="sc-footer-menu-option sc-footer-shop" onclick="closeMenuMore()">
           <img pwa-src="footer-shop" alt="shop">
           <span>Shop</span>
         </a>
       </li>
       <li>
-        <a class="sc-footer-account" pwa-not-logged pwa-to-auth onclick="closeMenuMore()">
+        <a class="sc-footer-menu-option sc-footer-account" pwa-not-logged pwa-to-auth onclick="closeMenuMore()">
           <img pwa-src="footer-account" alt="account">
           <span>Account</span>
         </a>
 
-        <a class="sc-footer-account" pwa-is-logged pwa-to-account onclick="closeMenuMore()">
+        <a class="sc-footer-menu-option sc-footer-account" pwa-is-logged pwa-to-account onclick="closeMenuMore()">
           <img pwa-src="footer-account" alt="account">
           <span>Account</span>
         </a>
       </li>
       <li>
-        <a pwa-to-page="locations" class="sc-footer-locations" onclick="closeMenuMore()">
+        <a pwa-to-page="locations" class="sc-footer-menu-option sc-footer-locations" onclick="closeMenuMore()">
           <img pwa-src="footer-location" alt="location">
           <span>Locations</span>
         </a>
       </li>
       <li>
-        <a class="sc-footer-more" onclick="openMenuMore()">
+        <a class="sc-footer-menu-option sc-footer-more" onclick="openMenuMore()">
           <img pwa-src="icon-more" alt="more">
           <span>More</span>
         </a>

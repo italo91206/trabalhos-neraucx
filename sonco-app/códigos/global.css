@@ -282,8 +282,9 @@ FOOTER
     text-align: center;
 }
 
-.footer-menu ul li .sc-footer-home {
+.sc-footer-menu-option.active {
     color: #E62332 !important;
+    border-bottom: 2px solid #E62332;
 }
 
 .footer-menu ul li img{
@@ -642,10 +643,10 @@ FOOTER
     margin-top: 35px;
 }
 
-.sc-prev-carousel-page-product.swiper-button-prev,
+/* .sc-prev-carousel-page-product.swiper-button-prev,
 .sc-next-carousel-page-product.swiper-button-next {
     top: 37% !important;
-}
+} */
 
 /* PRODUCT CONTENT INFORMATIONS */
 .sc-info-content-product {

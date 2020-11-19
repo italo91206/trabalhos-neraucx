@@ -142,7 +142,7 @@ figure.swiper-slide.sc-product-swiper-image.swiper-slide-visible.swiper-slide-ac
 }
 
 .sc-prev-carousel-page-product.swiper-button-prev, .sc-next-carousel-page-product.swiper-button-next {
-    top: 37% ;
+    top: 50% ;
     font-weight: 900;
     border: 0;
     background-color: transparent;
@@ -386,12 +386,11 @@ input[type=radio]:checked+.sc-label-title+.sc-content-tab {
 
 .sc-specifications h1 {
     font-weight: 100;
+    font-size: 25px;
     color: #e62331;
     letter-spacing: 1px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     line-height: 45px;
-    font-size: 19px;
-    text-align: center;
 }
 
 table.sc-table-specifications {
@@ -406,9 +405,10 @@ table.sc-table-specifications {
 .sc-topic {
     display: flex;
     flex: 1.2;
-    background-color: #fff;
+    background-color: #f0f1f1;
     margin-right: 6px;
     align-items: center;
+    font-family: Camber-semibold;
     justify-content: center;
     text-transform: uppercase;
     font-weight: 400;
@@ -418,7 +418,7 @@ table.sc-table-specifications {
 
 .sc-description-topic {
     flex: 1;
-    background-color: #fff;
+    background-color: #f0f1f1;
     text-align: center;
     padding: 12px 17px;
     line-height: 23px;
@@ -544,16 +544,7 @@ table.sc-table-specifications {
     border: 2px solid #032E5A;
 }
 
-.sc-description-product-overview .request-a-quote a.red-button {
-    font-size: 17.5px;
-    font-family: "camber-bold";
-    color: #fff !important;
-    float: unset !important;
-    text-transform: uppercase;
-}
-
-.sc-description-product-overview .request-a-quote p {
-    font-size: 16px;
-    color: #032E5A !important;
-    text-align: center;
+.sc-specifications .sc-description-topic ul {
+    padding-left: 20px;
+    padding-bottom: 30px;
 }
