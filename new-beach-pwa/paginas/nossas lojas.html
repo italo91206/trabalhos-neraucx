@@ -23,13 +23,14 @@
   <section id="nb-encontre-new-beach" class="nb-container">
     <h2>Encontre a New Beach mais próxima de você.</h2>
     <div class="nb-relative">
-      <input type="text" placeholder="Digite seu CEP">
+      <input type="text" placeholder="Digite um endereço" id="nb-busca-cep-mapa">
       <button><img pwa-src="icons-lupa-cinza" alt=""></button>
     </div>
   </section>
 
-  <section class="nb-container">
-    <img pwa-src="google-maps-placeholder" alt="">
+  <section class="nb-container" pwa-hook="alterarMapa">
+    <!-- <img pwa-src="google-maps-placeholder" alt=""> -->
+    <iframe width="1240" height="480" id="gmap_canvas" src="https://maps.google.com/maps?q=05328-020&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
   </section>
 
   <section class="nb-container nb-flex">
@@ -54,7 +55,7 @@
           Av Leão Machado,100 Piso Sub-3
         </p>
         
-        <a href="" class="nb-flex">
+        <a class="nb-flex" id="nb-mapa-opcao-1">
           <img pwa-src="icon-bussola-store" alt="">
           <strong>Como chegar</strong>
         </a>
@@ -81,7 +82,7 @@
           Av Leão Machado,100 Piso Sub-3
         </p>
         
-        <a href="" class="nb-flex">
+        <a class="nb-flex" id="nb-mapa-opcao-2">
           <img pwa-src="icon-bussola-store" alt="">
           <strong>Como chegar</strong>
         </a>
@@ -108,7 +109,7 @@
           Av Leão Machado,100 Piso Sub-3
         </p>
         
-        <a href="" class="nb-flex">
+        <a class="nb-flex" id="nb-mapa-opcao-3">
           <img pwa-src="icon-bussola-store" alt="">
           <strong>Como chegar</strong>
         </a>
