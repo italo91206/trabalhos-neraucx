@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Din Regular';
+    src: pwa-url(din-regular-eot);
+	/* IE9 Compat Modes */
+	src: pwa-url(din-regular-eot) format("embedded-opentype"), /* IE6-IE8 */
+        pwa-url(din-regular-otf) format("opentype"), /* Open Type Font */
+        pwa-url(din-regular-svg) format("svg"), /* Legacy iOS */
+        pwa-url(din-regular-ttf) format("truetype"), /* Safari, Android, iOS */
+        pwa-url(din-regular-woff) format("woff"), /* Modern Browsers */
+        pwa-url(din-regular-woff2) format("woff2");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Din Bold';
+    src: pwa-url(din-bold-eot) format("embedded-opentype"), /* IE6-IE8 */
+        pwa-url(din-bold-otf) format("opentype"), /* Open Type Font */
+        pwa-url(din-bold-svg) format("svg"), /* Legacy iOS */
+        pwa-url(din-bold-ttf) format("truetype"), /* Safari, Android, iOS */
+        pwa-url(din-bold-woff) format("woff"), /* Modern Browsers */
+        pwa-url(din-bold-woff2) format("woff2");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Din Black';
+    src: pwa-url(din-black-eot) format("embedded-opentype"), /* IE6-IE8 */
+        pwa-url(din-black-otf) format("opentype"), /* Open Type Font */
+        pwa-url(din-black-svg) format("svg"), /* Legacy iOS */
+        pwa-url(din-black-ttf) format("truetype"), /* Safari, Android, iOS */
+        pwa-url(din-black-woff) format("woff"), /* Modern Browsers */
+        pwa-url(din-black-woff2) format("woff2");
+	/* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

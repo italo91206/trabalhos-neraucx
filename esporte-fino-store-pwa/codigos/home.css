@@ -1,0 +1,286 @@
+/* Inicio Banner - FALTA SLIDER */
+
+.efs-slide-banner {
+    height: 500px !important;
+    background: pwa-url(efs-banner-1) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 278px;
+    text-transform: uppercase;
+}
+
+.efs-slide-banner p {
+    display: inline-block;
+    color: #FFF;
+    background-color: #FBA409;
+    padding: 2px 8px;
+    font-family: 'Din Bold';
+    letter-spacing: 1.2px;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.efs-slide-banner h2 {
+    width: 596px;
+    margin: 0 auto;
+    background-color: #701DBE;
+    padding: 10px 0;
+    color: #FFF;
+    font-family: 'Din Black';
+    font-size: 3em;
+}
+
+.efs-btn-orange-black {
+    display: inline-block;
+    background-color: rgba(25, 28, 30, 0.7);
+    border: 1px solid #FDC96D;
+    color: #FBA409;
+    font-family: 'Din Bold';
+    letter-spacing: 1.2px;
+    padding: 20px 24px;
+    font-size: 0.6875em;
+}
+
+.efs-banner-btns {
+    margin-top: 10px;
+}
+
+.efs-banner-btns a:first-child {
+    margin-right: 30px;
+}
+
+.efs-subtitle-component {
+    font-family: 'Din Bold';
+    font-size: 2.375em;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.efs-subtitle-component span {
+    font-family: 'Rock Salt';
+    text-transform: initial;
+    font-weight: normal;
+}
+
+.efs-categorias {
+    margin: 50px 0 100px 0;
+}
+
+.efs-categorias img {
+    max-width: 100%;
+}
+
+.efs-title-categoria-mobile {
+    display: none;
+}
+
+.efs-categorias-flex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 32px;
+    justify-content: center;
+}
+
+.efs-nome-categoria {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 13px;
+    font-weight: 400;
+}
+
+.efs-40-off-bg {
+    background: pwa-url(efs-40-off-bg) no-repeat center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.efs-40-off {
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+    padding: 29px 0 27px 0;
+}
+
+.efs-40-off-text h2 {
+    font-family: 'Din Bold';
+    font-size: 2.375em;
+    text-transform: uppercase;
+    margin-bottom: 31px;
+}
+
+.efs-40-off-text p {
+    line-height: 24px;
+    color: #FFF;
+    margin-bottom: 57px;
+}
+
+.efs-btn-white-orange {
+    width: 398px;
+    display: block;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    text-transform: uppercase;
+    color: #FBA409;
+    font-family: 'Din Bold';
+    letter-spacing: 1px;
+}
+
+.efs-40-off-img img {
+    max-width: 90%;
+    margin-right: 13px;
+}
+
+.efs-btns-slider-produtos {
+    display: flex;
+    column-gap: 10px;
+}
+
+.efs-btns-slider-produtos input {
+    display: none;
+}
+
+.efs-btns-slider-produtos label {
+    color: #191C1E;
+    font-family: 'Din Regular';
+    border: 1px solid #CED4DA;
+    padding: 16px 24px;
+    cursor: pointer;
+}
+
+.efs-btns-slider-produtos label:hover, .efs-btns-slider-produtos input:checked+label {
+    color: #CE8503;
+    border: 1px solid #CE8503;
+    background-color: #FDC96D;
+}
+
+.efs-slider-produtos-flex {
+    display: flex;
+    column-gap: 30px;
+}
+
+.efs-torcidas-bg {
+    margin: 100px 0;
+    background: pwa-url(efs-torcidas-bg) no-repeat;
+    height: 1144px;
+}
+
+.efs-torcidas {
+    position: relative;
+}
+
+.efs-torcidas img {
+    max-width: 100%;
+}
+
+.efs-torcidas-absolute {
+    position: absolute;
+    top: 14px;
+}
+
+.efs-torcidas-row-1 {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    margin-left: 106px;
+}
+
+.efs-torcidas-row-2 {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    column-gap: 30px;
+}
+
+.efs-franqueados-bg {
+    background: pwa-url(efs-franqueados-bg) no-repeat center;
+    background-size: cover;
+    height: 448px;
+    padding: 98px 0 97px 0;
+    color: #FFF;
+}
+
+.efs-franqueados p {
+    margin: 29px 0;
+    width: 500px;
+    line-height: 24px;
+}
+
+.efs-franqueados .efs-btn-white-orange {
+    background: #FBA409;
+    color: #FFF;
+}
+
+.efs-slider-produtos-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.efs-categoria-page .efs-slider-produtos-title {
+    display: block;
+    text-align: center;
+}
+
+.efs-categoria-page .efs-slider-produtos-title h2 {
+    margin-bottom: 87px;
+}
+
+.efs-categoria-page .efs-slider-produtos-title .efs-btns-slider-produtos {
+    justify-content: center;
+}
+
+.efs-home-banner .swiper-button-prev, .efs-home-banner .swiper-button-next {
+    top: 50%;
+}
+
+.efs-home-banner .swiper-button-prev {
+    left: 90px;
+}
+
+.efs-home-banner .swiper-button-next {
+    right: 90px;
+}
+
+#efs-home-products-3 .efs-slider-prev,
+#efs-home-products-2 .efs-slider-prev,
+#efs-home-products .efs-slider-prev {
+    left: 10px;
+}
+
+#efs-home-products-3 .efs-slider-prox,
+#efs-home-products-2 .efs-slider-prox,
+#efs-home-products .efs-slider-prox {
+    right: 10px;
+}
+
+.efs-categoria-pg-home:hover img {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .25s ease;
+}
+
+.efs-btn-orange-black:hover {
+    background-color: #FDC96D;
+    color: rgb(25, 28, 30);
+    border-color: rgb(25, 28, 30);
+    transition: all .25s ease;
+}
+
+.efs-btn-white-orange:hover {transform: scale(1.05);transition: all .25s ease;}
+
+.efs-torcidas img:hover {
+    transform: scale(1.025);
+    transition: all .25s ease;
+}
+
+.efs-newsletter-form-button:hover {
+    transform: scale(1.05);
+    transition: all .25s ease;
+    cursor: pointer;
+}

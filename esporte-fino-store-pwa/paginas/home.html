@@ -1,0 +1,190 @@
+<main class="efs-home-page">
+  <!-- Inicio Banner com slider - AINDA SEM SWIPER -->
+  <div class="efs-banner">
+    <div id="efs-home-banner" class="swiper-container" pwa-hook="efs-home-banner">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide efs-slide-banner">
+          <p>nba Exclusive</p>
+          <h2>nova coleção de verão</h2>
+          <div class="efs-banner-btns">
+            <a class="efs-btn-orange-black" pwa-to-page="feminino">Para Mulheres</a>
+            <a class="efs-btn-orange-black" pwa-to-page="masculino">Para Homens</a>
+          </div>
+        </section>
+
+        <section class="swiper-slide efs-slide-banner">
+          <p>nba Exclusive</p>
+          <h2>nova coleção de verão</h2>
+          <div class="efs-banner-btns">
+            <a class="efs-btn-orange-black" pwa-to-page="feminino">Para Mulheres</a>
+            <a class="efs-btn-orange-black" pwa-to-page="masculino">Para Homens</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="efs-home-banner-prev efs-slider-prev"></div>
+      <div class="efs-home-banner-next efs-slider-prox"></div>
+    </div>
+
+  </div>
+  <!-- Fim Banner com SWIPER - FALTA FAZER O SWIPER -->
+
+  <!-- Inicio categoria de produtos -->
+  <div class="efs-categorias">
+    <div class="efs-container">
+      <div class="efs-title-categoria-mobile">
+        <p>Navegar por <span>categorias</span></p>
+      </div>
+      <div class="efs-categorias-flex">
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="acessorios-externos" class="efs-camisetas">
+            <img pwa-src="efs-categoria-camiseta" alt="camisetas" />
+          </a>
+          <h2 class="efs-nome-categoria">Camisetas</h2>
+        </section>
+
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="acessorios-internos" class="efs-bones">
+            <img pwa-src="efs-categoria-bones" alt="bones" />
+          </a>
+          <h2 class="efs-nome-categoria">Bonés</h2>
+        </section>
+
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="bermudas" class="efs-bermudas">
+            <img pwa-src="efs-categoria-bermudas" alt="bermudas" />
+          </a>
+          <h2 class="efs-nome-categoria">Bermudas</h2>
+        </section>
+
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="calcas" class="efs-calcas">
+            <img pwa-src="efs-categoria-calcas" alt="calcas" />
+          </a>
+          <h2 class="efs-nome-categoria">Calças</h2>
+        </section>
+
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="jaquetas" class="efs-jaquetas">
+            <img pwa-src="efs-categoria-jaquetas" alt="jaquetas" />
+          </a>
+          <h2 class="efs-nome-categoria">Jaquetas</h2>
+        </section>
+
+        <section class="efs-categoria-pg-home">
+          <a pwa-to-page="regatas" class="efs-regatas">
+            <img pwa-src="efs-categoria-regatas" alt="regatas" />
+          </a>
+          <h2 class="efs-nome-categoria">Regatas</h2>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- Fim  categoria de produtos -->
+
+  <!-- Inicio 40%-off -->
+  <div class="efs-40-off-bg">
+    <div class="efs-container">
+      <div class="efs-40-off">
+        <section class="efs-40-off-text">
+          <h2>40% off</h2>
+          <p>Quer acertar no ângulo e marcar aquele golaço com o presente de dia dos pais?<br>
+            A nossa seleção já está em campo com o que há de melhor para a data: desconto!</p>
+
+          <a pwa-to-search="corolla" class="efs-btn-white-orange">Aproveitar agora</a>
+        </section>
+
+        <div class="efs-40-off-img">
+          <img pwa-src="efs-40-off" alt="40% off" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim 40%-off -->
+
+  <pwa-product-list name="ofertas" filter="images_count:3" size="6" active-class="active">
+    <section class="efs-slider-produtos-title efs-container">
+        <h2 class="efs-subtitle-component">Se é para torcer,<br> <span>tem que vestir a camisa.</span></h2>
+        
+        <div class="efs-btns-slider-produtos" pwa-hook="seletor-home-slider">
+            <div pwa-tab="images_count:3" class="efs-btn-slider-produto-option">
+                <input id="efs-marca-efs" name="efs-marcas-produto" value="efs" type="radio" checked>
+                <label for="efs-marca-efs">Efs Sports Co.</label>
+            </div>
+
+            <div pwa-tab="images_count:2" class="efs-btn-slider-produto-option">
+                <input id="efs-marca-newera" name="efs-marcas-produto" value="newEra" type="radio">
+                <label for="efs-marca-newera">New Era</label>
+            </div>
+
+            <div pwa-tab="images_count:1" class="efs-btn-slider-produto-option">
+                <input id="efs-marca-mitchellness" name="efs-marcas-produto" value="mitchelNess" type="radio">
+                <label for="efs-marca-mitchellness">Menor Preço</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inicio Slider produtos -->
+    <div class="home-slider-holder">
+        <div class="efs-slider-produtos efs-container">
+        <div id="efs-home-products" class="swiper-container">
+            <div class="swiper-wrapper">
+            <div pwa-each-product class="swiper-slide">
+                <pwa-product-card>
+            </div>
+            </div>
+
+            <div class="efs-home-products-paginacao efs-slider-paginacao"></div>
+
+            <div class="efs-home-products-prev efs-slider-prev"></div>
+            <div class="efs-home-products-next efs-slider-prox"></div>
+        </div>
+        </div>
+    </div>
+  </pwa-product-list>
+  <!-- FIM Slider produtos -->
+
+  <!-- Inicio Torcidas  -->
+  <div class="efs-torcidas-bg">
+    <div class="efs-container">
+      <section class="efs-torcidas">
+        <h2 class="efs-subtitle-component">Para cada torcida,<br> <span>um lugar mais que reservado</span>
+        </h2>
+        <!-- Grid das torcidas -->
+        <div class="efs-torcidas-absolute">
+          <div class="efs-torcidas-row-1">
+            <a pwa-to-page="futebol">
+              <img class="efs-torcida-futebol" pwa-src="efs-futebol" alt="futebol" />
+            </a>
+            <a pwa-to-page="nba">
+              <img class="efs-torcida-nba" pwa-src="efs-nba" alt="nba" />
+            </a>
+          </div>
+
+          <div class="efs-torcidas-row-2">
+            <a pwa-to-page="nfl">
+              <img class="efs-torcida-nfl" pwa-src="efs-nfl" alt="nfl" />
+            </a>
+            <a pwa-to-page="mlb">
+              <img class="efs-torcida-mlb" pwa-src="efs-mlb" alt="mlb" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- Fim Torcidas -->
+
+  <!-- Inicio Franqueados -->
+  <div class="efs-franqueados-bg">
+    <div class="efs-container">
+      <section class="efs-franqueados">
+        <h2 class="efs-subtitle-component">Quer Investir<br> <span>na sua paixão?</span></h2>
+        <p>Se você torce para trabalhar com o que realmente ama, a nossa franquia pode te ajudar a
+          conquistar este sonho.</p>
+        <a pwa-to-page="franqueados" class="efs-btn-white-orange">seja um franqueado</a>
+      </section>
+    </div>
+  </div>
+  <!-- Fim Franqueados -->
+</main>

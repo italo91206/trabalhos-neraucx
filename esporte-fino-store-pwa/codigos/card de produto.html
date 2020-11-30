@@ -1,0 +1,33 @@
+<section class="efs-produto-card">
+  <div class="efs-produto-img">
+    <img pwa-src="efs-produto-1" alt="produto" />
+    
+    <div pwa-is-logged class="efs-produto-fav">
+      <button pwa-add-wishlist class="se-add-to-favorite">
+        <span class="fa fa-heart-o"></span>
+      </button>
+
+      <button pwa-remove-wishlist  class="se-add-to-favorite">
+        <span class="fa fa-heart"></span>
+      </button>
+    </div>
+  </div>
+
+  <article pwa-to-product-page>
+    <!-- <p class="efs-produto-marca">efs sports co.</p> -->
+    <p class="efs-produto-marca">{{ product.specifications.product_brands  }}</p>
+
+    <!-- <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3> -->
+    <h3 class="efs-produto-nome">{{ product.name }}</h3>
+
+    <!-- <p class="efs-preco-full">de 89,90</p> -->
+    <!-- <p class="efs-preco-promo">por R$ 69,90</p> -->
+    <!-- <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p> -->
+
+    <p class="efs-card-price">
+      <p class="efs-preco-full" pwa--if="product.price > product.promotional_price">de {{ product.price | price }}</p>
+      <p class="efs-preco-promo" pwa--if="product.promotional_price > 0">por {{ product.promotional_price | price }}</p>
+      <p class="efs-parcelamento">em até {{ product.installment.number }}x de {{ product.installment.value | price }} sem juros</p>
+    </p>
+  </article>
+</section>

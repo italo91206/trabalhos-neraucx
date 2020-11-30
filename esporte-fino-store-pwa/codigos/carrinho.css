@@ -1,0 +1,360 @@
+#efs-cart {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #FFF;
+    width: 492px;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s linear;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#efs-cart.efs-aparece {
+    visibility: visible;
+    opacity: 1;
+}
+
+.efs-sacola {
+    padding: 10px 30px;
+    background-color: #fff;
+    max-height: 405px;
+    height: 100%;
+}
+
+
+#efs-carrinho-fechar-button {
+    font-size: 25px;
+    flex: 0 0 10%;
+    color: #fff;
+}
+
+.efs-sacola #title p {
+    font-family: 'Din Black';
+    font-size: 28px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.efs-sacola #title.flex {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.efs-item-image img {
+    width: 85px;
+    height: 85px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.efs-item-image {
+    width: 85px;
+    height: 85px;
+    margin-right: 21px;
+}
+
+.efs-item-text {
+    flex: 0 0 70%;
+}
+
+#efs-cart .efs-titulo {
+    font-family: 'Din Black';
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+#efs-cart .efs-quantidade {
+    font-size: 16px;
+    font-family: 'Din Regular';
+    display: flex;
+    margin-top: 17px;
+}
+
+#efs-cart .efs-quantidade span {
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fff;
+    cursor: pointer;
+    background: #7F8993;
+    border-radius: 2px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2px;
+}
+
+#efs-cart .efs-quantidade input {
+    width: 32px;
+    height: 23px;
+    text-align: center;
+    border: none;
+    appearance: textfield;
+    -webkit-appearance: none;
+}
+
+#efs-cart .efs-quantidade span:first-child {
+    margin-right: 14px;
+}
+
+#efs-cart .efs-preco {
+    font-family: 'Din Black';
+    font-size: 19px;
+    color: #FBA409;
+    align-items: flex-end;
+    display: flex;
+    margin: 0 auto;
+    margin-right: 0px;
+}
+
+#efs-barra-desconto {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #394047;
+    height: 50px;
+}
+
+#efs-barra-desconto p {
+    flex: 0 0 90%;
+}
+
+.efs-item-text {
+    line-height: 24px;
+}
+
+#efs-cart .total {
+    background: #F8F9FA;
+    border-top: solid 1px #E9ECEF;
+    padding: 16px 30px;
+}
+
+.flex.efs-campo-subtotal p {
+    margin: 0 auto;
+    margin-left: 0px;
+    font-size: inherit;
+}
+
+.flex.efs-campo-subtotal span {
+    margin-right: 0px;
+    font-family: 'Din Bold';
+    color: #191C1E;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.flex.efs-campo-desconto p {
+    margin: 0 auto;
+    margin-left: 0px;
+}
+
+.flex.efs-campo-desconto span {
+    margin: 0 auto;
+    margin-right: 0px;
+    font-family: 'Din Bold';
+    color: #191C1E;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.efs-campo-subtotal {
+    margin-bottom: 10px;
+}
+
+.efs-campo-desconto {
+    padding-bottom: 30px;
+    border-bottom: solid 1px #CED4DA;
+    margin-bottom: 30px;
+}
+
+.total input {
+    width: 288px;
+    height: 44px;
+    border: 0.5px solid #C3CFD9;
+    padding: 10px 60px;
+    font-size: 16px;
+    color: #ADB5BD;
+}
+
+.total input:focus {
+    outline: none;
+    border: 2px solid #85909a;
+}
+
+.efs-campo-cep {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.efs-campo-cep img {
+    position: absolute;
+    left: 24px;
+    top: 14px;
+}
+
+.efs-campo-cupom {
+    position: relative;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #CED4DA;
+    margin-bottom: 24px;
+}
+
+.efs-campo-cupom img {
+    position: absolute;
+    top: 15px;
+    left: 24px;
+}
+
+.efs-campo-cep button {
+    width: 125px;
+    background: #ADB5BD;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 01px;
+    font-weight: bold;
+    margin-left: 27px;
+}
+
+.efs-campo-cupom button {
+    width: 125px;
+    background: #ADB5BD;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 01px;
+    font-weight: bold;
+    margin-left: 27px;
+}
+
+.efs-campo-cep button:hover, .efs-campo-cupom button:hover {
+    background: #c7c9cc;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.efs-subtotal p {
+    margin: 0 auto;
+    margin-left: 0px;
+}
+
+.efs-campo-total span {
+    margin: 0 auto;
+    margin-right: 0px;
+    font-family: 'Din Regular';
+    color: #191C1E;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+}
+
+.efs-campo-total {
+    margin-bottom: 20px;
+}
+
+.efs-go-to-checkout {
+    width: 100%;
+    background: #FBA409;
+    border: none;
+    height: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1.10px;
+}
+
+.efs-go-to-checkout:focus {
+    outline: none;
+}
+
+.efs-go-to-checkout:hover {
+    cursor: pointer;
+    background: #ffbf4b;
+}
+
+.efs-cart-item-ul {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.efs-cart-item {
+    margin-top: 30px;
+}
+
+.efs-cart-item-ul .efs-cart-item:first-child {
+    margin-top: 0px;
+}
+
+#efs-cart__darken {
+    width: 100%;
+    background: #000000a6;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    display: none;
+    animation: none;
+}
+
+#efs-cart__darken.active {
+    display: block;
+}
+
+@media(max-width: 425px){
+    #efs-cart {
+        width: 100%;
+    }
+    .efs-sacola {
+        padding: 10px 10px;
+        max-height: 400px;
+        overflow: auto;
+    }
+
+    #efs-cart .total {
+        padding: 16px 10px;
+    }
+    
+    .efs-cart-item-ul {
+        height: 100%;
+        max-height: 362px;
+        overflow-x: hidden;
+    }
+}
+
+@media(max-width: 411px){
+    .efs-item-text {
+        flex: 0 0 68%;
+    }
+}
+
+@media(max-width: 395px){
+    .efs-campo-cep button {
+        margin-left: 0px;
+    }
+
+    .efs-campo-cupom button {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 375px){
+    .efs-item-image {
+        margin-right: 10px;
+    }
+}

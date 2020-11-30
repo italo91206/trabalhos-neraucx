@@ -1,0 +1,68 @@
+<aside id="efs-cart" pwa-hook="cart-background">
+    <section id="efs-barra-desconto">
+      <span id="efs-carrinho-fechar-button" pwa-toggle-cart class="fa fa-times"></span>
+      <p>Faltam apenas {{ (220 - $$cart.subtotal )| price }} para você desbloquear um desconto de 20%</p>
+    </section>
+    
+    <section class="efs-sacola">
+      <ul pwa-has-items class="efs-cart-item-ul">
+        <li pwa-each-item class="efs-cart-item flex relative">
+          <div class="efs-item-image">
+            <img pwa-src="product.image" pwa-alt="product.name">
+          </div>
+    
+          <div class="efs-item-text">
+            <p class="efs-titulo">{{ product.name.length > 30 ? product.name.substr(0, 30) + '...' : product.name }}</p>
+            <p class="efs-cor">cor: {{ product.colorName }}</p>
+            <p class="efs-tamanho">tamanho: {{ product.skuName }}</p>
+            <div class="flex">
+              <p class="efs-quantidade">
+                <span pwa-quantity-decrement>-</span>
+                <input pwa-quantity-box>
+                <span pwa-quantity-increment>+</span>
+              </p>
+              <p class="efs-preco">{{ product.price | price }}</p>
+            </div>
+          </div>
+    
+          <div pwa-remove-item class="efs-remove-se-cart-item">
+            <img pwa-src="efs-icon-trash" alt="">
+          </div>
+        </li>
+      </ul>
+    </section>
+  
+    <section class="total">
+      <div class="flex efs-campo-subtotal">
+        <p class="efs-subtotal">Subtotal:</p>
+        <span>{{ $$cart.subtotal | price }}</span>
+      </div>
+
+      <div class="flex efs-campo-desconto">
+        <p class="efs-discount-value">Desconto:</p>
+        <span>{{ $$cart.discount | price }}</span>
+      </div>
+  
+      <div class="flex efs-campo-cep">
+        <input type="text" pwa-freight-box placeholder="Digite seu CEP">
+        <img pwa-src="efs-icon-truck-grey" alt="">
+        <button pwa-freight-not-loading pwa-freight-submit>Buscar</button>
+        <button pwa-freight-loading>buscando</button>
+        <ul> <li pwa-each-freight> {{ freight  }} </li> </ul>
+      </div>
+
+      <div class="flex efs-campo-cupom">
+        <input pwa-coupon-box required id="efs-cupom-desconto" placeholder="Digite seu cupom" />
+        <img pwa-src="efs-icon-ticket-grey" alt="">
+        <button >Aplicar</button>
+      </div>
+
+      <div class="flex efs-campo-total">
+        <p class="efs-subtotal">Total</p>
+        <span>{{ $$cart.total | price }}</span>
+      </div>
+
+      <button pwa-checkout class="efs-go-to-checkout">Ir para o pagamento</button>
+      <span pwa-with-coupon class="efs-form__input-checked">✓</span>
+    </section>
+  </aside>

@@ -1,0 +1,496 @@
+.efs-header-mobile {
+    display: none;
+}
+
+.efs-closeSearchMobile{
+    display: none;
+}
+
+.efs-header-1-bg {
+    background-color: #F8F9FA;
+}
+
+.efs-header-1 {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    color: #7F8993;
+    font-size: 0.6875em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.efs-header-1-left {
+    display: flex;
+}
+
+.efs-lojas, .efs-atendimento {
+    display: flex;
+    align-items: center;
+}
+
+.efs-lojas img, .efs-atendimento img {
+    margin-right: 8px;
+}
+
+.efs-lojas {
+    margin-right: 46px;
+}
+
+.efs-header-1-right {
+    display: flex;
+    align-items: center;
+    margin-right: 26px;
+}
+
+#efs-fav {
+    margin-right: 28px;
+    margin-left: 35px;
+}
+
+.efs-login {
+    text-decoration: underline;
+    color: #FBA409;
+}
+
+.efs-carrinho {
+    position: relative;
+}
+
+.efs-nmr-produtos {
+    position: absolute;
+    right: -5px;
+    top: 15px;
+    background-color: #E81E1E;
+    color: #FFF;
+    width: 18px;
+    height: 18px;
+    padding: 2px 6.5px 2px 6.5px;
+    border-radius: 100%;
+}
+
+/* HEADER - header-2 */
+
+.efs-header-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.efs-logo {
+    margin-left: 19px;
+}
+
+.efs-navbar ul {
+    display: flex;
+    column-gap: 53px;
+}
+
+.efs-navbar ul li a {
+    color: #212529;
+}
+
+.efs-navbar ul li a:hover {
+    color: #000;
+    font-family: 'Din Bold';
+}
+
+.efs-search-input {
+    width: 288px;
+    height: 50px;
+    border: 1px solid #ADB5BD;
+    padding-left: 17px;
+    padding-right: 45px;
+}
+
+#efs-search-input::placeholder {
+    font-size: 0.75em;
+}
+
+.efs-search {
+    position: relative;
+}
+
+.efs-header-3-bg {
+    background-color: #191C1E;
+}
+
+.efs-header-3 {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.efs-header-3 p {
+    width: 414px;
+    text-align: center;
+}
+
+/* HEADER - submenu e menu mobile */
+
+.efs-submenu {
+    margin-top: -60px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.5s opacity;
+}
+
+.efs-submenu-show {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.efs-submenu-voltar {
+    display: none;
+}
+
+.efs-menu-mobile {
+    display: none;
+}
+
+.efs-submenu-row-3-bg {
+    display: none;
+}
+
+.efs-submenu-row-1-bg {
+    background-color: #F7F9FA;
+    padding: 40px 0;
+}
+
+.efs-submenu-row-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.efs-menu-options a, .efs-submenu-roupas a, .efs-submenu-acessorios a {
+    display: block;
+    margin-bottom: 17px;
+    color: #000;
+}
+
+.efs-submenu-roupas h2, .efs-submenu-acessorios h2 {
+    margin-bottom: 18px;
+    font-size: 1em;
+}
+
+.efs-menu-options a {
+    font-family: 'Din Bold';
+}
+
+.efs-menu-options a:nth-child(3) {
+    margin-bottom: 44px;
+}
+
+.efs-submenu-row-2-bg {
+    background: #FFF;
+    padding: 40px 0 38px 0;
+}
+
+.efs-submenu-esportes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.mobile-menu-slider {
+    padding-left: 24px;
+    padding-top: 16px;
+    padding-bottom: 27px;
+}
+
+.category-submenu-option.active {
+    color: #394047;
+    font-weight: bold;
+}
+
+.category-submenu-option{
+    margin-right: 23px;
+}
+
+/* .efs-submenu-esportes-options a {
+    margin-right: 47px;
+    color: #ADB5BD;
+} */
+
+.efs-submenu-esporte-option {
+    text-decoration: underline;
+    font-family: 'Din Bold';
+    color: #FBA409;
+    font-size: 0, 6875em;
+}
+
+.efs-submenu-esportes-options a:hover, .efs-option-selecionado {
+    color: #000 !important;
+    font-family: 'Din Bold';
+}
+
+.efs-esporte-images {
+    display: flex;
+}
+
+/* FIM SUBMENU */
+
+/* SEARCH - HEADER */
+
+.efs-search-produtos-bg {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 160px;
+    z-index: 2;
+    height: 100vh;
+    opacity: 1;
+    transition: 0.7s;
+    transform: translateX(-140%);
+}
+
+.efs-search-produtos-bg-show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.efs-search-produtos {
+    width: 40%;
+    height: calc(100vh - 150px);
+    background: #FFF;
+    position: absolute;
+    right: 0%;
+    padding: 25px 33px;
+    overflow-y: scroll;
+    transform: translateX(100%);
+    transition: 1s transform;
+}
+
+.efs-search-produtos-show {
+    transform: translateX(0%);
+}
+
+.efs-search-produtos-bg::-webkit-scrollbar {
+    display: none;
+}
+
+.efs-search-encontrados {
+    font-family: 'Din Regular';
+    font-size: 0.875em;
+    color: #ADB5BD;
+    margin-bottom: 35px;
+}
+
+.efs-search-produtos-item {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #E9ECEF;
+}
+
+.efs-search-produtos-item:last-child {
+    border-bottom: none;
+}
+
+.efs-search-produto-nome {
+    font-family: 'Din Bold';
+    font-size: 1em;
+    margin-bottom: 36px;
+}
+
+.efs-search-produto-preco {
+    font-family: 'DIn Black';
+    color: #FBA409;
+    font-size: 1.1875em;
+}
+
+.efs-search-mobile {
+    display: none;
+}
+
+.efs-btnOpenProdutosSearch {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    border: none;
+    background: unset;
+}
+
+.efs-btnOpenProdutosSearch:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .25s ease;
+}
+
+#efs-mobilesearch img {
+    width: 35px;
+    height: 35px;
+}
+
+#efs-mobilecart img {
+    width: 35px;
+    height: 35px;
+}
+
+.efs-header-2 .efs-logo {
+    margin-left: 16px;
+}
+
+.efs-header-2 #efs-mobilemenu {
+    margin-right: 16px;
+    margin-left: 25px;
+}
+
+.efs-header-2 #efs-mobilecart {
+    margin-right: 0px;
+    margin-left: 25px;
+}
+
+.efs-header-2 #efs-mobilesearch {
+    margin: 0;
+}
+
+.mobile-menu-list {
+    background: #F7F9FA;
+}
+
+.menu-item.account-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #293845;
+    border-bottom: solid 1px #E9ECEF;
+}
+
+.menu-item {
+    color: #191C1E;
+    font-size: 18px;
+    height: 100%;
+    padding: 10px 24px;
+}
+
+.menu-item.strong {
+    font-weight: bold;
+    font-family: 'Din Bold';
+}
+
+.mobile-menu-list .menu-item.account-item {
+    padding: 16px 24px;
+}
+
+.mobile-footer-menu-list {
+    background: #F7F9FA;
+}
+
+.menu-item img {
+    margin-right: 9px;
+}
+
+.mobile-menu-list .menu-item:last-child {
+    padding-bottom: 30px;
+}
+
+.mobile-footer-menu-list .menu-item:last-child {
+    padding-bottom: 30px;
+}
+
+.mobile-footer-menu-list .menu-item:first-child {
+    padding-top: 30px;
+}
+
+.category-submenu-option {
+    float: left;
+    color: #ADB5BD;
+}
+
+#efs-menu-mobile {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all .75s ease;
+}
+
+#efs-menu-mobile.active {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    transition: all .75s ease;
+}
+
+#efs-mobilesearch-fecha {
+    margin-right: 27px;
+}
+
+#efs-mobilesearch-fecha img {
+    width: 35px;
+    height: 35px;
+}
+
+.menu-item.voltar img {
+    transform: rotate(270deg);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    margin-top: 4px;
+}
+
+.menu-item.voltar {
+    color: #FBA409;
+    text-transform: uppercase;
+    font-family: 'Din Bold';
+}
+
+@media(max-width: 768px){
+    .efs-search {
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        height: 16px;
+        transition: height .5s ease;
+    }
+    .efs-header-2 div {
+        margin: 0 auto;
+    }
+    .efs-header-3 p {
+        width: 100%;
+    }
+    .efs-header-2 {
+        height: auto;
+        padding: 14px 0;
+        justify-content: unset;
+        flex-wrap: wrap;
+    }
+    .efs-search-input{
+        width: 100%;
+    }
+    .efs-search.active {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 16px;
+        transition: opacity .5s ease;
+        padding: 11px 24px;
+        background: #F7F9FA;
+    }
+    .efs-header-2 {
+        padding-bottom: 0px;
+    }
+    .efs-header .efs-header-desktop .efs-container {
+        padding: 0px;
+    }
+    .efs-header-2 .efs-logo {
+        margin-left: 24px;
+    }
+    .efs-search button {
+        position: absolute;
+        top: 24px;
+        right: 34px;
+        background: none;
+        border: none;
+    }
+    .efs-search-input{
+        background: #F7F9FA;
+    }
+}
