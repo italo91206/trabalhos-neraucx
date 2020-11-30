@@ -136,6 +136,7 @@
     width: 100%;
     z-index: 5;
     opacity: 0;
+    visibility: hidden;
     transform: translateX(-100%);
     transition: 0.5s opacity;
 }
@@ -492,5 +493,14 @@
     }
     .efs-search-input{
         background: #F7F9FA;
+    }
+}
+@media(max-width: 425px){
+    header .efs-header-3-bg {
+        height: 34px;
+    }
+
+    .efs-header-3 {
+        height: 34px;
     }
 }

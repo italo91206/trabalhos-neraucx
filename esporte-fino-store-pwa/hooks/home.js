@@ -1,5 +1,5 @@
 {
-  "--efs-home-products": component => {
+  "product-list-ofertas-loaded": component => {
     component.$slide('#efs-home-products', {
     slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
     spaceBetween: window.innerWidth < 1024 ? 0 : 30,
@@ -37,7 +37,7 @@
     }
   });
   },
-  "--efs-home-products-2": component => {
+  "product-list-ofertas-2-loaded": component => {
     component.$slide('#efs-home-products-2', {
     slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
     spaceBetween: window.innerWidth < 1024 ? 0 : 30,
@@ -75,7 +75,7 @@
     }
   });
   },
-  "--efs-home-products-3": component => {
+  "product-list-ofertas-3-loaded": component => {
     component.$slide('#efs-home-products-3', {
     slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
     spaceBetween: window.innerWidth < 1024 ? 0 : 30,
@@ -121,10 +121,10 @@
       spaceBetween: 0,
       slidesPerGroup: 1,
       centeredSlides: true,
-      // pagination: {
-      //   el: '.efs-home-banner-paginacao',
-      //   clickable: true,
-      // },
+      pagination: {
+        el: '.efs-home-banner-paginacao',
+        clickable: true,
+      },
       navigation: {
         nextEl: '.efs-home-banner-next',
         prevEl: '.efs-home-banner-prev',
@@ -144,8 +144,8 @@
         sliders[1].classList.add("none");
         sliders[2].classList.add("none");
       }
-      console.log("entrei aqui!")
-      console.log(sports.checked && !new_era.checked && !menor_preco.checked)
+    //   console.log("entrei aqui!")
+    //   console.log(sports.checked && !new_era.checked && !menor_preco.checked)
     });
 
     new_era.addEventListener("click", function(){
@@ -154,8 +154,8 @@
         sliders[1].classList.remove("none");
         sliders[2].classList.add("none");
       }
-      console.log("entrei aqui!")
-      console.log(!sports.checked && new_era.checked && !menor_preco.checked)
+    //   console.log("entrei aqui!")
+    //   console.log(!sports.checked && new_era.checked && !menor_preco.checked)
     });
 
     menor_preco.addEventListener("click", function(){
@@ -163,8 +163,8 @@
         sliders[0].classList.add("none");
         sliders[1].classList.add("none");
         sliders[2].classList.remove("none");
-        console.log("entrei aqui!")
-        console.log(!sports.checked && !new_era.checked && menor_preco.checked)
+        // console.log("entrei aqui!")
+        // console.log(!sports.checked && !new_era.checked && menor_preco.checked)
       }
     });
 
