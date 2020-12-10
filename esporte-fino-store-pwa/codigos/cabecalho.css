@@ -2,12 +2,64 @@
     display: none;
 }
 
+.efs-logo img {
+    width: 150px;
+}
+
 .efs-closeSearchMobile{
     display: none;
 }
 
 .efs-header-1-bg {
     background-color: #F8F9FA;
+}
+
+.botao-laranja {
+    padding: 9px 16px;
+    display: block;
+    background: #FBA409;
+    font-family: 'Din Regular';
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: #FFF;
+}
+
+.botao-transparente {
+    padding: 8px 16px;
+    border: 1px solid #394047;
+    display: block;
+    font-family: 'Din Regular';
+    font-weight: 700;
+    color: #394047;
+    margin-left: 16px;
+}
+
+.efs-header-3.efs-din-b img {
+    margin-right: 16px;
+}
+
+.efs-header-3 p.flex {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.header-franquia-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.botao-laranja:hover {
+    background: #ffb400;
+    transform: scale(1.025);
+    transition: all .1s ease;
+}
+
+.botao-transparente:hover {
+    transform: scale(1.025);
+    transition: all .1s ease;
+    background: #dedede;
 }
 
 .efs-header-1 {
@@ -85,15 +137,26 @@
 .efs-navbar ul {
     display: flex;
     column-gap: 53px;
+    height: 100%;
+}
+.efs-navbar {
+    height: 100%;
 }
 
 .efs-navbar ul li a {
     color: #212529;
+    margin: auto auto;
 }
 
 .efs-navbar ul li a:hover {
     color: #000;
     font-family: 'Din Bold';
+}
+
+.efs-navbar li {
+    /* height: 100%; */
+    margin: auto auto;
+    display: flex;
 }
 
 .efs-search-input {
@@ -137,13 +200,41 @@
     z-index: 5;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     transition: 0.5s opacity;
+}
+
+.efs-submenu.active {
+    visibility: visible;
+    opacity: 1;
+    transform: unset;
 }
 
 .efs-submenu-show {
     transform: translateX(0%);
     opacity: 1;
+    visibility: visible;
+    z-index: 11;
+}
+
+.efs-submenu-darken {
+    position: absolute;
+    top: 160px;
+    height: 200vw;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.efs-submenu-darken.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.efs-header {
+    position: relative;
 }
 
 .efs-submenu-voltar {
@@ -495,6 +586,7 @@
         background: #F7F9FA;
     }
 }
+
 @media(max-width: 425px){
     header .efs-header-3-bg {
         height: 34px;

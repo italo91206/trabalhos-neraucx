@@ -9,18 +9,22 @@
           <div class="efs-header-1-left">
             <div class="efs-lojas">
               <img pwa-src="efs-icon-pin" alt="pin" />
-              <a href="#lojas">nossas lojas</a>
+              <a pwa-to-page="/quem-somos#conheca-nossas-franquias">nossas franquias</a>
             </div>
 
             <div class="efs-atendimento">
               <img pwa-src="efs-icon-phone" alt="phone" />
-              <a href="#atendimento">atendimento ao cliente</a>
+              <a pwa-to-page="/atendimento">atendimento ao cliente</a>
             </div>
           </div>
 
+          <div class="efs-header-1-center header-franquia-links">
+            <a pwa-to-page="/seja-um-franqueado" class="botao-laranja">Seja um franqueado</a>
+            <a pwa-to-page="/franqueados" class="botao-transparente">Área do franqueado</a>
+          </div>
+
           <div class="efs-header-1-right">
-            <p pwa-is-logged>Olá, {{ $$user.firstname }}! acesse sua conta por <a class='efs-login' href="#"
-                pwa-to-account>aqui</a></p>
+            <p pwa-is-logged>Olá, {{ $$user.firstname }}! acesse sua conta por <a class='efs-login' href="#" pwa-to-account>aqui</a></p>
             <p pwa-not-logged>Você não está logado. <a class='efs-login' href="#" pwa-to-auth>Entre agora!</a></p>
             <img id="efs-fav" pwa-src="efs-icon-heart" alt="favoritar" />
 
@@ -35,37 +39,38 @@
 
     <div class="efs-container">
       <div class="efs-header-2">
-
+        
         <div class="efs-logo">
           <a pwa-to-page="home">
-            <img pwa-src="efs-logo" alt="logo" />
+            <!-- <img pwa-src="efs-logo" alt="logo" /> -->
+            <img pwa-src="logo-nova" alt="">
           </a>
         </div>
 
         <div id="efs-mobilesearch" class="ismobile">
-          <img pwa-src="efs-icon-search-golden-svg" alt="procurar" />
+          <img pwa-src="efs-icon-search-golden-svg" alt="procurar"/>
         </div>
 
         <div id="efs-mobilesearch-fecha" class="ismobile none">
           <img pwa-src="efs-icon-close-search-mobile" alt="">
         </div>
-
+        
         <div id="efs-mobilecart" class="ismobile" pwa-toggle-cart>
           <img pwa-src="efs-icon-cart-svg" alt="carrinho" class="ismobile">
         </div>
-
+        
         <div id="efs-mobilemenu" class="ismobile">
           <img pwa-src="efs-icon-bars-menu" alt="carrinho">
           <!-- <span class="fa fa-bars ismobile"></span> -->
         </div>
 
-        <nav class="efs-navbar isdesktop">
+        <nav class="efs-navbar isdesktop" pwa-hook="prepara-submenu">
           <ul>
-            <li><a href="#" class="openSubmenu">Masculino</a></li>
-            <li><a href="#feminino">Feminino</a></li>
-            <li><a href="#juvenil-infantil">Juvenil e Infantil</a></li>
-            <li><a href="#acessórios">Acessórios</a></li>
-            <li><a href="#giftcard">Gift Card</a></li>
+            <li class="submenu-item"><a pwa-to-page="/masculino" class="openSubmenu">Masculino</a></li>
+            <li class="submenu-item"><a pwa-to-page="/feminino">Feminino</a></li>
+            <li class="submenu-item"><a pwa-to-page="/juvenil-infantil">Juvenil e Infantil</a></li>
+            <li class="submenu-item"><a pwa-to-page="/acessórios">Acessórios</a></li>
+            <li class="submenu-item"><a pwa-to-page="/giftcard">Gift Card</a></li>
           </ul>
         </nav>
 
@@ -74,7 +79,7 @@
             <input pwa-search-box class="efs-search-input" placeholder="O que você procura?" />
             <button pwa-search-button type="submit" class="efs-btnOpenProdutosSearch" href="#search">
               <img pwa-src="efs-icon-search" alt="procurar" />
-            </button>
+            </button >
           </form>
         </pwa-search-form>
       </div>
@@ -84,9 +89,20 @@
   <div class="efs-header-3-bg">
     <div class="efs-container">
       <div class="efs-header-3 efs-din-b">
-        <p>Parcele em até 10x*</p>
-        <p class="isdesktop">Frete grátis nas compras acima de R$150,00</p>
-        <p class="isdesktop">Receba em casa, fique em segurança</p>
+        <p class="flex">
+          <img pwa-src="efs-icon-cartao-credito" alt="">
+          Parcele em até 10x*
+        </p>
+
+        <p class="isdesktop flex">
+          <img pwa-src="efs-icon-entrega-caminhao" alt="">
+          Frete grátis nas compras acima de R$150,00
+        </p>
+
+        <p class="isdesktop flex">
+          <img pwa-src="efs-icon-entrega-em-casa" alt="">
+          Receba em casa, fique em segurança
+        </p>
       </div>
     </div>
   </div>
@@ -107,11 +123,11 @@
         <li class="menu-item strong"><a>Lançamentos</a></li>
         <li class="menu-item strong"><a>Mais vendidos</a></li>
         <li class="menu-item strong"><a>Ofertas</a></li>
-        <li class="menu-item" onclick="abrirSubmenu(1)"><a>Masculino</a></li>
-        <li class="menu-item" onclick="abrirSubmenu(2)"><a>Feminino</a></li>
-        <li class="menu-item" onclick="abrirSubmenu(3)"><a>Juvenil e Infantil</a></li>
-        <li class="menu-item" onclick="abrirSubmenu(4)"><a>Acessórios</a></li>
-        <li class="menu-item" onclick="abrirSubmenu(5)"><a>Gift Card</a></li>
+        <li class="menu-item" onclick="abrirSubmenu(1)"><a >Masculino</a></li>
+        <li class="menu-item" onclick="abrirSubmenu(2)"><a >Feminino</a></li>
+        <li class="menu-item" onclick="abrirSubmenu(3)"><a >Juvenil e Infantil</a></li>
+        <li class="menu-item" onclick="abrirSubmenu(4)"><a >Acessórios</a></li>
+        <li class="menu-item" onclick="abrirSubmenu(5)"><a >Gift Card</a></li>
       </div>
 
       <!-- submenu do item "Masculino" -->
@@ -129,7 +145,7 @@
         <li class="menu-item"><a href="">Jaqueta</a></li>
         <li class="menu-item"><a href="">Bermuda</a></li>
         <li class="menu-item"><a href="">Calça</a></li>
-
+        
         <li class="menu-item strong"><a href="">Acessórios</a></li>
         <li class="menu-item"><a href="">Gorro</a></li>
         <li class="menu-item"><a href="">Chapéu</a></li>
@@ -153,7 +169,7 @@
         <li class="menu-item"><a href="">Jaqueta</a></li>
         <li class="menu-item"><a href="">Bermuda</a></li>
         <li class="menu-item"><a href="">Calça</a></li>
-
+        
         <li class="menu-item strong"><a href="">Acessórios</a></li>
         <li class="menu-item"><a href="">Gorro</a></li>
         <li class="menu-item"><a href="">Chapéu</a></li>
@@ -177,7 +193,7 @@
         <li class="menu-item"><a href="">Jaqueta</a></li>
         <li class="menu-item"><a href="">Bermuda</a></li>
         <li class="menu-item"><a href="">Calça</a></li>
-
+        
         <li class="menu-item strong"><a href="">Acessórios</a></li>
         <li class="menu-item"><a href="">Gorro</a></li>
         <li class="menu-item"><a href="">Chapéu</a></li>
@@ -201,7 +217,7 @@
         <li class="menu-item"><a href="">Jaqueta</a></li>
         <li class="menu-item"><a href="">Bermuda</a></li>
         <li class="menu-item"><a href="">Calça</a></li>
-
+        
         <li class="menu-item strong"><a href="">Acessórios</a></li>
         <li class="menu-item"><a href="">Gorro</a></li>
         <li class="menu-item"><a href="">Chapéu</a></li>
@@ -212,7 +228,7 @@
 
       <!-- submenu do item "Gift Card" -->
       <div class="submenu-padrao-5 none">
-        <li class="menu-item voltar flex" onclick="voltarSubmenu(5)">
+        <li class="menu-item voltar flex" onclick="voltarSubmenu(5)"> 
           <img pwa-src="efs-icon-arrow-up" alt="">
           <a>Gift Card</a>
         </li>
@@ -225,7 +241,7 @@
         <li class="menu-item"><a href="">Jaqueta</a></li>
         <li class="menu-item"><a href="">Bermuda</a></li>
         <li class="menu-item"><a href="">Calça</a></li>
-
+        
         <li class="menu-item strong"><a href="">Acessórios</a></li>
         <li class="menu-item"><a href="">Gorro</a></li>
         <li class="menu-item"><a href="">Chapéu</a></li>
@@ -241,7 +257,7 @@
           <li class="category-submenu-option active">
             <a pwa-to-page="/cardio">Futebol</a>
           </li>
-
+          
           <li class="category-submenu-option">
             <a pwa-to-page="/cardio">NBA</a>
           </li>
@@ -347,6 +363,8 @@
     </ul>
   </div>
 
+  <!-- submenus -->
+  <!-- submenu masculino -->
   <div class="efs-submenu">
     <div class="efs-submenu-row-1-bg">
       <div class="efs-container">
@@ -358,7 +376,7 @@
             <a href="#ver-todos">Ver todos</a>
           </div>
 
-          <div class="efs-menu-account">
+          <div class="efs-menu-account ismobile">
             <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
           </div>
 
@@ -483,6 +501,560 @@
       </div>
     </div>
   </div>
+  
+  <!-- submenu feminino -->
+  <div class="efs-submenu">
+    <div class="efs-submenu-row-1-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-1">
+          <div class="efs-menu-options efs-submenu-options">
+            <a href="#lancamentos">Lançamentos</a>
+            <a href="#mais-vendidos">Mais vendidos</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#ver-todos">Ver todos</a>
+          </div>
+
+          <div class="efs-menu-account ismobile">
+            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+          </div>
+
+          <div class="efs-submenu-voltar">
+            <img pwa-src="efs-icon-arrow-back" alt="voltar">
+            <p>masculino</p>
+          </div>
+
+          <section class="efs-submenu-roupas">
+            <h2>Roupas</h2>
+            <a href="#camisetas">Camiseta</a>
+            <a href="#camiseta-polo">Camiseta Polo</a>
+            <a href="#regata">Regata</a>
+            <a href="#camisa">Camisa</a>
+            <a href="#jaqueta">jaqueta</a>
+            <a href="#bermuda">Bermuda</a>
+            <a href="#calca">Calça</a>
+          </section>
+
+          <section class="efs-submenu-acessorios">
+            <h2>Acessórios</h2>
+            <a href="#gorro">Gorro</a>
+            <a href="#chapéu">Chapéu</a>
+            <a href="#viseira">Viseira</a>
+            <a href="#cueca">Cueca</a>
+            <a href="#meia">Meia</a>
+          </section>
+
+          <img pwa-src="efs-image-submenu" alt="campo de futebol" />
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-2-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-2">
+          <div class="efs-submenu-esportes">
+            <div class="efs-submenu-esportes-options">
+              <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+              <a href="#nba-option">NBA</a>
+              <a href="#nfl-option">NFL</a>
+              <a href="#mlb-option">MLB</a>
+            </div>
+
+            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+          </div>
+
+          <div id="efs-esporte-images-2" class="swiper-container" pwa-hook="efs-esporte-images-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-6" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-7" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-8" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-9" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-10" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+            </div>
+
+            <div class="efs-esporte-images-2-prev"></div>
+            <div class="efs-esporte-images-2-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+      <div class="efs-container">
+        <div class="efs-submenu-row-3">
+          <div class="efs-submenu-conta-desejos-rastreio">
+            <a class="efs-submenu-conta" href="#acessar-conta">
+              <img pwasrc="efs-icon-account" alt="conta">
+              <p>Minha Conta</p>
+            </a>
+
+            <a class="efs-submenu-desejos" href="#desejos">
+              <img pwasrc="efs-icon-heart-submenu" alt="desejos">
+              <p>Minha lista de desejos</p>
+            </a>
+
+            <a class="efs-submenu-rastreio" href="#rastreio">
+              <img pwasrc="efs-icon-box" alt="rastrear">
+              <p>Rastrear meus pedidos</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- submenu juvenil e infantil -->
+  <div class="efs-submenu">
+    <div class="efs-submenu-row-1-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-1">
+          <div class="efs-menu-options efs-submenu-options">
+            <a href="#lancamentos">Lançamentos</a>
+            <a href="#mais-vendidos">Mais vendidos</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#ver-todos">Ver todos</a>
+          </div>
+
+          <div class="efs-menu-account ismobile">
+            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+          </div>
+
+          <div class="efs-submenu-voltar">
+            <img pwa-src="efs-icon-arrow-back" alt="voltar">
+            <p>masculino</p>
+          </div>
+
+          <section class="efs-submenu-roupas">
+            <h2>Roupas</h2>
+            <a href="#camisetas">Camiseta</a>
+            <a href="#camiseta-polo">Camiseta Polo</a>
+            <a href="#regata">Regata</a>
+            <a href="#camisa">Camisa</a>
+            <a href="#jaqueta">jaqueta</a>
+            <a href="#bermuda">Bermuda</a>
+            <a href="#calca">Calça</a>
+          </section>
+
+          <section class="efs-submenu-acessorios">
+            <h2>Acessórios</h2>
+            <a href="#gorro">Gorro</a>
+            <a href="#chapéu">Chapéu</a>
+            <a href="#viseira">Viseira</a>
+            <a href="#cueca">Cueca</a>
+            <a href="#meia">Meia</a>
+          </section>
+
+          <img pwa-src="efs-image-submenu" alt="campo de futebol" />
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-2-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-2">
+          <div class="efs-submenu-esportes">
+            <div class="efs-submenu-esportes-options">
+              <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+              <a href="#nba-option">NBA</a>
+              <a href="#nfl-option">NFL</a>
+              <a href="#mlb-option">MLB</a>
+            </div>
+
+            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+          </div>
+
+          <div id="efs-esporte-images-2" class="swiper-container" pwa-hook="efs-esporte-images-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-6" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-7" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-8" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-9" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-10" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+            </div>
+
+            <div class="efs-esporte-images-2-prev"></div>
+            <div class="efs-esporte-images-2-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+      <div class="efs-container">
+        <div class="efs-submenu-row-3">
+          <div class="efs-submenu-conta-desejos-rastreio">
+            <a class="efs-submenu-conta" href="#acessar-conta">
+              <img pwasrc="efs-icon-account" alt="conta">
+              <p>Minha Conta</p>
+            </a>
+
+            <a class="efs-submenu-desejos" href="#desejos">
+              <img pwasrc="efs-icon-heart-submenu" alt="desejos">
+              <p>Minha lista de desejos</p>
+            </a>
+
+            <a class="efs-submenu-rastreio" href="#rastreio">
+              <img pwasrc="efs-icon-box" alt="rastrear">
+              <p>Rastrear meus pedidos</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- submenu acessórios -->
+  <div class="efs-submenu">
+    <div class="efs-submenu-row-1-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-1">
+          <div class="efs-menu-options efs-submenu-options">
+            <a href="#lancamentos">Lançamentos</a>
+            <a href="#mais-vendidos">Mais vendidos</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#ver-todos">Ver todos</a>
+          </div>
+
+          <div class="efs-menu-account ismobile">
+            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+          </div>
+
+          <div class="efs-submenu-voltar">
+            <img pwa-src="efs-icon-arrow-back" alt="voltar">
+            <p>masculino</p>
+          </div>
+
+          <section class="efs-submenu-roupas">
+            <h2>Roupas</h2>
+            <a href="#camisetas">Camiseta</a>
+            <a href="#camiseta-polo">Camiseta Polo</a>
+            <a href="#regata">Regata</a>
+            <a href="#camisa">Camisa</a>
+            <a href="#jaqueta">jaqueta</a>
+            <a href="#bermuda">Bermuda</a>
+            <a href="#calca">Calça</a>
+          </section>
+
+          <section class="efs-submenu-acessorios">
+            <h2>Acessórios</h2>
+            <a href="#gorro">Gorro</a>
+            <a href="#chapéu">Chapéu</a>
+            <a href="#viseira">Viseira</a>
+            <a href="#cueca">Cueca</a>
+            <a href="#meia">Meia</a>
+          </section>
+
+          <img pwa-src="efs-image-submenu" alt="campo de futebol" />
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-2-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-2">
+          <div class="efs-submenu-esportes">
+            <div class="efs-submenu-esportes-options">
+              <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+              <a href="#nba-option">NBA</a>
+              <a href="#nfl-option">NFL</a>
+              <a href="#mlb-option">MLB</a>
+            </div>
+
+            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+          </div>
+
+          <div id="efs-esporte-images-2" class="swiper-container" pwa-hook="efs-esporte-images-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-6" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-7" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-8" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-9" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-10" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+            </div>
+
+            <div class="efs-esporte-images-2-prev"></div>
+            <div class="efs-esporte-images-2-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+      <div class="efs-container">
+        <div class="efs-submenu-row-3">
+          <div class="efs-submenu-conta-desejos-rastreio">
+            <a class="efs-submenu-conta" href="#acessar-conta">
+              <img pwasrc="efs-icon-account" alt="conta">
+              <p>Minha Conta</p>
+            </a>
+
+            <a class="efs-submenu-desejos" href="#desejos">
+              <img pwasrc="efs-icon-heart-submenu" alt="desejos">
+              <p>Minha lista de desejos</p>
+            </a>
+
+            <a class="efs-submenu-rastreio" href="#rastreio">
+              <img pwasrc="efs-icon-box" alt="rastrear">
+              <p>Rastrear meus pedidos</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- submenu giftcard -->
+  <div class="efs-submenu">
+    <div class="efs-submenu-row-1-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-1">
+          <div class="efs-menu-options efs-submenu-options">
+            <a href="#lancamentos">Lançamentos</a>
+            <a href="#mais-vendidos">Mais vendidos</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#ver-todos">Ver todos</a>
+          </div>
+
+          <div class="efs-menu-account ismobile">
+            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+          </div>
+
+          <div class="efs-submenu-voltar">
+            <img pwa-src="efs-icon-arrow-back" alt="voltar">
+            <p>masculino</p>
+          </div>
+
+          <section class="efs-submenu-roupas">
+            <h2>Roupas</h2>
+            <a href="#camisetas">Camiseta</a>
+            <a href="#camiseta-polo">Camiseta Polo</a>
+            <a href="#regata">Regata</a>
+            <a href="#camisa">Camisa</a>
+            <a href="#jaqueta">jaqueta</a>
+            <a href="#bermuda">Bermuda</a>
+            <a href="#calca">Calça</a>
+          </section>
+
+          <section class="efs-submenu-acessorios">
+            <h2>Acessórios</h2>
+            <a href="#gorro">Gorro</a>
+            <a href="#chapéu">Chapéu</a>
+            <a href="#viseira">Viseira</a>
+            <a href="#cueca">Cueca</a>
+            <a href="#meia">Meia</a>
+          </section>
+
+          <img pwa-src="efs-image-submenu" alt="campo de futebol" />
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-2-bg">
+      <div class="efs-container">
+        <div class="efs-submenu-row-2">
+          <div class="efs-submenu-esportes">
+            <div class="efs-submenu-esportes-options">
+              <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+              <a href="#nba-option">NBA</a>
+              <a href="#nfl-option">NFL</a>
+              <a href="#mlb-option">MLB</a>
+            </div>
+
+            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+          </div>
+
+          <div id="efs-esporte-images-2" class="swiper-container" pwa-hook="efs-esporte-images-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-6" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-7" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-8" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-9" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-10" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-1" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-2" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-3" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-4" alt="futebol">
+              </div>
+              <div class="swiper-slide">
+                <img pwa-src="efs-futebol-5" alt="futebol">
+              </div>
+            </div>
+
+            <div class="efs-esporte-images-2-prev"></div>
+            <div class="efs-esporte-images-2-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+      <div class="efs-container">
+        <div class="efs-submenu-row-3">
+          <div class="efs-submenu-conta-desejos-rastreio">
+            <a class="efs-submenu-conta" href="#acessar-conta">
+              <img pwasrc="efs-icon-account" alt="conta">
+              <p>Minha Conta</p>
+            </a>
+
+            <a class="efs-submenu-desejos" href="#desejos">
+              <img pwasrc="efs-icon-heart-submenu" alt="desejos">
+              <p>Minha lista de desejos</p>
+            </a>
+
+            <a class="efs-submenu-rastreio" href="#rastreio">
+              <img pwasrc="efs-icon-box" alt="rastrear">
+              <p>Rastrear meus pedidos</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="efs-submenu-darken"></div>
 
   <div class="efs-search-produtos-bg">
     <div class="efs-search-produtos">
