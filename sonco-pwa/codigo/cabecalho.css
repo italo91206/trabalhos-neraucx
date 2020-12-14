@@ -4,9 +4,17 @@ SHOW CATEGORY MENU ON HOVER
 
 /* .sc-top-nav__item--categories:hover .sc-menu  */
 .sc-menu.ativo{
-	visibility: visible;
-	opacity: 1;
-	transition: all .4s;
+	visibility: hidden;
+	opacity: 0;
+    transition: all .7s;
+    animation: cssAnimationMenuAfter 0s .3s forwards;
+}
+@keyframes cssAnimationMenuAfter {
+  to    { 
+        visibility: visible;
+        opacity: 1;
+        transition: all .7s;
+    }
 }
 
 .sc-top-nav__span {
@@ -332,7 +340,7 @@ SHOW CATEGORY MENU ON HOVER
 
 .sc-menu-sub__link--comming-soon::after {
     color: #fff;
-    content: "Comming soon";
+    content: "Coming soon";
     margin: 3px 5px;
     /*padding: 0 5px;*/
     position: absolute;
@@ -611,9 +619,18 @@ li.sc-top-nav__item.sc-top-nav__item--shopby {
 /* li.sc-top-nav__item--shopby:hover #sc-applications-menu  */
 .ativo #sc-applications-menu
 {
-    opacity: 1 !important;
-    transition: opacity .4s ease;
-    visibility: visible;
+    transition: opacity .7s ease;
+    visibility: hidden;
+	opacity: 0;
+    animation: cssAnimationMenuShopByAfter 0s .3s forwards;
+}
+
+@keyframes cssAnimationMenuShopByAfter {
+  to    { 
+        visibility: visible;
+        opacity: 1;
+        transition: all .7s;
+    }
 }
 
 #sc-why-sonco-menu, #sc-support-menu,
@@ -664,6 +681,7 @@ resto dos menu basicos
     display: block !important;
     visibility: visible !important;
 }
+
 
 .sc-sonco-header-list {
     background: #fff;
@@ -920,6 +938,11 @@ parte do abou-us no top
    HEADER 
 ========================== 
 */
+
+.sc-countdown-header {
+    width: 215px !important;
+}
+
 .sc-header {
 	width: 100%;
 	display: flex;
@@ -932,12 +955,28 @@ parte do abou-us no top
 
 .sc-header-banner {
     width: 100%;
-    height: 36px;
+    /*height: 35px; ALTURA ANTES DA BF */
+    height: 55px;
     position: relative;
-    background: #E4770B;
+    background: #000000;
     align-items: center;
     color: #fff;
     justify-content: center;
+    display: flex;
+}
+.sc-header-banner a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1024px) {
+    .sc-header-banner p {
+        font-size: 13px !important;
+    }
+    .sc-header-banner span {
+        font-size: 14px !important;
+    }
 }
 
 .sc-header-content {
@@ -1254,7 +1293,7 @@ parte do abou-us no top
 
 .sc-top-nav__item {
 	display: flex;
-    padding-right: 50px;
+    padding-right: 15px;
     height: 38px;
     justify-content: flex-start;
     align-items: center;
@@ -1283,6 +1322,7 @@ parte do abou-us no top
     color: #fff;
     font-weight: unset;
     margin-left: 10px;
+    margin-right: 15px;
 }
 
 .sc-header-home .sc-header-content {
@@ -1521,6 +1561,16 @@ span {
     .sc-header-calc-cart__calculator {
         left: 12px;
     }
+
+    /* HEIGHT PARA BLACK FRIDAY */
+    .sc-header-banner {
+        height: 85px;
+    }
+
+    /* BANNER CONTADOR PARA BLACK FRIDAY */
+    .sc-countdown-header {
+        margin-top: 8px !important;
+    }
 }
 
 
@@ -1550,18 +1600,18 @@ span {
 }
 
 #sc-submenu-three .sc-top-nav__subitem:first-child {
-    background: #00274e;
+    background: #303030;
     border-top: none;
     border-bottom: solid 1px #fff;
 }
 
 .sc-top-nav__subitem.sc-top-nav__getback {
     border-bottom: solid 1px #fff !important;
-    background: #00274e;
+    background: #303030;
 }
 
 .sc-top-nav__subitem-separator {
-    background: #00274e;
+    background: #303030;
 }
 .sc-submenu .sc-top-nav__subitem.sc-top-nav__getback {
     border-top: 0px;
