@@ -1,75 +1,75 @@
 {
     "--ajuste-menu": component => {
-        var submenu = document.getElementsByClassName('sc-menu');
+        var submenu = document.getElementsByClassName('sc-menu')[0];
+        var applicationsMenu = document.getElementById('sc-applications-menu');
         
-        var crowdcontrol_buttton = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--barricades');
-        var customsigns_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--signs');
-        var fencesolutions_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--fences');
-        var stanchions_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--stanchions');
-        var traffic_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--traffic');
+        var crowdcontrol_buttton = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--barricades')[0];
+        var customsigns_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--signs')[0];
+        var fencesolutions_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--fences')[0];
+        var stanchions_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--stanchions')[0];
+        var traffic_button = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--traffic')[0];
+        var shop_by_application = document.getElementsByClassName('sc-menu-main__item sc-menu-main__item--shop-by-application')[0];
 
-        submenu = submenu[0];
-
-        crowdcontrol_buttton = crowdcontrol_buttton[0];
-        customsigns_button = customsigns_button[0];
-        fencesolutions_button = fencesolutions_button[0];
-        stanchions_button = stanchions_button[0];
-        traffic_button = traffic_button[0];
-
-        crowdcontrol_buttton.addEventListener("mouseover", function () {
+        // mouse enter and leave on "Crowd Control" options
+        crowdcontrol_buttton.addEventListener("mouseenter", function () {
             submenu.style.width = "1130px"
+            if(!applicationsMenu.classList.contains("hide"))
+                applicationsMenu.classList.toggle("hide")
         })
         crowdcontrol_buttton.addEventListener("mouseleave", function () {
             submenu.style.width = "256px"
         })
 
-        customsigns_button.addEventListener("mouseover", function () {
+        // mouse enter and lave on "Custom Signs" options
+        customsigns_button.addEventListener("mouseenter", function () {
             submenu.style.width = "1130px"
+            if(!applicationsMenu.classList.contains("hide"))
+                applicationsMenu.classList.toggle("hide")
         })
         customsigns_button.addEventListener("mouseleave", function () {
             submenu.style.width = "256px"
         })
 
-        fencesolutions_button.addEventListener("mouseover", function () {
+        // mouse enter and leave on "Fence Solutions" options
+        fencesolutions_button.addEventListener("mouseenter", function () {
             submenu.style.width = "1130px"
+            if(!applicationsMenu.classList.contains("hide"))
+                applicationsMenu.classList.toggle("hide")
         })
         fencesolutions_button.addEventListener("mouseleave", function () {
             submenu.style.width = "256px"
         })
 
-        stanchions_button.addEventListener("mouseover", function () {
+        // mouse enter and leave on "Stanchions & Posts" options
+        stanchions_button.addEventListener("mouseenter", function () {
             submenu.style.width = "1262px"
+            if(!applicationsMenu.classList.contains("hide"))
+                applicationsMenu.classList.toggle("hide")
         })
         stanchions_button.addEventListener("mouseleave", function () {
             submenu.style.width = "256px"
         })
 
-        traffic_button.addEventListener("mouseover", function () {
+        // mouse enter and leave on "Traffic Safety" options
+        traffic_button.addEventListener("mouseenter", function () {
             submenu.style.width = "1325px"
+            if(!applicationsMenu.classList.contains("hide"))
+                applicationsMenu.classList.toggle("hide")
         })
         traffic_button.addEventListener("mouseleave", function () {
             submenu.style.width = "256px"
         })
 
-        var applicationsMenu = document.getElementById('sc-applications-menu');
-        var buttonShopBy = document.querySelector('.sc-top-nav__item--shopby');
-
-        applicationsMenu.addEventListener("mouseleave", function(){
-            applicationsMenu.classList.remove('ativo');
+        // mouse enter and leave on "Shop by Applications" options
+        shop_by_application.addEventListener("mouseenter", function(){
+            submenu.style.width = "1236px";
+            applicationsMenu.classList.remove("hide");
+        })
+        shop_by_application.addEventListener("mouseleave", function(){
+            submenu.style.width = "256px"
         })
 
-        /**
-         * Especifico para Shop By Application 
-         * */
-        buttonShopBy.addEventListener("mouseover", function(){
-            if(!buttonShopBy.classList.contains('ativo'))
-                buttonShopBy.classList.add('ativo');
-        });
-
-        buttonShopBy.addEventListener("mouseleave", function(){
-            if(buttonShopBy.classList.contains('ativo'));
-                buttonShopBy.classList.remove('ativo');
-        });
+        var buttonShopBy = document.querySelector('.sc-top-nav__item--shopby');
 
         document.querySelector('#sc-menu-container ul').addEventListener("click", () => {
             if (window.innerWidth > 1024) {
@@ -226,7 +226,6 @@
                 menu.classList.remove("ativo");
             })
     },
-
     "--close-menu-items": component => {
         let menuNavHover = document.querySelectorAll('.sc-item-especifit');
         let menuItem = document.querySelectorAll('.sc-items-menu-nav');
