@@ -1,0 +1,76 @@
+<main id="contact" class="sc-container-mobile">
+  <div class="sc-container">
+    <div class="sc-contact-header">
+      <img pwa-src="contact-us-bg" alt="Contact Us">
+      <h1>Contact Us</h1>
+    </div>
+
+    <div class="sc-contact-intro">
+      <p>We're here to help. Our support team is passionate about standing behind every purchase. Select an option
+        below, and we'll help you get up and running with your new product!<br />It's part of the Sonco Difference!
+      </p>
+    </div>
+
+    <!-- <div class="sc-breadcrumb">
+			<a pwa-to-page="/customer-support">Customer Service</a> > <a pwa-to-page="/contact">Contact Us</a>
+		</div> -->
+
+    <!-- breadcrumbs -->
+    <div class="sc-breadcrumbs">
+      <p><a pwa-to-page="/customer-support">Customer Service > </a>
+      <h1>Contact Us</h1>
+      </p>
+    </div>
+
+    <div class="sc-contact-block">
+      <article class="sc-contact-ps">
+        <h2>Product <span>Suggestions</span></h2>
+        <p class="sc-contact-subtitle">Fill out the form below to give us suggestions on products that we should
+          carry, product improvements or even ideas for new products.</p>
+        <div class="sc-column-form-contact">
+          <form pwa-hook.submit="suggestion-form">
+            <input type="text" id="suggestion_form_name" name="suggestion_form_name" placeholder="Name" required />
+            <input type="email" id="suggestion_form_email" name="suggestion_form_email" placeholder="Email" required />
+            <textarea id="suggestion_form_suggestion" name="suggestion_form_suggestion" placeholder="Suggestion"
+              required></textarea>
+            <button type="submit" class="sc-submit-contact">submit</button>
+          </form>
+        </div>
+      </article>
+
+      <article class="sc-contact-ts">
+        <h2>Take a <span>Survey</span></h2>
+        <p class="sc-contact-subtitle">Would you like to help us out? Take a survey and tell us about your
+          experience with Sonco Perimeter Security.</p>
+        <p class="sc-contact-title">CUSTOMER EXPERIENCE</p>
+        <p class="sc-contact-subtitle">Tell us about your customer experience.</p>
+        <a class="sc-contact-survey" href="https://r2.dotmailer-surveys.com/634mwudd-5a2a5a9" target="_blank"
+          rel="noopener">Click here</a>
+        <p class="sc-contact-title">PRODUCT EXPERIENCE</p>
+        <p class="sc-contact-subtitle">Tell us about your product experience.</p>
+        <a class="sc-contact-survey" href="https://r2.dotmailer-surveys.com/634mwudd-202abf7" target="_blank"
+          rel="noopener">Click here</a>
+      </article>
+
+      <article class="sc-contact-cs">
+        <h2>Customer <span>Support</span></h2>
+        <p class="sc-contact-subtitle">Need to talk to a real, live member of our sales team? We are on standby
+          to help you out. If you are not in a rush, fill out the form below and we'll get back to you in one
+          business day.</p>
+        <div class="sc-column-form-contact">
+          <form pwa-hook.submit="contact-form">
+            <input type="text" id="customer_support_form_name" name="customer_support_form_name" placeholder="Name"
+              required />
+            <input type="email" id="customer_support_form_email" name="customer_support_form_email" placeholder="Email"
+              required />
+            <textarea id="customer_support_form_suggestion" name="customer_support_form_suggestion"
+              placeholder="Message" required></textarea>
+            <button type="submit" class="sc-submit-contact">submit</button>
+          </form>
+        </div>
+        <p class="sc-contact-label">Phone <a href="tel:888-766-2616">888-766-2616</a></p>
+        <p class="sc-contact-label">Chat <a pwa-hook.click="open-chat-zendesk">Click Here</a></p>
+      </article>
+    </div>
+  </div>
+</main>
