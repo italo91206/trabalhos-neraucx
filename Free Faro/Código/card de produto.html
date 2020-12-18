@@ -1,0 +1,20 @@
+<article class="ff-card-product">
+    <div class="ff-img-slide ff-d-flex ff-flex-column ff-justify-content-center ff-align-items-center ">
+        <img class="ff-img-fluid ff-mt-32 ff-mb-32" pwa-src="product.image" pwa-alt="product.name" pwa-to-product-page>
+
+        <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.4417 7.74909C16.2712 7.24681 15.9474 6.81064 15.516 6.50199C15.0846 6.19334 14.5673 6.02774 14.0368 6.0285H11.9998V0L11.1437 0.122297C9.2017 0.399703 7.689 1.3838 6.64805 3.0473C5.89753 4.24641 5.54864 5.56917 5.38673 6.55852C4.26891 7.41858 3.29644 8.60278 2.49277 10.0835C1.81547 11.3312 1.2548 12.7936 0.826266 14.4302C0.102188 17.1953 0.00417194 19.489 0.000375062 19.5853L0 22.2397H1.49977V19.6318C1.51852 19.246 1.99083 10.8029 6.51689 7.58794L6.7822 7.39945L6.8258 7.07691C7.0515 5.40694 7.8315 2.64872 10.4998 1.80089V7.5285H14.0368C14.2537 7.52785 14.4653 7.59522 14.6419 7.72114C14.8185 7.84705 14.9511 8.02516 15.0212 8.23041C15.6192 9.99553 16.6467 12.2043 18.248 13.2423L17.7664 15.0483C17.5988 15.6924 17.2175 16.2605 16.6849 16.6596C16.1524 17.0587 15.5001 17.2652 14.8349 17.2454C13.491 17.205 12.0924 17.3804 10.6776 17.7662L10.1248 17.9169V22.2397H11.6248V19.0742C12.6613 18.8293 13.725 18.7185 14.7898 18.7447C15.7925 18.7723 16.7752 18.4604 17.5785 17.8597C18.3818 17.2589 18.9587 16.4045 19.2156 15.4348L20.0166 12.431L19.4201 12.1754C18.3045 11.6972 17.2468 10.1253 16.4417 7.74909Z" fill="#7E8089"/>
+        </svg>
+        <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.4359 5.5623L15.6812 1.58299C15.477 1.28867 15.2056 1.04725 14.8896 0.878728C14.5735 0.710206 14.2218 0.619436 13.8636 0.61394L8.63578 0.53894H8.625C5.92598 0.53894 3.85514 0.990394 2.52141 3.19366C1.27969 5.24453 0.75 8.73808 0.75 14.875V15.625H2.46361L1.3605 21.25H2.88909L3.9922 15.625H4.5C5.72492 15.6359 6.905 15.1646 7.78537 14.3128C8.58127 13.5513 9.15534 12.5095 9.44564 11.3L9.44827 11.2891L10.7347 5.12496H9.20231L7.98455 10.9603C7.61367 12.4922 6.50466 14.125 4.5 14.125H2.25281C2.29355 8.81561 2.77697 5.66782 3.80461 3.97024C4.66711 2.54524 5.92781 2.03941 8.6198 2.03871L13.842 2.11371C13.9614 2.11552 14.0787 2.14577 14.184 2.20195C14.2894 2.25812 14.3799 2.33861 14.4479 2.43672L17.5641 6.93761L21.75 7.6353V8.43025L21.0519 12.1531C20.8459 13.2519 20.4938 13.8054 19.0495 13.9789L13.1289 14.9918L13.0898 21.25H14.5898L14.6211 16.2581L19.2476 15.4659C20.2957 15.337 21.069 14.9993 21.6113 14.4336C22.0749 13.9499 22.3571 13.332 22.5263 12.4296L23.25 8.56966V6.36461L18.4359 5.5623Z" fill="#7E8089"/>
+        </svg>
+
+        <p pwa--if="product.promotional_price&&activeSKU.discount > 0" class="ff-font-body1 ff-discount-img-slide ff-text-bold">{{ activeSKU.discount }}%</p>
+    </div> <!-- FIM ff-img-slide -->
+
+    <h2 class="ff-title-slide ff-font-body1 ff-text-normal ff-d-flex ff-mt-24 ff-mt-sm-16" pwa-to-product-page>{{ (product.name).length > 33 ? (product.name.substr(0, 33) + '...') : product.name }}</h2>
+    <p pwa--if="product.promotional_price <= product.price" 
+        class="ff-price-through-slide ff-font-body1 ff-text-medium ff-text-line-through ff-d-flex ff-align-items-center">{{ product.price | price }}</p>
+    <p class="ff-price-slide ff-h5 ff-d-flex ff-align-items-center">{{ product.promotional_price | price}}</p>
+    <small class="ff-installments-slide ff-font-body2 ff-font-body2 ff-d-flex ff-align-items-center">em até {{ product.installment.number }}x de {{ product.installment.value | price }}</small>
+</article>
