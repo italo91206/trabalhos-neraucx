@@ -12,7 +12,7 @@
         <p pwa--if="product.promotional_price&&activeSKU.discount > 0" class="ff-font-body1 ff-discount-img-slide ff-text-bold">{{ activeSKU.discount }}%</p>
     </div> <!-- FIM ff-img-slide -->
 
-    <h2 class="ff-title-slide ff-font-body1 ff-text-normal ff-d-flex ff-mt-24 ff-mt-sm-16" pwa-to-product-page>{{ (product.name).length > 33 ? (product.name.substr(0, 33) + '...') : product.name }}</h2>
+    <h2 class="ff-title-slide ff-font-body1 ff-text-normal ff-d-flex ff-mt-22 ff-mt-sm-16" pwa-to-product-page>{{ (product.name).length > 33 ? (product.name.substr(0, 33) + '...') : product.name }}</h2>
     <p pwa--if="product.promotional_price <= product.price" 
         class="ff-price-through-slide ff-font-body1 ff-text-medium ff-text-line-through ff-d-flex ff-align-items-center">{{ product.price | price }}</p>
     <p class="ff-price-slide ff-h5 ff-d-flex ff-align-items-center">{{ product.promotional_price | price}}</p>

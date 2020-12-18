@@ -9,3 +9,30 @@
 h2.ff-title-slide.ff-font-body1.ff-text-normal.ff-d-flex.ff-align-items-center {
     min-height: 89px;
 }
+
+.ff-card-product {
+    height: 479px;
+}
+
+.ff-card-product small {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    height: unset;
+}
+
+.ff-mt-22 {
+    margin-top: 22px;
+}
+
+.ff-title-slide {
+    max-height: 50px;
+    margin-top: 22px;
+}
+
+.ff-price-through-slide {
+    margin-top: 14px;
+}
+
+.ff-price-slide {
+    margin-top: 5px;
+}

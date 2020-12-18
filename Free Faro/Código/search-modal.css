@@ -110,22 +110,7 @@
     color: var(--color-orange-bold);
   }
   
-  /* ff-recommendation */
   
-  .ff-recommendation {
-    background: var(--color-black-bold);
-    text-align: center;
-    color: var(--color-gray-bold);
-  }
-  
-  .ff-recommendation span {
-    color: #FFFFFF;
-  }
-  
-  .ff-recommendation span a {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
   
   
   /*=============
