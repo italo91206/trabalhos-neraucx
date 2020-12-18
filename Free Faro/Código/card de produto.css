@@ -1,0 +1,11 @@
+.ff-card-product {
+    cursor: pointer !important;
+}
+
+.ff-img-slide.ff-d-flex.ff-flex-column.ff-justify-content-center.ff-align-items-center {
+    height: 305px;
+}
+
+h2.ff-title-slide.ff-font-body1.ff-text-normal.ff-d-flex.ff-align-items-center {
+    min-height: 89px;
+}
