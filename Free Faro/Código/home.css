@@ -1,34 +1,37 @@
 .ff-loja-home {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
+
 /* SLIDE PRODUCT  */
+
 .ff-loja-home .swiper-button-next,
 .ff-loja-home .swiper-button-prev {
-    background-image: none !important;
+	background-image: none !important;
 }
 
 .swiper-button-next.ff-swiper-product-2,
 .swiper-button-next.ff-swiper-product-3 {
-    right: 30%;
-    top: 25%;
+	right: 30%;
+	top: 25%;
 }
 
 .swiper-button-prev.ff-swiper-product-3,
 .swiper-button-prev.ff-swiper-product-2 {
-    left: 4.5%;
-    top: 25%;
+	left: 4.5%;
+	top: 25%;
 }
 
 .swiper-button-next.ff-swiper-product-1 {
-    right: 16.5%;
-    top: 24%;
+	right: 16.5%;
+	top: 24%;
 }
 
 .swiper-button-prev.ff-swiper-product-1 {
-    left: 16.5%;
-    top: 24%;
+	left: 16.5%;
+	top: 24%;
 }
+
 
 /* #ff-swiper-product-1 .ff-img-slide.ff-d-flex.ff-flex-column.ff-justify-content-center.ff-align-items-center,
 #ff-swiper-product-2 .ff-img-slide.ff-d-flex.ff-flex-column.ff-justify-content-center.ff-align-items-center,
@@ -37,256 +40,297 @@
 } */
 
 .ff-loja-home .swiper-pagination-clickable .swiper-pagination-bullet {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
+
 /* SLIDE INSTAGRAM */
+
 #ff-title-slide-instagram {
-    padding-left: 17%;
+	padding-left: 17%;
 }
 
 .swiper-button-prev.ff-slide-instagram {
-    left: 15.5%;
+	left: 15.5%;
 }
 
 .swiper-button-next.ff-slide-instagram {
-    right: 15.5%;
+	right: 15.5%;
 }
 
 .ff-instagram .swiper-pagination {
-    z-index: 1 !important;
+	z-index: 1 !important;
 }
 
 #ff-swiper-instagram .ff-img-slide.ff-d-flex.ff-flex-column.ff-justify-content-center.ff-align-items-center {
-    height: 213px;
+	height: 213px;
 }
 
+
 /* BOX SHADOW SLIDES */
+
 .ff-box-shadow-slides-right {
-    height: 100%;
-    position: absolute;
-    right: 0px;
-    top: -13px;
-    box-shadow: 0px 91px 74px 163px rgb(255, 255, 255, 0.9);
-    z-index: 2;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	top: -13px;
+	box-shadow: 0px 91px 74px 163px rgb(255, 255, 255, 0.9);
+	z-index: 2;
 }
 
 .ff-box-shadow-slides-left {
-    height: 54%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    box-shadow: 0px 91px 74px 163px rgb(255, 255, 255, 0.9);
-    z-index: 2;
+	height: 54%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	box-shadow: 0px 91px 74px 163px rgb(255, 255, 255, 0.9);
+	z-index: 2;
+}
+
+.ff-collection .ff-banner-left {
+	width: 50%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom bottom;
+	padding-top: calc(32px * 6);
+	padding-bottom: calc(32px * 6);
+	padding-left: 336px;
+}
+
+.ff-animals .ff-container-fluid {
+	height: 508px;
+}
+
+.ff-animal-left .ff-content-animal {
+	margin-right: 205px;
+}
+
+.ff-animal-right .ff-content-animal {
+	margin-left: 205px;
+}
+
+.ff-animals .ff-animal-left,
+.ff-animals .ff-animal-right {
+	position: relative;
+	height: 100%;
+	width: calc(100% / 2 - 15px);
+}
+
+.ff-animals .ff-animal-left h2,
+.ff-animals .ff-animal-right h2 {
+	color: var(--color-black-light);
+	margin-bottom: 64px;
+}
+
+.ff-animals .ff-animal-left {
+	background: pwa-url(cachorro) no-repeat, var(--color-gray-light);
+	background-position: 0% 100%;
+	background-position-x: 174px;
+}
+
+.ff-animals .ff-animal-right {
+	background: pwa-url(gato) no-repeat, var(--color-gray-light);
+	background-position: 100% 100%;
+	background-position-x: 424px;
+}
+
+
+/* Película hover dog */
+
+.ff-animals .ff-animal-left-hover:before,
+.ff-animals .ff-animal-right-hover:before {
+	background-color: rgba(0, 0, 0, .45);
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	z-index: 1;
+}
+
+.ff-animals .ff-animal-left .ff-content-animal,
+.ff-animals .ff-animal-right .ff-content-animal {
+	z-index: 1;
 }
 
 
 /*=============
     MOBILE
 =============*/
+
 @media(max-width: 1024px) {
-    .ff-loja-home .swiper-button-next,
-    .ff-loja-home .swiper-button-prev,
-    .ff-box-shadow-slides-left {
-        display: none !important;
-    }
-
-    /* SLIDE BANNERS */
-    #ff-swiper-header {
-        height: 37vh;
-    }
-
-    #ff-swiper-header .swiper-slide img {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* BOX SHADOW SLIDES */
-    .ff-box-shadow-slides-right {
-        display: none;
-    }
-
-    /* SECTION COLLECTIONS */
-    #ff-swiper-collection-3 {
-        margin-top: -84px;
-    }
-
-    .ff-resell .ff-left-resell {
-        background-size: 69%;
-        background-position: 22px 9%;
-    }
-
-    /* SECTION INSTAGRAM */
-    #ff-title-slide-instagram {
-        padding-left: 0px;
-    }
+	.ff-loja-home .swiper-button-next,
+	.ff-loja-home .swiper-button-prev,
+	.ff-box-shadow-slides-left {
+		display: none !important;
+	}
+	/* SLIDE BANNERS */
+	#ff-swiper-header {
+		height: 37vh;
+	}
+	#ff-swiper-header .swiper-slide img {
+		height: 100%;
+		object-fit: cover;
+	}
+	/* BOX SHADOW SLIDES */
+	.ff-box-shadow-slides-right {
+		display: none;
+	}
+	/* SECTION COLLECTIONS */
+	#ff-swiper-collection-3 {
+		margin-top: -84px;
+	}
+	.ff-resell .ff-left-resell {
+		background-size: 69%;
+		background-position: 22px 9%;
+	}
+	/* SECTION INSTAGRAM */
+	#ff-title-slide-instagram {
+		padding-left: 0px;
+	}
 }
 
 @media(max-width: 900px) {
-    .ff-loja-home .ff-mw-47p {
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .swiper-slide.ff-cards-product-content {
-        width: 79% !important;
-    }
+	.ff-loja-home .ff-mw-47p {
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	.swiper-slide.ff-cards-product-content {
+		width: 79% !important;
+	}
 }
-    
+
 @media(max-width: 600px) {
-    .ff-md-d-none {
-        display: none !important;
-    }
-
-     .ff-loja-home {
-        margin-top: 96px !important;
-    }
-
-    .ff-loja-home #ff-swiper-header {
-        height: 85vh !important;
-    }
-
-    .ff-loja-home #ff-swiper-header .swiper-slide img {
-        height: 100% !important;
-        object-fit: cover;
-    }
-
-    .ff-content-banner {
-        width: 100%;
-    }
-
-    .ff-flex-mb-column {
-        flex-direction: column;
-    }
-
-    .ff-collection .ff-btn {
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    /* SECTION INSTAGRAM */
-    .ff-mb-flex-col-reverse {
-        flex-direction: column-reverse !important;
-    }
-
-    #ff-swiper-instagram .swiper-slide {
-        width: 73%;
-    }
-
-    .ff-instagram .ff-img-slide img {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #ff-swiper-instagram .ff-img-slide {
-        height: 275px;
-    }
-
-    #instagram-home-icon {
-        margin: 0 auto;
-    }
-
-    /* SECTION REVENDEDOR */
-    .ff-resell .ff-left-resell {
-        padding: 41px 15px;
-    }
-
-    .ff-resell {
-        margin-top: 115px;
-    }
-
-    .ff-mw-sm-100 {
-        max-width: 100%;
-    }
+	.ff-md-d-none {
+		display: none !important;
+	}
+	.ff-loja-home {
+		margin-top: 96px !important;
+	}
+	.ff-loja-home #ff-swiper-header {
+		height: 85vh !important;
+	}
+	.ff-loja-home #ff-swiper-header .swiper-slide img {
+		height: 100% !important;
+		object-fit: cover;
+	}
+	.ff-content-banner {
+		width: 100%;
+	}
+	.ff-flex-mb-column {
+		flex-direction: column;
+	}
+	.ff-collection .ff-btn {
+		width: 100%;
+		margin-left: 0px;
+	}
+	/* SECTION INSTAGRAM */
+	.ff-mb-flex-col-reverse {
+		flex-direction: column-reverse !important;
+	}
+	#ff-swiper-instagram .swiper-slide {
+		width: 73%;
+	}
+	.ff-instagram .ff-img-slide img {
+		height: 100%;
+		object-fit: cover;
+	}
+	#ff-swiper-instagram .ff-img-slide {
+		height: 275px;
+	}
+	#instagram-home-icon {
+		margin: 0 auto;
+	}
+	/* SECTION REVENDEDOR */
+	.ff-resell .ff-left-resell {
+		padding: 41px 15px;
+	}
+	.ff-resell {
+		margin-top: 115px;
+	}
+	.ff-mw-sm-100 {
+		max-width: 100%;
+	}
 }
 
 
 /*==================
     TABLET
 ===================*/
+
 @media(min-width: 760px) and (max-width: 1024px) {
-    /* SECTIONS CATEGORIES */
-    .ff-categories-banner {
-        height: 35vh !important;
-    }
-
-    /* CARD PRODUCT */
-    #ff-swiper-product-1 .ff-img-slide {
-        height: 305px !important;
-    }
-
-    .ff-loja-home .ff-img-slide {
-        height: 206px !important;
-    }
-
-    /* SECTION ANIMALS */
-    .ff-animals .ff-container-fluid {
-        height: 32vh;
-    }
-
-    /* FEED INSTAGRAM */
-    .ff-instagram .ff-img-slide img {
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .ff-loja-home .ff-instagram .ff-img-slide {
-        height: 190px !important;
-    }
-
-    /* SECTION REVENDEDOR */
-    .ff-resell .ff-left-resell {
-        padding: 60px 47px 50px 60px;
-    }
+	/* SECTIONS CATEGORIES */
+	.ff-categories-banner {
+		height: 35vh !important;
+	}
+	/* CARD PRODUCT */
+	#ff-swiper-product-1 .ff-img-slide {
+		height: 305px !important;
+	}
+	.ff-loja-home .ff-img-slide {
+		height: 206px !important;
+	}
+	/* SECTION ANIMALS */
+	.ff-animals .ff-container-fluid {
+		height: 32vh;
+	}
+	/* FEED INSTAGRAM */
+	.ff-instagram .ff-img-slide img {
+		height: 100%;
+		object-fit: cover;
+	}
+	.ff-loja-home .ff-instagram .ff-img-slide {
+		height: 190px !important;
+	}
+	/* SECTION REVENDEDOR */
+	.ff-resell .ff-left-resell {
+		padding: 60px 47px 50px 60px;
+	}
 }
 
 @media(min-width: 760px) and (max-width: 860px) {
-    /* SLIDE 1 - PRODUCTS HOME */
-    #ff-swiper-product-1 .swiper-slide.ff-cards-product-content {
-        width: 48% !important;
-    }
-
-    /* CARD PRODUCT COLECTIONS */
-    #ff-swiper-collection-2 .ff-img-slide,
-    #ff-swiper-collection-3 .ff-img-slide {
-        height: 305px !important;
-    }
-
-    #ff-swiper-collection-2 .ff-title-slide {
-        min-height: 65px;
-    }
-
-    .swiper-slide.ff-cards-product-content {
-        width: 48% !important;
-    }
-
-    /* SLIDE INSTAGRAM */
-    #ff-swiper-instagram .swiper-slide {
-        width: 42% !important;
-    }
-
-    /* SECTION ANIMALS */
-    .ff-animals .ff-container-fluid {
-        height: 40vh;
-    }
-
-    .ff-loja-home .ff-mt-32.ff-animals {
-        height: 880px;
-    }
-
-    .ff-animals .ff-animal-left,
-    .ff-animals .ff-animal-right {
-        width: 100% !important;
-    }
-
-    .ff-resell .ff-left-resell {
-        padding: 60px 77px 50px 60px !important;
-    }
+	/* SLIDE 1 - PRODUCTS HOME */
+	#ff-swiper-product-1 .swiper-slide.ff-cards-product-content {
+		width: 48% !important;
+	}
+	/* CARD PRODUCT COLECTIONS */
+	#ff-swiper-collection-2 .ff-img-slide,
+	#ff-swiper-collection-3 .ff-img-slide {
+		height: 305px !important;
+	}
+	#ff-swiper-collection-2 .ff-title-slide {
+		min-height: 65px;
+	}
+	.swiper-slide.ff-cards-product-content {
+		width: 48% !important;
+	}
+	/* SLIDE INSTAGRAM */
+	#ff-swiper-instagram .swiper-slide {
+		width: 42% !important;
+	}
+	/* SECTION ANIMALS */
+	.ff-animals .ff-container-fluid {
+		height: 40vh;
+	}
+	.ff-loja-home .ff-mt-32.ff-animals {
+		height: 880px;
+	}
+	.ff-animals .ff-animal-left,
+	.ff-animals .ff-animal-right {
+		width: 100% !important;
+	}
+	.ff-resell .ff-left-resell {
+		padding: 60px 77px 50px 60px !important;
+	}
 }
 
+
 /* IPAD PRO */
+
 @media(min-width: 900px) and (max-width: 1040px) {
-    .ff-collections-width-ipadpro {
-        max-width: 53% !important;
-    }
+	.ff-collections-width-ipadpro {
+		max-width: 53% !important;
+	}
 }
