@@ -1,0 +1,378 @@
+<header id="ef-header" pwa-hook="prepara-header">
+   <div class="pwa-menu-container">
+    <div class="menu-content">
+      <a pwa-to-page="home">
+        <img pwa-src="logo-equipofacil" alt="Equipofacil">
+      </a>
+      
+      <div class="search-header-container">
+        <div class="search-header-desktop">
+          <button><span></span></button>
+          <input type="text" id="search-filter-equipo-header">
+          <div class="select-container">
+            <select name="" id="">
+              <option value="" selected>Somente em Equipo Médico</option>
+              <option value="">Somente em Equipo Médico</option>
+              <option value="">Somente em Equipo Médico</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Modal resultado pesquisa equipo-->
+        <div class="modal-pesquisa">
+          <div>
+            <div class="title-group-pesquisa">
+              <p>Marcas</p>
+              <span>0</span>
+            </div>
+            <ul>
+              <li>Nenhuma narca encontrada</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="title-group-pesquisa">
+              <p>Produtos</p>
+              <span>5</span>
+            </div>
+            <ul>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+            </ul>
+          </div>
+
+          <button class="button-primary">Ver tudo <span>(6)</span></button>
+        </div>
+      </div>
+
+      <div class="avatar-container-header">
+        <a pwa-to-page="">Vender</a>
+
+        <nav>
+          <div class="avatar" id="avatar-modal">
+            <div class="avatar-image">
+              <span></span>
+            </div>
+            <p>Olá, Clarice</p>
+            <span></span>
+          </div>
+
+          <div class="modal-desktop-user">
+            <ul>
+              <li>
+                <a pwa-to-page="#">
+                  <span><img pwa-src="icon-cart" alt="Minhas compras"></span>
+                  Minhas Compras
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="#">
+                  <span><img pwa-src="icon-cart-1" alt="Meus Favoritos"></span>
+                  Meus Favoritos
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span> <img pwa-src="icon-cart-2" alt="Meus anúncios"> </span>
+                  Meus anúncios
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-3" alt="Minhas vendas"></span>
+                  Minhas vendas
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-4" alt="Meu histórico"></span>
+                  Meu histórico
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-5" alt="Perguntas"></span>
+                  Perguntas
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-data" alt="Meus dados"></span>
+                  Meus dados
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-security" alt="Segurança"></span>
+                  Segurança
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-help" alt="ajuda"></span>
+                  Ajuda
+                </a>
+              </li>
+
+              <li>
+                <a pwa-to-page="">
+                  <span>
+                    <img pwa-src="icon-cart-7" alt="contanto">
+                  </span>
+                  Contato
+                </a>
+              </li>
+
+              <li id="sign-out">
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-sing-out" alt="sair"></span>
+                  Sair
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="menu-header-buttons">
+        <span id='button-notification' class="notification true"></span>
+
+        <button id="menu-header-bar" class="pwa-button-action-modal" onclick="handleModalMenu()">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal de notificação -->
+    <div class="pwa-modal-notification">
+      <div class="pwa-modal-notification-container">
+        <div class="pwa-modal-notification-card">
+          <a pwa-to-page="">
+            <img pwa-src="icon-notification-entrege" alt="">
+            <div class="card-notification-info">
+              <h6>Você recebeu sua compra.</h6>
+              <p>Eletrocardiógrafo ECG Compassus 3000 - Alfamed Sem CD para Armazenam…</p>
+              <span>23/03/2020</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="pwa-modal-notification-card">
+          <a pwa-to-page="">
+            <img pwa-src="icon-notification-email" alt="">
+            <div class="card-notification-info">
+              <h6>Você recebeu sua compra.</h6>
+              <p>Eletrocardiógrafo ECG Compassus 3000 - Alfamed Sem CD para Armazenam…</p>
+              <span>23/03/2020</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="pwa-modal-notification-card">
+          <a pwa-to-page="">
+            <img pwa-src="icon-notification-anuncio" alt="">
+            <div class="card-notification-info">
+              <h6>Você recebeu sua compra.</h6>
+              <p>Eletrocardiógrafo ECG Compassus 3000 - Alfamed Sem CD para Armazenam…</p>
+              <span>23/03/2020</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="pwa-modal-notification-card">
+          <a pwa-to-page="">
+            <img pwa-src="icon-notification-anuncio" alt="">
+            <div class="card-notification-info">
+              <h6>Você recebeu sua compra.</h6>
+              <p>Eletrocardiógrafo ECG Compassus 3000 - Alfamed Sem CD para Armazenam…</p>
+              <span>23/03/2020</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="pwa-modal-notification-card">
+          <a pwa-to-page="">
+            <img pwa-src="icon-notification-anuncio" alt="">
+            <div class="card-notification-info">
+              <h6>Você recebeu sua compra.</h6>
+              <p>Eletrocardiógrafo ECG Compassus 3000 - Alfamed Sem CD para Armazenam…</p>
+              <span>23/03/2020</span>
+            </div>
+          </a>
+        </div>
+
+        <a class="pwa-button-notification">Ver notificações mais antigas</a>
+      </div>
+    </div>
+
+    <div id='modal-menu-user' class="modal-menu ">
+      <!--Quando o user estiver online basta remover a class offline que o nav de account abilitara-->
+      <div class="menu-user">
+        <span class='foto-perfil'>
+          <img pwa-src="avatar" alt="foto avatar">
+        </span>
+
+        <div class="user-cad offline" id="user-card-offline">
+          <h6 class="name-user">Olá.</h6>
+          <p>Entre com sua conta ou cadastre-se para comprar e vender equipos.</p>
+          <button type="button">Começar agora</button>
+        </div>
+
+        <div class="user-cad " id="user-card-online">
+          <h6 class="name-user">Olá. <span>Maria</span></h6>
+          <button onclick="handleModalUserAccount()" id="btn-account" class="account">
+            Minha conta
+            <span class="arrow-down"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="menu-perfil-account">
+        <ul>
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-data" alt="Meus dados">
+              </span>
+              Meus dados
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-security" alt="Segurança">
+              </span>
+              Segurança
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-help" alt="ajuda">
+              </span>
+              Ajuda
+            </a>
+          </li>
+
+          <li id="sign-out">
+            <a pwa-to-page="">
+              <span>
+                <img src="icon-sing-out" alt="sair">
+              </span>
+              Sair
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="menu-perfil-actions">
+        <ul>
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart" alt="Minhas compras">
+              </span>
+              Minhas Compras
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-1" alt="Meus Favoritos">
+              </span>
+              Meus Favoritos
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span> 
+                <img pwa-src="icon-cart-2" alt="Meus anúncios"> 
+              </span>
+              Meus anúncios
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-3" alt="Minhas vendas">
+              </span>
+              Minhas vendas
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-4" alt="Meu histórico">
+              </span>
+              Meu histórico
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-5" alt="Perguntas">
+              </span>
+              Perguntas
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-6" alt="Equipe de outra área">
+              </span>
+              Equipe de outra área
+            </a>
+          </li>
+
+          <li>
+            <a pwa-to-page="">
+              <span>
+                <img pwa-src="icon-cart-7" alt="contanto">
+              </span>
+              Contato
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu-info">
+        <img pwa-src="confirm-icon" alt="Venda hoje mesmo">
+        <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+      </div>
+    </div>
+  </div>
+</header>

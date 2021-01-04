@@ -1,0 +1,125 @@
+:root {
+    font-size: 60%;
+
+    --color-background: #F5F4F5;
+    --color-background-footer: #123E52;
+    --color-background-menu-user: #174E67;
+    --color-background-footer-second: #D1DCE1;
+    
+    --color-button-blue-100: #D0EFF6;
+    --color-button-blue-200: #A1DFED;
+    
+    --color-background-button-primary: #FFFF;
+    
+    --color-title-text: #ffffff;
+
+    --color-text-while: #FFFF;
+        
+    --color-text-princ-200: #A2B8C2;
+    --color-text-princ-300: #7495A4;
+    --color-text-princ-400: #457185;
+    --color-text-princ-500:  #174E67;
+
+    --color-text-blue: #14AFD1;
+    --color-text-blue-600: #108CA7;
+    --color-text-blue-700: #0C697D;
+
+    --color-text-primary-footer: #D1DCE1;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-background);
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 { /* Títulos do site*/
+    color: #174E67;
+    margin-bottom: 12px;
+    font-family: Cambay;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body, input, button, textarea {
+    font: 500 1.6rem Cambay;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}
+
+
+h5{ /* título - campo de pesquisa  */
+    height: 23px;
+    position: relative;
+    margin-top: 1.5pc;
+  
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+/* Estilização para botam de modais, close e hanburger. */
+.pwa-button-action-modal {
+    width: 38px;
+    height: 25px;
+
+    position: relative;
+    border:none;
+    background: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-button-action-modal span {
+    width: 100%;
+    height: 100%;
+
+    background: pwa-url(handle-bar);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-button-action-modal.close span{
+    background: pwa-url(handle-close) no-repeat center;
+}
+
+/* Ajusta a imagem no fundo */
+.bg-equipo-facil-logo-fundo {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.looked {
+    overflow: hidden;
+}
