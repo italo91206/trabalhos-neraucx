@@ -1,0 +1,88 @@
+/* CSS PÁGINA CATEGORIA */
+
+/*------- Inicio categoria personalizada -------*/
+
+.efs-categoria-page .efs-slider-produtos-title {
+    display: block;
+    text-align: center;
+}
+
+.efs-categoria-page .efs-slider-produtos-title h2 {
+    margin-bottom: 87px;
+}
+
+.efs-categoria-page .efs-slider-produtos-title .efs-btns-slider-produtos {
+    justify-content: center;
+}
+
+.efs-categoria-personalizada {
+    display: flex;
+    column-gap: 30px;
+}
+
+.efs-categoria-personalizada a {
+    color: #191C1E;
+}
+
+.efs-categoria-personalizada-left {
+    width: 50%;
+}
+
+.efs-categoria-personalizada-left img, .efs-categoria-personalizada-right img {
+    max-width: 100%;
+}
+
+.efs-categoria-personalizada-right {
+    width: 50%;
+    column-gap: 16px;
+    row-gap: 28px;
+}
+
+.efs-categoria-personalizada-right-row {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 28px;
+}
+
+/*------- Fim categoria personalizada -------*/
+
+/* ------- BREAKPOINTS ------- */
+
+@media only screen and (max-width: 992px) {
+    /*------- Inicio categoria personalizada -------*/
+    .efs-categoria-personalizada {
+        display: block;
+        column-gap: 30px;
+    }
+    .efs-categoria-personalizada-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .efs-categoria-personalizada-left .efs-nome-categoria {
+        font-size: 1.125em;
+    }
+    .efs-categoria-personalizada-right {
+        display: flex;
+        min-width: 100%;
+        overflow-x: scroll;
+        margin-top: 30px;
+    }
+    .efs-categoria-personalizada-right::-webkit-scrollbar {
+        display: none;
+    }
+    .efs-categoria-personalizada-right .efs-nome-categoria {
+        font-size: 0.875em;
+        margin-top: 8px;
+    }
+    .efs-categoria-personalizada-right img {
+        max-width: 165px !important;
+        max-height: 165px;
+    }
+    .efs-categoria-personalizada-right-row {
+        display: flex;
+        column-gap: 16px;
+        margin-bottom: 28px;
+    }
+    /*------- Fim categoria personalizada -------*/
+}

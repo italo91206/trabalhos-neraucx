@@ -1,0 +1,92 @@
+.p4a-authentication--open {
+    width: 492px;
+}
+
+.p4a-authentication-header .p4a-authentication-header__title {
+    color: #394047;
+    font-size: 14px;
+    font-family: 'Din Regular';
+    letter-spacing: unset;
+    font-weight: 700;
+}
+
+.p4a-authentication-text {
+    font-family: 'Din Regular';
+    color: #191C1E;
+    font-size: 16px;
+}
+
+.p4a-input__field:focus + .p4a-input__label, .p4a-input__field:valid + .p4a-input__label, .p4a-input__field:read-only + .p4a-input__label, .p4a-input__field:invalid + .p4a-input__label {
+    font-family: 'Din Regular';
+    font-size: 16px;
+    color: rgb(25, 28, 30);
+}
+
+.p4a-input__field {
+    font-size: 16px;
+    color: #ADB5BD;
+}
+
+.p4a-input__field:focus {
+    outline: none;
+    border-bottom: 1px solid #85909a;
+}
+
+.p4a-style__primary--background:disabled {
+    color: #fff;
+    background: #394047;
+    border: none;
+}
+
+.p4a-style__primary--border {
+    border: unset;
+}
+
+.p4a-authentication-screen .p4a-style__primary--background {
+    color: #fff;
+    background: #394047;
+}
+
+.p4a-input__field.p4a-input__field--invalid {
+    border-color: #b70404;
+}
+
+.p4a-input__field.p4a-input__field--invalid {
+    color: #b70404;
+}
+
+.p4a-input__field.p4a-input__field--invalid + .p4a-input__label, .p4a-input__field.p4a-input__field--invalid:focus + .p4a-input__label, .p4a-input__field.p4a-input__field--invalid:invalid + .p4a-input__label {
+    color: #b70404;
+}
+
+.p4a-account.p4a-account--open {
+    width: 492px;
+}
+
+.p4a-account .p4a-account-header__title {
+    color: #394047;
+    font-size: 14px;
+    font-family: 'Din Regular';
+    letter-spacing: unset;
+    font-weight: 700;
+}
+
+.p4a-account .p4a-account-menu .p4a-account-menu__item {
+    font-family: 'Din Regular';
+    color: #191C1E;
+    font-size: 16px;
+    letter-spacing: unset;
+}
+
+.p4a-account .p4a-account-menu .p4a-account-menu__item.p4a-account-menu__item--active {
+    margin-right: 0px;
+    font-family: 'Din Bold';
+    color: #191C1E;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.p4a-account-screen .p4a-style__primary--background {
+    color: #fff;
+    background: #394047;
+}

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/franqueados-dashboard.css" />
+  <title>EFS | Dashboard Franqueados</title>
+</head>
+
+<body>
+  <!-- Inicio Header da página -->
+  <header class="efs-header">
+    <div class="efs-header-desktop">
+      <!-- Inicio Header 1 -->
+      <div class="efs-header-1-bg">
+        <div class="efs-container">
+          <div class="efs-header-1 efs-din-b">
+            <div class="efs-header-1-left">
+              <div class="efs-lojas">
+                <img src="images/icons/efs-icon-pin.svg" alt="pin" />
+                <a href="#lojas">nossas lojas</a>
+              </div>
+
+              <div class="efs-atendimento">
+                <img src="images/icons/efs-icon-phone.svg" alt="phone" />
+                <a href="#atendimento">atendimento ao cliente</a>
+              </div>
+            </div>
+
+            <div class="efs-header-1-right">
+              <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+
+              <img id="efs-fav" src="images/icons/efs-icon-heart.svg" alt="favoritar" />
+
+              <a href="#carrinho" class="efs-carrinho">
+                <img src="images/icons/efs-icon-cart.svg" alt="carrinho">
+                <p class="efs-nmr-produtos">1</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Header 1 -->
+
+      <!-- Inicio Header 2 -->
+      <div class="efs-container">
+        <div class="efs-header-2">
+          <div class="efs-logo">
+            <img src="images/efs-logo.svg" alt="logo" />
+          </div>
+
+          <nav class="efs-navbar">
+            <ul>
+              <li><a href="#" class="openSubmenu">Masculino</a></li>
+              <li><a href="#feminino">Feminino</a></li>
+              <li><a href="#juvenil-infantil">Juvenil e Infantil</a></li>
+              <li><a href="#acessórios">Acessórios</a></li>
+              <li><a href="#giftcard">Gift Card</a></li>
+            </ul>
+          </nav>
+
+          <div class="efs-search">
+            <input class="efs-search-input" type="text" placeholder="O que você procura?" />
+            <a class="efs-btnOpenProdutosSearch" href="#search"><img src="images/icons/efs-icon-search.svg"
+                alt="procurar" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Header 2 -->
+    </div>
+    <!-- Fim Header Desktop -->
+
+    <!-- Inicio Header Mobile -->
+    <div class="efs-container">
+      <div class="efs-header-mobile-wrapper">
+        <div class="efs-header-mobile">
+          <div class="efs-logo">
+            <img src="images/efs-logo.svg" alt="logo" />
+          </div>
+
+          <div class="efs-header-mobile-options">
+            <a href=#btnSearchMobile class="efs-btnOpenSearchMobile">
+              <img src="images/icons/efs-icon-search-orange.svg" alt="procurar" />
+            </a>
+
+            <a href="#btnCarrinhoMobile">
+              <img src="images/icons/efs-icon-cart.svg" alt="carrinho" />
+            </a>
+
+            <a href="#btnOpenMenu" class="efs-btnOpenMenuMobile">
+              <img src="images/icons/efs-icon-burguer-menu.svg" alt="abrir menu" />
+            </a>
+          </div>
+        </div>
+        <div class="efs-closeSearchMobile">
+          <img src="images/icons/efs-icon-close-search-mobile.svg" alt="fechar search mobile" />
+        </div>
+      </div>
+    </div>
+    <!-- Inicio Header 3 -->
+    <div class="efs-header-3-bg">
+      <div class="efs-container">
+        <div class="efs-header-3 efs-din-b">
+          <p>Parcele em até 10x*</p>
+          <p>Frete grátis nas compras acima de R$150,00</p>
+          <p>Receba em casa, fique em segurança</p>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Header 3 -->
+
+
+    <div class="efs-menu-mobile">
+      <div class="efs-menu-row-1-bg">
+        <div class="efs-container">
+          <div class="efs-menu-row-1">
+            <div class="efs-menu-account">
+              <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+            </div>
+
+            <div class="efs-menu-options">
+              <a href="#lancamentos">Lançamentos</a>
+              <a href="#mais-vendidos">Mais vendidos</a>
+              <a href="#ofertas">Ofertas</a>
+            </div>
+
+            <nav class="efs-navbar-mobile">
+              <ul>
+                <li><a href="#openMenuMasculino" class="openSubmenu">Masculino</a></li>
+                <li><a href="#feminino">Feminino</a></li>
+                <li><a href="#juvenil-infantil">Juvenil e Infantil</a></li>
+                <li><a href="#acessórios">Acessórios</a></li>
+                <li><a href="#giftcard">Gift Card</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="efs-submenu-row-2-bg">
+        <div class="efs-container">
+          <div class="efs-submenu-row-2">
+            <div class="efs-submenu-esportes">
+              <div class="efs-submenu-esportes-options">
+                <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+                <a href="#nba-option">NBA</a>
+                <a href="#nfl-option">NFL</a>
+                <a href="#mlb-option">MLB</a>
+              </div>
+
+              <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+            </div>
+
+            <div class="swiper-container efs-esporte-images">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-1.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-2.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-3.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-4.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-5.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-6.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-7.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-8.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-9.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-10.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-1.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-2.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-3.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-4.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-5.png" alt="futebol">
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+        <div class="efs-container">
+          <div class="efs-submenu-row-3">
+            <div class="efs-submenu-conta-desejos-rastreio">
+              <a class="efs-submenu-conta" href="#acessar-conta">
+                <img src="images/icons/efs-icon-account.svg" alt="conta">
+                <p>Minha Conta</p>
+              </a>
+
+              <a class="efs-submenu-desejos" href="#desejos">
+                <img src="images/icons/efs-icon-heart-submenu.svg" alt="desejos">
+                <p>Minha lista de desejos</p>
+              </a>
+
+              <a class="efs-submenu-rastreio" href="#rastreio">
+                <img src="images/icons/efs-icon-box.svg" alt="rastrear">
+                <p>Rastrear meus pedidos</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inicio Submenu - Header -->
+    <!-- Para ver o submenu só tirar a classe none -->
+    <div class="efs-submenu">
+      <div class="efs-submenu-row-1-bg">
+        <div class="efs-container">
+          <div class="efs-submenu-row-1">
+            <div class="efs-menu-options efs-submenu-options">
+              <a href="#lancamentos">Lançamentos</a>
+              <a href="#mais-vendidos">Mais vendidos</a>
+              <a href="#ofertas">Ofertas</a>
+              <a href="#ver-todos">Ver todos</a>
+            </div>
+
+            <div class="efs-menu-account">
+              <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+            </div>
+
+            <div class="efs-submenu-voltar">
+              <img src="images/icons/efs-icon-arrow-back.svg" alt="voltar">
+              <p>masculino</p>
+            </div>
+            <section class="efs-submenu-roupas">
+              <h2>Roupas</h2>
+              <a href="#camisetas">Camiseta</a>
+              <a href="#camiseta-polo">Camiseta Polo</a>
+              <a href="#regata">Regata</a>
+              <a href="#camisa">Camisa</a>
+              <a href="#jaqueta">jaqueta</a>
+              <a href="#bermuda">Bermuda</a>
+              <a href="#calca">Calça</a>
+            </section>
+
+            <section class="efs-submenu-acessorios">
+              <h2>Acessórios</h2>
+              <a href="#gorro">Gorro</a>
+              <a href="#chapéu">Chapéu</a>
+              <a href="#viseira">Viseira</a>
+              <a href="#cueca">Cueca</a>
+              <a href="#meia">Meia</a>
+            </section>
+
+            <img src="images/efs-image-submenu.png" alt="campo de futebol" />
+          </div>
+        </div>
+      </div>
+      <div class="efs-submenu-row-2-bg">
+        <div class="efs-container">
+          <div class="efs-submenu-row-2">
+            <div class="efs-submenu-esportes">
+              <div class="efs-submenu-esportes-options">
+                <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+                <a href="#nba-option">NBA</a>
+                <a href="#nfl-option">NFL</a>
+                <a href="#mlb-option">MLB</a>
+              </div>
+
+              <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+            </div>
+
+            <div class="swiper-container efs-esporte-images">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-1.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-2.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-3.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-4.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-5.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-6.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-7.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-8.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-9.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-10.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-1.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-2.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-3.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-4.png" alt="futebol">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/efs-futebol-5.png" alt="futebol">
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+        <div class="efs-container">
+          <div class="efs-submenu-row-3">
+            <div class="efs-submenu-conta-desejos-rastreio">
+              <a class="efs-submenu-conta" href="#acessar-conta">
+                <img src="images/icons/efs-icon-account.svg" alt="conta">
+                <p>Minha Conta</p>
+              </a>
+
+              <a class="efs-submenu-desejos" href="#desejos">
+                <img src="images/icons/efs-icon-heart-submenu.svg" alt="desejos">
+                <p>Minha lista de desejos</p>
+              </a>
+
+              <a class="efs-submenu-rastreio" href="#rastreio">
+                <img src="images/icons/efs-icon-box.svg" alt="rastrear">
+                <p>Rastrear meus pedidos</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Submenu - Header -->
+    <!-- Inicio Search - Header  -->
+    <div class="efs-search-produtos-bg">
+      <div class="efs-search-produtos">
+        <p class="efs-search-encontrados">Produtos encontrados</p>
+
+        <div class="efs-search-produtos-item efs-search-produto-1">
+          <img src="images/efs-search-1.png" alt="camisa" />
+          <div class="efs-search-produto-info">
+            <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+            <p class="efs-search-produto-preco">R$69, 90</p>
+          </div>
+        </div>
+
+        <div class="efs-search-produtos-item efs-search-produto-1">
+          <img src="images/efs-search-2.png" alt="camisa" />
+          <div class="efs-search-produto-info">
+            <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+            <p class="efs-search-produto-preco">R$69, 90</p>
+          </div>
+        </div>
+
+        <div class="efs-search-produtos-item efs-search-produto-1">
+          <img src="images/efs-search-3.png" alt="camisa" />
+          <div class="efs-search-produto-info">
+            <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+            <p class="efs-search-produto-preco">R$69, 90</p>
+          </div>
+        </div>
+
+        <div class="efs-search-produtos-item efs-search-produto-1">
+          <img src="images/efs-search-4.png" alt="camisa" />
+          <div class="efs-search-produto-info">
+            <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+            <p class="efs-search-produto-preco">R$69, 90</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Search - Header  -->
+
+    <!-- Inicio search Mobile -->
+    <div class="efs-search-mobile-wrapper">
+      <div class="efs-search-mobile">
+        <input class="efs-search-input" type="text" placeholder="O que você procura?" />
+        <a class="efs-btnOpenSearch" href="#search"><img src="images/icons/efs-icon-search.svg" alt="procurar" /></a>
+      </div>
+    </div>
+    <!-- Fim search Mobile -->
+  </header>
+  <!-- Fim Header da página -->
+
+  <main class="efs-dashboard-page">
+    <div class="efs-banner-dashboard">
+      <section class="efs-container">
+        <p>Seja bem-vindo, franqueado EFS</p>
+        <h1>ÁREA EXCLUSIVA DO FRANQUEADO<br> DA LOJA DE TODAS AS TORCIDAS.</h1>
+      </section>
+    </div>
+    <!-- INICIO efs-container -->
+    <div class="efs-container">
+      <div class="efs-body-dashboard">
+        <!-- INICIO efs-left-dashboard -->
+        <div class="efs-left-dashboard">
+
+          <!-- INICIO efs-materials-unit-dashboard  -->
+          <section class="efs-materials-unit-dashboard">
+            <h2>MATERIAIS PARA A SUA UNIDADE:</h2>
+            <a class="efs-btn-dashboard efs-accordion" href="">
+              <div class="efs-btn-dashboard-icon-title">
+                <img src="images/efs-manual.svg" alt="Manuais da unidade franqueada">
+                <h3>Manuais da unidade franqueada</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+
+            <div class="efs-drop-dashboard efs-accordion-content">
+              <a href="#">
+                <img src="images/efs-file.svg" alt="Manual de operação — Home based">
+                Manual de operação — Home based
+              </a>
+
+              <a href="#">
+                <img src="images/efs-file.svg" alt="Manual de operação de franquia">
+                Manual de operação de franquia
+              </a>
+
+              <a href="#">
+                <img src="images/efs-arrow-down.svg" alt="Projetos arquitetônicos">
+                Projetos arquitetônicos: quiosque e loja de vitrine
+              </a>
+            </div>
+
+            <a class="efs-btn-dashboard" href="dashboard-fornecedores-franqueados.html">
+              <div class="efs-btn-dashboard-icon-title">
+                <img src="images/efs-homologados.svg" alt="Manuais da unidade franqueada">
+                <h3>Fornecedores homologados</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+          </section>
+          <!-- FIM efs-materials-unit-dashboard  -->
+
+          <!-- INICIO efs-materials-promo-dashboard  -->
+          <section class="efs-materials-promo-dashboard">
+            <h2>MATERIAIS DE DIVULGAÇÃO:</h2>
+            <a class="efs-btn-dashboard efs-accordion" href="">
+              <div class="efs-btn-dashboard-icon-title">
+                <img src="images/efs-solicitacoes.svg" alt="Solicitações ao departamento de marketing">
+                <h3>Solicitações ao departamento de marketing</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+
+            <!-- efs-drop-dashboard -->
+            <div class="efs-drop-dashboard efs-drop-solicitacoes efs-accordion-content">
+              <p>Suas solicitações de materiais de marketing irão para produção e desenvolvimento por ordem cronológica
+                de envio. <span>O prazo máximo de envio de um material é de 7 (sete) dias.</span></p>
+              <br>
+              <p>Em caso de desenvovimentos com urgência, favor informar através do e-mail
+                marketing@esportefinostore.com.br ou pelo WhatsApp: (44) 98441-3441</p>
+
+              <form action="" class="efs-form">
+                <div class="efs-row-form-1">
+                  <div class="efs-form-group">
+                    <label for="efs-unidade-franqueada">UNIDADE FRANQUEADA</label>
+                    <input id="efs-unidade-franqueada" class="efs-input-form" type="text"
+                      placeholder="EFS Maringá Park">
+                  </div>
+
+                  <div class="efs-form-group">
+                    <label for="cidade">CIDADE</label>
+                    <input id="cidade" class="efs-input-form" type="text" placeholder="Maringá">
+                  </div>
+                </div>
+
+                <div class="efs-row-form-2">
+                  <div class="efs-form-group">
+                    <label for="tipo-material">TIPO DE MATERIAL</label>
+                    <select class="efs-input-form" name="tipo-materia" id="tipo-material">
+                      <option value="0">Panfleto</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="efs-row-form-3">
+                  <div class="efs-form-group">
+                    <label for="tipo-material-descricao">TIPO DE MATERIAL:</label>
+                    <textarea class="efs-input-form" name="" id="tipo-material-descricao" rows="5"
+                      placeholder="Descreva o item solicitado, explicando as mecânicas de promoção e/ou descontos."></textarea>
+                  </div>
+                </div>
+
+                <div class="efs-row-form-4">
+                  <div class="efs-form-group">
+                    <label for="periodo">PERÍODO:</label>
+                    <textarea class="efs-input-form" name="" id="periodo" rows="5"
+                      placeholder="Validade da campanha, caso necessário para a divulgação."></textarea>
+                  </div>
+                </div>
+
+                <div class="efs-form-btn">
+                  <div class="efs-form-group">
+                    <button class="efs-btn-entrar">ENVIAR SOLICITAÇÃO</button>
+                  </div>
+                </div>
+
+              </form>
+
+            </div> <!-- FIM efs-drop-dashboard -->
+
+            <a class="efs-btn-dashboard" href="#">
+              <div class="efs-btn-dashboard-icon-title">
+                <img src="images/efs-paper.svg" alt="Materiais de papelaria">
+                <h3>Materiais de papelaria</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+          </section>
+          <!-- FIM efs-materials-promo-dashboard -->
+
+          <!-- INICIO efs-fale-promo-dashboard  -->
+          <section class="efs-fale-dashboard">
+            <h2>FALE CONOSCO:</h2>
+            <a class="efs-btn-dashboard efs-accordion" href="">
+              <div class="efs-btn-dashboard-icon-title">
+                <img src="images/efs-sugestoes.svg" alt="Caixa de sugestões">
+                <h3>Caixa de sugestões</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+
+            <!-- efs-drop-dashboard -->
+            <div class="efs-drop-dashboard efs-drop-fale efs-accordion-content">
+
+              <form action="" class="efs-form">
+                  <div class="efs-row-form-1">
+                    <div class="efs-form-group">
+                      <label for="efs-unidade-franqueada-fale">UNIDADE FRANQUEADA</label>
+                      <input id="efs-unidade-franqueada-fale" class="efs-input-form" type="text"
+                        placeholder="EFS Maringá Park">
+                    </div>
+
+                    <div class="efs-form-group">
+                      <label for="cidade-fale">CIDADE</label>
+                      <input id="cidade-fale" class="efs-input-form" type="text" placeholder="Maringá">
+                    </div>
+                  </div>
+
+                  <div class="efs-row-form-2 efs-check-departamento">
+                    <div class="efs-form-group">
+                      <label class="efs-title-fale">PARA QUAL O DEPARTAMENTO SUA SUGESTÃO É DESTINADA?</label>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-marketing" class="efs-checkbox" type="checkbox" name="a">
+                        <label for="efs-check-marketing">Marketing</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-franquias" class="efs-checkbox" type="checkbox" name="a">
+                        <label for="efs-check-franquias">Franquias</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-financeiro" class="efs-checkbox" type="checkbox" name="a">
+                        <label for="efs-check-financeiro">Financeiro</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-produtos" class="efs-checkbox" type="checkbox" name="a">
+                        <label for="efs-check-produtos">Produtos e inovação</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-diretoria" class="efs-checkbox" type="checkbox" name="a">
+                        <label for="efs-check-diretoria">Diretoria</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="efs-row-form-3">
+                    <div class="efs-form-group">
+                      <label for="tipo-material-fale">QUAL A SUA SUGESTÃO PARA A EFS?</label>
+                      <textarea class="efs-input-form" name="" id="tipo-material-fale" rows="5"
+                        placeholder="Descreva sua sugestão"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="efs-form-btn">
+                    <div class="efs-form-group">
+                      <button class="efs-btn-entrar">ENVIAR SUGESTÃO</button>
+                    </div>
+                  </div>
+
+              </form>
+
+            </div> <!-- FIM efs-drop-dashboard -->
+
+            <a class="efs-btn-dashboard efs-accordion" href="">
+              <div class="efs-btn-dashboard-icon-title efs-accordion">
+                <img src="images/efs-solicitacao-troca.svg" alt="Caixa de sugestões">
+                <h3>Solicitações de troca de produtos</h3>
+              </div>
+              <img src="images/efs-arrow-btn.svg" alt="">
+            </a>
+
+            <!-- efs-drop-dashboard -->
+            <div class="efs-drop-dashboard efs-drop-fale efs-accordion-content">
+
+              <form action="" class="efs-form">
+
+                  <div class="efs-row-form-1">
+                    <div class="efs-form-group">
+                      <label for="efs-unidade-franqueada-solicitacao">UNIDADE FRANQUEADA</label>
+                      <input id="efs-unidade-franqueada-solicitacao" class="efs-input-form" type="text"
+                        placeholder="EFS Maringá Park">
+                    </div>
+
+                    <div class="efs-form-group">
+                      <label for="cidade-solicitacao">CIDADE</label>
+                      <input id="cidade-solicitacao" class="efs-input-form" type="text" placeholder="Maringá">
+                    </div>
+                  </div>
+
+                  <div class="efs-row-form-2 efs-check-departamento">
+                    <div class="efs-form-group">
+                      <label class="efs-title-fale">QUAL O PROBLEMA COM OS PRODUTOS QUE VOCÊ DESEJA TROCAR?</label>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-tecido" class="efs-checkbox" type="checkbox" name="b">
+                        <label for="efs-check-tecido">Tecido</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-costura" class="efs-checkbox" type="checkbox" name="b">
+                        <label for="efs-check-costura">Costura</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-estampa" class="efs-checkbox" type="checkbox" name="b">
+                        <label for="efs-check-estampa">Estampa</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-pedido" class="efs-checkbox" type="checkbox" name="b">
+                        <label for="efs-check-pedido">Pedido chegou incompleto</label>
+                      </div>
+
+                      <div class="efs-check-group">
+                        <input id="efs-check-outro-probl" class="efs-checkbox" type="checkbox" name="b">
+                        <label for="efs-check-outro-probl">Outro:</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="efs-row-form-3">
+                    <div class="efs-form-group">
+                      <label for="tipo-material-solicitacao">MENSAGEM:</label>
+                      <textarea class="efs-input-form" name="" id="tipo-material-solicitacao" rows="5"
+                        placeholder="Descreva brevemente o motivo desta solicitação de troca."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="efs-form-btn">
+                    <div class="efs-form-group">
+                      <button class="efs-btn-entrar">ENVIAR SOLICITAÇÃO</button>
+                    </div>
+                  </div>
+              </form>
+
+            </div> <!-- FIM efs-drop-dashboard -->
+          </section> <!-- FIM efs-fale-promo-dashboard -->
+
+        </div> <!-- FIM efs-left-dashboard -->
+
+        <!-- INICIO efs-right-dashboard -->
+        <div id="efs-atendimento-href" class="efs-right-dashboard">
+          <section class="efs-right-infos">
+            <a id="efs-btn-atendimento-franqueado" class="efs-title-right" href="#" data-href="#efs-atendimento-href">
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2.2834L17.65 -3.19993e-07L10 7.417L2.35 -2.40335e-06L3.11327e-07 2.2834L10 12L20 2.2834Z"
+                  fill="#FFFFFF" />
+              </svg>
+              <h2>ATENDIMENTO AO FRANQUEADO</h2>
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2.2834L17.65 -3.19993e-07L10 7.417L2.35 -2.40335e-06L3.11327e-07 2.2834L10 12L20 2.2834Z"
+                  fill="#FFFFFF" />
+              </svg>
+            </a>
+            <!-- INICIO Div scroll -->
+            <div class="efs-scroll-right">
+              <div class="efs-section-right ">
+                <h3>COMERCIAL E FINANCEIRO:</h3>
+                <p>João Carlos Mori Coutinho</p>
+                <p>Diretor de Franquias</p>
+                <a href="mailto:joaocarlos@esportefinostore.com.br">joaocarlos@esportefinostore.com.br</a>
+                <br>
+                <p>Daniel Hashimoto</p>
+                <p>Gerente de Franquias</p>
+                <a href="mailto:franquias@esportefinostore.com.br">franquias@esportefinostore.com.br</a>
+                <p>(44) 99751-9139</p>
+              </div>
+
+              <div class="efs-section-right">
+                <h3>MARKETING E PRODUTOS:</h3>
+                <p>Agência Box Ideias</p>
+                <p>solicitações:</p>
+                <a href="mailto:marketing@esportefinostore.com.br">marketing@esportefinostore.com.br</a>
+                <br>
+                <p>Julian Justus</p>
+                <p>Diretor de Inovação e Produtos</p>
+                <a href="julian@esportefinostore.com.br">julian@esportefinostore.com.br</a>
+              </div>
+
+              <div class="efs-section-right">
+                <form action="">
+                  <p class="efs-title-form-right">Envie uma mensagem e tire suas dúvidas diretamente com a nossa equipe:
+                  </p>
+
+                  <div class="efs-form-group">
+                    <input id="efs-franqueado-right-section" class="efs-input-form" type="text"
+                      placeholder="Franqueado">
+                  </div>
+
+                  <div class="efs-form-group">
+                    <input id="efs-cidade-right-section" class="efs-input-form" type="text" placeholder="Cidade">
+                  </div>
+
+                  <div class="efs-form-group">
+                    <textarea id="efs-message-right-section" class="efs-input-form" name="" rows="10"
+                      placeholder="Mensagem"></textarea>
+                  </div>
+
+                  <div class="efs-form">
+                    <button class="efs-btn-entrar">ENVIAR SOLICITAÇÃO</button>
+                  </div>
+
+                </form>
+              </div>
+            </div> <!-- FIM Div scroll -->
+
+          </section>
+        </div> <!-- FIM efs-right-dashboard -->
+      </div>
+
+    </div> <!-- FIM efs-container  -->
+
+  </main>
+
+  <!-- Inicio Footer -->
+  <footer>
+    <!-- Inicio Newsletter -->
+    <div class="efs-newsletter-bg">
+      <div class="efs-container">
+        <div class="efs-newsletter-bg-detail">
+          <section class="efs-newsletter">
+            <h2 class="efs-subtitle-component">Fique por dentro<br> <span>de todas as torcidas</span></h2>
+            <p>Seja o primeiro a saber sobre nossas novidades e promoções.</p>
+
+            <form action="" class="efs-newsletter-form">
+              <label for="email">email</label>
+              <div class="efs-newsletter-form-flex">
+                <div class="efs-newsletter-email">
+                  <input type="email" id="email" placeholder="Texto do input" required />
+                  <img class="efs-icon-email" src="images/icons/efs-icon-mail.svg" alt="seu email" />
+                </div>
+
+                <button class="efs-newsletter-form-button">Receber ofertas</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Newsletter -->
+
+    <!-- Inicio footer-infos -->
+    <div class="efs-footer-infos">
+      <div class="efs-container efs-footer-infos-flex">
+        <div class="efs-footer-infos-right">
+          <div class="efs-footer-logo">
+            <img src="images/efs-footer-logo.svg" alt="logo" />
+          </div>
+
+          <section class="efs-footer-info">
+            <div class="efs-btnOpenFooterMobile">
+              <h2>EFS</h2>
+              <img class="efs-arrow-open-footer" src="images/icons/efs-icon-arrow-down.svg" alt="abrir/fechar footer" />
+            </div>
+            <ul class="efs-footer-info-efs">
+              <li><a href="#sobre-efs">Sobre a EFS</a></li>
+              <li><a href="">Seja um franqueado</a></li>
+              <li><a href="">Area do franqueado</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </section>
+
+          <section class="efs-footer-info">
+            <div class="efs-btnOpenFooterMobile">
+              <h2>Ajuda</h2>
+              <img class="efs-arrow-open-footer" src="images/icons/efs-icon-arrow-down.svg" alt="abrir/fechar footer" />
+            </div>
+            <ul class="efs-footer-info-ajuda">
+              <li><a href="">Fale conosco</a></li>
+              <li><a href="">Dúvidas frequentes</a></li>
+              <li><a href="">Política de devoluções</a></li>
+              <li><a href="">Política de frete</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="efs-footer-infos-left">
+          <div class="efs-footer-infos-midias">
+            <img src="images/icons/efs-icon-insta.svg" alt="instagram" />
+            <img src="images/icons/efs-icon-facebook.svg" alt="facebook" />
+            <img src="images/icons/efs-icon-spotify.svg" alt="spotify" />
+          </div>
+
+          <div class="efs-footer-infos-contato">
+            <div class="efs-contato-telefone">
+              <img src="images//icons/efs-icon-phone.svg" alt="telefone">
+              <p>[44] 4141-6115</p>
+            </div>
+
+            <div class="efs-contato-email">
+              <img src="images//icons/efs-icon-mail.svg" alt="email">
+              <p>atendimento@esportefinostore.com.br</p>
+            </div>
+
+            <div class="efs-contato-loja">
+              <img src="images//icons/efs-icon-pin.svg" alt="pin">
+              <p>Encontre a loja mais próxima</p>
+            </div>
+          </div>
+
+          <div class="efs-footer-infos-associados">
+            <img src="images/efs-associado-1.svg" alt="afepar" />
+            <img src="images/efs-associado-2.svg" alt="abf" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim footer-infos -->
+
+    <!-- Inicio Footer Bandeiras -->
+    <div class="efs-footer-bandeiras">
+      <div class="efs-container efs-bandeiras-flex">
+        <div class="efs-bandeiras">
+          <img src="images/efs-mastercard.svg" alt="mastercard" />
+          <img src="images/efs-visa.svg" alt="visa" />
+          <img src="images/efs-elo.svg" alt="elo" />
+          <img src="images/efs-hipercard.svg" alt="hipercard" />
+          <img src="images/efs-americanexpress.svg" alt="americanexpress" />
+          <img src="images/efs-hiper.svg" alt="hiper" />
+          <img src="images/efs-boleto.svg" alt="boleto" />
+        </div>
+
+        <p> &copy; 2020 EFS, Todos os direitos reservados.</p>
+      </div>
+    </div>
+    <!-- Fim Footer Bandeiras -->
+
+    <!-- Inicio Footer Nerau -->
+    <div class="efs-footer-nerau">
+      <img src="images/logo-nerau.svg" alt="logo-nerau">
+    </div>
+    <!-- Fim Footer Nerau -->
+  </footer>
+  <!-- Fim Footer -->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

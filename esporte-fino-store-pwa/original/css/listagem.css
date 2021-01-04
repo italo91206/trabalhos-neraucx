@@ -1,0 +1,486 @@
+/* CSS LISTAGEM */
+
+/* ------- INICIO PÁGINA LISTAGEM ------- */
+
+.efs-listagem-page {
+    padding: 0 15px;
+}
+
+.efs-listagem-page .efs-categoria-tipo {
+    padding: 44px 0 18px 0;
+}
+
+/* Inicio Listagem Produtos */
+
+.efs-listagem-produto-flex {
+    display: flex;
+    column-gap: 30px;
+}
+
+/* inicio Filtro Listagem */
+
+/* Filtro Geral */
+
+.efs-listagem-produto-filtro {
+    min-width: 288px;
+    margin-top: 56px;
+}
+
+.efs-listagem-produto-filtro a {
+    font-family: 'Din Regular';
+    transition: 0.2s;
+}
+
+.efs-listagem-produto-filtro a:hover {
+    color: #FBA409;
+}
+
+.efs-listagem-filtro-title-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.efs-listagem-filtro-title {
+    font-family: 'Din Black';
+    text-transform: uppercase;
+    font-size: 1.1875em;
+}
+
+.efs-btnOpenFilterOption {
+    cursor: pointer;
+}
+
+.efs-filtro-options-none {
+    display: none;
+    opacity: 0;
+}
+
+.efs-filtro-options-show {
+    display: block;
+    opacity: 1;
+}
+
+.efs-filtro-arrow {
+    transition: 0.5s;
+}
+
+.efs-filtro-arrow-transition {
+    transform: rotate(-180deg);
+}
+
+.efs-listagem-filtro-times, .efs-listagem-filtro-tamanhos {
+    margin-top: 31.53px;
+}
+
+.efs-mostrar-mais {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    color: #ADB5BD;
+    font-weight: bold;
+    margin: 23px 0 41px 0;
+    cursor: pointer;
+}
+
+/* Filtro Times */
+
+.efs-listagem-filtro-option-times {
+    margin-bottom: 47px;
+}
+
+.efs-listagem-filtro-times a {
+    display: block;
+    margin-bottom: 16px;
+    color: #394047;
+}
+
+.efs-listagem-filtro-times .efs-search {
+    margin-bottom: 27px;
+}
+
+/* Filtro marcas */
+
+.efs-listagem-filtro-marcas a {
+    display: block;
+    margin-top: 15px;
+    color: #191C1E;
+}
+
+/* Filtro Tamanho */
+
+.efs-listagem-filtro-option-tamanho {
+    margin-bottom: 40px;
+}
+
+.efs-listagem-filtro-tamanhos a {
+    margin-right: 17px;
+    color: #191C1E;
+}
+
+/* Filtro Marca */
+
+.efs-listagem-filtro-option-marca {
+    margin-bottom: 47px;
+}
+
+/* Filtro Preço */
+
+.efs-listagem-filtro-precos a {
+    display: block;
+    margin-top: 15px;
+    color: #191C1E;
+}
+
+/* fim Filtro Listagem */
+
+/* Inicio Ordenar e resultados */
+
+.efs-listagem-resultados-ordenar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.efs-listagem-resultados-ordenar p {
+    color: #9EADBA;
+}
+
+.efs-listagem-resultados-ordenar span {
+    color: #191C1E;
+}
+
+.efs-listagem-ordenar {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+}
+
+.efs-listagem-ordenar span {
+    font-weight: bold;
+}
+
+.efs-listagem-ordenar span, .efs-listagem-ordenar img {
+    cursor: pointer;
+}
+
+/* Fim Ordenar e resultados */
+
+/* Listagem dos produtos */
+
+.efs-listagem-produto-produtos {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.efs-listagem-produto-produtos .efs-produto-promo-percent {
+    display: none;
+}
+
+/* Fim da listagem de produtos */
+
+/* Botão prev e next e paginação */
+
+.efs-listagem-produto-paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 77px 0 93px 0;
+}
+
+.efs-listagem-produto-paginas {
+    display: flex;
+    column-gap: 24px;
+    font-size: 1.125em;
+    color: #394047;
+}
+
+.efs-listagem-pagina-selecionada {
+    font-weight: bold;
+}
+
+.efs-listagem-produto-paginacao-mobile {
+    display: none;
+}
+
+.efs-btn-orange-white {
+    padding: 16px 24px;
+    border: 2px solid #CED4DA;
+    color: #191C1E;
+}
+
+.efs-btn-orange-white:hover, .efs-selecionado {
+    border: 2px solid #FBA409;
+    background-color: #FDC96D;
+    color: #CE8503;
+}
+
+/* Fim Botão prev e next e paginação */
+
+/* Fim Listagem Produtos */
+
+.efs-filtro-ordenar-mobile {
+    display: none;
+}
+
+.efs-ordenar-mobile {
+    display: none;
+}
+
+.efs-filtro-mobile-title {
+    display: none;
+}
+
+/* ------- FIM PÁGINA LISTAGEM ------- */
+
+/*------- BREAKPOINTS -------*/
+
+@media only screen and (max-width: 1250px) {
+    /*------- Listagem dos produtos ------*/
+    .efs-listagem-produto-produtos {
+        column-gap: 0px;
+    }
+    .efs-listagem-produto-produtos .efs-produto {
+        width: 50%;
+    }
+    .efs-listagem-produto-produtos .efs-produto:nth-child(odd) {
+        padding-right: 8px;
+    }
+    .efs-listagem-produto-produtos .efs-produto:nth-child(even) {
+        padding-left: 8px;
+    }
+    .efs-listagem-produto-produtos .efs-produto img {
+        width: 100%;
+    }
+    /*------- Fim da listagem de produtos -------*/
+}
+
+@media only screen and (max-width: 992px) {
+    /* ------- INICIO PÁGINA LISTAGEM ------- */
+    .efs-listagem-page {
+        padding: 0 0px;
+    }
+    .efs-pagina-caminho a {
+        font-size: 0.875em;
+    }
+    .efs-listagem-resultados-mobile {
+        font-family: 'Din Regular';
+        font-size: 0.75em;
+        display: initial;
+        text-transform: uppercase;
+        color: #9EADBA;
+    }
+    /* Inicio Listagem Produtos */
+    .efs-listagem-produto-flex {
+        display: block;
+        column-gap: 30px;
+    }
+    /* inicio Filtro Listagem */
+    /* Filtro Geral */
+    .efs-listagem-produto-filtro {
+        display: block;
+        position: fixed;
+        z-index: 10;
+        background-color: #FFF;
+        top: -58px;
+        left: 0px;
+        height: 101%;
+        overflow-y: scroll;
+        padding: 25px 25px 100px 25px;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.5s transform;
+        min-width: 60% !important;
+        max-width: 60%;
+    }
+    .efs-listagem-produto-filtro a {
+        font-size: 0.875em;
+    }
+    .efs-mostrar-mais {
+        margin-bottom: 20px;
+    }
+    .efs-listagem-produto-filtro-show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .efs-btnOpenFilterOption img {
+        margin-top: 15px;
+    }
+    .efs-listagem-filtro-title {
+        font-size: 0.875em;
+        margin-top: 20px;
+    }
+    .efs-listagem-filtro-times, .efs-listagem-filtro-tamanhos {
+        margin-top: 21px;
+    }
+    .efs-mostrar-mais {
+        font-size: 0.75em;
+    }
+    /* Filtro Times */
+    .efs-listagem-filtro-times a {
+        display: block;
+        margin-bottom: 16px;
+        color: #394047;
+    }
+    .efs-listagem-filtro-times .efs-search {
+        margin-bottom: 27px;
+    }
+    .efs-listagem-filtro-times .efs-search-input {
+        width: 100%;
+    }
+    /* Filtro Tamanho */
+    .efs-listagem-filtro-option-tamanho {
+        margin-bottom: 0px;
+    }
+    .efs-listagem-filtro-tamanhos a {
+        margin-right: 17px;
+        margin-bottom: 10px;
+        color: #191C1E;
+        display: inline-block;
+    }
+    /* Filtro Marca */
+    .efs-listagem-filtro-option-marca {
+        margin-bottom: 0px;
+    }
+    /* Filtro times */
+    .efs-listagem-filtro-option-times {
+        margin-bottom: 0px;
+    }
+    /* fim Filtro Listagem */
+    /* Inicio Ordenar e resultados */
+    .efs-listagem-resultados-ordenar {
+        display: none;
+        justify-content: space-between;
+    }
+    /* Fim Ordenar e resultados */
+    /* Listagem dos produtos */
+    .efs-listagem-produto-produtos .efs-marca-promo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .efs-listagem-produto-produtos .efs-produto-promo-percent {
+        display: block;
+        color: #FBA409;
+        font-family: 'Din Regular';
+        font-size: 0.75em;
+    }
+    .efs-listagem-produto-produtos .efs-produto-nome {
+        font-size: 0.75em;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    .efs-listagem-produto-produtos .efs-preco-full {
+        font-size: 0.75em;
+    }
+    .efs-listagem-produto-produtos .efs-preco-promo {
+        font-size: 1.125em;
+        color: #293845;
+    }
+    .efs-listagem-produto-produtos .efs-parcelamento {
+        color: #293845;
+        font-size: 0.75em;
+        line-height: 15px;
+    }
+    /* Fim da listagem de produtos */
+    /* paginação*/
+    .efs-listagem-produto-paginacao {
+        display: none;
+    }
+    .efs-listagem-produto-paginacao-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 93px 0;
+        column-gap: 39px;
+    }
+    .efs-listagem-produto-paginacao-mobile p {
+        font-family: 'Din Regular';
+        font-size: 1.125em;
+    }
+    .efs-listagem-produto-paginacao-mobile p span {
+        font-family: 'Din Bold';
+    }
+    /* Fim paginação */
+    /* Fim Listagem Produtos */
+    /* Botão filtro e ordenar mobile */
+    .efs-filtro-ordenar-mobile {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 16px;
+        margin-bottom: -15px;
+    }
+    .efs-filtro-ordenar-mobile a {
+        display: flex;
+        background: #FFF;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4px;
+        text-transform: uppercase;
+        height: 37px;
+        color: #293845;
+        border-radius: 5px;
+        font-family: 'Din Bold';
+    }
+    /*Fim Botão filtro e ordenar mobile */
+    /* ORDENAR E FILTRO MOBILE */
+    .efs-ordenar-mobile-title, .efs-filtro-mobile-title {
+        border-bottom: 1px solid #E9ECEF;
+    }
+    .efs-ordenar-mobile-title h2, .efs-filtro-mobile-title h2 {
+        text-transform: uppercase;
+        font-family: 'Din Bold';
+        color: #293845;
+        line-height: 27px;
+        margin-bottom: 18px;
+    }
+    .efs-btnCloseOrdenarMobile, .efs-btnCloseFiltroMobile {
+        display: flex;
+        align-items: center;
+        color: #FBA409;
+        column-gap: 9px;
+        font-family: 'Din Bold';
+        text-transform: uppercase;
+        font-size: 0.75em;
+        margin-bottom: 10px;
+    }
+    .efs-filtro-mobile-title {
+        display: block;
+    }
+    /* ORDENAR MOBILE */
+    .efs-ordenar-mobile {
+        display: block;
+        position: fixed;
+        top: -0px;
+        right: 0px;
+        height: 101%;
+        z-index: 1;
+        width: 50%;
+        background: #FFF;
+        padding: 25px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: 0.5s transform;
+    }
+    .efs-ordenar-mobile-show {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .efs-ordenar-mobile-option {
+        margin: 24px 0;
+        font-family: 'Din Regular';
+        font-size: 0.875em;
+        color: #ADB5BD;
+    }
+    .efs-ordenar-mobile-option input:checked {
+        background-color: #FBA409 !important;
+    }
+    .efs-ordenar-mobile-option input:checked+label {
+        color: #FBA409;
+    }
+    /*FIM ORDENAR MOBILE */
+    /* ------- FIM PÁGINA LISTAGEM ------- */
+}

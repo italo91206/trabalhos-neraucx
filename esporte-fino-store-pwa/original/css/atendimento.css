@@ -1,0 +1,49 @@
+/* CSS PÁGINA ATENDIMENTO */
+
+/* ------- INICIO PÁGINA ATENDIMENTO */
+
+/* Inicio Mapa e franqueados */
+
+.efs-mapa-franqueados {
+    display: flex;
+}
+
+.efs-atendimento-mapa {
+    width: 60%;
+    background: url('../images/efs-atendimento-mapa.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.efs-atendimento-mapa-local {
+    width: 394px;
+    margin-right: 136px;
+}
+
+.efs-atendimento-local-infos {
+    padding: 16px 23px;
+    background-color: #FFF;
+}
+
+.efs-atendimento-local-nome {
+    font-family: 'Din Bold';
+    font-size: 1em;
+}
+
+.efs-atendimento-local-endereco {
+    margin: 16px 0;
+}
+
+.efs-atendimento-franqueados {
+    width: 40%;
+}
+
+.efs-atendimento-franqueados .efs-franqueados {
+    margin-left: 78px;
+}
+
+/* Inicio Mapa e franqueados */
+
+/* ------- FIM PÁGINA ATENDIMENTO */

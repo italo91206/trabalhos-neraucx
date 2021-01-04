@@ -1,0 +1,257 @@
+<main id="efs-quemsomos-page" pwa-hook="prepara-quem-somos">
+  <!-- TÍTULO DA PÁGINA -->
+  <div class="efs-quemsomos-title-wrapper">
+    <div class="efs-container">
+      <section class="efs-quemsomos-title">
+        <p class="efs-quemsomos-title-p-before">sobre a efs</p>
+        <h1 class="efs-quemsomos-title-component">Desde 2015, todas as<span>torcidas se encontram
+            aqui</span>
+        </h1>
+        <p class="efs-quemsomos-title-p-after">Da paixão pelo sofrimento, pela angústia, pela conquista, por
+          essa mistura de sentimentos que acontece em jogo, que acontece no esporte, é daí que nascemos.
+          Para
+          vestir as estrelas da vida real, a nossa inspiração só poderia ser totalmente no mundo
+          esportivo.
+        </p>
+
+        <img pwa-src="efs-quemsomos-title" alt="quem somos" />
+      </section>
+    </div>
+  </div>
+
+  <div class="efs-quemsomos-produtoscasuais-wrapper">
+    <div class="efs-container">
+      <section class="efs-quemsomos-produtoscasuais">
+        <div class="efs-quemsomos-produtoscasuais-left">
+          <h2 class="efs-quemsomos-title-component">
+            Produtos casuais<span>inspirados no esporte</span>
+          </h2>
+
+          <p>Torcedor de verdade sente cada lance na pele e veste a camisa de todas as conquistas. Dos
+            produtos licenciados de grandes marcas aos exclusivos da EFS, um universo esportivo está à
+            espera de todos que vivem por essa paixão.</p>
+        </div>
+
+        <div class="efs-quemsomos-produtoscasuais-right">
+          <img pwa-src="efs-quemsomos-produtoscasuais" alt="produtos casuais" />
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- FIM TÍTULO DA PÁGINA -->
+
+  <!-- Inicio Slider produtos quem somos -->
+  <pwa-product-list name="ofertas" filter="images_count:3" size="6" active-class="active">
+    <section class="efs-slider-produtos-title efs-container isdesktop">
+      <h2 class="efs-subtitle-component">Se é para torcer,<br> <span>tem que vestir a camisa.</span></h2>
+      
+      <div class="efs-btns-slider-produtos" pwa-hook="seletor-home-slider">
+        <div pwa-tab="images_count:3" class="efs-btn-slider-produto-option">
+          <input id="efs-marca-efs" name="efs-marcas-produto" value="efs" type="radio" checked>
+          <label for="efs-marca-efs">Efs Sports Co.</label>
+        </div>
+
+        <div pwa-tab="images_count:2" class="efs-btn-slider-produto-option">
+          <input id="efs-marca-newera" name="efs-marcas-produto" value="newEra" type="radio">
+          <label for="efs-marca-newera">New Era</label>
+        </div>
+
+        <div pwa-tab="images_count:1" class="efs-btn-slider-produto-option">
+          <input id="efs-marca-mitchellness" name="efs-marcas-produto" value="mitchelNess" type="radio">
+          <label for="efs-marca-mitchellness">Menor Preço</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inicio Slider produtos -->
+    <div class="home-slider-holder">
+      <div class="efs-slider-produtos efs-container">
+        <div id="efs-home-products" class="swiper-container">
+            <div class="swiper-wrapper">
+              <div pwa-each-product class="swiper-slide">
+                <pwa-product-card>
+              </div>
+            </div>
+
+            <div class="efs-home-products-paginacao efs-slider-paginacao isdesktop"></div>
+
+            <div class="efs-home-products-prev efs-slider-prev isdesktop"></div>
+            <div class="efs-home-products-next efs-slider-prox isdesktop"></div>
+        </div>
+      </div>
+    </div>
+  </pwa-product-list>
+  <!-- Fim Slider produtos quem somos -->
+
+  <!-- Inicio time  -->
+  <div class="efs-quemsomos-time-bg">
+    <div class="efs-container">
+      <section class="efs-quemsomos-time">
+        <h2 class="efs-quemsomos-title-component">Somos um time<span>cada vez maior</span></h2>
+
+        <p>E não poderia ser diferente para uma<br> franqueadora de apaixonados.</p>
+
+        <p>É isso que nos move e é assim que<br> expandimos a nossa paixão por todo o Brasil.</p>
+      </section>
+    </div>
+  </div>
+  <!-- Fim time  -->
+
+  <!-- Inicio Lojas -->
+  <div class="efs-container">
+    <section class="efs-quemsomos-lojas-wrapper">
+      <h2 id="conheca-nossas-franquias">Conheça nossas franquias</h2>
+
+      <div class="efs-quemsomos-lojas">
+        <div class="efs-loja-wrapper">
+          <!-- Loja de cascavel -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/7cczXW8Ncud74Pc49" target="_blank">
+              <img pwa-src="efs-loja-cascavel" alt="loja cascavel">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - cascavel</h3>
+                <p class="efs-loja-endereco">Av. Toledo, 432, Centro, Cascavel, Paraná.</p>
+                <p class="efs-loja-tel">(45) 99920 - 5656</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja de Norte Shopping RJ -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/vRG7mKvrJghwAMhx7" target="_blank">
+              <img pwa-src="efs-loja-norteshopping" alt="loja norte shopping">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Norte Shopping</h3>
+                <p class="efs-loja-endereco">Av. Dom Helder Câmara, 5474, Cachambi,
+                  Rio de Janeiro.</p>
+                <p class="efs-loja-tel">(21) 96968 - 3160</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Jockey Plaza Shopping -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/coQ9TmEatckDfjCs6" target="_blank">
+              <img pwa-src="efs-loja-jockeyplaza" alt="loja jockey plaza">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Jockey Plaza Shopping</h3>
+                <p class="efs-loja-endereco">Av. Victor Ferreira do Amaral, 2633, Tarumã, Curitiba, Paraná.</p>
+                <p class="efs-loja-tel">(41) 99178 - 2191</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Taubaté Shopping -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/EngQASsoYSWqyTjQ7" target="_blank">
+              <img pwa-src="efs-loja-taubate" alt="loja taubate">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Taubaté Shopping</h3>
+                <p class="efs-loja-endereco">Av. Charles Schnneider, 1700, Vila Costa, Taubaté, São Paulo.</p>
+                <p class="efs-loja-tel">(11) 96896 - 0411</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Maringá -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/vzw35TpxzDGycWwP6" target="_blank">
+              <img pwa-src="efs-loja-maringa" alt="loja maringa">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Maringá</h3>
+                <p class="efs-loja-endereco">Av. XV de Novembro, 350, Zona 01, Maringá, Paraná.</p>
+                <p class="efs-loja-tel">(44) 99117 - 0337</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Tijuca Shopping -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/RCprYgD4Wfc4NgKVA" target="_blank">
+              <img pwa-src="efs-loja-tijuca" alt="loja tijuca">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Tijuca Shopping</h3>
+                <p class="efs-loja-endereco">Av. Maracanã, 987, Tijuca, Rio de Janeiro, Rio de Janeiro.
+                </p>
+                <p class="efs-loja-tel">(21) 97497 - 5920</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Porto Velho Shopping -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/jNBWdrU7nZXCfX3g9" target="_blank">
+              <img pwa-src="efs-loja-portovelho" alt="loja porto velho">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Porto Velho Shopping</h3>
+                <p class="efs-loja-endereco">Av. Rio Madeira, 3252, F. P. Pinto, Porto Velho, Rondônia.
+                </p>
+                <p class="efs-loja-tel">(69) 98413 - 3393</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Shopping Jardins SE -->
+          <article class="efs-loja">
+            <a href="https://g.page/shoppingjardinsaracaju?share" target="_blank">
+              <img pwa-src="efs-loja-jardins" alt="loja jardins">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Shopping Jardins</h3>
+                <p class="efs-loja-endereco">Av. Min. Geraldo B. Sobral, 215, Jardins, Aracaju, Sergipe.
+                </p>
+                <p class="efs-loja-tel">(79) 99819 - 8587</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="efs-loja-wrapper">
+          <!-- Loja Shopping Campo Grande -->
+          <article class="efs-loja">
+            <a href="https://goo.gl/maps/iJcMbQDf6eXx2t7u8" target="_blank">
+              <img pwa-src="efs-loja-campogrande" alt="loja campo grande">
+              <div class="efs-loja-info">
+                <h3 class="efs-loja-nome">EFS - Shopping Campo Grande</h3>
+                <p class="efs-loja-endereco">Av. Afonso Pena, 4909, Santa Fé, Campo Grande, Mato Grosso do Sul.</p>
+                <p class="efs-loja-tel">(79) 99819 - 8587</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="efs-btn-lojas-mobile">
+        <a href="#lojas" class="efs-btn-lojas">ver todas as franquias</a>
+      </div>
+    </section>
+  </div>
+  <!-- Fim Lojas -->
+
+  <!-- Inicio Franqueados -->
+  <div class="efs-franqueados-bg">
+    <div class="efs-container">
+      <section class="efs-franqueados">
+        <h2 class="efs-subtitle-component">Quer Investir<br> <span>na sua paixão?</span></h2>
+        <p>Se você torce para trabalhar com o que realmente ama, a nossa franquia pode te ajudar a
+          conquistar este sonho.</p>
+        <a href="#franqueados" class="efs-btn-white-orange">seja um franqueado</a>
+      </section>
+    </div>
+  </div>
+  <!-- Fim Franqueados -->
+
+</main>

@@ -1,0 +1,755 @@
+/* CSS DASHBOARD DOS FRANQUEADOS */
+
+/* ------- INICIO PÁGINA DASHBOARD FRANQUEADOS -------*/
+
+.efs-banner-dashboard {
+    background-image: pwa-url(efs-banner-franqueado);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 110px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.efs-banner-dashboard h1 {
+    font-size: 1.6875em;
+    margin-top: 18px;
+    font-family: 'Din Bold';
+    font-weight: 700;
+    color: #fff
+}
+
+.efs-body-dashboard {
+    display: flex;
+    column-gap: 30px;
+}
+
+/* INICIO left-dashboard */
+
+#efs-dashboard-page {
+    background: #F7F9FA;
+}
+
+.efs-body-dashboard .efs-left-dashboard {
+    margin-top: 60px;
+    width: 58%;
+    padding-bottom: 80px;
+}
+
+/* .efs-accordion  */
+
+.efs-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out, margin .3s ease-in-out;
+}
+
+
+.efs-body-dashboard .efs-left-dashboard h2 {
+    font-family: 'Din Bold';
+    font-weight: 700;
+    color: #394047;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #CED4DA;
+}
+
+.efs-left-dashboard .efs-btn-dashboard {
+    background: #FFFFFF;
+    margin-top: 32px;
+    padding: 30px;
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.efs-left-dashboard .efs-btn-dashboard:hover {
+    /* background: #FCFCFC; */
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.18);
+}
+
+.efs-left-dashboard .efs-btn-dashboard:active {
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.efs-btn-dashboard .efs-btn-dashboard-icon-title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.efs-accordion > img { transition: transform .3s; }
+.efs-accordion.efs-is-open > img { transform: rotate(90deg); }
+
+.efs-btn-dashboard .efs-btn-dashboard-icon-title h3 {
+    margin-left: 30px;
+    font-size: 1em;
+    color: #394047;
+}
+
+.efs-drop-dashboard a {
+    display: flex;
+    font-family: 'Din Bold';
+    font-weight: 700;
+    color: #394047;
+    column-gap: 24px;
+    border-bottom: 1px solid #CED4DA;
+    padding: 16px 30px;
+}
+
+.efs-drop-dashboard a:hover {
+    text-decoration: underline;
+}
+
+.efs-drop-dashboard a:first-child {
+    padding-top: 8px;
+}
+
+.efs-drop-dashboard a:last-child {
+    border-bottom: none;
+    padding-bottom: 8px;
+}
+
+.efs-materials-promo-dashboard {
+    margin-top: 48px;
+}
+
+.efs-drop-solicitacoes form {
+    margin-top: 32px;
+}
+
+.efs-materials-promo-dashboard .efs-drop-solicitacoes p {
+    color: #394047;
+}
+
+.efs-materials-promo-dashboard .efs-drop-solicitacoes p span {
+    font-family: 'Din Bold';
+    font-weight: 700;
+}
+
+.efs-drop-solicitacoes .efs-row-form-1, .efs-drop-fale .efs-row-form-1 {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.efs-drop-solicitacoes .efs-row-form-1 .efs-form-group, .efs-drop-solicitacoes .efs-row-form-2 .efs-form-group, .efs-drop-fale .efs-row-form-1 .efs-form-group {
+    width: calc(50% - 15px);
+}
+
+.efs-drop-solicitacoes .efs-row-form-3 textarea, .efs-drop-solicitacoes .efs-row-form-4 textarea {
+    font-family: 'Din Regular';
+    resize: vertical;
+}
+
+.efs-drop-dashboard .efs-form-btn .efs-form-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.efs-drop-dashboard .efs-form-btn button {
+    width: 40%;
+}
+
+.efs-fale-dashboard {
+    margin-top: 48px;
+}
+
+.efs-check-departamento .efs-title-fale {
+    color: #394047;
+}
+
+/* Checkbox */
+
+.efs-check-group {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.efs-check-group label {
+    margin-left: 18px;
+    padding-top: 14px;
+    font-size: 1em;
+    display: flex;
+    letter-spacing: normal;
+    font-family: 'Din Regular';
+    color: #394047;
+}
+
+.efs-checkbox {
+    position: relative;
+    cursor: pointer;
+}
+
+.efs-checkbox:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-color: #F7F9FA;
+    box-shadow: 0px 0px 0px 2px #7F8993;
+    border-radius: 2px;
+}
+
+.efs-checkbox:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-color: #FBA409;
+    box-shadow: 0px 0px 0px 2px #FBA409;
+}
+
+.efs-checkbox:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+/* FIM Checkbox */
+
+/* FIM left-dashboard */
+
+/* INICIO right-dashboard */
+
+.efs-body-dashboard .efs-right-dashboard {
+    width: 42%;
+    margin-top: -60px;
+}
+
+.efs-right-dashboard .efs-right-infos {
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 32px 54px;
+}
+
+.efs-right-dashboard .efs-right-infos h2 {
+    font-family: 'Din Bold';
+    font-size: 1.4375em;
+    font-weight: bold;
+    color: #FBA409;
+}
+
+.efs-right-dashboard .efs-right-infos h3 {
+    font-family: 'Din Black';
+    margin-bottom: 16px;
+    color: #394047;
+}
+
+.efs-right-dashboard .efs-title-right {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: default;
+}
+
+.efs-right-dashboard .efs-title-right svg {
+    display: none;
+}
+
+.efs-section-right {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #CED4DA;
+}
+
+.efs-section-right:last-child {
+    border: 0;
+    padding-bottom: 0px;
+}
+
+#efs-message-right-section {
+    height: 124px;
+}
+
+.efs-section-right p, .efs-section-right a {
+    font-size: 1em;
+    color: #394047;
+    margin-top: 8px;
+    display: block;
+}
+
+.efs-section-right a {
+    font-family: 'Din Bold';
+    text-decoration: underline;
+}
+
+.efs-section-right .efs-title-form-right {
+    margin-top: 0;
+    font-size: 1em;
+    font-family: 'Din Bold';
+    color: #394047;
+    margin-bottom: 24px;
+}
+
+.efs-section-right .efs-form-group {
+    margin-bottom: 16px;
+}
+
+/* FIM right-dashboard */
+
+/* ------- FIM PÁGINA DASHBOARD FRANQUEADOS -------*/
+
+/* ------- INICIO PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+
+.efs-fornecedores-title {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #CED4DA;
+    text-transform: uppercase;
+    column-gap: 80px;
+}
+
+.efs-fornecedores-title a {
+    margin-top: 5px;
+}
+
+.efs-fornecedores-lojas {
+    margin: 48px 100px 0px 100px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 29px;
+    row-gap: 30px;
+}
+
+.efs-fornecedores-tipos {
+    margin: 64px 100px 0px 100px;
+}
+
+.efs-fornecedores-tipos .efs-accordion-content {
+    max-height: 500px;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.efs-fornecedores-tipos-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.efs-fornecedores-tipos-list li a {
+    display: block;
+    width: 170px;
+    min-width: 120px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 6px solid #CED4DA;
+    font-family: 'Din Bold';
+    color: #ADB5BD;
+}
+
+.efs-fornecedores-tipo-selecionado, .efs-fornecedores-tipos-list li a:hover {
+    color: #394047 !important;
+    border-bottom: 6px solid #FBA409 !important;
+}
+
+/* INICIO CARD FORNECEDOR */
+
+.efs-card-fornecedor {
+    width: 48%;
+    background: #FFF;
+    padding: 32px 32px 20px 32px;
+    border-radius: 5px;
+}
+
+.efs-fornecedor-row-1 {
+    display: flex;
+    column-gap: 24px;
+}
+
+.efs-fornecedor-img img {
+    border-radius: 5px;
+}
+
+.efs-fornecedor-info-nome {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.efs-fornecedor-info-dono, .efs-fornecedor-info-tel {
+    color: #7F8993;
+    margin-bottom: 5px;
+}
+
+.efs-fornecedor-info-email {
+    font-family: 'Din Bold';
+    color: #7F8993;
+    margin-bottom: 24px;
+}
+
+.efs-fornecedor-midias {
+    display: flex;
+    column-gap: 16px;
+}
+
+.efs-fornecedor-options {
+    display: flex;
+    column-gap: 60px;
+    margin-top: 36px;
+}
+
+.efs-fornecedor-option {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    color: #FBA409;
+    font-family: 'Din Bold';
+}
+
+/* FIM CARD FORNECEDOR */
+
+.efs-fornecedores-tipo-selecionado-mobile {
+    display: none;
+}
+
+/* ------- FIM PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+
+/* BREAKPOINTS */
+
+@media only screen and (max-width: 1250px) {
+    /* ------- INICIO PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+    .efs-attention {
+        padding: 0 200px 64px 200px;
+    }
+    .efs-sejafranqueado-modalidades-list li a {
+        padding: 10px 18px 18px 20px;
+    }
+    .efs-fornecedores-tipos-list li a {
+        width: 150px;
+    }
+    /* ------- FINAL PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+}
+
+@media only screen and (max-width: 992px) {
+    /* ------- INICIO DASHBOARD FRANQUEADOS -------*/
+    /* ------- INICIO PÁGINA DASHBOARD FRANQUEADOS -------*/
+    /* INICIO left-dashboard */
+    .efs-body-dashboard .efs-left-dashboard {
+        width: 50%;
+    }
+    /* FIM left-dashboard */
+    /* INICIO right-dashboard */
+    .efs-body-dashboard .efs-right-dashboard {
+        width: 50%;
+        margin-top: -60px;
+    }
+    .efs-right-dashboard .efs-right-infos {
+        -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.15);
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 32px;
+    }
+    .efs-drop-dashboard .efs-form-btn button {
+        width: 100%;
+    }
+    /* FIM right-dashboard */
+    /* ------- FIM PÁGINA DASHBOARD FRANQUEADOS -------*/
+    /* ------- INICIO PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+    .efs-fornecedores-title {
+        padding-top: 30px;
+    }
+    .efs-banner-dashboard-fornecedores {
+        display: none !important;
+    }
+    .efs-fornecedores-lojas {
+        margin: 15px 0px 0px 0px;
+        padding-bottom: 50px;
+        row-gap: 24px;
+    }
+    .efs-fornecedores-tipos {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .efs-fornecedores-tipos .efs-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease-in-out, margin .3s ease-in-out;
+        display: block;
+    }
+    .efs-fornecedores-tipo-selecionado-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #FFF;
+        border-radius: 6px;
+        padding: 12px 15px;
+    }
+     p {
+        font-family: 'Din Bold';
+    }
+
+    .efs-fornecedores-tipo-selecionado-mobile.efs-is-open img {
+        transform: rotate(180deg);
+    }
+
+    .efs-fornecedores-tipos-list {
+        display: block;
+        background: #FFF;
+        margin-top: 20px;
+    }
+
+    .efs-fornecedores-tipos-list li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #939393;
+        font-family: 'Din Bold';
+        color: #394047;
+    }
+
+    .efs-fornecedores-tipos-list li:last-child  a{
+        border-bottom: none !important;
+    }
+    
+    .efs-fornecedores-tipo-selecionado, .efs-fornecedores-tipos-list li a:hover {
+        color: #FBA409 !important;
+        border-bottom: 1px solid #939393 !important;
+    }
+
+    .efs-fornecedores-tipos-list {
+        display: block;
+        background: #FFF;
+        margin-top: 20px;
+    }
+    
+    .efs-fornecedores-tipos-list li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #939393;
+        font-family: 'Din Bold';
+        color: #394047;
+    }
+    
+    .efs-fornecedores-tipos-list li:last-child  a{
+        border-bottom: none !important;
+    }
+    
+    .efs-fornecedores-tipo-selecionado, .efs-fornecedores-tipos-list li a:hover {
+        color: #FBA409 !important;
+        border-bottom: 1px solid #939393 !important;
+    }
+
+    /* INICIO CARD FORNECEDOR */
+    .efs-card-fornecedor {
+        width: 100%;
+        padding: 18px;
+    }
+    /* FIM CARD FORNECEDOR */
+    /* ------- FIM PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+}
+
+@media only screen and (max-width: 768px) {
+    /* ------- INICIO PÁGINA DASHBOARD FRANQUEADOS -------*/
+    .efs-banner-dashboard {
+        padding: 40px 0;
+    }
+    .efs-banner-dashboard p {
+        font-size: 0.875em;
+    }
+    .efs-banner-dashboard h1 {
+        font-size: 1.125em;
+    }
+    .efs-body-dashboard {
+        display: flex;
+    }
+    /* INICIO left-dashboard */
+    .efs-body-dashboard .efs-left-dashboard {
+        width: 100%;
+        margin-top: 42px;
+    }
+    .efs-body-dashboard .efs-left-dashboard h2 {
+        font-size: 1em;
+        padding-bottom: 20px;
+    }
+    .efs-left-dashboard .efs-btn-dashboard {
+        background: #FFFFFF;
+        margin-top: 16px;
+        padding: 30px 20px;
+    }
+    .efs-btn-dashboard .efs-btn-dashboard-icon-title h3 {
+        margin-left: 16px;
+    }
+    .efs-btn-dashboard-icon-title img {
+        width: 20px;
+        transition: all .3s;
+    }
+
+    .efs-drop-dashboard a {
+        padding: 16px 4px;
+    }
+    .efs-drop-solicitacoes .efs-row-form-1, .efs-drop-fale .efs-row-form-1 {
+        flex-direction: column;
+    }
+    .efs-drop-solicitacoes .efs-row-form-1 .efs-form-group, .efs-drop-solicitacoes .efs-row-form-2 .efs-form-group, .efs-drop-fale .efs-row-form-1 .efs-form-group {
+        width: 100%;
+    }
+    .efs-form-group {
+        margin-bottom: 16px;
+    }
+    /* FIM left-dashboard */
+    /* INICIO right-dashboard */
+    .efs-body-dashboard .efs-right-dashboard {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        top: 100%;
+        left: 0;
+        transition: all .3s ease;
+    }
+
+    .efs-body-dashboard .efs-right-dashboard.efs-active {
+        top: 10%;
+        transition: all .3s ease;
+    }
+
+    .efs-right-dashboard .efs-title-right {
+        justify-content: center;
+        cursor: pointer;
+        padding: 20px;
+        background: #FBA409;
+        border-radius: 10px 10px 0 0;
+    }
+    .efs-right-dashboard .efs-title-right:hover {
+        background: #CE8503;
+    }
+    .efs-right-dashboard .efs-title-right:active {
+        background: #FDC96D;
+    }
+
+    .efs-right-dashboard .efs-title-right svg {
+        display: flex;
+        pointer-events: none;
+        transition: transform .3s;
+    }
+
+    .efs-right-dashboard .efs-title-right svg.efs-active {
+        transform: rotate(180deg);
+    }
+
+    .efs-right-dashboard .efs-title-right svg:nth-child(1) {
+        margin-right: 16px;
+    }
+
+    .efs-right-dashboard .efs-title-right svg:nth-child(3) {
+        margin-left: 16px;
+    }
+    .efs-right-dashboard .efs-title-right h2 {
+        font-size: 0.875em;
+        color: #FFFFFF;
+        pointer-events: none;
+        text-align: center;
+    }
+    .efs-right-dashboard .efs-section-right {
+        padding: 20px 32px;
+    }
+    .efs-right-dashboard .efs-right-infos {
+        padding: 0;
+        height: 100vh;
+    }
+    .efs-right-dashboard .efs-right-infos h3, .efs-section-right p, .efs-section-right a {
+        font-size: 0.875em;
+    }
+    .efs-form-group .efs-input-form {
+        font-size: 0.875em;
+    }
+    .efs-right-dashboard .efs-scroll-right {
+        overflow-y: auto;
+        height: 90vh;
+    }
+    .efs-drop-dashboard .efs-form-btn button {
+        width: 100%;
+    }
+    /* FIM right-dashboard */
+    /* ------- FIM PÁGINA DASHBOARD FRANQUEADOS -------*/
+}
+
+@media only screen and (max-width: 576px) {
+    /* ------- INICIO PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+    .efs-fornecedores-title {
+        margin-top: 30px;
+        padding-bottom: 10px;
+        text-transform: initial;
+        column-gap: 10px;
+    }
+    .efs-fornecedores-title a img {
+        max-width: 60%;
+    }
+    .efs-fornecedores-title h2 {
+        font-size: 1em;
+    }
+    /* INICIO CARD FORNECEDOR */
+    .efs-fornecedor-row-1 {
+        column-gap: 0px;
+    }
+    .efs-fornecedor-img img {
+        max-width: 80%;
+    }
+    .efs-fornecedor-info-nome {
+        font-size: 1.125em;
+        margin-bottom: 8px;
+    }
+    .efs-fornecedor-info-dono, .efs-fornecedor-info-tel {
+        margin-bottom: 2px;
+        font-size: 0.875em;
+    }
+    .efs-fornecedor-info-email {
+        margin-bottom: 24px;
+        font-size: 0.875em;
+    }
+    .efs-fornecedor-midias {
+        column-gap: 30px;
+    }
+    .efs-fornecedor-options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 110px;
+        row-gap: 10px;
+        margin-top: 16px;
+    }
+    /* FIM CARD FORNECEDOR */
+    /* ------- FIM PÁGINA FORNECEDORES - DASHBOARD FRANQUEADOS ------- */
+}

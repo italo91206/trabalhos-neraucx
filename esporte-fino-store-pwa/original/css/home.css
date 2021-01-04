@@ -1,0 +1,268 @@
+/* HOME CSS */
+
+/*------- Inicio Banner ------- */
+
+.efs-slide-banner {
+    height: 500px;
+    background: url('../images/efs-banner-1.png') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 278px;
+    text-transform: uppercase;
+}
+
+.efs-slide-banner p {
+    display: inline-block;
+    color: #FFF;
+    background-color: #FBA409;
+    padding: 2px 8px;
+    font-family: 'Din Bold';
+    letter-spacing: 1.2px;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.efs-slide-banner h2 {
+    width: 596px;
+    margin: 0 auto;
+    background-color: #701DBE;
+    padding: 10px 0;
+    color: #FFF;
+    font-family: 'Din Black';
+    font-size: 3em;
+}
+
+.efs-btn-orange-black {
+    display: inline-block;
+    background-color: rgba(25, 28, 30, 0.7);
+    border: 1px solid #FDC96D;
+    color: #FBA409;
+    font-family: 'Din Bold';
+    letter-spacing: 1.2px;
+    padding: 20px 24px;
+    font-size: 0.6875em;
+}
+
+.efs-banner-btns {
+    margin-top: 10px;
+}
+
+.efs-banner-btns a:first-child {
+    margin-right: 30px;
+}
+
+/*------- Fim Banner -------*/
+
+/*------- Inicio 40%off -------*/
+
+.efs-40-off-bg {
+    background: url('../images/efs-40-off-bg.png') no-repeat center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.efs-40-off {
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+    padding: 29px 0 27px 0;
+}
+
+.efs-40-off-text h2 {
+    font-family: 'Din Bold';
+    font-size: 2.375em;
+    text-transform: uppercase;
+    margin-bottom: 31px;
+}
+
+.efs-40-off-text p {
+    line-height: 24px;
+    color: #FFF;
+    margin-bottom: 57px;
+}
+
+.efs-btn-white-orange {
+    width: 398px;
+    display: block;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    text-transform: uppercase;
+    color: #FBA409;
+    font-family: 'Din Bold';
+    letter-spacing: 1px;
+}
+
+.efs-40-off-img img {
+    max-width: 90%;
+    margin-right: 13px;
+}
+
+/*------- Fim 40%off -------*/
+
+/*------- Inicio Torcidas -------*/
+
+.efs-torcidas-bg {
+    margin: 100px 0;
+    background: url('../images/efs-torcidas-bg.png') no-repeat;
+    height: 1144px;
+}
+
+.efs-torcidas {
+    position: relative;
+}
+
+.efs-torcidas img {
+    max-width: 100%;
+}
+
+.efs-torcidas-absolute {
+    position: absolute;
+    top: 14px;
+}
+
+.efs-torcidas-row-1 {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    margin-left: 106px;
+}
+
+.efs-torcidas-row-2 {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    column-gap: 30px;
+}
+
+/*------- Fim Torcidas -------*/
+
+/* ------- BREAKPOINTS ------- */
+
+@media only screen and (max-width: 992px) {
+    /*------- Inicio banner -------*/
+    .efs-slide-banner h2 {
+        max-width: 580px;
+    }
+    /*------- Fim banner ------- */
+    /*------- Inicio 40%off -------*/
+    .efs-40-off-bg {
+        margin-bottom: 70px;
+    }
+    .efs-40-off {
+        flex-direction: column-reverse;
+        row-gap: 46px;
+    }
+    .efs-40-off-text h2 {
+        font-size: 1.625em;
+        margin-bottom: 27px;
+    }
+    .efs-40-off-text p {
+        width: 400px;
+        line-height: 18px;
+        margin-bottom: 31px;
+    }
+    .efs-btn-white-orange {
+        width: 100%;
+    }
+    .efs-40-off-img {
+        margin-right: 20px;
+        width: 90%;
+        align-self: center;
+    }
+    /*------- Fim 40%off --------*/
+    /*------- Inicio Torcidas -------*/
+    .efs-torcidas-bg {
+        margin: 80px 0;
+        background: transparent;
+        height: auto;
+    }
+    .efs-torcidas {
+        position: relative;
+    }
+    .efs-torcidas-absolute {
+        position: initial;
+    }
+    .efs-torcidas-row-1 {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    .efs-torcidas-row-1 a:last-child {
+        margin-left: -43px;
+    }
+    .efs-torcidas-row-1 a:last-child img {
+        min-width: 106% !important;
+    }
+    .efs-torcidas-row-1 a img, .efs-torcidas-row-2 a img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .efs-torcidas-row-2 {
+        display: block;
+        align-items: flex-start;
+        flex-direction: column;
+        position: initial;
+    }
+    /*------- Fim Torcidas -------*/
+}
+
+@media only screen and (max-width: 576px) {
+    /*------- Inicio Banner ------- */
+    .efs-slide-banner p {
+        font-size: 0.875em;
+        margin-bottom: 10px;
+    }
+    .efs-slide-banner h2 {
+        width: 310px;
+        font-size: 1.625em;
+    }
+    .efs-btn-orange-black {
+        max-width: 154px;
+    }
+    .efs-banner-btns {
+        margin-top: 38px;
+    }
+    .efs-banner-btns a:first-child {
+        margin-right: 10px;
+    }
+    /*------- Fim Banner ------- */
+    /*------- Inicio 40%off -------*/
+    .efs-40-off-text h2 {
+        font-size: 1.625em;
+        margin-bottom: 27px;
+    }
+    .efs-40-off-text p {
+        width: auto;
+    }
+    .efs-btn-white-orange {
+        width: 100%;
+    }
+    .efs-40-off-img {
+        margin-right: -50px;
+        width: 75%;
+    }
+    /*------- Fim 40%off -------*/
+    /*------- Inicio torcidas -------*/
+    .efs-torcidas .efs-subtitle-component {
+        font-size: 1.125em;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 54px;
+    }
+    .efs-torcidas-row-1 a:last-child {
+        margin-left: -24px;
+        margin-bottom: 20px;
+    }
+    .efs-torcidas-row-1 a:last-child img {
+        min-width: 106% !important;
+    }
+    /*------- Fim torcidas -------*/
+    
+}

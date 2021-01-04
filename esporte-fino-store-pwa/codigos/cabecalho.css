@@ -272,6 +272,10 @@
 }
 
 .efs-menu-options a {
+    font-family: 'Din Regular';
+}
+
+.efs-menu-options a.active {
     font-family: 'Din Bold';
 }
 
@@ -528,10 +532,29 @@
     margin-top: 4px;
 }
 
+.efs-menu-options a.bold {
+    font-family: 'Din Bold';
+}
+
 .menu-item.voltar {
     color: #FBA409;
     text-transform: uppercase;
     font-family: 'Din Bold';
+}
+
+#efs-submenu-futebol .coluna-itens-brasileiros a {
+    display: block;
+    margin-bottom: 17px;
+}
+
+#efs-submenu-futebol .coluna-itens-internacionais a:hover,
+#efs-submenu-futebol .coluna-itens-brasileiros a:hover {
+    font-weight: 700;
+}
+
+#efs-submenu-futebol .coluna-itens-internacionais a {
+    display: block;
+    margin-bottom: 17px;
 }
 
 @media(max-width: 768px){

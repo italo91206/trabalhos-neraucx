@@ -1,0 +1,226 @@
+.efs-franqueados-page {
+    padding-top: 96px;
+    background: #F7F9FA;
+}
+
+.efs-franqueados-db {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+.efs-franqueados-db-left, .efs-franqueados-db-right {
+    align-self: flex-start;
+}
+
+.efs-franqueados-db-left {
+    padding: 118px;
+    width: 50%;
+    padding-top: 0px;
+    margin-top: 96px;
+}
+
+.efs-franqueados-db-right {
+    padding: 118px;
+    padding-top: 0px;
+    margin-top: 96px;
+    width: 50%;
+    border-left: 1px solid #ADB5BD;
+    padding-bottom: 0px;
+}
+
+.efs-franqueados-db h2 {
+    font-family: 'Din Bold';
+    font-size: 1.6875em;
+    text-transform: uppercase;
+    line-height: 32px;
+    color: #191C1E;
+}
+
+.efs-franqueados-db p {
+    font-family: 'Din Regular';
+    line-height: 24px;
+    color: #394047;
+    margin: 24px 0 40px 0;
+}
+
+::-webkit-input-placeholder {
+    color: #7F8993;
+}
+
+::-moz-placeholder {
+    color: #7F8993;
+}
+
+:-ms-input-placeholder {
+    color: #7F8993;
+}
+
+:-moz-placeholder {
+    color: #7F8993;
+}
+
+.efs-form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.efs-form-group label {
+    font-family: 'Din Bold';
+    margin-bottom: 8px;
+    font-size: 0.6875em;
+    line-height: 15px;
+    color: #B2B3BD;
+    letter-spacing: 0.12em;
+}
+
+.efs-form-group .efs-input-form {
+    font-family: 'Din Regular';
+    border: 0.5px solid #CED4DA;
+    font-size: 1em;
+    outline: 0;
+    padding: 16px 25px;
+    width: 100%;
+}
+
+.efs-form-group .efs-form-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.efs-form-group .efs-form-password input {
+    padding-right: 60px;
+}
+
+.efs-form-group .efs-icon-passowrd {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 12px;
+}
+
+.efs-form-group .efs-icon-passowrd img {
+    pointer-events: none;
+}
+
+.efs-form button.efs-btn-entrar, .efs-form button.efs-btn-cadastrar {
+    font-family: 'Din Bold';
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    width: 100%;
+    background: #FBA409;
+    border: none;
+    padding: 18px 0;
+    cursor: pointer;
+    outline: 0;
+    text-transform: uppercase;
+}
+
+.efs-form button.efs-btn-entrar:hover {
+    background: #CE8503;
+}
+
+.efs-form button.efs-btn-entrar:active {
+    background: #FDC96D;
+}
+
+.efs-franqueados-login .efs-forgot, .efs-already-have {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-top: 24px;
+    text-decoration: underline;
+    color: #7F8993;
+}
+
+.efs-franqueados-login .efs-forgot:hover {
+    color: #ADB5BD;
+}
+
+.efs-franqueados-cadastro .efs-info-sol {
+    color: #394047;
+}
+
+.efs-franqueados-cadastro .efs-info-sol .efs-info-sol-mail {
+    font-weight: bold;
+    color: #394047;
+    text-decoration: underline;
+}
+
+.efs-cadastro-duvidas {
+    text-align: center;
+    margin: 40px 0;
+    margin-bottom: 0px;
+}
+
+.efs-cadastro-duvidas-confirmacao {
+    font-size: 16px;
+    text-align: left;
+    color: #394047;
+}
+
+.efs-cadastro-duvidas-contato span {
+    font-family: 'Din Bold';
+    color: #394047;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.efs-cadastro-duvidas-contato span a {
+    text-decoration: underline;
+}
+
+.efs-cadastro-duvidas-contato {
+    font-size: 16px;
+    text-align: left;
+}
+
+.efs-attention {
+    margin-top: 70px;
+    padding: 0 330px 64px 330px;
+    text-align: center;
+}
+
+.efs-attention .efs-attention-title {
+    font-size: 1em;
+    font-family: 'Din Bold';
+    color: #394047;
+}
+
+.efs-attention .efs-attention-description {
+    font-family: 'Din Regular';
+    color: #394047;
+    margin-top: 18px;
+}
+
+@media(max-width: 768px){
+    .efs-franqueados-db-left {
+        width: 100%;
+        padding-bottom: 20px;
+        margin-top: 40px;
+    }
+    
+    .efs-attention {
+        padding: 0px 118px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 425px){
+    .efs-franqueados-db-left {
+        padding: 0px;
+    }
+    
+    .efs-attention {
+        padding: 0px;
+        margin-top: 40px;
+        text-align: left;
+    }
+}

@@ -79,6 +79,7 @@
     var itens = document.getElementsByClassName('submenu-item');
     var submenu = document.getElementsByClassName('efs-submenu');
     var dark_background = document.getElementsByClassName('efs-submenu-darken')[0];
+    var category_item  = document.getElementsByClassName('submenu-category-item');
 
     function qualFilho(elem){
       var pai = elem.parentElement.children;
@@ -91,9 +92,9 @@
     }
 
     function trataEntrada(){
-        for(var i=0; i < submenu.length; i++){
-            submenu[i].classList.remove('active');
-        }
+      for(var i=0; i < submenu.length; i++){
+        submenu[i].classList.remove('active');
+      }
     };
 
     for(var i=0; i < itens.length-1; i++){
@@ -103,11 +104,55 @@
         submenu[qualFilho(this)].classList.add('active');
       })
       submenu[i].addEventListener("mouseleave", function(){
-          trataEntrada();
+        trataEntrada();
         // submenu[qualFilho(this)].classList.remove('active');
         dark_background.classList.remove('active')
         this.classList.remove('active');
       })
     }
+
+    for(var i=0; i < category_item.length; i++){
+      category_item[i].addEventListener("click", function(){
+        trataEntrada();
+      })
+    }
+
+    // 5 é índice do último item do menu, ou seja, o "Outlet"
+    itens[5].addEventListener("mouseover", function(){
+      trataEntrada();
+    })
+  },
+  "--prepara-hover-dos-submenus": component => {
+    var hover_brasileiros = document.getElementById('change-submenu-to-brasileiros');
+    var hover_internacionais = document.getElementById('change-submenu-to-internacionais');
+    var elementos_internacionais = document.getElementsByClassName('coluna-itens-internacionais');
+    var elementos_brasileiros = document.getElementsByClassName('coluna-itens-brasileiros');
+
+    //ativa os itens da seleção "brasileiro"
+    hover_brasileiros.addEventListener("mouseover", function(){
+      // remove o display do item "internacional" caso já estava sendo exibido antes
+      if(hover_internacionais.classList.contains("active")){
+        hover_internacionais.classList.remove("active");
+        
+        for(var i=0; i < elementos_internacionais.length; i++)
+          elementos_internacionais[i].style.display = "none";
+      }
+      this.classList.add("active");
+      for(var i=0; i < elementos_brasileiros.length; i++)
+        elementos_brasileiros[i].style.display = "block";
+    });
+
+    //ativa os itens da seleção "internacional"
+    hover_internacionais.addEventListener("mouseover", function(){
+      // remove o display do item "brasileiro" caso já estava sendo exibido antes
+      if(hover_brasileiros.classList.contains("active")){
+        hover_brasileiros.classList.remove("active")
+        for(var i=0; i < elementos_brasileiros.length; i++)
+          elementos_brasileiros[i].style.display = "none";
+      }
+      this.classList.add("active");
+      for(var i=0; i < elementos_internacionais.length; i++)
+        elementos_internacionais[i].style.display = "block";
+    });
   }
 }

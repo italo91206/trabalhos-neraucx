@@ -1,0 +1,46 @@
+/* CSS PÁGINA QUEM SOMOS */
+
+.efs-quemsomos-title-component {
+    font-family: 'Din Bold';
+    font-size: 2.375em;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.efs-quemsomos-title-component span {
+    display: block;
+    font-family: 'Rock Salt';
+    text-transform: initial;
+    font-weight: 300;
+}
+
+/* INICIO TITULO QUEM SOMOS */
+
+.efs-quemsomos-title {
+    padding-top: 60px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.efs-quemsomos-title-p-before {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #ADB5BD;
+    margin-bottom: 27px;
+}
+
+.efs-quemsomos-title-p-after {
+    font-family: 'Din Regular';
+    line-height: 24px;
+    max-width: 820px;
+    margin: 21px auto 60px auto;
+    color: #394047;
+}
+
+.efs-quemsomos-title a {
+    margin: 0 auto;
+}
+
+/* FIM TITULO FRANQUEADOS */

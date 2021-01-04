@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/categoria.css" />
+    <link rel="stylesheet" href="css/card-produto.css" />
+    <link rel="stylesheet" href="css/categoria-component.css" />
+    <title>EFS - Categoria</title>
+</head>
+
+<body>
+    <!-- Inicio Header da página -->
+    <header class="efs-header">
+        <div class="efs-header-desktop">
+            <!-- Inicio Header 1 -->
+            <div class="efs-header-1-bg">
+                <div class="efs-container">
+                    <div class="efs-header-1 efs-din-b">
+                        <div class="efs-header-1-left">
+                            <div class="efs-lojas">
+                                <img src="images/icons/efs-icon-pin.svg" alt="pin" />
+                                <a href="#lojas">nossas lojas</a>
+                            </div>
+
+                            <div class="efs-atendimento">
+                                <img src="images/icons/efs-icon-phone.svg" alt="phone" />
+                                <a href="#atendimento">atendimento ao cliente</a>
+                            </div>
+                        </div>
+
+                        <div class="efs-header-1-right">
+                            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+
+                            <img id="efs-fav" src="images/icons/efs-icon-heart.svg" alt="favoritar" />
+
+                            <a href="#carrinho" class="efs-carrinho">
+                                <img src="images/icons/efs-icon-cart.svg" alt="carrinho">
+                                <p class="efs-nmr-produtos">1</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Header 1 -->
+
+            <!-- Inicio Header 2 -->
+            <div class="efs-container">
+                <div class="efs-header-2">
+                    <div class="efs-logo">
+                        <img src="images/efs-logo.svg" alt="logo" />
+                    </div>
+
+                    <nav class="efs-navbar">
+                        <ul>
+                            <li><a href="#" class="openSubmenu">Masculino</a></li>
+                            <li><a href="#feminino">Feminino</a></li>
+                            <li><a href="#juvenil-infantil">Juvenil e Infantil</a></li>
+                            <li><a href="#acessórios">Acessórios</a></li>
+                            <li><a href="#giftcard">Gift Card</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="efs-search">
+                        <input class="efs-search-input" type="text" placeholder="O que você procura?" />
+                        <a class="efs-btnOpenProdutosSearch" href="#search"><img src="images/icons/efs-icon-search.svg"
+                                alt="procurar" /></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Header 2 -->
+        </div>
+        <!-- Fim Header Desktop -->
+
+        <!-- Inicio Header Mobile -->
+        <div class="efs-container">
+            <div class="efs-header-mobile-wrapper">
+                <div class="efs-header-mobile">
+                    <div class="efs-logo">
+                        <img src="images/efs-logo.svg" alt="logo" />
+                    </div>
+
+                    <div class="efs-header-mobile-options">
+                        <a href=#btnSearchMobile class="efs-btnOpenSearchMobile">
+                            <img src="images/icons/efs-icon-search-orange.svg" alt="procurar" />
+                        </a>
+
+                        <a href="#btnCarrinhoMobile">
+                            <img src="images/icons/efs-icon-cart.svg" alt="carrinho" />
+                        </a>
+
+                        <a href="#btnOpenMenu" class="efs-btnOpenMenuMobile">
+                            <img src="images/icons/efs-icon-burguer-menu.svg" alt="abrir menu" />
+                        </a>
+                    </div>
+                </div>
+                <div class="efs-closeSearchMobile">
+                    <img src="images/icons/efs-icon-close-search-mobile.svg" alt="fechar search mobile" />
+                </div>
+            </div>
+        </div>
+        <!-- Inicio Header 3 -->
+        <div class="efs-header-3-bg">
+            <div class="efs-container">
+                <div class="efs-header-3 efs-din-b">
+                    <p>Parcele em até 10x*</p>
+                    <p>Frete grátis nas compras acima de R$150,00</p>
+                    <p>Receba em casa, fique em segurança</p>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Header 3 -->
+
+
+        <div class="efs-menu-mobile">
+            <div class="efs-menu-row-1-bg">
+                <div class="efs-container">
+                    <div class="efs-menu-row-1">
+                        <div class="efs-menu-account">
+                            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+                        </div>
+
+                        <div class="efs-menu-options">
+                            <a href="#lancamentos">Lançamentos</a>
+                            <a href="#mais-vendidos">Mais vendidos</a>
+                            <a href="#ofertas">Ofertas</a>
+                        </div>
+
+                        <nav class="efs-navbar-mobile">
+                            <ul>
+                                <li><a href="#openMenuMasculino" class="openSubmenu">Masculino</a></li>
+                                <li><a href="#feminino">Feminino</a></li>
+                                <li><a href="#juvenil-infantil">Juvenil e Infantil</a></li>
+                                <li><a href="#acessórios">Acessórios</a></li>
+                                <li><a href="#giftcard">Gift Card</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="efs-submenu-row-2-bg">
+                <div class="efs-container">
+                    <div class="efs-submenu-row-2">
+                        <div class="efs-submenu-esportes">
+                            <div class="efs-submenu-esportes-options">
+                                <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+                                <a href="#nba-option">NBA</a>
+                                <a href="#nfl-option">NFL</a>
+                                <a href="#mlb-option">MLB</a>
+                            </div>
+
+                            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+                        </div>
+
+                        <div class="swiper-container efs-esporte-images">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-1.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-2.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-3.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-4.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-5.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-6.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-7.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-8.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-9.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-10.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-1.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-2.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-3.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-4.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-5.png" alt="futebol">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+                <div class="efs-container">
+                    <div class="efs-submenu-row-3">
+                        <div class="efs-submenu-conta-desejos-rastreio">
+                            <a class="efs-submenu-conta" href="#acessar-conta">
+                                <img src="images/icons/efs-icon-account.svg" alt="conta">
+                                <p>Minha Conta</p>
+                            </a>
+
+                            <a class="efs-submenu-desejos" href="#desejos">
+                                <img src="images/icons/efs-icon-heart-submenu.svg" alt="desejos">
+                                <p>Minha lista de desejos</p>
+                            </a>
+
+                            <a class="efs-submenu-rastreio" href="#rastreio">
+                                <img src="images/icons/efs-icon-box.svg" alt="rastrear">
+                                <p>Rastrear meus pedidos</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Inicio Submenu - Header -->
+        <!-- Para ver o submenu só tirar a classe none -->
+        <div class="efs-submenu">
+            <div class="efs-submenu-row-1-bg">
+                <div class="efs-container">
+                    <div class="efs-submenu-row-1">
+                        <div class="efs-menu-options efs-submenu-options">
+                            <a href="#lancamentos">Lançamentos</a>
+                            <a href="#mais-vendidos">Mais vendidos</a>
+                            <a href="#ofertas">Ofertas</a>
+                            <a href="#ver-todos">Ver todos</a>
+                        </div>
+
+                        <div class="efs-menu-account">
+                            <p>Olá, rafael! acesse sua conta por <a id='efs-login' href="#acessar">aqui</a></p>
+                        </div>
+
+                        <div class="efs-submenu-voltar">
+                            <img src="images/icons/efs-icon-arrow-back.svg" alt="voltar">
+                            <p>masculino</p>
+                        </div>
+                        <section class="efs-submenu-roupas">
+                            <h2>Roupas</h2>
+                            <a href="#camisetas">Camiseta</a>
+                            <a href="#camiseta-polo">Camiseta Polo</a>
+                            <a href="#regata">Regata</a>
+                            <a href="#camisa">Camisa</a>
+                            <a href="#jaqueta">jaqueta</a>
+                            <a href="#bermuda">Bermuda</a>
+                            <a href="#calca">Calça</a>
+                        </section>
+
+                        <section class="efs-submenu-acessorios">
+                            <h2>Acessórios</h2>
+                            <a href="#gorro">Gorro</a>
+                            <a href="#chapéu">Chapéu</a>
+                            <a href="#viseira">Viseira</a>
+                            <a href="#cueca">Cueca</a>
+                            <a href="#meia">Meia</a>
+                        </section>
+
+                        <img src="images/efs-image-submenu.png" alt="campo de futebol" />
+                    </div>
+                </div>
+            </div>
+            <div class="efs-submenu-row-2-bg">
+                <div class="efs-container">
+                    <div class="efs-submenu-row-2">
+                        <div class="efs-submenu-esportes">
+                            <div class="efs-submenu-esportes-options">
+                                <a href="#futebol-option" class="efs-option-selecionado">Futebol</a>
+                                <a href="#nba-option">NBA</a>
+                                <a href="#nfl-option">NFL</a>
+                                <a href="#mlb-option">MLB</a>
+                            </div>
+
+                            <a href="#futebol-option" class="efs-submenu-esporte-option">ver todos em futebol</a>
+                        </div>
+
+                        <div class="swiper-container efs-esporte-images">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-1.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-2.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-3.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-4.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-5.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-6.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-7.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-8.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-9.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-10.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-1.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-2.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-3.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-4.png" alt="futebol">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/efs-futebol-5.png" alt="futebol">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="efs-submenu-row-3-bg efs-submenu-mobile">
+                <div class="efs-container">
+                    <div class="efs-submenu-row-3">
+                        <div class="efs-submenu-conta-desejos-rastreio">
+                            <a class="efs-submenu-conta" href="#acessar-conta">
+                                <img src="images/icons/efs-icon-account.svg" alt="conta">
+                                <p>Minha Conta</p>
+                            </a>
+
+                            <a class="efs-submenu-desejos" href="#desejos">
+                                <img src="images/icons/efs-icon-heart-submenu.svg" alt="desejos">
+                                <p>Minha lista de desejos</p>
+                            </a>
+
+                            <a class="efs-submenu-rastreio" href="#rastreio">
+                                <img src="images/icons/efs-icon-box.svg" alt="rastrear">
+                                <p>Rastrear meus pedidos</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Submenu - Header -->
+        <!-- Inicio Search - Header  -->
+        <div class="efs-search-produtos-bg">
+            <div class="efs-search-produtos">
+                <p class="efs-search-encontrados">Produtos encontrados</p>
+
+                <div class="efs-search-produtos-item efs-search-produto-1">
+                    <img src="images/efs-search-1.png" alt="camisa" />
+                    <div class="efs-search-produto-info">
+                        <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+                        <p class="efs-search-produto-preco">R$69, 90</p>
+                    </div>
+                </div>
+
+                <div class="efs-search-produtos-item efs-search-produto-1">
+                    <img src="images/efs-search-2.png" alt="camisa" />
+                    <div class="efs-search-produto-info">
+                        <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+                        <p class="efs-search-produto-preco">R$69, 90</p>
+                    </div>
+                </div>
+
+                <div class="efs-search-produtos-item efs-search-produto-1">
+                    <img src="images/efs-search-3.png" alt="camisa" />
+                    <div class="efs-search-produto-info">
+                        <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+                        <p class="efs-search-produto-preco">R$69, 90</p>
+                    </div>
+                </div>
+
+                <div class="efs-search-produtos-item efs-search-produto-1">
+                    <img src="images/efs-search-4.png" alt="camisa" />
+                    <div class="efs-search-produto-info">
+                        <p class="efs-search-produto-nome">Camisa Vans Skate</p>
+                        <p class="efs-search-produto-preco">R$69, 90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Search - Header  -->
+
+        <!-- Inicio search Mobile -->
+        <div class="efs-search-mobile-wrapper">
+            <div class="efs-search-mobile">
+                <input class="efs-search-input" type="text" placeholder="O que você procura?" />
+                <a class="efs-btnOpenSearch" href="#search"><img src="images/icons/efs-icon-search.svg"
+                        alt="procurar" /></a>
+            </div>
+        </div>
+        <!-- Fim search Mobile -->
+    </header>
+    <!-- Fim Header da página -->
+
+    <main class="efs-categoria-page">
+
+        <!-- Inicio Título da página -->
+        <div class="efs-container">
+            <section class="efs-categoria-tipo">
+                <h1 class="efs-pagina-titulo">Masculino</h2>
+                    <p class="efs-pagina-caminho"> Home / Masculino</p>
+            </section>
+        </div>
+        <!-- Fim Título da página -->
+
+        <!-- Inicio Categoria com grid personalizado -->
+        <div class="efs-categoria-personalizada">
+            <div class="efs-container">
+                <div class="efs-categoria-personalizada">
+                    <div class="efs-categoria-personalizada-left">
+                        <section class="efs-categoria-personalizada-camisetas">
+                            <a href="#camisetas">
+                                <img src="images/efs-categoria-ps-camiseta.png" alt="camisetas">
+                                <h2 class="efs-nome-categoria">Camisetas</h2>
+                            </a>
+                        </section>
+                    </div>
+
+                    <div class="efs-categoria-personalizada-right">
+                        <div class="efs-categoria-personalizada-right-row">
+                            <section class="efs-categoria-personalizada-bones">
+                                <a href="#bones">
+                                    <img src="images/efs-categoria-ps-bones.png" alt="bones">
+                                    <h2 class="efs-nome-categoria">Bonés</h2>
+                                </a>
+                            </section>
+
+                            <section class="efs-categoria-personalizada-bermudas">
+                                <a href="#bermudas">
+                                    <img src="images/efs-categoria-ps-bermudas.png" alt="bermudas">
+                                    <h2 class="efs-nome-categoria">Bermudas</h2>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="efs-categoria-personalizada-right-row">
+                            <section class="efs-categoria-personalizada-calcas">
+                                <a href="#calcas">
+                                    <img src="images/efs-categoria-ps-calcas.png" alt="calcas">
+                                    <h2 class="efs-nome-categoria">Calças</h2>
+                                </a>
+                            </section>
+
+                            <section class="efs-categoria-personalizada-camisas">
+                                <a href="#camisas">
+                                    <img src="images/efs-categoria-ps-camisas.png" alt="camisas">
+                                    <h2 class="efs-nome-categoria">camisas</h2>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Categoria com grid personalizado -->
+
+        <!-- Inicio categoria de produtos -->
+        <div class="efs-categorias">
+            <div class="efs-container">
+                <div class="efs-categorias-flex">
+                    <!-- pg-categoria == pagina categoria -->
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#jaquetas class="efs-jaquetas">
+                            <img src="images/efs-categoria-jaquetas.png" alt="jaquetas" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Jaquetas</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#regatas class="efs-regatas">
+                            <img src="images/efs-categoria-regatas.png" alt="regatas" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Bonés</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#camiseta-polo class="efs-camiseta-polo">
+                            <img src="images/efs-categoria-camiseta-polo.png" alt="camiseta-polo" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Camiseta-polo</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#chapeu class="efs-chapeu">
+                            <img src="images/efs-categoria-chapeu.png" alt="chapeu" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Chapéus</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#gorro class="efs-gorro">
+                            <img src="images/efs-categoria-gorro.png" alt="gorro" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Gorros</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#viseira class="efs-viseira">
+                            <img src="images/efs-categoria-viseira.png" alt="viseira" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Viseiras</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#cueca class="efs-cueca">
+                            <img src="images/efs-categoria-cueca.png" alt="cueca" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Cuecas</h2>
+                    </section>
+
+                    <section class="efs-categoria-pg-categoria">
+                        <a href=#meia class="efs-meia">
+                            <img src="images/efs-categoria-meias.png" alt="meia" />
+                        </a>
+                        <h2 class="efs-nome-categoria">Meias</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Fim  categoria de produtos -->
+
+        <!-- Inicio Slider produtos -AINDA SEM SWIPER -->
+        <div class="efs-slider-produtos">
+            <div class="efs-container">
+                <section class="efs-slider-produtos-title">
+                    <h2 class="efs-subtitle-produtos-categoria">Novidades</h2>
+                    <div class="efs-btns-slider-produtos">
+                        <div class="efs-btn-slider-produto-option">
+                            <input id="efs-marca-efs" name="efs-marcas-produto" value="efs" type="radio" checked>
+                            <label for="efs-marca-efs">Camisetas</label>
+                        </div>
+
+                        <div class="efs-btn-slider-produto-option">
+                            <input id="efs-marca-newera" name="efs-marcas-produto" value="newEra" type="radio">
+                            <label for="efs-marca-newera">Bonés</label>
+                        </div>
+                        <div class="efs-btn-slider-produto-option">
+                            <input id="efs-marca-mitchellness" name="efs-marcas-produto" value="mitchelNess"
+                                type="radio">
+                            <label for="efs-marca-mitchellness">Bermudas</label>
+                        </div>
+                    </div>
+                </section>
+
+                <div if="efs-swiper-products" class="swiper-container efs-swiper-products">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-1.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-2.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-3.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-4.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-1.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <section class="efs-produto-swiper">
+                                <div class="efs-produto-img">
+                                    <img src="images/efs-produto-2.png" alt="produto" />
+                                    <div class="efs-produto-fav" onClick="favProduct();">
+                                        <img src="images/icons/efs-icon-heart-gray.svg" alt="favoritar produto" />
+                                    </div>
+                                </div>
+                                <a href="#produto">
+                                    <p class="efs-produto-marca">efs sports co.</p>
+                                    <h3 class="efs-produto-nome">Camiseta Atlético Escalação Libertadores - Cam</h3>
+
+                                    <p class="efs-preco-full">de 89,90</p>
+                                    <p class="efs-preco-promo">por R$ 69,90</p>
+                                    <p class="efs-parcelamento">em até 6x de R$11,64 sem juros</p>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                    <!--Fim swiper wrapper-->
+
+                    <div class="efs-swiper-product-paginacao">
+                        <div class="swiper-pagination-products"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!--Fim Swiper-product-->
+            </div>
+        </div>
+        <!-- Fim Slider produtos - AINDA SEM SWIPER -->
+
+        <!-- Inicio categorias info -->
+        <section class="efs-categorias-info">
+            <h2>Camisetas básicas na EFS</h2>
+            <p>Para quem gosta de esporte, seja qual for, expressar essa paixão fica fácil com uma camiseta EFS. Escolha
+                sua camiseta esportiva, confira as estampas disponíveis e aproveite toda a qualidade dos melhores
+                tecidos. Se é para torcer, tem que vestir a camisa. E é claro que o melhor lugar para isso é aqui, na
+                loja de todas as torcidas.</p>
+        </section>
+        <!-- Fim categorias info -->
+
+    </main>
+
+    <!-- Inicio Footer -->
+    <footer>
+        <!-- Inicio Newsletter -->
+        <div class="efs-newsletter-bg">
+            <div class="efs-container">
+                <div class="efs-newsletter-bg-detail">
+                    <section class="efs-newsletter">
+                        <h2 class="efs-subtitle-component">Fique por dentro<br> <span>de todas as torcidas</span></h2>
+                        <p>Seja o primeiro a saber sobre nossas novidades e promoções.</p>
+
+                        <form action="" class="efs-newsletter-form">
+                            <label for="email">email</label>
+                            <div class="efs-newsletter-form-flex">
+                                <div class="efs-newsletter-email">
+                                    <input type="email" id="email" placeholder="Texto do input" required />
+                                    <img class="efs-icon-email" src="images/icons/efs-icon-mail.svg" alt="seu email" />
+                                </div>
+
+                                <button class="efs-newsletter-form-button">Receber ofertas</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Newsletter -->
+
+        <!-- Inicio footer-infos -->
+        <div class="efs-footer-infos">
+            <div class="efs-container efs-footer-infos-flex">
+                <div class="efs-footer-infos-right">
+                    <div class="efs-footer-logo">
+                        <img src="images/efs-footer-logo.svg" alt="logo" />
+                    </div>
+
+                    <section class="efs-footer-info">
+                        <div class="efs-btnOpenFooterMobile">
+                            <h2>EFS</h2>
+                            <img class="efs-arrow-open-footer" src="images/icons/efs-icon-arrow-down.svg"
+                                alt="abrir/fechar footer" />
+                        </div>
+                        <ul class="efs-footer-info-efs">
+                            <li><a href="#sobre-efs">Sobre a EFS</a></li>
+                            <li><a href="">Seja um franqueado</a></li>
+                            <li><a href="">Area do franqueado</a></li>
+                            <li><a href="">Blog</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="efs-footer-info">
+                        <div class="efs-btnOpenFooterMobile">
+                            <h2>Ajuda</h2>
+                            <img class="efs-arrow-open-footer" src="images/icons/efs-icon-arrow-down.svg"
+                                alt="abrir/fechar footer" />
+                        </div>
+                        <ul class="efs-footer-info-ajuda">
+                            <li><a href="">Fale conosco</a></li>
+                            <li><a href="">Dúvidas frequentes</a></li>
+                            <li><a href="">Política de devoluções</a></li>
+                            <li><a href="">Política de frete</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="efs-footer-infos-left">
+                    <div class="efs-footer-infos-midias">
+                        <img src="images/icons/efs-icon-insta.svg" alt="instagram" />
+                        <img src="images/icons/efs-icon-facebook.svg" alt="facebook" />
+                        <img src="images/icons/efs-icon-spotify.svg" alt="spotify" />
+                    </div>
+
+                    <div class="efs-footer-infos-contato">
+                        <div class="efs-contato-telefone">
+                            <img src="images//icons/efs-icon-phone.svg" alt="telefone">
+                            <p>[44] 4141-6115</p>
+                        </div>
+
+                        <div class="efs-contato-email">
+                            <img src="images//icons/efs-icon-mail.svg" alt="email">
+                            <p>atendimento@esportefinostore.com.br</p>
+                        </div>
+
+                        <div class="efs-contato-loja">
+                            <img src="images//icons/efs-icon-pin.svg" alt="pin">
+                            <p>Encontre a loja mais próxima</p>
+                        </div>
+                    </div>
+
+                    <div class="efs-footer-infos-associados">
+                        <img src="images/efs-associado-1.svg" alt="afepar" />
+                        <img src="images/efs-associado-2.svg" alt="abf" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim footer-infos -->
+
+        <!-- Inicio Footer Bandeiras -->
+        <div class="efs-footer-bandeiras">
+            <div class="efs-container efs-bandeiras-flex">
+                <div class="efs-bandeiras">
+                    <img src="images/efs-mastercard.svg" alt="mastercard" />
+                    <img src="images/efs-visa.svg" alt="visa" />
+                    <img src="images/efs-elo.svg" alt="elo" />
+                    <img src="images/efs-hipercard.svg" alt="hipercard" />
+                    <img src="images/efs-americanexpress.svg" alt="americanexpress" />
+                    <img src="images/efs-hiper.svg" alt="hiper" />
+                    <img src="images/efs-boleto.svg" alt="boleto" />
+                </div>
+
+                <p> &copy; 2020 EFS, Todos os direitos reservados.</p>
+            </div>
+        </div>
+        <!-- Fim Footer Bandeiras -->
+
+        <!-- Inicio Footer Nerau -->
+        <div class="efs-footer-nerau">
+            <img src="images/logo-nerau.svg" alt="logo-nerau">
+        </div>
+        <!-- Fim Footer Nerau -->
+    </footer>
+    <!-- Fim Footer -->
+
+    <script src="js/swiper.js"></script>
+    <script src="js/swipers.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

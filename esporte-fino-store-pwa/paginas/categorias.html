@@ -1,0 +1,235 @@
+<main class="efs-listagem-page">
+  <!-- Inicio Titulo da página -->
+  <div class="efs-container">
+    <section class="efs-categoria-tipo">
+      <h1 class="efs-pagina-titulo">{{ title }}</h1>
+      <div class="efs-listagem-caminho">
+        <div class="efs-pagina-caminho">
+          <a pwa-to-page="home">
+            Home
+          </a>
+          <a pwa-breadcumb-item>{{ bc.name }}</a>
+        </div>
+
+        <div class="efs-listagem-resultados-mobile">
+          <p>{{ $$paginate.count }} resultados</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Inicio Titulo da página -->
+
+  <!-- Inicio Botões Filtro e Ordenar Mobile -->
+  <div class="efs-container">
+    <div class="efs-filtro-ordenar-mobile">
+      <a class="efs-btnOpenFilterMobile efs-btn-filtro">
+        <img pwa-src="efs-icon-filter" alt="filtrar" />
+        <p>filtrar</p>
+      </a>
+
+      <a class="efs-btnOpenOrderMobile efs-btn-ordenar">
+        <img pwa-src="efs-icon-order" alt="ordenar" />
+        <p>Ordenar</p>
+      </a>
+    </div>
+  </div>
+  <!-- Fim Botões Filtro e Ordenar Mobile -->
+
+  <!-- INICIO ORDENAR MOBILE -->
+  <section class="efs-ordenar-mobile">
+    <div class="efs-ordenar-mobile-title">
+      <a class="efs-btnCloseOrdenarMobile">
+        <img pwa-src="efs-icon-close-filtro-mobile" alt="fechar" />
+        <p>voltar</p>
+      </a>
+      <h2>Ordenar</h2>
+    </div>
+
+    <pwa-manual-filter class="efs-ordenar-mobile-options">
+      <div pwa-change-filter.click="name:+" class="efs-ordenar-mobile-option">
+        <input pwa-filter-selected.checked="name:+" id="efs-relevancia" name="efs-filter-ordenar" value="relevancia"
+          type="radio" checked>
+        <label for="efs-relevancia">Nome</label>
+      </div>
+
+      <!-- <div class="efs-ordenar-mobile-option">
+                <input id="efs-maior-desconto" name="efs-filter-ordenar" value="maiorDesconto" type="radio">
+                <label for="efs-maior-desconto">Maior Desconto</label>
+            </div> -->
+      <div pwa-change-filter.click="price:+" class="efs-ordenar-mobile-option">
+        <input pwa-filter-selected.checked="price:+" id="efs-menor-preco" name="efs-filter-ordenar" value="maiorPreco"
+          type="radio">
+        <label for="efs-menor-preco">Menor Preço</label>
+      </div>
+      <div pwa-change-filter.click="price:-" class="efs-ordenar-mobile-option">
+        <input pwa-filter-selected.checked="price:-" id="efs-maior-preco" name="efs-filter-ordenar" value="maiorPreco"
+          type="radio">
+        <label for="efs-maior-preco">Maior Preço</label>
+      </div>
+      <div pwa-change-filter.click="entity_id:-" class="efs-ordenar-mobile-option">
+        <input pwa-filter-selected.checked="entity_id:-" id="efs-novidades" name="efs-filter-ordenar" value="novidades"
+          type="radio">
+        <label for="efs-novidades">Novidades</label>
+      </div>
+    </pwa-manual-filter>
+  </section>
+  <!-- FIM ORDENAR MOBILE -->
+
+  <div class="efs-listagem-produto">
+    <div class="efs-container">
+      <div pwa-hook="metodoFiltrosMobile" class="efs-listagem-produto-flex">
+        <!-- Inicio Filtro -->
+        <div pwa-hook="abrir-filtros" class="efs-listagem-produto-filtro">
+          <div class="efs-filtro-mobile-title">
+            <a class="efs-btnCloseFiltroMobile">
+              <img pwa-src="efs-icon-close-filtro-mobile" alt="fechar" />
+              <p>voltar</p>
+            </a>
+            <h2>Filtros</h2>
+          </div>
+
+          <pwa-attribute-filter attribute="categories.code" class="efs-um-filtro efs-listagem-filtro-option-tamanho">
+            <div pwa-has-filters class="efs-listagem-filtro-title-flex efs-btnOpenFilterOption">
+              <h2 class="efs-listagem-filtro-title">Tamanho</h2>
+              <img class="efs-filtro-arrow" pwa-src="efs-icon-arrow-down">
+            </div>
+
+            <div pwa-has-filters class="efs-listagem-filtro-tamanhos efs-filtro-options-none">
+              <div class="efs-filtro-lista">
+                <a pwa-each-filter pwa-filter-input="data-checked">{{ filter.name }}</a>
+              </div>
+
+              <div pwa-hook.click="toggleListaFiltros" class="efs-mostrar-mais">
+                <p>Mostrar mais</p>
+                <img pwa-src="efs-icon-arrow-down-gray" alt="mostrar mais" />
+              </div>
+            </div>
+          </pwa-attribute-filter>
+
+          <pwa-attribute-filter attribute="modelo" class="efs-um-filtro efs-listagem-filtro-option-marca">
+            <div pwa-has-filters class="efs-listagem-filtro-title-flex efs-btnOpenFilterOption">
+              <h2 class="efs-listagem-filtro-title">Marca</h2>
+              <img class="efs-filtro-arrow" pwa-src="efs-icon-arrow-down">
+            </div>
+
+            <div pwa-has-filters class="efs-listagem-filtro-marcas efs-filtro-options-none">
+              <div class="efs-filtro-lista">
+                <a pwa-each-filter pwa-filter-input="data-checked">{{ filter.label }} [{{ filter.count }}]</a>
+              </div>
+
+
+              <div pwa-hook.click="toggleListaFiltros" class="efs-mostrar-mais">
+                <p>Mostrar mais</p>
+                <img pwa-src="efs-icon-arrow-down-gray" alt="mostrar mais" />
+              </div>
+            </div>
+          </pwa-attribute-filter>
+
+          <pwa-attribute-filter attribute="ano" class="efs-um-filtro efs-listagem-filtro-option-times">
+            <div pwa-has-filters class="efs-listagem-filtro-title-flex efs-btnOpenFilterOption">
+              <h2 class="efs-listagem-filtro-title">Times</h2>
+              <img class="efs-filtro-arrow" pwa-src="efs-icon-arrow-down">
+            </div>
+
+            <div pwa-has-filters class="efs-listagem-filtro-times efs-filtro-options-none">
+              <div class="efs-search">
+                <input pwa-hook.keyup="pesquisaTime" class="efs-search-input" type="text"
+                  placeholder="Digite para pesquisar" />
+                <a class="search"><img pwa-src="efs-icon-search-orange" alt="procurar" /></a>
+              </div>
+
+              <div class="efs-filtro-lista">
+                <a pwa-each-filter pwa-filter-input="data-checked">{{ filter.label }} [{{ filter.count }}]</a>
+              </div>
+
+              <div pwa-hook.click="toggleListaFiltros" class="efs-mostrar-mais">
+                <p>Mostrar mais</p>
+                <img pwa-src="efs-icon-arrow-down-gray" alt="mostrar mais" />
+              </div>
+            </div>
+          </pwa-attribute-filter>
+
+          <pwa-price-filter max-size="5" class="efs-um-filtro efs-listagem-filtro-option-preco">
+            <div pwa-has-filters class="efs-listagem-filtro-title-flex efs-btnOpenFilterOption">
+              <h2 class="efs-listagem-filtro-title">Preço</h2>
+              <img class="efs-filtro-arrow" pwa-src="efs-icon-arrow-down">
+            </div>
+
+            <div pwa-has-filters class="efs-listagem-filtro-precos efs-filtro-options-none">
+              <a pwa-each-price>{{ filter.min | price }} - {{ filter.max }}</a>
+            </div>
+          </pwa-price-filter>
+        </div>
+        <!-- Fim Filtro -->
+
+        <div class="efs-listagem-produto-infos">
+          <!-- Resultados e Ordenar -->
+          <div class="efs-listagem-resultados-ordenar">
+            <div class="efs-listagem-resultados">
+              <p><span>{{ $$paginate.count }}</span> Resultados</p>
+            </div>
+
+            <div class="efs-listagem-ordenar">
+              <p>
+                Ordenar por
+                <pwa-manual-filter>
+                  <select pwa-filter-input name="order" id="select-order">
+                    <option value="name:+">Nome</option>
+                    <option value="entity_id:-">Lançamentos</option>
+                    <option value="price:+">Mais baratos</option>
+                    <option value="price:-">Mais caros</option>
+                  </select>
+                </pwa-manual-filter>
+              </p>
+              <!-- <img pwa-src="efs-icon-arrow-down-black" alt="mostrar mais" /> -->
+            </div>
+          </div>
+
+          <!-- Listagem dos produtos -->
+          <pwa-result-list size="6" class="efs-listagem-produto-produtos">
+            <section pwa-each-product class="efs-produto">
+              <pwa-product-card>
+            </section>
+          </pwa-result-list>
+          <!-- Fim Listagem dos Produtos -->
+
+          <!-- Botão de anterior , proximo e páginas -->
+          <pwa-pagination max-size="5" list-without-border>
+            <div class="efs-listagem-produto-paginacao">
+              <a pwa-to-prev class="efs-btn-orange-white">Anterior</a>
+
+              <div class="efs-listagem-produto-paginas">
+                <p pwa-to-first pwa-class="{'efs-listagem-pagina-selecionada': component.currentPage === 1 }">1</p>
+                <p pwa-not-first>...</p>
+                <p pwa-each-page.class="efs-listagem-pagina-selecionada">
+                  {{ page }}
+                </p>
+                <p pwa--if="component.currentPage < component.lastPage - 3">...</p>
+                <p pwa-to-last
+                  pwa-class="{'efs-listagem-pagina-selecionada': component.currentPage === component.lastPage }">
+                  {{ component.lastPage }}</p>
+              </div>
+
+              <a pwa-to-next class="efs-btn-orange-white">Próximo</a>
+            </div>
+
+            <div class="efs-listagem-produto-paginacao-mobile">
+              <a pwa-to-prev class="efs-btn-orange-white"> Ant </a>
+
+              <div class="efs-listagem-produto-paginas-mobile">
+                <p>Página <span>1</span> de <span>{{ component.lastPage }}</span></p>
+              </div>
+
+              <a pwa-to-next class="efs-btn-orange-white">Pro</a>
+            </div>
+          </pwa-pagination>
+          <!-- Fim botão anterior, próximo e páginas -->
+        </div>
+      </div>
+      <section class="efs-categorias-info">
+        <h2>{{ category.name }}</h2>
+        <p pwa--html="category.description || category.meta_description"></p>
+      </section>
+    </div>
+  </div>
+</main>

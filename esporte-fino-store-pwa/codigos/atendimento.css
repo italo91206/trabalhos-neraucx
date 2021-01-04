@@ -1,0 +1,456 @@
+
+.efs-atendimento-page {
+    background: #F7F9FA;
+    padding-top: 20px;
+}
+
+/***** INICIO Tabs Atendimento *****/
+.efs-tab-items {
+    margin: 60px 100px 0px 100px;
+}
+
+.efs-tab-items ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.efs-tab-items ul li {
+    width: 25%;
+    display: inline-block;
+}
+
+.efs-tab-items ul a {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    color: #394047;
+    width: 100%;
+    font-size: 1.1875em;
+    padding: 20px 0;
+    border-bottom: 6px solid #E9ECEF;
+    text-transform: uppercase;
+}
+
+.efs-tab-items ul a:hover::after, 
+.efs-tab-items ul a.efs-active::after {
+    content: '';
+    background: #FBA409;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+/***** FIM Tabs Atendimento *****/
+
+/***** INICIO Card Atendimento *****/
+.efs-cards-atendimento {
+    margin: 48px 100px 0px 100px;
+}
+
+.efs-cards-atendimento .efs-card-atendimento {
+    width: 100%;
+    background: #FFFFFF;
+    display: none;
+}
+
+.efs-cards-atendimento .efs-card-atendimento.efs-active {
+    display: block;
+    animation: animCardAtendimento .3s;
+} 
+
+@keyframes animCardAtendimento {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+/* INICIO efs-card-ajudar */
+.efs-card-atendimento#efs-card-ajudar {
+    padding: 60px 50px;
+}
+
+.efs-card-atendimento#efs-card-ajudar h2 {
+    font-size: 1.6875em;
+    font-family: 'Din Bold';
+}
+
+#efs-card-ajudar .efs-card-ajudar-body {
+    display: flex;
+    margin-top: 25px;
+    column-gap: 34px;
+}
+
+#efs-card-ajudar .efs-card-ajudar-body form {
+    width: 50%;
+}
+
+.efs-card-ajudar-body form .efs-input-form {
+    background: #F8F9FA;
+}
+
+.efs-card-ajudar-body .efs-infos-ajudar {
+    width: 50%;
+}
+
+.efs-infos-ajudar .efs-infos-item {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    margin-bottom: 26px;
+}
+
+.efs-infos-ajudar .efs-infos-item p {
+    font-size: 1em;
+    font-family: 'Din Bold';
+    color: #191C1E;
+}
+
+/* FIM efs-card-ajudar */
+
+
+/* INICIO efs-card-duvidas */
+.efs-card-atendimento#efs-card-duvidas {
+    padding: 60px 50px;
+}
+
+.efs-card-duvidas-body .efs-btn-drop-faq {
+    font-size: 1.1875em;
+    color: #191C1E;
+    font-family: 'Din Bold';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;    
+}
+
+.efs-card-duvidas-body .efs-btn-drop-faq span { margin-right: 16px; }
+
+.efs-card-duvidas-body .efs-btn-drop-faq img {
+    transform: rotate(90deg);
+    transition: all .3s ease;
+}
+.efs-card-duvidas-body .efs-btn-drop-faq.efs-is-open img { transform: rotate(-90deg); }
+
+.efs-card-duvidas-body .efs-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: all .3s ease-in-out;
+    font-size: 1em;
+    line-height: 24px;
+    color: #394047;
+    border-bottom: 2px solid #E9ECEF;
+}
+
+.efs-card-duvidas-body .efs-accordion-content:last-child { border: none; }
+/* FIM efs-card-duvidas */
+
+
+/* INICIO efs-card-frete */
+.efs-card-atendimento#efs-card-frete, 
+.efs-card-atendimento#efs-card-politica {
+    padding: 60px 50px;
+}
+
+.efs-tab-items ul a.efs-tab-item.efs-active {
+    font-family: 'Din Black';
+    line-height: 23px;
+}
+
+.efs-mapa-franqueados .efs-subtitle-component span {
+    color: #fff;
+}
+
+#efs-atendimento-page {
+    background: rgb(247, 249, 250);
+}
+
+.efs-mapa-franqueados {
+    display: flex;
+    margin-top: 147px;
+}
+
+.efs-atendimento-mapa {
+    width: 56%;
+    background: pwa-url(efs-atendimento-mapa) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.efs-atendimento-mapa-local {
+    width: 394px;
+    margin-right: 136px;
+    display: flex;
+    flex-direction: column;
+}
+
+.efs-atendimento-local-infos {
+    padding: 16px 23px;
+    background-color: #FFF;
+}
+
+.efs-atendimento-local-nome {
+    font-family: 'Din Bold';
+    font-size: 1em;
+}
+
+.efs-atendimento-local-endereco {
+    margin: 16px 0;
+}
+
+.efs-atendimento-franqueados {
+    width: 44%;
+}
+
+.efs-atendimento-franqueados .efs-franqueados {
+    margin-left: 78px;
+}
+
+.efs-franqueados p {
+    width: auto;
+}
+
+.efs-franqueados .efs-btn-white-orange {
+    display: inline-block;
+    padding: 20px 80px;
+    margin-top: 20px;
+    font-size: 0.875em;
+    font-family: 'Din Bold';
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* Inicio Mapa e franqueados */
+
+
+@media only screen and (max-width: 1250px) {
+    .efs-atendimento-mapa {
+        width: 50%;
+    }
+
+    .efs-atendimento-franqueados {
+        width: 50%;
+    }
+
+    .efs-atendimento-mapa-local {
+        margin-right: 90px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /***** INICIO Tabs Atendimento *****/
+    .efs-tab-items { margin: 0; }
+    /***** FIM Tabs Atendimento *****/
+
+    /***** INICIO Card Atendimento *****/
+    .efs-cards-atendimento { margin: 0px; }
+    /* INICIO efs-card-ajudar */
+    #efs-card-ajudar .efs-card-ajudar-body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        row-gap: 34px;
+    }
+
+    #efs-card-ajudar .efs-card-ajudar-body form { width: 100%; }
+    
+    .efs-card-ajudar-body .efs-infos-ajudar { width: 100%; }
+    /* FIM efs-card-ajudar */
+    /***** FIM Card Atendimento *****/
+
+    .efs-atendimento-mapa {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .efs-atendimento-franqueados {
+        width: 100%;
+    }
+
+    .efs-atendimento-mapa-local {
+        margin-right: 0;
+        padding: 40px 0;
+    }
+
+    .efs-mapa-franqueados {
+        display: flex;
+        flex-direction: column;
+        margin-top: 170px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .efs-tab-items ul li:nth-child(1) a {
+        margin-left: 0px;
+    }
+    
+    .efs-tab-items ul {
+        font-size: 10px;
+    }
+    
+    .efs-tab-items ul a.efs-tab-item.efs-active {
+        line-height: 15px;
+    }
+    
+    .efs-tab-items ul a:hover::after, .efs-tab-items ul a.efs-active::after {
+        width: 100%;
+    }
+    
+    /***** INICIO Tabs Atendimento *****/
+    .efs-tab-items ul { overflow: auto; }
+
+    .efs-tab-items ul::-webkit-scrollbar {  display: none; }
+
+    .efs-tab-items ul li:nth-child(1) { min-width: 150px; }
+    .efs-tab-items ul li:nth-child(2) { min-width: 180px; }
+    .efs-tab-items ul li:nth-child(3) { min-width: 150px; }
+    .efs-tab-items ul li:nth-child(4) { min-width: 200px; }
+
+    .efs-tab-items ul li a{
+        min-width: 100%;
+        text-align: left;
+        word-wrap: break-word;
+    }
+
+    .efs-tab-items ul li:nth-child(1) a{ margin-left: 24px; }
+
+    .efs-tab-items ul a:hover::after {
+        content: '';
+        background: red;
+        height: 5px;
+        width: 110px;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+    }
+    
+    .efs-tab-items ul a:hover::after, 
+    .efs-tab-items ul a.efs-active::after {
+        content: '';
+        background: #FBA409;
+        height: 5px;
+        width: 100px;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+    }
+    
+    /***** FIM Tabs Atendimento *****/
+
+    /***** INICIO Card Atendimento *****/
+
+    /* INICIO efs-card-ajudar */
+    .efs-card-atendimento#efs-card-ajudar { padding: 0px; }
+
+    .efs-card-atendimento#efs-card-ajudar h2 {
+        font-size: 1.125em;
+        padding: 24px 24px 0 24px;
+    }
+
+    #efs-card-ajudar .efs-card-ajudar-body form { padding: 0 24px 24px 24px; }
+    
+    .efs-card-ajudar-body .efs-infos-ajudar {
+        padding: 25px;
+        background: #F7F9FA;
+    }
+    /* FIM efs-card-ajudar */
+
+    /* INICIO efs-card-duvidas */
+    .efs-card-atendimento#efs-card-duvidas { padding: 25px 40px; }
+
+    .efs-card-duvidas-body .efs-btn-drop-faq { font-size: 1.125em; }
+
+    .efs-card-duvidas-body .efs-accordion-content {
+        font-size: 0.875em;
+        line-height: 17px;
+    }
+    /* FIM efs-card-duvidas */
+
+    /* INICIO efs-card-frete */
+    .efs-card-atendimento#efs-card-frete,
+    .efs-card-atendimento#efs-card-politica {
+        padding: 40px;
+    }
+
+    .efs-card-atendimento#efs-card-frete p,
+    .efs-card-atendimento#efs-card-politica p {
+        font-size: 0.875em;
+    }
+    /* FIM efs-card-frete */
+    /***** FIM Card Atendimento *****/
+    .efs-mapa-franqueados {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .efs-atendimento-mapa {
+        display: flex;
+        justify-content: center;
+    }
+
+    .efs-atendimento-franqueados {
+        width: 100%;
+    }
+
+    .efs-atendimento-mapa-local {
+        padding: 240px 0 20px 0;
+    }
+
+    .efs-franqueados p {
+        margin-bottom: 20px;
+    }
+
+    .efs-atendimento-franqueados .efs-franqueados {  margin-left: 20px; }
+}
+
+@media only screen and (max-width: 576px) {
+    /***** INICIO Card Atendimento *****/
+
+    /* INICIO efs-card-ajudar */
+    .efs-atendimento-page .efs-container { padding: 0; }
+
+    .efs-infos-ajudar .efs-infos-item {
+        column-gap: 8px;
+        margin-bottom: 32px;
+    }
+
+    .efs-infos-ajudar .efs-infos-item p { font-size: 0.875em; }
+    /* FIM efs-card-ajudar */
+    /***** FIM Card Atendimento *****/
+}
+
+@media only screen and (max-width: 450px) {
+    .efs-atendimento-mapa-local {
+        width: 90%;
+    }
+
+    .efs-atendimento-mapa-local img {
+        object-fit: cover;
+    }
+
+    .efs-atendimento-franqueados .efs-franqueados {
+        margin-left: 0px;
+        padding: 0;
+    }
+
+    .efs-franqueados .efs-btn-white-orange {
+        display: block;
+        width: 100%;
+    }
+
+    .efs-franqueados-bg {
+        background-position: 60%;
+    }
+}

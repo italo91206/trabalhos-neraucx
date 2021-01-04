@@ -1,0 +1,548 @@
+/* Inicio HEADER - Component */
+
+.efs-header-mobile {
+    display: none;
+}
+
+.efs-closeSearchMobile {
+    display: none;
+}
+
+/* HEADER - header-1*/
+
+.efs-header-1-bg {
+    background-color: #F8F9FA;
+}
+
+.efs-header-1 {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    color: #7F8993;
+    font-size: 0.6875em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.efs-header-1 a {
+    text-decoration: none;
+    color: #7F8993;
+}
+
+.efs-header-1-left {
+    display: flex;
+}
+
+.efs-lojas, .efs-atendimento {
+    display: flex;
+    align-items: center;
+}
+
+.efs-lojas img, .efs-atendimento img {
+    margin-right: 8px;
+}
+
+.efs-lojas {
+    margin-right: 46px;
+}
+
+.efs-header-1-right {
+    display: flex;
+    align-items: center;
+    margin-right: 26px;
+}
+
+#efs-fav {
+    margin-right: 28px;
+    margin-left: 35px;
+}
+
+#efs-login {
+    text-decoration: underline;
+    color: #FBA409;
+}
+
+.efs-carrinho {
+    position: relative;
+}
+
+.efs-nmr-produtos {
+    position: absolute;
+    right: -5px;
+    top: 15px;
+    background-color: #E81E1E;
+    color: #FFF;
+    width: 18px;
+    height: 18px;
+    padding: 2px 6.5px 2px 6.5px;
+    border-radius: 100%;
+}
+
+/* HEADER - header-2 */
+
+.efs-header-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.efs-logo {
+    margin-left: 19px;
+}
+
+.efs-navbar ul {
+    display: flex;
+    column-gap: 53px;
+}
+
+.efs-navbar ul li a {
+    color: #212529;
+}
+
+.efs-navbar ul li a:hover {
+    color: #000;
+    font-family: 'Din Bold';
+}
+
+.efs-search-input {
+    width: 288px;
+    height: 50px;
+    border: 1px solid #ADB5BD;
+    padding-left: 17px;
+    padding-right: 45px;
+}
+
+#efs-search-input::placeholder {
+    font-size: 0.75em;
+}
+
+.efs-search {
+    position: relative;
+}
+
+.efs-search a {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+}
+
+/* HEADER - header 3 */
+
+.efs-header-3-bg {
+    background-color: #191C1E;
+}
+
+.efs-header-3 {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.efs-header-3 p {
+    width: 414px;
+    text-align: center;
+}
+
+/* HEADER - submenu e menu mobile */
+
+.efs-submenu {
+    margin-top: -60px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.5s opacity;
+}
+
+.efs-submenu-show {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.efs-submenu-voltar {
+    display: none;
+}
+
+.efs-menu-mobile {
+    display: none;
+}
+
+.efs-menu-account {
+    display: none;
+}
+
+.efs-submenu-row-3-bg {
+    display: none;
+}
+
+.efs-submenu-row-1-bg {
+    background-color: #F7F9FA;
+    padding: 40px 0;
+}
+
+.efs-submenu-row-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.efs-menu-options a, .efs-submenu-roupas a, .efs-submenu-acessorios a {
+    display: block;
+    margin-bottom: 17px;
+    color: #000;
+}
+
+.efs-submenu-roupas h2, .efs-submenu-acessorios h2 {
+    margin-bottom: 18px;
+    font-size: 1em;
+}
+
+.efs-menu-options a {
+    font-family: 'Din Bold';
+}
+
+.efs-menu-options a:nth-child(3) {
+    margin-bottom: 44px;
+}
+
+.efs-submenu-row-2-bg {
+    background: #FFF;
+    padding: 40px 0 38px 0;
+}
+
+.efs-submenu-esportes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.efs-submenu-esportes-options a {
+    margin-right: 47px;
+    color: #ADB5BD;
+}
+
+.efs-submenu-esporte-option {
+    text-decoration: underline;
+    font-family: 'Din Bold';
+    color: #FBA409;
+    font-size: 0, 6875em;
+}
+
+.efs-submenu-esportes-options a:hover, .efs-option-selecionado {
+    color: #000 !important;
+    font-family: 'Din Bold';
+}
+
+.efs-esporte-images {
+    display: flex;
+}
+
+/* FIM SUBMENU */
+
+/* SEARCH - HEADER */
+
+.efs-search-produtos-bg {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 160px;
+    z-index: 2;
+    height: 100vh;
+    opacity: 1;
+    transition: 0.7s;
+    transform: translateX(-140%);
+}
+
+.efs-search-produtos-bg-show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.efs-search-produtos {
+    width: 40%;
+    height: calc(100vh - 150px);
+    background: #FFF;
+    position: absolute;
+    right: 0%;
+    padding: 25px 33px;
+    overflow-y: scroll;
+    transform: translateX(100%);
+    transition: 1s transform;
+}
+
+.efs-search-produtos-show {
+    transform: translateX(0%);
+}
+
+.efs-search-produtos-bg::-webkit-scrollbar {
+    display: none;
+}
+
+.efs-search-encontrados {
+    font-family: 'Din Regular';
+    font-size: 0.875em;
+    color: #ADB5BD;
+    margin-bottom: 35px;
+}
+
+.efs-search-produtos-item {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #E9ECEF;
+}
+
+.efs-search-produtos-item:last-child {
+    border-bottom: none;
+}
+
+.efs-search-produto-nome {
+    font-family: 'Din Bold';
+    font-size: 1em;
+    margin-bottom: 36px;
+}
+
+.efs-search-produto-preco {
+    font-family: 'DIn Black';
+    color: #FBA409;
+    font-size: 1.1875em;
+}
+
+.efs-search-mobile {
+    display: none;
+}
+
+/* Fim HEADER - Component*/
+
+@media only screen and (max-width: 1250px){
+    /* HEADER - header-1*/
+    .efs-lojas {
+        margin-right: 25px;
+    }
+    #efs-fav {
+        margin-right: 15px;
+        margin-left: 16px;
+    }
+    /* HEADER - header-2 */
+    .efs-logo {
+        margin-left: 3px;
+    }
+    .efs-logo img {
+        max-width: 80%;
+    }
+    .efs-navbar ul {
+        column-gap: 30px;
+    }
+    .efs-navbar ul li a {
+        color: #212529;
+    }
+    .efs-navbar ul li a:hover {
+        color: #000;
+        font-family: 'Din Bold';
+    }
+    .efs-search-input {
+        padding-left: 5px;
+        padding-right: 30px;
+    }
+    /* Fim HEADER - Component*/
+}
+
+@media only screen and (max-width: 992px) {
+     /* HEADER */
+     .efs-header-desktop {
+        display: none;
+    }
+    .efs-header-mobile-wrapper {
+        overflow: hidden;
+    }
+    .efs-header-mobile {
+        display: block;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .efs-header-mobile-options {
+        display: flex;
+        align-items: center;
+        margin-right: 21px;
+        column-gap: 20px;
+        transition: 0.3s;
+    }
+    .efs-closeSearchMobile {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 60px;
+        transform: translateX(500%);
+        opacity: 0;
+        display: none;
+    }
+    .efs-closeSearchMobile-show {
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .efs-closeSearchMobile img {
+        width: 150%;
+    }
+    .efs-header-3 {
+        justify-content: center;
+        text-transform: uppercase;
+        height: 34px;
+    }
+    .efs-header-3 p {
+        width: auto;
+        font-size: 0.875em;
+    }
+    .efs-header-3 p:nth-child(2), .efs-header-3 p:nth-child(3) {
+        display: none;
+    }
+    .efs-search-produtos-bg {
+        display: none;
+    }
+    /* INICIO SEARCH MOBILE - HEADER */
+    .efs-search-mobile-wrapper {
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.5s transform;
+    }
+    .efs-search-mobile-show {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    .efs-header-mobile-options-hide {
+        transform: translateY(-150%);
+    }
+    .efs-search-mobile {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        background: #F7F9FA;
+        top: -35px;
+        position: relative;
+    }
+    .efs-search-mobile input {
+        width: 80%;
+        padding: 0 60px 0 20px;
+    }
+    .efs-search-mobile a {
+        position: absolute;
+        right: 15%;
+        top: 33%;
+    }
+    /* FIM SEARCH MOBILE - HEADER */
+    /* FIm HEADER */
+    /* SUB MENU HEADER E MENU MOBILE*/
+    .efs-submenu {
+        overflow-y: scroll;
+        height: 100vh;
+        padding-bottom: 40px;
+        margin-top: -40px !important;
+        transform: translateX(-100%);
+        z-index: 10;
+    }
+    .efs-menu-mobile {
+        display: block;
+        margin-top: -34px;
+        position: absolute;
+        width: 100%;
+        z-index: 8;
+        background: #FFF;
+        transform: translateX(-100%);
+        transition: 0.5s transform;
+        opacity: 0;
+    }
+    .efs-menu-mobile-show, .efs-submenu-show {
+        transform: translateX(0%);
+        transition: 0.5s transform;
+        opacity: 1;
+    }
+    /* LINHA 1 - SUBMENU MENU MOBILE */
+    .efs-submenu-row-1-bg {
+        padding-top: 0px;
+    }
+    .efs-menu-row-1-bg {
+        background: #F7F9FA;
+    }
+    .efs-submenu-row-1 {
+        display: block;
+    }
+    .efs-submenu-row-1 img {
+        display: none;
+    }
+    .efs-menu-row-1 {
+        padding-bottom: 20px;
+    }
+    .efs-menu-account {
+        display: block;
+        padding: 20px 0;
+        border-bottom: 1px solid #E9ECEF;
+        font-family: 'Din Bold';
+        text-transform: uppercase;
+        font-size: 0.75em;
+    }
+    .efs-submenu-voltar {
+        display: flex;
+        column-gap: 8px;
+        align-items: center;
+        margin: 16px 0;
+        color: #FBA409;
+        text-transform: uppercase;
+        font-family: 'Din Bold';
+        font-size: 0.75em;
+    }
+    .efs-submenu-voltar img {
+        display: block !important;
+    }
+    .efs-submenu-options {
+        display: none;
+    }
+    .efs-menu-options a {
+        margin: 20px 0 !important;
+    }
+    .efs-navbar-mobile ul li {
+        margin-bottom: 20px;
+    }
+    .efs-navbar-mobile ul li a {
+        font-family: 'Din Regular';
+        color: #191C1E;
+        font-size: 1.125em;
+        display: block;
+    }
+    /* LINHA 2 */
+    .efs-submenu-row-2-bg {
+        padding: 16px 0 27px;
+    }
+    .efs-submenu-esportes {
+        margin-bottom: 28px;
+    }
+    .efs-submenu-esportes-options a {
+        margin-right: 20px;
+    }
+    .efs-submenu-esporte-option {
+        display: none;
+    }
+    /* LINHA 3 */
+    .efs-submenu-row-3-bg {
+        background-color: #F7F9FA;
+        padding: 30px 0;
+        display: block;
+    }
+    .efs-submenu-conta-desejos-rastreio a {
+        display: flex;
+        align-items: center;
+        column-gap: 9px;
+        margin-bottom: 10px;
+        color: #394047;
+        font-size: 1.125em;
+    }
+    /* FIM SUBMENU */
+}

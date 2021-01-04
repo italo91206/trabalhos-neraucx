@@ -1,0 +1,776 @@
+/* CSS PÁGINA SEJA FRANQUEADO */
+
+/* ------- INICIO SEJA UM FRANQUEADO ------- */
+
+#efs-sejafranqueado-page {
+    background: #F7F9FA;
+}
+
+.efs-btn-franqueados {
+    width: 398px;
+    display: block;
+    background: #FBA409;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Din Bold';
+    letter-spacing: 1px;
+}
+
+.efs-sejafranqueado-feedback .efs-btn-franqueados{
+    display: none;
+}
+
+.efs-sejafranqueado-title-component {
+    font-family: 'Din Bold';
+    font-size: 2.375em;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #191C1E;
+}
+
+.efs-sejafranqueado-title-component span {
+    display: block;
+    font-family: 'Rock Salt';
+    text-transform: initial;
+    font-weight: 300;
+}
+
+/* INICIO TITULO FRANQUEADOS */
+
+.efs-sejafranqueado-title {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.efs-sejafranqueado-title-p-before {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #ADB5BD;
+    margin-bottom: 27px;
+}
+
+.efs-sejafranqueado-title-p-after {
+    font-family: 'Din Regular';
+    line-height: 24px;
+    margin: 21px auto 60px auto;
+    color: #394047;
+}
+
+.efs-sejafranqueado-title a {
+    margin: 0 auto;
+}
+
+/* FIM TITULO FRANQUEADOS */
+
+/* INICIO VANTAGEM FRANQUEADOS */
+
+.efs-sejafranqueado-vantagens {
+    display: flex;
+    justify-content: space-between;
+    margin: 83px 0 100px 0;
+}
+
+.efs-sejafranqueado-vantagens-middle {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.efs-sejafranqueado-vantagens-list {
+    margin-top: 40px;
+}
+
+.efs-sejafranqueado-vantagens-list li {
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.efs-sejafranqueado-vantagens-img img {
+    max-width: 100% !important;
+    display: block;
+    background: red;
+}
+
+/* FIM VANTAGEM FRANQUEADOS */
+
+/* INICIO ENCONTRO FRANQUEADOS */
+
+.efs-sejafranqueado-encontro-bg {
+    background: pwa-url(efs-sejafranqueado-encontro-bg) no-repeat center;
+    background-size: cover;
+    padding: 130px 0;
+    margin-bottom: 230px;
+}
+
+.efs-sejafranqueado-encontro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.efs-sejafranqueado-encontro-bg .efs-sejafranqueado-title-component {
+    color: #FFF;
+    max-width: 450px;
+
+}
+
+.efs-sejafranqueado-encontro-bg .efs-sejafranqueado-title-component span {
+    color: #FBA409;
+}
+
+.efs-sejafranqueado-encontro-right {
+    color: #FFF;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 380px;
+}
+
+.efs-sejafranqueado-encontro-right p {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    line-height: 23px;
+    text-transform: uppercase;
+    max-width: 288px;
+}
+
+.efs-sejafranqueado-encontro-right p:first-child {
+    margin-right: 30px;
+}
+
+/* FIM ENCONTRO FRANQUEADOS */
+
+/* INICIO NBA NFL */
+
+.efs-sejafranqueado-nbanfl-bg {
+    background: pwa-url(efs-sejafranqueado-nbanfl-bg) no-repeat;
+    padding: 0 15px 100px 15px;
+    margin-bottom: 75px;
+}
+
+.efs-sejafranquedo-nbanfl {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    column-gap: 30px;
+}
+
+.efs-sejafranqueado-esporte {
+    display: flex;
+    column-gap: 30px;
+}
+
+.efs-sejafranqueado-nfl {
+    display: flex;
+    margin-top: 80px;
+}
+
+.efs-sejafranqueado-esporte-info h2 {
+    font-family: 'Din Bold';
+    font-size: 2em;
+}
+
+.efs-sejafranqueado-esporte-info p {
+    max-width: 210px;
+    font-family: 'Din Regular';
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.efs-sejafranqueado-nba-info {
+    margin-top: 50px;
+}
+
+.efs-sejafranqueado-nfl-info {
+    align-self: flex-end;
+    margin-bottom: 190px;
+}
+
+.efs-sejafranqueado-esporte-img {
+    position: relative;
+}
+
+.efs-sejafranqueado-esporte-img p {
+    position: absolute;
+    font-family: 'Din Bold';
+    font-size: 1.6875em;
+    color: #FFF;
+    left: 25px;
+}
+
+.efs-sejafranqueado-nba-img p {
+    bottom: 110px;
+}
+
+.efs-sejafranqueado-nfl-img p {
+    bottom: 25px;
+}
+
+/* FIM NBA NFL */
+
+/* INICIO MODALIDADES */
+
+.efs-sejafranqueado-modalidade h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Din Bold';
+    font-size: 1.6875em;
+    text-transform: uppercase;
+}
+
+.efs-sejafranqueado-modalidade-opcoes {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.efs-sejafranqueado-modalidade-opcoes-left {
+    align-self: center;
+}
+
+.efs-sejafranqueado-md-ideal {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.efs-sejafranqueado-modalidades-list {
+    display: flex;
+}
+
+.efs-sejafranqueado-modalidades-list li a {
+    padding: 10px 30px 20px 30px;
+    display: block;
+    border-bottom: 6px solid #E9ECEF;
+    font-family: 'Din Regular';
+    color: #394047;
+    font-size: 1.1875em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.efs-sejafranqueado-modalidades-list li a:hover, .efs-modalidade-selecionada {
+    border-bottom: 6px solid #FBA409 !important;
+    font-family: 'Din Black' !important;
+    color: #191C1E !important;
+}
+
+.efs-modalidade-p-oculta {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.efs-modalidade-p-selecionada {
+    opacity: 1;
+    visibility: initial;
+}
+
+.efs-sejafranqueado-modalidade-opcoes-right {
+    min-width: 40%;
+}
+
+.efs-sejafranqueado-modalidade-opcoes-right img {
+    display: block;
+    max-width: 100%;
+}
+
+/* FIM MODALIDADES */
+
+/* INICIO SUPORTE */
+
+.efs-sejafranqueado-suporte {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+.efs-sejafranqueado-sp-form-title-before {
+    font-family: 'Din Bold';
+    color: #ADB5BD;
+    margin-bottom: 10px;
+}
+
+.efs-sejafranqueado-sp-form-title {
+    font-family: 'Din Bold';
+    font-size: 1.6875em;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.efs-sejafranqueado-sp-form-title-after {
+    line-height: 24px;
+}
+
+.efs-sejafranqueado-suporte-list li {
+    display: flex;
+    margin-bottom: 20px;
+    column-gap: 15px;
+}
+
+.efs-sejafranqueado-suporte-right>p {
+    font-family: 'Din Bold';
+    margin-top: 65px;
+    margin-bottom: 42px;
+}
+
+/* FIM SUPORTE */
+
+/* INICIO FEEDBACK */
+
+.efs-sejafranqueado-feedback {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.efs-sejafranqueado-feedback h2 {
+    font-family: 'Din Bold';
+    font-size: 1.6875em;
+    text-transform: uppercase;
+    max-width: 490px;
+    margin: 0 auto 40px auto;
+}
+
+.efs-sejafranqueado-feedback>p {
+    font-family: 'Din Regular';
+    max-width: 820px;
+    text-align: left;
+    margin: 0 auto 66px auto;
+}
+
+.efs-sejafranqueado-username {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    margin: 25px 0 10px 0;
+}
+
+.efs-sejafranqueado-userdesc {
+    color: #9EADBA;
+}
+
+/* FIM FEEDBACK */
+
+/* INICIO FORMULARIO CONTATO */
+
+.efs-sejafranqueado-form {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+}
+
+.efs-sejafranqueado-form-form input {
+    display: block;
+    width: 100%;
+    border: 2px solid #C3CFD9;
+    margin-bottom: 15px;
+    height: 50px;
+    border-radius: 3px;
+    padding: 0 15px;
+    background: transparent;
+    outline: none;
+}
+
+.efs-sejafranqueado-form-form input:nth-child(3) {
+    width: 60%;
+}
+
+.efs-franqueado-select {
+    width: 40%;
+    height: 50px;
+    margin-right: 30px;
+    border: 2px solid #C3CFD9;
+    border-radius: 3px;
+    padding: 0 15px;
+    background: transparent;
+    outline: none;
+    margin-bottom: 40px;
+}
+
+.efs-sejafranqueado-form-form-capital p {
+    font-size: 'Din Bold';
+    font-weight: bold;
+    color: #191C1E;
+    margin-bottom: 20px;
+}
+
+.efs-sejafranqueado-form-form-capital input {
+    width: 40%;
+}
+
+.efs-sejafranqueado-form-form .efs-btn-franqueados {
+    border: none;
+}
+
+/* FIM FORMULARIO CONTATO */
+
+/* INICIO ASSOCIADOS */
+
+.efs-sejafranqueado-associados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 182px;
+    padding-bottom: 130px;
+}
+
+.efs-sejafranqueado-associados-img {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.efs-sejafranqueado-associados p {
+    font-family: 'Din Black';
+    text-align: center;
+    font-size: 1.1875em;
+    text-transform: uppercase;
+    line-height: 23px;
+    color: #ADB5BD;
+    margin-top: 48px;
+}
+
+/* FIM ASSOCIADOS */
+
+/* ------- FIM SEJA UM FRANQUEADO ------- */
+
+/*-------- BREAKPOINTS ------- */
+
+@media only screen and (max-width: 992px) {
+    /* ------- INICIO SEJA UM FRANQUEADO ------- */
+    .efs-sejafranqueado-feedback .efs-btn-franqueados{
+        display: flex;
+        margin: 20px auto;
+    }
+    /* INICIO VANTAGEM FRANQUEADOS */
+    .efs-sejafranqueado-vantagens {
+        flex-direction: column;
+        position: relative;
+    }
+    .efs-sejafranqueado-vantagens-wrapper .efs-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .efs-sejafranqueado-vantagens-img:first-child img {
+        width: 100%;
+        height: 600px;
+        margin-top: 100px;
+    }
+    .efs-sejafranqueado-vantagens-img:last-child {
+        display: none;
+    }
+    .efs-sejafranqueado-vantagens-middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .efs-sejafranqueado-vantagens-middle h2 {
+        position: absolute;
+        top: 0;
+    }
+    /* FIM VANTAGEM FRANQUEADOS */
+    /* INICIO ENCONTRO FRANQUEADOS */
+    .efs-sejafranqueado-encontro-bg {
+        margin-bottom: 100px;
+    }
+    .efs-sejafranqueado-encontro {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+    .efs-sejafranqueado-encontro-bg .efs-sejafranqueado-title-component {
+        max-width: 100%;
+    }
+    .efs-sejafranqueado-encontro-bg .efs-sejafranqueado-title-component span {
+        color: #FBA409;
+        font-size: 1.2em;
+    }
+    .efs-sejafranqueado-encontro-right {
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 330px;
+    }
+    .efs-sejafranqueado-encontro-right p {
+        font-family: 'Din Regular';
+        font-size: 1.125em;
+        line-height: 22px;
+        text-transform: initial;
+        max-width: 100%;
+    }
+    .efs-sejafranqueado-encontro-right p span {
+        font-family: 'Din Bold';
+    }
+    .efs-sejafranqueado-encontro-right p:first-child {
+        margin-right: 0px;
+        margin-bottom: 70px;
+    }
+    /* FIM ENCONTRO FRANQUEADOS */
+    /* INICIO NBA NFL */
+    .efs-sejafranqueado-nbanfl-bg {
+        background: #F7F9FA;
+        padding: 0 24px;
+    }
+    .efs-sejafranquedo-nbanfl {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0px;
+    }
+    .efs-sejafranqueado-esporte {
+        flex-direction: column;
+        width: 100%;
+    }
+    .efs-sejafranqueado-nfl {
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    .efs-sejafranqueado-esporte-info {
+        margin-bottom: 20px;
+    }
+    .efs-sejafranqueado-esporte-info h2 {
+        font-size: 1.125em;
+    }
+    .efs-sejafranqueado-esporte-info p {
+        max-width: 100%;
+        margin-top: 8px;
+        font-size: 1.125em;
+    }
+    .efs-sejafranqueado-nba-info {
+        margin-top: 0px;
+    }
+    .efs-sejafranqueado-nfl-info {
+        align-self: flex-start;
+    }
+    .efs-sejafranqueado-esporte-img {
+        background: red;
+        height: 400px;
+    }
+    .efs-sejafranqueado-nba-img {
+        background: pwa-url(efs-sejafranqueado-nba-mobile) no-repeat bottom;
+        background-size: cover;
+    }
+    .efs-sejafranqueado-nfl-img {
+        background: pwa-url(efs-sejafranqueado-nfl-mobile) no-repeat bottom;
+        background-size: cover;
+    }
+    .efs-sejafranqueado-esporte-img img {
+        display: none;
+    }
+    .efs-sejafranqueado-esporte-img p {
+        font-size: 1.3em;
+    }
+    .efs-sejafranqueado-nba-img p, .efs-sejafranqueado-nfl-img p {
+        bottom: 25px;
+    }
+    /* FIM NBA NFL */
+    /* INICIO MODALIDADES */
+    .efs-sejafranqueado-modalidade h2 {
+        font-size: 1.375em;
+    }
+    .efs-sejafranqueado-modalidade-opcoes {
+        flex-direction: column-reverse;
+    }
+    .efs-sejafranqueado-md-ideal {
+        margin-bottom: 60px;
+        text-align: center;
+        max-width: 320px;
+        margin: 0 auto 30px auto;
+        text-transform: initial;
+    }
+    .efs-sejafranqueado-modalidades-list {
+        column-gap: 35px;
+        text-align: center;
+        justify-content: center;
+    }
+    .efs-sejafranqueado-modalidades-list li a {
+        padding: 0;
+        height: 50px;
+        width: 90px;
+        border-bottom: 3px solid #E9ECEF;
+        font-size: 1.125em;
+        text-transform: initial;
+        margin-bottom: 40px;
+    }
+    .efs-sejafranqueado-modalidades-list li a:hover, .efs-modalidade-selecionada {
+        border-bottom: 3px solid #FBA409 !important;
+        font-family: 'Din Black' !important;
+        color: #191C1E !important;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    .efs-sejafranqueado-modalidade {
+        position: relative;
+    }
+    .efs-modalidade-info {
+        font-family: 'Din Regular';
+        font-size: 0.875em;
+    }
+    .efs-sejafranqueado-modalidade-opcoes-mobile {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+    }
+    .efs-sejafranqueado-modalidade-opcoes-right {
+        margin-top: 180px;
+        margin-bottom: 40px;
+    }
+    .efs-sejafranqueado-modalidade-opcoes-right img {
+        max-height: 450px;
+        min-width: 100%;
+    }
+    /* FIM MODALIDADES */
+    /* INICIO FORMULARIO CONTATO */
+    .efs-sejafranqueado-form {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+    .efs-sejafranqueado-form-form input:nth-child(3) {
+        width: 100%;
+    }
+    .efs-franqueado-select {
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .efs-sejafranqueado-form-form-capital p {
+        font-size: 'Din Regular';
+        font-weight: normal;
+        margin-top: 26px;
+    }
+    .efs-sejafranqueado-form-form-capital input {
+        width: 100%;
+    }
+    .efs-sejafranqueado-form-form .efs-btn-franqueados {
+        border: none;
+    }
+    /* FIM FORMULARIO CONTATO */
+    /* ------- FIM SEJA UM FRANQUEADO ------- */
+}
+
+@media only screen and (max-width: 576px) {
+    /* ------- INICIO SEJA UM FRANQUEADO ------- */
+    .efs-btn-franqueados {
+        width: 100%;
+    }
+    .efs-sejafranqueado-title-component {
+        font-size: 1.3em;
+        line-height: 27px;
+        color: #191C1E;
+    }
+    /* INICIO TITULO FRANQUEADOS */
+    .efs-sejafranqueado-title {
+        padding-top: 40px;
+    }
+    .efs-sejafranqueado-title-p-before {
+        font-size: 0.875em;
+        line-height: 17px;
+        margin-bottom: 20px;
+    }
+    .efs-sejafranqueado-title-p-after {
+        font-size: 0.875em;
+        line-height: 18px;
+        text-align: left;
+        margin: 30px auto 50px auto;
+    }
+    .efs-sejafranqueado-title a {
+        margin: 0 auto;
+    }
+    /* FIM TITULO FRANQUEADOS */
+    /* INICIO VANTAGEM FRANQUEADOS */
+    .efs-sejafranqueado-vantagens-img:first-child img {
+        height: 280px;
+    }
+    .efs-sejafranqueado-vantagens-middle h2 {
+        position: absolute;
+        top: 0;
+    }
+    /* FIM VANTAGEM FRANQUEADOS */
+    /* INICIO ENCONTRO FRANQUEADOS */
+    .efs-sejafranqueado-encontro-right p {
+        max-width: 90%;
+    }
+    /* FIM ENCONTRO FRANQUEADOS */
+    /* INICIO NBA NFL */
+    .efs-sejafranqueado-esporte-img {
+        max-height: 200px !important;
+    }
+    /* FIM NBA NFL */
+    /* INICIO MODALIDADES */
+    .efs-sejafranqueado-modalidade-opcoes-right {
+        margin-top: 160px;
+        margin-bottom: 50px;
+    }
+    .efs-sejafranqueado-modalidade-opcoes-right img {
+        max-height: 250px;
+        min-width: 100%;
+    }
+    /* FIM MODALIDADES */
+    /* INICIO SUPORTE */
+    .efs-sejafranqueado-suporte {
+        margin-top: 65px;
+        flex-direction: column;
+    }
+    .efs-sejafranqueado-sp-form-title-before {
+        font-family: 'Din Regular';
+        color: #293845;
+        font-size: 0.875em;
+        margin-bottom: 22px;
+    }
+    .efs-sejafranqueado-sp-form-title {
+        font-size: 1.375em;
+        color: #293845;
+        line-height: 27px;
+        margin-bottom: 19px;
+    }
+    .efs-sejafranqueado-sp-form-title-after {
+        font-size: 1.125em;
+        margin-bottom: 35px;
+    }
+    .efs-sejafranqueado-suporte-right>p {
+        font-family: 'Din Regular';
+        font-size: 1.125em;
+        margin-top: 28px;
+        margin-bottom: 27px;
+    }
+    /* FIM SUPORTE */
+    /* INICIO FEEDBACK */
+    .efs-sejafranqueado-feedback {
+        margin-top: 80px;
+    }
+    .efs-sejafranqueado-feedback h2 {
+        max-width: 100%;
+        text-align: left;
+    }
+    /* FIM FEEDBACK */
+    /* INICIO ASSOCIADOS */
+    .efs-sejafranqueado-associados {
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .efs-sejafranqueado-associados-img img {
+        max-width: 40% !important;
+        margin: 0 auto;
+        display: block;
+    }
+    .efs-sejafranqueado-associados p {
+        font-family: 'Din Bold';
+        font-size: 1.125em;
+        text-transform: initial;
+    }
+    /* FIM ASSOCIADOS */
+    /* ------- FIM SEJA UM FRANQUEADO ------- */
+}

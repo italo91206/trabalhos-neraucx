@@ -1,0 +1,109 @@
+/* CSS COMPONENTE CATEGORIA - HOME/CATEGORIA */
+
+/*------- Inicio Categorias - GERAL -------*/
+
+.efs-categorias {
+    margin: 50px 0 100px 0;
+}
+
+.efs-categorias img {
+    max-width: 100%;
+}
+
+.efs-title-categoria-mobile {
+    display: none;
+}
+
+.efs-categorias-flex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 32px;
+    justify-content: center;
+}
+
+.efs-nome-categoria {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 13px;
+    font-weight: 400;
+}
+
+/*------- Fim Categorias - GERAL -------*/
+
+/*------- Inicio Categorias - página CATEGORIA -------*/
+
+.efs-categoria-page .efs-categorias {
+    margin: 120px 0 126px 0;
+}
+
+.efs-categoria-page .efs-categorias .efs-nome-categoria {
+    margin-top: 8px;
+}
+
+.efs-categoria-pg-categoria img {
+    width: 288px;
+    height: 270px;
+}
+
+/*------- Fim Categorias - página CATEGORIA -------*/
+
+@media only screen and (max-width: 992px) {
+    /*------- Inicio Categorias - GERAL -------*/
+    .efs-categorias-flex {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0px;
+        row-gap: 30px;
+    }
+    .efs-categoria-pg-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .efs-title-categoria-mobile {
+        display: block;
+        text-align: center;
+        margin-bottom: 34px;
+        font-family: 'Din Regular';
+        font-size: 1.125em;
+        color: #293845;
+    }
+    .efs-title-categoria-mobile span {
+        font-family: 'Din Bold';
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.375em;
+    }
+    .efs-categoria-pg-home:nth-child(odd) {
+        width: 50%;
+        padding-right: 8px;
+    }
+    .efs-categoria-pg-home:nth-child(even) {
+        width: 50%;
+        padding-left: 8px;
+    }
+    /*------- Fim Categorias - GERAL -------*/
+    
+    /*------- Inicio Categorias - página CATEGORIA */
+    .efs-categoria-page .efs-categorias {
+        margin: 75px 0 116px 0;
+    }
+    .efs-categoria-pg-categoria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .efs-categoria-pg-categoria:nth-child(odd) {
+        width: 50%;
+        padding-right: 8px;
+    }
+    .efs-categoria-pg-categoria:nth-child(even) {
+        width: 50%;
+        padding-left: 8px;
+    }
+    .efs-categoria-pg-categoria img {
+        height: auto;
+    }
+    /* Fim Categorias - página CATEGORIA */
+}

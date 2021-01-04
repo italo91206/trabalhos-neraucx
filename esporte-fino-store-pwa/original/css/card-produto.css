@@ -1,0 +1,75 @@
+/* CSS CARD PRODUTO */
+
+/*------- Inicio Produto -------*/
+
+.efs-produto {
+    width: 288px;
+}
+
+.efs-produto-img {
+    position: relative;
+}
+
+.efs-produto-img img {
+    max-width: 100%;
+}
+
+.efs-btn-slider-produto-option {
+    cursor: pointer;
+}
+
+.efs-produto-fav {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 19px;
+}
+
+.efs-produto-marca {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    margin: 14px 0;
+    color: #293845;
+}
+
+.efs-produto-nome {
+    font-family: 'Din Bold';
+    font-size: 1em;
+    color: #212529;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+
+.efs-preco-full {
+    font-size: 0.875em;
+    line-height: 22px;
+    color: #7F8993;
+}
+
+.efs-preco-promo {
+    font-family: 'Din Black';
+    font-size: 1.1875em;
+    text-transform: uppercase;
+    color: #FBA409;
+    line-height: 23px;
+    margin-bottom: 5px;
+}
+
+.efs-parcelamento {
+    line-height: 24px;
+    color: #ADB5BD;
+}
+
+/*------- Fim Produto -------*/
+
+/*------- Inicio Produto com Swiper ------- */
+/* PRODUTO COM SWIPER - COMPONENT */
+
+.efs-produto-swiper {
+    width: 100%;
+}
+
+.efs-produto-swiper .efs-produto-img img {
+    width: 100%;
+}
+/*------- Fim Produto com Swiper ------- */

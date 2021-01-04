@@ -19,6 +19,10 @@
     margin: 9px 0 12px 0;
 }
 
+.efs-footer-infos-contato .flex img {
+    margin-right: 8px;
+}
+
 .efs-newsletter p {
     margin-bottom: 29px;
 }
@@ -178,13 +182,24 @@
 .efs-newsletter-form-button:focus {
     outline: none;
 }
-
+@media(max-width: 1024px){
+    .efs-selos-seguranca img {
+        width: 85px;
+        margin: 0 auto;
+    }
+}
 @media(max-width: 768px){
+    .efs-selos-seguranca {
+        margin: auto auto;
+        margin-top: 18px;
+    }
+
     .efs-footer-infos {
         padding: 0px 0 40px 0;
     }
     .efs-footer-infos .efs-container {
         max-width: 100%;
+        padding: 0px;
     }
     .efs-footer-logo {
         display: none;
@@ -261,7 +276,7 @@
     }
     .efs-footer-infos-contato p {
         font-family: 'Din Bold';
-        font-size: 0.875em;
+        font-size: 14px;
     }
     .efs-footer-infos-associados {
         justify-content: center;
@@ -281,14 +296,24 @@
         flex-wrap: wrap;
     }
     .efs-footer-bandeiras p {
-        color: #7F8993;
+        color: #9EADBA;
         font-family: 'Din Regular';
         font-size: 14px;
-        text-transform: uppercase;
+        text-transform: inherit;
         width: 100%;
     }
 }
 @media(max-width: 425px){
+    .efs-selos-seguranca {
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .efs-newsletter .efs-subtitle-component span {
+        width: 100%;
+        line-height: 30px;
+    }
+    
     .efs-newsletter-form-flex {
         display: block;
         width: 100%;
@@ -338,7 +363,7 @@
         row-gap: 15px;
         margin: 0 auto;
         margin-top: 23px;
-        margin-bottom: 37px;
+        margin-bottom: 10px;
     }
     
     .efs-footer-bandeiras p {
@@ -354,7 +379,7 @@
 
     .efs-subtitle-component span {
         font-size: 28px;
-        width: 327px;
+        width: 54%;
         margin: 0 auto;
     }
     .efs-newsletter p {
@@ -382,10 +407,8 @@
         padding-right: 24px;
     }
 }
-
 @media(max-width: 395px){
     .efs-newsletter {
         padding: 0 5px;
     }    
 }
-
