@@ -937,3 +937,8 @@ header .equipoF-header {
     visibility: visible;
     transition: height .2s ease;
 }
+
+.menu-content img {
+    vertical-align: middle;
+    border-style: none;
+}

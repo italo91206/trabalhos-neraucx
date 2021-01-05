@@ -12,7 +12,7 @@
             modalNotificacao.classList.remove("ativo");
         })
         notificacao.addEventListener('click', function(){
-            modalNotificacao.classList.add("ativo");
+            modalNotificacao.classList.toggle("ativo");
             modalUsuario.classList.remove("ativo");
         })
 

@@ -123,3 +123,8 @@ h5{ /* título - campo de pesquisa  */
 .looked {
     overflow: hidden;
 }
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}

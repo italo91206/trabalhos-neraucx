@@ -1,0 +1,411 @@
+/* Inicio Capa Home */
+
+.pwa-cover-home {
+	margin-bottom: 13pc;
+}
+
+.pwa-container-cover {
+	width: 100%;
+	height: 100%;
+	min-height: 408px;
+	max-height: 360px;
+}
+
+.pwa-container-cover img {
+	width: 100%;
+}
+
+.pwa-cover-text-home {
+	position: absolute;
+	top: 0;
+	background: linear-gradient(0deg, #169CB9 4.66%, rgba(23, 78, 103, 0) 34.07%);
+	height: 100%;
+	width: 100%;
+}
+
+.pwa-title-home {
+	height: 129px;
+	width: 222px;
+	position: relative;
+	margin-top: 1pc;
+	margin-left: 2.2rem;
+	margin-bottom: 4.2rem;
+	color: var(--color-title-text);
+	font-family: Cambay;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 45px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.pwa-subtitle-home {
+	height: 2.1rem;
+	width: 16rem;
+	position: relative;
+	margin-top: 6pc;
+	margin-left: 2.2rem;
+	padding-top: 2px;
+	font-family: Cambay;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: var(--color-text-blue);
+}
+
+
+/* Botão presente no swiper da home */
+
+.pwa-btn-white-cover-home {
+	position: relative;
+	margin-left: 2.2rem;
+	padding: 15px;
+	font-family: Cambay;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 17px;
+	letter-spacing: 0.01em;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	color: #14AFD1;
+}
+
+.pwa-btn-white-cover-home:hover {
+	background: #14AFD1;
+	color: #FFFFFF;
+}
+
+
+/* Swiper */
+
+.pwa-cover-home .swiper-pagination {
+	position: absolute;
+	top: 23pc;
+	justify-content: baseline;
+}
+
+.pwa-cover-home .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: #FFFFFF;
+	opacity: 1;
+	margin-right: 15px;
+}
+
+.pwa-cover-home .swiper-pagination-bullet-active {
+	color: #fff;
+	background: #174E67;
+	height: 8px;
+	width: 8px;
+	margin-bottom: 1.5px;
+}
+
+.pwa-list {
+	margin-bottom: 1.5pc;
+}
+
+.pwa-li {
+	height: 50px;
+}
+
+
+/* Inicio Categorias */
+
+.categorias {
+	margin-bottom: 3pc;
+	margin-top: 2pc;
+}
+
+.categorias h4 {
+	margin-bottom: 1pc;
+	padding-top: 20px;
+}
+
+.categorias .card:hover {
+	transform: scale(1.04);
+	box-shadow: 0px 0px 10px 2px rgb(223, 219, 219);
+}
+
+
+/* Final Categorias */
+
+
+/* Inicio Produtos mais utilizados*/
+
+#produtos-mais-buscados {
+	margin-bottom: 4pc;
+}
+
+#produtos-mais-buscados h4 {
+	margin-bottom: 1pc;
+}
+
+#produtos-mais-buscados .card {
+	height: 165px;
+	width: 151px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#produtos-mais-buscados .card:hover {
+	transform: scale(1.03);
+	box-shadow: 0px 0px 10px 5px rgb(223, 219, 219);
+}
+
+#produtos-mais-buscados .card img {
+	margin-top: 2pc;
+}
+
+#produtos-mais-buscados .card p {
+	height: 44px;
+	width: 100px;
+	margin-top: 1pc;
+	margin-left: 1.6pc;
+	color: #7495A4;
+	font-family: Cambay;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 21px;
+	letter-spacing: 0.01em;
+	text-align: center;
+}
+
+
+/* cria o fundo branco entre as seções Produtos mais utilizados até Depoimentos */
+
+.bg-gradiente-white {
+	background-image: linear-gradient(to top, white 97.5%, transparent 20%);
+}
+
+
+/* Final Produtos mais utilizados */
+
+.ultimos-super-Destaques {
+	margin-bottom: 2.5pc;
+}
+
+.ultimos-super-Destaques h4 {
+	padding-bottom: 1pc;
+}
+
+#as-grandes-marcas h4 {
+	height: 64px;
+	width: 232px;
+	left: 10px;
+	top: 2126px;
+	font-family: Cambay;
+	font-size: 27px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+#as-grandes-marcas .swiper-container {
+	margin-top: 2pc;
+}
+
+#as-grandes-marcas .swiper-slide {
+	font-size: 18px;
+	background: #fff;
+}
+
+#as-grandes-marcas .swiper-slide img {
+	border-radius: 10px;
+}
+
+#as-grandes-marcas .swiper-slide img:hover {
+	transform: scale(1.01);
+	box-shadow: 0px 0px 8px 2px rgb(223, 219, 219);
+}
+
+
+/* Início Depoimento*/
+
+.pwa-depoiment-container {
+	max-width: 768px;
+	width: 100%;
+	padding: 10px;
+	margin: auto;
+}
+
+.pwa-depoiment-container h4 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#depoimentos .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	text-align: center;
+}
+
+.pwa-depoimento-content {
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.pwa-depoimento-content img {
+	height: 61px;
+	width: 61px;
+	position: relative;
+	margin: auto;
+}
+
+.pwa-depoiment-container .swiper-slide q {
+	color: #828282;
+	font-family: Cambay;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.01em;
+	text-align: left;
+}
+
+.pwa-depoiment-container .swiper-slide p {
+	color: #14AFD1;
+	font-family: Cambay;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 15px;
+	letter-spacing: 0.12em;
+	text-align: center;
+	margin: auto;
+	margin-top: 1pc;
+	margin-bottom: 3pc;
+	height: 15px;
+}
+
+.pwa-depoiment-container .swiper-pagination {
+	position: relative;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.pwa-depoiment-container .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: #174E67;
+	opacity: 1;
+	margin-right: 20px !important;
+}
+
+.swiper-container.depoimentos .swiper-pagination-bullet-active {
+	color: #fff;
+	background: #0051ff;
+	height: 8px;
+	width: 8px;
+}
+
+footer {
+	margin-top: 0;
+}
+
+
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+
+@media only screen and (max-width: 600px) {
+	.ultimos-super-Destaques .swiper-button-next,
+	.ultimos-super-Destaques .swiper-button-prev,
+	.grandes-marcas .swiper-button-next,
+	.grandes-marcas .swiper-button-prev {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.pwa-container-cover img {
+		width: 100%;
+		margin-top: -100px;
+	}
+	.pwa-title-home,
+	.pwa-subtitle-home,
+	.pwa-btn-white-cover-home {
+		margin-left: 15%;
+	}
+	.pwa-title-home {
+		font-size: 44px;
+		width: 250px;
+	}
+	.ultimos-super-Destaques .swiper-button-next,
+	.ultimos-super-Destaques .swiper-button-prev,
+	.grandes-marcas .swiper-button-next,
+	.grandes-marcas .swiper-button-prev {
+		display: none;
+	}
+	/* Ajusta o título - As Grandes Marcas */
+	#as-grandes-marcas .pwa-titles-H4-Blue {
+		width: 400px !important;
+		margin-bottom: -3pc;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	h4 {
+		font-size: 26px;
+	}
+	.pwa-container-cover img {
+		width: 100%;
+		margin-top: -200px;
+	}
+	.pwa-subtitle-home {
+		height: 2.5rem;
+		width: 20rem;
+		font-size: 14px;
+	}
+	.pwa-title-home {
+		font-size: 54px;
+		width: 400px;
+		height: fit-content;
+		line-height: 60px;
+	}
+	.pwa-cover-home {
+		margin-bottom: 0;
+	}
+	.ultimos-super-Destaques .swiper-button-next,
+	.ultimos-super-Destaques .swiper-button-prev,
+	.grandes-marcas .swiper-button-next,
+	.grandes-marcas .swiper-button-prev {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.pwa-container-cover img {
+		width: 100%;
+		margin-top: -300px;
+	}
+	.pwa-title-home {
+		font-size: 54px;
+		width: fit-content;
+	}
+	/* Ajusta o título - As Grandes Marcas */
+	#as-grandes-marcas .pwa-titles-H4-Blue {
+		width: 400px;
+	}
+	#depoimentos .swiper-pagination {
+		position: absolute;
+		top: 295px;
+		justify-content: baseline;
+	}
+	#depoimentos .pwa-depoimento-content q {
+		text-align: center;
+	}
+	#depoimentos .swiper-container {
+		margin-bottom: 40px;
+	}
+}
