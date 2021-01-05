@@ -1,272 +1,300 @@
 <main id="se-product-page">
-
   <!-- O CSS desta página está especificada pra esta estrutura. Tentar repedir as mesmas classes ou divs podem acabar dando ruim, 
-      então se for alterar aqui infelizmente (e consequentemente) o CSS vai ter que ser modificado para caber no que é preciso. -->
-
+     então se for alterar aqui infelizmente (e consequentemente) o CSS vai ter que ser modificado para caber no que é preciso. -->
   <!-- breadcrumb section -->
   <section class="se-container" id="breadcrumb-section">
-    <p>
-      <span class="se-underline" pwa-to-page="home">Home</span>
-      <a pwa-breadcumb-item class="se-breadcrumb">{{ bc.name }}</a>
-      <span class="se-breadcrumb-product-name">{{ product.name }}</span>
-    </p>
+     <p>
+        <span class="se-underline" pwa-to-page="home">Home</span>
+        <a v-for="(bc, index) in product.breadcumb" :key="index" :href="`/${bc.url}`" class="se-breadcrumb">{{ bc.name }}</a>
+        <span class="se-breadcrumb-product-name">{{ product.name }}</span>
+     </p>
   </section>
 
   <!-- product 2-column section -->
   <section class="se-container se-flex" id="product-info-section" pwa-hook="hook-teste">
-    
-    <!-- thumbs slider -->
-    <div class="swiper-container gallery-thumbs se-thumbs-gallery" id="se-product-slider">
-      <!-- <img pwa-src="product.image" alt="" class="se-w100"> -->
-      <div class="swiper-wrapper se-gallery__wrapper">
-        <pwa-loop params="7">
-          <div pwa-each-image class="swiper-slide">
-            <img pwa-preview-src="product-example" pwa-src="image">
-          </div>
-        </pwa-loop>
-      </div>
-    </div>
+     <!--arrow thumbs -->
+     <div class="se-gallery-product-next se-desktop"><span class="fa fa-chevron-down"></span></div>
+     <div class="se-gallery-product-prev se-desktop"><span class="fa fa-chevron-up"></span></div>
 
-    <!-- gallery slider -->
-    <div class="swiper-container gallery-top se-gallery se-relative" id="se-product-image" >
-      <div pwa--if="activeSKU.discount > 0" class="se-price-off">{{ activeSKU.discount }}% OFF</div>
-      
-      <div class="swiper-wrapper" id="se-gallery__slide-wrapper">
-        <pwa-loop params="7">
-          <div pwa-each-image class="swiper-slide">
-            <img pwa-preview-src="product-example" pwa-src="image" class="se-image-zoom" data-zoom-image="image">
-          </div>
-        </pwa-loop>
-      </div>
+     <!-- thumbs slider -->
+     <div class="swiper-container gallery-thumbs se-thumbs-gallery" id="se-product-slider">
+        <!-- <img pwa-src="product.image" alt="" class="se-w100"> -->
+        <div class="swiper-wrapper se-gallery__wrapper">
+           <pwa-loop params="7">
+              <div pwa-each-image class="swiper-slide">
+                 <img pwa-preview-src="product-example" pwa-src="image">
+              </div>
+           </pwa-loop>
+        </div>
+     </div>
 
-      <div class="se-gallery-product-next"><span class="fa fa-chevron-down"></span></div>
-      <div class="se-gallery-product-prev"><span class="fa fa-chevron-up"></span></div>
-    </div>
+       <!-- gallery slider -->
+        <div class="swiper-container gallery-top se-gallery se-relative" id="se-product-image" >
+           <img id="se-selo-page-product__black-friday" pwa-src="selo-black-friday" alt="Black Friday">
+           <div pwa--if="activeSKU.discount > 15" class="se-price-off">{{ activeSKU.discount -15 }}% OFF</div>
+           <div class="swiper-wrapper" id="se-gallery__slide-wrapper">
+           <pwa-loop params="7">
+               <div pwa-each-image class="swiper-slide">
+                   <img pwa-preview-src="product-example" pwa-src="image" class="se-image-zoom" data-zoom-image="image">
+               </div>
+           </pwa-loop>
+           </div>
 
-    <div id="se-product-buy-info">
-      <p id="se-product-buy-info-marca">{{ product.specifications.product_brands }}</p>
-      <p id="se-product-buy-info-name">{{ product.name }}</p>
-      <p id="se-product-buy-info-sku">SKU: {{product.sku}}</p>
-      <p id="se-product-buy-info-price-before">de {{ product.price | price }}</p>
-      <p id="se-product-buy-info-price-now">por até<span>12x {{ product.promotional_price/12 | price }}</span></p>
-      
-      <div class="se-buy-infos-product se-flex">
-        <p id="se-product-buy-info-parcelas">ou {{ (product.promotional_price) | price}}</p>
-        <p id="se-product-buy-info-lead-to-parcelas"><a href="" class="se-reset se-underline">Simular as parcelas</a></p>
-      </div>
+           <div class="se-gallery-product-next se-mobile"><span class="fa fa-chevron-down"></span></div>
+           <div class="se-gallery-product-prev se-mobile"><span class="fa fa-chevron-up"></span></div>
+       </div>
 
-      <pwa-product-configurations-bundle always-list attribute="variation_bundle">
-      </pwa-product-configurations-bundle>
+     <div id="se-product-buy-info">
+        <p id="se-product-buy-info-marca">{{ product.specifications.product_brands }}</p>
+        <p id="se-product-buy-info-name">{{ product.name }}</p>
+        <p id="se-product-buy-info-sku">SKU: {{product.sku}}</p>
+        <p id="se-product-buy-info-price-before" pwa--if="product.price > product.promotional_price">de {{ product.price | price }}</p>
+        <p id="se-product-buy-info-price-now">por até<span>{{ product.installment.number }}x {{ product.installment.value | price }}</span></p>
+        
+        <div class="se-buy-infos-product se-flex">
+           <p id="se-product-buy-info-parcelas">ou {{ (product.promotional_price) | price}}</p>
+           <p id="se-product-buy-info-lead-to-parcelas" pwa--if="product.installment.number > 1"><a pwa-hook.click="toggle-split" class="se-reset se-underline">Simular as parcelas</a></p>
+           <div class="se-product-split" v-if="product.installment">
+              <span class="se-product-split-close" pwa-hook.click="toggle-split">x</span>
+              <h2>Parcelamento</h2>
+              <ul v-if="product.installment.number > 1">
+                 <li pwa-each-installment>
+                    <span>
+                    {{ installment.number }} x de {{ installment.value | price }}
+                    </span>
+                 </li>
+              </ul>
+           </div>
 
-      <div id="se-product-quantity-option" class="se-product-option">
-        <h3>Quantidade:</h3>
-        <input pwa-quantity-box id="product-quantity">
-      </div>
+           <pwa-product-list name="upsell" pwa-filters="[`referencia.keyword:${product.specifications.referencia}`]" class="p4a-conf-bundle manual">
+              <div pwa--if="component.list.length > 0" class="p4a-conf-bundle__option manual">
+                 <p class="p4a-conf-bundle__option-name">
+                    Cor <span>*</span>
+                 </p>
+                 <div  class="p4a-conf-bundle__option-input p4a-conf-bundle__option-color">
+                    <label pwa-each-product pwa-to-product-page data-manual="true" pwa--if="product.variation_bundle[0]" >
+                       <input name="cor" type="radio">
+                       <div
+                          class="p4a-conf-bundle__option-color--value"
+                          pwa-class="{ 'se-cor-selecionada': product.path.replace('/', '') == $route.path.replace('/', '') }"
+                          pwa-style="{ backgroundColor: product.variation_bundle[0].values[0].swatch}"
+                          >
+                       </div>
+                       <div class="p4a-conf-bundle__option-color--title"> {{ product.variation_bundle[0].values[0].title }} </div>
+                    </label>
+                 </div>
+              </div>
+           </pwa-product-list>
 
-      <button pwa--if="product.stock.inStock <= 0" class="se-button-blue" disabled> Fora de estoque</button>
-      <button pwa--show="product.stock.inStock > 0" pwa-add-in-cart pwa-toggle-cart class="se-button-blue">comprar</button>
+           <pwa-product-configurations-bundle firsts-selected always-list attribute="variation_bundle">
+           </pwa-product-configurations-bundle>
 
-      <div class="se-frete-consult se-flex">
-        <input pwa-freight-box class="se-button-frete" placeholder="Calcular o frete"></input>
-        <span class="fa fa-truck" aria-hidden="true"></span>
-        <button pwa-freight-submit class="se-button-consultar">Consultar</button>
-        <p pwa--if="199 - $$cart.subtotal  <= 0" class="se-product-page-frete-gratis"><span>Frete grátis</span> disponível para este produto.</p>
-      </div>
 
-      <p pwa-each-freight>
-        {{ freight.title }} {{ freight.price | price }}
-      </p>
-    </div>
+           <div id="se-product-quantity-option" class="se-product-option">
+              <h3>Quantidade:</h3>
+              <input pwa-quantity-box id="product-quantity">
+           </div>
+           <button pwa--if="product.stock.inStock <= 0" class="se-button-blue" disabled> Fora de estoque</button>
+           <button pwa--show="product.stock.inStock > 0" pwa-add-in-cart class="se-button-blue">comprar</button>
+           <div class="se-frete-consult se-flex">
+              <div class="se-frete-consult-form">
+                 <input pwa-freight-box class="se-button-frete" placeholder="Calcular o frete"></input>
+                 <span class="fa fa-truck" aria-hidden="true"></span>
+                 <button pwa-freight-submit pwa-not-loading class="se-button-consultar">Consultar</button>
+                 <pwa-hidden>
+                    <div pwa-is-loading class="my-loader">
+                       <span class="se-button-consultar"><img pwa-src="loading"/></span>
+                    </div>
+                 </pwa-hidden>
+                 <p pwa--if="199 - $$cart.subtotal  <= 0" class="se-product-page-frete-gratis"><span>Frete grátis</span> disponível para este produto.</p>
+              </div>
+              <div class="se-frete-result">
+                 <p pwa-each-freight>
+                    {{ freight.title }} {{ freight.price | price }}
+                 </p>
+              </div>
+           </div>
+        </div>
+     </div>
   </section>
+
 
   <!-- aproveite e leve junto slider section -->
   <pwa-product-linkeds type="upsell" class="se-container" id="se-leve-junto-section">
-    <h2 class="se-text-center se-blue">Aproveite e leve junto</h2>
-    <div class="se-flex">
-      <div class="swiper-slide se-card-slide se-m-auto">
-        <a class="se-releases__card se-releases__card--left">
-          <button class="se-add-to-favorite">
-            <span class="fa fa-heart-o"></span>
-          </button>
-          <div class="se-price-off">{{  activeSKU.discount }}% OFF</div>
-          <!-- <div class="se-shipping-free">Frete grátis</div> -->
-          <img pwa-src="product.image" class="se-w100" pwa-alt="product.name">
+     <h2 class="se-text-center se-blue">Aproveite e leve junto</h2>
+     <div class="se-flex">
+        <div class="swiper-slide se-card-slide se-m-auto">
+           <a class="se-releases__card se-releases__card--left">
+              <button class="se-add-to-favorite">
+              <span class="fa fa-heart-o"></span>
+              </button>
+              <div class="se-price-off">{{  activeSKU.discount }}% OFF</div>
+              <!-- <div class="se-shipping-free">Frete grátis</div> -->
+              <img pwa-src="product.image" class="se-w100" pwa-alt="product.name">
+              <article class="se-card-title">
+                 <p class="se-card-title">{{ product.specifications.product_brands }}</p>
+                 <p class="se-card-full-title">{{ product.name }}</p>
+                 <p class="se-card-price">
+                    <span class="se-card-price-before">{{ activeSKU.old_price | price }}</span>
+                    <span class="se-card-price-actual">{{ activeSKU.sale_price | price }}</span>
+                 </p>
+                 <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
+              </article>
+           </a>
+        </div>
 
-          <article class="se-card-title">
-            <p class="se-card-title">{{ product.specifications.product_brands }}</p>
-            <p class="se-card-full-title">{{ product.name }}</p>
-            <p class="se-card-price">
-              <span class="se-card-price-before">{{ activeSKU.old_price | price }}</span>
-              <span class="se-card-price-actual">{{ activeSKU.sale_price | price }}</span>
-            </p>
-            <p class="se-card-parcelas">Em até 12x de R$ 10,38</p>
-          </article>
-        </a>
-      </div>
+        <span class="fa fa-plus se-m-auto"></span>
+        <div pwa-each-linked class="swiper-slide se-card-slide se-m-auto">
+           <a class="se-releases__card se-releases__card--left">
+              <button class="se-add-to-favorite">
+              <span class="fa fa-heart-o"></span>
+              </button>
+              <div pwa--show="linked.skus[0].discount > 0" class="se-price-off">{{ linked.skus[0].discount }}% OFF</div>
+              <!-- <div class="se-shipping-free">Frete grátis</div> -->
+              <img pwa-src="linked.image" class="se-w100" pwa-alt="linked.name">
+              <article class="se-card-overlay">
+                 <button pwa-to-linked-page class="se-button-blue">confira</button>
+              </article>
+              <article class="se-card-title">
+                 <p class="se-card-title">{{ linked.specifications.product_brands }}</p>
+                 <p class="se-card-full-title">{{ linked.name }}</p>
+                 <p class="se-card-price">
+                    <span class="se-card-price-before">{{ linked.skus[0].old_price | price }}</span>
+                    <span class="se-card-price-actual">{{ linked.skus[0].sale_price | price }}</span>
+                 </p>
+                 <p class="se-card-parcelas">Em até {{ linked.skus[0].installment.number }}x de
+                    {{ linked.skus[0].installment.value | price }}
+                 </p>
+              </article>
+           </a>
+        </div>
 
-      <span class="fa fa-plus se-m-auto"></span>
-
-      <div pwa-each-linked class="swiper-slide se-card-slide se-m-auto">
-        <a class="se-releases__card se-releases__card--left">
-          <button class="se-add-to-favorite">
-            <span class="fa fa-heart-o"></span>
-          </button>
-          <div pwa--show="linked.skus[0].discount > 0" class="se-price-off">{{ linked.skus[0].discount }}% OFF</div>
-          <!-- <div class="se-shipping-free">Frete grátis</div> -->
-          <img pwa-src="linked.image" class="se-w100" pwa-alt="linked.name">
-
-          <article class="se-card-overlay">
-            <button pwa-to-linked-page class="se-button-blue">confira</button>
-          </article>
-
-          <article class="se-card-title">
-            <p class="se-card-title">{{ linked.specifications.product_brands }}</p>
-            <p class="se-card-full-title">{{ linked.name }}</p>
-            <p class="se-card-price">
-              <span class="se-card-price-before">{{ linked.skus[0].old_price | price }}</span>
-              <span class="se-card-price-actual">{{ linked.skus[0].sale_price | price }}</span>
-            </p>
-            <p class="se-card-parcelas">Em até {{ linked.skus[0].installment.number }}x de
-              {{ linked.skus[0].installment.value | price }}</p>
-          </article>
-        </a>
-      </div>
-
-      <div class="se-cmd-4" id="se-leve-junto-holder">
-        <!-- <h3>Economize R$ 148,00</h3> -->
-        <h4>Leve os 2 produtos</h4>
-        <!-- <!-- <p class="se-price-before">de R$ 403,88</p> -->
-        <p class="se-price-now">por {{ (activeSKU.sale_price + component.list[0].skus[0].sale_price) | price }}</p>
-        <button class="se-button-blue">adicionar à sacola</button>
-      </div>
-    </div>
+        <div class="se-cmd-4" id="se-leve-junto-holder">
+           <!-- <h3>Economize R$ 148,00</h3> -->
+           <h4>Leve os 2 produtos</h4>
+           <!-- <!-- <p class="se-price-before">de R$ 403,88</p> -->
+           <p class="se-price-now">por {{ (activeSKU.sale_price + component.list[0].skus[0].sale_price) | price }}</p>
+           <button class="se-button-blue">adicionar à sacola</button>
+        </div>
+     </div>
   </pwa-product-linkeds>
 
   <!-- section com os 3 cmd-4 de informação -->
   <section id="product-details-section">
-    <div class="se-container se-flex">
-      <section class="se-cmd-4 se-product-description">
-        <h3>Características</h3>
-        <p pwa--html="product.description"></p>
-      </section>
-
-      <section class="se-cmd-4 se-product-description">
-        <h3>Descrição</h3>
-        <p pwa--html="product.short_description"></p>
-      </section>
-
-      <section class="se-cmd-4 se-product-description">
-        <h3>Sobre a marca</h3>
-
-        <p pwa--html="product.sobre_a_marca"></p>
-
-        <div class="se-flex">
-          <a pwa-href="`/catalogsearch/result/_todos?pwaf_product_brands=${product.specifications.product_brands}`"
-            class="se-link-tags se-reset">
-            {{ product.specifications.product_brands }}
-          </a>
-        </div>
-      </section>
-    </div>
+     <div class="se-container se-flex">
+        <section class="se-cmd-4 se-product-description">
+           <div class="se-product-description-title"><h3>Características </h3> <span class="ismobile" pwa-hook.click="show-and-hide-details-product"> + </span></div>
+           <p pwa--html="product.description"></p>
+        </section>
+        <section class="se-cmd-4 se-product-description">
+           <div class="se-product-description-title"> <h3>Descrição</h3> <span class="ismobile" pwa-hook.click="show-and-hide-details-product"> + </span></div>
+           <p pwa--html="product.short_description"></p>
+        </section>
+        <section class="se-cmd-4 se-product-description">
+           <div class="se-product-description-title"> <h3>Sobre a marca</h3> <span class="ismobile" pwa-hook.click="show-and-hide-details-product"> + </span></div>
+           <p pwa--html="product.specifications.sobre_a_marca"></p>
+           <div class="se-flex">
+              <a pwa-href="`/catalogsearch/result/_todos?pwaf_product_brands=${product.specifications.product_brands}`"
+                 class="se-link-tags se-reset">
+              {{ product.specifications.product_brands }}
+              </a>
+           </div>
+        </section>
+     </div>
   </section>
+
 
   <!-- você também vai gostar slider section -->
   <pwa-product-linkeds type="relateds" id="se-voce-vai-gostar">
-    <div class="se-container">
-      <h2 class="se-text-center se-blue">Você também vai gostar</h2>
-
-      <div class="swiper-container" id="se-slide-produtos2" pwa-hook="se-slide-produtos2">
-        <div class="swiper-wrapper">
-
-          <div pwa-each-linked class="swiper-slide se-card-slide">
-            <a class="se-releases__card se-releases__card--left">
-              <button class="se-add-to-favorite">
-                <span class="fa fa-heart-o"></span>
-              </button>
-              <div pwa--show="linked.skus[0].discount > 0" class="se-price-off">{{ linked.skus[0].discount }}% OFF</div>
-              <!-- <div class="se-shipping-free">Frete grátis</div> -->
-              <img pwa-src="linked.image" class="se-w100" alt="Blusas">
-
-              <article class="se-card-overlay">
-                <button pwa-to-linked-page class="se-button-blue">confira</button>
-              </article>
-
-              <article class="se-card-title">
-                <p class="se-card-title">{{ linked.specifications.product_brands }}</p>
-                <p class="se-card-full-title">{{ linked.name }}</p>
-                <p class="se-card-price">
-                  <span class="se-card-price-before">{{ linked.skus[0].old_price | price }}</span>
-                  <span class="se-card-price-actual">{{ linked.skus[0].old_price | price }}</span>
-                </p>
-                <p class="se-card-parcelas">Em até {{ linked.skus[0].installment.number }}x de
-                  {{ linked.skus[0].installment.value | price }}</p>
-              </article>
-            </a>
-          </div>
+     <div class="se-container">
+        <h2 class="se-text-center se-blue">Você também vai gostar</h2>
+        <div class="swiper-container" id="se-slide-produtos2" pwa-hook="se-slide-produtos2">
+           <div class="swiper-wrapper">
+              <div pwa-each-linked class="swiper-slide se-card-slide">
+                 <a class="se-releases__card se-releases__card--left">
+                    <button class="se-add-to-favorite">
+                    <span class="fa fa-heart-o"></span>
+                    </button>
+                    <div pwa--show="linked.skus[0].discount > 0" class="se-price-off">{{ linked.skus[0].discount }}% OFF</div>
+                    <!-- <div class="se-shipping-free">Frete grátis</div> -->
+                    <img pwa-src="linked.image" class="se-w100" alt="Blusas">
+                    <article class="se-card-overlay">
+                       <button pwa-to-linked-page class="se-button-blue">confira</button>
+                    </article>
+                    <article class="se-card-title">
+                       <p class="se-card-title">{{ linked.specifications.product_brands }}</p>
+                       <p class="se-card-full-title">{{ linked.name }}</p>
+                       <p class="se-card-price">
+                          <span class="se-card-price-before">{{ linked.skus[0].old_price | price }}</span>
+                          <span class="se-card-price-actual">{{ linked.skus[0].old_price | price }}</span>
+                       </p>
+                       <p class="se-card-parcelas">Em até {{ linked.skus[0].installment.number }}x de
+                          {{ linked.skus[0].installment.value | price }}
+                       </p>
+                    </article>
+                 </a>
+              </div>
+           </div>
         </div>
-      </div>
-    </div>
+     </div>
   </pwa-product-linkeds>
 
   <!-- os 3 itens cmd-4 do footer (pague em ate 12x, retire na loja e entrega expressa) -->
   <section id="se-category-footer">
-    <section class="se-container se-flex">
-      <div class="se-cmd-4">
-        <span class="icon-cartao"></span>
-        <p>Pague em até</p>
-        <h2>12x no cartão</h2>
-      </div>
+     <section class="se-container se-flex">
+        <div class="se-cmd-4">
+           <span class="icon-cartao"></span>
+           <p>Pague em até</p>
+           <h2>12x no cartão</h2>
+        </div>
 
-      <div class="se-cmd-4">
-        <span class="icon-sacola"></span>
-        <p>Compre aqui e</p>
-        <h2>retire na loja</h2>
-      </div>
+        <div class="se-cmd-4">
+           <span class="icon-sacola"></span>
+           <p>Compre aqui e</p>
+           <h2>retire na loja</h2>
+        </div>
 
-      <div class="se-cmd-4">
-        <span class="icon-entrega-expresso"></span>
-        <p>Entrega expressa</p>
-        <h2>em até 1 dia útil</h2>
-        <p class="se-gray">Consulte as cidades</p>
-      </div>
-
-    </section>
+        <div class="se-cmd-4">
+           <span class="icon-entrega-expresso"></span>
+           <p>Entrega expressa</p>
+           <h2>em até 2 dias úteis</h2>
+           <p class="se-gray">Consulte as cidades</p>
+        </div>
+     </section>
   </section>
 
   <!-- último slider section 'você também viu' -->
-
   <!-- <pwa-product-list name="ofertas" filter="categories.name: 'tenis'" size="12" class="se-slider-container se-flex se-relative" id="voce-tambem-viu-section">
-      <h2 class="se-text-center se-blue">Você também viu</h2>
-  
-      <div class="swiper-container" id="se-slide-prod" pwa-hook="se-slide-prod">
-        <div class="swiper-wrapper">
-          <div pwa-each-product class="swiper-slide se-card-slide">
-            <pwa-product-card>
-          </div>
-        </div>
-  
-        adicionar navegação
-        <div class="se-slide-prod-next isdesktop">
-          <span class="fa fa-chevron-right"></span>
-        </div>
-  
-        <div class="se-slide-prod-prev isdesktop">
-          <span class="fa fa-chevron-left"></span>
-        </div>
-      </div>
-    </pwa-product-list> -->
+     <h2 class="se-text-center se-blue">Você também viu</h2>
+     
+     <div class="swiper-container" id="se-slide-prod" pwa-hook="se-slide-prod">
+       <div class="swiper-wrapper">
+         <div pwa-each-product class="swiper-slide se-card-slide">
+           <pwa-product-card>
+         </div>
+       </div>
+     
+       adicionar navegação
+       <div class="se-slide-prod-next isdesktop">
+         <span class="fa fa-chevron-right"></span>
+       </div>
+     
+       <div class="se-slide-prod-prev isdesktop">
+         <span class="fa fa-chevron-left"></span>
+       </div>
+     </div>
+     </pwa-product-list> -->
 
   <section class="se-container" id="voce-tambem-viu-section">
-    <h2 class="se-text-center se-blue">Você também viu</h2>
-
-    <pwa-product-list name="ofertas" filter="categories.name: 'menino'" size="12">
-      <div class="swiper-container" id="se-slide-produtos3" pwa-hook="se-slide-produtos3">
-        <div class="swiper-wrapper">
-          <div pwa-each-product class="swiper-slide se-card-slide">
-            <pwa-product-card>
-          </div>
-        </div>
-      </div>
-    </pwa-product-list>
+     <h2 class="se-text-center se-blue">Você também viu</h2>
+     <div>
+        <pwa-product-list  name="se-slide-produtos3" filter="categories.name: 'menino'" size="12" class="swiper-container" id="se-slide-produtos3">
+           <div class="swiper-wrapper">
+              <div pwa-each-product class="swiper-slide se-card-slide">
+                 <pwa-product-card>
+              </div>
+           </div>
+        </pwa-product-list>
+     </div>
   </section>
 </main>

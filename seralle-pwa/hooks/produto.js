@@ -1,4 +1,9 @@
 {
+    "--toggle-split": component => {
+        if (document.querySelector('.se-product-split')) {
+            document.querySelector('.se-product-split').classList.toggle('se-product-split--active');
+        }
+    },
     "--se-slide-produtos2": component => {
         component.$slide('#se-slide-produtos2', {
             slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
@@ -6,12 +11,16 @@
             grabCursor: true
         });
     },
-    "--se-slide-produtos3": component => {
+    "product-list-se-slide-produtos3-loaded": component => {
         component.$slide('#se-slide-produtos3', {
             slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
             spaceBetween: window.innerWidth < 1024 ? 0 : 20,
             grabCursor: true
         });
+    },
+    "--show-and-hide-details-product": (component, el) => {
+        console.log('entrou..')
+        el.parentElement.parentElement.classList.toggle('se-description--active');
     },
     // "on-page-product": component =>{
     //     var galleryThumbs = new Swiper('#se-product-slider', {
@@ -47,6 +56,10 @@
             watchSlidesVisibility: true,
             watchSlidesProgress: false,
             direction: 'vertical',
+            navigation: {
+                nextEl: '.se-gallery-product-next',
+                prevEl: '.se-gallery-product-prev'
+            }
             // navigation: {
             //     nextEl: '.se-thumbs-product-next',
             //     prevEl: '.se-thumbs-product-prev'
