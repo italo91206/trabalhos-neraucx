@@ -1,0 +1,567 @@
+/* //////////////////// Produto //////////////////////// */
+
+.pwa-product-img-container {
+    height: 301px;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+}
+.pwa-product-header-itens {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    bottom: -15px;
+}
+.pwa-header-item-blue {
+    background: #0098ED;
+    height: 17px;
+    width: 123px;
+    padding-left: 3px;
+    padding-top: 2px;
+    border-radius: 5px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+}
+.pwa-header-item-green {
+    background: #00CEB0;
+    height: 23px;
+    width: 166px;
+    margin-left: 1pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+
+}
+.pwa-header-item-green figcaption {
+    margin-left: 4px;
+    margin-top: 3px;
+}
+.pwa-product-img-big {
+    padding-top: 1pc;
+    height: 90%;
+    width: 65%;
+    margin-top: 1pc;
+    object-fit: contain;
+}
+
+
+/* ////////// header ///////////// */
+.product-header-infos{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+
+    color: #7495A4;
+
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+.pwa-product-mark {
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+}
+
+/* ////////// body ///////////// */
+.pwa-product-title {
+    height: 48px;
+    width: 355px;
+    margin-bottom: 12px;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+.pwa-product-price-blue{
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.pwa-product-values-info {
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+/* Botão Financiar Equipo - Ativa o mOdal via Javascript */
+.pwa-btn-finance-eqp {
+    height: 30px;
+    width: 132px;
+
+    padding:7px 8px 2px 8px ;
+    position: relative;
+    float: right;
+    top: -40px;
+    margin-top: 1pc;
+
+    color: #457185;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    
+    border-radius: 3px;
+    background: #D0EFF6;
+
+}
+
+.pwa-btn-finance-eqp:hover {
+    opacity: 0.6;
+}
+
+/* ////////// footer ///////////// */
+.pwa-footer-product-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3pc;
+    margin-top: 1pc;
+    width: 100%;
+}
+.pwa-footer-product-icon-and-text {
+    display: flex;
+    justify-content: space-between;
+}
+.pwa-footer-product-text {
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+    padding-top: 4px;
+    padding-left: 6px;
+
+}
+
+
+/* ///////////// características do produto ////////////// */
+#pwa-char-product {
+    border-top: 1px solid #D1DCE1;
+    padding-top:1.5pc ;
+    padding-bottom: 2pc;
+    text-align: center;
+}
+.pwa-char-product-list {
+    list-style: none;
+}
+.pwa-char-product-list li{
+    height: 70px;
+}
+.pwa-char-product-title {
+    color: #123E52;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-char-product-text {
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+#pwa-char-product a {
+    cursor: pointer;
+}
+.pwa-see-moreChar {
+    margin-bottom: 2pc;
+}
+
+
+#pwa-show-char-product, #pwa-show-char-product2 {
+    display: none;
+ 
+}
+#pwa-text-shadowChar{
+    background-image: linear-gradient(to bottom, transparent, rgba(247, 247, 247, 0.8));
+    position: absolute;
+    top: -30px;
+    height: 90px;
+    width:350px;
+    display: block;
+    z-index: 1;
+}
+
+/* ///// BARRA DE QUANTIDADE DE COMPRA E BTN COMPRE AGORA ////// */
+#pwa-buy-action{
+    position: relative;
+    top: -150px;
+    margin-top: -50px;
+    
+    height: 79px;
+    width: 100%;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pwa-buy-qnt{
+    height: 28px;
+    width: 73px;
+    display: flex;
+    justify-content: space-around;
+
+    border-radius: 4px;
+    border: 1px solid #BFD0DC;
+
+}
+.pwa-btn-buy-action {
+    height: 28px;
+    width: 143px;
+    outline: none;
+    border: #14AFD1;
+    border-radius: 5px;
+    background: #14AFD1;
+   
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.pwa-qnt-product{
+    width: 25px;
+    height: 100%;
+    border: 0;
+    text-align: center;
+    padding-top: 1px;
+    outline: 0;
+}
+
+/* ///////////////// Card-blue - PRODUTOS ////////////////// */
+.product-page-card-blue {
+    padding-bottom: 2pc;
+}
+.product-page-card-blue .card{
+    background: #5B87F8;
+    height: 207px;
+    width: 100%;
+    border-radius: 3px;
+}
+.product-page-card-blue .row {
+    margin: auto;
+    margin-top: 2pc;
+}
+.product-page-card-blue-title {
+    margin-top: -12px;
+    margin-bottom: 12px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.product-page-card-blue-text {
+    height: 102px;
+    width: 242px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+
+/* ///////////// SOBRE O TEMPO ////////////// */
+.pwa-about-time{
+  height:fit-content;
+  margin-bottom: 2pc;
+  text-align: center;
+}
+.pwa-about-time-title {
+    color: #123E52;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: 1pc;
+}
+.pwa-about-time-text {
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-about-time a{
+    position: relative;
+    top: 1.5pc;
+    cursor: pointer;
+}
+#pwa-text-shadow {
+    background-image: linear-gradient(to bottom, transparent, rgba(247, 247, 247, 0.8));
+    position: absolute;
+    height: 110px;
+    width:90%;
+    display: block;
+    margin-top: -100px;
+}
+#pwa-show-char {
+    display: none;
+}
+
+
+/* ///////////// SOBRE O VENDEDOR ////////////// */
+.pwa-about-seller{
+    padding-top: 2pc;
+    margin-bottom: 2pc;
+    border-top: 1px solid #D1DCE1;
+    text-align: center;
+}
+/* product-page-card-location é product-page card 1 */
+.product-page-card-location{
+    margin-bottom: 12px;
+    height: 81px;
+    border-radius: 5px;
+}
+/* product-page-card-clients-sells é product-page card 2 */
+.product-page-card-clients-sells{
+    margin-bottom: 2pc;
+    height: 127px;
+    border-radius: 5px;
+
+}
+.pwa-about-seller-titles-gray{
+    margin-top: 12px;
+
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+}
+.pwa-pin-location-and-text {
+    display: flex;
+    justify-content: center;
+}
+.pwa-pin-location-and-text img{
+    padding-right: 10px;
+}
+/* textos em azul */
+.pwa-about-seller-text-blue{
+    height: 15px;
+    padding-top: 4px;
+
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+/* ///////////// Botão - Denunciar este anúncio ////////////// */
+.pwa-btn-outline-gray{
+    height: 50px;
+    width: 244px;
+    border-radius: 5px;
+    border: 1px solid #D1DCE1;
+    padding-top: 15px;
+
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+.pwa-btn-outline-gray img{
+    margin-right: 12px;
+}
+.pwa-btn-outline-gray:hover{
+    background-color: #D1DCE1;
+    color: #ffffff;
+    stroke: #ffffff;
+}
+.pwa-container-denounce-anounce{
+    height: 6pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid #D1DCE1;
+    border-bottom: 1px solid #D1DCE1;
+}
+
+/* Auste no título de categoria */
+.categorias .pwa-titles-H4-Blue {
+    padding-top: 12px;
+}
+
+
+/* The Modal (background) */
+.pwa-modalFinance {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.pwa-modalFinance-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 0px 20px 20px 20px;
+    border: 1px solid #888;
+    height: 763px;
+    width: 355px;
+    left: 10px;
+    top: 326px;
+    border-radius: 8px;
+}
+
+
+.pwa-close-modalFinance {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+.pwa-close-modalFinance:hover,
+.pwa-close-modalFinance:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pwa-title-modalFinance {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.pwa-text-modalFinance {
+    width: 317px;
+    margin-bottom: 15px;
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+}
+
+.pwa-textSecondary-modalFinance {
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+}
+
+/* ajuste no botão - centraliza o texto */
+.pwa-modalFinance .pwa-btn-blue-big {
+    padding-top: 0px;
+    margin-left: 10px;
+}
+
+/* ajuste no botão  */
+.pwa-modalFinance .pwa-link-blue {
+    margin-left: 7pc;
+}
