@@ -1,0 +1,296 @@
+/* Inicio Footer */
+
+footer {
+	background: #123E52;
+	margin-top: 0;
+}
+
+.container-footer-blue {
+	height: 100px;
+	padding: 0;
+	background: #14AFD1;
+	display: flex;
+	justify-content: center;
+}
+
+.container-footer-blue img {
+	position: relative;
+	height: 63px;
+	width: 63px;
+	top: 19px;
+}
+
+.container-footer-blue h6 {
+	position: relative;
+	height: 63px;
+	width: 190px;
+	left: 40px;
+	top: 19px;
+	color: #FFFFFF;
+	font-family: Cambay;
+	font-size: 19px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.footer-flex {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-item-flex {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-item-flex ul:last-child {
+	margin-top: 0px;
+}
+
+footer .pwa-list-footer {
+	list-style-type: none;
+	margin: auto;
+}
+
+footer .pwa-list-footer:first-child {
+	margin-right: 3pc;
+}
+
+footer .pwa-list-footer li:first-child {
+	margin-top: 2pc;
+}
+
+footer .pwa-list-footer li {
+	height: 4pc;
+	width: 150px;
+}
+
+footer .container a {
+	height: 26px;
+	width: 95px;
+	font-family: Cambay;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+	letter-spacing: 0.01em;
+	text-align: left;
+	color: #D1DCE1;
+}
+
+.pwa-redes-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pwa-redes-footer img:first-child {
+	margin-left: 25px;
+}
+
+.pwa-redes-footer img {
+	margin-right: 25px;
+}
+
+.pwa-logo-eqp-footer {
+	margin-top: 3pc;
+	margin-left: 4pc;
+	display: flex;
+}
+
+footer .nerau {
+	height: 60px;
+	text-align: center;
+	padding-top: 1pc;
+	background: #D1DCE1;
+}
+
+footer .equipoF-footer {
+	height: 110px;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	background: #123E52;
+	align-content: center;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.footer-flex {
+		flex-direction: column;
+	}
+	.footer-item-flex {
+		order: 1;
+	}
+	.pwa-redes-footer {
+		order: 2;
+		height: 80px;
+		width: 100%;
+		border-top: 1px solid #174E67;
+		border-bottom: 1px solid #174E67;
+	}
+	.pwa-logo-eqp-footer {
+		order: 3;
+		height: 100px;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-left: -10px;
+		margin-top: 0;
+	}
+}
+
+
+/* Dispositivos pequenos  */
+
+@media only screen and (min-width: 600px) {
+	.footer-flex {
+		flex-direction: column;
+	}
+	.footer-item-flex {
+		order: 1;
+		width: 100%;
+	}
+	.pwa-redes-footer {
+		order: 2;
+		height: 80px;
+		width: 100%;
+		border-top: 1px solid #174E67;
+		border-bottom: 1px solid #174E67;
+	}
+	.pwa-logo-eqp-footer {
+		order: 3;
+		height: 100px;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-left: -10px;
+		margin-top: 0;
+	}
+}
+
+
+/* Dispositivos médios (tablets de paisagem, 768px e superior)  */
+
+@media only screen and (min-width: 768px) {
+	.container-footer-blue {
+		height: 130px;
+	}
+	.container-footer-blue img {
+		height: 88px;
+		width: 80px;
+	}
+	.container-footer-blue h6 {
+		height: 88px;
+		width: 342px;
+		font-size: 24px;
+		line-height: 44px;
+	}
+	.footer-flex {
+		flex-direction: row;
+	}
+	.footer-item-flex {
+		order: 2;
+		width: 100%;
+	}
+	.pwa-redes-footer {
+		order: 3;
+		height: 80px;
+		width: 100%;
+		margin-top: 12px;
+		border: none;
+	}
+	.pwa-logo-eqp-footer {
+		order: 1;
+		height: 100px;
+		width: 100%;
+		margin-top: 12px;
+	}
+}
+
+
+/* Dispositivos grandes (laptops / desktops, 992px e superior) */
+
+@media only screen and (min-width: 992px) {
+	.container-footer-blue {
+		height: 148px;
+	}
+	.container-footer-blue img {
+		height: 108px;
+		width: 100px;
+	}
+	.container-footer-blue h6 {
+		height: 88px;
+		width: 342px;
+		margin-top: 12px;
+		font-size: 26px;
+		line-height: 44px;
+	}
+	.footer-item-flex {
+		margin-bottom: 4pc;
+	}
+	.pwa-logo-eqp-footer img {
+		height: 200px;
+		width: 200px;
+	}
+	.pwa-redes-footer img {
+		height: 30px;
+		width: 30px;
+	}
+	footer .pwa-list-footer li {
+		height: 4pc;
+		width: 180px;
+	}
+	footer .container a {
+		font-size: 20px;
+	}
+}
+
+
+/* Dispositivos extragrandes (laptops e desktops grandes, 1200 px e superior) */
+
+@media only screen and (min-width: 1200px) {
+	.container-footer-blue {
+		height: 248px;
+		align-items: center;
+	}
+	.container-footer-blue img {
+		height: 148px;
+		width: 140px;
+	}
+	.container-footer-blue h6 {
+		height: 88px;
+		width: 342px;
+		font-size: 26px;
+		line-height: 44px;
+	}
+	.footer-item-flex {
+		margin-bottom: 4pc;
+	}
+	.pwa-logo-eqp-footer img {
+		height: 200px;
+		width: 200px;
+	}
+	.pwa-redes-footer img {
+		height: 30px;
+		width: 30px;
+	}
+	footer .pwa-list-footer:first-child {
+		margin-right: 5pc;
+	}
+	footer .pwa-list-footer li:first-child {
+		margin-top: 3pc;
+	}
+	footer .pwa-list-footer li {
+		height: 4pc;
+		width: 180px;
+	}
+	footer .container a {
+		font-size: 20px;
+	}
+}
