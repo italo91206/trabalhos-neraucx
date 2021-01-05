@@ -82,5 +82,17 @@
                 }
             });
         }, 500);
+    },
+    "--prepara-zoom": component =>{
+        var slider = $('#se-gallery__slide-wrapper');
+        var fotos = slider.children();
+
+        for(var i=0; i < fotos.length; i++)
+            $(fotos[i].children[0]).elevateZoom({
+                zoomType: "inner",
+                cursor: "crosshair",
+                zoomWindowFadeIn: 500,
+                zoomWindowFadeOut: 750
+            })
     }
 }

@@ -22,20 +22,20 @@
         <div class="swiper-wrapper se-gallery__wrapper">
            <pwa-loop params="7">
               <div pwa-each-image class="swiper-slide">
-                 <img pwa-preview-src="product-example" pwa-src="image">
+                 <img pwa-preview-src="product-example" pwa-src="image" >
               </div>
            </pwa-loop>
         </div>
      </div>
 
        <!-- gallery slider -->
-        <div class="swiper-container gallery-top se-gallery se-relative" id="se-product-image" >
+        <div class="swiper-container gallery-top se-gallery se-relative" id="se-product-image" pwa-hook="prepara-zoom">
            <img id="se-selo-page-product__black-friday" pwa-src="selo-black-friday" alt="Black Friday">
            <div pwa--if="activeSKU.discount > 15" class="se-price-off">{{ activeSKU.discount -15 }}% OFF</div>
            <div class="swiper-wrapper" id="se-gallery__slide-wrapper">
            <pwa-loop params="7">
                <div pwa-each-image class="swiper-slide">
-                   <img pwa-preview-src="product-example" pwa-src="image" class="se-image-zoom" data-zoom-image="image">
+                   <img pwa-preview-src="product-example" pwa-src="image" class="se-image-zoom" :data-zoom-image="image">
                </div>
            </pwa-loop>
            </div>
