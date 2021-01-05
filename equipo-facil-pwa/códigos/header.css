@@ -398,7 +398,7 @@ header .equipoF-header {
     margin-top: 48px;
     right: 0;
     margin-right: -10px;
-    box-shadow: inset 0px 5px 9px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 2400px 0px 150em rgba(0, 0, 0, 0.6);
     background: #FFF;
     border-radius: 0 0 5px 5px;
     width: 284px;
@@ -408,7 +408,7 @@ header .equipoF-header {
     opacity: 0;
 }
 
-.modal-desktop-user::before {
+/* .modal-desktop-user::before {
     content: '';
     width: 100vw;
     height: 100vh;
@@ -417,7 +417,7 @@ header .equipoF-header {
     position: fixed;
     top: 70px;
     left: 0;
-}
+} */
 
 .modal-desktop-user ul {
     list-style: none;
@@ -508,11 +508,10 @@ header .equipoF-header {
     min-height: 100vh;
     height: 100%;
     z-index: -1;
-    display: flex;
     display: none;
 }
 
-.pwa-modal-notification::before {
+/* .pwa-modal-notification::before {
     content: '';
     background: rgba(0, 0, 0, 0.7);
     width: 100vw;
@@ -521,24 +520,24 @@ header .equipoF-header {
     position: fixed;
     top: 70px;
     left: 0;
-}
+} */
 
 .pwa-modal-notification-container {
     position: absolute;
     display: flex;
-    top:0;
-    right: 0;
-    max-height: 80vh;
-
+    top: 70px;
+    right: 0px;
+    height: 0px;
     background: #FFF;
     z-index: 10;
-
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-
     flex-direction: column;
-    box-shadow: inset 0px 5px 9px 0px rgba(0,0,0,0.2);
-    overflow-y: auto;
+    /* box-shadow: inset 0px 5px 9px 0px rgba(0,0,0,0.2); */
+    box-shadow: 0 2400px 0px 150em rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .pwa-modal-notification-card-group {
@@ -802,10 +801,7 @@ header .equipoF-header {
     height: 100%;
     align-items: center;
     background: pwa-url(arrow-while) no-repeat center;
-    transform: rotate(180deg);
-
-
-    
+    transform: rotate(180deg); 
 }
 
 .modal-menu .menu-user .user-cad button.account.active span.arrow-down::before{
@@ -930,6 +926,13 @@ header .equipoF-header {
 
 .modal-desktop-user.ativo {
     height: 591px;
+    opacity: 1;
+    visibility: visible;
+    transition: height .2s ease;
+}
+
+.pwa-modal-notification-container.ativo {
+    height: 536px;
     opacity: 1;
     visibility: visible;
     transition: height .2s ease;
