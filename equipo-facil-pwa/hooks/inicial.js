@@ -19,5 +19,18 @@
       grabCursor: true
       }
     );
+  },
+  "--super-destaques-slide": component => {
+    component.$slide('#super-destaques-slide', {
+      slidesPerView: window.innerWidth < 1024 ? 3 : 'auto',
+      spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+      grabCursor: true,
+      loop: true,
+      loopedSlides: 4,
+      navigation: {
+        nextEl: '#super-destaques-slide-next',
+        prevEl: '#super-destaques-slide-prev'
+      }
+    });
   }
 }

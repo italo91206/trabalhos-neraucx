@@ -151,11 +151,13 @@
 	width: 151px;
 	border-radius: 5px;
 	text-align: center;
+	transition: all .25s ease;
 }
 
 #produtos-mais-buscados .card:hover {
-	transform: scale(1.03);
-	box-shadow: 0px 0px 10px 5px rgb(223, 219, 219);
+	transform: scale(1.01);
+    box-shadow: 0px 0px 10px 5px rgb(223, 219, 219);
+    transition: all .25s ease;
 }
 
 #produtos-mais-buscados .card img {
@@ -1282,3 +1284,64 @@ footer {
 	max-height: 280px;
 	border-radius: 10px;
 }
+
+.swiper-produtos-mais-buscados.isdesktop a {
+	margin: unset;
+	display: block;
+}
+
+.swiper-produtos-mais-buscados.isdesktop {
+    justify-content: space-between;
+}
+
+.swiper-produtos-mais-buscados.isdesktop a .card {
+    width: 270px !important;
+    height: 350px !important;
+}
+
+.swiper-produtos-mais-buscados.isdesktop .card img {
+    height: 130px;
+    margin-top: 100px;
+}
+
+.swiper-produtos-mais-buscados.isdesktop .card p {
+    width: 150px !important;
+    font-size: 24px !important;
+    margin: auto !important;
+}
+
+
+@media only screen and (min-width: 768px) {
+	h4 {
+	  font-size: 20px;
+	}
+	.pwa-container-cover img{
+	  width: 100%;
+	  margin-top:-200px ;
+	}
+
+	.pwa-subtitle-home {
+	  height: 2.5rem;
+	  width: 20rem;
+	  font-size: 14px;
+	}
+	
+	.pwa-title-home {
+	  font-size: 54px;
+	  width: 400px;
+	  height: fit-content;
+	  line-height: 60px;
+	}
+
+	.pwa-cover-home {
+	  margin-bottom: 0;
+	}
+  
+	.ultimos-super-Destaques .swiper-button-next, 
+	.ultimos-super-Destaques .swiper-button-prev,
+	.grandes-marcas .swiper-button-next,
+	.grandes-marcas .swiper-button-prev {
+	  display: block;
+	}
+  
+}  

@@ -487,7 +487,7 @@
       </div>
     </div>
 
-    <div class="swiper-produtos-mais-buscados isdesktop">
+    <div class="swiper-produtos-mais-buscados isdesktop flex">
       <a pwa-to-page="/">
         <div class="card">
           <img pwa-src="icon-cardiaco" alt="">
@@ -521,211 +521,18 @@
   <section class="bg-gradiente-white">
     <section class="container ultimos-super-Destaques">
       <h4>Últimos SuperDestaques</h4>
-      <div class="produtos-card swiper-container">
+      
+      <pwa-product-list name="ofertas"  size="12" id="super-destaques-slide" class="produtos-card swiper-container" pwa-hook="super-destaques-slide">
         <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="pwa-card-product">
-              <div class="pwa-card-header">
-                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
-
-                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
-                  xmlns="http://www.w3.org/2000">
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
-                    fill="#D0EFF6" />
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
-                    fill="#72CFE3" />
-                </svg>
-
-              </div>
-
-              <div class="pwa-inner-card">
-                <div class="pwa-card-product-img-container">
-                  <img class="pwa-card-product-img" pwa-src="destaques-card">
-                </div>
-
-                <div class="pwa-card-product-infos">
-                  <figure class="pwa-card-product-tag-green ">
-                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
-                    <figcaption>EQUIPO VISTORIADO</figcaption>
-                  </figure>
-
-                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60 live 4D
-                  </h6>
-
-                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
-                  <div class="pwa-card-text-with-btn-blue">
-                    <p class="pwa-card-installment">
-                      Em até 6x de R$ X.XXX,XX
-                      sem juros
-                    </p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="pwa-card-product-footer">
-                <p class="pwa-card-product-city">MARINGÁ/PR</p>
-                <p class="pwa-card-product-status">SEMINOVO</p>
-              </div>
-            </div>
+          <div pwa-each-product class="swiper-slide se-card-slide">
+            <pwa-product-card>
           </div>
-
-          <div class="swiper-slide">
-            <div class="pwa-card-product">
-              <div class="pwa-card-header">
-                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
-
-                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
-                  xmlns="http://www.w3.org/2000">
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
-                    fill="#D0EFF6" />
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
-                    fill="#72CFE3" />
-                </svg>
-
-              </div>
-
-              <div class="pwa-inner-card">
-                <div class="pwa-card-product-img-container">
-                  <img class="pwa-card-product-img" pwa-src="destaques-card">
-                </div>
-
-                <div class="pwa-card-product-infos">
-                  <figure class="pwa-card-product-tag-green ">
-                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
-                    <figcaption>EQUIPO VISTORIADO</figcaption>
-                  </figure>
-
-                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60 live 4D
-                  </h6>
-
-                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
-                  <div class="pwa-card-text-with-btn-blue">
-                    <p class="pwa-card-installment">
-                      Em até 6x de R$ X.XXX,XX
-                      sem juros
-                    </p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="pwa-card-product-footer">
-                <p class="pwa-card-product-city">MARINGÁ/PR</p>
-                <p class="pwa-card-product-status">SEMINOVO</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="pwa-card-product">
-              <div class="pwa-card-header">
-                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
-
-                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
-                  xmlns="http://www.w3.org/2000">
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
-                    fill="#D0EFF6" />
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
-                    fill="#72CFE3" />
-                </svg>
-
-              </div>
-
-              <div class="pwa-inner-card">
-                <div class="pwa-card-product-img-container">
-                  <img class="pwa-card-product-img" pwa-src="destaques-card">
-                </div>
-
-                <div class="pwa-card-product-infos">
-                  <figure class="pwa-card-product-tag-green ">
-                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
-                    <figcaption>EQUIPO VISTORIADO</figcaption>
-                  </figure>
-
-                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60
-                    live 4D
-                  </h6>
-
-                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
-                  <div class="pwa-card-text-with-btn-blue">
-                    <p class="pwa-card-installment">
-                      Em até 6x de R$ X.XXX,XX
-                      sem juros
-                    </p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="pwa-card-product-footer">
-                <p class="pwa-card-product-city">MARINGÁ/PR</p>
-                <p class="pwa-card-product-status">SEMINOVO</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="pwa-card-product">
-              <div class="pwa-card-header">
-                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
-
-                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
-                  xmlns="http://www.w3.org/2000">
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
-                    fill="#D0EFF6" />
-                  <path
-                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
-                    fill="#72CFE3" />
-                </svg>
-
-              </div>
-
-              <div class="pwa-inner-card">
-                <div class="pwa-card-product-img-container">
-                  <img class="pwa-card-product-img" pwa-src="destaques-card">
-                </div>
-
-                <div class="pwa-card-product-infos">
-                  <figure class="pwa-card-product-tag-green ">
-                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
-                    <figcaption>EQUIPO VISTORIADO</figcaption>
-                  </figure>
-
-                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60
-                    live 4D
-                  </h6>
-
-                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
-                  <div class="pwa-card-text-with-btn-blue">
-                    <p class="pwa-card-installment">
-                      Em até 6x de R$ X.XXX,XX
-                      sem juros
-                    </p>
-
-                  </div>
-                </div>
-              </div>
-              <div class="pwa-card-product-footer">
-                <p class="pwa-card-product-city">MARINGÁ/PR</p>
-                <p class="pwa-card-product-status">SEMINOVO</p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
-        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
-
+        <img id="super-destaques-slide-prox" class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img id="super-destaques-slide-prev" class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
       </div>
-      </div>
-    </section>
+    </pwa-product-list>
 
     <section class="container" id="as-grandes-marcas">
       <div class="banner2">
