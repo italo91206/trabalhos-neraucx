@@ -1,0 +1,836 @@
+<main id="ef-home">
+  <section class="pwa-cover-home">
+    <div id="home-slide" class="swiper-container capa-home" pwa-hook="home-slide-inicial">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="pwa-container-cover">
+            <img pwa-src="capa-home" alt="Capa home">
+            <div class="pwa-cover-text-home">
+              <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
+              <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pwa-container-cover">
+            <img pwa-src="capa-home" alt="Capa home">
+            <div class="pwa-cover-text-home">
+              <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
+              <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pwa-container-cover">
+            <img pwa-src="capa-home" alt="Capa home">
+            <div class="pwa-cover-text-home">
+              <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
+              <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicadores do slide -->
+      <div id="home-slide-pagination" class="swiper-pagination"></div>
+    </div>
+
+    <div class="pwa-search">
+      <div class="pwa-search-container">
+        <ul class="pwa-list">
+          <li class="pwa-li pwa-li-active">
+            <h5 class="pwa-li-title">Equipo Médico</h5>
+          </li>
+        </ul>
+
+        <div class="pwa-group-search-container">
+          <div class="pwa-bar-search-group-input">
+            <img class="pwa-icon-lupa-search" pwa-src="icon-lupa" alt="icone de lupa - pesquisar">
+            <input class="pwa-input-with-icon-search" id="btn-modal-Search" onkeyup="searchList()" type="text"
+              placeholder="O que você precisa?">
+          </div>
+          <input class="pwa-btn-search-navy-blue" type="submit" value="Buscar">
+        </div>
+
+        <!--Inicio Modal  de Pesquisa simples-->
+        <div class="pwa-drop-search-content" id="modal-content-search">
+
+          <div class="pwa-header-search">
+            <p>Marcas</p><span>0</span>
+          </div>
+          <ul id="searchBrandList">
+            <p class="pwa-searchs-not-results">Nenhuma marca encontrada</p>
+          </ul>
+          <div class="pwa-header-search">
+            <p>Produtos</p><span id="marca-results">6</span>
+          </div>
+
+          <ul id="searchProductList">
+            <li class="pwa-searchs-results">
+              <a pwa-to-search="/">
+                <p class="pwa-title-search">Autoclave Amora em Inox 4 litros</p>
+                <p class="pwa-brand-search">CRISTÓFOLI</p>
+              </a>
+            </li>
+
+            <li class="pwa-searchs-results">
+              <a pwa-to-search="/">
+                <p class="pwa-title-search">Mini-Incubadora Biológica para Autoclaves a Vapor
+                </p>
+                <p class="pwa-brand-search">CRISTÓFOLI</p>
+              </a>
+            </li>
+
+            <li class="pwa-searchs-results">
+              <a pwa-to-search="/">
+                <p class="pwa-title-search">Autoclave Horizontal de Inox 12 Litros</p>
+                <p class="pwa-brand-search">CRISTÓFOLI</p>
+              </a>
+            </li>
+
+            <li class="pwa-searchs-results">
+              <a pwa-to-search="/">
+                <p class="pwa-title-search">Autoclave Horizontal de Inox Quadra 54 litros</p>
+                <p class="pwa-brand-search">CRISTÓFOLI</p>
+              </a>
+            </li>
+          </ul>
+          <button class="pwa-btn-searchs" type="button">
+            Ver tudo
+          </button>
+        </div>
+        <span class="pwa-modal-search-fade" id="modal-search-fade"></span>
+
+        <a class="pwa-search-adv" onclick="openModalAdvancedSearch()">
+          BUSCA AVANÇADA<img pwa-src="icon-filtro" alt="icone flitro">
+        </a>
+      </div>
+    </div>
+
+    <!--Modal de busca avançada-->
+    <div class="pwa-modal-advanced-search-wrapper">
+      <div class="pwa-modal-advanced-search-container">
+        <span id="close-modal-search">
+          <button id="modal-search-button" class="pwa-button-action-modal close" onclick="closeModalAdvancedSearch()">
+            <span></span>
+          </button>
+        </span>
+        <form>
+          <div class="pwa-modal-advanced-search-contant">
+            <h6 class="pwa-sub-title-modal">Busca avançada</h6>
+
+            <div class="pwa-group-option">
+              <div class="option selected">
+                <label for="hospitalar">Equipo Hospitalar</label>
+                <input checked type="radio" id='hospitalar' name="type-equipo" value="equipo-hospitalar">
+              </div>
+              <div class="option">
+                <label for="odontologico">Equipo Odontológico</label>
+                <input type="radio" id='odontologico' name='type-equipo' value="equipo-odontologico">
+              </div>
+
+            </div>
+            <!-- Palavras chaves -->
+            <section class="pwa-modal-search-for-key-words">
+              <h6 class="pwa-sub-title-modal section">Palavras-chave</h6>
+
+              <div class="pwa-key-words-seach-input">
+                <input type="text" name="key-words" id="input-key-words">
+                <button class="pwa-button-action">Adicionar</button>
+              </div>
+              <!-- Tags contento as plavras chave -->
+              <ul class="pwa-group-tag-name">
+                <li class="tag-name-key">
+                  <span>autoclave</span><button class="close">x</button>
+                </li>
+                <li class="tag-name-key">
+                  <span>12 litros </span><button class="close">x</button>
+                </li>
+                <li class="tag-name-key">
+                  <span>bivolt </span><button class="close">x</button>
+                </li>
+                <li class="tag-name-key">
+                  <span>bivolt </span><button class="close">x</button>
+                </li>
+                <li class="tag-name-key">
+                  <span>bivolt </span><button class="close">x</button>
+                </li>
+                <li class="tag-name-key">
+                  <span>bivolt </span><button class="close">x</button>
+                </li>
+              </ul>
+
+            </section>
+
+            <!-- Busca pela marca do produto-->
+
+            <section class="pwa-modal-search-for-marca">
+              <h6 class="pwa-sub-title-modal section">Marca</h6>
+
+              <div class="pwa-input-with-icon">
+                <input type="text">
+                <button><span></span></button>
+              </div>
+
+              <div class="pwa-card-group-marca swiper-container" id='card-group-marca-modal-search-header'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-marca select">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-marca swiper-slide">
+                      <img pwa-src="cristofoli" alt="cristofoli">
+                      <span>Cristófoli</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </section>
+
+            <!-- Condição Produto -->
+            <section class="pwa-modal-search-for-condition-product">
+
+
+              <h6 class="pwa-sub-title-modal section">Condição</h6>
+
+              <div class="pwa-group-input">
+                <div class="input-checkbox-modal">
+                  <div class="box">
+                    <input class="radio-input" type="radio" name="condicao" id="novo">
+                    <span class="check radio"></span>
+                    <label for="novo">Novo</label>
+                  </div>
+
+                  <div class="box">
+                    <input type="radio" name="condicao" id="seminovo">
+                    <span class="check radio"></span>
+                    <label for="seminovo">Seminovo</label>
+                  </div>
+
+                </div>
+                <div class="input-checkbox-modal">
+                  <div class="box">
+                    <input type="checkbox" name="condicao" id="usado">
+                    <spna class="check"></spna>
+                    <label for="usado" id='label-usado'>Usado
+                      <span>Produto com maid de 5 anos de uso</span>
+                    </label>
+                  </div>
+                  <div class="box">
+                    <input type="checkbox" name="condicao" id="recondicionado">
+                    <span class="check"></span>
+                    <label for="recondicionado">
+                      Recondicionado
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Cor Produto -->
+            <section class="pwa-modal-search-for-color input-select-modal">
+              <h6 class="pwa-sub-title-modal section">Cor</h6>
+
+              <select name="cor" id="cor">
+                <option value="branco">Branco</option>
+                <option value="preto">Preto</option>
+                <option value="verde">Verde</option>
+              </select>
+            </section>
+
+            <!-- Ano de fabricação -->
+            <section class="pwa-modal-search-for-year input-select-modal">
+              <h6 class="pwa-sub-title-modal section">Ano de frabricação</h6>
+
+              <select name="year-fabrication" id="year-fabrication">
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+              </select>
+            </section>
+
+            <!-- Modalidade -->
+            <section class="pwa-modal-search-modality input-checkbox-modal">
+              <h6 class="pwa-sub-title-modal section">Modalidade</h6>
+
+              <div class="input-checkbox-contant">
+                <div class="box">
+                  <input type="checkbox" name="modalidade" id="modality-destaque" value='destaque'>
+                  <span class="check"></span>
+                  <label for="modality-destaque">Destaque</label>
+                </div>
+                <div class="box">
+                  <input type="checkbox" name="modalidade" id='modality-superdestaque' value='superdestaque'>
+                  <span class="check"></span>
+                  <label for="modality-superdestaque">SuperDestaque</label>
+                </div>
+              </div>
+
+            </section>
+
+            <!-- Certificado -->
+            <section class="pwa-modal-search-certificate input-checkbox-modal">
+              <h6 class="pwa-sub-title-modal section">Certificado</h6>
+
+              <div class="input-checkbox-contant">
+                <div class="box">
+                  <input type="checkbox" name="certificate" id="certificate-none" value='destaque'>
+                  <span class="check"></span>
+                  <label for="certificate-none">Nenhum</label>
+                </div>
+
+                <div class="box">
+                  <input type="checkbox" name="certificate" id='certificate-true' value='superdestaque'>
+                  <span class="check"></span>
+                  <label for="certificate-true">Vistoriado</label>
+                </div>
+              </div>
+            </section>
+            <!-- Localização -->
+            <section class="pwa-modal-search-location">
+              <h6 class="pwa-sub-title-modal section">Localixação</h6>
+
+              <div class="pwa-input-with-icon location">
+                <input type="text">
+                <button><span></span></button>
+              </div>
+
+              <ul class="pwa-group-tag-name">
+                <li class="tag-name-key">
+                  <span>Maringá/PR</span><button class="close">x</button>
+                </li>
+
+              </ul>
+            </section>
+
+            <!-- Preço -->
+            <section class="pwa-modal-search-cost">
+              <h6 class="pwa-sub-title-modal section">Preço</h6>
+
+              <div class="input-range-group">
+                <div class="pwa-input-value">
+                  <label for="to">De</label>
+                  <input type="number" name="to" id="to-value">
+                </div>
+
+                <div class="pwa-input-value">
+                  <label for="for">Até</label>
+                  <input type="number" name="for" id="for-value">
+                </div>
+              </div>
+            </section>
+
+            <button id='button-advanced-search' type="submit">
+              <strong>filtrar agrora</strong>
+              <span>26 <span>produtos encontrados</span></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- categorias  -->
+  <section class="container categorias">
+    <h4>Categorias</h4>
+
+    <div id="home-categorias-slide" class="swiper-container categorias-card" pwa-hook="home-categorias-slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card bg-card-1">
+              <div class="card-body">
+                Equipamento Hospitalar
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card bg-card-2">
+              <div class="card-body">
+                Consultório
+                Odontológico
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card bg-card-1">
+              <div class="card-body">
+                Equipamento Hospitalar
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card bg-card-2">
+              <div class="card-body">
+                Consultório
+                Odontológico
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="container">
+    <div class="banner relative">
+      <img pwa-src="banner-01" alt="" class="w100" id="monte-consultorio-banner">
+      
+      <div id="monte-seu-consultorio-texto">
+        <h5>Monte seu Consultório</h5>
+        <a pwa-to-page="/" class="btn-branco">
+          Confira!
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="container" id="produtos-mais-buscados">
+    <h4>Produtos mais buscados</h4>
+
+    <div class="swiper-container swiper-produtos-mais-buscados ismobile">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card">
+              <img pwa-src="icon-cardiaco" alt="">
+              <p>Desfibrilador Cardíaco</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card">
+              <img pwa-src="icon-vento" alt="">
+              <p>Compressor de ar</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card">
+              <img pwa-src="icon-vento" alt="">
+              <p>Desfibrilador Cardíaco</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a pwa-to-page="/">
+            <div class="card">
+              <img pwa-src="icon-cardiaco" alt="">
+              <p>Compressor de ar</p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swiper-produtos-mais-buscados isdesktop">
+      <a pwa-to-page="/">
+        <div class="card">
+          <img pwa-src="icon-cardiaco" alt="">
+          <p>Desfibrilador Cardíaco</p>
+        </div>
+      </a>
+
+      <a pwa-to-page="/">
+        <div class="card">
+          <img pwa-src="icon-vento" alt="">
+          <p>Compressor de ar</p>
+        </div>
+      </a>
+        
+      <a pwa-to-page="/">
+        <div class="card">
+          <img pwa-src="icon-vento" alt="">
+          <p>Desfibrilador Cardíaco</p>
+        </div>
+      </a>
+
+      <a pwa-to-page="/">
+        <div class="card">
+          <img pwa-src="icon-cardiaco" alt="">
+          <p>Compressor de ar</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-gradiente-white">
+    <section class="container ultimos-super-Destaques">
+      <h4>Últimos SuperDestaques</h4>
+      <div class="produtos-card swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="pwa-card-product">
+              <div class="pwa-card-header">
+                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
+
+                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
+                  xmlns="http://www.w3.org/2000">
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
+                    fill="#D0EFF6" />
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
+                    fill="#72CFE3" />
+                </svg>
+
+              </div>
+
+              <div class="pwa-inner-card">
+                <div class="pwa-card-product-img-container">
+                  <img class="pwa-card-product-img" pwa-src="destaques-card">
+                </div>
+
+                <div class="pwa-card-product-infos">
+                  <figure class="pwa-card-product-tag-green ">
+                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
+                    <figcaption>EQUIPO VISTORIADO</figcaption>
+                  </figure>
+
+                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60 live 4D
+                  </h6>
+
+                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
+                  <div class="pwa-card-text-with-btn-blue">
+                    <p class="pwa-card-installment">
+                      Em até 6x de R$ X.XXX,XX
+                      sem juros
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="pwa-card-product-footer">
+                <p class="pwa-card-product-city">MARINGÁ/PR</p>
+                <p class="pwa-card-product-status">SEMINOVO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pwa-card-product">
+              <div class="pwa-card-header">
+                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
+
+                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
+                  xmlns="http://www.w3.org/2000">
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
+                    fill="#D0EFF6" />
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
+                    fill="#72CFE3" />
+                </svg>
+
+              </div>
+
+              <div class="pwa-inner-card">
+                <div class="pwa-card-product-img-container">
+                  <img class="pwa-card-product-img" pwa-src="destaques-card">
+                </div>
+
+                <div class="pwa-card-product-infos">
+                  <figure class="pwa-card-product-tag-green ">
+                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
+                    <figcaption>EQUIPO VISTORIADO</figcaption>
+                  </figure>
+
+                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60 live 4D
+                  </h6>
+
+                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
+                  <div class="pwa-card-text-with-btn-blue">
+                    <p class="pwa-card-installment">
+                      Em até 6x de R$ X.XXX,XX
+                      sem juros
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="pwa-card-product-footer">
+                <p class="pwa-card-product-city">MARINGÁ/PR</p>
+                <p class="pwa-card-product-status">SEMINOVO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pwa-card-product">
+              <div class="pwa-card-header">
+                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
+
+                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
+                  xmlns="http://www.w3.org/2000">
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
+                    fill="#D0EFF6" />
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
+                    fill="#72CFE3" />
+                </svg>
+
+              </div>
+
+              <div class="pwa-inner-card">
+                <div class="pwa-card-product-img-container">
+                  <img class="pwa-card-product-img" pwa-src="destaques-card">
+                </div>
+
+                <div class="pwa-card-product-infos">
+                  <figure class="pwa-card-product-tag-green ">
+                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
+                    <figcaption>EQUIPO VISTORIADO</figcaption>
+                  </figure>
+
+                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60
+                    live 4D
+                  </h6>
+
+                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
+                  <div class="pwa-card-text-with-btn-blue">
+                    <p class="pwa-card-installment">
+                      Em até 6x de R$ X.XXX,XX
+                      sem juros
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="pwa-card-product-footer">
+                <p class="pwa-card-product-city">MARINGÁ/PR</p>
+                <p class="pwa-card-product-status">SEMINOVO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pwa-card-product">
+              <div class="pwa-card-header">
+                <p class="pwa-card-tag-blue">SUPER DESTAQUE</p>
+
+                <svg class="pwa-save-flag" width="23" height="27" viewBox="0 0 23 27" fill="#43BFDA"
+                  xmlns="http://www.w3.org/2000">
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27Z"
+                    fill="#D0EFF6" />
+                  <path
+                    d="M2.65977 27C2.26327 27 1.88301 26.8425 1.60264 26.5621C1.32227 26.2818 1.16476 25.9015 1.16476 25.505L0.940506 3.58804C0.922504 3.14304 0.992656 2.69887 1.14693 2.28108C1.3012 1.86329 1.53655 1.48012 1.83944 1.15362C2.14233 0.827107 2.50678 0.563702 2.91183 0.37855C3.31688 0.193398 3.75454 0.0901519 4.19964 0.0747508L18.5368 0C18.9825 0.00778429 19.4223 0.103294 19.8311 0.281074C20.2399 0.458855 20.6096 0.715422 20.9192 1.03612C21.2288 1.35682 21.4722 1.73537 21.6354 2.15015C21.7987 2.56493 21.8787 3.0078 21.8707 3.45349L22.08 25.3704C22.0826 25.6324 22.0163 25.8905 21.8877 26.1187C21.7591 26.347 21.5728 26.5375 21.3475 26.6711C21.1202 26.8023 20.8624 26.8714 20.6 26.8714C20.3375 26.8714 20.0797 26.8023 19.8525 26.6711L11.3309 21.9468L3.42223 26.7757C3.18804 26.9066 2.9275 26.9832 2.65977 27ZM11.2711 18.7027C11.5308 18.7031 11.7869 18.7646 12.0186 18.8821L19.0601 22.7841L18.8807 3.42359C18.8807 3.12458 18.6864 2.91528 18.5667 2.93023L4.21459 3.06478C4.09499 3.06478 3.93054 3.25914 3.93054 3.55814L4.10994 22.8439L10.5086 18.912C10.741 18.7789 11.0033 18.7069 11.2711 18.7027Z"
+                    fill="#72CFE3" />
+                </svg>
+
+              </div>
+
+              <div class="pwa-inner-card">
+                <div class="pwa-card-product-img-container">
+                  <img class="pwa-card-product-img" pwa-src="destaques-card">
+                </div>
+
+                <div class="pwa-card-product-infos">
+                  <figure class="pwa-card-product-tag-green ">
+                    <img pwa-src="icon-equipo-verificado" alt="Icone Equipo Verificad">
+                    <figcaption>EQUIPO VISTORIADO</figcaption>
+                  </figure>
+
+                  <h6 class="pwa-title-card-product">Aparelho de Ultrassom Samsung H60
+                    live 4D
+                  </h6>
+
+                  <h5 class="pwa-card-price-blue-small">R$83.740,00</h5>
+                  <div class="pwa-card-text-with-btn-blue">
+                    <p class="pwa-card-installment">
+                      Em até 6x de R$ X.XXX,XX
+                      sem juros
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="pwa-card-product-footer">
+                <p class="pwa-card-product-city">MARINGÁ/PR</p>
+                <p class="pwa-card-product-status">SEMINOVO</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
+
+      </div>
+      </div>
+    </section>
+
+    <section class="container" id="as-grandes-marcas">
+      <div class="banner2">
+        <h5>Equipamentos para Implantes</h5>
+        <a pwa-to-page="/">Confira</a>
+      </div>
+      <h4 class="pwa-titles-H4-Blue">As grandes marcas estão aqui</h4>
+      <div class="swiper-container grandes-marcas">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon1" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon2" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon1" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon2" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon1" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon2" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon1" alt="">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a pwa-to-page="/">
+              <img pwa-src="marcas-icon2" alt="">
+            </a>
+          </div>
+        </div>
+
+        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
+
+      </div>
+    </section>
+
+    <!-- swipper -->
+    <section class="pwa-depoiment-container" id="depoimentos">
+      <h4>Depoimentos</h4>
+      <!-- Inicio slide depoimentos -->
+      <div class="swiper-container depoimentos">
+        <div class="swiper-wrapper depoimento">
+          <div class="swiper-slide">
+            <div class="pwa-depoimento-content">
+              <img pwa-src="depoimento-img" alt="Imagem depoimento"><br>
+              <q>“Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim.”
+              </q>
+              <p>DR. ALOÍSIO PEREIRA COSTA</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pwa-depoimento-content">
+              <img pwa-src="depoimento-img" alt="Imagem depoimento"><br>
+              <q>“Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim.”
+              </q>
+              <p>DR. ALOÍSIO PEREIRA COSTA</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pwa-depoimento-content">
+              <img pwa-src="depoimento-img" alt="Imagem depoimento"><br>
+              <q>“Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim.”
+              </q>
+              <p>DR. ALOÍSIO PEREIRA COSTA</p>
+            </div>
+          </div>
+        </div>
+
+
+        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
+
+        <!-- botões indicadores de paginação -->
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </section>
+  </section>
+</main>
