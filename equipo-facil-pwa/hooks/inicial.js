@@ -22,7 +22,7 @@
   },
   "--super-destaques-slide": component => {
     component.$slide('#super-destaques-slide', {
-      slidesPerView: window.innerWidth < 1024 ? 3 : 'auto',
+      slidesPerView: window.innerWidth < 1024 ? 1 : '3',
       spaceBetween: window.innerWidth < 1024 ? 0 : 20,
       grabCursor: true,
       loop: true,
@@ -30,6 +30,19 @@
       navigation: {
         nextEl: '#super-destaques-slide-next',
         prevEl: '#super-destaques-slide-prev'
+      }
+    });
+  },
+  "--home-marcas-slide": component => {
+    component.$slide('#home-marcas-slide', {
+      slidesPerView: window.innerWidth < 1024 ? 1 : '6',
+      spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+      grabCursor: true,
+      loop: true,
+      loopedSlides: 4,
+      navigation: {
+        nextEl: '#home-marcas-slide-next',
+        prevEl: '#home-marcas-slide-prev'
       }
     });
   }

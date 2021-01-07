@@ -304,9 +304,9 @@ a{
     letter-spacing: 0em;
     text-align: center;
 }
-.pwa-container, .pwa-container-text {
+.container, .pwa-container-text {
     width: 100%;
-    max-width: 800px;
+    max-width: 1110px;
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -411,7 +411,7 @@ a{
     .pwa-table-cel-blue {
         text-align: center;
     }
-    .pwa-container {
+    .container {
         text-align: right;
     }
     .pwa-icon-whats-navy-blue{

@@ -198,17 +198,17 @@
 }
 
 #as-grandes-marcas h4 {
-	height: 64px;
-	width: 232px;
 	left: 10px;
-	top: 2126px;
-	font-family: Cambay;
-	font-size: 27px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 32px;
-	letter-spacing: 0em;
-	text-align: left;
+    top: 2126px;
+    font-family: Cambay;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 64px;
 }
 
 #as-grandes-marcas .swiper-container {
@@ -1345,3 +1345,57 @@ footer {
 	}
   
 }  
+
+#super-destaques-slide {
+    padding: 5px 0;
+}
+
+#equipamentos-para-implantes-banner {
+    max-height: 280px;
+}
+
+#equipamentos-para-implantes-texto {
+    position: absolute;
+    top: 51px;
+    left: 64px;
+}
+
+.btn-esmeralda-dark {
+    height: 50px;
+    width: 240px;
+    display: flex;
+    border-radius: 5px;
+    background: #0E2F3E;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-esmeralda-dark:hover {
+    transition: all .1s ease;
+    background: #14AFD1;
+}
+
+#equipamentos-para-implantes-texto h5 {
+    font-size: 42px;
+    line-height: 60px;
+    width: 300px;
+    display: block;
+    height: auto;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+}
+
+#equipamentos-para-implantes-texto a {
+    margin: unset;
+}
+
+#home-marcas-slide .swiper-slide a {
+    width: 180px !important;
+}

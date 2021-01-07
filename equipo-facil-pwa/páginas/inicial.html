@@ -518,50 +518,67 @@
     </div>
   </section>
 
+  
   <section class="bg-gradiente-white">
+    
+    <!-- slide dos produtos -->
     <section class="container ultimos-super-Destaques">
       <h4>Últimos SuperDestaques</h4>
       
       <pwa-product-list name="ofertas"  size="12" id="super-destaques-slide" class="produtos-card swiper-container" pwa-hook="super-destaques-slide">
         <div class="swiper-wrapper">
-          <div pwa-each-product class="swiper-slide se-card-slide">
+          <div pwa-each-product class="swiper-slide ef-card-slide">
             <pwa-product-card>
           </div>
         </div>
 
         <img id="super-destaques-slide-prox" class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
         <img id="super-destaques-slide-prev" class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
-      </div>
-    </pwa-product-list>
+      </pwa-product-list>
+    </section>
 
     <section class="container" id="as-grandes-marcas">
-      <div class="banner2">
-        <h5>Equipamentos para Implantes</h5>
-        <a pwa-to-page="/">Confira</a>
+      <div class="banner relative">
+        <img pwa-src="banner-02" alt="" class="w100" id="equipamentos-para-implantes-banner">
+
+        <div id="equipamentos-para-implantes-texto">
+          <h5>Equipamentos para Implantes</h5>
+          <a pwa-to-page="/" class="btn-esmeralda-dark">
+            Confira
+          </a>
+        </div>
       </div>
-      <h4 class="pwa-titles-H4-Blue">As grandes marcas estão aqui</h4>
-      <div class="swiper-container grandes-marcas">
+
+      <h4 class="pwa-titles-H4-Blue">
+        As grandes marcas estão aqui
+      </h4>
+
+      <div id="home-marcas-slide" class="swiper-container grandes-marcas" pwa-hook="home-marcas-slide">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <a pwa-to-page="/">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
+
           <div class="swiper-slide">
             <a pwa-to-page="/">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
+
           <div class="swiper-slide">
             <a pwa-to-page="/">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
+
           <div class="swiper-slide">
             <a pwa-to-page="/">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
+
           <div class="swiper-slide">
             <a pwa-to-page="/">
               <img pwa-src="marcas-icon1" alt="">
@@ -584,9 +601,8 @@
           </div>
         </div>
 
-        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
-        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
-
+        <img id="home-marcas-slide-next" class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img id="home-marcas-slide-prev" class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
       </div>
     </section>
 
