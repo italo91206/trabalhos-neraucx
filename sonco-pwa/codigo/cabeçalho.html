@@ -1,5 +1,7 @@
-<header pwa-class="{ 'sc-header-home': $route.name === 'home' ? true : false , 'sc-header-not-home': $route.name != 'home' ? true : false }" pwa-hook="load-header">
-  
+<header
+  pwa-class="{ 'sc-header-home': $route.name === 'home' ? true : false , 'sc-header-not-home': $route.name != 'home' ? true : false }"
+  pwa-hook="load-header">
+
   <h1 id="sc-title-header-pages" style="display: none"></h1>
 
   <div id="sc-cart__darken" class="sc-cart__darken" pwa-toggle-cart></div>
@@ -75,6 +77,9 @@
 
   <!-- SECTION HEADER CONTENT MOBILE -->
   <div id="sc-header-mobile" class="sc-header__content-mobile sc-container ismobile" pwa-hook="sc-header-mobile__fixed">
+    <div class="sc-message-header">
+      <!--<a pwa-to-page="/holiday-sales" rel="nofollow"><span class="sc-message-text">Holiday Sales up to 15% off on SmartQ Products </span><span class="sc-message-timer" pwa-hook="carrega-script-timer"></span></a>-->
+    </div>
     <div class="sc-header__content-mobile-row">
       <div class="sc-header__content-mobile-icons-group">
         <div class="sc-header__content-mobile-hamburger" onclick="openMenuMobile()">
@@ -89,7 +94,7 @@
       </div>
 
       <a pwa-to-page="/" class="sc-header__content-mobile-logo" rel="noopener noreferrer">
-        <img pwa-src="logo-sonco-alt" alt="Sonco Perimeter Security">
+        <img pwa-src="logo-sonco" alt="Sonco Perimeter Security">
       </a>
 
       <!-- <div class="sc-header__content-mobile-icons-group">
@@ -106,39 +111,43 @@
         </a>
       </div> -->
 
-        <div pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
-            <span class="fas fa-calculator"></span>
-            <span pwa--if="$$secondCart.count > 0">{{ $$secondCart.count }}</span>
-            <span pwa--else style="visibility: hidden">0</span>
-        </div>
+      <div pwa-toggle-second-cart class="sc-header-calc-cart__calculator">
+        <span class="fas fa-calculator"></span>
+        <span pwa--if="$$secondCart.count > 0">{{ $$secondCart.count }}</span>
+        <span pwa--else style="visibility: hidden">0</span>
+      </div>
 
-        <div pwa-toggle-cart class="sc-header-calc-cart__cart">
-            <span class="fas fa-shopping-cart"></span>
-            <span pwa--if="$$cart.count > 0">{{ $$cart.count }}</span>
-            <span pwa--else style="visibility: hidden">0</span>
-        </div>
+      <div pwa-toggle-cart class="sc-header-calc-cart__cart">
+        <span class="fas fa-shopping-cart"></span>
+        <span pwa--if="$$cart.count > 0">{{ $$cart.count }}</span>
+        <span pwa--else style="visibility: hidden">0</span>
+      </div>
     </div>
-  
-  <pwa-search-form action="#" class="sc-search ismobile">
-        <input pwa-search-box class="sc-search__input" id="sc-search-input"
+
+    <pwa-search-form action="#" class="sc-search ismobile">
+      <input pwa-search-box class="sc-search__input" id="sc-search-input"
         placeholder="Search for products, categories.." />
-        <span class="sc-search__icon"></span>
-        <span class="fas fa-search"></span>
+      <span class="sc-search__icon"></span>
+      <span class="fas fa-search"></span>
 
-        <div pwa-has-suggest class="sc-search-nav-found-products">
-            <pwa-loop params="8">
-                <article pwa-each-suggest class="sc-search-nav-found-products-cards">
-                    <img pwa-src="suggest.image" pwa-alt="suggest.name">
+      <div pwa-has-suggest class="sc-search-nav-found-products">
+        <pwa-loop params="8">
+          <article pwa-each-suggest class="sc-search-nav-found-products-cards">
+            <img pwa-src="suggest.image" pwa-alt="suggest.name">
 
-                    <div class="sc-search-nav-found-products-cards-info">
-                        <h3>{{ suggest.name }}</h3>
-                        <!-- <span>em {{ suggest.categories_string }}</span> -->
-                        <label>{{ suggest.skus[0].sale_price | price }}</label>
-                    </div>
-                </article>
-            </pwa-loop>
-        </div>
+            <div class="sc-search-nav-found-products-cards-info">
+              <h3>{{ suggest.name }}</h3>
+              <!-- <span>em {{ suggest.categories_string }}</span> -->
+              <label>{{ suggest.skus[0].sale_price | price }}</label>
+            </div>
+          </article>
+        </pwa-loop>
+      </div>
     </pwa-search-form>
+  </div>
+
+  <div class="sc-message-header isdesktop">
+    <!--<a pwa-to-page="/holiday-sales" rel="nofollow"><p><span class="sc-message-text">Holiday Sales up to 15% off on SmartQ Products </span><span class="sc-message-timer" pwa-hook="carrega-script-timer"></span></p><a>-->
   </div>
 
   <!-- SECTION HEADER CONTENT DESKTOP -->
@@ -151,7 +160,7 @@
     <div class="sc-header-content-inner" id="sc-header-content-inner">
       <div class="sc-header-logos isdesktop">
         <a pwa-to-page="/">
-          <img pwa-src="logo-sonco-alt" alt="Sonco Perimeter Security" class="sc-header-logos--sonco">
+          <img pwa-src="logo-sonco" alt="Sonco Perimeter Security" class="sc-header-logos--sonco">
         </a>
         <img pwa-src="est-1976-alt" alt="Sonco est-1976" class="sc-header-logos--est">
       </div>
@@ -180,7 +189,7 @@
       <div class="sc-header-signin isdesktop" pwa-not-logged pwa-to-auth>
         <div class="sc-header-signin__inner">
           <span class="fas fa-user-circle"></span>
-            <strong>Sign in</strong>
+          <strong>Sign in</strong>
           <span class="fas fa-chevron-down"></span>
         </div>
       </div>
@@ -188,7 +197,7 @@
       <div class="sc-header-signin isdesktop sc-user-logged" pwa-is-logged pwa-to-page="my-account">
         <div class="sc-header-signin__inner">
           <span class="fas fa-user-circle"></span>
-            <strong>Hi, {{ $$user.firstname }}</strong>
+          <strong>Hi, {{ $$user.firstname }}</strong>
         </div>
       </div>
 
@@ -227,13 +236,14 @@
       </div>
     </header>
 
+    <!-- menu -->
     <div class="sc-desktop-nav-bar-wrap">
-      <!-- left sided menu -->
-      <ul class="sc-top-nav sc-container isdesktop" id="sc-desktop-nav-bar">
+      <ul class="sc-top-nav isdesktop sc-container" id="sc-desktop-nav-bar">
         <!-- OUR PRODUCTS -->
         <li class="sc-top-nav__item sc-top-nav__item--categories">
           <a class="sc-top-nav__link" onclick="openSubMenuMobile(this)">
-            <p class="sc-top-nav__span sc-top-nav__span--bold" id="sc-our-products">Our Products<span class="fas fa-angle-down"></span></p>
+            <p class="sc-top-nav__span sc-top-nav__span--bold" id="sc-our-products">Our Products<span
+                class="fas fa-angle-down"></span></p>
           </a>
 
           <!-- MENU CONTENT -->
@@ -246,346 +256,8 @@
             <div class="sc-menu-main">
               <ul class="sc-menu-main__list">
                 <li class="sc-menu-main__holder">
-                  <span class="sc-top-nav__span sc-top-nav__span--bold">Our Products
-                    <span class="fas fa-angle-down"></span>
-                  </span>
-                </li>
-
-                <li class="sc-menu-main__item sc-menu-main__item--fences">
-                  <div class="sc-menu-main__icon">
-                    <!-- <img class="sc-menu-main__image" pwa-src="fences_icon" alt="Fences" /> -->
-                    <a pwa-to-page="/temporary-fence">
-                      <span class="icon-sc-ico-fence-solutions-1"></span>
-                      Temporary Fence
-                      <span class="fa fa-chevron-right"></span>
-                    </a>
-                  </div>
-
-                  <!-- FENCE SOLUTIONS MENU CONTENT -->
-                  <div class="sc-menu-sub--fences">
-                    <div class="sc-menu-sub">
-                      <div class="sc-menu-sub__div" id="sub-menu-list-chainlink-panels">
-                        <strong class="sc-menu-sub__strong">
-                          <a pwa-to-page="/temporary-fence/chainlink-panels">Chainlink Panels</a>
-                        </strong>
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--offers" pwa-to-page="/temporary-fence/chainlink-panels/hot-deals">Hot
-                              Deals</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/chainlink-panels/6x10">6ft.
-                              x 10ft. Panels</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/chainlink-panels/6x12">6ft.
-                              x 12ft. Panels</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/chainlink-panels/8x10">8ft.
-                              x 10ft. Panels</a>
-                          </li>
-                          <!-- <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
-                              pwa-to-page="/temporary-fence/chainlink-panels/rack-bundles">Rack
-                              Bundles</a>
-                          </li> -->
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/chainlink-panels/rack-bundles">Rack Bundles</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
-                              pwa-to-page="/temporary-fence/chainlink-panels/truckload-bundle">Truckload
-                              Bundle
-                            </a>
-                          </li>
-                          <!-- <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
-                              pwa-to-page="/temporary-fence/chainlink-panels/heavy-duty">Heavy
-                              Duty Panels</a>
-                          </li> -->
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
-                              pwa-to-page="/temporary-fence/chainlink-panels/barrier-toppers">Jersey Barrier
-                              Toppers</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="sc-menu-sub__div" id="sub-menu-list-accessories">
-                        <strong class="sc-menu-sub__strong">
-                          <a pwa-to-page="/temporary-fence/accessories">Accessories</a>
-                        </strong>
-
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/temporary-fence/accessories/fence-brace">Fence
-                              Bracing</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/accessories/new-age-products">New
-                              Age Products</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new" pwa-to-page="/temporary-fence/accessories/fence-base">Weighted Bases</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/accessories/fence-stand">Low
-                              Profile Stands</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/accessories/fence-blocks">Fence Blocks</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="sc-menu-sub">
-                      <div class="sc-menu-sub__div" id="sub-menu-list-fence-screens">
-                        <strong class="sc-menu-sub__strong">
-                          <a pwa-to-page="/temporary-fence/fence-screen">Fence Screens</a>
-                        </strong>
-
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
-                              pwa-to-page="/temporary-fence/fence-screen/covid-19">Covid-19 Response</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
-                              pwa-to-page="/temporary-fence/fence-screen/pallet-bundles">Pallet
-                              Bundles</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/fence-screen/4ft">4ft.
-                              x 50ft. Screen</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/fence-screen/6ft">6ft.
-                              x 50ft. Screen</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/fence-screen/8ft">8ft. x
-                              50ft. Screen</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/temporary-fence/fence-screen/construction">Jobsite
-                              Safety</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping sc-menu-sub__link--new"
-                              pwa-to-page="/temporary-fence/fence-screen/wraps">Custom
-                              Wraps</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="sc-menu-sub__div" id="sub-menu-list-fence-gates">
-                        <strong class="sc-menu-sub__strong">
-                          <a pwa-to-page="/temporary-fence/gates">Fence Gates</a>
-                        </strong>
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/man-gate">Main
-                              Gate</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/panel">Panel
-                              Gate</a>
-                          </li>
-                          <!-- <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/pedestrian">Pedestrian 
-                            Gate</a>
-                          </li> -->
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/driveway">Vehicle
-                              Gate</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <figure class="sc-menu-sub">
-                        <a pwa-to-page="/temporary-fence/free-shipping" rel="nofollow">
-                          <img class="sc-menu-sub__image" pwa-src="submenu-fence-solutions-alt02" alt="Temporary Fence Free Shipping Bundles" />
-                        </a>  
-                    </figure>
-                  </div>
-                </li>
-
-                <li class="sc-menu-main__item sc-menu-main__item--signs">
-                  <div class="sc-menu-main__icon">
-                    <!-- <img class="sc-menu-main__image" pwa-src="signs_icon" alt="Signs"> -->
-                    <a pwa-to-page="/custom-signs">
-                      <span class="icon-sc-ico-custom-signs"></span>
-                      Custom Signs
-                      <span class="fa fa-chevron-right"></span>
-                    </a>
-                  </div>
-
-                  <!-- CUSTOM SIGNS MENU CONTENT -->
-                  <div class="sc-menu-sub--signs">
-                    <div class="sc-menu-sub">
-                      <div class="sc-menu-sub__div" id="sub-menu-list-barricade-covers">
-                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
-                          <a pwa-to-page="/custom-signs/barricade-covers">Barricade Covers</a>
-                        </strong>
-
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
-                              pwa-to-page="/custom-signs/barricade-covers/covid-19">Covid-19 Response</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/barricade-covers/heavy-duty-fabrics">Heavy
-                              Duty Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/barricade-covers/best-maintenance">
-                              Best for Maintenance</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/barricade-covers/windy-applications">Windy
-                              Applications</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/barricade-covers/solid-fabrics">Solid
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/barricade-covers/mesh-fabrics">Mesh
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/barricade-covers/stretch">Stretch/Spendex
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/barricade-covers/custom-fitted">Custom Fitted</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="sc-menu-sub__div" id="sub-menu-list-outdoor-displays">
-                        <strong class="sc-menu-sub__strong">
-                          <a pwa-to-page="/custom-signs/outdoor">Outdoor Displays</a>
-                        </strong>
-
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
-                              pwa-to-page="/custom-signs/outdoor/social-distancing">Covid-19 Response</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping" pwa-to-page="/custom-signs/outdoor/feather-flags">Event
-                              Flags</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/outdoor/sandwich-boards">Sandwich Boards</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/outdoor/custom-canopy">Custom Canopy
-                              Tents</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/outdoor/event-signage">Outdoor Event
-                              Favorites</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="sc-menu-sub">
-                      <div class="sc-menu-sub__div" id="sub-menu-list-custom-screen">
-                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
-                          <a pwa-to-page="/custom-signs/fence-screen">Custom Screen</a>
-                        </strong>
-
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
-                              pwa-to-page="/custom-signs/fence-screen/covid-19">Covid-19 Response</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/fence-screen/heavy-duty-fabrics">Heavy
-                              Duty Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/fence-screen/best-maintenance">Best
-                              for Maintenance</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/fence-screen/custom-windscreen">Windy
-                              Applications</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/solid-vinyl">Solid
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/printed-mesh">Mesh
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/custom-signs/fence-screen/stretch">Stretch/Spendex
-                              Fabrics</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/poly-mesh">Poly
-                              Mesh</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="sc-menu-sub__div" id="sub-menu-list-safety-signs">
-                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
-                          <a pwa-to-page="/custom-signs/safety">Safety Signs</a>
-                        </strong>
-                        <ul class="sc-menu-sub__list">
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/stock-options">Stock
-                              Options</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/custom-safety-signs">Custom Signs</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/privacy-screen">Privacy Screen</a>
-                          </li>
-                          <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/floor-sticker">Floor
-                              Sticker</a>
-                          </li>
-                          <!-- <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/covid-19-signage">Covid-19 Signage</a>
-                          </li> -->
-                        </ul>
-                      </div>
-                    </div>
-                    <figure class="sc-menu-sub">
-                        <a pwa-to-page="/custom-signs/free-shipping" rel="nofollow">
-                              <img class="sc-menu-sub__image" pwa-src="submenu-custom-signs-alt02" alt="Custom Signage Design Services Free Shipping" />
-                        </a> 
-                    </figure>
-                  </div>
+                  <span class="sc-top-nav__span sc-top-nav__span--bold">Our Products<span
+                      class="fas fa-angle-down"></span></span>
                 </li>
 
                 <li class="sc-menu-main__item sc-menu-main__item--barricades">
@@ -602,7 +274,8 @@
                   <!-- BARRICADES MENU CONTENT -->
                   <div class="sc-menu-sub--barricades">
                     <div class="sc-menu-sub--back ismobile" onclick="closeSubMenuMobile(this)">
-                      <span class="fa fa-chevron-left"></span><a pwa-to-page="/crowd-control/steel-barricades">Barricades</a>
+                      <span class="fa fa-chevron-left"></span><a
+                        pwa-to-page="/crowd-control/steel-barricades">Barricades</a>
                     </div>
 
                     <div class="sc-menu-sub">
@@ -620,8 +293,7 @@
                               Deals</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/crowd-control/steel-barricades/heavy-duty">Heavy
+                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/steel-barricades/heavy-duty">Heavy
                               Duty Barriers</a>
                           </li>
                           <li class="sc-menu-sub__item">
@@ -643,7 +315,8 @@
                               Bundles</a>
                           </li> -->
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping" pwa-to-page="/crowd-control/steel-barricades/covers">Barricade Covers</a>
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/crowd-control/steel-barricades/covers">Barricade Covers</a>
                           </li>
                           <li class="sc-menu-sub__item">
                             <a class="sc-menu-sub__link"
@@ -691,15 +364,18 @@
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/concert-barricades/straight-sections">
-                            Straight Sections
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/crowd-control/concert-barricades/straight-sections">
+                              Straight Sections
                             </a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/concert-barricades/corner-pieces">Corner Pieces</a>
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/crowd-control/concert-barricades/corner-pieces">Corner Pieces</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/concert-barricades/snake-runners">Snake
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/crowd-control/concert-barricades/snake-runners">Snake
                               Runners</a>
                           </li>
                           <li class="sc-menu-sub__item">
@@ -717,15 +393,15 @@
                         </strong>
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/water-filled-barriers/hot-deals">Hot Deals</a>
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/crowd-control/water-filled-barriers/hot-deals">Hot Deals</a>
                           </li>
                           <li class="sc-menu-sub__item">
                             <a class="sc-menu-sub__link"
                               pwa-to-page="/crowd-control/water-filled-barriers/fence">Barriers + Panel</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/crowd-control/water-filled-barriers/36in">36in.
+                            <a class="sc-menu-sub__link" pwa-to-page="/crowd-control/water-filled-barriers/36in">36in.
                               Barriers</a>
                           </li>
                           <li class="sc-menu-sub__item">
@@ -757,9 +433,349 @@
                     </div>
 
                     <figure class="sc-menu-sub">
-                          <a pwa-to-page="/crowd-control/free-shipping" rel="nofollow">
-                              <img class="sc-menu-sub__image" pwa-src="submenu-crowd-control-alt02" alt="Crowd Control Barriers Free Shipping">
-                          </a>
+                      <a pwa-to-page="/crowd-control/free-shipping" rel="nofollow">
+                        <img class="sc-menu-sub__image" pwa-src="submenu-crowd-control-alt02"
+                          alt="Crowd Control Barriers Free Shipping">
+                      </a>
+                    </figure>
+                  </div>
+                </li>
+
+                <li class="sc-menu-main__item sc-menu-main__item--signs">
+                  <div class="sc-menu-main__icon">
+                    <!-- <img class="sc-menu-main__image" pwa-src="signs_icon" alt="Signs"> -->
+                    <a pwa-to-page="/custom-signs">
+                      <span class="icon-sc-ico-custom-signs"></span>
+                      Custom Signs
+                      <span class="fa fa-chevron-right"></span>
+                    </a>
+                  </div>
+
+                  <!-- CUSTOM SIGNS MENU CONTENT -->
+                  <div class="sc-menu-sub--signs">
+                    <div class="sc-menu-sub">
+                      <div class="sc-menu-sub__div" id="sub-menu-list-barricade-covers">
+                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
+                          <a pwa-to-page="/custom-signs/barricade-covers">Barricade Covers</a>
+                        </strong>
+
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/custom-signs/barricade-covers/covid-19">Covid-19 Response</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/barricade-covers/heavy-duty-fabrics">Heavy
+                              Duty Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/barricade-covers/best-maintenance">
+                              Best for Maintenance</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/barricade-covers/windy-applications">Windy
+                              Applications</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/barricade-covers/solid-fabrics">Solid
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/barricade-covers/mesh-fabrics">Mesh
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/barricade-covers/stretch">Stretch/Spendex
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/barricade-covers/custom-fitted">Custom Fitted</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="sc-menu-sub__div" id="sub-menu-list-outdoor-displays">
+                        <strong class="sc-menu-sub__strong">
+                          <a pwa-to-page="/custom-signs/outdoor">Outdoor Displays</a>
+                        </strong>
+
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/custom-signs/outdoor/social-distancing">Covid-19 Response</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/custom-signs/outdoor/feather-flags">Event
+                              Flags</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/outdoor/sandwich-boards">Sandwich
+                              Boards</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/outdoor/custom-canopy">Custom Canopy
+                              Tents</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/outdoor/event-signage">Outdoor Event
+                              Favorites</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="sc-menu-sub">
+                      <div class="sc-menu-sub__div" id="sub-menu-list-custom-screen">
+                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
+                          <a pwa-to-page="/custom-signs/fence-screen">Custom Screen</a>
+                        </strong>
+
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/custom-signs/fence-screen/covid-19">Covid-19 Response</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/fence-screen/heavy-duty-fabrics">Heavy
+                              Duty Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/best-maintenance">Best
+                              for Maintenance</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/fence-screen/custom-windscreen">Windy
+                              Applications</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/solid-vinyl">Solid
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/printed-mesh">Mesh
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/custom-signs/fence-screen/stretch">Stretch/Spendex
+                              Fabrics</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/fence-screen/poly-mesh">Poly
+                              Mesh</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="sc-menu-sub__div" id="sub-menu-list-safety-signs">
+                        <strong class="sc-menu-sub__strong sc-menu-sub__link--free-shipping">
+                          <a pwa-to-page="/custom-signs/safety">Safety Signs</a>
+                        </strong>
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/stock-options">Stock
+                              Options</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/custom-safety-signs">Custom
+                              Signs</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/privacy-screen">Privacy
+                              Screen</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/floor-sticker">Floor
+                              Sticker</a>
+                          </li>
+                          <!-- <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/custom-signs/safety/covid-19-signage">Covid-19 Signage</a>
+                          </li> -->
+                        </ul>
+                      </div>
+                    </div>
+                    <figure class="sc-menu-sub">
+                      <a pwa-to-page="/custom-signs/free-shipping" rel="nofollow">
+                        <img class="sc-menu-sub__image" pwa-src="submenu-custom-signs-alt02"
+                          alt="Custom Signage Design Services Free Shipping" />
+                      </a>
+                    </figure>
+                  </div>
+                </li>
+
+                <li class="sc-menu-main__item sc-menu-main__item--fences">
+                  <div class="sc-menu-main__icon">
+                    <!-- <img class="sc-menu-main__image" pwa-src="fences_icon" alt="Fences" /> -->
+                    <a pwa-to-page="/temporary-fence">
+                      <span class="icon-sc-ico-fence-solutions-1"></span>
+                      Temporary Fence
+                      <span class="fa fa-chevron-right"></span>
+                    </a>
+                  </div>
+
+                  <!-- FENCE SOLUTIONS MENU CONTENT -->
+                  <div class="sc-menu-sub--fences">
+                    <div class="sc-menu-sub">
+                      <div class="sc-menu-sub__div" id="sub-menu-list-chainlink-panels">
+                        <strong class="sc-menu-sub__strong">
+                          <a pwa-to-page="/temporary-fence/chainlink-panels">Chainlink Panels</a>
+                        </strong>
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--offers"
+                              pwa-to-page="/temporary-fence/chainlink-panels/hot-deals">Hot
+                              Deals</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/chainlink-panels/6x10">6ft.
+                              x 10ft. Panels</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/chainlink-panels/6x12">6ft.
+                              x 12ft. Panels</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/chainlink-panels/8x10">8ft.
+                              x 10ft. Panels</a>
+                          </li>
+                          <!-- <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/temporary-fence/chainlink-panels/rack-bundles">Rack
+                              Bundles</a>
+                          </li> -->
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/temporary-fence/chainlink-panels/rack-bundles">Rack Bundles</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/temporary-fence/chainlink-panels/truckload-bundle">Truckload
+                              Bundle
+                            </a>
+                          </li>
+                          <!-- <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/temporary-fence/chainlink-panels/heavy-duty">Heavy
+                              Duty Panels</a>
+                          </li> -->
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/temporary-fence/chainlink-panels/barrier-toppers">Jersey Barrier
+                              Toppers</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="sc-menu-sub__div" id="sub-menu-list-accessories">
+                        <strong class="sc-menu-sub__strong">
+                          <a pwa-to-page="/temporary-fence/accessories">Accessories</a>
+                        </strong>
+
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/temporary-fence/accessories/fence-brace">Fence
+                              Bracing</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/accessories/new-age-products">New
+                              Age Products</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/temporary-fence/accessories/fence-base">Weighted Bases</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/accessories/fence-stand">Low
+                              Profile Stands</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/accessories/fence-blocks">Fence
+                              Blocks</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="sc-menu-sub">
+                      <div class="sc-menu-sub__div" id="sub-menu-list-fence-screens">
+                        <strong class="sc-menu-sub__strong">
+                          <a pwa-to-page="/temporary-fence/fence-screen">Fence Screens</a>
+                        </strong>
+
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--new"
+                              pwa-to-page="/temporary-fence/fence-screen/covid-19">Covid-19 Response</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping"
+                              pwa-to-page="/temporary-fence/fence-screen/pallet-bundles">Pallet
+                              Bundles</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/fence-screen/4ft">4ft.
+                              x 50ft. Screen</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/fence-screen/6ft">6ft.
+                              x 50ft. Screen</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/fence-screen/8ft">8ft. x
+                              50ft. Screen</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/temporary-fence/fence-screen/construction">Jobsite
+                              Safety</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link sc-menu-sub__link--free-shipping sc-menu-sub__link--new"
+                              pwa-to-page="/temporary-fence/fence-screen/wraps">Custom
+                              Wraps</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="sc-menu-sub__div" id="sub-menu-list-fence-gates">
+                        <strong class="sc-menu-sub__strong">
+                          <a pwa-to-page="/temporary-fence/gates">Fence Gates</a>
+                        </strong>
+                        <ul class="sc-menu-sub__list">
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/man-gate">Main
+                              Gate</a>
+                          </li>
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/panel">Panel
+                              Gate</a>
+                          </li>
+                          <!-- <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/pedestrian">Pedestrian 
+                            Gate</a>
+                          </li> -->
+                          <li class="sc-menu-sub__item">
+                            <a class="sc-menu-sub__link" pwa-to-page="/temporary-fence/gates/driveway">Vehicle
+                              Gate</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <figure class="sc-menu-sub">
+                      <a pwa-to-page="/temporary-fence/free-shipping" rel="nofollow">
+                        <img class="sc-menu-sub__image" pwa-src="submenu-fence-solutions-alt02"
+                          alt="Temporary Fence Free Shipping Bundles" />
+                      </a>
                     </figure>
                   </div>
                 </li>
@@ -784,8 +800,7 @@
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/retractable-belt-barriers/hot-deals">
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/retractable-belt-barriers/hot-deals">
                               Hot Deals
                             </a>
                           </li>
@@ -796,8 +811,7 @@
                             </a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/retractable-belt-barriers/twin-line">
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/retractable-belt-barriers/twin-line">
                               Twin Line Belt Posts
                             </a>
                           </li>
@@ -815,8 +829,8 @@
                               pwa-to-page="/stanchions/retractable-belt-barriers/safety">Safety Series</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/retractable-belt-barriers/cone">Cone Pro
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/retractable-belt-barriers/cone">Cone
+                              Pro
                               Stanchion</a>
                           </li>
                         </ul>
@@ -829,18 +843,15 @@
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/custom/belts">Belt
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/custom/belts">Belt
                               Printing</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/custom/posts-wraps">Posts
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/custom/posts-wraps">Posts
                               Wraps &amp; Cassettes</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/custom/post-signage">Posts
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/custom/post-signage">Posts
                               Signage</a>
                           </li>
                         </ul>
@@ -849,8 +860,8 @@
 
                     <div class="sc-menu-sub">
                       <div class="sc-menu-sub__div" id="sub-menu-list-tradition-post-rope">
-                        <strong class="sc-menu-sub__strong"><a
-                            pwa-to-page="/stanchions/tradition">Tradition Post &amp; Rope</a></strong>
+                        <strong class="sc-menu-sub__strong"><a pwa-to-page="/stanchions/tradition">Tradition Post &amp;
+                            Rope</a></strong>
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
                             <a class="sc-menu-sub__link" pwa-to-page="/stanchions/tradition/metal">Classic
@@ -929,8 +940,7 @@
                           </li>
 
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/stanchions/wall-mounted/specialty">Specialty Wall
+                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/wall-mounted/specialty">Specialty Wall
                               Mounts</a>
                           </li>
                         </ul>
@@ -942,7 +952,8 @@
                         </strong>
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link" pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Cart</a>
+                            <a class="sc-menu-sub__link"
+                              pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Cart</a>
                           </li>
                           <li class="sc-menu-sub__item">
                             <a class="sc-menu-sub__link" pwa-to-page="/stanchions/storage-carts/cart-12-posts">Cart 12
@@ -961,9 +972,10 @@
                     </div>
 
                     <figure class="sc-menu-sub">
-                        <a pwa-to-page="/stanchions">
-                              <img class="sc-menu-sub__image" pwa-src="submenu-stanchions-alt02" alt="Stanchions Queue Solutions" />
-                        </a>  
+                      <a pwa-to-page="/stanchions">
+                        <img class="sc-menu-sub__image" pwa-src="submenu-stanchions-alt02"
+                          alt="Stanchions Queue Solutions" />
+                      </a>
                     </figure>
                   </div>
                 </li>
@@ -1011,13 +1023,11 @@
                               Traffic Cone</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/cones/rubber">Rubber Traffic
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/cones/rubber">Rubber Traffic
                               Cone</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/cones/accessories">Accessories</a>
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/cones/accessories">Accessories</a>
                           </li>
                         </ul>
                       </div>
@@ -1032,20 +1042,16 @@
                             <a class="sc-menu-sub__link">Constructions Signs</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Roll-Up Signs</a>
+                            <a class="sc-menu-sub__link no-hover">Roll-Up Signs</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Aluminum Signs</a>
+                            <a class="sc-menu-sub__link no-hover">Aluminum Signs</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Vertical Panels</a>
+                            <a class="sc-menu-sub__link no-hover">Vertical Panels</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Pavement Marking</a>
+                            <a class="sc-menu-sub__link no-hover">Pavement Marking</a>
                           </li>
                         </ul>
                       </div>
@@ -1054,21 +1060,20 @@
                     <div class="sc-menu-sub">
                       <div class="sc-menu-sub__div sc-comming-soon" id="sub-menu-list-parking-safety">
                         <strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
-                          <a class="no-hover"  >Parking Safety</a>
+                          <a class="no-hover">Parking Safety</a>
                         </strong>
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Speed
+                            <a class="sc-menu-sub__link no-hover">Speed
                               Bumps &amp; Humps</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Wheel
+                            <a class="sc-menu-sub__link no-hover">Wheel
                               Stops</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Wheel Chocks</a>
+                            <a class="sc-menu-sub__link no-hover">Wheel Chocks</a>
                           </li>
                           <li class="sc-menu-sub__item">
                             <a class="sc-menu-sub__link">Corner Guard</a>
@@ -1090,13 +1095,12 @@
                               Deals</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/barriers/plastic-jersey">Plastic Jersey
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/barriers/plastic-jersey">Plastic
+                              Jersey
                               Barriers</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/barriers/water-barricade">Water
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/barriers/water-barricade">Water
                               Barrier + Panel</a>
                           </li>
                           <li class="sc-menu-sub__item">
@@ -1105,18 +1109,15 @@
                               I, II &amp; III Barricades</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/barriers/pedestrian">Pedestrian
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/barriers/pedestrian">Pedestrian
                               Barriers</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link"
-                              pwa-to-page="/traffic-safety/barriers/fence-screen">Fence
+                            <a class="sc-menu-sub__link" pwa-to-page="/traffic-safety/barriers/fence-screen">Fence
                               Screens</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Barricade Lights</a>
+                            <a class="sc-menu-sub__link no-hover">Barricade Lights</a>
                           </li>
                         </ul>
                       </div>
@@ -1125,28 +1126,25 @@
                     <div class="sc-menu-sub">
                       <div class="sc-menu-sub__div sc-comming-soon" id="sub-menu-list-roadway-safety">
                         <strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
-                          <a class="no-hover" >Roadway Safety</a>
+                          <a class="no-hover">Roadway Safety</a>
                         </strong>
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Cable
+                            <a class="sc-menu-sub__link no-hover">Cable
                               Protector</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Channelizer Drums</a>
+                            <a class="sc-menu-sub__link no-hover">Channelizer Drums</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover"
-                              >Traffic Markers</a>
+                            <a class="sc-menu-sub__link no-hover">Traffic Markers</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Lane Separator</a>
+                            <a class="sc-menu-sub__link no-hover">Lane Separator</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Road
+                            <a class="sc-menu-sub__link no-hover">Road
                               Flares</a>
                           </li>
                         </ul>
@@ -1154,28 +1152,28 @@
 
                       <div class="sc-menu-sub__div sc-comming-soon" id="sub-menu-list-ppe-gear">
                         <strong class="sc-menu-sub__strong sc-menu-sub__link--comming-soon">
-                          <a class="no-hover" >PPE Gear</a>
+                          <a class="no-hover">PPE Gear</a>
                         </strong>
 
                         <ul class="sc-menu-sub__list">
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Gloves</a>
+                            <a class="sc-menu-sub__link no-hover">Gloves</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Safety
+                            <a class="sc-menu-sub__link no-hover">Safety
                               Vests</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Safety
+                            <a class="sc-menu-sub__link no-hover">Safety
                               Googles</a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Hi-Viz
+                            <a class="sc-menu-sub__link no-hover">Hi-Viz
                               Apparel
                             </a>
                           </li>
                           <li class="sc-menu-sub__item">
-                            <a class="sc-menu-sub__link no-hover" >Face
+                            <a class="sc-menu-sub__link no-hover">Face
                               Masks</a>
                           </li>
                           <!-- <li class="sc-menu-sub__item">
@@ -1191,101 +1189,11 @@
                     </div>
 
                     <figure class="sc-menu-sub">
-                        <a pwa-to-page="/traffic-safety/free-shipping" rel="nofollow">
-                              <img class="sc-menu-sub__image" pwa-src="submenu-traffic-safety-alt02" alt="Traffic Safety Supply Free shipping on bulk orders" />
-                        </a>  
+                      <a pwa-to-page="/traffic-safety/free-shipping" rel="nofollow">
+                        <img class="sc-menu-sub__image" pwa-src="submenu-traffic-safety-alt02"
+                          alt="Traffic Safety Supply Free shipping on bulk orders" />
+                      </a>
                     </figure>
-                  </div>
-                </li>
-
-                <li class="sc-menu-main__item sc-menu-main__item--shop-by-application">
-                  <div class="sc-menu-main__icon">
-                    <!-- <img class="sc-menu-main__image" pwa-src="signs_icon" alt="Signs"> -->
-                    <a pwa-to-page="/custom-signs">
-                      Shop by Application
-                      <svg class="svg-inline--fa fa-chevron-right fa-w-10" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <span class="fa fa-chevron-right"></span> -->
-                    </a>
-                  </div>
-
-                  <!-- default menu "shop by Application" -->
-                  <div id="sc-applications-menu" class="sc-applications-menu hide sc-flex">
-                    <!-- shop by construction -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/construction">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="construction-shopby-alt-novo" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Construction</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <!-- shop by events -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/events">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="events-shopby-alt" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Events</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <!-- shop by venues and arenas -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/venues-arenas">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="venues-shopby-alt" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Venues &amp; arenas</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <!-- shop by public sector -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/public-sector">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="public-sector-shopby-alt" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Public Sector</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <!-- shop by schools -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/schools">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="schools-shopby-alt" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Schools</p>
-                        </div>
-                      </a>
-                    </div>
-
-                    <!-- shop by hospitality -->
-                    <div class="sc-shop-by-application-block">
-                      <a pwa-to-page="/hospitality">
-                        <figure class="sc-shop-by-application-image-holder">
-                          <img pwa-src="hospitality-shopby-alt" alt="">
-                        </figure>
-
-                        <div class="sc-shop-by-application-overtext">
-                          <p>Hospitality</p>
-                        </div>
-                      </a>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -1293,8 +1201,99 @@
           </div>
         </li>
 
+        <!-- SHOP BY -->
+        <li class="sc-top-nav__item sc-top-nav__item--shopby">
+          <a href="" class="sc-top-nav__link">
+            <p class="sc-top-nav__span sc-top-nav__span--bold">
+              Shop by Application<span class="fas fa-angle-down"></span>
+            </p>
+          </a>
+
+          <div class="sc-applications-menu" id="sc-applications-menu">
+            <div class="sc-flex">
+              <!-- shop by construction -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/construction">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="construction-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Construction</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- shop by events -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/events">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="events-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Events</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- shop by venues and arenas -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/venues-arenas">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="venues-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Venues<br />&amp; arenas</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- shop by public sector -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/public-sector">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="public-sector-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Public Sector</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- shop by schools -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/schools">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="schools-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Schools</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- shop by hospitality -->
+              <div class="sc-shop-by-application-block">
+                <a pwa-to-page="/hospitality">
+                  <figure class="sc-shop-by-application-image-holder">
+                    <img pwa-src="hospitality-shopby-alt" alt="">
+                  </figure>
+
+                  <div class="sc-shop-by-application-overtext">
+                    <p>Hospitality</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
         <!-- WHY SONCO -->
-        <li class="sc-top-nav__item sc-top-nav__item--why-sonco sc-item-especifit"  pwa-hook="close-menu-items">
+        <li class="sc-top-nav__item sc-top-nav__item--why-sonco sc-item-especifit" pwa-hook="close-menu-items">
           <a href="#" class="sc-top-nav__link">
             <p class="sc-top-nav__span sc-top-nav__span--bold">Why Sonco<span class="fas fa-angle-down"></span></p>
           </a>
@@ -1325,9 +1324,11 @@
               <li><a pwa-to-page="/customer-support-shipping-and-delivery#check-your-order-status-online"><span
                     class="fa fa-chevron-right"></span>Track your order</a></li>
               <li><a pwa-to-page="/customer-support"><span class="fa fa-chevron-right"></span>Customer Service</a></li>
-              <li><a pwa-to-page="/customer-support-returns-and-exchanges"><span class="fa fa-chevron-right"></span>Return
+              <li><a pwa-to-page="/customer-support-returns-and-exchanges"><span
+                    class="fa fa-chevron-right"></span>Return
                   Policy</a></li>
-              <li><a pwa-to-page="/customer-support-shipping-and-delivery#free-shipping"><span class="fa fa-chevron-right"></span>Free Shipping Policy</a></li>
+              <li><a pwa-to-page="/customer-support-shipping-and-delivery#free-shipping"><span
+                    class="fa fa-chevron-right"></span>Free Shipping Policy</a></li>
               <li><a pwa-to-page="/contact"><span class="fa fa-chevron-right"></span>Feedback Center</a></li>
               <li><a pwa-to-page="/customer-support"><span class="fa fa-chevron-right"></span>All help topics</a></li>
             </ul>
@@ -1342,7 +1343,8 @@
 
           <div id="sc-resources-menu" class="sc-items-menu-nav">
             <ul class="sc-sonco-header-list">
-              <li><a href="https://www.safetysticklers.com/" rel="noopener noreferrer" target="_blank"><span class="fa fa-chevron-right"></span>Blog</a>
+              <li><a href="https://www.safetysticklers.com/" rel="noopener noreferrer" target="_blank"><span
+                    class="fa fa-chevron-right"></span>Blog</a>
               </li>
               <li><a pwa-to-page="/customers"><span class="fa fa-chevron-right"></span>Customers</a></li>
               <li><a pwa-to-page="/job-site-safety"><span class="fa fa-chevron-right"></span>Job Site Safety</a></li>
@@ -1363,13 +1365,15 @@
               <li><a pwa-to-page="/stores"><span class="fa fa-chevron-right"></span>Social Distance</a></li>
             </ul>
           </div>
-        </li> 
+        </li>
       </ul>
 
       <!-- right sided menu -->
       <ul class="sc-desktop-nav-bar-right isdesktop" pwa-hook="new-nav">
+        <!-- request a quote -->
         <li><a href="#">Request a Quote</a></li>
         
+        <!-- recently viewed -->
         <li>
           <a href="#">Recently Viewed</a>
           <div class="submenu-wrap">
@@ -1391,6 +1395,7 @@
 
                 <img pwa-src="right-menu-workmen" alt="" class="sc-working-man">
               </div>
+              
               <div class="submenu-content col-2">
 
                 <div class="submenu-slider-wrap">
@@ -1468,6 +1473,7 @@
           </div>
         </li>
 
+        <!-- saved items -->
         <li>
           <a href="#">Saved Items</a>
           <div class="submenu-wrap">
@@ -1492,6 +1498,7 @@
           </div>
         </li>
         
+        <!-- download our app -->
         <li>
           <a href="#" class="featured">Download our APP</a>
           <div class="submenu-wrap">
@@ -1522,6 +1529,7 @@
         </li>
       </ul>
     </div>
+    <!-- end menu -->
 
     <!-- main menu -->
     <ul class="sc-top-nav ismobile firstmenu" id="sc-mobile-menu">
@@ -1535,27 +1543,27 @@
 
     <!-- Category -->
     <ul class="sc-top-nav ismobile firstmenu sc-submenu sc-submenu-closed" id="sc-submenu-three">
-        <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
-        <li class="sc-top-nav__subitem">
-            <a pwa-to-page="/crowd-control">Crowd Control</a>
-            <span class="fas fa-chevron-right"></span>
-        </li>
-        <li class="sc-top-nav__subitem">
-            <a pwa-to-page="/custom-signs">Custom Signs</a>
-            <span class="fas fa-chevron-right"></span>
-        </li>
-        <li class="sc-top-nav__subitem">
-            <a pwa-to-page="/temporary-fence">Temporary Fence</a>
-            <span class="fas fa-chevron-right"></span>
-        </li>
-        <li class="sc-top-nav__subitem">
-            <a pwa-to-page="/stanchions">Stanchions &amp; Posts</a>
-            <span class="fas fa-chevron-right"></span>
-        </li>
-        <li class="sc-top-nav__subitem">
-            <a pwa-to-page="/traffic-safety">Traffic Safety</a>
-            <span class="fas fa-chevron-right"></span>
-        </li>
+      <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/crowd-control">Crowd Control</a>
+        <span class="fas fa-chevron-right"></span>
+      </li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/custom-signs">Custom Signs</a>
+        <span class="fas fa-chevron-right"></span>
+      </li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/temporary-fence">Temporary Fence</a>
+        <span class="fas fa-chevron-right"></span>
+      </li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions">Stanchions &amp; Posts</a>
+        <span class="fas fa-chevron-right"></span>
+      </li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety">Traffic Safety</a>
+        <span class="fas fa-chevron-right"></span>
+      </li>
     </ul>
 
     <!-- Applications -->
@@ -1572,9 +1580,13 @@
     <!-- Why sonco -->
     <ul class="sc-top-nav ismobile sc-submenu sc-submenu-closed">
       <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-benefits-and-guarantees#safe-shopping-guarantee">Safe Shopping Guarantee</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-benefits-and-guarantees#price-match">Price Match</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-benefits-and-guarantees#the-sonco-difference">The Sonco Difference</a></li>
+      <li class="sc-top-nav__subitem"><a
+          pwa-to-page="/customer-support-benefits-and-guarantees#safe-shopping-guarantee">Safe Shopping Guarantee</a>
+      </li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-benefits-and-guarantees#price-match">Price
+          Match</a></li>
+      <li class="sc-top-nav__subitem"><a
+          pwa-to-page="/customer-support-benefits-and-guarantees#the-sonco-difference">The Sonco Difference</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/design-services">Design Services</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/buy-now-pay-later">Credit Program</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/technology">Our Tech Platform</a></li>
@@ -1583,7 +1595,8 @@
     <!-- Support -->
     <ul class="sc-top-nav ismobile sc-submenu sc-submenu-closed">
       <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-shipping-and-delivery#check-your-order-status-online">Track your order</a></li>
+      <li class="sc-top-nav__subitem"><a
+          pwa-to-page="/customer-support-shipping-and-delivery#check-your-order-status-online">Track your order</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support">Customer Service</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/customer-support-returns-and-exchanges">Return Policy</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="">Free Shipping Policy</a></li>
@@ -1594,7 +1607,8 @@
     <!-- Resources -->
     <ul class="sc-top-nav ismobile sc-submenu sc-submenu-closed">
       <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
-      <li class="sc-top-nav__subitem"><a href="https://www.safetysticklers.com/" rel="noopener noreferrer" target="_blank">Blog</a></li>
+      <li class="sc-top-nav__subitem"><a href="https://www.safetysticklers.com/" rel="noopener noreferrer"
+          target="_blank">Blog</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/customers">Customers</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/job-site-safety">Job Site Safety</a></li>
     </ul>
@@ -1610,43 +1624,62 @@
     <!-- THREE NIVEL MENU - CROWD CONTROL -->
     <ul class="sc-submenu-two-list sc-submenu-closed">
       <li class="sc-top-nav__subitem sc-top-nav__getback"><span class="fas fas fa-chevron-left"></span>Return</li>
-      
+
       <!-- OPTIONS STEEL BARRICADES -->
       <li class="sc-top-nav__subitem sc-top-nav__subitem-separator"><a>Steel Barricades</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/covid-19">Covid-19 Response</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/covid-19">Covid-19 Response</a>
+      </li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/hot-deals">Hot Deals</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/heavy-duty">Heavy Duty Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/lightweight-barriers">Lightweight Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/heavy-duty">Heavy Duty
+          Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/lightweight-barriers">Lightweight
+          Barriers</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/cart">Cart Bundles</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/rack-bundles">Rack Bundles</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/rack-bundles">Rack Bundles</a>
+      </li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/covers">Barricade Covers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/powder-coated">Powder-Coated</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/powder-coated">Powder-Coated</a>
+      </li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/steel-barricades/accessories">Accessories</a></li>
 
       <!-- OPTIONS PLASTIC BARRICADES -->
       <li class="sc-top-nav__subitem sc-top-nav__subitem-separator"><a>Plastic Barricades</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/event-fencing">Vinyl Event Fences</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/pedestrian-barricade">ADA Pedestrian Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/safety-barricade">Safety Barricades</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/expandable">Expandable Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/event-fencing">Vinyl Event
+          Fences</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/pedestrian-barricade">ADA
+          Pedestrian Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/safety-barricade">Safety
+          Barricades</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/plastic-barriers/expandable">Expandable
+          Barriers</a></li>
 
       <!-- OPTIONS STAGE BARRIERS -->
       <li class="sc-top-nav__subitem sc-top-nav__subitem-separator"><a>Stage Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/straight-sections">Straight Sections</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/corner-pieces">Corner Pieces</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/snake-runners">Snake Runners</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/barricade-carts">Barricade Carts</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/straight-sections">Straight
+          Sections</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/corner-pieces">Corner Pieces</a>
+      </li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/snake-runners">Snake Runners</a>
+      </li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/concert-barricades/barricade-carts">Barricade
+          Carts</a></li>
 
       <!-- OPTIONS WATER FILLED -->
       <li class="sc-top-nav__subitem sc-top-nav__subitem-separator"><a>Water Filled Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a class="sc-menu-sub__link" pwa-to-page="/crowd-control/water-filled-barriers/hot-deals">Hot Deals</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/fence">Barriers + Panel</a></li>
+      <li class="sc-top-nav__subitem"><a class="sc-menu-sub__link"
+          pwa-to-page="/crowd-control/water-filled-barriers/hot-deals">Hot Deals</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/fence">Barriers + Panel</a>
+      </li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/36in">36in. Barriers</a></li>
       <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/42in">42in. Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/heavy-weight">Heavy Weight Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/lightweight">Lightweight Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/fence-screen">Fence Screens</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/barricade-lights">Barricade Lights</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/heavy-weight">Heavy Weight
+          Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/lightweight">Lightweight
+          Barriers</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/fence-screen">Fence
+          Screens</a></li>
+      <li class="sc-top-nav__subitem"><a pwa-to-page="/crowd-control/water-filled-barriers/barricade-lights">Barricade
+          Lights</a></li>
     </ul>
 
     <!-- THREE NIVEL MENU - CUSTOM SIGNS -->
@@ -1655,7 +1688,7 @@
         <span class="fas fas fa-chevron-left"></span>
         Return
       </li>
-      
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/barricade-covers">Barricade Covers</a>
       </li>
@@ -1691,7 +1724,7 @@
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/barricade-covers/custom-fitted">Custom Fitted</a>
       </li>
-    
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/outdoor">Outdoor Displays</a>
       </li>
@@ -1715,7 +1748,7 @@
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/outdoor/event-signage">Outdoor Event Favorites</a>
       </li>
-      
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/fence-screen">Custom Screen</a>
       </li>
@@ -1751,7 +1784,7 @@
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/fence-screen/poly-mesh">Poly Mesh</a>
       </li>
-    
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/custom-signs/safety">Safety Signs</a>
       </li>
@@ -1784,11 +1817,11 @@
         <span class="fas fas fa-chevron-left"></span>
         Return
       </li>
-      
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/chainlink-panels">Chainlink Panels</a>
       </li>
-      
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/chainlink-panels/hot-deals">Hot Deals</a>
       </li>
@@ -1845,7 +1878,7 @@
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/accessories/fence-blocks">Fence Blocks</a>
       </li>
-  
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/fence-screen">Fence Screens</a>
       </li>
@@ -1889,7 +1922,7 @@
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/gates/panel">Panel Gate</a>
       </li>
-      
+
       <li class="sc-top-nav__subitem">
         <a pwa-to-page="/temporary-fence/gates/pedestrian">Pedestrian Gate</a>
       </li>
@@ -1905,91 +1938,321 @@
         <span class="fas fas fa-chevron-left"></span>
         Return
       </li>
-      
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/retractable-belt-barriers">Retractable Belt Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/retractable-belt-barriers/hot-deals">Hot Deals</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/retractable-belt-barriers/single-line">Single Line Belt Posts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/retractable-belt-barriers/twin-line">Twin Line Belt Posts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/retractable-belt-barriers/triple-belt">Triple Belt Stanchion</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/retractable-belt-barriers/pro">Pro Retractable Belt</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/retractable-belt-barriers/safety">Safety Series</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/retractable-belt-barriers/cone">Cone Pro Stanchion</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/custom">Customizing Options</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/custom/belts">Belt Printing</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/custom/posts-wraps">Posts Wraps &amp; Cassettes</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/custom/post-signage">Posts Signage</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition">Tradition Post &amp; Rope</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition/metal">Classic Metal Stanchions</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition/plastic">Plastic Stanchions</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition/ropes">Ropes &amp; Chains</a></li>
-      <!-- <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition/ropes-styles">Ropes &amp; Styles</a></li> -->
-      <!-- <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/tradition/elegance-line">Elegance Line</a></li> -->
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories">Accessories</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/sanitizer-station">Sanitizer Stations</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/accessories/literature-holder">Literature Holder</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/sign-frame">Sign Frames</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/sign-holder">Sign Stands</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/banner">Stanchion Banners</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/display">Merchandising</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/accessories/storage-carts">Storage Carts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/wall-mounted">Wall Mounts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/wall-mounted/abs-housing">ABS Housing</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/wall-mounted/steel-housing">Steel Housing</a></li>
-      <li class="sc-top-nav__subitem"><a  pwa-to-page="/stanchions/wall-mounted/specialty">Specialty Wall Mounts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/storage-carts">Storage Carts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Carts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/storage-carts/cart-12-posts">Cart 12 Posts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/storage-carts/cart-18-posts">Cart 18 Posts</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/stanchions/storage-carts/cart-21-posts">Cart 21 Posts</a></li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers">Retractable Belt Barriers</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/hot-deals">Hot Deals</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/single-line">Single Line Belt Posts
+        </a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/twin-line">Twin Line Belt Posts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/triple-belt">Triple Belt Stanchion</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/pro">Pro Retractable Belt</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/safety">Safety Series</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/retractable-belt-barriers/cone">Cone Pro
+          Stanchion</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/custom">Customizing Options</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/custom/belts">Belt Printing</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/custom/posts-wraps">Posts Wraps &amp; Cassettes</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/custom/post-signage">Posts Signage</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition">Tradition Post &amp; Rope</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition/metal">Classic Metal Stanchions</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition/plastic">Plastic Stanchions</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition/ropes">Ropes &amp; Chains</a>
+      </li>
+
+      <!-- <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition/ropes-styles">Ropes &amp; Styles</a>
+      </li> -->
+
+      <!-- <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/tradition/elegance-line">Elegance Line</a>
+      </li> -->
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories">Accessories</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/sanitizer-station">Sanitizer Stations</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/literature-holder">Literature Holder</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/sign-frame">Sign Frames</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/sign-holder">Sign Stands</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/banner">Stanchion Banners</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/display">Merchandising</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/accessories/storage-carts">Storage Carts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/wall-mounted">Wall Mounts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/wall-mounted/abs-housing">ABS Housing</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/wall-mounted/steel-housing">Steel Housing</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/wall-mounted/specialty">Specialty Wall Mounts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/storage-carts">Storage Carts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/storage-carts/horizontal-carts">Horizontal Carts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/storage-carts/cart-12-posts">Cart 12 Posts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/storage-carts/cart-18-posts">Cart 18 Posts</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/stanchions/storage-carts/cart-21-posts">Cart 21 Posts</a>
+      </li>
     </ul>
 
     <!-- THREE NIVEL MENU - TRAFFIC SAFETY -->
     <ul class="sc-submenu-two-list sc-top-nav__subitem sc-submenu-closed">
       <li class="sc-top-nav__subitem sc-top-nav__getback">
-        <span class="fas fas fa-chevron-left"></span>Return
+        <span class="fas fas fa-chevron-left"></span>
+        Return
       </li>
 
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones">Traffic Cones</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/hot-deals">Hot Deals</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/mutcd">NCHRP-350 | MUTCD</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/nfpa">NFPA | Approved</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/eva">EVA Traffic Cone</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/pe">PE Traffic Cone</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/pvc">PVC Traffic Cone</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/rubber">Rubber Traffic Cone</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/cones/accessories">Accessories</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/tools-supplies">Tools &amp; Supplies</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/construction-signs">Constructions Signs</a></li>
-      <li class="sc-top-nav__subitem"><a >Roll-Up Signs</a></li>
-      <li class="sc-top-nav__subitem"><a >Aluminum Signs</a></li>
-      <li class="sc-top-nav__subitem"><a >Vertical Panels</a></li>
-      <li class="sc-top-nav__subitem"><a >Pavement Marking</a></li>
-      <li class="sc-top-nav__subitem"><a >Parking Safety</a></li>
-      <li class="sc-top-nav__subitem"><a >Speed Bumps &amp; Humps</a></li>
-      <li class="sc-top-nav__subitem"><a >Wheel Stops</a></li>
-      <li class="sc-top-nav__subitem"><a >Wheel Chocks</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/parking-lot/corner-guards">Corner Guard</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/parking-lot/bollard-covers">Bollard & Covers </a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers">Traffic Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/hot-deals">Hot Deals</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/plastic-jersey">Plastic Jersey Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/water-barricade">Water Barrier + Panel</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/type-1-2-3-barricade">Type I, II &amp; III Barricades</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/pedestrian">Pedestrian Barriers</a></li>
-      <li class="sc-top-nav__subitem"><a pwa-to-page="/traffic-safety/barriers/fence-screen">Fence Screens</a></li>
-      <li class="sc-top-nav__subitem"><a >Barricade Lights</a></li>
-      <li class="sc-top-nav__subitem"><a >Roadway Safety</a></li>
-      <li class="sc-top-nav__subitem"><a  >Cable Protector</a></li>
-      <li class="sc-top-nav__subitem"><a  >Channelizer Drums</a></li>
-      <li class="sc-top-nav__subitem"><a  >Traffic Markers</a></li>
-      <li class="sc-top-nav__subitem"><a >Lane Separator</a></li>
-      <li class="sc-top-nav__subitem"><a >Road Flares</a></li>
-      <li class="sc-top-nav__subitem"><a >PPE Gear</a></li>
-      <li class="sc-top-nav__subitem"><a >Gloves</a></li>
-      <li class="sc-top-nav__subitem"><a >Safety Vests</a></li>
-      <li class="sc-top-nav__subitem"><a >Safety Googles</a></li>
-      <li class="sc-top-nav__subitem"><a >Hi-Viz Apparel</a></li>
-      <li class="sc-top-nav__subitem"><a >Face Masks</a></li>
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones">Traffic Cones</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/hot-deals">Hot Deals</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/mutcd">NCHRP-350 | MUTCD</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/nfpa">NFPA | Approved</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/eva">EVA Traffic Cone</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/pe">PE Traffic Cone</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/pvc">PVC Traffic Cone</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/rubber">Rubber Traffic Cone</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/cones/accessories">Accessories</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/tools-supplies">Tools &amp; Supplies</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/construction-signs">Constructions Signs</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Roll-Up Signs</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Aluminum Signs</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Vertical Panels</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Pavement Marking</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Parking Safety</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Speed Bumps &amp; Humps</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Wheel Stops</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Wheel Chocks</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/parking-lot/corner-guards">Corner Guard</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/parking-lot/bollard-covers">Bollard & Covers </a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers">Traffic Barriers</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/hot-deals">Hot Deals</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/plastic-jersey">Plastic Jersey Barriers</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/water-barricade">Water Barrier + Panel</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/type-1-2-3-barricade">Type I, II &amp; III Barricades</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/pedestrian">Pedestrian Barriers</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a pwa-to-page="/traffic-safety/barriers/fence-screen">Fence Screens</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Barricade Lights</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Roadway Safety</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Cable Protector</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Channelizer Drums</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Traffic Markers</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Lane Separator</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Road Flares</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>PPE Gear</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Gloves</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Safety Vests</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Safety Googles</a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Hi-Viz Apparel
+        </a>
+      </li>
+
+      <li class="sc-top-nav__subitem">
+        <a>Face Masks</a>
+      </li>
 
       <!-- <li class="sc-top-nav__subitem">
         <a pwa-to-page="/traffic-safety/ppe-gear/protective-suits">Body Protection</a>
@@ -2000,5 +2263,5 @@
       </li> -->
     </ul>
   </nav>
-  <pwa-cart  complete-with-elastic hide-toasts open-on-add/>
+  <pwa-cart complete-with-elastic hide-toasts open-on-add />
 </header>
