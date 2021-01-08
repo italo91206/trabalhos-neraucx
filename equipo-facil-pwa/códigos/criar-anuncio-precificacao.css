@@ -256,7 +256,7 @@ section.pwa-how-much-pay {
     width: 24px;
     height: 24px;
     position: relative;
-    background: pwa-url(icon_cart-2) no-repeat center;
+    background: pwa-url(icon-cart-2) no-repeat center;
     margin-right: 11px;
 }
 
