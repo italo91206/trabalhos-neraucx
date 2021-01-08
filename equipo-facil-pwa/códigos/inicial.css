@@ -1399,3 +1399,27 @@ footer {
 #home-marcas-slide .swiper-slide a {
     width: 180px !important;
 }
+
+#home-pre-footer {
+    height: 248px;
+    background: #14AFD1;
+}
+
+#home-pre-footer .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#home-pre-footer img {
+    width: 148px;
+}
+
+#home-pre-footer h6 {
+    width: 342px;
+    font-size: 26px;
+    line-height: 44px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-left: 40px;
+}

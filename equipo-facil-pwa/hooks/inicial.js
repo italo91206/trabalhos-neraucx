@@ -25,8 +25,6 @@
       slidesPerView: window.innerWidth < 1024 ? 1 : '3',
       spaceBetween: window.innerWidth < 1024 ? 0 : 20,
       grabCursor: true,
-      loop: true,
-      loopedSlides: 4,
       navigation: {
         nextEl: '#super-destaques-slide-next',
         prevEl: '#super-destaques-slide-prev'
@@ -43,6 +41,23 @@
       navigation: {
         nextEl: '#home-marcas-slide-next',
         prevEl: '#home-marcas-slide-prev'
+      }
+    });
+  },
+  "--home-depoimentos-slide": component => {
+    component.$slide('#home-depoimentos-slide', {
+      slidesPerView: window.innerWidth < 1024 ? 1 : 'auto',
+      spaceBetween: window.innerWidth < 1024 ? 0 : 20,
+      grabCursor: true,
+      loop: true,
+      loopedSlides: 4,
+      navigation: {
+        nextEl: '#home-depoimentos-slide-next',
+        prevEl: '#home-depoimentos-slide-prev'
+      },
+      pagination:{
+        el: '#home-depoimentos-pagination',
+        clickable: true,
       }
     });
   }

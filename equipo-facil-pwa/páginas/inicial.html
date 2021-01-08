@@ -549,9 +549,7 @@
         </div>
       </div>
 
-      <h4 class="pwa-titles-H4-Blue">
-        As grandes marcas estão aqui
-      </h4>
+      <h4> As grandes marcas estão aqui</h4>
 
       <div id="home-marcas-slide" class="swiper-container grandes-marcas" pwa-hook="home-marcas-slide">
         <div class="swiper-wrapper">
@@ -610,7 +608,7 @@
     <section class="pwa-depoiment-container" id="depoimentos">
       <h4>Depoimentos</h4>
       <!-- Inicio slide depoimentos -->
-      <div class="swiper-container depoimentos">
+      <div id="home-depoimentos-slide" class="swiper-container depoimentos" pwa-hook="home-depoimentos-slide">
         <div class="swiper-wrapper depoimento">
           <div class="swiper-slide">
             <div class="pwa-depoimento-content">
@@ -646,13 +644,18 @@
           </div>
         </div>
 
-
-        <img class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
-        <img class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
+        <img id="home-depoimentos-slide-next" class="swiper-button-next isdesktop" pwa-src="icon-right" alt="icon-right">
+        <img id="home-depoimentos-slide-prev" class="swiper-button-prev isdesktop" pwa-src="icon-left" alt="icon-left">
 
         <!-- botões indicadores de paginação -->
-        <div class="swiper-pagination"></div>
+        <div id="home-depoimentos-pagination" class="swiper-pagination"></div>
+      </div>
+    </section>
 
+    <section id="home-pre-footer">
+      <div class="container flex">
+        <img pwa-src="icon-check">
+        <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
       </div>
     </section>
   </section>
