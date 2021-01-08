@@ -1,0 +1,852 @@
+section.pwa-how-much-pay {
+    border: none;
+} 
+
+.pwa-how-much-pay .input-content label{
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+
+    color: #7495A4;
+}
+
+.pwa-how-much-pay .input-content input {
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 28px;
+    text-align: right;
+
+    color: var(--color-text-blue);
+}
+
+.pwa-compar-cost{
+    background: #E6E6E6;
+}
+
+.bg-sales-potential{
+    background-color: #E6E6E6;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    max-width: 786px;
+    margin: 0 auto;
+}
+
+.sales-potential {
+    background: #5B87F8;
+    width: 90%;
+    max-height: 254px;
+    display: flex;
+    padding: 30px 18px;
+    min-height: 254px;
+    border-radius: 3px;
+    margin-top: -100px;
+    position: absolute;
+}
+
+.sales-potential span {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 27px;
+}
+
+.sales-potential span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: pwa-url(icon-money) center no-repeat;
+}
+.sales-potential h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+
+    color: #FFFFFF;
+}
+
+.pwa-ad-page .pwa-compar-cost h3{
+    margin-top: 0;
+}
+
+.sales-potential p {
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+
+    margin: 30px 0 20px;
+}
+
+.compar-cost-container {
+    margin-bottom: 31px;
+}
+
+.compar-cost-content{
+    display: flex;
+}
+
+.compar-cost-content .column {
+    width: 48%;
+}
+
+.compar-cost-content .column h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+
+    color: #457185;
+    margin-bottom: 6px;
+}
+
+.compar-cost-content .column p {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 28px;
+
+    color: var(--color-text-blue);
+}
+
+.compar-cost-content .column span {
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #457185;
+}
+
+.card-account-receipt {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 20px 19px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+}
+
+.card-account-receipt .box {
+    margin-top: 0;
+}
+
+.card-account-receipt ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 19px;
+}
+
+.card-account-receipt ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-account-receipt ul li p {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    width: 48%;
+    letter-spacing: 0.01em;
+    text-align: right;
+    font-weight: bold;
+
+    color: #174E67;
+}
+
+.card-account-receipt ul li span {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    width: 48%;
+    color: #457185;
+    margin-left: 11px;
+}
+
+.pwa-account-for-receipt .button-primary {
+    background-color: #7495A4;
+    margin-bottom: 47px;
+}
+
+/*Formulario de conta bancaria*/
+.account-receipt-form .input-checkbox-modal {
+    display: flex;
+}
+
+.account-receipt-form .input-content{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.account-receipt-form .select-content {
+    margin-bottom: 22px;
+}
+
+.agencia-number-account {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.agencia-number-account .input-content:nth-child(1) {
+    width: 20%;
+}
+
+.agencia-number-account .input-content:nth-child(2) {
+    width: 70%;
+}
+
+.agencia-number-account .input-content:nth-child(2) input {
+    max-width: none;
+}
+
+.account-receipt-form .input-content.name input {
+    max-width: none;
+}
+
+
+/*section recibo*/
+
+
+
+.pwa-ad-page section {
+    border-bottom: 1px solid #D1DCE1;
+    padding: 0 10px;
+}
+
+
+/*Page 01 create-ad*/
+.pwa-ad-page section.pwa-ad-category {
+    border: 0;
+    margin-bottom: 137px;
+}
+
+.pwa-ad-page section.pwa-ad-category.no {
+    margin: 0;
+}
+
+.pwa-ad-title {
+    background-color: #174E67;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-ad-title span {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: pwa-url(icon_cart-2) no-repeat center;
+    margin-right: 11px;
+}
+
+.pwa-ad-category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pwa-ad-title h1 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+
+    color: #FFFFFF;
+}
+
+
+.pwa-ad-page h2 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+
+    text-align: center;
+
+    color: #174E67;
+
+    margin-top: 28px;
+}
+
+.pwa-ad-page h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 32px;
+    max-width: 292px;
+    color: #174E67;
+}
+
+
+.pwa-ad-category .categorias-card{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    margin-top: 37px;
+    padding-left: 8px;
+}
+
+.pwa-ad-category .categorias-card .card {
+    margin-bottom: 30px;
+}
+
+/*fim estilização page 01 create-ad*/
+
+.categorias-card .card.selected {
+    background-color: #457185;
+    border: 1px solid #174E67;
+
+}
+
+.categorias-card .card.selected .card-body {
+    color: #FFF;
+}
+
+.pwa-ad-category-selected .categorias-card{
+    margin-bottom: 0;
+}
+
+.pwa-indicate-model p{
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 0.01em;
+    max-width: 80%;
+    color: #A2B8C2;
+
+    margin: 28px auto 15px 17px;
+}
+
+.pwa-indicate-model .input-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 339px;
+    margin: 0 auto 23px 17px;
+}
+
+.pwa-indicate-model .input-content input {
+    max-width: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+
+    border: 1px solid #E5E7EC;
+
+    padding: 17px 20px;
+
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    text-transform: none;
+
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+}
+
+.pwa-indicate-model .input-content span {
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #7495A4;
+
+    display: flex;
+    align-self: flex-end;
+    margin-top: 6px;
+}
+/*section de novo produto*/
+.pwa-ad-page .product-add p{
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    
+    color: #457185;
+    
+    margin: 31px auto 0 17px;
+    max-width: 339px;
+}
+
+.pwa-ad-page .preview-product-card {
+    display: flex;
+    margin: 13px auto 32px 17px;
+    align-items: center;
+    background: #FFF;
+    max-width: 390px;
+    padding: 16px 19px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid #D1DCE1;
+    border-radius: 5px;
+}
+
+.pwa-ad-page .preview-product-card img {
+    border: 1px solid #D1DCE1;
+    border-radius: 5px;
+    max-width: 84px;
+    max-height: 84px;
+    margin-right: 11px;
+}
+
+.pwa-ad-page .preview-product-card h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 21px;
+
+    color: var(--color-text-blue)
+}
+
+.pwa-ad-page .preview-product-card span{
+    font-family: Cambay;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    max-width: 173px;
+    color: #A2B8C2;
+    display: flex;
+}
+
+.pwa-ad-page .preview-product-card .confirm-product {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    user-select: none;
+    margin: 0 10px 0 auto;
+}
+
+.pwa-ad-page .preview-product-card .confirm-product label {
+    color: #4D4D4D;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.pwa-ad-page .preview-product-card .confirm-product input{
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+.pwa-ad-page .preview-product-card .confirm-product input:checked ~ span {
+    border-color: var(--color-text-blue);
+    filter: grayscale(0);
+}
+
+.pwa-ad-page .preview-product-card .confirm-product input:checked ~ span::after{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.pwa-ad-page .preview-product-card .confirm-product span {
+    display: flex;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color-text-blue);
+    background: pwa-url(icon-confirm) no-repeat center center; 
+    filter: grayscale(100%);
+    border-radius: 100%;
+    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+}
+
+.pwa-ad-page .preview-product-card .confirm-product span::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    transform: scale(0);
+    background-size: 50%;
+    
+    transition-delay: 0.2s !important;
+    transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+}
+/*fim da estilização do novo produto*/
+.preview-result-search {
+    background-color: #FFF;
+    box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 0 0 5px 5px;
+}
+
+.preview-result-search ul {
+    list-style: none;
+}
+
+.preview-result-search ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px ;
+    border-bottom: 1px solid #D1DCE1;
+    transition: background-color 0.2s;
+}
+
+.preview-result-search ul li:hover{
+    background-color: #F5f5f5;
+}
+
+.pwa-ad-page .product-add .preview-result-search ul li p {
+    margin: 10px 0; 
+}
+
+.preview-result-search ul li p {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 21px;
+
+    letter-spacing: 0.01em;
+
+
+    color: #457185;
+}
+
+.preview-result-search span {
+    background-color: #D1DCE1;
+    width: 100%;
+    display: flex;
+    padding: 6px 14px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    font-family: Cambay;
+    font-size: 12px;
+    line-height: 15px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+
+    color: #123E52;
+}
+
+.preview-result-search span strong {
+    margin-left: 5px;
+    color: #0C697D;
+}
+
+.pwa-ad-page .input-search-container {
+    margin-bottom: 38px;
+    max-width: 400px;
+}
+
+.pwa-ad-page .year-fabrication-container .input-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.pwa-ad-page .year-fabrication-container .input-content .select-content {
+    width: 48%;
+    margin-right: 20px
+}
+
+.year-fabrication-container .input-checkbox-modal .box label {
+    text-transform: none !important;
+}
+
+
+.pwa-ad-page .buttons-group {
+    display: flex;
+    gap: 10px;
+    padding-top: 29px;
+    margin-bottom: 38px;
+    border-top: 1px solid #D1DCE1;
+    margin-top: 29px;
+}
+
+.pwa-ad-page .buttons-group .button-secondy {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@media(max-width: 768px){
+    .isdesktop {
+        display: none;
+    }    
+}
+
+
+.pwa-how-much-pay {
+    min-height: 270px;
+}
+
+.pwa-ad-page section.s-payment-receipt-bg {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto ;
+}
+
+.payment-receipt {
+    background-color: #FFFF;
+    border-radius: 5px;
+    padding: 25px 18px;
+    max-width: 500px;
+    margin-bottom: 29px;
+}
+.payment-receipt h5{
+    text-align: start;
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #174E67;
+    margin-top: 0;
+}
+
+.payment-receipt ul {
+    list-style: none;
+    margin-left: 10px;
+    margin-top: 19px;
+}
+
+.payment-receipt ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.payment-receipt ul li p {
+    width: 42%;
+    text-align: right;
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #174E67;
+}
+
+.payment-receipt ul li span {
+    width: 61%;
+    font-family: Cambay;
+    margin-left: 20px;
+}
+
+.payment-receipt ul li:nth-child(1) span {
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 28px;
+    color: #174E67;
+}
+
+.payment-receipt ul li:nth-child(2) span{
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #457185;
+}
+
+.payment-receipt ul li:nth-child(3) span{
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 38px;
+    color: #14AFD1;    
+}
+
+.payment-receipt .how-receive {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.payment-receipt .how-receive p{
+    width: 42%;
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #174E67;
+}
+
+.payment-receipt .how-receive .description {
+    width: 61%;
+    margin-left: 20px;
+}
+
+.payment-receipt .how-receive .description p {
+    width: 100%;
+    text-align: start;
+}
+.payment-receipt .how-receive .description span {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #A2B8C2;
+}
+
+.payment-receipt section:nth-child(2) {
+    border: none
+}
+
+.card-account-receipt .input-checkbox-modal .box {
+    margin-top: 0px;
+}
+
+.container.payment-receipt {
+    max-width: 500px;
+}
+
+@media(min-width: 800px){
+    .card-account-receipt {
+        max-width: 332px;
+    }
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+@media(min-width: 800px) {
+    .bg-sales-potential {
+        margin-top: 100px;
+    }
+
+    .pwa-how-much-pay .input-content input {
+        max-width: 221px;
+        height: 52px;
+    }
+
+    section.pwa-how-much-pay {
+        padding-left: 30px;
+        padding-top: 0;
+        min-height: unset;
+        padding: 40px 0;
+        padding-top: 0;
+        border: none;
+    }
+
+    section.pwa-how-much-pay .pwa-input-container {
+        margin-left: 0;
+    }
+
+    .sales-potential {
+        min-height: 193px;
+        align-items: center;
+        padding: 24px 18px;
+        margin-top: -80px;
+    }
+
+
+    .sales-potential p + p {
+        margin-bottom: 0;
+    }
+
+    .pwa-ad-page section.pwa-compar-cost {
+        padding-top: 0;
+        border-bottom: none;
+        padding-bottom: 40px;
+    }
+
+    .compar-cost-container {
+        margin-bottom: 0;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .compar-cost-content .column {
+        width: auto;
+    }
+
+    .compar-cost-content .column + .column {
+        margin-left: 80px;
+    }
+
+    .pwa-ad-page.talk-more-product .pwa-how-much-pay h3 {
+        max-width: none;
+    }
+    .card-account-receipt {
+        max-width: 332px;
+    }
+
+    .card-account-receipt ul {
+        margin-bottom: 0;
+    }
+
+    .card-account-receipt ul li + li {
+        margin-bottom: 8px;
+    }
+
+    .card-account-receipt ul li p {
+        text-align: start;
+        
+    }
+
+    .agencia-number-account .input-content:nth-child(1) {
+        width: auto;
+    }
+
+    .pwa-ad-page section.pwa-account-for-receipt {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .pwa-account-for-receipt h3{
+        max-width: none !important;
+    }
+
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container .agencia-number-account .input-content {
+        width: 100%;
+
+    }
+
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container .agencia-number-account .input-content + .input-content{
+        margin-left: 40px;
+    }
+
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container  .input-content.name {
+        width: 34% ;
+    }
+
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container  .input-content.cpf {
+        width: 23.5%;
+    }
+
+    .pwa-account-for-receipt .account-receipt-form  .button-primary {
+        margin-right: 0;
+    }
+    .box-container-page.payment .payment-receipt {
+        padding: 40px;
+        max-width: unset;
+    }
+
+    
+}
