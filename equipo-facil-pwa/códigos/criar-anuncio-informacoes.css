@@ -1,0 +1,411 @@
+.pwa-ad-page .pwa-talk-more h2 {
+    max-width: 185px;
+    display: flex;
+    margin: 28px auto 11px;
+
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+    text-align: center;
+
+    color: #174E67;
+}
+
+.pwa-ad-page.talk-more-product h3 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 32px;
+
+    max-width: 292px;
+
+    color: #174E67;
+}
+
+.pwa-talk-more .talk-more-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 396px;
+    margin: 0 auto 10px;
+}
+.pwa-talk-more .talk-more-content textarea {
+    min-height: 203px;
+    width: 100%;
+
+    padding: 16px;
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+    border: 1px solid #E5E7EC;
+    border-radius: 5px;
+}
+
+.pwa-talk-more .talk-more-content span {
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.pwa-ad-page .pwa-color-product .select-content {
+    max-width: 210px;
+    margin-bottom: 31px;
+}
+
+/* section add foto e video*/
+.pwa-add-photo label {
+    max-width: 354px;
+    width: 100%;
+    height: 133px;
+    display: flex;
+
+    margin: 0 auto 29px;
+
+    background-color: #D0EFF6;
+    border: 1px dashed #72CFE3;
+    border-radius: 5px;
+
+    align-items: center;
+    justify-content: center;
+    padding: 24px 15px;
+    cursor: pointer;
+}
+
+.pwa-add-photo label input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.pwa-add-photo label span {
+    width: 74px;
+    height: 74px;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 100%;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+.pwa-add-photo label span::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: pwa-url(icon-camera) no-repeat center center;
+}
+
+.pwa-add-photo label strong {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 0.01em;
+
+    color: #174E67;
+}
+
+.pwa-ad-page label p {
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #174E67;
+}
+/*fim da section add foto e video*/
+
+/*section peso produto*/
+.pwa-weight-product .input-content {
+    margin-bottom: 33px;
+    max-width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pwa-weight-product .input-content input {
+    width: 60%;
+}
+
+.pwa-weight-product .input-content .select-content {
+    width: 36%;
+}
+/*fim section peso produto*/
+
+/*section dimensao produto*/
+.pwa-size-product .pwa-input-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.pwa-size-product .pwa-input-container input {
+    max-width: 130px;
+    text-transform: initial;
+    font-size: 12px;
+
+    color: #A2B8C2;
+}
+.pwa-size-product h3 span {
+    display: none;
+}
+/*fim section dimensao produto*/
+
+/*section quantidade em estoque*/
+.pwa-amount-product input{
+    margin-bottom: 32px;
+    max-width: 91px;
+}
+
+
+/* modal whatsapp*/
+.modal-atendimento-whatsapp {
+    max-width: 293px;
+    width: 100%;
+    height: 63px;
+    background: #219653;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 24px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-atendimento-whatsapp::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: pwa-url(icon-whats-green) no-repeat center center;
+}
+
+.modal-atendimento-whatsapp p {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 21px;
+    /* identical to box height, or 131% */
+
+    letter-spacing: 0.01em;
+
+    /* Branco */
+
+    color: #FFFFFF;
+}
+
+.modal-atendimento-whatsapp span {
+    width: 204px;
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}
+
+@media(min-width: 800px) {
+
+
+    .box-container-page .pwa-talk-more {
+        padding-top: 0;
+    }
+
+    .box-container-page .pwa-amount-product {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .box-container-page .container {
+        padding: 0;
+    }
+
+    .pwa-ad-page .pwa-talk-more h2{
+        max-width: none;
+    }
+
+    .pwa-talk-more .talk-more-content {
+        max-width: none;
+    }
+    .pwa-talk-more .talk-more-content textarea {
+        font-size: 1.6rem;
+    }
+
+    .talk-more-product .input-checkbox-modal{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .talk-more-product .input-checkbox-modal .box{
+        width: 48%;
+        align-items: flex-start;
+    }
+
+    .talk-more-product .input-checkbox-modal .box label {
+        display: grid;
+    }
+
+    .talk-more-product .input-checkbox-modal .box label span {
+        margin: 0;
+    }
+
+    .pwa-ad-page .condition-equipo h3{
+        max-width: none;
+
+    }
+
+    .pwa-ad-page section.pwa-color-product{
+        border: none;
+        padding-bottom: 0 !important;
+
+    }
+
+    .talk-more-product .color-product-desktop {
+        display: flex;
+    }
+
+    .talk-more-product .color-product-desktop h3 {
+        margin-bottom: 4px;
+    }
+
+    .talk-more-product .color-product-desktop .weiht-product-item{
+        display: block !important;
+        width: 50%;
+        margin-left: 30px;
+    }
+
+    .talk-more-product .pwa-input-container {
+        margin-left: 0;
+    }
+
+
+    .pwa-ad-page.talk-more-product .pwa-color-product .color-product-item {
+        width: 40%;
+    }
+
+    .pwa-ad-page.talk-more-product .pwa-color-product .color-product-item .select-content {
+        max-width: 270px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .talk-more-product .color-product-desktop .weiht-product-item .input-content{
+        margin-top: 0;
+        align-items: flex-start;
+    }
+
+    .talk-more-product .color-product-desktop .weiht-product-item .input-content input {
+        margin-right: 27px;
+        max-width: 270px;
+    }
+
+    .talk-more-product .color-product-desktop .weiht-product-item .input-content  .select-content{
+        min-width: 80px;
+    }
+
+    .pwa-ad-page section.pwa-add-photo {
+        padding-top: 0 !important;
+    }
+
+    .talk-more-product .pwa-add-photo {
+        margin-top: 40px;
+    }
+
+    .talk-more-product .pwa-add-photo h3 {
+        display: none;
+    }
+
+    .talk-more-product .pwa-add-photo label {
+        max-width: none;
+        justify-content: flex-start;
+        padding: 24px;
+    }
+
+    .talk-more-product .pwa-add-photo label strong {
+        font-size: 1.9rem;
+    }
+
+    .pwa-ad-page.talk-more-product .pwa-weight-product {
+        display: none;
+    }
+
+    .talk-more-product .pwa-size-product h3,
+    .talk-more-product .pwa-amount-product h3 {
+        margin-bottom: 4px;
+    }
+
+    .talk-more-product .pwa-size-product h3 span {
+        display: inline;
+        font-size: 1.4rem;
+        font-family: Cambay;
+        font-weight: normal;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: #7495A4;
+    }
+
+    .talk-more-product .pwa-size-product .pwa-input-container,
+    .talk-more-product .pwa-amount-product .pwa-input-container {
+        margin-top: 0;
+    }
+
+    .talk-more-product .pwa-size-product .input-content input,
+    .talk-more-product .pwa-amount-product .input-content input {
+        max-width: 167px;
+        font-size: 1.6rem;
+    }
+
+    .pwa-ad-page .buttons-group {
+        justify-content: space-between;
+        max-width: 786px;
+        padding: 0;
+    }
+
+    .pwa-ad-page .buttons-group .button-primary{
+        height: 40px;
+        max-width: 374px;
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+
+    .pwa-ad-page .buttons-group .button-secondy {
+        height: 40px;
+        width: fit-content;
+
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+
+    .pwa-ad-page .buttons-group .button-secondy:hover {
+        background: transparent !important;
+        color: var(--color-text-blue);
+        text-decoration: underline;
+    }
+}
+
+#criar-anuncio-informacoes .buttons-group {
+    border-top: unset;
+    padding-top: unset;
+}
