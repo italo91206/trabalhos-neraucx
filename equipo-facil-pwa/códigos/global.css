@@ -141,8 +141,8 @@ h6{
     text-align: left;
 }
 
-a{
-    margin: auto;
+a {
+    /* margin: auto; */
     color: #14AFD1;
     font-family: Cambay;
     font-size: 14px;
