@@ -27,6 +27,7 @@
 
 body {
     background: var(--color-background);
+    overflow-x: hidden;
 }
 
 a {
@@ -157,12 +158,6 @@ a {
     display: none !important;
 }
 
-@media (max-width: 768px){
-    .ismobile{
-        display: block;
-    }
-}
-
 .container-fluid {
     width: 100%;
     padding-right: 15px;
@@ -278,7 +273,7 @@ img.swiper-button-next, img.swiper-button-prev{
     width: 100%;
     height: 125px;
     outline: none;
-    background: #43BFDA no-repeat right  url(../assets/icons/bg-logo-equipoFacil-fineline.svg);
+    background: #43BFDA no-repeat right  pwa-url(bg-logo-equipoFacil-fineline);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -376,60 +371,16 @@ img.swiper-button-next, img.swiper-button-prev{
     margin-bottom: 12px;
 }
 .pwa-icon-whats-navy-blue::before {
-    content: url(../assets/icons/icon-whats-navy-blue.svg);
+    content: pwa-url(icon-whats-navy-blue);
     position: relative;
     top: 2px;
 }
 .pwa-h4-title {
     padding-top: 50px;
 }
+
 .pwa-bg-white .pwa-h4-title{
     margin-top: -50px;
-}
-/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
-@media only screen and (min-width: 768px) {
-    .pwa-bg-blue, 
-    .pwa-bg-blue-faq  {
-        height: 360px;
-        width: 100%;
-    }
-    .pwa-inst-faq-title {
-        font-size: 13px;
-        line-height: 25px;
-    }
-    .pwa-inst-faq-text {
-        font-size: 33px;
-        line-height: 54px;
-    }
-    .pwa-container-text {
-        margin-top: 45px;
-    }
-    .pwa-table-cel-navy-blue {
-        text-align: RIGHT;
-        padding-right: 30PX;
-    }
-    .pwa-table-cel-white {
-        text-align: center;
-    }
-    .pwa-table-cel-gray,
-    .pwa-table-cel-light-blue,
-    .pwa-table-cel-blue {
-        text-align: center;
-    }
-    .ef-container {
-        text-align: right;
-    }
-    .pwa-icon-whats-navy-blue{
-        margin-right: 50px;
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-    .pwa-h4-title {
-        font-size: 20px;
-    }
-    .pwa-question-container {
-        margin-bottom: 5pc;
-    }
 }
 
 .flex {
@@ -547,4 +498,336 @@ img.swiper-button-next, img.swiper-button-prev{
 
 .swiper-pagination-bullet {
     transition: all .25s ease;
+}
+
+/*************************CHECKBOX-INPUT***************************/
+.input-checkbox-modal label {
+    position: relative;
+    display: inline-flex;
+}
+
+.input-checkbox-modal label input {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.input-checkbox-contant {
+    display: flex!important;
+}
+
+.input-checkbox-modal .box {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    user-select: none;
+}
+
+.input-checkbox-modal .box label {
+    position: absolute;
+    
+    padding-left: 30px;
+    cursor: pointer;
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+
+    letter-spacing: 0.01em;
+
+    color: #174E67;
+}
+.input-checkbox-modal .box label span {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+    margin-left: 8px;
+}
+.input-checkbox-modal .box input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.box input:checked ~ .check{
+    border-color: #72CFE3;
+    box-shadow: 0 0 0 15px #72CFE3 inset;
+}
+
+.box input:checked ~ .check::after {
+    content: '';
+    opacity: 1;
+    transform: scale(1);
+}
+
+.input-checkbox-modal .box .check {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    background-color: #D0EFF6;
+    border: 2px solid #72CFE3;
+    box-shadow: 0px 0px 0px 0px #72CFE3 inset;
+    transition: all 0.15s cubic-bezier(0, 1.05, 0.72, 1.07);
+}
+
+
+
+.input-checkbox-modal .box .check::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    transform: scale(0);
+    background-image: pwa-url(icon-confirm);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-delay: 0.2s !important;
+    transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
+}
+
+.input-checkbox-modal .check.radio {
+    border-radius: 100%;
+}
+
+
+.input-checkbox-modal .box .check.radio::after{
+    background-image: none;
+    border: 3px solid #D0EFF6;
+    border-radius: 100%;
+}
+
+.input-checkbox-modal .check.radio {
+    border-radius: 100%;
+    transition-delay: .2s;
+    transition-duration: 0.5s;
+}
+.input-checkbox-modal .box .check.radio::after{
+    background-image: none;
+}
+
+.box input:checked ~ .check.radio {
+  border-color: #72CFE3;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 3px #D0EFF6 inset, 0px 0px 0px 15px #14AFD1  inset;
+}
+
+
+.box input:checked ~ label{
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+/*================
+* TICKET PRODUCT
+=============== */
+.ticket-inspect-equipo {
+  margin: 11px auto;
+}
+
+/* etiqueta de equipo vistoriado*/
+.ticket-inspect-equipo {
+  width: 166px;
+  height: 23px;
+  background: #00ceb0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 6px 6px 3px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+
+.ticket-inspect-equipo::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: pwa-url(icon-equipo-verificado) no-repeat center
+    center;
+  order: -1;
+  display: flex;
+  align-items: center;
+  margin-top: -2px;
+}
+
+/* TICKET STATUS */
+.pwa-ticket-status-product {
+    max-width: 300px;
+    width: fit-content;
+    background: #7495A4;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.pwa-ticket-status-product span{ 
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    margin-right: 7px;
+}
+
+.pwa-ticket-status-product span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pwa-ticket-status-product.awaiting-approval span::after,
+.pwa-ticket-status-product.awaiting-payment span::after {
+    background: pwa-url(icon-clock-white) no-repeat center center;
+}
+
+.pwa-ticket-status-product.on-course {
+    background: #0C697D;
+}
+.pwa-ticket-status-product.on-course span::after {
+    background: pwa-url(icon-truck-white) no-repeat center;
+}
+
+.pwa-ticket-status-product.awaiting-payment-highlight {
+    background: #0086D0;
+}
+
+.pwa-ticket-status-product.awaiting-payment-highlight span::after {
+    background: pwa-url(icon-clock-white) no-repeat center;
+}
+
+.pwa-ticket-status-product.delivered {
+    background: #27AE60;
+}
+
+.pwa-ticket-status-product.delivered span::after {
+    background: pwa-url(icon-confirm-white) no-repeat center center;
+}
+
+.pwa-ticket-status-product.canceled {
+    background: #EB5757;
+}
+
+.pwa-ticket-status-product.canceled span::after {
+    background: pwa-url(icon-canceled-white) no-repeat center center;
+}
+
+
+.pwa-ticket-status-product.product-problems {
+    background-color: #A2B8C2;
+}
+
+.pwa-ticket-status-product.product-problems span::after {
+    background: pwa-url(icon-question-white) no-repeat center center;
+}
+
+.pwa-ticket-status-product p {
+    font-family: Cambay;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+    margin-top: 3px;
+}
+
+.pwa-ticket-status-product p + p {
+    margin-left: 11px;
+}
+
+
+/*===============
+    DESKTOP
+===============*/
+@media(min-width: 800px) {
+    .eqf-pl-sm-0 {
+        padding-left: 0;
+    }
+
+    .eqf-mx-sm-30 {
+        margin-right: 30px !important;
+        margin-left: 30px !important;
+    }
+
+    .eqf-px-sm-30 {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+
+    .eqf-mt-sm-50 {
+        margin-top: 50px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pwa-bg-blue, 
+    .pwa-bg-blue-faq  {
+        height: 360px;
+        width: 100%;
+    }
+    .pwa-inst-faq-title {
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .pwa-inst-faq-text {
+        font-size: 33px;
+        line-height: 54px;
+    }
+    .pwa-container-text {
+        margin-top: 45px;
+    }
+    .pwa-table-cel-navy-blue {
+        text-align: RIGHT;
+        padding-right: 30PX;
+    }
+    .pwa-table-cel-white {
+        text-align: center;
+    }
+    .pwa-table-cel-gray,
+    .pwa-table-cel-light-blue,
+    .pwa-table-cel-blue {
+        text-align: center;
+    }
+    .ef-container {
+        text-align: right;
+    }
+    .pwa-icon-whats-navy-blue{
+        margin-right: 50px;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+    .pwa-h4-title {
+        font-size: 20px;
+    }
+    .pwa-question-container {
+        margin-bottom: 5pc;
+    }
 }

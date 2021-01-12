@@ -6,12 +6,14 @@ h1 {
   width: calc(50% - 20px);
 }
 
-
 @media(max-width: 768px){
-    .isdesktop {
-        display: none;
-    } 
-    .container {
-        max-width: 720px;
-    }   
+  .isdesktop {
+    display: none;
+  } 
+  .container {
+    max-width: 720px;
+  }   
+  .ismobile{
+    display: block !important;
+  }
 }
