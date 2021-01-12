@@ -6,9 +6,9 @@
       </a>
       
       <div class="search-header-container">
-        <div class="search-header-desktop">
+        <pwa-search-form class="search-header-desktop">
           <button><span></span></button>
-          <input type="text" id="search-filter-equipo-header">
+          <input pwa-search-box type="text" id="search-filter-equipo-header">
           <div class="select-container">
             <select name="" id="">
               <option value="" selected>Somente em Equipo Médico</option>
@@ -16,7 +16,7 @@
               <option value="">Somente em Equipo Médico</option>
             </select>
           </div>
-        </div>
+        </pwa-search-form>
 
         <!-- Modal resultado pesquisa equipo-->
         <div class="modal-pesquisa">
@@ -25,6 +25,7 @@
               <p>Marcas</p>
               <span>0</span>
             </div>
+
             <ul>
               <li>Nenhuma narca encontrada</li>
             </ul>
@@ -40,18 +41,22 @@
                 <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
                 <span>Cristófoli</span>
               </li>
+
               <li>
                 <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
                 <span>Cristófoli</span>
               </li>
+
               <li>
                 <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
                 <span>Cristófoli</span>
               </li>
+
               <li>
                 <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
                 <span>Cristófoli</span>
               </li>
+
               <li>
                 <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
                 <span>Cristófoli</span>
@@ -64,7 +69,7 @@
       </div>
 
       <div class="avatar-container-header">
-        <a pwa-to-page="">Vender</a>
+        <a pwa-to-page="/criar-anuncio">Vender</a>
 
         <nav>
           <div class="avatar" id="avatar-modal">
@@ -163,7 +168,7 @@
       <div class="menu-header-buttons">
         <span id='button-notification' class="notification true"></span>
 
-        <button id="menu-header-bar" class="pwa-button-action-modal" onclick="handleModalMenu()">
+        <button id="menu-header-bar" class="pwa-button-action-modal">
           <span></span>
         </button>
       </div>
@@ -294,7 +299,7 @@
       <nav class="menu-perfil-actions">
         <ul>
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart" alt="Minhas compras">
               </span>
@@ -303,7 +308,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-1" alt="Meus Favoritos">
               </span>
@@ -312,7 +317,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span> 
                 <img pwa-src="icon-cart-2" alt="Meus anúncios"> 
               </span>
@@ -321,7 +326,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-3" alt="Minhas vendas">
               </span>
@@ -330,7 +335,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-4" alt="Meu histórico">
               </span>
@@ -339,7 +344,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-5" alt="Perguntas">
               </span>
@@ -348,7 +353,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-6" alt="Equipe de outra área">
               </span>
@@ -357,7 +362,7 @@
           </li>
 
           <li>
-            <a pwa-to-page="">
+            <a pwa-to-page="" class="menu-item">
               <span>
                 <img pwa-src="icon-cart-7" alt="contanto">
               </span>
@@ -368,8 +373,10 @@
       </nav>
 
       <div class="menu-info">
-        <img pwa-src="confirm-icon" alt="Venda hoje mesmo">
-        <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+        <a pwa-to-page="/criar-anuncio" class="menu-item">
+          <img pwa-src="confirm-icon" alt="Venda hoje mesmo">
+          <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+        </a>
       </div>
     </div>
   </div>
