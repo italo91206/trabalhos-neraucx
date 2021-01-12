@@ -1,0 +1,981 @@
+.pwa-container-banners {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.banner {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.banner2 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+
+/* Icone de voltar do Header */
+.pwa-home-return {
+    position: relative;
+    left: 15px;
+}
+.pwa-icon-return-home {
+    padding-right: 1pc;
+}
+
+.pwa-cover {
+    height: 360px;
+    width: 100%;
+    background: #B2B2B2;
+    padding: 50px;
+    padding-top: 120px;
+    display: none;
+}
+.pwa-cover-text {
+    height: 108px;
+    width: 215px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.pwa-container-search-master {
+    height: 221px;
+    width: 99.7%;
+    max-width: 768px;
+
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    margin-top: 20px;
+
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px #e1e1e1;
+}
+
+.pwa-group-search-container {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.pwa-list {
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+}
+.pwa-li, .pwa-li-modal {
+    width: 115px;
+
+    cursor: pointer;
+
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pwa-li:last-child {
+    width: 80px;
+}
+.pwa-li h5, .pwa-li-modal h5 {
+    width: fit-content;
+}
+
+.pwa-list-modal {
+    max-width: 400px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.pwa-li-modal {
+    width: fit-content; 
+    padding-bottom: 15px;
+}
+.pwa-li-modal input, .pwa-li input{
+    display: none;
+}
+
+.ef-li-active {
+    border-bottom: 4px solid #14AFD1;
+    color: #174E67;
+}
+
+.pwa-search-adv {
+    position: relative;
+    top: 0px;
+}
+
+.ef-display {
+    display: none;
+}
+
+.pwa-bg-blue {
+    /*Aplicado somente na barra de pesquisa da página de listagem*/
+    background: #D0EFF6;
+    padding-top: 1.5pc;
+    position: absolute;
+    top: 60px;
+    height: 336px;
+    width: 100%;
+    z-index: 0;
+}
+
+.pwa-listing-container-master {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* /////////////////////// Filtros //////////////////// */
+.pwa-btns-filter {
+    margin-top: 2pc;
+    margin-bottom: 2pc;
+    display: flex;
+    justify-content: center;
+}
+.pwa-dropbtn,
+.pwa-btn-filter {
+    height: 50px;
+    width: 168px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EC;
+    color: #7495A4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pwa-dropbtn:hover,
+.pwa-dropbtn:focus,
+.pwa-btn-filter:hover,
+.pwa-btn-filter:focus,
+.pwa-btn-filter:hover {
+    background: #14AFD1;
+    border: 1px solid #14AFD1;
+    outline: 0;
+    color: #FFFFFF;
+    stroke: #174E67;
+    fill: #174E67;
+}
+.pwa-btn-filter  {
+    margin-right: 15px;
+    position:relative;
+}
+
+.pwa-btn-blue-active {
+    background: #14AFD1;
+    border: 1px solid #14AFD1;
+    outline: 0;
+    color: #FFFFFF;
+    stroke: #174E67;
+    fill: #174E67;
+}
+
+/* DROPDOWN */
+.pwa-dropbtn {
+    margin-right: 15px;
+    position:relative;
+}
+.pwa-dropdown-content {
+    background-color: #ffffff;
+    display: none;
+
+    position: absolute;
+    margin-top: 3.1pc;
+    margin-left: -12.38pc;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 3;
+
+    height: 105px;
+    width: 168px;
+    border-radius: 5px;
+
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+}
+.pwa-dropdown {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100% ;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.pwa-dropdown-content a {
+    color: #ddd;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #D1DCE1
+}
+.pwa-dropdown-content a:hover {
+    color: #14AFD1;
+}
+
+
+/* ///////////////////// FILTRO DE OPÇÕES //////////////////// */
+.pwa-filters {
+    position: relative;
+    width: 100%;
+}
+.pwa-filter {
+    width: 100%;
+    max-width: 95vw;
+    margin: auto;
+    padding-left: 20px;
+}
+.pwa-filter {
+    margin-top: 1pc;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+.pwa-filter h6 {
+    height: 23px;
+    padding-top: 1pc;
+    padding-bottom: 2pc;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.ef-filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2pc;
+}
+.pwa-filter-item {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 12px;
+    padding-top: 7px;
+    /*Ajusta o texto no centro*/
+    padding-left: 5px;
+    background: #A1DFED;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    height: 24px;
+    border-radius: 3px;
+
+    color: #0C697D;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+.pwa-filter-item:hover {
+    background: rgba(20,175,209, 0.6);
+}
+.pwa-closefilter {
+    cursor: pointer;
+    position: relative;
+    transform: translate(0%, -50%);
+    margin-top: -2px;
+    padding: 7px 7px;
+}
+
+.pwa-results-product {
+    margin-top: px;
+    margin-bottom: 10px;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.categorias {
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+}
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+@media only screen and (max-width: 600px) {
+    
+   .categorias:first-child {
+    display:none;
+    }
+
+    .categorias {
+        margin-top: 2pc;
+        margin-bottom: 5.5pc;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .pwa-cover {
+        display: block;
+    }
+
+    .pwa-bg-blue {
+        display: none;
+    }
+    .ef-display {
+        display:block;
+    }
+
+    .categorias {
+        margin-top: 2pc;
+        margin-bottom: 5.5pc;
+    }
+
+    .pwa-results-product {
+        position: relative;
+        margin-left: -300px;
+        margin-top: -20px;
+        font-size: 22px;
+    }
+
+   
+    .pwa-container-search-master {
+        display: none;
+    }
+
+    .pwa-listing-container-master {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .pwa-btns-filter{
+        display: none;
+    }
+
+    .pwa-filters {
+        width: 300px;
+        margin-top: 1.4pc;
+    }
+    .pwa-filter {
+        margin-top: -10px;
+        margin-left: -8px;
+        /* display: none; */
+    }
+}
+
+/************************CSS: MODAL-FILTER*****************************/
+
+/* ///////////////////// REMOVE O OUTLINE DE TODOS OS INPUTS//////////////////// */
+input {
+    outline: none;
+}
+
+/* ///////////////////// AJUSTES MODAL DE BUSCA AVANÇADA //////////////////// */
+.pwa-modal-advanced-search-listing-wrapper, 
+.pwa-modal-filter{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pwa-modal-filter {
+    z-index: 4;
+}
+#ef-display-none {
+    display: none;
+} 
+
+.pwa-modal-advanced-search-listing-container {
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 25%;
+
+    border: 1px solid #888;
+    border-radius: 8px;
+    
+    height: fit-content;
+    width: 355px;
+}
+
+/* Ajusta a posição do modal de filtro */
+#modal-Filter {
+    display: none;
+    z-index: 6;
+    position: relative;
+    top: 98px;
+    left: -8px;
+    margin-top: -128px;
+
+}
+.pwa-btns-radio-brand {
+    display: none;
+}
+
+#modal-Filter  .pwa-modal-search-for-key-words {
+    margin-top: 1pc;
+}
+
+.ef-btns-radio-brand-desktop {
+    display: none;
+}
+
+.pwa-close-modal-adv-Search, .pwa-close-modal-filter {
+    height: 20px;
+    width: 20px;
+    border-radius: 0px;
+    position: absolute;
+    margin-left:20pc ;
+    margin-top: 12px;
+    
+}
+.pwa-close-modal-adv-Search:hover,
+.pwa-close-modal-adv-Search:focus,
+.pwa-close-modal-filter :hover,
+.pwa-close-modal-filter :focus {
+    cursor: pointer;
+}
+.pwa-títles-modal{
+    margin-top: 1.5pc;
+    margin-bottom: 1pc;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.pwa-subtitle-modal {
+    margin-top: 12px;
+    margin-bottom: 8px;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+
+
+
+/* Ajustes nos itens Marca, Condição Modalidade, Certificado, Localização - borda cinza no topo */
+.ef-modal-search-location, 
+.ef-modal-search-certificate,
+.ef-modal-search-modality,
+.ef-modal-search-for-marca,
+.ef-modal-search-for-condition-product {
+    border-top: 1px solid #D1DCE1;
+    margin-top: 24px;
+}
+.ef-modal-search-modality .input-checkbox-contant {
+    height: 60px;
+    /*margin-top: -15px;*/
+    margin-bottom: -20px;
+}
+
+.ef-modal-search-for-condition-product .input-checkbox-modal:last-child{
+   /* margin-top: -20px;*/
+    margin-bottom: -15px;
+}
+.ef-modal-search-for-condition-product .pwa-group-input {
+    /*margin-top: -10px;*/
+    margin-top: 0px!important;
+}
+
+/* Ajuste Condição */
+.ef-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* texto do item condição */
+.pwa-used-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    padding-top: 20px;
+}
+#label-recondicionado{
+    margin-top: -10px;
+}
+.pwa-used-text span {
+    position: relative;
+    left: -7px;
+}
+
+
+/* Ajustes nos itens Cor e Ano de Fabricação -
+ bordas cinzas no topo e espaçamento no fudo */
+.ef-modal-search-for-year, .ef-modal-search-for-color {
+    margin-bottom: 1.5pc;
+    border-top: 1px solid #D1DCE1;
+    margin-top: 24px!important;
+}
+.ef-modal-search-for-year .pwa-select,
+.ef-modal-search-for-color .pwa-select{
+    margin-left: -30px;
+}
+/* Ajustes no item Preço */
+.ef-modal-search-cost {
+    margin-bottom: 1pc;
+    border-top: 1px solid #D1DCE1;
+}
+.pwa-input-value {
+    flex-wrap: wrap;
+}
+.pwa-input-value input{
+    height: 50px;
+    width: 109px;
+   
+    border-radius: 5px;
+}
+
+
+
+
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+
+/* Dispositivos grandes (laptops / desktops, 992px e superior) */
+@media only screen and (min-width: 992px) {
+    #modal-Filter{
+        display: block;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Remove os botões de filtro */
+    .pwa-btns-radio-brand {
+        display: block;
+    }
+
+    /* Ajuster no container do modal para ficar responsivo  */
+    .pwa-modal-advanced-search-listing-container {
+        margin: 0;
+        margin-bottom: 2pc;
+    
+        border: none;
+        border-radius: 0px;
+        
+        height: fit-content;
+        width: 300px;
+        display: block !important;
+
+        position: relative;
+        top: 20px;
+    }
+
+    /* Remove os os cards de marca dentro do modal */
+    .ef-cards-mark-container {
+        display: none;
+    }
+
+    /* Insere os btns radio no lugar do swyper com marcas */
+    .ef-btns-radio-brand-desktop {
+        display: block;
+    }
+
+    /* Remover o botão de fechar do modal */
+    .pwa-close-modal-filter {
+        display: none;
+    }
+    .pwa-key-words-seach-input {
+        flex-wrap: wrap;
+    }
+    .pwa-key-words-seach-input input {
+        width: 270px !important;
+    }
+    .pwa-button-action {
+        margin-top: 15px;
+        height: 40px;
+        width: 270px !important;
+        outline: none;
+        cursor: pointer;
+    }
+    .pwa-button-action:hover {
+        background: #14AFD1;
+        border: #14AFD1;
+    }
+    .pwa-input-with-icon {
+        width: 270px;
+    }
+    .input-checkbox-modal.ef-flex {
+        display: block;
+    }
+    .input-checkbox-contant {
+        display: block;
+        margin-bottom: -20px;
+    }
+
+    /* Link de ver Mais no "modal" desktop */
+    .pwa-see-more-rest{
+        display: none;
+    }
+    .ef-see-more-filters {
+        color: #14AFD1;
+        font-family: Cambay;
+        font-size: 16px;
+        font-weight: 700;
+
+        /* Desabilita a seleção de texto quando clicado mais de uma vez seguida */
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+    .ef-see-more-filters:after {
+        content: pwa-url(icon_drop);
+        position: relative;
+        top: 2px;
+        margin-left: 10px;
+    }
+
+     /* Remove os input das categorias - Cor e Ano de Fabricação*/
+    .ef-modal-search-for-color .pwa-box-input,
+    .ef-modal-search-for-year .pwa-box-input {
+        display: none;
+    }
+
+    /* Remove o botão de filtrar mais */
+    .ef-btn-filter-now {
+        display: none;
+    }
+
+    /* Ajustes no botão azul no final do modal */
+    .ef-btn-filter-now {
+        padding-top: 1.5pc;
+        border-top: 1px solid #D1DCE1;
+    }
+
+    /* Lista collapse - modal de filtro desktop */
+    .pwa-list-collapse {
+        background-color: #ffffff;
+        cursor: pointer;
+        width: 100%;
+        height:40px;
+        /* Desabilita a seleção de texto quando clicado mais de uma vez seguida */
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        margin-top: 24px;
+    }
+    
+    .pwa-list-collapse:after {
+        content: pwa-url(icon-left-blue); /* Trocar depois Código Unicode */
+        transform: rotate(-90deg);
+        font-size: 13px;
+        position: absolute;
+        margin-top: -30px;
+        right: 12px;
+    }
+    .pwa-active:after {
+        content: pwa-url(icon-left-blue);
+        transform: rotate(90deg);
+        right: 18px;
+    }
+    .ef-modal-search-for-condition-product .pwa-list-collapse:after ,
+    .ef-modal-search-certificate .pwa-list-collapse:after{
+        position: absolute;
+        /*margin-top: -4px;*/
+    }
+
+    .pwa-panel {
+        display: block;
+        overflow: hidden;
+    }
+    .ef-modal-search-for-color.input-select-modal,
+    .ef-modal-search-for-year.input-select-modal{
+    margin: 0;
+    }
+    .ef-modal-search-cost .pwa-list-collapse {
+    padding-bottom: 3px;
+    }
+    .ef-modal-search-cost .input-range-group {
+    margin-bottom: 2pc;
+    }
+
+}
+
+/* Dispositivos extragrandes (laptops e desktops grandes, 1200 px e superior) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+/********CSS: MODAL ADVANCED SEARCH KEY WORDS**********/
+.pwa-modal-search-for-key-words {
+    display: flex;
+    flex-direction: column;
+}
+
+.pwa-key-words-seach-input {
+    display: flex;
+}
+
+.pwa-key-words-seach-input #input-key-words {/*.pwa-modal-search-for-key-words*/
+    width: 70%;
+    height: 50px !important;
+    border: 1px solid #A2B8C2 !important;
+    border-radius: 5px !important;
+    margin-right: 5px !important;
+}
+
+.pwa-key-words-seach-input .pwa-button-action {
+    width: 30%;
+    height: 50px !important;
+    border-radius: 5px !important;
+    border: none !important;
+
+    background-color: #32586E !important;
+
+    font-family: Cambay !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    line-height: 26px !important;
+
+    text-align: center !important;
+    color: #FFF !important;
+}
+
+/******CARD-BRAND******/
+/* Ajuste no swiper de marcas */
+.pwa-cards-mark-container {
+    margin-top: 1pc;
+    margin-bottom: 15px;
+}
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+.swiper-slide {
+    width: fit-content;
+    margin-right: 10px;
+}
+.swiper-pagination {
+    position: relative;
+    margin-top: 30  px;;
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #174E67;
+    opacity: 1;
+    margin-right: 15px;
+
+}
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #0051ff;
+    height: 8px;
+    width: 8px;
+    margin-bottom: 1.5px;
+}
+
+
+.pwa-card-mark {
+    height: 121px;
+    width: 107px;
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    border: 1px solid #D0EFF6;
+    background: #FFFFFF;
+    text-align: center;
+}
+.pwa-card-mark-text {
+    height: 15px;
+    width: 50px;
+    
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+}
+.pwa-brand-container-img {
+    height: 71px;
+    width: 85px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pwa-brand-container-img img{
+    width: 100%;
+    height: auto;
+}
+/* Classe para selecionar card */
+.select {
+    border: 1px solid #14AFD1;
+}
+.select::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    background: pwa-url(icon-select-white) , #FFF;
+    top:0;
+    right: 0;
+    margin-right:-5px;
+
+    border-radius: 100%;
+}
+.select span {
+    color: #14AFD1;
+}
+
+/********************PAGINAÇÃO**********************/
+.pwa-breadcrumb-container{
+    display: flex;
+    justify-content: space-around;
+    
+    max-width: 300px;
+    margin: auto;
+}
+
+.pwa-breadcrumb-inner {
+    min-width: 200px;
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pwa-breadcrumb-item {
+    width: fit-content;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.7em;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.pwa-breadcrumb-item:hover {
+    color: white;
+    background: #14AFD1;
+    border-radius: 50%;
+}
+
+.pwa-breadcrumb-item-active {
+    background: #14AFD1;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    color: white;
+}
+
+
+.pwa-group-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+    width:50px ;
+}
+
+.pwa-pag-btn-left, 
+.pwa-pag-btn-right {
+    height: 24px;
+    width: 25px;
+    border-radius: 3px;
+    border: 1px solid #A1DFED;
+    background: #D0EFF6;    
+    display: flex;
+}
+
+.pwa-pag-btn-left:hover, 
+.pwa-pag-btn-right:hover {
+    background: #14AFD1;
+}
+
+.pwa-pag-btn-left-skip{/*Ajusta o espaçamento entre os botões*/
+    height: 24px;
+    display: flex;
+}
+.pwa-pag-btn-right-skip{/*Ajusta o espaçamento entre os botões*/
+    height: 24px;
+    display: flex;
+}
+.pwa-pag-btn-left img{/*Ajusta a seta dentro do botão azul*/
+    margin-left: 6px;
+}
+.pwa-pag-btn-right img{/*Ajusta a seta dentro do botão azul*/
+    margin-left: 7px;
+}
+
+
+
