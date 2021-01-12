@@ -1,33 +1,56 @@
 {
     "--prepara-header": component =>{
-        var usuario = document.getElementById('avatar-modal');
-        var notificacao = document.getElementById('button-notification');
+        var divUsuarioDesktop = document.getElementById('avatar-modal');
+        var botaoNotificacao = document.getElementById('button-notification');
+        var menuBarrasMobile = document.getElementById('menu-header-bar');
         
-        var modalUsuario = document.getElementsByClassName('modal-desktop-user')[0];
-        var modalNotificacao = document.getElementsByClassName('pwa-modal-notification-container')[0];
+        var modaldivUsuarioDesktop = document.getElementsByClassName('modal-desktop-user')[0];
+        var modalbotaoNotificacao = document.getElementsByClassName('pwa-modal-notification-container')[0];
+        var modaldivUsuarioMobileDesktop = document.getElementById('modal-menu-user');
+        var itemsMenu = document.getElementsByClassName('menu-item');
 
         // entrada de eventos
-        usuario.addEventListener("mouseenter", function(){
-            modalUsuario.classList.add("ativo");
-            modalNotificacao.classList.remove("ativo");
+        divUsuarioDesktop.addEventListener("mouseenter", function(){
+            modaldivUsuarioDesktop.classList.add("ativo");
+            modalbotaoNotificacao.classList.remove("ativo");
         })
-        notificacao.addEventListener('click', function(){
-            modalNotificacao.classList.toggle("ativo");
-            modalUsuario.classList.remove("ativo");
+        botaoNotificacao.addEventListener('click', function(){
+            modalbotaoNotificacao.classList.toggle("ativo");
+            modaldivUsuarioDesktop.classList.remove("ativo");
+            modaldivUsuarioMobileDesktop.classList.remove('ativo');
         })
 
+        for(var i=0; i < itemsMenu.length; i++){
+            itemsMenu[i].addEventListener("click", function(){
+                modaldivUsuarioMobileDesktop.classList.remove('ativo')
+            })
+        }
+
+        menuBarrasMobile.addEventListener("click", function(){
+            controlaMenudivUsuarioDesktop();
+        })
+
+
         // saida de eventos
-        modalUsuario.addEventListener("mouseleave", function(){
+        modaldivUsuarioDesktop.addEventListener("mouseleave", function(){
             this.classList.remove("ativo");
         })
-        modalUsuario.addEventListener("click", function(){
+        modaldivUsuarioDesktop.addEventListener("click", function(){
             this.classList.remove("ativo");
         })
-        modalNotificacao.addEventListener("mouseleave", function(){
+        modalbotaoNotificacao.addEventListener("mouseleave", function(){
             this.classList.remove("ativo");
         })
-        modalNotificacao.addEventListener("click", function(){
+        modalbotaoNotificacao.addEventListener("click", function(){
             this.classList.remove("ativo");
         })
+
+
+        function controlaMenudivUsuarioDesktop(){
+            modaldivUsuarioMobileDesktop.classList.toggle('ativo')
+            menuBarrasMobile.classList.toggle('close')
+
+            modalbotaoNotificacao.classList.remove('ativo');
+        }
     }
 }
