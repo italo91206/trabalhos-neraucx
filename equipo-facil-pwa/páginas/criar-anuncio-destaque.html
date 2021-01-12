@@ -1,0 +1,259 @@
+<main id="criar-anuncio-destaque" class="pwa-ad-page talk-more-product" pwa-hook="criar-anuncio-prepara">
+  <section class="pwa-ad-title">
+    <span></span>
+    <h1>Anunciar</h1>
+  </section>
+
+  <section class="pwa-ad-category-desktop">
+    <div class="container">
+      <div class="title-section">
+        <h2>Anunciando Autoclave Amora 04 Litros Inox Cristófoli</h2>
+        <p>Passo 4 de 4</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-fast-buy">
+    <div class="container">
+      <h3>Deseja vender seu equipo mais rápido?</h3>
+    </div>
+  </section>
+
+  <!-- Anuncios card -->
+  <div class="bg-ad-equipo-cards">
+    <div class="ad-equipo-cards-container">
+
+      <div class="ad-equipo-card">
+        <span></span>
+        <div>
+          <p>Aumente a exposição do seu anúncio.</p>
+        </div>
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+
+    <h3>Como você deseja destacar o seu anúncio</h3>
+
+    <div class="card-type-ad-group">
+      <div class="card-type-ad " id="card-type-ad-free">
+        <h6>Anúncio Grátis</h6>
+        <p>Exibição: 30, 90 ou 180 dias
+          Taxa fixa de venda: 4%</p>
+        <span>Sem comissão sobre a venda</span>
+      </div>
+
+      <div class="card-type-ad" id='card-type-ad-post-paid'>
+        <h6>Anúncio Pós-pago</h6>
+        <p>Exibição: 30 dias
+          Taxa fixa de venda: 4%</p>
+        <span>+ Comissão fixa sobre a venda
+          (custo descontado na venda)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anuncio gratis-->
+  <div class="bg-super-destaque">
+    <div class="pwa-super-destaque-ad">
+      <!-- Sections de tipos de anuncios-->
+      <section class="s-super-destaque-description">
+        <div class="d-super-icon-info">
+          <span></span>
+          <strong>SuperDestaque</strong>
+          <p>Visibilidade altíssima</p>
+        </div>
+        <div class="d-super-description">
+          <p>Escolha o tempo de exibição
+            Selo de <strong>SuperDestaque</strong>
+
+            Anúncio volta ao topo <strong>7x</strong>
+            Galeria de <strong>SuperDestaque</strong>
+          </p>
+          <span>comissão sobre valor anunciado</span>
+        </div>
+        <div class="d-super-description desktop">
+          <div>
+
+            <p>Escolha o tempo de exibição
+              Selo de <strong>SuperDestaque</strong>
+            </p>
+            <span>comissão sobre valor anunciado</span>
+          </div>
+          <p>
+            Anúncio volta ao topo <strong>7x</strong>
+            Galeria de <strong>SuperDestaque</strong>
+          </p>
+        </div>
+      </section>
+      <section class='s-days-unlock'>
+        <h6>Por quantos dias você deseja destavar?</h6>
+        <div class='input-container  input-content'>
+          <div class="select-content">
+            <select>
+              <option value="" selected disabled hidden>Selecione</option>
+              <option value="">2020</option>
+              <option value="">2</option>
+            </select>
+          </div>
+          <button class="button-primary">selecionar destaque</button>
+        </div>
+      </section>
+
+      <div class="d-pay-confirmed">
+        <span></span>
+        <p>Seu pagamento foi efetuado e está em análise.</p>
+        <p>Você será notificado a respeito da aprovação.</p>
+      </div>
+
+      <!-- Metodo de pagamento -->
+      <section class="pwa-s-pay-ad">
+        <form action="" class="input-container">
+          <h6>Escolha o método de pagamento desejado:</h6>
+          <div class="input-checkbox-modal type-method-pay">
+            <div class="box">
+              <input class="radio-input" type="radio" name="type-pay" id="pay-cartao">
+              <span class="check radio"></span>
+              <label for="pay-cartao">Cartão de crédio</label>
+            </div>
+            <div class="box">
+              <input class="radio-input" type="radio" name="type-pay" id="pay-boleto">
+              <span class="check radio"></span>
+              <label for="pay-boleto">Boleto</label>
+            </div>
+          </div>
+
+          <div class="pay-card">
+            <div class="input-group-card-name">
+              <div class="input-content width-container-50">
+                <label for="">numero do cartão</label>
+                <input type="text">
+              </div>
+
+              <div class="input-content width-container-50">
+                <label for="">nome do titular do cartão</label>
+                <span>(como está gravado no cartão)</span>
+                <input type="text" placeholder="Oque você precisa?">
+              </div>
+            </div>
+
+            <div class="d-auth-vard ">
+              <div class="d-data-valid-card width-container-70">
+                <div class="select-content width-container-50">
+                  <label for="">validade</label>
+                  <select>
+                    <option value="" selected disabled hidden>Mês</option>
+                    <option value="">branco</option>
+                    <option value="">preto</option>
+                  </select>
+                </div>
+                <div class="select-content width-container-50">
+                  <select>
+                    <option value="" selected disabled hidden>Ano</option>
+                    <option value="">branco</option>
+                    <option value="">preto</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-content">
+                <label for="">código de segurança</label>
+                <input type="text" placeholder="CVV">
+              </div>
+            </div>
+
+            <button type="button" onclick="paymentCardConcluid()" class='button-primary'>Finalizar Pagamento</button>
+          </div>
+        </form>
+        <!-- Pagamento por boleto-->
+        <div class="d-pay-boleto">
+          <p>Você precisa efetuar o pagamento deste boleto para que o seu anúncio entre nesta modalidade de destaque.
+          </p>
+
+          <div class="cod-payment">
+            <div>
+              <img pwa-src="bar-code" alt="">
+              <span>846800000016 149800691003 011012624794 920031371106</span>
+            </div>
+            <span>Copiar linha digitável</span>
+          </div>
+
+          <p>Se preferir pagar depois, o número do código de barras deste boleto estará disponível nos detalhes deste
+            anúncio, em <strong>“Ativos”</strong>.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--Anúncio Pós-pago-->
+  <div class="pwa-post-paid-container">
+    <div class="d-post-pad-card-group">
+      <div class="d-post-card ">
+        <div class="header-card">
+          <span></span>
+          <h6>Destaque</h6>
+          <p>Visibilidade alta</p>
+        </div>
+        <div class="body-card">
+          <h6>Anúncio volta ao topo 4x</h6>
+          <p>90 dias de exibição <br> Selo de <strong>Destaque</strong></p>
+          <p class="through">Galeria de SuperDestaque</p>
+          <span>11% de comissão sobre a venda</span>
+        </div>
+      </div>
+
+      <div class="d-post-card ">
+        <div class="header-card">
+          <span></span>
+          <h6>SuperDestaque</h6>
+          <p>Visibilidade altíssima</p>
+        </div>
+        <div class="body-card ">
+          <h6>Anúncio
+            volta ao topo 7x</h6>
+          <p>90 dias de exibição <br>
+            Selo de <strong>SuperDestaque</strong>
+          <p>Galeria de <strong>SuperDestaque</strong></p>
+          </p>
+          <span>14% de comissão sobre a venda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="s-payment-receipt-bg">
+    <div class="container payment-receipt">
+      <section>
+        <h5>Recebimento</h5>
+        <ul>
+          <li>
+            <p>Valor do produto</p>
+            <span>R$83.740,00</span>
+          </li>
+          <li>
+            <p>Taxa fixa de venda</p>
+            <span>-R$ 540,00 <br> (6% do valor total)</span>
+          </li>
+          <li>
+            <p>Total</p>
+            <span>R$73.740,00</span>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="how-receive">
+          <p>quando receberei este valor?</p>
+          <div class='description'>
+            <p>Prazo de frete + 10 dias úteis</p>
+            <span>(ou antes, caso o comprador
+              confirme o recebimento do equipo)</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <div class="container buttons-group">
+    <a pwa-to-page="/criar-anuncio-precificacao" class="button-secondy">Voltar</a>
+    <a pwa-to-page="/criar-anuncio-vistoria" class="button-primary">Continuar</a>
+  </div>
+</main>
