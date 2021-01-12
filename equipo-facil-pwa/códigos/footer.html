@@ -1,39 +1,53 @@
-<footer id="ef-footer">
-  <div class="footer-flex">
+<footer id="ef-footer" pwa-class="
+  { 
+    'footer-completo':    $route.name === 'home' ? true : false ,
+    'footer-resumido':    $route.name === 'criar-cadastro-pj' || 
+                                        $route.name === 'criar-cadastro-pf' || 
+                                        $route.name === 'vender-pf' ||  
+                                        $route.name === 'criar-anuncio-informacoes'  || 
+                                        $route.name === 'criar-anuncio' || 
+                                        $route.name === 'criar-anuncio-inicio' ||
+                                        $route.name === 'criar-anuncio-precificacao' ||
+                                        $route.name === 'criar-anuncio-destaque' ||
+                                        $route.name === 'criar-anuncio-vistoria' ||
+                                        $route.name === 'criar-anuncio-resumo' ||
+                                        $route.name === 'criar-anuncio-concluido' ? true: false
+  }
+  
+  ">
 
-    <div class="pwa-logo-eqp-footer">
+  <!-- CONTAINER -->
+  <section class="container flex">
+
+    <div class="footer-logo">
       <a pwa-to-page="">
         <img pwa-src="logo-equipofacil-branco" alt="Logo Equpo Fácl - Branco">
       </a>
     </div>
+    
+    <ul class="footer-list">
+      <li><a pwa-to-page="/">Compras</a></li>
+      <li><a pwa-to-page="/">Anúncios</a></li>
+      <li><a pwa-to-page="/">Vender</a></li>
+      <li><a pwa-to-page="/">Política de anúncios</a></li>
+    </ul>
 
-    <div class="container footer-item-flex">
-      <ul class="pwa-list-footer">
-        <li><a pwa-to-page="/">Compras</a></li>
-        <li><a pwa-to-page="/">Anúncios</a></li>
-        <li><a pwa-to-page="/">Vender</a></li>
-        <li><a pwa-to-page="/">Política de anúncios</a></li>
-      </ul>
+    <ul class="footer-list">
+      <li><a pwa-to-page="/">Dúvidas frequentes</a></li>
+      <li><a pwa-to-page="/">Contato</a></li>
+      <li><a pwa-to-page="/">Quem Somos</a></li>
+    </ul>
 
-      <ul class="pwa-list-footer">
-        <li><a pwa-to-page="/">Dúvidas frequentes</a></li>
-        <li><a pwa-to-page="/">Contato</a></li>
-        <li><a pwa-to-page="/">Quem Somos</a></li>
-      </ul>
-    </div>
-
-
-    <div class="pwa-redes-footer">
+    <div class="footer-redes-sociais">
       <a pwa-to-page="/"><img pwa-src="icon-facebook" alt="Logo Facebook"></a>
       <a pwa-to-page="/"><img pwa-src="icon-instagram" alt="Logo Instagram"></a>
       <a pwa-to-page="/"><img pwa-src="icon-whats" alt="Logo WhatsApp"></a>
     </div>
+  </section>
 
-  </div>
-
-  <div class="container-fluid nerau">
-    <a href="https://www.nerau.com.br/">
+  <section class="container-fluid nerau">
+    <a pwa-to-page="https://www.nerau.com.br/" target="_blank">
       <img pwa-src="logo-nerau" alt="Logo Nerau">
     </a>
-  </div>
+  </section>
 </footer>

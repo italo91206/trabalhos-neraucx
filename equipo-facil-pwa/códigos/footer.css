@@ -87,7 +87,7 @@ footer .container a {
 	align-items: center;
 }
 
-.pwa-redes-footer img:first-child {
+.footer-redes-sociais img:first-child {
 	margin-left: 25px;
 }
 
@@ -118,30 +118,63 @@ footer .equipoF-footer {
 	justify-content: center;
 }
 
+/* FOOTER RESULMIDO */
+#ef-footer.footer-resumido ul.footer-list,
+#ef-footer.footer-resumido .footer-redes-sociais {
+    display: none !important;
+}
+
+#ef-footer.footer-resumido .container.flex {
+    justify-content: center !important;
+}
+
+
+/*==================
+    RESPONSIVE
+==================*/
 @media only screen and (max-width: 600px) {
 	.footer-flex {
 		flex-direction: column;
 	}
+    
 	.footer-item-flex {
 		order: 1;
 	}
-	.pwa-redes-footer {
+
+	.footer-redes-sociais {
 		order: 2;
 		height: 80px;
 		width: 100%;
 		border-top: 1px solid #174E67;
 		border-bottom: 1px solid #174E67;
+        display: flex;
+	    justify-content: center;
+	    align-items: center;
 	}
-	.pwa-logo-eqp-footer {
+
+	.footer-logo { /*alt*/
 		order: 3;
 		height: 100px;
 		width: 100%;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		margin-left: -10px;
-		margin-top: 0;
+        display: flex;
 	}
+
+    footer .container a {
+        width: 132px;
+    }
+
+    footer .container .footer-logo a img {
+        width: 100%;
+    }
+
+    /* FOOTER RESULMIDO */
+    #ef-footer.footer-resumido .container.flex  {
+        padding-top: 0px !important;
+        padding-bottom: 18px !important;
+    }
 }
 
 
@@ -155,12 +188,12 @@ footer .equipoF-footer {
 		order: 1;
 		width: 100%;
 	}
-	.pwa-redes-footer {
+	.footer-redes-sociais {
 		order: 2;
 		height: 80px;
-		width: 100%;
+		/*width: 100%;
 		border-top: 1px solid #174E67;
-		border-bottom: 1px solid #174E67;
+		border-bottom: 1px solid #174E67;*/
 	}
 	.pwa-logo-eqp-footer {
 		order: 3;
@@ -234,10 +267,10 @@ footer .equipoF-footer {
 	.footer-item-flex {
 		margin-bottom: 4pc;
 	}
-	.pwa-logo-eqp-footer img {
+/*	.footer-logo img {
 		height: 200px;
 		width: 200px;
-	}
+	}*/
 	.pwa-redes-footer img {
 		height: 30px;
 		width: 30px;
@@ -272,8 +305,8 @@ footer .equipoF-footer {
 	.footer-item-flex {
 		margin-bottom: 4pc;
 	}
-	.pwa-logo-eqp-footer img {
-		height: 200px;
+	.footer-logo img {
+		/*height: 200px;*/
 		width: 200px;
 	}
 	.pwa-redes-footer img {
@@ -293,4 +326,47 @@ footer .equipoF-footer {
 	footer .container a {
 		font-size: 20px;
 	}
+}
+
+.footer-list {
+    list-style: unset;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0px;
+}
+
+.footer-list li {
+    display: block;
+    margin-bottom: 35px;
+}
+
+.footer-redes-sociais a img {
+    margin-right: 24px;
+    width: 24px;
+    height: 24px;
+    transition: all .25s ease;
+}
+
+.footer-redes-sociais a:last-child {
+    margin-right: unset;
+}
+
+#ef-footer .container.flex {
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.footer-redes-sociais a img:hover {
+    transform: scale(1.1);
+    transition: all .25s ease;
+}
+
+.footer-list a:hover {
+    color: #14afd1;
+    transition: all .25s ease;
+}
+
+.footer-list a {
+    transition: all .25s ease;
 }
