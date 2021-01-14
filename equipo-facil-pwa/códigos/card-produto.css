@@ -46,16 +46,12 @@
     padding-top: 3px;
 }
 
-.pwa-card-tag-blue + .pwa-save-flag {
+.pwa-card-tag-blue {
     position: relative;
     margin-left: 165px;
     margin-top: 15px;
 }
-.pwa-save-flag {
-    position: relative;
-    margin-left: 285px;
-    margin-top: 15px;
-}
+
 /* ////////////// Imagem do card de produto/////////// */
 .pwa-card-product-img-container {
     height: 207px;
@@ -112,7 +108,6 @@
 }
 .pwa-title-card-product {
     margin-top: 18px;
-
     color: #174E67;
     font-family: Cambay;
     font-size: 19px;
@@ -121,6 +116,8 @@
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
+    height: 46px;
+    overflow: hidden;
 }
 .pwa-card-price-blue-small {
     margin-top: 10px;
@@ -252,6 +249,35 @@
     padding-top: 25px;
 }
 
+.favorite-product {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.ef-product-card {
+    position: relative;
+    height: 439px;
+}
+
+.ef-card-tag-blue {
+    line-height: 17px;
+    padding-top: 7px;
+    text-align: center;
+    height: 29px;
+    width: 129px;
+    background: #0098ED;
+    color: #FFFFFF;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+}
+
+.ef-card-header {
+    background: #fff;
+}
+
 
 /* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
 @media only screen and (min-width: 768px) {
@@ -268,15 +294,11 @@
         padding-top: 8px;
     }
     
-    .pwa-card-tag-blue  + .pwa-save-flag {
+    .pwa-card-tag-blue {
         margin-left: 110px;
     }
-    .pwa-save-flag {
-        margin-left: 230px;
-    }
-
     .pwa-card-product-img-container {
-        height: 240px;
+        /* height: 240px; */
         width: 100%;
         padding-top: 30px;
     }
