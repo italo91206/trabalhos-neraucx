@@ -1,15 +1,17 @@
 <main id="nb-category-page">
   <section class="block-header-pages">
     <div id="nb-category-img-holder" class="background-block-header-pages hide-only-small">
-      <img pwa--if="category.id == 56" pwa-src="category-image-saida-praia"> 
-      <img pwa--if="category.id == 57" pwa-src="category-image-biquini"> 
-      <img pwa--if="category.id == 58" pwa-src="category-image-busto"> 
-      <img pwa--if="category.id == 59" pwa-src="category-image-plus"> 
-      <img pwa--if="category.id == 60" pwa-src="category-image-shorts"> 
-      <img pwa--if="category.id == 61" pwa-src="category-image-maio"> 
-      <img pwa--if="category.id == 79" pwa-src="category-image-tanga"> 
-      <img pwa--if="category.id != 56 && category.id != 57 && category.id != 58 && category.id != 59  && category.id != 60  && category.id != 61  && category.id != 79" pwa-src="bcg-title-pages-3">
-      <!-- <img pwa-src="category-image-wishlist">  -->
+      <img pwa--if="category.id == 56" pwa-src="category-image-saida-praia">
+      <img pwa--if="category.id == 57" pwa-src="category-image-biquini">
+      <img pwa--if="category.id == 58" pwa-src="category-image-busto">
+      <img pwa--if="category.id == 59" pwa-src="category-image-plus">
+      <img pwa--if="category.id == 60" pwa-src="category-image-shorts">
+      <img pwa--if="category.id == 61" pwa-src="category-image-maio">
+      <img pwa--if="category.id == 79" pwa-src="category-image-tanga">
+      <img
+        pwa--if="category.id != 56 && category.id != 57 && category.id != 58 && category.id != 59  && category.id != 60  && category.id != 61  && category.id != 79"
+        pwa-src="bcg-title-pages-3">
+      <!-- <img pwa-src="category-image-wishlist"> -->
     </div>
 
     <div class="wrapper-block-header-pages">
@@ -17,27 +19,34 @@
         <div class="content-block-header-pages span7 m-span10 s-span12">
           <ul class="breadcrumbs">
             <li><a pwa-to-page="home">Home</a></li>
-            <li><b>New Beach</b></li>
+            <li><b>{{ category.name }}</b></li>
           </ul>
 
-          <h1 class="title">New Beach</h1>
-          <p class="description">
+          <h1 class="title">{{ category.name }}</h1>
+          <!-- <p class="description">
             {{category.MetaTagDescription}}
-          </p>
+          </p> -->
 
-          <ul class="list-subcategories">
-            <li><a pwa-to-page="/new-beach/legging">Legging</a></li>
-            <li><a pwa-to-page="/new-beach/cropped">Cropped</a></li>
-            <li><a pwa-to-page="/new-beach/jaqueta-e-colete">Jaqueta e Colete</a></li>
-            <li><a pwa-to-page="/new-beach/calça">Calça</a></li>
-            <li><a pwa-to-page="/new-beach/regata">Regata</a></li>
-            <li><a pwa-to-page="/new-beach/macacao">Macacão</a></li>
-            <li><a pwa-to-page="/new-beach/top">Top</a></li>
-            <li><a pwa-to-page="/new-beach/shorts">Shorts</a></li>
-            <li><a pwa-to-page="/new-beach/plus-size">Plus Size</a></li>
-            <li><a pwa-to-page="/new-beach/t-shirt">T-shirt</a></li>
-            <li><a pwa-to-page="/new-beach/saia">Saia</a></li>
-          </ul>
+
+          <pwa-subcategory-list>
+            <ul class="list-subcategories">
+              <li pwa-each-subcategory>
+                <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
+              </li>
+            </ul>
+          </pwa-subcategory-list>
+
+          <!-- <ul class="list-subcategories" pwa--if="$route.path.includes('feminino')">
+            <li><a pwa-to-page="/new-beach/feminino/biquini">Biquini</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/maio-e-body">Maio e Body</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/saida-de-praia">Saida de Praia</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/busto">Busto</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/plus-size">Plus Size</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/shorts">Shorts</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/t-shirt">T-Shirts</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/tanga">Tanga</a></li>
+            <li><a pwa-to-page="/new-beach/feminino/vestido">Vestido</a></li>
+          </ul> -->
 
           <!-- <a href="#" class="link-all-products">
             Ver todos os produtos 
@@ -119,90 +128,104 @@
       <div class="span2 hide-only-small"></div>
     </div>
   </section> -->
+  <section class="block-products container">
+    <div class="wrapper wrapper-gap">
+      <div class="span3">
+        <div class="bar-filter">
+          <p>Filtros</p>
+        </div>
 
-  <section id="nb-pagina-pesquisa-resultados" class="nb-container nb-flex">
-    <div id="nb-coluna-esquerda">
-      <div class="nb-pesquisa-filtros">
-        <p class="nb-coluna-filtros-titulo">Filtros</p>
+        <ul class="filter">
+          <li>
+            <pwa-tags-filter>
+              <div class="nb-filters-header nb-relative">
+                <h2>Filtros selecionados</h2>
+                <div pwa-has-filters class="nb-remove__filter">
+                  <div pwa-each-filter class="nb-remove__filter-item">
+                    <span pwa--if="filter.value.length <= 3">{{ filter.value }}</span>
+                    <img pwa--if="filter.value.length > 3"
+                      pwa-src="`https://td0295.vteximg.com.br/arquivos/${filter.value.replace(' ', '-').toLowerCase().trim()}.jpg`" />
+                    <a pwa-remove-filter="click"><i class="fa fa-times"></i></a>
+                  </div>
+                </div>
 
-        <ul class="list-filter">
-          <!-- Filtro de tamanho -->
-          <li id="filter-size" onclick="openSubmenuFilterMobile(this)">
-            <span class="nb-filter-option-tittle">Tamanho <span class="fa fa-chevron-down"></span></span>
-            <pwa-attribute-filter attribute="items.Tamanho" static multiple class="submenu-filter" id="submenu-filter-size">
+                <div pwa-not-filters class="nb-filters-placeholder">
+                  <h3>Nenhum filtro selecionado</h3>
+                </div>
+              </div>
+            </pwa-tags-filter>
+          </li>
+          <li>
+            <pwa-attribute-filter attribute="items.Tamanho" force-order="PP,P,M,G,GG" sort="+" static multiple>
+              <strong pwa-has-filters>Tamanho</strong>
               <ul pwa-has-filters>
                 <li pwa-each-filter>
-                  <input pwa-filter-input="checked" name="tamanho" type="checkbox"> <span class="checkbox-item-filter"></span> {{ filter.label }} 
+                  <input pwa-filter-input="checked" name="tamanho" type="checkbox">
+                  <label>{{ filter.label }}</label>
                 </li>
               </ul>
             </pwa-attribute-filter>
           </li>
-
-          <!-- Filtro de cores -->
-          <li id="filter-size" onclick="openSubmenuFilterMobile(this)">
-            <span class="nb-filter-option-tittle">Cores <span class="fa fa-chevron-down"></span></span>
-            <pwa-attribute-filter attribute="items.Cor" static multiple class="submenu-filter" id="submenu-filter-size">
-              <ul pwa-has-filters>
-                <li pwa-each-filter><input pwa-filter-input="checked" name="tamanho" type="checkbox">
-                  <span class="checkbox-item-filter"></span> {{ filter.label }}
+          <li>
+            <pwa-attribute-filter attribute="items.Cor" static multiple>
+              <strong pwa-has-filters>Cor</strong>
+              <ul class="filter-colors" pwa-has-filters>
+                <li pwa-each-filter>
+                  <input pwa-filter-input="checked" name="cor" type="checkbox">
+                  <img
+                    pwa-src="`https://td0295.vteximg.com.br/arquivos/${filter.label.replace(' ', '-').toLowerCase().trim()}.jpg`" />
                 </li>
               </ul>
             </pwa-attribute-filter>
           </li>
         </ul>
       </div>
-    </div>
 
-    <div id="nb-coluna-direita">
-      <section class="bar-filter nb-flex">
-        <div class="total-results nb-flex">
-          <p style="display: none;">Encontramos</p><b>{{ $$paginate.count }} PEÇA(S)</b><p>que fazem o seu estilo</p>
+      <div class="span9">
+        <div class="bar-filter filter-order--found">
+          <p>Encontramos <b>{{ $$paginate.count }} PEÇAS</b> que fazem o seu estilo</p>
+
+          <div class="bar-filter-select">
+            <pwa-manual-filter>
+              <label>Ordenar por:</label>
+              <select pwa-filter-input name="filter">
+                <option value="releaseDate:-">Lançamentos</option>
+                <option value="ranking:-">Mais vendidos</option>
+                <option value="price:+">Mais baratos</option>
+                <option value="price:-">Mais caros</option>
+              </select>
+            </pwa-manual-filter>
+          </div>
         </div>
+        <pwa-result-list size="32" automatic-scrolls="1">
+          <div>
+            <div class="wrapper wrapper-gap">
+              <p class="span12" pwa-not-result>Sem resultados para mostrar</p>
 
-        <div class="btn-filter-compact span12 show-only-small text-center" onclick="openFilterMobile()">
-          <b><img pwa-src="icon-plus"> Ver filtros</b>
-        </div>
-
-        <div class="container-bar-filter span8">
-          <div class="bcg-container-bar-filter show-only-small" onclick="closeFilterMobile()"></div>
-          <div class="wrapper-container-bar-filter">
-            <div class="btn-filter-compact close-btn-filter-compact span12 show-only-small text-center"
-              onclick="closeFilterMobile()">
-              <b><img pwa-src="icon-plus"> Fechar</b>
+              <div pwa-each-product class="span4 s-span12">
+                <pwa-product-card>
+              </div>
             </div>
-            
-          </div>
-        </div>
 
-        <!-- Filtro de ordenação (maior preço, menor preço) -->
-        <div id="filter-order" onclick="openSubmenuFilterMobile(this)">
-          <p class="nb-flex">Ordenar por <b>destaques</b><span class="fa fa-chevron-down"></span></p>
-          <div class="submenu-filter" id="submenu-filter-order">
-            <ul>
-              <li><span class="checkbox-item-filter"></span> Maior Preço</li>
-              <li><span class="checkbox-item-filter"></span> Menor Preço</li>
-            </ul>
+            <pwa-hidden>
+              <div pwa-is-loading class="my-loader" style="position:relative;height:50px;">
+                <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </pwa-hidden>
           </div>
-        </div>
-      </section>
 
-      <pwa-product-list size="36" class="block-list-products">
-        <pwa-hidden>
-          <div pwa-is-loading class="my-loader" style="position:relative;height:50px;">
-            <div class="lds-facebook" style="top: calc(50% - 32px); left: calc(50% - 32px);">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+          <div pwa-not-loading>
+            <button class="load-more" pwa-not-last-page pwa-load-more>
+              <img pwa-src="icon-plus"> Ver mais peças
+            </button>
           </div>
-        </pwa-hidden>
-    
-        <div class="list-block-list-produtos container wrapper">
-          <div pwa-each-product class="span3 s-span12">
-            <pwa-product-card>
-          </div>
-        </div>
-      </pwa-product-list>
+        </pwa-result-list>
+      </div>
     </div>
   </section>
+
 </main>
