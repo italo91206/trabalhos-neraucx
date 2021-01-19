@@ -3,7 +3,7 @@
     <p class="pwa-cover-text">Consultório Odontológico</p>
   </section>
 
-  <!-- Cards Categorias -->
+  <!-- Slide de cards Categorias -->
   <section class="container categorias isdesktop">
     <h4>Categorias relacionadas</h4>
     <div id="slide-categorias-listagem-1" class="swiper-container categorias-card" pwa-hook="slide-categorias-listagem-1">
@@ -233,7 +233,7 @@
 
         <!-- Ano de fabricação -->
         <section class="container ef-modal-search-for-year input-select-modal">
-          <h6 class="pwa-subtitle-modal">Ano de frabricação</h6>
+          <h6 class="pwa-subtitle-modal">Ano de fabricação</h6>
           <form class="pwa-box-input">
             <div class="pwa-select" name="year-fabrication" id="year-fabrication">
               <select class="pwa-input-padrao" name="banco" id="Banco">
@@ -353,13 +353,17 @@
       <section class="pwa-filters" pwa-hook="prepara-filtros">
         <!-- Bloco dos filtros selecionados -->
         <div class="pwa-filter">
-          <h6>Filtros ativos</h6>
-          <div class="ef-filters-container">
-            <div class="pwa-filter-item">Autoclave<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
-            <div class="pwa-filter-item">Cristófoli<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
-            <div class="pwa-filter-item">Maringá/PR<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
-            <div class="pwa-filter-item">De R$ 2.000 até R$ 5.000<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
-          </div>
+          <pwa-tags-filter>
+            <h6>Filtros ativos</h6>
+            <div pwa-has-filters class="ef-filters-container">
+              <div pwa-each-filter class="pra-cada-filtro">
+                <div pwa-remove-filter="click" class="pwa-filter-item">
+                  {{ filter.value }}
+                  <span class="pwa-closefilter"><img pwa-src="x" alt=""></span>
+                </div>
+              </div>
+            </div>
+          </pwa-tags-filter>
         </div>
 
         <!-- Botões de filtro que abrem os modais-->
@@ -393,9 +397,9 @@
 
         </section>
 
-        <!-- Modal de Filtrar -->
+        <!-- Modal de filtros -->
         <div id="modal-Filter" class="pwa-modal-advanced-search-listing-container">
-          <img class="pwa-close-modal-filter" pwa-src="X-big" alt="Fechar">
+          <img class="pwa-close-modal-filter" pwa-src="x-big" alt="Fechar">
 
           <!-- Palavras chaves -->
           <section class="container ef-modal-search-for-key-words">
@@ -417,336 +421,228 @@
             </div>
           </section>
 
-          <!-- Busca pela marca do produto-->
+          <!-- Busca pela marca do produto -->
           <section class="container ef-modal-search-for-marca">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Marca</h6>
-            </div>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
 
-            <div class="pwa-panel">
-              <div class="pwa-input-with-icon">
-                <input type="text" id="input-brand" onkeyup="searchBrand()">
-                <button><span></span></button>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Marca</h6>
               </div>
 
-              <div class="pwa-cards-mark-container ismobile">
-                <div class="swiper-wrapper" id="search-brand">
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark select">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="cristofoli" alt="Cristofoli">
-                      </div>
-                      <span class="pwa-card-mark-text">Cristófoli</span>
-                    </div>
-
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="techline" alt="Techline">
-                      </div>
-                      <span class="pwa-card-mark-text">TechLine</span>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="welmy" alt="Welmy">
-                      </div>
-                      <span class="pwa-card-mark-text">Welmy</span>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="cristofoli" alt="Cristofoli">
-                      </div>
-                      <span class="pwa-card-mark-text">Cristófoli</span>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="techline" alt="Techline">
-                      </div>
-                      <span class="pwa-card-mark-text">TechLine</span>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="pwa-card-mark">
-                      <div class="pwa-brand-container-img">
-                        <img pwa-src="welmy" alt="Welmy">
-                      </div>
-                      <span class="pwa-card-mark-text">Welmy</span>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- Indicadores do slide -->
-                <div class="swiper-pagination"></div>
-              </div>
-
-              <!-- Botões de filtro de marca na versão desktop -->
-
-              <div class="input-checkbox-modal ef-btns-radio-brand-desktop">
-                <div class="box">
-                  <input class="radio-input" type="radio" name="marcas" id="cristofoli">
-                  <span class="check radio"></span>
-                  <label for="cristofoli">Cristófoli</label>
+              <div pwa-has-filters class="pwa-panel">
+                <div class="pwa-input-with-icon">
+                  <input type="text" placeholder="Pesquisar Marca" id="input-marcas" onkeyup="generalFilter(this, 'filtros-marca')">
+                  <button>
+                    <img pwa-src="icon-lupa" alt="" id="procurar-marca-icon">
+                    <img pwa-src="x" alt="" id="limpar-marca-icon" style="display: none">
+                  </button>
                 </div>
 
-                <div class="box">
-                  <input class="radio-input" type="radio" name="marcas" id="techLine">
-                  <span class="check radio"></span>
-                  <label for="techLine">TechLine</label>
-                </div>
+                <!-- <div class="pwa-cards-mark-container ismobile">
+                  <div class="swiper-wrapper" id="search-brand">
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark select">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="cristofoli" alt="Cristofoli">
+                        </div>
+                        <span class="pwa-card-mark-text">Cristófoli</span>
+                      </div>
 
-                <div class="box">
-                  <input class="radio-input" type="radio" name="marcas" id="welmy">
-                  <span class="check radio"></span>
-                  <label for="welmy">Welmy</label>
-                </div>
+                    </div>
 
-                <a class="ef-see-more-filters" data-="pwa-see-more-filters">Ver Mais</a>
-                <span class="pwa-see-more-rest">
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="marcas" id="marca">
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="techline" alt="Techline">
+                        </div>
+                        <span class="pwa-card-mark-text">TechLine</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="welmy" alt="Welmy">
+                        </div>
+                        <span class="pwa-card-mark-text">Welmy</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="cristofoli" alt="Cristofoli">
+                        </div>
+                        <span class="pwa-card-mark-text">Cristófoli</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="techline" alt="Techline">
+                        </div>
+                        <span class="pwa-card-mark-text">TechLine</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="pwa-card-mark">
+                        <div class="pwa-brand-container-img">
+                          <img pwa-src="welmy" alt="Welmy">
+                        </div>
+                        <span class="pwa-card-mark-text">Welmy</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  Indicadores do slide
+                  <div class="swiper-pagination"></div>
+                </div> -->
+
+                <!-- Botões de filtro de marca na versão desktop -->
+                <div class="input-checkbox-modal" id="filtros-marca">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" class="radio-input" type="radio" name="marcas" id="cristofoli">
                     <span class="check radio"></span>
-                    <label for="marca">marca</label>
+                    <label for="cristofoli">{{ filter.label }}</label>
                   </div>
-                </span>
+
+                  <a onclick="hideAndShowFilters('filtros-marca')" class="ef-see-more-filters">Ver Mais</a>
+                </div>
               </div>
-            </div>
+
+            </pwa-attribute-filter>
           </section>
 
           <!-- Condição -->
           <section class="container ef-modal-search-for-condition-product">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Condição</h6>
-            </div>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Condição</h6>
+              </div>
 
-            <div class="pwa-panel">
-              <div class="pwa-group-input">
-                <div class="input-checkbox-modal pwa-flex">
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="condicao" id="novo-filter">
+              <div class="pwa-panel">
+                <div pwa-has-filters class="input-checkbox-modal" id="filtros-condicao">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" class="radio-input" type="radio" name="condicao" id="novo-filter">
                     <span class="check radio"></span>
-                    <label for="novo-filter">Novo</label>
+                    <label for="novo-filter">{{ filter.label }}</label>
                   </div>
 
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="condicao" id="seminovo-filter">
-                    <span class="check radio"></span>
-                    <label for="seminovo-filter">Seminovo</label>
-                  </div>
-
-                </div>
-
-                <div class="input-checkbox-modal">
-                  <div class="box">
-                    <input type="checkbox" name="condicao" id="usado-filter">
-                    <spna class="check"></spna>
-                    <label for="usado-filter" id='label-usado'>Usado
-                      <span>Produto com maid de 5 anos de uso</span>
-                    </label>
-                  </div>
-                  <div class="box">
-                    <input type="checkbox" name="condicao" id="recondicionado-filter">
-                    <span class="check"></span>
-                    <label for="recondicionado-filter">
-                      Recondicionado
-                    </label>
-                  </div>
+                  <a onclick="hideAndShowFilters('filtros-condicao')" class="ef-see-more-filters">Ver Mais</a>
                 </div>
               </div>
-            </div>
+            </pwa-attribute-filter>
           </section>
 
           <!-- Cor -->
           <section class="container ef-modal-search-for-color input-select-modal">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Cor</h6>
-            </div>
-
-            <div class="pwa-panel">
-              <form class="pwa-box-input">
-                <div class="pwa-select">
-                  <select class="pwa-input-padrao" name="cor" id="Banco">
-                    <option value="branco">Branco</option>
-                    <option value="preto">Preto</option>
-                    <option value="verde">Verde</option>
-                  </select>
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.29569 9.71L6.88525 12.3C7.27519 12.69 7.90508 12.69 8.29501 12.3L10.8846 9.71C11.5145 9.08 11.0645 8 10.1747 8H4.99557C4.10573 8 3.6658 9.08 4.29569 9.71Z"
-                      fill="#14AFD1" />
-                    <path
-                      d="M4.29569 4.8825L6.88525 2.2925C7.27519 1.9025 7.90508 1.9025 8.29501 2.2925L10.8846 4.8825C11.5145 5.5125 11.0645 6.5925 10.1747 6.5925H4.99557C4.10573 6.5925 3.6658 5.5125 4.29569 4.8825Z"
-                      fill="#14AFD1" />
-                  </svg>
-                </div>
-              </form>
-
-              <!-- Botões de filtro de cor na versão desktop -->
-              <div class="input-checkbox-modal ef-btns-radio-brand-desktop">
-                <div class="box">
-                  <input class="radio-input" type="radio" name="cor" id="branco">
-                  <span class="check radio"></span>
-                  <label for="branco">Branco</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="cor" id="bege">
-                  <span class="check radio"></span>
-                  <label for="bege">Bege</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="cor" id="cinza">
-                  <span class="check radio"></span>
-                  <label for="cinza">Cinza</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="cor" id="lilas">
-                  <span class="check radio"></span>
-                  <label for="lilas">Lilás</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="cor" id="marfim">
-                  <span class="check radio"></span>
-                  <label for="marfim">Marfim</label>
-                </div>
-
-                <a class="ef-see-more-filters" data-="pwa-see-more-filters">Ver Mais</a>
-                <span class="pwa-see-more-rest">
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="cor" id="preto">
-                    <span class="check radio"></span>
-                    <label for="preto">Preto</label>
-                  </div>
-                </span>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Cor</h6>
               </div>
-            </div>
+
+              <div class="pwa-panel">
+                <!-- isso aqui é mobile -->
+                <div pwa-has-filters class="pwa-box-input ismobile">
+                  <div class="pwa-select">
+                    <select class="pwa-input-padrao" name="select-cor">
+                      <option value="" selected>-- selecionar --</option>
+                      <option pwa-each-filter pwa-filter-input="selected">{{ filter.label }}</option>
+                    </select>
+
+                    <img pwa-src="select-input-icon" alt="" class="select-input-icon">
+                  </div>
+                </div>
+
+                <!-- Botões de filtro de cor na versão desktop -->
+                <div pwa-has-filters class="input-checkbox-modal isdesktop" id="filtros-cor">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" class="radio-input" type="radio" name="cor" id="branco">
+                    <span class="check radio"></span>
+                    <label for="branco">{{ filter.label }}</label>
+                  </div>
+
+                  <a onclick="hideAndShowFilters('filtros-cor')" class="ef-see-more-filters">Ver Mais</a>
+                </div>
+              </div>
+
+            </pwa-attribute-filter>
           </section>
 
           <!-- Ano de fabricação -->
           <section class="container ef-modal-search-for-year input-select-modal">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Ano de frabricação</h6>
-            </div>
-            <div class="pwa-panel">
-              <form class="pwa-box-input">
-                <div class="pwa-select" name="year-fabrication" id="year-fabrication">
-                  <select class="pwa-input-padrao" name="banco" id="Banco">
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                    <option value="2018">2018</option>
-                  </select>
-                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.29569 9.71L6.88525 12.3C7.27519 12.69 7.90508 12.69 8.29501 12.3L10.8846 9.71C11.5145 9.08 11.0645 8 10.1747 8H4.99557C4.10573 8 3.6658 9.08 4.29569 9.71Z"
-                      fill="#14AFD1" />
-                    <path
-                      d="M4.29569 4.8825L6.88525 2.2925C7.27519 1.9025 7.90508 1.9025 8.29501 2.2925L10.8846 4.8825C11.5145 5.5125 11.0645 6.5925 10.1747 6.5925H4.99557C4.10573 6.5925 3.6658 5.5125 4.29569 4.8825Z"
-                      fill="#14AFD1" />
-                  </svg>
-                </div>
-              </form>
-
-              <!-- Botões de filtro de ano de fabricação na versão desktop -->
-              <div class="input-checkbox-modal ef-btns-radio-brand-desktop">
-                <div class="box">
-                  <input class="radio-input" type="radio" name="ano_fabricacao" id="2020">
-                  <span class="check radio"></span>
-                  <label for="2020">2020</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="ano_fabricacao" id="2019">
-                  <span class="check radio"></span>
-                  <label for="2019">2019</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="ano_fabricacao" id="2018">
-                  <span class="check radio"></span>
-                  <label for="2018">2018</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="ano_fabricacao" id="2017">
-                  <span class="check radio"></span>
-                  <label for="2017">2017</label>
-                </div>
-
-                <div class="box">
-                  <input class="radio-input" type="radio" name="ano_fabricacao" id="2016">
-                  <span class="check radio"></span>
-                  <label for="2016">2016</label>
-                </div>
-
-                <a class="ef-see-more-filters" data-="pwa-see-more-filters">Ver Mais</a>
-                <span class="pwa-see-more-rest">
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="ano_fabricacao" id="2015">
-                    <span class="check radio"></span>
-                    <label for="2015">2015</label>
-                  </div>
-                </span>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Ano de fabricação</h6>
               </div>
-            </div>
+
+              <div pwa-has-filters class="pwa-panel">
+                <!-- versão mobile -->
+                <div class="pwa-select ismobile" name="year-fabrication" id="year-fabrication">
+                  <select class="pwa-input-padrao" name="select-ano-fabricacao">
+                    <option value="" selected>-- selecionar --</option>
+                    <option pwa-each-filter pwa-filter-input="selected">{{ filter.label }}</option>
+                  </select>
+                  
+                  <img pwa-src="select-input-icon" alt="" class="select-input-icon">
+                </div>
+
+                <!-- Botões de filtro de ano de fabricação na versão desktop -->
+                <div class="input-checkbox-modal isdesktop" id="filtros-ano-fabricacao">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" class="radio-input" type="radio" name="ano_fabricacao">
+                    <span class="check radio"></span>
+                    <label for="">{{ filter.label }}</label>
+                  </div>
+
+                  <a onclick="hideAndShowFilters('filtros-ano-fabricacao')" class="ef-see-more-filters">Ver Mais</a>
+                </div>
+              </div>
+            </pwa-attribute-filter>
           </section>
 
           <!-- Modalidade -->
           <section class="container ef-modal-search-modality input-checkbox-modal">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Modalidade</h6>
-            </div>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Modalidade</h6>
+              </div>
 
-            <div class="pwa-panel">
-              <div class="input-checkbox-modal input-checkbox-contant">
-                <div class="box">
-                  <input type="checkbox" name="modalidade" id="modality-destaque-filter" value='destaque'>
-                  <span class="check"></span>
-                  <label for="modality-destaque-filter">Destaque</label>
-                </div>
-                <div class="box">
-                  <input type="checkbox" name="modalidade" id='modality-superdestaque-filter' value='superdestaque'>
-                  <span class="check"></span>
-                  <label for="modality-superdestaque-filter">SuperDestaque</label>
+              <div pwa-has-filters class="pwa-panel">
+                <div class="input-checkbox-modal input-checkbox-contant" id="filtros-modalidade">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" type="checkbox" name="modalidade" id="modality-destaque-filter" value='destaque'>
+                    <span class="check"></span>
+                    <label for="modality-destaque-filter">{{ filter.label }}</label>
+                  </div>
+
+                  <a onclick="hideAndShowFilters('filtros-modalidade')" class="ef-see-more-filters">Ver Mais</a>
                 </div>
               </div>
-            </div>
+            </pwa-attribute-filter>
           </section>
 
           <!-- Certificado -->
           <section class="container ef-modal-search-certificate input-checkbox-modal">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Certificado</h6>
-            </div>
+            <pwa-attribute-filter attribute="categories.name" static multiple>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Certificado</h6>
+              </div>
 
-            <div class="pwa-panel">
-              <div class="input-checkbox-modal input-checkbox-contant">
-                <div class="box">
-                  <input type="checkbox" name="certificate" id="certificate-none-filter" value='destaque'>
-                  <span class="check"></span>
-                  <label for="certificate-none-filter">Nenhum</label>
-                </div>
+              <div pwa-has-filters class="pwa-panel">
+                <div class="input-checkbox-modal input-checkbox-contant" id="filtros-certificado">
+                  <div pwa-each-filter class="box">
+                    <input pwa-filter-input="checked" type="checkbox" name="certificate" id="certificate-none-filter" value='destaque'>
+                    <span class="check"></span>
+                    <label for="certificate-none-filter">{{ filter.label }}</label>
+                  </div>
 
-                <div class="box">
-                  <input type="checkbox" name="certificate" id='certificate-true-filter' value='superdestaque'>
-                  <span class="check"></span>
-                  <label for="certificate-true-filter">Vistoriado</label>
+                  <a onclick="hideAndShowFilters('filtros-certificado')" class="ef-see-more-filters">Ver Mais</a>
                 </div>
               </div>
-            </div>
+            </pwa-attribute-filter>
           </section>
 
           <!-- Localização -->
@@ -755,7 +651,7 @@
               <h6 class="pwa-subtitle-modal">Localização</h6>
             </div>
 
-            <div class="pwa-panel">
+            <div  class="pwa-panel">
               <div class="pwa-input-with-icon location">
                 <input type="text">
                 <button><span></span></button>
@@ -769,34 +665,36 @@
           </section>
 
           <!-- Preço -->
-          <section class="container ef-modal-search-cost">
-            <div class="pwa-list-collapse">
-              <h6 class="pwa-subtitle-modal">Preço</h6>
-            </div>
+          <!-- <section class="container ef-modal-search-cost">
+            <pwa-price-filter>
+              <div class="pwa-list-collapse">
+                <h6 class="pwa-subtitle-modal">Preço</h6>
+              </div>
 
-            <div class="pwa-panel">
-              <div class="input-range-group">
-                <div class="pwa-input-value">
-                  <label for="to">De</label>
-                  <input type="number" name="to" id="to-value">
-                </div>
+              <div class="pwa-panel">
+                <div class="input-range-group">
+                  <div class="pwa-input-value">
+                    <label for="to">De</label>
+                    <input type="number" name="to" id="to-value">
+                  </div>
 
-                <div class="pwa-input-value">
-                  <label for="for">Até</label>
-                  <input type="number" name="for" id="for-value">
+                  <div class="pwa-input-value">
+                    <label for="for">Até</label>
+                    <input type="number" name="for" id="for-value">
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container ef-btn-filter-now">
-            <button id='button-advanced-search' type="submit">
-              <strong>filtrar agrora</strong>
-              <span>26 <span>produtos encontrados</span></span>
-            </button>
-          </section>
-
+            <section class="container ef-btn-filter-now">
+              <button id='button-advanced-search' type="submit">
+                <strong>filtrar agora</strong>
+                <span>{{ $$paginate.count }}<span>produtos encontrados</span></span>
+              </button>
+            </section>
+          </pwa-price-filter> -->
         </div>
+
         <!-- Fade do modal -->
         <div id="pwa-dropdown-fade2" class="pwa-modal-filter"></div>
       </section>
