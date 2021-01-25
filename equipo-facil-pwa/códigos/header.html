@@ -16,177 +16,184 @@
   }">
 	<div class="pwa-menu-container">
 		<div class="menu-content">
-			<a pwa-to-page="home">
-				<img pwa-src="logo-equipofacil" alt="Equipofacil">
-      </a>
 
-				<div class="search-header-container">
-					<pwa-search-form class="search-header-desktop">
-						<button><span></span></button>
-						<input pwa-search-box type="text" id="search-filter-equipo-header">
-						<div class="select-container">
-							<select name="" id="">
-              <option value="" selected>Somente em Equipo Médico</option>
-              <option value="">Somente em Equipo Médico</option>
-              <option value="">Somente em Equipo Médico</option>
-            </select>
-						</div>
-					</pwa-search-form>
+      <div class="header-menu-wrapper flex">
+        <a pwa-to-page="/" class="ismobile" pwa--if="$route.name != 'home'" id="header-get-back-button">
+          <img pwa-src="icon-arrow-left" alt="" >
+        </a>
 
-					<!-- Modal resultado pesquisa equipo-->
-					<div class="modal-pesquisa">
-						<div>
-							<div class="title-group-pesquisa">
-								<p>Marcas</p>
-								<span>0</span>
-							</div>
+        <a pwa-to-page="home">
+          <img pwa-src="logo-equipofacil" alt="Equipofacil">
+        </a>
+      </div>
 
-							<ul>
-								<li>Nenhuma narca encontrada</li>
-							</ul>
-						</div>
+      <div class="search-header-container">
+        <pwa-search-form class="search-header-desktop">
+          <button><span></span></button>
+          <input pwa-search-box type="text" id="search-filter-equipo-header">
+          <div class="select-container">
+            <select name="" id="">
+            <option value="" selected>Somente em Equipo Médico</option>
+            <option value="">Somente em Equipo Médico</option>
+            <option value="">Somente em Equipo Médico</option>
+          </select>
+          </div>
+        </pwa-search-form>
 
-						<div>
-							<div class="title-group-pesquisa">
-								<p>Produtos</p>
-								<span>5</span>
-							</div>
-							<ul>
-								<li>
-									<p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
-									<span>Cristófoli</span>
-								</li>
+        <!-- Modal resultado pesquisa equipo-->
+        <div class="modal-pesquisa">
+          <div>
+            <div class="title-group-pesquisa">
+              <p>Marcas</p>
+              <span>0</span>
+            </div>
 
-								<li>
-									<p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
-									<span>Cristófoli</span>
-								</li>
+            <ul>
+              <li>Nenhuma narca encontrada</li>
+            </ul>
+          </div>
 
-								<li>
-									<p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
-									<span>Cristófoli</span>
-								</li>
+          <div>
+            <div class="title-group-pesquisa">
+              <p>Produtos</p>
+              <span>5</span>
+            </div>
+            <ul>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
 
-								<li>
-									<p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
-									<span>Cristófoli</span>
-								</li>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
 
-								<li>
-									<p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
-									<span>Cristófoli</span>
-								</li>
-							</ul>
-						</div>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
 
-						<button class="button-primary">Ver tudo <span>(6)</span></button>
-					</div>
-				</div>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
 
-				<div class="avatar-container-header">
-					<a pwa-to-page="/criar-anuncio">Vender</a>
+              <li>
+                <p><strong>Autocla</strong>ve Amora em inox 4 litro </p>
+                <span>Cristófoli</span>
+              </li>
+            </ul>
+          </div>
 
-					<nav>
-						<div class="avatar" id="avatar-modal">
-							<div class="avatar-image">
-								<span></span>
-							</div>
-							<p>Olá, Clarice</p>
-							<span></span>
-						</div>
+          <button class="button-primary">Ver tudo <span>(6)</span></button>
+        </div>
+      </div>
 
-						<div class="modal-desktop-user">
-							<ul>
-								<li>
-									<a pwa-to-page="#">
-										<span><img pwa-src="icon-cart" alt="Minhas compras"></span>
-										Minhas Compras
-									</a>
-								</li>
+      <div class="avatar-container-header">
+        <a pwa-to-page="/criar-anuncio">Vender</a>
 
-								<li>
-									<a pwa-to-page="#">
-										<span><img pwa-src="icon-cart-1" alt="Meus Favoritos"></span>
-										Meus Favoritos
-									</a>
-								</li>
+        <nav>
+          <div class="avatar" id="avatar-modal">
+            <div class="avatar-image">
+              <span></span>
+            </div>
+            <p>Olá, Clarice</p>
+            <span></span>
+          </div>
 
-								<li>
-									<a pwa-to-page="">
-										<span> <img pwa-src="icon-cart-2" alt="Meus anúncios"> </span>
-										Meus anúncios
-									</a>
-								</li>
+          <div class="modal-desktop-user">
+            <ul>
+              <li>
+                <a pwa-to-page="#">
+                  <span><img pwa-src="icon-cart" alt="Minhas compras"></span>
+                  Minhas Compras
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-cart-3" alt="Minhas vendas"></span>
-										Minhas vendas
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="#">
+                  <span><img pwa-src="icon-cart-1" alt="Meus Favoritos"></span>
+                  Meus Favoritos
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-cart-4" alt="Meu histórico"></span>
-										Meu histórico
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span> <img pwa-src="icon-cart-2" alt="Meus anúncios"> </span>
+                  Meus anúncios
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-cart-5" alt="Perguntas"></span>
-										Perguntas
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-3" alt="Minhas vendas"></span>
+                  Minhas vendas
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-data" alt="Meus dados"></span>
-										Meus dados
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-4" alt="Meu histórico"></span>
+                  Meu histórico
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-security" alt="Segurança"></span>
-										Segurança
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-cart-5" alt="Perguntas"></span>
+                  Perguntas
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-help" alt="ajuda"></span>
-										Ajuda
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-data" alt="Meus dados"></span>
+                  Meus dados
+                </a>
+              </li>
 
-								<li>
-									<a pwa-to-page="">
-										<span>
-                    <img pwa-src="icon-cart-7" alt="contanto">
-                  </span>
-										Contato
-									</a>
-								</li>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-security" alt="Segurança"></span>
+                  Segurança
+                </a>
+              </li>
 
-								<li id="sign-out">
-									<a pwa-to-page="">
-										<span><img pwa-src="icon-sing-out" alt="sair"></span>
-										Sair
-									</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
+              <li>
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-help" alt="ajuda"></span>
+                  Ajuda
+                </a>
+              </li>
 
-				<div class="menu-header-buttons">
-					<span id='button-notification' class="notification true"></span>
+              <li>
+                <a pwa-to-page="">
+                  <span>
+                  <img pwa-src="icon-cart-7" alt="contanto">
+                </span>
+                  Contato
+                </a>
+              </li>
 
-					<button id="menu-header-bar" class="pwa-button-action-modal">
-          <span></span>
-        </button>
-				</div>
+              <li id="sign-out">
+                <a pwa-to-page="">
+                  <span><img pwa-src="icon-sing-out" alt="sair"></span>
+                  Sair
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="menu-header-buttons">
+        <span id='button-notification' class="notification true"></span>
+
+        <button id="menu-header-bar" class="pwa-button-action-modal">
+        <span></span>
+      </button>
+      </div>
 		</div>
 
 		<!-- Modal de notificação -->

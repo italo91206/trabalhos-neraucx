@@ -257,6 +257,19 @@ header .equipoF-header {
     margin-top: 20px;
 }
 
+/* INICIO HEADER RESUMIDO */
+.header-resumido .search-header-container,
+.header-resumido  .avatar-container-header,
+.header-resumido .pwa-modal-notification-container,
+.header-resumido .menu-header-buttons{
+    display: none !important;
+}
+
+.header-resumido .menu-content{
+    justify-content: center;
+}
+/* FIM HEADER RESUMIDO */
+
 @media(min-width: 800px) {
     .modal-desktop-user.ativo img {
         margin-right: 40px;
@@ -1108,4 +1121,12 @@ header .equipoF-header {
     .search-header-desktop {
         width: unset;
     }
+}
+
+.header-menu-wrapper {
+    align-items: center;
+}
+
+#header-get-back-button {
+    margin-right: 15px;
 }
