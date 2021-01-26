@@ -1,0 +1,80 @@
+<aside id="ef-cart" class="" pwa-hook="cart-background">
+  <section class="ef-sacola">
+    <div id="title" class="flex">
+      <figure pwa-toggle-cart class="p4a-authentication-header__close">
+        <img id="ef-carrinho-fechar-button" pwa-src="close">
+      </figure>
+      
+      <strong class="p4a-authentication-header__title">Sua Sacola</strong>
+    </div>
+
+    <div class="ef-cart-items-container">
+      <ul pwa-has-items class="ef-cart-item-ul">
+        <li pwa-each-item class="ef-cart-item flex relative">
+          <div pwa-remove-item class="ef-remove-se-cart-item">
+            <i class="fa fa-trash"></i>
+          </div>
+
+          <div class="ef-item-image">
+            <img pwa--if="product.product.thumbnail"
+              pwa-src="`https://www.seralle.com.br/pub/media/catalog/product/${product.product.thumbnail}`"
+              pwa-alt="product.name">
+          </div>
+
+          <div class="ef-item-text">
+            <!-- <p class="se-marca">nike</p> -->
+            <p class="ef-titulo">{{ product.name.length > 30 ? product.name.substr(0, 30) + '...' : product.name }}</p>
+            <p class="ef-tamanho">Tam. {{ product.skuName }}</p>
+            <p class="ef-quantidade">Quantidade
+              <span>
+                <span pwa-quantity-decrement>-</span>
+                <input pwa-quantity-box>
+                <span pwa-quantity-increment>+</span>
+              </span>
+            </p>
+            <p class="ef-preco">{{ product.price | price }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="total">
+    <!-- <section class="ef-frete">
+      <div class="ef-frete-fundo">
+        <div class="ef-frete-preenchimento" pwa-hook="cart-transformer"></div>
+        <div class="ef-frete-text flex">
+          <i class="fa fa-truck"></i>
+          <div>
+            <p pwa--if="299.90 - $$cart.subtotal  > 0" class="ef-quanto-falta">Faltam <span>{{ (299.90 - $$cart.subtotal)| price }}</span></p>
+            <p pwa--if="299.90 - $$cart.subtotal  <= 0" class="ef-quanto-falta">Você ganhou frete grátis!</span></p>
+            <p pwa--if="299.90 - $$cart.subtotal  > 0" class="ef-recopmensa">para você ganhar <span>frete grátis</span>
+              (sul e sudeste)</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <div class="flex">
+      <p class="ef-subtotal">Subtotal: <span>{{ $$cart.subtotal | price }}</span></p>
+    </div>
+
+    <div class="ef-cupom-desconto-container">
+      <label for="ef-cupom-desconto" class="ef-cupom-input">Cupom de desconto:</label>
+      <input pwa-coupon-box required id="ef-cupom-desconto" placeholder="Digite seu cupom" />
+      <button class="ef-cupom-button" pwa-coupon-apply>Aplicar</button>
+    </div>
+
+    <button pwa-checkout class="ef-button-blue">Finalizar compra</button>
+
+    <span pwa-with-coupon class="ef-form__input-checked">✓</span>
+
+    <div class="ef-share-purchase">
+      <div @click="$copy(`${$pwa.url}?sharedCart=${$$cart.id}`);$toast('Link de compartilhando foi copiado, envie-o para alguém').success" class="flex">
+        <span class="fa fa-share-alt"></span>
+        <a >Compartilhe sua sacola</a>
+      </div>
+    </div>
+
+  </section>
+</aside>

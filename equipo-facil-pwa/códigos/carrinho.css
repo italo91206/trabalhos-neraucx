@@ -1,0 +1,214 @@
+#ef-cart {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #f5f4f5;
+    /* width: 420px; */
+    width: 0px;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s linear;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#ef-cart.ef-aparece {
+    visibility: visible;
+    opacity: 1;
+    width: 420px;
+}
+
+.ef-sacola {
+    padding: 22px;
+    background-color: #fff;
+}
+
+.ef-sacola .fa.fa-times {
+    font-size: 25px;
+    color: #2BBAFE;
+}
+
+#ef-cart .total {
+    padding: 15px;
+}
+
+.ef-frete-fundo {
+    background-color: #001C3E;
+    width: 100%;
+    height: 76px;
+    position: relative;
+}
+
+.ef-frete-preenchimento {
+    height: 76px;
+    background-color: #2BBAFE;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+.ef-frete-text.flex {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+img {}
+
+#ef-carrinho-fechar-button {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50vh;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0;
+}
+
+#ef-cart #title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#ef-cart #title img, #ef-cart #title p {
+    margin: 0 auto;
+}
+
+.ef-cupom-desconto-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ef-button-blue {
+    width: 180px;
+    height: 46px;
+    background-color: #14AFD1;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.total .ef-button-blue {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.ef-cupom-input {
+    font-size: 16px;
+    color: #5A6672;
+    padding-top: 6px;
+}
+
+#ef-cupom-desconto {
+    width: 244px;
+    height: 32px;
+    border: solid 1px #D1DBE0;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #14afd1;
+}
+
+.ef-cupom-button {
+    width: fit-content;
+    height: 31px;
+    background-color: #14afd1;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.ef-subtotal {
+    font-size: 20px;
+    color: #5A6672;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ef-share-purchase {
+    margin-top: 37px;
+}
+
+.ef-share-purchase span {
+    color: #14afd1;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ef-share-purchase a {
+    color: #14afd1;
+    font-size: 15px;
+    
+}
+
+.ef-share-purchase .flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.p4a-authentication-header__title {
+    width: 92%;
+    text-align: center;
+    color: #5A6672;
+    text-transform: uppercase;
+}
+
+.p4a-authentication-header__close {
+    transition: 0.3s;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.p4a-authentication-header__close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#app .p4a-authentication--open{
+    width: 420px;
+}
+
+#ef-cart__darken {
+    width: 100%;
+    background: #000000a6;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    display: none;
+    animation: none;
+}
+
+#ef-cart__darken.ef-aparece {
+    display: block;
+}
