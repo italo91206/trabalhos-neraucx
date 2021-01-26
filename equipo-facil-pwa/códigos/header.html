@@ -2,18 +2,21 @@
   { 
     'header-completo':    $route.name === 'home' ? true : false ,
     'header-resumido':    $route.name === 'criar-pf-passo-1'  ||
-                                          $route.name === 'criar-pf-passo-2'  ||
-                                          $route.name === 'criar-pf-passo-3'  ||
-                                          $route.name === 'criar-pf-revisar'  ||
-                                          $route.name === 'criar-pf-inicio' || 
-                                          $route.name === 'criarpj-passo1' || 
-                                          $route.name === 'criarpj-passo2' ||
-                                          $route.name === 'criarpj-passo3' ||
-                                          $route.name === 'criarpj-revisar'  ||
-                                          $route.name === 'venderpf' ||
-                                          $route.name === 'venderpf-finalizar' ||
-                                          $route.name === 'criarpj' ? true: false 
+                          $route.name === 'criar-pf-passo-2'  ||
+                          $route.name === 'criar-pf-passo-3'  ||
+                          $route.name === 'criar-pf-revisar'  ||
+                          $route.name === 'criar-pf-inicio' || 
+                          $route.name === 'criarpj-passo1' || 
+                          $route.name === 'criarpj-passo2' ||
+                          $route.name === 'criarpj-passo3' ||
+                          $route.name === 'criarpj-revisar'  ||
+                          $route.name === 'venderpf' ||
+                          $route.name === 'venderpf-finalizar' ||
+                          $route.name === 'criarpj' ? true: false 
   }">
+  <pwa-cart open-on-add />
+  <div id="ef-cart__darken" class="ef-cart__darken" style="" pwa-toggle-cart></div>
+  
 	<div class="pwa-menu-container">
 		<div class="menu-content">
 
@@ -94,15 +97,22 @@
         <a pwa-to-page="/criar-anuncio">Vender</a>
 
         <nav>
-          <div class="avatar" id="avatar-modal">
+          <!-- está logado -->
+          <div pwa-is-logged class="avatar" id="avatar-modal">
             <div class="avatar-image">
               <span></span>
             </div>
-            <p>Olá, Clarice</p>
+            <p>Olá, {{ $$user.firstname }}</p>
             <span></span>
           </div>
 
-          <div class="modal-desktop-user">
+          <!-- não está logado -->
+          <div pwa-not-logged pwa-to-auth class="avatar" id="avatar-modal">
+            <p>Entrar na conta</p>
+            <span></span>
+          </div>
+
+          <div class="modal-desktop-user" pwa-is-logged>
             <ul>
               <li>
                 <a pwa-to-page="#">
@@ -177,7 +187,7 @@
               </li>
 
               <li id="sign-out">
-                <a pwa-to-page="">
+                <a pwa-to-page="" @click="$logout">
                   <span><img pwa-src="icon-sing-out" alt="sair"></span>
                   Sair
                 </a>
@@ -188,11 +198,16 @@
       </div>
 
       <div class="menu-header-buttons">
-        <span id='button-notification' class="notification true"></span>
-
+        <!-- icone do carrinho -->
+        <img pwa-toggle-cart pwa-src="icon-carrinho" alt="" id="cart-button">
+        
+        <!-- icone de notificação -->
+        <span pwa-hook.click="disable-cart" id="button-notification" class="notification true"></span>
+        
+        <!-- icone para abrir o menu mobile -->
         <button id="menu-header-bar" class="pwa-button-action-modal">
-        <span></span>
-      </button>
+          <span></span>
+        </button>
       </div>
 		</div>
 
@@ -320,6 +335,7 @@
 
 			<nav class="menu-perfil-actions">
 				<ul>
+          <!-- minhas compras -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -329,6 +345,7 @@
 						</a>
 					</li>
 
+          <!-- meus favoritos -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -338,6 +355,7 @@
 						</a>
 					</li>
 
+          <!-- meus anúncios -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -347,6 +365,7 @@
 						</a>
 					</li>
 
+          <!-- minhas vendas -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -356,6 +375,7 @@
 						</a>
 					</li>
 
+          <!-- meu histórico -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -365,6 +385,7 @@
 						</a>
 					</li>
 
+          <!-- perguntas -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -374,6 +395,7 @@
 						</a>
 					</li>
 
+          <!-- equipe de outra área -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
@@ -383,6 +405,7 @@
 						</a>
 					</li>
 
+          <!-- contato -->
 					<li>
 						<a pwa-to-page="" class="menu-item">
 							<span>
