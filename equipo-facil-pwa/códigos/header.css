@@ -724,7 +724,7 @@ header .equipoF-header {
 
 .modal-menu .menu-user .user-cad {
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 
 .modal-menu .menu-user .user-cad.offline {
@@ -897,9 +897,19 @@ header .equipoF-header {
     padding-bottom: 5px;
 }
 
-.modal-menu nav.menu-perfil-account {
-    display: none;
+.modal-menu .menu-perfil-account {
     background-color: var(--color-background-menu-user);
+    height: 0px;
+    transition: all .25s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-perfil-account.ativo {
+    height: 232px;
+    transition: height .25s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-menu nav.menu-perfil-account ul li:last-child  {
@@ -957,7 +967,7 @@ header .equipoF-header {
 
 @media (max-width: 768px){
     header .menu-content .menu-header-buttons .notification {
-        margin-right: 45px;
+        margin-right: 20px;
     }
 }
 
