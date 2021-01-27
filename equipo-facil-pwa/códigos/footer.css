@@ -70,7 +70,7 @@ footer .pwa-list-footer li {
 
 footer .container a {
 	height: 26px;
-	width: 95px;
+	/* width: 95px; */
 	font-family: Cambay;
 	font-size: 16px;
 	font-style: normal;
@@ -106,6 +106,7 @@ footer .nerau {
 	text-align: center;
 	padding-top: 1pc;
 	background: #D1DCE1;
+    margin-bottom: 0;
 }
 
 footer .equipoF-footer {
@@ -162,9 +163,9 @@ footer .equipoF-footer {
         display: flex;
 	}
 
-    footer .container a {
+    /* footer .container a {
         width: 132px;
-    }
+    } */
 
     footer .container .footer-logo a img {
         width: 100%;
