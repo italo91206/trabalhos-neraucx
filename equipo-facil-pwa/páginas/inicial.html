@@ -1,4 +1,5 @@
 <main id="ef-home">
+  <!-- banner inicial -->
   <section class="pwa-cover-home">
     <div id="home-slide" class="swiper-container capa-home" pwa-hook="home-slide-inicial">
       <div class="swiper-wrapper">
@@ -8,7 +9,7 @@
             <div class="pwa-cover-text-home">
               <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
               <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
-              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/pedras">COMPRE AGORA</a>
             </div>
           </div>
         </div>
@@ -19,7 +20,7 @@
             <div class="pwa-cover-text-home">
               <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
               <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
-              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/pedras">COMPRE AGORA</a>
             </div>
           </div>
         </div>
@@ -30,7 +31,7 @@
             <div class="pwa-cover-text-home">
               <p class="pwa-subtitle-home">FACETAS DENTÁRIAS</p>
               <h2 class="pwa-title-home">Aproveite os melhores kits</h2>
-              <a class="pwa-btn-white-cover-home" pwa-to-page="/">COMPRE AGORA</a>
+              <a class="pwa-btn-white-cover-home" pwa-to-page="/pedras">COMPRE AGORA</a>
             </div>
           </div>
         </div>
@@ -43,19 +44,18 @@
     <div class="pwa-search">
       <div class="pwa-search-container">
         <ul class="pwa-list">
-          <li class="pwa-li pwa-li-active">
+          <li class="pwa-li ef-li-active">
             <h5 class="pwa-li-title">Equipo Médico</h5>
           </li>
         </ul>
 
-        <div class="pwa-group-search-container">
+        <pwa-search-form class="pwa-group-search-container">
           <div class="pwa-bar-search-group-input">
             <img class="pwa-icon-lupa-search" pwa-src="icon-lupa" alt="icone de lupa - pesquisar">
-            <input class="pwa-input-with-icon-search" id="btn-modal-Search" onkeyup="searchList()" type="text"
-              placeholder="O que você precisa?">
+            <input pwa-search-box class="pwa-input-with-icon-search" id="btn-modal-Search" type="text" placeholder="O que você precisa?">
           </div>
-          <input class="pwa-btn-search-navy-blue" type="submit" value="Buscar">
-        </div>
+          <input pwa-search-button class="pwa-btn-search-navy-blue" type="submit" value="Buscar">
+        </pwa-search-form>
 
         <!--Inicio Modal  de Pesquisa simples-->
         <div class="pwa-drop-search-content" id="modal-content-search">
@@ -63,9 +63,11 @@
           <div class="pwa-header-search">
             <p>Marcas</p><span>0</span>
           </div>
+
           <ul id="searchBrandList">
             <p class="pwa-searchs-not-results">Nenhuma marca encontrada</p>
           </ul>
+
           <div class="pwa-header-search">
             <p>Produtos</p><span id="marca-results">6</span>
           </div>
@@ -106,270 +108,246 @@
         </div>
         <span class="pwa-modal-search-fade" id="modal-search-fade"></span>
 
-        <a class="pwa-search-adv" onclick="openModalAdvancedSearch()">
+        <!-- <a class="pwa-search-adv" pwa-hook="prepara-modal-busca">
           BUSCA AVANÇADA<img pwa-src="icon-filtro" alt="icone flitro">
-        </a>
+        </a> -->
       </div>
     </div>
 
     <!--Modal de busca avançada-->
-    <div class="pwa-modal-advanced-search-wrapper">
+    <!-- <div class="pwa-modal-advanced-search-wrapper" >
       <div class="pwa-modal-advanced-search-container">
         <span id="close-modal-search">
-          <button id="modal-search-button" class="pwa-button-action-modal close" onclick="closeModalAdvancedSearch()">
+          <button id="modal-search-button" class="pwa-button-action-modal close">
             <span></span>
           </button>
         </span>
-        <form>
-          <div class="pwa-modal-advanced-search-contant">
-            <h6 class="pwa-sub-title-modal">Busca avançada</h6>
+        
+        <div class="pwa-modal-advanced-search-contant">
+          <h6 class="pwa-sub-title-modal">Busca avançada</h6>
 
-            <div class="pwa-group-option">
-              <div class="option selected">
-                <label for="hospitalar">Equipo Hospitalar</label>
-                <input checked type="radio" id='hospitalar' name="type-equipo" value="equipo-hospitalar">
-              </div>
-              <div class="option">
-                <label for="odontologico">Equipo Odontológico</label>
-                <input type="radio" id='odontologico' name='type-equipo' value="equipo-odontologico">
-              </div>
-
+          <div class="pwa-group-option">
+            <div class="option selected">
+              <label for="hospitalar">Equipo Hospitalar</label>
+              <input checked type="radio" id='hospitalar' name="type-equipo" value="equipo-hospitalar">
             </div>
-            <!-- Palavras chaves -->
-            <section class="pwa-modal-search-for-key-words">
-              <h6 class="pwa-sub-title-modal section">Palavras-chave</h6>
+            <div class="option">
+              <label for="odontologico">Equipo Odontológico</label>
+              <input type="radio" id='odontologico' name='type-equipo' value="equipo-odontologico">
+            </div>
 
-              <div class="pwa-key-words-seach-input">
-                <input type="text" name="key-words" id="input-key-words">
-                <button class="pwa-button-action">Adicionar</button>
-              </div>
-              <!-- Tags contento as plavras chave -->
-              <ul class="pwa-group-tag-name">
-                <li class="tag-name-key">
-                  <span>autoclave</span><button class="close">x</button>
-                </li>
-                <li class="tag-name-key">
-                  <span>12 litros </span><button class="close">x</button>
-                </li>
-                <li class="tag-name-key">
-                  <span>bivolt </span><button class="close">x</button>
-                </li>
-                <li class="tag-name-key">
-                  <span>bivolt </span><button class="close">x</button>
-                </li>
-                <li class="tag-name-key">
-                  <span>bivolt </span><button class="close">x</button>
-                </li>
-                <li class="tag-name-key">
-                  <span>bivolt </span><button class="close">x</button>
-                </li>
-              </ul>
-
-            </section>
-
-            <!-- Busca pela marca do produto-->
-
-            <section class="pwa-modal-search-for-marca">
-              <h6 class="pwa-sub-title-modal section">Marca</h6>
-
-              <div class="pwa-input-with-icon">
-                <input type="text">
-                <button><span></span></button>
-              </div>
-
-              <div class="pwa-card-group-marca swiper-container" id='card-group-marca-modal-search-header'>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card-marca select">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-marca swiper-slide">
-                      <img pwa-src="cristofoli" alt="cristofoli">
-                      <span>Cristófoli</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </section>
-
-            <!-- Condição Produto -->
-            <section class="pwa-modal-search-for-condition-product">
-
-
-              <h6 class="pwa-sub-title-modal section">Condição</h6>
-
-              <div class="pwa-group-input">
-                <div class="input-checkbox-modal">
-                  <div class="box">
-                    <input class="radio-input" type="radio" name="condicao" id="novo">
-                    <span class="check radio"></span>
-                    <label for="novo">Novo</label>
-                  </div>
-
-                  <div class="box">
-                    <input type="radio" name="condicao" id="seminovo">
-                    <span class="check radio"></span>
-                    <label for="seminovo">Seminovo</label>
-                  </div>
-
-                </div>
-                <div class="input-checkbox-modal">
-                  <div class="box">
-                    <input type="checkbox" name="condicao" id="usado">
-                    <spna class="check"></spna>
-                    <label for="usado" id='label-usado'>Usado
-                      <span>Produto com maid de 5 anos de uso</span>
-                    </label>
-                  </div>
-                  <div class="box">
-                    <input type="checkbox" name="condicao" id="recondicionado">
-                    <span class="check"></span>
-                    <label for="recondicionado">
-                      Recondicionado
-
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Cor Produto -->
-            <section class="pwa-modal-search-for-color input-select-modal">
-              <h6 class="pwa-sub-title-modal section">Cor</h6>
-
-              <select name="cor" id="cor">
-                <option value="branco">Branco</option>
-                <option value="preto">Preto</option>
-                <option value="verde">Verde</option>
-              </select>
-            </section>
-
-            <!-- Ano de fabricação -->
-            <section class="pwa-modal-search-for-year input-select-modal">
-              <h6 class="pwa-sub-title-modal section">Ano de frabricação</h6>
-
-              <select name="year-fabrication" id="year-fabrication">
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-              </select>
-            </section>
-
-            <!-- Modalidade -->
-            <section class="pwa-modal-search-modality input-checkbox-modal">
-              <h6 class="pwa-sub-title-modal section">Modalidade</h6>
-
-              <div class="input-checkbox-contant">
-                <div class="box">
-                  <input type="checkbox" name="modalidade" id="modality-destaque" value='destaque'>
-                  <span class="check"></span>
-                  <label for="modality-destaque">Destaque</label>
-                </div>
-                <div class="box">
-                  <input type="checkbox" name="modalidade" id='modality-superdestaque' value='superdestaque'>
-                  <span class="check"></span>
-                  <label for="modality-superdestaque">SuperDestaque</label>
-                </div>
-              </div>
-
-            </section>
-
-            <!-- Certificado -->
-            <section class="pwa-modal-search-certificate input-checkbox-modal">
-              <h6 class="pwa-sub-title-modal section">Certificado</h6>
-
-              <div class="input-checkbox-contant">
-                <div class="box">
-                  <input type="checkbox" name="certificate" id="certificate-none" value='destaque'>
-                  <span class="check"></span>
-                  <label for="certificate-none">Nenhum</label>
-                </div>
-
-                <div class="box">
-                  <input type="checkbox" name="certificate" id='certificate-true' value='superdestaque'>
-                  <span class="check"></span>
-                  <label for="certificate-true">Vistoriado</label>
-                </div>
-              </div>
-            </section>
-            <!-- Localização -->
-            <section class="pwa-modal-search-location">
-              <h6 class="pwa-sub-title-modal section">Localixação</h6>
-
-              <div class="pwa-input-with-icon location">
-                <input type="text">
-                <button><span></span></button>
-              </div>
-
-              <ul class="pwa-group-tag-name">
-                <li class="tag-name-key">
-                  <span>Maringá/PR</span><button class="close">x</button>
-                </li>
-
-              </ul>
-            </section>
-
-            <!-- Preço -->
-            <section class="pwa-modal-search-cost">
-              <h6 class="pwa-sub-title-modal section">Preço</h6>
-
-              <div class="input-range-group">
-                <div class="pwa-input-value">
-                  <label for="to">De</label>
-                  <input type="number" name="to" id="to-value">
-                </div>
-
-                <div class="pwa-input-value">
-                  <label for="for">Até</label>
-                  <input type="number" name="for" id="for-value">
-                </div>
-              </div>
-            </section>
-
-            <button id='button-advanced-search' type="submit">
-              <strong>filtrar agrora</strong>
-              <span>26 <span>produtos encontrados</span></span>
-            </button>
           </div>
-        </form>
+
+          Palavras chaves
+          <section class="pwa-modal-search-for-key-words">
+            <h6 class="pwa-sub-title-modal section">Palavras-chave</h6>
+
+            <div class="pwa-key-words-seach-input">
+              <input type="text" name="key-words" id="input-key-words">
+              <button class="pwa-button-action">Adicionar</button>
+            </div>
+
+            Tags contento as plavras chave
+            <div class="ef-filters-container">
+              <div class="pwa-filter-item">Autoclave<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
+              <div class="pwa-filter-item">12 Litros<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
+              <div class="pwa-filter-item">Bivolt<span class="pwa-closefilter"><img pwa-src="x" alt=""></span></div>
+            </div>
+          </section>
+
+          Busca pela marca do produto
+          <section class="pwa-modal-search-for-marca">
+            <h6 class="pwa-sub-title-modal section">Marca</h6>
+
+            <div class="pwa-input-with-icon">
+              <input type="text">
+              <button><span></span></button>
+            </div>
+
+            slide de marcas
+            <div class="pwa-card-group-marca swiper-container" id='card-group-marca-modal-search-header' pwa-hook="busca-categoria-slide">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide card-marca select">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+                <div class="swiper-slide card-marca">
+                  <img pwa-src="cristofoli" alt="cristofoli">
+                  <span>Cristófoli</span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          Condição Produto
+          <section class="pwa-modal-search-for-condition-product">
+            <h6 class="pwa-sub-title-modal section">Condição</h6>
+
+            <div class="pwa-group-input">
+              <div class="input-checkbox-modal">
+                <div class="box">
+                  <input class="radio-input" type="radio" name="condicao" id="novo">
+                  <span class="check radio"></span>
+                  <label for="novo">Novo</label>
+                </div>
+
+                <div class="box">
+                  <input type="radio" name="condicao" id="seminovo">
+                  <span class="check radio"></span>
+                  <label for="seminovo">Seminovo</label>
+                </div>
+              </div>
+
+              <a class="ef-see-more-filters">Ver Mais</a>
+            </div>
+          </section>
+
+          Cor Produto
+          <section class="pwa-modal-search-for-color input-select-modal">
+            <h6 class="pwa-sub-title-modal section">Cor</h6>
+
+            <div  class="input-checkbox-modal isdesktop">
+              <div class="box">
+                <input pwa-filter-input="checked" class="radio-input" type="radio" name="cor" id="branco">
+                <span class="check radio"></span>
+                <label for="branco">Preto</label>
+              </div>
+
+              <div class="box">
+                <input pwa-filter-input="checked" class="radio-input" type="radio" name="cor" id="branco">
+                <span class="check radio"></span>
+                <label for="branco">Vermelho</label>
+              </div>
+
+              <a class="ef-see-more-filters">Ver Mais</a>
+          </section>
+
+          Ano de fabricação
+          <section class="pwa-modal-search-for-year input-select-modal">
+            <h6 class="pwa-sub-title-modal section">Ano de frabricação</h6>
+
+            <div class="pwa-select relative" name="year-fabrication" >
+              <select class="pwa-input-padrao" name="select-ano-fabricacao">
+                <option value="" selected>-- selecionar --</option>
+                <option value="" >2020</option>
+                <option value="" >2021</option>
+              </select>
+              
+              <img pwa-src="select-input-icon" alt="" class="select-input-icon">
+            </div>
+          </section>
+
+          Modalidade
+          <section class="input-select-modal">
+            <h6 class="pwa-sub-title-modal section">Modalidade</h6>
+
+            <div class="input-checkbox-modal">
+              <div class="box">
+                <input type="checkbox" name="modalidade" id="modality-destaque" value='destaque'>
+                <span class="check"></span>
+                <label for="modality-destaque">Destaque</label>
+              </div>
+
+              <div class="box">
+                <input type="checkbox" name="modalidade" id='modality-superdestaque' value='superdestaque'>
+                <span class="check"></span>
+                <label for="modality-superdestaque">SuperDestaque</label>
+              </div>
+            </div>
+
+            <a class="ef-see-more-filters">Ver Mais</a>
+          </section>
+
+          Certificado
+          <section class="pwa-modal-search-certificate input-checkbox-modal">
+            <h6 class="pwa-sub-title-modal section">Certificado</h6>
+
+            <div class="input-checkbox-modal input-checkbox-contant">
+              <div class="box">
+                <input type="checkbox" name="certificate" id="certificate-none" value='destaque'>
+                <span class="check"></span>
+                <label for="certificate-none">Nenhum</label>
+              </div>
+
+              <div class="box">
+                <input type="checkbox" name="certificate" id='certificate-true' value='superdestaque'>
+                <span class="check"></span>
+                <label for="certificate-true">Vistoriado</label>
+              </div>
+
+              <a class="ef-see-more-filters">Ver Mais</a>
+            </div>
+          </section>
+
+          Localização
+          <section class="pwa-modal-search-location">
+            <h6 class="pwa-sub-title-modal section">Localização</h6>
+
+            <div class="pwa-input-with-icon location">
+              <input type="text">
+              <button><span></span></button>
+            </div>
+
+            <ul class="pwa-group-tag-name">
+              <li class="tag-name-key">
+                <span>Maringá/PR</span><button class="close">x</button>
+              </li>
+
+            </ul>
+          </section>
+
+          Preço
+          <section class="pwa-modal-search-cost">
+            <h6 class="pwa-sub-title-modal section">Preço</h6>
+
+            <div class="input-range-group">
+              <div class="pwa-input-value">
+                <label for="to">De</label>
+                <input type="number" name="to" id="to-value">
+              </div>
+
+              <div class="pwa-input-value">
+                <label for="for">Até</label>
+                <input type="number" name="for" id="for-value">
+              </div>
+            </div>
+          </section>
+
+          <button id='button-advanced-search' type="submit">
+            <strong>filtrar agrora</strong>
+            <span>26<span> produtos encontrados</span></span>
+          </button>
+        </div>
       </div>
-    </div>
+    </div> -->
 
     </div>
   </section>
@@ -381,7 +359,7 @@
     <div id="home-categorias-slide" class="swiper-container categorias-card" pwa-hook="home-categorias-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card bg-card-1">
               <div class="card-body">
                 Equipamento Hospitalar
@@ -391,7 +369,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card bg-card-2">
               <div class="card-body">
                 Consultório
@@ -403,7 +381,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card bg-card-1">
               <div class="card-body">
                 Equipamento Hospitalar
@@ -413,7 +391,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card bg-card-2">
               <div class="card-body">
                 Consultório
@@ -428,27 +406,26 @@
   </section>
 
   <!-- BANNER -->
-  <section class="container">
-    <div class="banner relative">
+  <section class="container" id="monte-seu-consultorio-banner">
+    <div class="relative">
       <img pwa-src="banner-01" alt="" class="w100" id="monte-consultorio-banner">
       
       <div id="monte-seu-consultorio-texto">
         <h5>Monte seu Consultório</h5>
-        <a pwa-to-page="/" class="btn-branco">
-          Confira!
-        </a>
+        <a pwa-to-page="/pedras" class="btn-branco">Confira!</a>
       </div>
     </div>
     </div>
   </section>
 
+  <!-- produtos mais buscados -->
   <section class="container" id="produtos-mais-buscados">
     <h4>Produtos mais buscados</h4>
 
-    <div class="swiper-container swiper-produtos-mais-buscados ismobile">
+    <div id="produtos-mais-buscados-slide" class="swiper-container ismobile" pwa-hook="produtos-mais-buscados-slide">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card">
               <img pwa-src="icon-cardiaco" alt="">
               <p>Desfibrilador Cardíaco</p>
@@ -457,7 +434,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card">
               <img pwa-src="icon-vento" alt="">
               <p>Compressor de ar</p>
@@ -466,7 +443,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card">
               <img pwa-src="icon-vento" alt="">
               <p>Desfibrilador Cardíaco</p>
@@ -475,7 +452,7 @@
         </div>
 
         <div class="swiper-slide">
-          <a pwa-to-page="/">
+          <a pwa-to-page="/papeis-de-parede">
             <div class="card">
               <img pwa-src="icon-cardiaco" alt="">
               <p>Compressor de ar</p>
@@ -483,33 +460,32 @@
           </a>
 
         </div>
-
       </div>
     </div>
 
     <div class="swiper-produtos-mais-buscados isdesktop flex">
-      <a pwa-to-page="/">
+      <a pwa-to-page="/pedras">
         <div class="card">
           <img pwa-src="icon-cardiaco" alt="">
           <p>Desfibrilador Cardíaco</p>
         </div>
       </a>
 
-      <a pwa-to-page="/">
+      <a pwa-to-page="/pedras">
         <div class="card">
           <img pwa-src="icon-vento" alt="">
           <p>Compressor de ar</p>
         </div>
       </a>
         
-      <a pwa-to-page="/">
+      <a pwa-to-page="/pedras">
         <div class="card">
           <img pwa-src="icon-vento" alt="">
           <p>Desfibrilador Cardíaco</p>
         </div>
       </a>
 
-      <a pwa-to-page="/">
+      <a pwa-to-page="/pedras">
         <div class="card">
           <img pwa-src="icon-cardiaco" alt="">
           <p>Compressor de ar</p>
@@ -518,7 +494,7 @@
     </div>
   </section>
 
-  
+  <!-- últimos super destaques -->
   <section class="bg-gradiente-white">
     
     <!-- slide dos produtos -->
@@ -532,20 +508,19 @@
           </div>
         </div>
 
-        <img id="super-destaques-slide-prox" class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
-        <img id="super-destaques-slide-prev" class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
+        <img id="super-destaques-slide-prox" class="swiper-button-next isdesktop" pwa-src="icon-right" alt="icon-right">
+        <img id="super-destaques-slide-prev" class="swiper-button-prev isdesktop" pwa-src="icon-left" alt="icon-left">
       </pwa-product-list>
     </section>
 
+    <!-- equipamentos para implantes banner -->
     <section class="container" id="as-grandes-marcas">
       <div class="banner relative">
         <img pwa-src="banner-02" alt="" class="w100" id="equipamentos-para-implantes-banner">
 
         <div id="equipamentos-para-implantes-texto">
           <h5>Equipamentos para Implantes</h5>
-          <a pwa-to-page="/" class="btn-esmeralda-dark">
-            Confira
-          </a>
+          <a pwa-to-page="/papeis-de-parede" class="btn-esmeralda-dark">Confira</a>
         </div>
       </div>
 
@@ -554,46 +529,46 @@
       <div id="home-marcas-slide" class="swiper-container grandes-marcas" pwa-hook="home-marcas-slide">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
 
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
 
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
 
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
 
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon1" alt="">
             </a>
           </div>
           <div class="swiper-slide">
-            <a pwa-to-page="/">
+            <a pwa-to-page="/papeis-de-parede">
               <img pwa-src="marcas-icon2" alt="">
             </a>
           </div>
@@ -604,7 +579,7 @@
       </div>
     </section>
 
-    <!-- swipper -->
+    <!-- depoimentos-->
     <section class="pwa-depoiment-container" id="depoimentos">
       <h4>Depoimentos</h4>
       <!-- Inicio slide depoimentos -->
@@ -644,8 +619,8 @@
           </div>
         </div>
 
-        <img id="home-depoimentos-slide-next" class="swiper-button-next isdesktop" pwa-src="icon-right" alt="icon-right">
-        <img id="home-depoimentos-slide-prev" class="swiper-button-prev isdesktop" pwa-src="icon-left" alt="icon-left">
+        <img id="home-depoimentos-slide-next" class="swiper-button-next" pwa-src="icon-right" alt="icon-right">
+        <img id="home-depoimentos-slide-prev" class="swiper-button-prev" pwa-src="icon-left" alt="icon-left">
 
         <!-- botões indicadores de paginação -->
         <div id="home-depoimentos-pagination" class="swiper-pagination"></div>
@@ -654,8 +629,10 @@
 
     <section id="home-pre-footer">
       <div class="container flex">
-        <img pwa-src="icon-check">
-        <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+        <a pwa-to-page="criar-anuncio" class="flex">
+          <img pwa-src="icon-check">
+          <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+        </a>
       </div>
     </section>
   </section>
