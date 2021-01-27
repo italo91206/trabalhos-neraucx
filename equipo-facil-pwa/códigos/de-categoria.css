@@ -1,0 +1,74 @@
+#ef-categoria .categorias-card .card {
+    width: 365px !important;
+}
+
+#ef-categoria .categorias {
+    padding: unset;
+}
+
+#ef-categoria .pwa-cards-product-container {
+    max-width: 890px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#ef-categoria .pwa-card-product {
+    margin: unset;
+    margin-bottom: 40px;
+}
+
+.listagem-banner-text-wrapper h5 {
+    font-size: 42px;
+    line-height: 60px;
+    width: 380px;
+    font-weight: 700;
+    text-align: left;
+    color: #FFFFFF;
+    height: auto;
+}
+
+
+@media(max-width: 1024px){
+    #ef-categoria .categorias {
+        padding: 0 20px;
+        max-width: 1000px;
+    }
+    #ef-categoria .pwa-cards-product-container {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 425px){
+    #ef-categoria .pwa-cards-product-container {
+        justify-content: center;
+    }
+    .banner-w100.listagem-banner.relative {
+        max-width: 320px;
+    }
+
+    .listagem-banner-text-wrapper h5 {
+        width: 195px;
+        color: #FFFFFF!important;
+        font-size: 22px;
+        font-style: normal;
+        line-height: 28px;
+        margin-top: 0px;
+        height: auto;
+        text-align: left;
+    }
+
+    .listagem-banner-text-wrapper .btn-esmeralda-dark {
+        height: 28px;
+        width: 99px;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .listagem-banner-text-wrapper .btn-branco {
+        height: 28px;
+        width: 99px;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+}
+
