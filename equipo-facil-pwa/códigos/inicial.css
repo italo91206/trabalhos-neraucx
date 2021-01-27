@@ -121,7 +121,7 @@
 	margin-top: 2pc;
 }
 
-.categorias h4 {
+#ef-home .categorias h4 {
 	margin-bottom: 1pc;
 	padding-top: 20px;
 }
@@ -144,6 +144,7 @@
 
 #produtos-mais-buscados h4 {
 	margin-bottom: 1pc;
+	font-size: 26px;
 }
 
 #produtos-mais-buscados .card {
@@ -292,11 +293,11 @@
 	height: 15px;
 }
 
-.pwa-depoiment-container .swiper-pagination {
+/* .pwa-depoiment-container .swiper-pagination {
 	position: relative;
 	margin-bottom: 20px;
 	margin-left: 10px;
-}
+} */
 
 .pwa-depoiment-container .swiper-pagination-bullet {
 	width: 12px;
@@ -304,13 +305,13 @@
 	background: #174E67;
 	opacity: 1;
 	margin-right: 20px !important;
+    margin-left: 0px !important;
 }
 
 .swiper-container.depoimentos .swiper-pagination-bullet-active {
 	color: #fff;
-	background: #0051ff;
-	height: 8px;
-	width: 8px;
+	background: #14afd1 !important;
+	transform: scale(0.7);
 }
 
 footer {
@@ -321,12 +322,47 @@ footer {
 /* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
 
 @media only screen and (max-width: 600px) {
-	.ultimos-super-Destaques .swiper-button-next,
-	.ultimos-super-Destaques .swiper-button-prev,
-	.grandes-marcas .swiper-button-next,
-	.grandes-marcas .swiper-button-prev {
-		display: none;
-	}
+
+    #monte-seu-consultorio-texto {
+    position: absolute!important;
+    top: 0!important;
+    left: 0px!important;
+    height: auto!important;
+    display: block!important;
+    }
+
+    #monte-seu-consultorio-texto h5 {
+        height: fit-content!important;
+        width: 123px!important;
+        position: absolute!important;
+        margin-top: 2pc!important;
+        margin-left: 1.5pc!important;
+        color: #FFFFFF!important;
+        font-family: Cambay!important;
+        font-size: 2.3rem!important;
+        font-style: normal!important;
+        font-weight: 700!important;
+        line-height: 28px!important;
+        letter-spacing: 0em!important;
+        text-align: left!important;
+    }
+
+    #monte-seu-consultorio-texto a{
+            height: 28px;
+        width: 99px;
+        position: absolute;
+        margin-top: 6pc!important;
+        margin-left: 1.5pc!important;
+        border-radius: 5px;
+        background: #FFFFFF;
+        color: #14AFD1;
+        font-family: Cambay;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        text-align: center!important;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -343,12 +379,7 @@ footer {
 		font-size: 44px;
 		width: 250px;
 	}
-	.ultimos-super-Destaques .swiper-button-next,
-	.ultimos-super-Destaques .swiper-button-prev,
-	.grandes-marcas .swiper-button-next,
-	.grandes-marcas .swiper-button-prev {
-		display: none;
-	}
+
 	/* Ajusta o título - As Grandes Marcas */
 	#as-grandes-marcas .pwa-titles-H4-Blue {
 		width: 400px !important;
@@ -378,12 +409,6 @@ footer {
 	.pwa-cover-home {
 		margin-bottom: 0;
 	}
-	.ultimos-super-Destaques .swiper-button-next,
-	.ultimos-super-Destaques .swiper-button-prev,
-	.grandes-marcas .swiper-button-next,
-	.grandes-marcas .swiper-button-prev {
-		display: block;
-	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -399,11 +424,11 @@ footer {
 	#as-grandes-marcas .pwa-titles-H4-Blue {
 		width: 400px;
 	}
-	#depoimentos .swiper-pagination {
+	/* #depoimentos .swiper-pagination {
 		position: absolute;
 		top: 295px;
 		justify-content: baseline;
-	}
+	} */
 	#depoimentos .pwa-depoimento-content q {
 		text-align: center;
 	}
@@ -509,17 +534,6 @@ footer {
 	line-height: 15px;
 	letter-spacing: 0.12em;
 	text-align: left;
-}
-
-.save-flag {
-	margin-left: 10pc;
-	left: 20px;
-	cursor: pointer;
-	position: relative;
-}
-
-.save-flag-active path {
-	fill: #72CFE3;
 }
 
 .product-card .card {
@@ -844,7 +858,8 @@ footer {
 @media only screen and (min-width: 1200px) {
 	.categorias-card .card {
 		height: 200px;
-		width: 365px;
+		/* width: 365px; */
+        width: auto;
 	}
 	.categorias-card .card-body {
 		padding-left: 20px;
@@ -880,18 +895,17 @@ footer {
 	#depoimentos .swiper-container {
 		width: 550px !important;
 		position: relative;
-		left: 28px;
 	}
-	#depoimentos .pwa-depoimento-content {
+	/* #depoimentos .pwa-depoimento-content {
 		width: 500px !important;
-		padding-left: 20px;
-	}
-	#depoimentos .swiper-pagination {
+		padding-left: 20px;        
+	} */
+	/* #depoimentos .swiper-pagination {
 		position: absolute;
 		margin-top: -3.5pc;
 		margin-left: -25px;
 		justify-content: baseline;
-	}
+	} */
 }
 
 .pwa-group-search-container {
@@ -1056,7 +1070,7 @@ footer {
 
 /* inicio estilos dos subtitulas do modal */
 
-.pwa-modal-advanced-search-container h6 {
+/* .pwa-modal-advanced-search-container h6 {
 	font-family: Cambay;
 	font-weight: bold;
 	font-size: 1.9rem;
@@ -1064,7 +1078,7 @@ footer {
 	text-align: center;
 	color: #174E67;
 	margin-bottom: 36px;
-}
+} */
 
 
 /* correção dos titulos modal*/
@@ -1135,9 +1149,9 @@ footer {
 	margin-top: 15px;
 }
 
-.pwa-group-input .input-checkbox-modal:nth-child(1) {
+/* .pwa-group-input .input-checkbox-modal:nth-child(1) {
 	display: flex;
-}
+} */
 
 .pwa-group-input label,
 .input-checkbox-modal label {
@@ -1312,9 +1326,9 @@ footer {
 
 
 @media only screen and (min-width: 768px) {
-	h4 {
+	/* h4 {
 	  font-size: 20px;
-	}
+	} */
 	.pwa-container-cover img{
 	  width: 100%;
 	  margin-top:-200px ;
@@ -1336,14 +1350,6 @@ footer {
 	.pwa-cover-home {
 	  margin-bottom: 0;
 	}
-  
-	.ultimos-super-Destaques .swiper-button-next, 
-	.ultimos-super-Destaques .swiper-button-prev,
-	.grandes-marcas .swiper-button-next,
-	.grandes-marcas .swiper-button-prev {
-	  display: block;
-	}
-  
 }  
 
 #super-destaques-slide {
@@ -1422,4 +1428,151 @@ footer {
     color: #FFFFFF;
     font-weight: 700;
     margin-left: 40px;
+}
+
+@media(max-width: 1024px){
+    .categorias{
+        max-width: 1000px;
+    }
+    /* #produtos-mais-buscados .card {
+        width: 240px !important;
+        height: 310px;
+    } */
+}
+
+#home-depoimentos-pagination .swiper-pagination-bullet:last-child {
+    margin-right: unset !important;
+}
+
+#home-pre-footer a.flex {
+    align-items: center;
+}
+
+#produtos-mais-buscados-slide .swiper-slide {
+    width: 270px;
+    height: 310px;
+}
+
+@media(max-width: 1024px){ 
+    .swiper-produtos-mais-buscados.isdesktop a .card {
+        width: 230px !important;
+    }
+}
+
+@media (max-width: 768px){
+    #home-categorias-slide .swiper-slide {
+        width: 250px;
+    }
+    #home-marcas-slide .swiper-slide {
+        width: 180px;
+    }
+    .pwa-depoiment-container {
+        max-width: 720px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .pwa-depoimento-content {
+        padding: 0px;
+    }
+    .pwa-depoiment-container .swiper-slide q {
+        padding: 0 30px;
+        text-align: center;
+    }
+}
+
+#ef-home .ef-li-active {
+    height: 50px !important;
+}
+
+@media (max-width: 425px){
+    #home-categorias-slide .swiper-slide {
+        width: 170px;
+    }
+    #monte-seu-consultorio-banner {
+        margin: 35px 0;
+    }
+    #produtos-mais-buscados .swiper-slide {
+        width: 160px;
+    }
+    #produtos-mais-buscados-slide {
+        height: 155px;
+    }
+    #produtos-mais-buscados {
+        margin: 35px 0;
+    }
+    #equipamentos-para-implantes-texto h5 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    #equipamentos-para-implantes-texto {
+        top: 32px;
+        left: 24px;
+    }
+
+    #equipamentos-para-implantes-texto a {
+        font-size: 12px;
+        width: 99px;
+        height: 28px;
+    }
+
+    #home-marcas-slide .swiper-slide {
+        width: 147px;
+    }
+}
+
+#equipamentos-para-implantes-banner {
+    border-radius: 10px;
+}
+
+@media(max-width: 320px){
+    #home-pre-footer h6 {
+        margin-left: 20px;
+    }
+}
+
+.pwa-modal-advanced-search-wrapper.ativo {
+    display: block;
+}
+
+#card-group-marca-modal-search-header .card-marca {
+    position: relative;
+    height: 124px;
+    width: 110px;
+    flex-shrink: 0;
+    border: 1px solid #14AFD1;
+    border-radius: 4px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+#card-group-marca-modal-search-header .card-marca img {
+    width: 100%;
+    height: 70%;
+}
+
+#card-group-marca-modal-search-header .card-marca span {
+    height: 30%;
+    justify-content: center;
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #14AFD1;
+}
+
+
+#card-group-marca-modal-search-header .card-marca::after {
+    top: -5px;
+}
+
+#ef-home .ef-see-more-filters {
+    text-align: left;
 }
