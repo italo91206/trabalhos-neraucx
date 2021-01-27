@@ -87,5 +87,24 @@
       slidesPerView: 'auto',
       spaceBetween: 20
     });
+  },
+  "--preparaSelect": component =>{
+    var select = document.getElementById('select-area-page');
+    var body = document.getElementsByTagName('BODY')[0];
+
+    // caso seja a primeira vez que passei no site:
+    if(select.classList.contains("ativo"))
+      body.classList.add("blocked");
+
+    function controlaSelect(){
+      select.classList.remove("ativo");
+      body.classList.remove("blocked");
+    }
+
+    var items = select.children;
+    for(var i=2; i < items.length; i++)
+      items[i].addEventListener("click", function(){
+        controlaSelect();
+      })
   }
 }

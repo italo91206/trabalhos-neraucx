@@ -1,0 +1,322 @@
+.pwa-vendas-title {
+    background-color: #174E67;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pwa-vendas-title span {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: pwa-url(icon-box-sell) no-repeat;
+    margin-right: 11px;
+}
+
+.pwa-vendas-title h1 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+@media(min-width: 800px){
+    .pwa-vendas-pending-list {
+        max-width: 60%;
+        margin: 0 10% 0 auto;
+    }
+
+    #vendas-inicio .pwa-card-product-shopping{
+        border-bottom: 1px solid #D1DCE1;
+        display: flex;
+    }
+}
+
+@media(min-width: 1440px) {
+    .pwa-vendas-pending-list {
+        max-width: 786px;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+.pwa-btn-sell-blue{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/***CARD-VENDAS.CSS**/
+
+/* daqui é só vendas*/
+.pwa-sell-container {
+    width: 100%;
+    max-width: 670px;
+    padding: 10px;
+    text-align: center;
+    height: 621px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+.pwa-sell-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+#confirmadas {
+    display: block;
+}
+/* até aqui é só vendas*/
+
+.pwa-card-sell-product {
+    background: #FFFFFF;
+ 
+    height: fit-content;
+    min-width: 325px;
+    max-width: 768px;
+    
+    padding: 10px;
+    padding-bottom: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 3px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pwa-card-sell-inner {
+    display: flex;
+    padding-top: 15px;
+}
+
+.pwa-btn-sell-blue {
+    height: 50px;
+    width: 237px;
+
+    border: #14AFD1;
+    border-radius: 5px;
+
+    position: relative;
+    margin-top: 20px;
+
+    background: #14AFD1;
+    color: #FFFFFF;     
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.pwa-btn-sell-blue:hover {
+    background: #108CA7;
+    border: #108CA7;
+    outline: none;
+}
+
+.pwa-container-img-sell {
+    height: 119.52317810058594px;
+    width: 141px;
+    background: #FFFFFF;
+    margin-right: 10px;
+    padding: 0px 10px 0px 10px;
+}
+.pwa-img-card-sell {
+    width: 100%;
+    height: 100%;
+}
+
+
+.pwa-card-sell-inner-texts {
+    width: 48vw;
+    max-width: 250px;
+}
+.pwa-card-sell-brand-blue {
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.pwa-card-sell-brand-gray {
+    margin-bottom: 8px;
+    color: #457185;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-card-sell-brand-qntd {
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-card-sell-brand-qntd::before {
+    content: 'Qntd. ';
+}
+
+/* daqui é vendas*/
+#entregues .pwa-card-sell-transfer-soon, 
+#entregues .pwa-card-sell-transfer-completed  {
+    margin-bottom:20px;
+
+    padding: 8px;
+    display: flex;
+
+    height: 28px;
+    width: 179px;
+
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+#entregues .pwa-card-sell-transfer-soon::before,
+#entregues .pwa-card-sell-transfer-completed::before  {
+    content: url(../assets/icons/icon-card-transfer.svg);
+    position: relative;
+    margin-top: -4px;
+    margin-right: 4px;
+}
+#entregues .pwa-card-sell-transfer-soon {
+    background: #A2B8C2;
+}
+#entregues .pwa-card-sell-transfer-completed  {
+    background: #6FCF97;
+}
+
+/* até aqui é vendas*/
+
+
+@media only screen and (min-width: 600px) {
+    .pwa-card-sell-product {
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .pwa-card-sell-inner {
+        padding-top: 0px;
+    }
+    .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: -3px;
+    }
+
+
+    .pwa-card-content {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+    #entregues .pwa-card-sell-product {
+        padding-top: 40px;
+        flex-direction: row;
+        align-items: initial;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    #entregues .pwa-card-sell-transfer-soon, 
+    #entregues .pwa-card-sell-transfer-completed  {
+            margin-bottom:0;
+            margin-left: 0;
+    }
+    #entregues .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin-top: 40px;
+        margin: auto;
+    }   
+}
+
+
+@media only screen and (min-width: 768px) {
+    .pwa-card-sell-product {
+        height: 200px;
+        min-width: 325px;
+        max-width: 758px;
+        
+        border-bottom: 1px solid  #E5E5E5;
+        padding-top: 40px;
+
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+    }
+
+    .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin-top: 15px;
+        margin-right: 0;
+    }
+    
+    #entregues .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin-top: -90px;
+        margin-right: 0;
+    }
+    
+    .pwa-card-sell-brand-qntd::before {
+        content: 'Quantidade ';
+    }
+
+}
+
+/***Vendas.css**/
+
+.pwa-link-sell-container {
+    margin-top: 2pc;
+    margin-bottom: 2pc;
+    width: 100%;
+        text-align: center;
+}
+.pwa-link-sell {
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+}
