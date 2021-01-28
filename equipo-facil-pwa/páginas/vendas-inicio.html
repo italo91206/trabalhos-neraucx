@@ -1,0 +1,107 @@
+<main id="vendas-inicio">
+
+  <section class="pwa-vendas-pending-list">
+    <div class="pwa-vendas-title ismobile flex">
+      <span></span>
+      <h1>Vendas</h1>
+    </div>
+
+    <h3 class="my-ad-title isdesktop">Vendas</h3>
+
+    <nav class="equipo-filter-product-type" pwa-hook="prepara-visao-anuncios">
+      <ul>
+        <li class="active">Confirmadas (3)</li>
+        <li>Enviadas (1)</li>
+        <li>Entregues (2)</li>
+        <li>Canceladas (1)</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="pwa-card-product-shopping">
+
+        <div class="product-description">
+          <div class="image-product">
+            <img pwa-src="destaques-card" alt="">
+          </div>
+          <div class="info-product">
+            <h6>Samsung</h6>
+            <h5>Aparelho de ultrassom Sansung medison V10 live 4D</h5>
+
+            <p><strong>Quant.</strong> <span>1</span></p>
+          </div>
+
+        </div>
+        <button class="pwa-btn-sell-blue" type="button">VER DETALHES DO ENVIO</button>
+      </div>
+
+      <div class="pwa-card-product-shopping">
+
+        <div class="product-description">
+          <div class="image-product">
+            <img pwa-src="destaques-card" alt="">
+          </div>
+          <div class="info-product">
+            <h6>Samsung</h6>
+            <h5>Aparelho de ultrassom Sansung medison V10 live 4D</h5>
+
+            <p><strong>Quant.</strong> <span>1</span></p>
+          </div>
+
+        </div>
+        <button class="pwa-btn-sell-blue" type="button">VER DETALHES DO ENVIO</button>
+      </div>
+
+      <div class="pwa-card-product-shopping">
+
+        <div class="product-description">
+          <div class="image-product">
+            <img pwa-src="destaques-card" alt="">
+          </div>
+          <div class="info-product">
+            <h6>Samsung</h6>
+            <h5>Aparelho de ultrassom Sansung medison V10 live 4D</h5>
+
+            <p><strong>Quant.</strong> <span>1</span></p>
+          </div>
+
+        </div>
+        <button class="pwa-btn-sell-blue" type="button">VER DETALHES DO ENVIO</button>
+      </div>
+
+    </div>
+
+    <section class="pwa-link-sell-container">
+      <a pwa-to-page="/" class="pwa-link-sell">Ver vendas mais antigas</a>
+    </section>
+
+  </section>
+
+  <section id="home-pre-footer">
+    <div class="container flex">
+      <a pwa-to-page="criar-anuncio" class="flex">
+        <img pwa-src="icon-check">
+        <h6>Venda hoje mesmo seu equipamento no EquipoFácil</h6>
+      </a>
+    </div>
+  </section>
+
+  <div id="modal-codigo-rastreio" class="ativo">
+    <div class="modal-codigo-rastreio-inside">
+      <h5 class="pwa-title-modal-match">Já enviou o equipo?</h5>
+      <p class="pwa-text-modal-match">
+        Confirme abaixo se o equipo estiver a caminho.
+      </p>
+
+      <div class="pwa-form-modal-match">
+        <div class="pwa-box-input-flex">
+          <input class="pwa-input-modal-flex" type="text" placeholder="Código de rastreio"
+            aria-placeholder="Código de rastreio">
+          <button class="pwa-btn-add" type="button" onclick="fecharModalCodigoRastreio()">ADICIONAR</button>
+        </div>
+        <button class="pwa-btn-blue" type="" onclick="fecharModalCodigoRastreio()">CONFIRMAR ENVIO</button>
+      </div>
+      <a data-="pwa-link-sell" class="pwa-link-sell" id="cancelModalMatch" type="button" onclick="fecharModalCodigoRastreio()">Cancelar</a>
+    </div>
+  </div>
+</main>

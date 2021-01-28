@@ -71,37 +71,39 @@
 
 .equipo-filter-product-type {
     margin-bottom: 20px;
+    overflow: auto;
 }
 
 .equipo-filter-product-type ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
     list-style: none;
-    padding: 18px 20px 8px ;
     border-bottom: 1px solid #D1DCE1;
+    width: 550px;
+    height: 35px;
+    margin-top: 18px;
 }
+
 .equipo-filter-product-type ul li {
     font-family: Cambay;
     font-size: 1.4rem;
     line-height: 23px;
     text-align: center;
-    letter-spacing: 0.01em;
-
     color: #A2B8C2;
     cursor: pointer;
+    padding: 0 11px;
+    width: 125px;
 }
 
 .equipo-filter-product-type ul li.active {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-weight: bold;
-    color: #174E67;
-    padding-bottom: 9px;
-    margin-bottom: -10px;
+    color: #14AFD1;
+    /* padding-bottom: 9px; */
+    /* margin-bottom: -10px; */
     border-bottom: 3px solid #14AFD1;
+    width: 125px;
+    /* transition: all .25s ease; */
 }
-
 
 /* Alertas anuncios do card criado no produto.css */
 /*Alerta anuncio*/
@@ -1004,7 +1006,7 @@
     position: absolute;
     top:0;
     left: 0;
-    background: url('../assets/icons/icon-check-green.svg') no-repeat center center;
+    background: pwa-url(icon-check-green) no-repeat center center;
 }
 
 .pwa-modal-laudo-send-sucess h5 {
@@ -1013,12 +1015,9 @@
     font-size: 2.7rem;
     line-height: 32px;
     text-align: center;
-
     color: #27AE60;
-
     max-width: 230px;
     height: fit-content;
-
     margin-bottom: 17px;
 }
 
@@ -1028,15 +1027,146 @@
     line-height: 19px;
     text-align: center;
     letter-spacing: 0.01em;
-
     color: #457185;
-
     max-width: 269px;
-
     margin-bottom: 17px;
 }
 
 .pwa-modal-laudo-send-sucess .pwa-header-item-green {
     position: relative;
     margin-bottom: 17px;
+}
+
+@media(max-width: 1440px){
+    .equipo-filter-product-type ul{
+        width: 100%;
+    }
+}
+
+@media(max-width: 1024px){
+    .equipo-filter-product-type ul{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    .equipo-filter-product-type ul {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+    
+    #modal-codigo-rastreio .modal-codigo-rastreio-inside {
+        height: 289px;
+        width: 355px;
+        max-width: unset;
+    }
+
+    #modal-codigo-rastreio .pwa-input-modal-flex {
+        width: 198px;
+    }
+
+    #modal-codigo-rastreio .pwa-btn-add {
+        width: 122px;
+    }
+
+    #modal-codigo-rastreio .pwa-form-modal-match {
+        width: unset !important;
+    }
+
+    #modal-codigo-rastreio .pwa-btn-blue {
+        height: 50px !important;
+        margin-top: 26px !important;
+        margin-bottom: 26px !important;
+        width: 100% !important;
+    }
+
+    #modal-codigo-rastreio .pwa-title-modal-match {
+        margin-top: 8px;
+    }
+}
+
+@media(max-width: 425px){
+    .equipo-filter-product-type ul{
+        width: 500px;
+        max-width: unset;
+        padding: unset;
+    }
+    .equipo-filter-product-type ul li.active {
+        border-bottom: unset;
+        font-weight: unset;
+    }
+    .equipo-filter-product-type::-webkit-scrollbar {
+        height: 4px;   
+    }
+    
+    .equipo-filter-product-type::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+}
+
+
+@media(max-width: 1024px){
+    #vendas-inicio .pwa-vendas-pending-list {
+        max-width: 768px;
+        margin: 0px auto;
+    }    
+}
+
+@media(max-width: 1280px){
+    #vendas-inicio .pwa-vendas-pending-list {
+        max-width: 1200px;
+        margin: 0px auto;
+    }    
+}
+
+@media(max-width: 1330px){
+    #vendas-inicio .pwa-vendas-pending-list {
+        max-width: 1200px;
+        margin: 0px auto;
+    }    
+}
+
+/* modal do vendas-inicio codigo de rastreio  */
+
+
+#modal-codigo-rastreio {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#modal-codigo-rastreio.ativo {
+    display: block;
+}
+
+.modal-codigo-rastreio-inside {
+    height: 381px;
+    border-radius: 8px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+    max-width: 576px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#modal-codigo-rastreio .pwa-form-modal-match {
+    width: 496px;
+    margin: 0 auto;
+}
+
+#modal-codigo-rastreio .pwa-btn-blue {
+    width: 100%;
+    max-width: 496px;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }

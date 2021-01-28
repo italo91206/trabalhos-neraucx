@@ -118,3 +118,11 @@ function menos_mobile(atual, menos) {
         atual = document.getElementById("quantidade-mobile").value--;
     }
 };
+
+function fecharModalCodigoRastreio(){
+    document.getElementById('modal-codigo-rastreio').classList.remove("ativo");
+}
+
+function abrirModalCodigoRastreio(){
+    document.getElementById('modal-codigo-rastreio').classList.add("ativo");
+}
