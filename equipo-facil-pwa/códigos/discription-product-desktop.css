@@ -1,0 +1,199 @@
+.swiper-container-summary-ad {
+    width: 90%;
+    background-color: #FFF;
+    margin: 16px auto 10px;
+    min-height: 301px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.swiper-container-summary-ad .container-image-equipo {
+    width: 60%;
+    height: 100%;
+    padding: 8px;
+    margin: 20px auto 0;
+}
+
+.swiper-container-summary-ad .container-image-equipo img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    flex: none;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.swiper-container-summary-ad .swiper-button-prev::after,
+.swiper-container-summary-ad .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--color-text-blue)
+}
+/*info product*/
+.info-equipo-summary {
+    background-color: #FFF;
+    width: 90%;
+    margin: 10px auto 0;    
+    padding: 22px 12px 15px 20px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.info-equipo-summary .info-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-equipo-summary .info-container .info-content {
+    width: 48%;
+    margin-bottom: 18px;
+}
+
+.info-equipo-summary .info-container .info-content h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    color: #123E52;
+}
+
+.info-equipo-summary .info-container .info-content p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #457185;
+    margin-top: 5px;
+}
+
+.info-equipo-summary a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    font-weight: bold
+}
+
+.info-equipo-summary a span {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+}
+
+.about-time-equipo {
+    background: #FFF;
+    width: 90%;
+    margin: 10px auto 30px;
+    padding: 28px 12px 15px 20px;
+    max-width: 500px;
+}
+
+.about-time-equipo h5 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: start;
+
+    color: #123E52;
+}
+
+.about-time-equipo p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    max-width: 90%;
+    margin-top: 5px;
+    color: #457185;
+}
+
+.about-time-equipo a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    font-weight: bold
+}
+
+.about-time-equipo a span {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+}
+
+@media(min-width: 800px) {
+
+    .swiper-container-summary-ad {
+        width: 100% !important;
+        max-height: 440px;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .container-desktop {
+        width: 100%;
+        min-height: 1200px;
+        position: relative;
+        margin-top: -15px;
+    }
+
+
+    .container-desktop .d-name-equipo-summary {
+        position: absolute;
+        right: 0;
+        max-width: 373px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .container-desktop .info-product-desktop {
+        position: absolute;
+        left: 0;
+        max-width: 786px;
+        width: 60%;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .info-equipo-summary,
+    .about-time-equipo {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        padding: 24px 40px;
+    }
+
+    .about-time-equipo {
+        border-top: 1px solid #D1DCE1;
+    }
+
+    .container-desktop section.s-payment-receipt-bg {
+        min-height: auto;
+        border: none;
+    }
+
+    .container-desktop section.s-payment-receipt-bg .pwa-payment-receipt {
+        margin: 0;
+    }
+
+    .container-desktop .buttons-group {
+        position: absolute;
+        right: 0;
+        top: 130px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

@@ -45,3 +45,9 @@
     opacity: 1;
     transition: all .25s ease;
 }
+
+@media(max-width: 768px){
+    #select-area-page.ativo {
+        background: #1e536c;
+    }    
+}

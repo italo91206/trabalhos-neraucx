@@ -1,0 +1,189 @@
+.categorias-card .card-body {
+    width: auto !important;
+}
+
+.categorias-card .card {
+    margin-right: 0px;
+}
+
+#pwa-anuncy-one .input-checkbox-modal .box label{
+    z-index: 2;
+}
+
+#pwa-anuncy-one .preview-result-search ul li {
+    padding: 14px 10px !important;
+}
+
+/*==============
+ RESPONSIVE 
+ ==============*/
+@media(min-width: 750px) {
+    .pwa-indicate-model p,
+    .pwa-ad-page .product-add p,
+    .pwa-ad-page .preview-product-card {
+        margin-left: 0;
+    }
+
+    .pwa-indicate-model .input-content {
+        margin-left: 0;
+    }
+
+    .pwa-ad-page h3 ,
+    .pwa-indicate-model .input-content ,
+    .pwa-ad-page .input-search-container,
+    .pwa-ad-page .product-add p,
+    .pwa-ad-page .preview-product-card {
+        max-width: 100%;
+    }
+
+    #pwa-anuncy-one .buttons-group {
+        border-top: none !important;
+    }
+
+    /* #pwa-anuncy-one .categorias-card .card-body {
+        width: auto;
+    } */
+
+    .year-fabrication-content {
+        padding-bottom: 25px;
+    }
+
+    #pwa-anuncy-one .year-fabrication-container.new-container {
+        padding-bottom: 30px;
+
+    }
+
+    #pwa-anuncy-one .pwa-ad-category .categorias-card {
+        width: 73%;
+    }
+}
+
+@media(max-width: 600px) {
+    .pwa-ad-page.page-01 .categorias-card .card-body {
+        width: auto !important;
+    }
+
+    .pwa-ad-page h3 {
+        max-width: 100% !important;
+    }
+
+    .pwa-ad-category .categorias-card {
+        padding-left: 0;
+    }
+
+    .pwa-ad-page.page-01 .pwa-ad-category .categorias-card .card {
+        height: 90px;
+        width: 45%;
+    }
+
+    .categorias-card .bg-card-2 {
+        margin-right: 0px !important;
+    }
+
+    .pwa-ad-page.page-01 .categorias-card .bg-card-1, 
+    .pwa-ad-page.page-01 .categorias-card .bg-card-2 {
+        background-position: 40px !important;
+    }
+
+    .pwa-ad-page .input-content .box input {
+        width: auto !important;
+    }
+
+    .new-container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .pwa-ad-category .categorias-card {
+        width: 98vw;
+    }
+
+    #pwa-ad-category-swiper.new-container {
+        padding: 0 !important;
+    }
+
+    .pwa-ad-page .preview-product-card,
+    .pwa-ad-page .product-add p,
+    .pwa-indicate-model p,
+    .pwa-indicate-model .input-content {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    #pwa-anuncy-one .new-container.buttons-group {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    #pwa-anuncy-one .categorias-card .card {
+        width: 147px !important;
+    }
+
+    .year-fabrication-container.new-container {
+        padding-bottom: 25px !important;
+    }
+
+    #pwa-anuncy-one.pwa-ad-page .buttons-group {
+        margin-bottom: 59px;
+    } 
+}
+
+@media(min-width: 800px) { 
+    #pwa-anuncy-one .new-container.buttons-group {
+        margin-bottom: 6em !important;
+    }
+
+    #pwa-anuncy-one .pwa-ad-category-desktop.eqf-category {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #pwa-anuncy-one .pwa-ad-category-desktop.eqf-category .new-container {
+        width: 100% !important;
+    }
+
+    .pwa-ad-category-desktop {
+        min-height: auto !important;    
+        border-bottom: none;
+    }
+
+    .product-informations-content {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        max-width: 786px;
+        margin: 0 auto;
+    }
+
+    #pwa-anuncy-one .year-fabrication-content {
+        padding-bottom: 0px !important;
+        border-bottom: none !important;
+    }
+
+    #pwa-anuncy-one.pwa-ad-page section {
+        padding: 40px 35px !important;
+    }
+    
+    .pwa-ad-category-desktop {
+        border-bottom: none !important;
+    }
+}
+
+@media(min-width: 750px) and (max-width: 790px) {
+    #pwa-anuncy-one .buttons-group .button-secondy {
+        padding-left: 20px;
+    }
+
+    #pwa-anuncy-one .buttons-group .button-primary {
+        margin-right: 15px !important;
+    }
+}
+
+@media(max-width: 600px){
+    #pwa-anuncy-one .categorias-card .card {
+        width: 170px;
+        margin: unset;
+    }
+}

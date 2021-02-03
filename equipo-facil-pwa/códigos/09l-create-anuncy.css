@@ -1,0 +1,847 @@
+.pwa-ad-page section.s-payment-receipt-bg {
+    padding-top: 0;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  
+    min-height: 350px;
+    border: none;
+  }
+  
+  #eqs-create-inspect .payment-receipt {
+    margin-top: -30px;
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+  
+  .pwa-ad-page section.s-inspect-equipo {
+    padding-bottom: 110px;
+    border: none;
+  }
+  
+  .card-equipo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 412px;
+  }
+  
+  .s-inspect-equipo p {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+  
+    color: #174e67;
+  }
+  
+  .pwa-ad-page h3 {
+      font-family: Cambay;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color: #457185;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  
+  /* ticket vistoria */
+  .ticket-inspect-desktop {
+    display: none;
+  }
+  
+  .s-inspect-equipo .ticket-inspect-desktop .ticket-inspect-equipo {
+    margin: 0;
+    display: inline-flex;
+  }
+  
+  .inspect-equipo .container-card-desktop .ticket-inspect-equipo {
+    left: 0;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -34px;
+  }
+  
+  .card-equipo-ad h6 {
+      margin-top: 39px;
+  }
+  
+  
+  /*Slide anuncio equipo vistoriado*/
+  .inpect-slides-container {
+    max-width: 90%;
+    margin-bottom: 46px;
+  }
+  .inpect-slides-container h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+  
+    color: #174e67;
+    margin-bottom: 16px;
+  }
+  
+  .inpect-slides-container p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+  
+    letter-spacing: 0.01em;
+  
+    color: #174e67;
+  }
+  
+  /* pagination slide */
+  #eqs-create-inspect .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #174e67;
+    opacity: 1;
+    margin-right: 15px;
+  }
+  
+  #eqs-create-inspect .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #0051ff;
+    height: 8px;
+    width: 8px;
+    margin-bottom: 1.5px;
+  }
+  
+  /* vantagens de ter um equipo vistoriado */
+  .advantage-inspect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 63px;
+  }
+  
+  .advantage-inspect h6 {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+  
+    color: #174e67;
+  
+    margin-bottom: 21px;
+  }
+  
+  .advantage-inspect .info {
+    background: #fff;
+    max-width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  .advantage-inspect .info p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+  
+    color: #174e67;
+    margin-top: 11px;
+    max-width: 247px;
+  }
+  
+  .advantage-inspect .button-request-inspect {
+    border: none;
+  
+    margin-top: 25px;
+    width: 100%;
+    max-width: 293px;
+    height: 82px;
+    border-radius: 5px;
+  
+    background-color: #14afd1;
+  
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  
+    color: #ffffff;
+  
+    transition: background-color 0.2s;
+  }
+  
+  .advantage-inspect .button-request-inspect:hover {
+    background: #108ca7;
+  }
+  
+  .swiper-pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #174e67;
+    opacity: 1;
+    margin-right: 15px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #0051ff;
+    height: 8px;
+    width: 8px;
+    margin-bottom: 1.5px;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    /* max-width: 350px; */
+    /* height: 150px; */
+    /* margin-top: 40px; */
+  }
+  
+  
+  /*Modal endereço*/
+  
+  .modal-select-address-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: 200vh;
+    height: 100%;
+    z-index: 9999;
+  }
+  
+  .modal-select-address {
+    max-width: 576px;
+    background: #FFF;
+    width: 90%;
+    border-radius: 5px;
+    height: 90vh;
+    padding: 18px 13px;
+    margin: 35px auto;
+    overflow-y: auto;
+  }
+  
+  .modal-select-address p {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+  
+    letter-spacing: 0.01em;
+  
+    /* Color-princ/500 */
+  
+    color: #174E67;
+    max-width: 280px;
+  }
+  
+  .modal-select-address .endereco-select {
+    display: flex;
+    background: #D1DCE1;
+    width: 100%;
+    border-radius: 5px;
+  
+    padding: 18px 12px;
+  }
+  
+  .modal-select-address .endereco-select .input-checkbox-modal {
+    width: 10%;
+  }
+  
+  .modal-select-address .endereco-select .input-checkbox-modal .box {
+    margin: 0;
+  }
+  
+  .modal-select-address .endereco-select span{
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    margin-bottom: 8px;
+    color: #14AFD1;
+  }
+  
+  .modal-select-address .endereco-select p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+  
+    letter-spacing: 0.01em;
+  
+  
+    color: #457185;
+  
+  }
+  
+  .modal-select-address .endereco-select span:nth-child(4) {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+  
+    color: #108CA7;
+    margin-top: 10px;
+  }
+  
+  
+  /* Formulario new address modal */
+  .new-address p {
+    margin: 29px 0;
+  }
+  
+  .modal-top-address p {
+      margin-top: 20px;
+  }
+  
+  .modal-select-address form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .modal-select-address form .input-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 29px;
+  }
+  
+  .modal-select-address form .input-content.logradouro input {
+    max-width: none;
+  }
+  
+  .modal-select-address form .select-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 29px;
+  }
+  
+  .modal-select-address form .select-group .select-content:nth-child(1) {
+    width: 25%;
+  }
+  
+  .modal-select-address form .select-group .select-content:nth-child(2) {
+    width: 65%;
+  }
+  
+  .modal-select-address form .input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-select-address form .input-group .input-content + .input-content {
+    margin-left: 24px;
+  }
+  
+  .modal-select-address form .periodo-vistoria {
+    display: flex;
+    margin-bottom: 29px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-select-address form .periodo-vistoria p {
+    width: 48%;
+    text-align: right;
+  }
+  
+  .modal-select-address form .periodo-vistoria .select-content {
+    width: 48%;
+    flex-shrink: 0;
+  }
+  
+  .pwa-ad-page.inspect-equipo .advantage-inspect .info {
+      max-width: 92%;
+  }
+  
+  .pwa-ad-page .create-anuncy-07.buttons-group {
+      padding-top: 31px;
+      border-top: 1px solid #D1DCE1 !important;
+  }
+  
+  .modal-top-address {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .modal-top-address button {
+      border: none;
+      background-color: transparent;
+      height: 18px;
+      width: 18px;
+      outline: none;
+      cursor: pointer;
+  }
+  
+  .button-request-inspect-desktop {
+      display: none;
+  }
+  
+  .button-request-inspect-mobile {
+      display: block;
+  }
+  
+  /*=============== 
+   * REPONSIVE
+   ===============*/
+   @media(max-width: 600px) {
+       #eqs-create-inspect .pwa-ad-page h3 {
+          max-width: 68% !important;
+       }
+  
+       #eqs-create-inspect .s-inspect-equipo .container {
+           padding: 0;
+       }
+  
+       #eqs-create-inspect .card-equipo-ad {
+          max-width: 86% !important;
+       }
+  
+       #eqs-create-inspect .card-equipo-container {
+           min-height: 412px !important;
+       }
+  
+       #eqs-create-inspect .inpect-slides-container.container {
+          max-width: 98vw !important;
+       }
+  
+       #inpect-slides-swiper {
+           min-height: 151px !important;
+       }
+  
+       #eqs-create-inspect .advantage-inspect .button-request-inspect {
+           max-width: 288px;
+       }
+  
+       #eqs-create-inspect #inpect-slides-swiper .swiper-slide {
+          width: 100vw !important;
+       }     
+  
+      /* RECEBIMENTO */
+      #eqs-create-inspec .s-payment-receipt-bg {
+          min-width: 376px;
+          margin: 0 auto;
+          margin-left: -8px !important;
+       }
+  
+      #eqs-create-inspect .payment-receipt ul li p {
+          width: 56% !important;
+      }
+  
+      #eqs-create-inspect .payment-receipt .how-receive p {
+          width: 46% !important;
+      }
+  
+      #eqs-create-inspect .payment-receipt {
+          width: 98% !important;
+      }
+  
+      #eqs-create-inspect .s-payment-receipt-bg,
+      #eqs-create-inspect .card-type-ad-group,
+      #eqs-create-inspect .pwa-super-destaque-ad {
+          width: 96% !important;
+      }
+  
+      #eqs-create-inspect .ad-equipo-card {
+          margin-left: -11px;
+          width: 96vw;
+      }
+  
+      #eqs-create-inspect.pwa-ad-page .buttons-group {
+          margin-top: 16px !important;
+          border-top: 1px solid #D1DCE1 !important;
+      }
+  
+      #eqs-create-inspect .payment-receipt ul {
+          width: 100%;
+          margin-left: -14px !important;
+      }
+  
+      .payment-receipt section {
+          border-bottom: none;
+      }
+  
+      .separator-line {
+          border-top: 1px solid #D1DCE1;
+          width: 96vw;
+          margin-left: -18px;
+      }
+  
+      #eqs-create-inspect .how-receive .description p {
+          width: 100% !important;
+      }
+  
+      .payment-receipt .how-receive .description {
+          width: 61%;
+          margin-left: 16px;
+      }
+  
+      #eqs-create-inspect .how-receive {
+          max-width: 118vw !important;
+          min-width: 100px !important;
+          width: 107%;
+          margin-left: -14px;
+      }
+  
+      #eqs-create-inspect  .how-receive p {
+          margin-left: -19px !important;
+      }
+  
+      #eqs-create-inspect .how-receive .description p {
+          margin-left: 0px !important;
+      }
+  
+      /* MODAL */
+      .modal-select-address form .periodo-vistoria p {
+          font-size: 12px !important;
+          line-height: 15px !important ;
+      }
+  
+      .modal-select-address form .periodo-vistoria {
+          margin-bottom: 13px !important;
+      }
+  
+      .modal-select-address .button-primary {
+          margin-bottom: 25px;
+      }
+  
+      .modal-select-address .input-content.input-content-cep input {
+          width: 77%;
+      }
+  
+      .modal-select-address .select-group {
+          flex-direction: row-reverse;
+      }
+  
+      .select-group .select-content:nth-child(2) {
+          width: 30% !important;
+      }
+  
+      .select-group .select-content:nth-child(1) {
+          width: 63% !important;
+      }
+   }
+  
+   @media(min-width: 600px) {
+      .button-request-inspect-mobile {
+          display: none !important;
+      }
+  
+      button-request-inspect-desktop {
+          display: block !important;
+      }
+   }
+  
+  @media(min-width: 800px) {
+      #eqs-create-inspect .swiper-container {
+          height: auto !important;
+      }
+      
+      .ticket-inspect-mobile {
+          display: none;
+      }
+  
+      .ticket-inspect-desktop {
+          display: block;
+      }
+  
+      .container-card-desktop {
+          display: flex;
+          width: 75%;
+  
+      }
+  
+      #eqs-create-inspect .card-equipo-ad {
+          max-width: 517px !important;
+          height: 319px;
+          right: 4em;
+      }
+  
+      #eqs-create-inspect .card-equipo-ad .product-info {
+          display: flex;
+          width: 50%;
+          align-items: center;
+          height: calc(100% - 42px);
+      }
+  
+      #eqs-create-inspect .card-equipo-ad .product-info .card-body {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          height: 100%;
+      }
+  
+      .inspect-equipo .card-equipo-ad .ticket-inspect-equipo {
+          margin-top: 24px;
+          position: relative;
+          margin: 24px 0 10px;
+      }
+  
+      .container-card-desktop .inpect-slides-container {
+          margin-top: 24px;
+          max-width: 34%;
+      }
+  
+      .container-card-desktop .inpect-slides-container .swiper-wrapper {
+          max-width: 373px;
+      }
+  
+      .advantage-inspect h6 {
+          font-size: 2rem;
+      }
+  
+      .advantage-inspect {
+          margin-top: -50px;
+          margin-bottom: 100px;
+      }
+  
+      .advantage-inspect .info,
+      .advantage-inspect .button-request-inspect {
+          max-width: 398px;
+          width: 100%;
+          margin-top: 40px;
+      }
+  
+      .inspect-equipo .payment-receipt {
+          margin-top: -50px;
+      }
+  
+      .modal-select-address {
+          padding: 24px 40px;
+      }
+      .modal-select-address p {
+          max-width: none;
+          margin-bottom: 24px;
+      }
+  
+      .modal-select-address form .periodo-vistoria {
+          display: block;
+      }
+      .modal-select-address form .periodo-vistoria p {
+          width: 100%;
+          text-align: start;
+      }
+  
+      .modal-select-address form .periodo-vistoria .select-content{
+          width: 100%;
+      }
+  
+      .card-equipo-container {
+          min-height: 370px !important;
+      }
+  
+      #eqs-create-inspect .card-equipo-container {
+          width: 59% !important;
+      }
+  
+      .pwa-ad-page.inspect-equipo .advantage-inspect .info {
+          max-width: 34%;
+          margin-top: 17px;
+      }
+  
+      #eqs-create-inspect .bg-card-equipo-ad {
+          margin-top: 80px;
+      }
+  
+      #eqs-create-inspect .swiper-slide {
+          height: 160px;
+      }
+  
+      #eqs-create-inspect .advantage-inspect .info p {
+          text-align: center;
+          max-width: 72%;
+      }
+  
+      /* RECEBIMENTO */
+      #eqs-create-inspect .payment-receipt {
+          margin-top: -53px;
+      }
+  
+      #eqs-create-inspect .payment-receipt h5 {
+          font-size: 20px !important;
+      }
+      
+      #eqs-create-inspect .container.payment-receipt {
+          padding: 0;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+      }
+  
+      #eqs-create-inspect .container.payment-receipt section:nth-child(1) {
+          padding-top: 40px !important;
+          padding-bottom: 0px !important;
+      }
+  
+      #eqs-create-inspect .container.payment-receipt section {
+          padding: 0px 35px 27px !important;
+      }
+  
+      .receivement-value {
+          border-bottom: none !important;
+      }
+  
+      #eqs-create-inspect .payment-receipt ul li p {
+          width: 24%;
+          text-align: left;
+          margin-left: -11px;
+      }
+  
+      #eqs-create-inspect .payment-receipt ul li span {
+          width: 76%;
+      }
+  
+      #eqs-create-inspect .payment-receipt ul {
+          margin-top: 29px;
+          margin-bottom: 14px;
+      }
+  
+      #eqs-create-inspect .payment-receipt ul li {
+          margin-bottom: 6px !important;
+      }
+  
+      #eqs-create-inspect .payment-receipt .how-receive p {
+          text-align: left;
+          width: 43%;
+      }
+  
+      #eqs-create-inspect .payment-receipt .how-receive .description {
+          width: 90%;
+          margin-left: 0;
+      }
+  
+      #eqs-create-inspect.pwa-ad-page section.s-payment-receipt-bg {
+          min-height: 245px !important;
+      }
+  
+      #eqs-create-inspect .container.buttons-group.create-anuncy-07 {
+          margin-top: 0;
+          margin-bottom: 5em;
+          border-top: none !important;
+      }
+  
+      /* MODAL */
+      .modal-select-address form .select-group div {
+          min-width: 46% !important;
+          max-width: 46% !important;
+      }
+  
+      .pwa-input-container .input-content-cep {
+          width: 46% !important;
+      }
+  
+      .select-content:nth-child(2) {
+          width: 100% !important;
+      }
+  }
+  
+  @media(min-width: 700px) and (max-width: 800px) {
+      .s-inspect-equipo .container h3 {
+          margin-left: 25px;    
+      }
+  
+      .ticket-inspect-mobile {
+          width: 640px;
+          margin: 0 auto !important;
+      }
+  
+      .card-equipo-ad {
+          width: 100%;
+          max-width: 640px;
+      }
+  
+      .inpect-slides-container {
+          max-width: 640px;
+          margin-bottom: 46px;
+          padding-left: 0px;
+          padding-right: 0;
+      }
+  
+      .inpect-slides-container h6 {
+          width: 88% !important;
+          margin: 0 auto;
+      }
+  
+      #eqs-create-inspect .swiper-container {
+          max-width: 88% !important;
+      }
+      
+      .advantage-inspect .button-request-inspect,
+      #eqs-create-inspect .payment-receipt {
+          max-width: 640px;
+      }
+  
+      .pwa-ad-page.inspect-equipo .advantage-inspect .info {
+          max-width: 640px;
+          width: 640px;
+      }
+  
+      .modal-top-address p {
+          max-width: 100% !important;
+      }
+  
+      .receivement-value {
+          border-bottom: none !important;
+      }
+  }
+  
+  @media(min-width: 850px) and (max-width: 1030px)  {
+      #eqs-create-inspect .container-card-desktop .inpect-slides-container {
+          margin-top: -65px;
+      }
+  
+      #eqs-create-inspect .swiper-pagination {
+          margin-top: 30px;
+      }
+  
+      .pwa-ad-page.inspect-equipo .advantage-inspect .info {
+          width: 786px;
+          min-width: 786px;
+      }
+  
+      #eqs-create-inspect .swiper-container {
+          max-width: 100%;
+      }
+      
+      .advantage-inspect .button-request-inspect,
+      #eqs-create-inspect .payment-receipt {
+          max-width: 786px;
+      }
+  
+      .pwa-ad-page.inspect-equipo .advantage-inspect .info {
+          width: 786px;
+      }
+  
+       #eqs-create-inspect .swiper-slide {
+          height: 223px;
+      }
+  }   
+  
+  @media(min-width: 1000px) {
+      #eqs-create-inspect .swiper-pagination {
+          margin-top: 25px;
+          justify-content: flex-start;
+      }
+  
+      #eqs-create-inspect .payment-receipt {
+          min-width: 786px;
+          max-width: 786px;
+      }
+  }

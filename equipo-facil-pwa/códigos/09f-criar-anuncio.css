@@ -1,0 +1,263 @@
+/*correção componentes*/
+.ad-equipo-cards-container  {
+    min-height: auto !important;
+}
+.bg-ad-equipo-cards {
+    margin-bottom: 0;
+}
+
+.pwa-ad-page section.s-fast-buy {
+    min-height: 85px;
+}
+
+.pwa-ad-page section.s-payment-receipt-bg {
+    padding-top: 0;
+    position: relative;
+    min-height: 390px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-receipt {
+    margin-top: -30px;
+    position: absolute;
+    top: 0;
+}
+
+/* Anuncio pos pago*/
+
+.pwa-post-paid-container {
+    border-top: 1px solid #D1DCE1;
+    background: #E6E6E6;
+    display: none;
+}
+
+.d-post-pad-card-group {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 24px 0 55px;
+}
+
+.d-post-pad-card-group .d-post-card {
+    background: #FFF;
+    max-width: 48%;
+    width: 100%;
+
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 17px 4px;
+}
+
+.d-post-pad-card-group .d-post-card .header-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-post-pad-card-group .d-post-card .header-card span{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+}
+
+.d-post-pad-card-group .d-post-card .header-card span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.d-post-pad-card-group .d-post-card:nth-child(1) .header-card span::after {
+    background: pwa-url(icon-star-destaque) no-repeat center center;
+}
+
+.d-post-pad-card-group .d-post-card:nth-child(2) .header-card span::after {
+    background: pwa-url(icon-super-destaque) no-repeat center center;
+}
+
+.d-post-pad-card-group .d-post-card .header-card h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #174E67;
+
+    margin-top: 11px;
+}
+
+.d-post-pad-card-group .d-post-card .header-card p {
+    font-family: Cambay;
+    font-size: 1.2rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+    margin-top: 8px;
+}
+
+.d-post-pad-card-group .d-post-card .body-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.d-post-pad-card-group .d-post-card.desable {
+    opacity: 0.43
+}
+
+.d-post-pad-card-group .d-post-card.select {
+    border: 1px solid #14AFD1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.d-post-pad-card-group .d-post-card .body-card h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: var(--color-text-blue);
+    max-width: 111px;
+}
+
+.d-post-pad-card-group .d-post-card .body-card p {
+    font-family: Cambay;
+    font-size: 11px;
+    line-height: 15px;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    max-width: 144px;
+    margin-top: 11px;
+}
+.d-post-pad-card-group .d-post-card .body-card p + p {
+    margin: 0; 
+}
+.d-post-pad-card-group .d-post-card .body-card p.through {
+    text-decoration: line-through;
+}
+
+.d-post-pad-card-group .d-post-card .body-card span{
+    font-family: Cambay;
+    font-size: 9px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+    margin-top: 11px;
+}
+
+.talk-more-product .categorias-card .card-body {
+    width: auto !important;
+}
+
+@media(min-width: 800px) {
+    .talk-more-product .pwa-ad-page section.s-payment-receipt-bg .payment-receipt {
+        position: absolute;
+        margin-top: -22px;
+    }
+
+    .talk-more-product .container.payment-receipt {
+        max-width: 786px;
+    }
+
+    .talk-more-product .pwa-ad-page .buttons-group {
+        border-top: none;
+    }
+
+    .talk-more-product .pwa-ad-page section.s-payment-receipt-bg {
+        min-height: 340px !important;
+    }
+
+    .talk-more-product .pwa-ad-page .buttons-group {
+        margin-bottom: 7em;
+    }
+
+    .talk-more-product .pwa-ad-page .buttons-group {
+        margin-top: 0 !important;
+        padding-top: 43px !important;
+    }
+
+    .buttons-group.btns-create-anuncy {
+        padding-top: 40px !important;
+        margin-top: 130px !important;
+    }
+
+    .container.payment-receipt.payment-receipt-content {
+        margin-top: -20px !important;
+    }
+}
+
+@media(min-width: 600px) {
+    .d-post-pad-card-group {
+        max-width: 786px;
+    }
+
+    .bg-ad-equipo-cards {
+        min-height: 357px;
+        margin-top: 30px;
+    }
+
+    .bg-super-destaque {
+        margin-bottom: 120px;
+    }
+    .pwa-post-paid-container {
+        margin-bottom: 120px !important;
+        border-top: none;
+    }
+
+    .input-group-card-name {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .pwa-super-destaque-ad {
+        padding: 0 !important;
+    }
+
+    .pwa-ad-page section.pwa-s-pay-ad {
+        padding-top:0;
+    }
+
+    .d-pay-confirmed {
+        margin: 0 !important;
+    }
+
+    .pwa-ad-.pagetalk-more-product h3 {
+        max-width: 100%;
+    }
+
+    .talk-more-product .categorias-card .card {
+        width: unset;
+    }
+}
+
+@media(max-width: 580px) {
+    .talk-more-product .bg-ad-equipo-cards {
+        margin-top: 38px;
+    }
+}
+
+
+@media(max-width: 900px) {
+    .pwa-ad-page .buttons-group {
+        border-top: none !important;
+    }
+}

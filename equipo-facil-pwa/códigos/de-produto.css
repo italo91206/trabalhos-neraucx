@@ -6,6 +6,10 @@
     background-color: #ffffff;
     text-align: center;
 }
+
+.pwat-open-modal{
+    display: block !important;
+}
 .pwa-product-header-itens {
     display: flex;
     justify-content: flex-start;
@@ -28,12 +32,12 @@
     line-height: 15px;
     letter-spacing: 0.12em;
     text-align: left;
+    margin-right: 10px;
 }
 .pwa-header-item-green {
     background: #00CEB0;
     height: 23px;
     width: 166px;
-    margin-left: 1pc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,15 +67,11 @@
 
 
 /* ////////// header ///////////// */
-.product-header-infos{
+.ef-product-header-infos{
     display:flex;
     justify-content: space-between;
     align-items: center;
-
-    height: 50px;
-
     color: #7495A4;
-
     font-family: Cambay;
     font-size: 12px;
     font-style: normal;
@@ -79,6 +79,7 @@
     line-height: 15px;
     letter-spacing: 0.04em;
     text-align: left;
+    margin: 14px 0;
 }
 .pwa-product-mark {
     color: #14AFD1;
@@ -94,7 +95,6 @@
 
 /* ////////// body ///////////// */
 .pwa-product-title {
-    height: 48px;
     width: 355px;
     margin-bottom: 12px;
 
@@ -164,7 +164,7 @@
 .pwa-footer-product-flex {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3pc;
+    margin-bottom: 27px;
     margin-top: 1pc;
     width: 100%;
 }
@@ -252,8 +252,8 @@
     width: 100%;
     background-color: #ffffff;
 
-    display: flex;
-    justify-content: space-around;
+    display: flex!important;
+    justify-content: space-between;
     align-items: center;
 }
 .pwa-buy-qnt{
@@ -336,7 +336,7 @@
 }
 
 /* ///////////// SOBRE O TEMPO ////////////// */
-.pwa-about-time{
+.ef-about-time{
   height:fit-content;
   margin-bottom: 2pc;
   text-align: center;
@@ -362,7 +362,7 @@
     letter-spacing: 0.01em;
     text-align: left;
 }
-.pwa-about-time a{
+.ef-about-time a{
     position: relative;
     top: 1.5pc;
     cursor: pointer;
@@ -381,7 +381,7 @@
 
 
 /* ///////////// SOBRE O VENDEDOR ////////////// */
-.pwa-about-seller{
+.ef-about-seller{
     padding-top: 2pc;
     margin-bottom: 2pc;
     border-top: 1px solid #D1DCE1;
@@ -458,7 +458,7 @@
     color: #ffffff;
     stroke: #ffffff;
 }
-.pwa-container-denounce-anounce{
+.ef-container-denounce-anounce{
     height: 6pc;
     display: flex;
     justify-content: center;
@@ -484,7 +484,6 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -565,3 +564,355 @@
 .pwa-modalFinance .pwa-link-blue {
     margin-left: 7pc;
 }
+
+/****************PRODUTO-RESPONSIVE***********************/
+@media screen and (min-width: 800px){
+    .main-mobile {
+        display: none;
+    }
+
+    .pwa-product-header-itens{
+        margin-left: 40px;
+        align-items: center;
+    }
+
+    .pwa-header-item-blue {
+        height: 23px!important;
+        display: flex!important;
+        align-items: center!important;
+    }
+
+    /*swiper*/
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 20px;
+        width: 20px;
+    }
+
+
+    .container-desktop {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 98% !important;
+        min-height: 1000px !important;
+    }
+
+    .pwa-product-name-prices-infos {
+        position: absolute;
+        right: 0;
+        max-width: 375px;
+        width: 100%;
+        background: #FFF;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .ef-product-header-infos {
+        padding: 0;
+    }
+
+    .pwa-product-title {
+        max-width: 230px;
+        font-size: 1.6rem;
+    }
+
+    .pwa-product-price-blue {
+        font-size: 2.6rem;
+    }
+    .pwa-btn-finance-eqp {
+        margin-top: 0;
+    }
+
+    .pwa-product-values-info {
+        display: flex;
+        margin-top: -15px;
+    }
+
+    #pwa-buy-action {
+        top: 0;
+        margin: 0;
+        height: auto;
+        padding: 0;
+        border: none;
+    }
+
+    .pwa-ad-page h2 {
+        text-align: start !important;
+        font-size: 2.6rem !important;
+        margin-bottom: -5px;
+    }
+
+    .d-product-values-info {
+        margin-top: 8px;
+    }
+
+    .pwa-btn-finance-eqp {
+        top: -50px
+    }
+
+    .pwa-footer-product-flex {
+        margin: 24px 0 0;
+    }
+
+    /*card azul*/
+    .product-page-card-blue{
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 350px;
+        max-width: 373px;
+    }
+
+    .ef-about-seller {
+        position: absolute;
+        right: 0;
+        top: 560px;
+        max-width: 373px !important;
+        width: 100%;
+        border: none !important;
+    }
+
+    .ef-container-denounce-anounce {
+        border: none !important;
+        padding: 0 !important;
+    }
+
+
+    /* Perguntas e respostas*/
+
+    .pwa-question-title-data {
+        display: none;
+    }
+    .ef-question {
+        height: auto;
+        flex-direction: column;
+    }
+    .ef-questions-answers {
+        background-color: #FFF;
+        padding: 24px 40px !important;
+        height: auto;
+    }
+
+    .ef-questions-answers .pwa-question-text {
+        width: auto;
+        height: auto;
+    }
+
+    .ef-answer {
+        border-left: 3px solid var(--color-text-blue);
+        margin-left: 1pc;
+        flex-direction: column;
+    }
+
+    .ef-answer .pwa-header-answer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .ef-answer .pwa-header-answer img {
+        width: 33.33px;
+        height: 33.33px;
+    }
+    .pwa-header-answer-title {
+        margin: 0 10px 0 18px;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .pwa-tag-seller {
+        margin-top: 5px ;
+        align-self: flex-start;
+    }
+
+    .pwa-answer-text {
+        width: auto;
+        padding: 0 40px 0 50px;
+        height: auto;
+    }
+
+    .pwa-modalFinance-content  form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .input-content-modal {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        flex-shrink: 0;
+    }
+
+    .input-content-modal.full {
+        width: 100%;
+
+    }
+    .input-content-modal input {
+        width: 100%;
+    }
+
+    .pwa-textSecondary-modalFinance {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pwa-textSecondary-modalFinance a {
+        margin-left: 10px !important;
+    }
+
+    .pwa-modalFinance-content form .pwa-btn-blue-big {
+        margin: 32px auto;
+    }
+}
+
+.pwa-modalFinance-content {
+    width: 100%;
+    max-width: 355px;
+    height: auto;
+}
+
+/*vendedor*/
+
+.pwa-seller-information {
+    position: absolute;
+    right: 0;
+    top: 600px;
+    max-width: 373px;
+    width: 100%;
+    padding: 0;
+}
+
+.d-seller-information-content {
+    background: #FFF;
+    border-radius: 5px;
+    padding: 13px 13px 20px 16px;
+}
+
+.d-seller-information-content p {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+}
+
+.d-seller-information-content h6 {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+
+    text-align: center;
+
+    color: #174E67;
+
+    margin: 13px 0 35px;
+}
+
+.d-seller-information-content .d-saller-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-seller-information-content .d-saller-address .address-info {
+    padding-right: 16px;
+}
+
+.d-seller-information-content .d-saller-address .address-info p{
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #14AFD1;
+    margin-bottom: 14px;
+}
+
+.d-seller-information-content .d-saller-address .address-info span {
+    font-family: Cambay;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+    position: relative;
+    display: flex;
+    margin-left: 12px;
+}
+
+.d-seller-information-content .d-saller-address .address-info span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: pwa-url(icon-pin-blue) no-repeat center center;
+    margin-left: -24px;
+}
+
+.d-seller-information-content .d-saller-address .saller-info-buy {
+    border-left: 1px solid #D1DCE1;
+    padding-left: 16px;
+    padding-top: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.d-seller-information-content .d-saller-address p {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+
+}
+
+
+.d-seller-information-content .d-saller-address span {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--color-text-blue);
+    margin-left: 5px;
+}
+
+.d-seller-information-content a {
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+
+
+    color: #174E67;
+
+    margin-top: 25px;
+}
+

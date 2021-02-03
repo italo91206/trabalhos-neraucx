@@ -14,6 +14,15 @@
     margin-right: 11px;
 }
 
+/* Bloco de trocar de contas */
+#switch-account{
+    display: none;
+}
+
+.open-switch-account{
+    display: block !important;
+}
+
 .pwa-vendas-title h1 {
     font-family: Cambay;
     font-weight: bold;
@@ -22,15 +31,476 @@
     color: #FFFFFF;
 }
 
+.pwat-item-subtitle{
+    margin: 20px 0 10px !important;
+}
+
+
+
+
+/* Botão Voltar */
+.pwat-button-back-vendas{
+    max-width: 1000px;
+    margin: 40px auto 20px;
+    text-align: left;
+    padding: 0 40px;
+}
+
+/* Resume buy */
+.pwa-resume-buy-vendas {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pwa-resume-buy-vendas .pwa-title-secondary-gray{
+    margin-bottom: 10px !important;
+}
+
+.pwa-resume-buy-vendas .pwa-resume-buy-infos{
+    padding-left: 0px;
+}
+
+/* Infos Buyer Vendas */
+.pwat-infos-buyer-vendas{
+    padding: 20px 0 0 0 !important;
+    max-width: 100%;
+}
+
+/* Entregas */
+.pwa-address-delivery-container{
+    padding-top: 35px;
+}
+.pwa-address-delivery-container .pwa-title-secondary-gray {
+    padding-left: 0;
+}
+.pwa-type-delivery {
+    margin-bottom: 5px;
+
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-address-delivery {
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-city-delivery {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    color: #457185;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+
+/* Pagamento */
+#pwat-vendas-detalhes .pwa-resume-shopping{
+    border-top: 1px solid #D1DCE1;
+    padding-top: 20px;
+}
+
+/* Green card - produto recebido */
+.pwa-card-green-product-received{
+    margin: 25px 0;
+}
+
+/* Dados bancários */
+.pwa-product-received-and-datas-bank-container {
+    width: 100%;
+    display: block;
+}
+.pwa-product-received-and-datas-bank-container .pwa-title-secondary-gray {
+    padding-left: 0;
+}
+.pwa-datas-bank-container {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+#pwat-vendas-detalhes .pwa-first-list li, .pwa-second-list li{
+    margin-bottom: 15px;
+}
+
+.pwa-datas-bank-container .pwa-first-list{
+   width: 47%;
+}
+.pwa-datas-bank-container .pwa-second-list {
+    width: 47%;
+}
+
+/* Botão de trocar conta bancária */
+.pwa-btn-switch-account {
+    height: 28px;
+    width: 231px;
+    margin-top: 10px;
+
+    background: #457185;
+    cursor: pointer;
+    border: #457185;
+    border-radius: 5px;
+    outline: none;
+    margin: auto;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.pwa-btn-switch-account:hover {
+    background: #A2B8C2;    
+}
+
+
+/* ESTILIZAÇÃO DOS INPUTS DE CONTA BANCÁRIA */
+.pwa-select-option-receivement-account-container {
+    width: 100%;
+}
+
+.pwat-agencia-input-wrapper{
+    width: 40% !important;
+    margin-right: 30px;
+}
+
+.pwat-input-agencia-vendas{
+    width: 100%;
+}
+
+.pwat-input-nmr-conta-wrapper{
+    width: 60%;
+}
+
+.pwat-input-conta{
+    width: 100%;
+}
+
+.pwat-input-checkbox-vendas-wrapper .box{
+    justify-content: center;
+}
+
+.pwat-input-vendas-cpf{
+    width: 50%;
+    margin-bottom: 12px;
+}
+
+.pwat-label-checkbox-vendas{
+    position: relative !important;
+    padding-left: 10px !important;
+    margin-right: 0 !Important;
+}
+
+#pwat-vendas-detalhes .input-checkbox-modal {
+    flex-wrap: nowrap !important;
+}
+
+#pwat-vendas-detalhes .input-checkbox-modal .box{
+    margin: 0 !important;
+}
+.pwa-account-card {
+    height: 320px;
+    margin: auto;
+    width: 100%;
+    border-radius: 5px;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+}
+.pwa-account-card .pwa-first-list{
+    width: 47%;
+}
+.pwa-account-card .pwa-second-list {
+    width: 47%;
+}
+.pwa-account-card .input-checkbox-modal {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.pwa-account-card .input-checkbox-modal label{
+    padding-top: 5px;
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+.pwa-btn-switch-account-card {
+    height: 28px;
+    width: 170px;
+
+    margin-top: 15px;
+
+    border:  #174E67;
+    border-radius: 5px;
+    outline: none;
+    background: #174E67;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.pwa-btn-switch-account-card:hover {
+    background: #A2B8C2;
+}
+.pwa-cards-account-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#pwat-vendas-detalhes .pwa-box-input-flex{
+    margin-top: 0px !Important;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Código de rastreio */
+.pwa-container-cod-tracking {
+    background: #123E52;
+
+    height: 284px;
+    width: 100%;
+    max-width: 768px;
+    padding: 25px 10px 20px 10px;
+    margin: auto;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: -80px;
+}
+
+.pwa-container-blue-send-cod {
+    background: #D0EFF6;
+    height: 115px;
+    width: 100%;
+    max-width: 768px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #72CFE3;    
+    text-align: center;
+    cursor: pointer;
+}
+.pwa-title-contaienr-cod-blue {
+    color: #14AFD1;
+
+    font-family: Cambay;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.open-modal-cod-rastreio {
+    display: block !important;
+}
+.pwa-text-Hourglass-cod-tracking {
+    margin-top: 10px;
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.pwa-text-Hourglass-cod-tracking::before {
+   content: url(../assets/icons/icon-ampulheta.svg);
+   position: relative;
+   top: 5px;
+   margin-right: 10px;
+}
+
+
+.pwa-container-green-send-cod {
+    display: none;
+    background: #6FCF97;
+    height: 115px;
+    width: 100%;
+    max-width: 768px;
+
+    margin-top: 20px;
+    
+    border-radius: 5px;
+    border: 1px solid #72CFE3; 
+    text-align: center;
+}
+.pwa-title-contaienr-cod-green {
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.pwa-text-cod-check-tracking {
+    margin-top: 10px;
+    color: #219653;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.pwa-text-cod-check-tracking::before {
+    content: url(../assets/icons/icon-check-cod.svg);
+    position: relative;
+    margin-right: 5px;
+}
+
 @media(min-width: 800px){
     .pwa-vendas-pending-list {
         max-width: 60%;
         margin: 0 10% 0 auto;
     }
 
+    #pwat-vendas-detalhes .pwa-box-input-flex{
+    width: 60%;
+    margin-left: 60px;
+    }
+
     #vendas-inicio .pwa-card-product-shopping{
         border-bottom: 1px solid #D1DCE1;
         display: flex;
+    }
+
+    .pwa-infos-buyer .pwa-list-content {
+        margin: initial;
+    }
+    .pwa-infos-buyer .pwa-first-list,
+    .pwa-infos-buyer .pwa-second-list {
+        text-align: left;
+    }
+
+    .pwa-title-secondary-gray {
+        font-size: 1.6rem;
+    }
+
+    .pwa-datas-bank-container .pwa-list-content {
+        margin: initial;
+        padding-left: 20px;
+    }
+    .pwa-datas-bank-container .pwa-first-list,
+    .pwa-datas-bank-container .pwa-second-list {
+        text-align: left;
+    }
+    .pwa-btn-switch-account {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .pwa-account-card {
+    width: 364px !important;
+    }
+
+    .pwa-add-new-datas-bank .pwa-flex-responsive {
+        display: flex;
+        margin: initial;
+        margin-top: 20px;
+    }
+    .pwa-add-new-datas-bank .pwa-box-input-extra-small {
+        width: 45%;
+    }
+    .pwat-input-nmr-conta-wrapper{
+        width: 45% !important;
+    }
+    .pwat-input-vendas-cpf{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .pwa-add-new-datas-bank .pwa-input-extra-small {
+        width: 100%;
+    }
+    .pwa-add-new-datas-bank .pwa-input-medium {
+        width: 100%;
+    }
+    .pwa-add-new-datas-bank .pwa-select {
+        position: relative;
+    }
+    .pwat-select-wrapper{
+        width: 50%;
+    }
+    .pwa-add-new-datas-bank .pwa-select select{
+        width: 100%;
+    }
+    .pwa-flex-responsive #type-of-person {
+        width: 100%;
+    }
+    .pwa-flex-responsive #type-of-person svg {
+        margin-left: 135px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .pwa-add-new-datas-bank .pwa-input-small {
+        width: 100%;
+    }
+    .pwat-adjust-box-input {
+        margin: 0;
+    }
+    .pwat-adjust-box-input2 {
+        position: relative;
+        margin-left: 60px;
+        width: 60%;
+    }
+    .pwat-adjust-box-input2 .pwa-input-padrao {
+        width: 100%;
+    }
+
+    .pwat-select-tipo-wrapper{
+        width: 90%;
+        margin-right: 50px;
+    }
+    .pwa-box-input-flex-second-block {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 12px;
+        width: 42.5%;
     }
 }
 
@@ -42,6 +512,23 @@
         margin-bottom: 80px;
     }
 }
+
+@media(min-width: 1200px){
+    .pwa-vendas-title{
+        display: none;
+    }
+
+    .pwat-card-vendas .pwat-quantidade-produtos{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }   
+
+    .pwat-infos-buyer-vendas{
+        border-top: none;
+    }
+}
+    
 
 .pwa-btn-sell-blue{
     margin-left: auto;

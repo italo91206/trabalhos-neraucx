@@ -1,0 +1,455 @@
+/*section resumo compra*/
+.pwa-resume-shopping .pwat-payment-description {
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.pwat-s-info-product {
+    border-bottom: 1px solid #D1DCE1;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.pwat-s-info-product h2{
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #457185;
+
+    margin-bottom: 33px;
+}
+
+.pwat-payment-description-title{
+    display: none;
+}
+
+.pwat-payment-description-info{
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #7495A4;
+}
+
+.pwat-payment-description-parcela, .pwat-payment-description-price{
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.01em;
+    color: #7495A4;
+}
+.pwat-payment-description-price{
+    color: #14AFD1 !important;
+}
+
+
+/* Botão voltar*/
+.pwat-button-back {
+    display: none;
+    margin-top: 80px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pwat-button-back span {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    position: relative;
+}
+.pwat-button-back span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: pwa-url(icon-return-home) no-repeat center center;
+}
+
+.pwat-button-back p {
+    font-family: Cambay;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 29px;
+    color: #7495A4;
+    margin-left: 12px;
+    margin-bottom: -5px;
+    user-select: none;
+}
+
+/*section entrega*/
+.pwat-s-info-product.delivery h2{
+    margin-bottom: 10px;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description span {
+    font-family: Cambay;
+    color: #14AFD1;
+    font-size: 1.6rem;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description span:nth-child(1){
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description span.address {
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #123E52;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description p.address {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description .delivery-type{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description .delivery-type p {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #457185;
+    max-width: 343px;
+}
+
+
+.pwat-s-info-product.delivery .pwat-delivery-description .location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #457185;
+    font-weight: bold;
+    width: 107px;
+    height: 20px;
+
+    position: relative;
+
+    margin: 9px 0 14px;
+}
+
+.pwat-s-info-product.delivery .pwat-delivery-description .location::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: pwa-url(icon-pin) no-repeat center;
+}
+
+.pwat-s-info-product.delivery  a{
+    height: 28px;
+    width: fit-content;
+    background: #A2B8C2;
+    border-radius: 5px;
+    padding:  0 9px;
+    display: flex;
+    align-items: center;
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-top: 22px ;
+}
+
+/*pagamento boleto*/
+.payment-boleto h4 {
+    display: none;
+}
+.bg-payment-boleto {
+    background: #D0EFF6;
+    border: 1px dashed #72CFE3;
+    border-radius: 5px;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 58px;
+}
+
+
+.bg-payment-boleto .cod-boleto{
+    width: 98%;
+    height: 100px;
+    background: pwa-url(bar-code) no-repeat center;
+    margin-top: 8px;
+}
+
+.bg-payment-boleto p {
+    max-width: 202px;
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #123E52;
+    margin: 15px 0;
+}
+
+.bg-payment-boleto a {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+    color: #174E67;
+    margin-bottom: 23px;
+
+}
+
+/* Código de rastreio */
+.pwa-cod-rastreio {
+    padding-top: 28px;
+    padding-bottom: 48px;
+}
+
+.pwa-cod-rastreio h2{
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+
+    color: #174E67;
+}
+
+.pwat-d-cod-rastreio {
+    background: #D0EFF6;
+
+    border: 1px dashed #72CFE3;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 115px;
+    margin-bottom: 28px;
+    margin-top: 20px;
+}
+
+.pwat-d-cod-rastreio span {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 38px;
+
+    text-align: center;
+
+    color: #14AFD1;
+}
+
+.pwat-d-cod-rastreio a {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+
+    color: #174E67;
+    margin-top: 18px;
+}
+
+/* vendedor */
+.pwat-d-seller-information-content {
+    background: #FFF;
+    border-radius: 5px;
+    padding: 13px 13px 20px 16px;
+}
+
+.pwat-d-seller-information-content p {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+}
+
+.pwat-d-seller-information-content h2 {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+
+    text-align: center;
+
+    color: #174E67;
+
+    margin: 13px 0 35px;
+}
+
+.pwat-d-seller-information-content .pwat-d-saller-address {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pwat-d-seller-information-content .pwat-d-saller-address .pwat-address-info p{
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #14AFD1;
+    margin-bottom: 14px;
+}
+
+.pwat-d-seller-information-content .pwat-d-saller-address .pwat-address-info span {
+    font-family: Cambay;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+    position: relative;
+    display: flex;
+    margin-left: 12px;
+}
+
+.pwat-d-seller-information-content .pwat-d-saller-address .pwat-address-info span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: pwa-url('icon-pin-blue') no-repeat center center;
+    margin-left: -24px;
+}
+
+.pwat-d-seller-information-content .pwat-d-saller-address p {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+}
+
+
+.pwat-d-seller-information-content .pwat-d-saller-address span {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--color-text-blue);
+    margin-left: 5px;
+}
+
+.pwat-d-seller-information-content a {
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-decoration-line: underline;
+
+
+    color: #174E67;
+
+    margin-top: 25px;
+}
+
+/* SLider */
+.pwat-recomendacoes{
+    margin: 20px 0 10px;
+}
+
+@media(min-width: 1200px){
+    .ef-card-slide-recomendacoes{
+        width: 30% !important;
+    }
+
+    .pwat-button-back {
+        display: flex;
+    }
+}
+
+@media(min-width: 768px){
+    .pwat-payment-description-info br{
+        display: none;
+    }
+
+    .pwat-payment-description-title{
+        display: block;
+    }
+
+    .pwat-d-cod-rastreio{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .pwa-seller-information-compras {
+        margin-bottom: 64px;
+        margin-top: 64px;
+    }
+
+    .pwat-d-seller-information-content .pwat-d-saller-address {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pwat-d-saller-address .pwat-address-info {
+        border-right: 1px solid #D1DCE1;
+        padding-right: 32px;
+        margin-left: 55px;
+    }
+    
+    .pwat-d-saller-address .pwat-saller-info-buy {
+        padding-left: 32px;
+        padding-top: 10px;
+    }   
+}

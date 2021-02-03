@@ -1,0 +1,553 @@
+/* ICON SELECT IN INPUT SELECT */
+.pwa-ad-page select {
+    appearance: none !important;
+    background: pwa-url(select-icon) no-repeat !important;
+    background-size: 15px !important;
+    background-position: 95% 50% !important;
+}
+
+/* BUTTONS */
+.pwa-ad-page .button-secondy:hover {
+    background-color: transparent !important;
+}
+
+/* Cards categorias page 01, 02 desktop */
+.pwa-ad-category-desktop {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 65vh;
+}
+
+.pwa-ad-category-desktop .container {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+}
+
+.pwa-ad-page .pwa-ad-category-desktop {
+    min-height: none;
+
+    max-width: 786px;
+    margin: 0 auto;
+}
+
+.pwa-ad-category-desktop .title-section {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pwa-ad-page section.pwa-ad-category .title-section p,
+.pwa-ad-page section.pwa-ad-category-desktop .title-section p {
+    font-family: Cambay;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #A2B8C2;
+}
+
+
+.pwa-ad-category-desktop h2 {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 23px;
+
+    text-align: start;
+
+
+    color: #174E67;
+}
+
+.pwa-ad-category-desktop .cards-category-group {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 64px;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card {
+    border: none;
+    background-color: transparent;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card .card-body span{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    background: #D0EFF6;
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card .card-body span::after {
+    content: ''; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: pwa-url(cross) no-repeat center center;
+    border-radius: 100%;
+    background-size: 70%;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card:nth-child(2) .card-body span::after{
+    background: pwa-url(dentist-chair) no-repeat center;
+    background-size: 60%;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card:nth-child(3) .card-body span::after{
+    background: pwa-url(icon-equipo-hosp) no-repeat center;
+    background-size: 50%;
+}
+
+.pwa-ad-category-desktop .cards-category-group .card .card-body p {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    color: #108CA7;
+}
+
+/*page 03 correção layout*/
+.talk-more-product .color-product-desktop .weiht-product-item {
+    display: none;
+    margin-left: 40px;
+}
+
+/*===============
+    MOBILE
+===============*/
+@media(max-width: 500px) {
+    .pwa-ad-category .categorias-card {
+        width: 110%;
+    }
+
+    .pwa-ad-page h3 {
+        max-width: 100%;
+    }
+}
+
+@media(min-width: 800px){
+    /* estilos gerais create-ad*/
+    .width-container-20 {
+        width: 20%;
+    }
+    
+    .width-container-30 {
+        width: 32%;
+    }
+
+    .width-container-50 {
+        width:  46% !important;
+    }
+    
+    .width-container-70 {
+        width: 70%;
+    }
+
+    .pwa-ad-page h2 {
+        text-align: left !important;
+    }
+
+    .pwa-ad-title {
+        display: none !important;
+    }
+
+    .pwa-ad-category {
+        display: none !important;
+    }
+
+    .pwa-ad-category-desktop {
+        display: flex !important;
+    }
+
+    .pwa-ad-page.talk-more-product .pwa-ad-category-desktop {
+        margin: 0;
+        min-height: 0;
+        margin: 40px auto 0;
+        padding-bottom: 40px;
+        border-bottom: none;
+    }
+
+    .pwa-ad-page section {
+        max-width: 786px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    /*fim estilos gerais*/
+
+    .pwa-ad-page.page-01 {
+        height: calc(100vh - 70px - 170px);
+    }
+
+    .pwa-ad-page.page-01 section {
+        border: none
+    }
+    /*Recebimento */
+    .payment-receipt {
+        max-width: 786px;
+    }
+
+    .payment-receipt ul li,
+    .payment-receipt .how-receive {
+        justify-content: flex-start;
+    }
+
+    .payment-receipt ul li p {
+        text-align: start;
+        width: 30%;
+    }
+
+    .payment-receipt section {
+        padding-top: 0 !important;
+    }
+
+    .payment-receipt .how-receive p{
+        text-align: start;
+        width: 30%;
+    }
+    /*fim recebimento */
+
+    .pwa-indicate-model .input-content{
+        max-width: none;
+    }
+    .pwa-ad-page .product-add p {
+        max-width: none;
+        margin-bottom: 20px;
+    }
+    .pwa-ad-page .preview-product-card {
+        max-width: none;
+    }
+    .pwa-ad-page .input-search-container{
+        max-width: none;
+    }
+
+    .pwa-ad-page .buttons-group {
+        margin: 36px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px
+    }
+
+    .pwa-ad-page .buttons-group .button-primary{
+        margin: 0;
+    }
+
+    .pwa-ad-page .buttons-group {
+        justify-content: space-between;
+        max-width: 786px;
+        padding: 0;
+        margin-bottom: 120px;
+        margin-top: 40px;
+    }
+
+    .pwa-ad-page .buttons-group .button-primary{
+        height: 40px;
+        max-width: 374px;
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+
+    .pwa-ad-page .buttons-group .button-secondy {
+        height: 40px;
+        width: fit-content;
+
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+
+    .pwa-ad-page .buttons-group .button-secondy:hover {
+        background: transparent !important;
+        color: var(--color-text-blue);
+        text-decoration: underline;
+    }
+    
+
+    .box-container-page {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+        max-width: 786px;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 8px;
+
+    }
+
+    .box-container-page.payment {
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .box-container-page.payment .payment-receipt {
+        padding: 40px;
+    }
+
+    .box-container-page.payment .payment-receipt section {
+        padding: 0;
+    }
+
+    /*page 05*/
+
+    .pwa-ad-page.talk-more-product .s-fast-buy h3 {
+        max-width: none;
+        font-size: 16px;
+    }
+
+    .pwa-ad-page .bg-ad-equipo-cards h3 {
+        text-align: start;
+        font-size: 16px;
+        max-width: 786px;
+    }
+
+    .ad-equipo-cards-container {
+        min-height: 365px;
+    }
+
+    .bg-ad-equipo-cards .ad-equipo-card:nth-child(n+2) {
+        position: relative;
+        bottom: auto;
+    }
+
+    .ad-equipo-card span.arrow-right {
+        margin: 0 0 0 auto
+    }
+
+    .bg-ad-equipo-cards .ad-equipo-card .d-info span {
+        display: block;
+    }
+
+    .pwa-ad-page section.s-payment-receipt-bg {
+        margin-top: 30px;
+        min-height: 300px;
+        width: 100%;
+        max-width: none;
+        margin-top: 80px;
+        border-bottom: none;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pwa-ad-page section.s-payment-receipt-bg .payment-receipt {
+        position: absolute;
+        margin-top: -140px;
+    }
+
+    .pwa-post-paid-container {
+        margin-bottom: -25px;
+    }
+
+    /* Page 06 */
+    .ad-equipo-card {
+        max-width: 786px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group {
+        width: 100%;
+        max-width: 786px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad {
+        min-height: 228px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad h6,
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad p  {
+        font-size: 1.6rem;
+        max-width: 210px;
+        margin-bottom: 5px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad span {
+        font-size: 1.3rem;
+        margin-top: 3px;
+        max-width: 190px;
+    }
+
+    .s-super-destaque-description .d-super-description {
+        display: none;
+    }
+
+    .s-super-destaque-description .d-super-description.desktop {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .s-super-destaque-description .d-super-description.desktop p {
+        line-height: 30px;
+    }
+
+    .s-super-destaque-description .d-super-icon-info {
+        width: 30%;
+    }
+
+    .pwa-ad-page section.s-days-unlock {
+        padding: 40px;
+    }
+
+    .pwa-ad-page section.s-days-unlock .button-primary {
+        margin: 0;
+    }
+
+    .s-days-unlock h6 {
+        max-width: none;
+    }
+
+    /* form pay cartao */ 
+
+    .pwa-ad-page section.pwa-s-pay-ad {
+        max-width: 90%;
+    }
+
+    .pwa-s-pay-ad h6 {
+        max-width: none;
+    }
+
+    .pwa-s-pay-ad .pay-card {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 40px;
+    }
+    .pwa-s-pay-ad .d-auth-vard {
+        width: 100%;
+    }
+    .pwa-s-pay-ad .d-auth-vard .d-data-valid-card {
+        gap: 40px;
+    }
+
+    .pwa-s-pay-ad .button-primary {
+        margin-right: 0;
+    }
+
+    /* Pagamento boleto */
+    .d-pay-boleto p {
+        max-width: none;
+    }
+
+    .d-pay-boleto p:nth-child(n + 2) {
+        max-width: none;
+    }
+
+
+    /* Cards anuncio pós pago */
+    .d-post-pad-card-group .d-post-card {
+        min-height: 395px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .d-post-pad-card-group .d-post-card .header-card h6 {
+        font-size: 1.6rem;
+    }
+    .d-post-pad-card-group .d-post-card .body-card h6 {
+        font-size: 1.6rem;
+        max-width: none;
+    }
+
+    .d-post-pad-card-group .d-post-card .body-card p {
+        font-size: 1.6rem;
+        line-height: 30px;
+        max-width: none;
+    }
+
+    .d-post-pad-card-group .d-post-card .body-card span {
+        font-size: 1.3rem;
+    }
+
+    /*page 09*/
+    .equipo-concluid .card-equipo-container{
+        min-height: 270px;
+    }
+
+    .d-equipo-concluid p {
+        max-width: none;
+    }
+
+    .d-equipo-concluid span {
+        max-width: none;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .go-ad-register a {
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+#criar-anuncio-inicio .cards-category-group .card:hover {
+    transform: scale(1.05);
+    transition: all .25s ease;
+}
+
+#criar-anuncio-inicio .cards-category-group .card {
+    transition: all .25s ease;
+}
+
+
+@media(max-width: 768px){
+    #pwa-anuncy-one label.unset-all {
+        position: relative;
+        padding-left: 14px;
+        width: 126px;
+        margin: unset;
+        font-size: 14px;
+        font-weight: unset;
+    }
+
+    #pwa-anuncy-one .box.unset-all {
+        margin-top: unset;
+    }
+
+    #pwa-anuncy-one .select-content {
+        margin-right: unset;
+        background: #fff;
+        width: 60%;
+    }
+    .pwa-ad-page .year-fabrication-container .input-content{
+        width: unset;
+        max-width: unset;
+    }
+}
+
+@media(max-width: 425px){
+    #pwa-anuncy-one .select-content{
+        width: 154px;
+    }
+}
+
+#pwa-anuncy-one .pwa-input-with-icon input {
+    width: 100%;
+    padding-right: 38px;
+}
+
+.icone-input {
+    position: absolute;
+    right: 15px;
+}
+
+.pwa-input-with-icon img {
+    width: 15px;
+}

@@ -1,0 +1,541 @@
+/*correção recebimento*/
+.pwa-ad-page section.s-payment-receipt-bg {
+    width: 100% !important; 
+}
+
+#summary-ad-swiper {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 0px !important;
+}
+
+#summary-ad-swiper .swiper-slide {
+    width: 100% !important;
+}
+
+#summary-ad-swiper .swiper-button-next, 
+#summary-ad-swiper .swiper-container-rtl .swiper-button-prev {
+    background-image: pwa-url(icon-next) !important;
+    background-size: 9px;
+}
+
+#summary-ad-swiper .swiper-button-prev, 
+#summary-ad-swiper .swiper-container-rtl .swiper-button-next {
+    background-image: pwa-url(icon-prev) !important;
+    background-size: 9px;
+}
+
+.swiper-container-summary-ad {
+    width: 93% !important;
+    background-color: #FFF;
+    margin: 16px auto 10px;
+    min-height: 301px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.swiper-container-summary-ad .container-image-equipo {
+    width: 84% !important;
+    height: 100%;
+    padding: 8px;
+    margin: 20px auto 0;
+}
+
+.swiper-container-summary-ad .container-image-equipo img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    flex: none;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.swiper-container-summary-ad .swiper-button-prev::after,
+.swiper-container-summary-ad .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--color-text-blue)
+}
+
+/* Nome equipo*/
+.d-name-equipo-summary {
+    background: #FFF;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.d-name-equipo-summary span {
+    font-family: Cambay;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+
+    color: #14AFD1;
+}
+
+.d-name-equipo-summary h5 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: start;
+    margin-top: 6px;
+    color: #174E67;
+    margin-bottom: 40px;
+    max-width: 290px;
+}
+
+.d-name-equipo-summary a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    font-weight: bold;
+}
+
+.d-name-equipo-summary a span {
+    font-size: 1.2rem;
+}
+
+/*Informações do equipo*/
+.info-equipo-summary {
+    background-color: #FFF;
+    width: 100% !important;
+    margin: 10px auto 0;    
+    padding: 22px 12px 15px 20px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.info-equipo-summary .info-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-equipo-summary .info-container .info-content {
+    width: 48%;
+    margin-bottom: 18px;
+}
+
+.info-equipo-summary .info-container .info-content h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    color: #123E52;
+}
+
+.info-equipo-summary .info-container .info-content p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #457185;
+    margin-top: 5px;
+}
+
+.info-equipo-summary a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    font-weight: bold
+}
+
+.info-equipo-summary a span {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+}
+
+.about-time-equipo {
+    background: #FFF;
+    width: 100% !important;
+    margin: 10px auto 30px;
+    padding: 28px 12px 15px 20px;
+    max-width: 500px;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.about-time-equipo h5 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: start;
+
+    color: #123E52;
+}
+
+.about-time-equipo p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    max-width: 90%;
+    margin-top: 5px;
+    color: #457185;
+}
+
+.about-time-equipo a {
+    width: 100% ;
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    text-decoration: underline;
+    color: var(--color-text-blue);
+    font-weight: bold
+}
+
+.about-time-equipo a span {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+}
+
+.container-desktop .buttons-group .button-primary {
+    order: -1;
+}
+
+/* buttons */
+.buttons-group.eqs-revision-anuncy {
+    border-top: 1px solid #D1DCE1 !important;
+    margin-top: 42px;
+}
+
+/* payment */
+#eqs-revision-anuncy .payment-receipt ul li p {
+    width: 52%;
+}
+
+
+/*================== 
+    RESPONSIVE
+==================*/
+@media(max-width:600px) {
+    .row-mb-reverse {
+        flex-direction: row-reverse;
+    }
+
+    #eqs-revision-anuncy .payment-receipt {
+        margin-top: -19px !important;
+    }
+
+    #eqs-revision-anuncy .container-desktop.container {
+        padding-right: 9px !important;
+        padding-left: 9px !important;
+    }
+
+    /* RECEBIMENTO */
+    #eqs-revision-anuncy .s-payment-receipt-bg {
+        width: 101% !important;
+        padding: 0 !important;
+        margin-left: -2px !important;
+     }
+
+     #eqs-revision-anuncy .details-values {
+        padding: 22px 18px 0px 18px !important;
+    }
+
+    #eqs-revision-anuncy .receivement-value {
+        padding: 0px 26px !important;
+    }
+
+     #eqs-revision-anuncy .container.payment-receipt {
+        max-width: 100%;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul li p {
+        width: 56% !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive p {
+        width: 37% !important;
+        margin-left: 2px !important;
+    }
+
+    #eqs-revision-anuncy .how-receive {
+        width: 113% !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt {
+        width: 98% !important;
+    }
+
+    #eqs-revision-anuncy .card-type-ad-group,
+    #eqs-revision-anuncy .pwa-super-destaque-ad {
+        width: 96% !important;
+    }
+
+    #eqs-revision-anuncy .ad-equipo-card {
+        margin-left: -11px;
+        width: 96vw;
+    }
+
+    #eqs-revision-anuncy.pwa-ad-page .buttons-group {
+        margin-top: 23px !important;
+        border-top: 1px solid #D1DCE1 !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul {
+        width: 100%;
+        margin-left: -14px !important;
+    }
+
+    .payment-receipt section {
+        border-bottom: none;
+    }
+
+    #eqs-revision-anuncy .separator-line {
+        width: 93vw !important;
+        margin-left: 0px !important;
+    }
+
+    #eqs-revision-anuncy .how-receive .description p {
+        width: 100% !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive {
+        margin-bottom: 15px;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive {
+        padding-bottom: 10px !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul {
+        margin-left: -25px;
+    }
+
+    #eqs-revision-anuncy .how-receive {
+        max-width: 118vw !important;
+        min-width: 100px !important;
+        width: 107%;
+        margin-left: -14px;
+    }
+
+    #eqs-revision-anuncy  .how-receive p {
+        margin-left: -19px !important;
+    }
+
+    #eqs-revision-anuncy .how-receive .description p {
+        margin-left: 0px !important;
+    }
+
+    #eqs-revision-anuncy .container.payment-receipt {
+        padding: 0px !important;
+    }
+
+    #eqs-revision-anuncy .about-time-equipo {
+        padding: 0px 12px 15px 20px !important;
+    }
+}
+
+@media(min-width: 800px) {
+    .container.payment-receipt section:nth-child(2) {
+        padding-bottom: 10px;
+    }
+
+    #eqs-revision-anuncy .container.payment-receipt {
+        max-width: 65%;
+        margin-top: 50px !important;
+        left: 0;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .swiper-container-summary-ad .container-image-equipo img {
+        width: 100%;
+        height: 100%;
+        max-height: 367px !important;
+        flex: none;
+        object-fit: contain;
+        padding: 8px;
+        margin-bottom: 30px;
+    }
+
+    .swiper-container-summary-ad {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #eqs-revision-anuncy .container-desktop .buttons-group {
+        top: 110px !important;
+    }   
+
+    /* RECEBIMENTO */
+    #eqs-revision-anuncy .payment-receipt {
+        margin-top: -53px;
+    }
+
+    #eqs-revision-anuncy .payment-receipt h5 {
+        font-size: 20px !important;
+    }
+    
+    #eqs-revision-anuncy .container.payment-receipt {
+        padding: 0;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .receivement-value {
+        border-bottom: none !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul li p {
+        width: 24%;
+        text-align: left;
+        margin-left: -11px;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul li span {
+        width: 76%;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul {
+        margin-top: 29px;
+        margin-bottom: 14px;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul li {
+        margin-bottom: 6px !important;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive p {
+        text-align: left;
+        width: 43%;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive .description {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    #eqs-revision-anuncy .payment-receipt .how-receive .description {
+        width: 73% !important;
+        margin-left: 12px !important;
+    }
+
+    #eqs-revision-anuncy.pwa-ad-page section.s-payment-receipt-bg {
+        min-height: 245px !important;
+    }
+
+    #eqs-revision-anuncy .container.buttons-group.create-anuncy-07 {
+        margin-top: 0;
+        margin-bottom: 5em;
+        border-top: none !important;
+    }
+
+    #eqs-revision-anuncy .details-values {
+        padding: 40px 38px 4px !important;
+    }
+
+    #eqs-revision-anuncy .receivement-value {
+        padding: 0px 33px 24px !important;
+    }
+
+    /* buttons */
+    .buttons-group.eqs-revision-anuncy {
+        max-width: 372px !important;
+    }
+
+    #eqs-revision-anuncy .buttons-group.eqs-revision-anuncy {
+        align-items: center;
+    }
+
+    #eqs-revision-anuncy .container-desktop .info-product-desktop {
+        width: 65% !important;
+        margin-top: -36px;
+        position: initial !important;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    #eqs-revision-anuncy .info-equipo-summary {
+        border-radius: 5px 0 0 0 !important;
+    }
+
+    .buttons-group.eqs-revision-anuncy {
+        border-top: none !important;
+    }
+}
+
+@media(min-width:760px) and (max-width:850px) {
+    #eqs-revision-anuncy .swiper-container-summary-ad {
+        max-width: 88%;
+    }
+
+    #eqs-revision-anuncy .d-name-equipo-summary,
+    #eqs-revision-anuncy .info-equipo-summary,
+    #eqs-revision-anuncy .about-time-equipo,
+    #eqs-revision-anuncy .payment-receipt {
+        max-width: 98%;
+    }
+
+    #eqs-revision-anuncy .buttons-group .button-primary {
+        margin-left: 0px;
+    }
+
+    /* RECEBIMENTO */
+    #eqs-revision-anuncy .container.payment-receipt {
+        max-width: 98% !important;
+        margin-top: -18px;
+        margin-bottom: 0px;
+    }
+
+    #eqs-revision-anuncy .s-payment-receipt-bg {
+        min-height: 310px !important;
+    }
+
+    /* buttons */
+    #eqs-revision-anuncy .buttons-group {
+        padding-top: 0px;
+        border-top: none !important;
+        margin-bottom: 6em !important;
+    }
+
+    #eqs-revision-anuncy .buttons-group {
+        flex-direction: row-reverse;
+    }
+
+    #eqs-revision-anuncy .buttons-group .button-primary {
+        margin-right: 0;
+    }
+
+    #eqs-revision-anuncy .payment-receipt ul li p {
+        width: 39% !important;
+        text-align: left;
+        margin-left: -10px !important;
+    }
+}
+
+@media(min-width: 900px) and (max-width: 1030px) {
+    #eqs-revision-anuncy .container.payment-receipt,
+    #eqs-revision-anuncy  .container-desktop .info-product-desktop  {
+        width: 59% !important;
+    }
+    
+    #eqs-revision-anuncy .container-desktop {
+        width: 97% !important;
+        padding-left: 0;
+    }
+
+    #eqs-revision-anuncy .container.payment-receipt {
+        margin-top: 17px !important;
+    }
+}

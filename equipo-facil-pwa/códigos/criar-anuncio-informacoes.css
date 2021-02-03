@@ -36,13 +36,14 @@
     padding: 16px;
     font-family: Cambay;
     font-size: 1.2rem;
-    line-height: 15px;
+    line-height: 22px;
 
     letter-spacing: 0.04em;
 
     color: #7495A4;
     border: 1px solid #E5E7EC;
     border-radius: 5px;
+    resize: none;
 }
 
 .pwa-talk-more .talk-more-content span {
@@ -170,7 +171,6 @@
     max-width: 91px;
 }
 
-
 /* modal whatsapp*/
 .modal-atendimento-whatsapp {
     max-width: 293px;
@@ -206,12 +206,7 @@
     font-weight: bold;
     font-size: 1.6rem;
     line-height: 21px;
-    /* identical to box height, or 131% */
-
     letter-spacing: 0.01em;
-
-    /* Branco */
-
     color: #FFFFFF;
 }
 
@@ -227,9 +222,29 @@
     color: #FFFFFF;
 }
 
+#criar-anuncio-informacoes .buttons-group {
+    border-top: unset;
+    padding-top: unset;
+}
+
+
+/* MOBILE */
+@media(max-width: 600px) {
+    #criar-anuncio-informacoes .pwa-group-input label, 
+    #criar-anuncio-informacoes .input-checkbox-modal label {
+        margin-right: 25px !important;
+    }
+
+    #criar-anuncio-informacoes.pwa-ad-page .buttons-group {
+        margin-top: 46px !important;
+        margin-bottom: 55px !important;
+    }
+}
+
+/*===============
+    DESKTOP
+================*/
 @media(min-width: 800px) {
-
-
     .box-container-page .pwa-talk-more {
         padding-top: 0;
     }
@@ -241,6 +256,15 @@
 
     .box-container-page .container {
         padding: 0;
+    }
+
+    #criar-anuncio-informacoes .box-container-page {
+        padding: 0px;
+    }
+
+    .box-container-page .eqf-px-sm-30 {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
     }
 
     .pwa-ad-page .pwa-talk-more h2{
@@ -403,9 +427,25 @@
         color: var(--color-text-blue);
         text-decoration: underline;
     }
+
+    #criar-anuncio-informacoes .buttons-group {
+        margin-bottom: 6em !important;
+        margin-top: 50px !important;
+    }
 }
 
-#criar-anuncio-informacoes .buttons-group {
-    border-top: unset;
-    padding-top: unset;
+@media(min-width: 700px) and (max-width: 790px)  {
+    #criar-anuncio-informacoes .pwa-talk-more .talk-more-content,
+    #criar-anuncio-informacoes .pwa-add-photo label,
+    #criar-anuncio-informacoes .box-container-page .container {
+        max-width: 100% !important;
+    }
+
+    #criar-anuncio-informacoes .box-container-page .container {
+        padding-left: 0px !important;
+    }
+
+    #criar-anuncio-informacoes .buttons-group .button-primary {
+        margin-right: 0px !important;
+    }
 }

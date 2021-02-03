@@ -1,0 +1,861 @@
+.ef-infos-combinar{
+    width: 746px;
+}
+
+.ef-img-card-combinar {
+    width: 100%;
+    height: 100%;
+}
+
+.pwa-flex-master {
+    display: flex;
+}
+
+.pwa-icon-turn-back {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+}
+.pwa-header-navy-blue {
+    background-color: #174E67;
+    height: 60px;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pwa-header-text-with-icon {
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-right: 15px;
+}
+.pwa-header-text-with-icon::before {
+    content: url(icon-flag-favorite-header);
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+}
+
+.pwa-title-secondary-gray {
+    color: #457185;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    margin-bottom: 20px !important;
+}
+
+
+/* ///////////////// Bloco de Resumo ///////////////////// */
+.pwa-resume-buy {
+    max-width: 768px;
+    margin: auto;
+}
+.pwa-resume-buy-infos {
+    padding: 12px;
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    border-top: 1px solid #D1DCE1;
+    border-bottom: 1px solid #D1DCE1;
+}
+.pwa-resume-buy .pwa-title-secondary-gray {
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+/* ///////////////// Bloco que envolve o card ///////////////////// */
+.pwa-container-card {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.pwa-container-card .pwa-title-secondary-gray {
+    margin-bottom: 5px;
+}
+/* Ajuste na cor do card */
+.pwa-container-card .pwa-card-sell-product {
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0;
+}
+
+
+
+/* ////////////////////// Bloco informações do comprador ///////////////////////////////// */
+.pwa-infos-buyer {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+
+    border-bottom: 1px solid #D1DCE1;
+    border-top: 1px solid #D1DCE1;
+    text-align:right;
+    padding: 20px;
+}
+.pwa-btn-talk-buyer {
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+
+    background: #A2B8C2;
+    border: #A2B8C2;
+    height: 28px;
+    width: 190px;
+    border-radius: 5px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.pwa-btn-talk-buyer:hover {
+    background: #92a6af;
+    border: #92a6af;
+}
+
+.pwa-address {
+    width: 100%;
+    max-width: 768px;
+    padding: 20px;
+    text-align: center;
+}
+
+.pwa-address > p {
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-btn-modal-match {
+    height: 50px;
+    width: 247px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+    background: #174E67;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.pwa-btn-modal-match:hover {
+    background: #14AFD1;
+    border: #14AFD1;
+}
+.pwa-address-link{
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+
+/* ///////////////// Bloco de Pagamento ///////////////////// */
+.pwa-buy-container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    padding: 20px 10px 20px 20px;
+    border-top: 1px solid #D1DCE1
+}
+.pwa-buy-container .pwa-title-secondary-gray {
+    padding-left: 0;
+}
+.pwa-buy-container-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.pwa-price-blue-total {
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: right;
+}
+.pwa-installment {
+    color: #457185;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: right;
+}
+.pwa-text-gray-payment-aproved {
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwa-type-card {
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;    
+}
+.pwa-wrapper {
+    min-width: 210px;
+}
+.pwa-wrapper2 {
+    min-width:  120px;
+}
+
+
+.pwa-receivement-card {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    top: initial;
+}
+
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+@media only screen and (min-width: 768px) {
+    main .modal-desktop-user {
+        display: block;
+        left: 0;
+        box-shadow: none;
+        z-index: 2;
+        margin-top: 0;
+        margin-right: 50px;
+        position: relative;
+    }
+    .modal-desktop-user::before {
+        display: none;
+    }
+    .pwa-flex-master {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pwa-header-navy-blue {
+        display: none;
+    }
+
+    .pwa-container-card {
+        margin-bottom: 0;
+    }
+    .pwa-container-card .pwa-card-sell-product {
+        height: 100px;
+        border: none;
+    }
+    .pwa-container-card .pwa-card-sell-brand-qntd {
+        position: absolute;
+        margin-left: 500px;
+        margin-top: -100px;
+        width: 80px;
+        text-align: right;
+    }
+    .pwa-container-card .pwa-container-img-sell {
+        height: 90px;
+        width: 95px;
+    }
+
+    .pwa-container-card .pwa-card-sell-inner-texts {
+        margin-top: 15px;
+    }
+}
+
+/****MODAL-COMBINAR****/
+.pwa-link-sell{
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+/* Color-princ/600 */
+
+color: #123E52;
+}
+.pwa-modal-match {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.pwa-modal-match-content, .pwa-modal-match-content2 {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 345px;
+    width: 95%;
+    max-width: 576px;
+    left: 393px;
+    top: 147px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pwa-modal-match-content2 {
+    height: 381px;
+    border-radius: 8px;
+}
+
+.pwa-title-modal-match {
+    margin-bottom: 10px;
+    
+    color: #457185;
+    font-family: Cambay;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.pwa-text-modal-match {
+    color:  #457185;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.pwa-box-input-flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+/*
+.pwa-form-modal-match {
+    max-width: 496px;
+}*/
+.pwa-input-modal-flex {
+    border: 1px solid #E5E7EC;
+    height: 50px;
+    width: 100%;
+    /* min-width: 198px;
+    max-width: 321px; */
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 20px;
+    color: #7495A4;
+}
+.pwa-input-modal-flex::placeholder {
+    color: #7495A4;
+}
+.pwa-btn-add {
+    background: #A2B8C2;
+    border: #A2B8C2;
+    height: 50px;
+    width: 100%;
+    min-width: 50px;
+    max-width: 151px;
+    border-radius: 4px;
+
+    color: #ffffff;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+}
+
+
+.pwa-modal-match .pwa-btn-blue {
+    width: 100%;
+    /* max-width: 496px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pwa-text-and-switch-match {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+.pwa-text-match {
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+    margin-right: 8px;
+    padding-top: 9px;
+}
+
+.pwa-address .switch-shadow+label {
+    padding: 2px;
+    width: 52px;
+    height: 29px;
+}
+.pwa-address .switch-shadow+label::after {
+    content:'';
+}
+.pwa-address .switch-shadow:checked+label:before {
+    content: '';
+}
+.pwa-address .switch-shadow:checked+label:after {
+    transform: translateX(22px);   
+}
+
+/***TAB-ICONS.CSS***/
+.pwa-tab-icon {
+    max-width: 768px;
+    margin: auto;
+
+    background: #FFFFFF;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pwa-tab-icon-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pwa-tab-icon-item {
+    background: #D0EFF6;
+    height: 30px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: .2em .5em;
+    margin: 0 .25em;
+    z-index: 1;
+}
+.pwa-icon-tab-text {
+    display: none;
+    padding-top: 5px;
+    padding-left: 5px;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.ef-tab-icon-active {
+    background: #14AFD1;
+    color: #FFFFFF;
+}
+.ef-tab-icon-active path {
+    fill: #FFFFFF;
+}
+.ef-tab-icon-active .pwa-icon-tab-text {
+    display: block;
+}
+
+.pwat-tab-icon-activeted {
+    background: #14AFD1;
+}
+.pwat-tab-icon-activeted path {
+    fill: #FFFFFF;
+}
+.pwa-line {
+    position: absolute;
+    border: 1px solid #D0EFF6;
+    width: 240px;
+}
+
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+@media only screen and (min-width: 768px) {
+    .pwa-tab-icon {
+        background-color: transparent;
+    }
+}
+
+/****CARD-VENDA.CSS****/
+
+.pwa-card-sell-product {
+    background: #FFFFFF;
+ 
+    height: fit-content;
+    min-width: 325px;
+    max-width: 768px;
+    
+    padding: 10px;
+    padding-bottom: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 3px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pwa-card-sell-inner {
+    display: flex;
+    padding-top: 15px;
+}
+
+.pwa-btn-sell-blue {
+    height: 50px;
+    width: 237px;
+
+    border: #14AFD1;
+    border-radius: 5px;
+
+    position: relative;
+    margin-top: 20px;
+
+    background: #14AFD1;
+    color: #FFFFFF;     
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.pwa-btn-sell-blue:hover {
+    background: #108CA7;
+    border: #108CA7;
+    outline: none;
+}
+
+.pwa-container-img-sell {
+    height: 119.52317810058594px;
+    width: 141px;
+    background: #FFFFFF;
+    margin-right: 10px;
+    padding: 0px 10px 0px 10px;
+}
+.pwa-img-card-sell {
+    width: 100%;
+    height: 100%;
+}
+
+
+.pwa-card-sell-inner-texts {
+    width: 48vw;
+    max-width: 250px;
+}
+.pwa-card-sell-brand-blue {
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.pwa-card-sell-brand-gray {
+    margin-bottom: 8px;
+    color: #457185;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-card-sell-brand-qntd {
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-card-sell-brand-qntd::before {
+    content: 'Qntd. ';
+}
+
+@media only screen and (min-width: 600px) {
+    .pwa-card-sell-product {
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .pwa-card-sell-inner {
+        padding-top: 0px;
+    }
+    .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: -3px;
+    }
+
+
+    .pwa-card-content {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .pwa-card-sell-product {
+        height: 200px;
+        min-width: 325px;
+        max-width: 758px;
+        
+        border-bottom: 1px solid  #E5E5E5;
+        padding-top: 40px;
+
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+    }
+
+    .pwa-btn-sell-blue {
+        height: 40px;
+        width: 221px;
+        border-radius: 4px;
+        margin-top: -15px;
+        margin-right: 0;
+    }
+    
+    .pwa-card-sell-brand-qntd::before {
+        content: 'Quantidade ';
+    }
+
+}
+
+
+/***SWITCH.CSS - GLOBAL**/
+
+/* Switch button */
+.switch_container {
+    width: fit-content;
+    margin-right: -20px;
+}
+.switch {
+    visibility: hidden;
+    position: absolute;
+}
+.switch+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.switch-shadow+label {
+    padding: 2px;
+    width: 72px;
+    height: 29px;
+    background-color: #dddddd;
+    border-radius: 60px;
+}
+.switch-shadow+label:before,
+.switch-shadow+label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+}
+/* Define as características do espaço quando selecionado "NÃO"*/
+.switch-shadow+label:before {
+    right: 1px;
+    background-color: #FFFFFF;
+    border-radius: 60px;
+    transition: background 0.4s;
+    content: '';
+}
+/* Botão redondo no centro do switch */
+.switch-shadow+label::after {
+    width: 24px;
+    height: 23px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+    content:'Não';
+
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 1.5px;
+    padding-left: 24px;
+    padding-top: 3px;
+}
+.switch-shadow:checked+label:before {
+    background-color: #14AFD1;
+   
+    padding-left: 12px;
+    padding-top: 5.5px;
+    content: 'Sim';
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.switch-shadow:checked+label:after {
+    transform: translateX(42px);   
+    content: '';/*Remove o conteúdo*/
+}
+.pwa-text-switch {
+    display: none;
+}
+
+.pwa-bank-data .switch_container {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+       /* Ajusta o posicionamento do switch na seção de dados bancários*/
+    .pwa-bank-data .switch_container {
+        margin-left: 9.5pc;
+        display: block;
+        z-index: 15;
+    }
+    .switch_container {
+        margin-left: 8.1pc;
+        margin-top: 1pc;
+        margin-bottom: 12px;
+    }
+    .pwa-text-switch {
+        display: initial;
+        position:absolute;
+        margin-top: -25px;
+    }
+    .pwa-text-switch.NAO {
+        margin-left: -60px;
+    }
+    .pwa-text-switch.SIM {
+        margin-left: 100px;
+    }
+    /*Ajuste no label de Conta Corrente */
+    .pwa-text-switch.cc {
+        margin-left: -125px;
+    }
+    /*Ajuste no label de Conta Poupança */
+    .pwa-text-switch.cp {
+        margin-left: 90px;
+    }
+    /* Remove o texto do switch */
+    .switch-shadow+label::after {
+        content:'';
+    }
+    /* Remove o texto do switch */
+    .switch-shadow:checked+label:before {
+        content: '';
+    }
+
+    
+.switch-shadow:not(:checked) ~ .cc,
+.switch-shadow:not(:checked) ~ .NAO {
+    color: #174E67;
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+    
+.switch-shadow:checked ~ .cp,
+.switch-shadow:checked ~ .SIM {
+    color: #174E67;
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+    
+    
+}

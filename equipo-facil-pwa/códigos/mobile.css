@@ -16,4 +16,10 @@ h1 {
   .ismobile{
     display: block !important;
   }
+  .isdesktop.flex{
+      display: none;
+  }
+  .ismobile.flex{
+      display: flex !important;
+  }
 }

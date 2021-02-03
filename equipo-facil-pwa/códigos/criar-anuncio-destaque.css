@@ -25,6 +25,10 @@
     top: 0;
 }
 
+.card-type-ad-group div {
+    cursor: pointer;
+}
+
 /* Anuncio pos pago*/
 
 .pwa-post-paid-container {
@@ -340,13 +344,15 @@
     color: #7495A4;
 }
 
-.card-type-ad.deselected {
+.card-type-ad.deselected,
+.d-post-card.deselected {
     opacity: 0.5;
 }
 
-.card-type-ad.selected{
-    border: 1px solid #14AFD1;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+.card-type-ad.selected, 
+.d-post-card.selected{
+    border: 1px solid #14AFD1 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05) !important;
 }
 
 .bg-pwa-super-destaque {
@@ -710,6 +716,163 @@
     display: none;
 }
 
+.d-post-card {
+    cursor: pointer;
+}
+
+/*==============
+    RESPONSIVE
+===============*/
+@media(max-width: 600px) {
+    .arrow-right.isdesktop {
+        display: none !important;
+    }
+
+    #criar-anuncio-destaque .pay-card input::placeholder {
+        color: transparent;
+    }
+
+    .input-content.input-cvv input::placeholder {
+        color: var(--color-text-princ-300) !important;
+    }
+
+    #criar-anuncio-destaque .bg-ad-equipo-cards {
+        margin-top: 24px !important;
+    }
+
+    #criar-anuncio-destaque .s-fast-buy .container {
+        padding-left: 0px;
+    }
+
+    #criar-anuncio-destaque .s-fast-buy h3 {
+        line-height: 23px !important;
+    }
+
+    .pwa-ad-page .bg-ad-equipo-cards h3 {
+        text-align: left;
+        margin-right: 111px;
+        max-width: 65% !important;
+        line-height: 23px !important;
+    }
+
+    #criar-anuncio-destaque .card-type-ad-group {
+        max-width: 98% !important;
+    }
+
+    .card-type-ad  {
+        justify-content: flex-start;
+        padding: 13px 10px !important;
+    }
+
+    #criar-anuncio-destaque .pwa-post-paid-container {
+        margin-top: -28px;
+        position: relative;
+    }
+
+    /* RECEBIMENTO */
+    #criar-anuncio-destaque .payment-receipt ul li p {
+        width: 56% !important;
+    }
+
+    #criar-anuncio-destaque .payment-receipt .how-receive p {
+        width: 44% !important;
+    }
+
+    #criar-anuncio-destaque .s-payment-receipt-bg,
+    #criar-anuncio-destaque .card-type-ad-group,
+    #criar-anuncio-destaque .pwa-super-destaque-ad {
+        width: 96% !important;
+    }
+
+    #criar-anuncio-destaque .ad-equipo-card {
+        margin-left: -11px;
+        width: 96vw;
+    }
+
+    #criar-anuncio-destaque.pwa-ad-page .buttons-group {
+        margin-top: 17px !important;
+        border-top: 1px solid #D1DCE1 !important;
+    }
+
+    #criar-anuncio-destaque .payment-receipt ul {
+        width: 100%;
+        margin-left: -14px !important;
+    }
+
+    .payment-receipt section {
+        border-bottom: none;
+    }
+
+    .separator-line {
+        border-top: 1px solid #D1DCE1;
+        width: 96vw;
+        margin-left: -18px;
+    }
+
+    #criar-anuncio-destaque .how-receive .description p {
+        width: 100% !important;
+    }
+
+    #criar-anuncio-destaque .payment-receipt .how-receive {
+        width: 90vw !important;
+        margin-left: -28px !important; 
+    }
+
+    #criar-anuncio-destaque .d-pay-boleto p {
+        font-size: 15px;
+    }
+
+    #criar-anuncio-destaque .d-pay-boleto p strong {
+        color: var(--color-background-menu-user);
+    }
+
+    /* Destaque */
+    #criar-anuncio-destaque .bg-super-destaque {
+        margin-top: -27px;
+        position: relative;
+    }
+
+    .s-days-unlock {
+        padding: 0 !important;
+    }
+
+    .s-days-unlock h6 {
+        margin-left: 4px;
+    }
+
+    .s-days-unlock .button-primary {
+        font-size: 13px !important;
+    }
+
+    .pwa-s-pay-ad.eqf-d-block {
+        padding-left: 4px;
+        padding-top: 19px;
+    }
+
+    .input-checkbox-modal.type-method-pay {
+        margin-top: 10px;
+    }
+
+    .input-checkbox-modal .box-boleto {
+        margin-left: 50px;
+    }
+
+    #criar-anuncio-destaque .pay-card label {
+        font-size: 11px !important;
+        line-height: 15px !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        color: #7495A4 !important;
+    }
+
+    #criar-anuncio-destaque .pay-card .button-primary {
+        width: 80% !important;
+    }
+
+    #criar-anuncio-destaque  .pwa-s-pay-ad .d-auth-vard .d-data-valid-card .select-content {
+        width: 77px;
+    }
+}
 
 @media(min-width: 600px) {
     .d-post-pad-card-group {
@@ -745,54 +908,276 @@
     .d-pay-confirmed {
         margin: 0 !important;
     }
+
+    #criar-anuncio-destaque .pay-card label {
+        display: none !important;
+    }
+
+    #criar-anuncio-destaque  .pwa-post-paid-container h3 {
+        font-size: 16px !important;
+        max-width: 786px !important;
+        margin: 0 auto;
+        margin-top: 5px !important;
+        margin-bottom: -10px !important;
+    }
+
+    #criar-anuncio-destaque .pwa-s-pay-ad .input-content span {
+        display: none;
+    }
+
+    #criar-anuncio-destaque .d-post-pad-card-group .body-card h6, 
+    #criar-anuncio-destaque .d-post-pad-card-group .body-card p {
+        max-width: 100% !important;
+        font-size: 16px !important;
+        line-height: 26px !important;
+    }
+
+    .d-post-pad-card-group .d-post-card .body-card span {
+        font-size: 13px !important;
+    }
+
+    #criar-anuncio-destaque .pwa-s-pay-ad .d-auth-vard {
+        margin-top: 23px;
+        margin-bottom: 35px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad h6, 
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad p {
+        line-height: 29px;
+    }
+
+    .bg-ad-equipo-cards .card-type-ad-group .card-type-ad span {
+        line-height: 25px;
+    }
+
+    #criar-anuncio-destaque .s-payment-receipt-bg .payment-receipt {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    #criar-anuncio-destaque .day-recepment {
+        border-bottom: none !important;
+    }
 }
 
 @media(min-width: 800px){
     #criar-anuncio-destaque .buttons-group {
         border-top: unset;
+        margin-bottom: 6em;
     }
+    
     #criar-anuncio-destaque .s-fast-buy h3 {
         font-size: 16px;
         max-width: unset;
     }
+
     #criar-anuncio-destaque .bg-ad-equipo-cards h3 {
         text-align: start;
         font-size: 16px;
         max-width: 786px;
     }
+
     #criar-anuncio-destaque .s-payment-receipt-bg {
-        margin-top: 80px;
+        margin-top: 80px !important;
     }
+
     #criar-anuncio-destaque .bg-ad-equipo-cards {
-        min-height: 386px;
-        max-height: 417px;
+        min-height: auto !important;
+        max-height: 480px !important;
     }
+
     .pwa-ad-page section {
         max-width: 786px;
         margin: 0 auto;
         padding: 40px 0 !important;
     }
+
     #criar-anuncio-destaque .pwa-super-destaque-ad section {
         padding: 40px;
     }
+    
     #criar-anuncio-destaque .s-fast-buy {
         padding-top: 0 !important;
     }
+
     #criar-anuncio-destaque .s-fast-buy .container {
         padding-left: 0 !important;
     }
+
     #criar-anuncio-destaque .s-super-destaque-description .d-super-description.desktop {
         width: 72%;
     }
+
     #criar-anuncio-destaque .s-super-destaque-description .d-super-icon-info {
         width: 24%;
     }
+
     #criar-anuncio-destaque .s-days-unlock {
         padding-left: 45px !important;
         padding-right: 45px !important; 
     }
+
     #criar-anuncio-destaque .s-days-unlock h6,
     #criar-anuncio-destaque .pwa-s-pay-ad h6 {
         max-width: 100%;
     }
+
+    #criar-anuncio-destaque .bg-ad-equipo-cards {
+        padding-bottom: 55px;
+    }
+
+    #criar-anuncio-destaque .s-payment-receipt-bg {
+        margin-top: 70px;
+    }
+
+    #criar-anuncio-destaque .payment-receipt section {
+        padding: 11px 10px !important;
+    }
+
+    #criar-anuncio-destaque .payment-receipt ul li p {
+        width: 30%;
+        text-align: left;
+    }
+    
+    #criar-anuncio-destaque .payment-receipt ul li span {
+        width: 70%;
+        margin-left: 0px;
+    }
+
+    #criar-anuncio-destaque .payment-receipt ul {
+        margin-left: 0px;
+    }
+
+    #criar-anuncio-destaque .container.payment-receipt {
+        padding: 37px 0px !important;
+    }
+    
+    #criar-anuncio-destaque .container.payment-receipt section {
+        padding: 0px 35px !important;
+    }
+
+    #criar-anuncio-destaque .payment-receipt .how-receive p  {
+        width: 27%;
+    }
+
+    #criar-anuncio-destaque .payment-receipt .how-receive .description p {
+        width: 100%;
+    }
+
+    #criar-anuncio-destaque .payment-receipt .how-receive .description {
+        width: 73%;
+    }
+
+    #criar-anuncio-destaque .pwa-ad-page section.s-payment-receipt-bg {
+        min-height: 230px;
+    }
+    
+    #criar-anuncio-destaque .bg-super-destaque {
+        margin-top: -63px;
+        position: relative;
+    }
+
+    #criar-anuncio-destaque .pwa-post-paid-container {
+        position: relative;
+        margin-top: -69px;
+    }
+
+    #criar-anuncio-destaque .pwa-ad-page section.pwa-s-pay-ad {
+        max-width: 88%;
+    }
+
+    #criar-anuncio-destaque .pwa-s-pay-ad {
+        padding-top: 0px !important;
+        padding-bottom: 38px !important;
+    }
+
+    /* SELECIONAR MÉTODO DE PAGAMENTO */
+    #criar-anuncio-destaque .input-checkbox-modal.type-method-pay {
+        margin-left: 0px !important;
+        justify-content: flex-start;
+    }
+
+    #criar-anuncio-destaque .talk-more-product .input-checkbox-modal .box {
+        width: 25%;
+        align-items: flex-start;
+    }
+
+    #criar-anuncio-destaque .pwa-s-pay-ad {
+        padding-top: 0px !important;
+    }
+
+    #criar-anuncio-destaque .input-group-card-name .input-content.width-container-50 {
+        min-width: 48% !important;
+        max-width: 46% !important;
+    }
+
+    .d-data-valid-card .select-content:nth-child(2) {
+        width: 41% !important;
+    }
+
+    #criar-anuncio-destaque.pwa-ad-page .s-payment-receipt-bg {
+        min-height: 200px !important;
+    }
+
+    #criar-anuncio-destaque .d-pay-boleto p,
+    #criar-anuncio-destaque .d-pay-boleto p:nth-child(n + 2) {
+        max-width: 100%;
+    }
+
+    #criar-anuncio-destaque .d-pay-boleto .cod-payment {
+        padding: 22px 16px;
+    }
 }
+
+@media(min-width: 700px) and (max-width: 980px) {
+    #criar-anuncio-destaque .card-type-ad-group {
+        max-width: 91% !important;
+        min-width: 91% !important;
+    }
+
+    .container.payment-receipt {
+        max-width: 100% !important;
+    }
+
+    #criar-anuncio-destaque.pwa-ad-page .buttons-group {
+        margin-top: -7px !important;
+        margin-bottom: 5em;
+    }
+
+    #criar-anuncio-destaque .pwa-super-destaque-ad {
+        min-height: 315px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    #criar-anuncio-destaque .s-super-destaque-description {
+        padding-bottom: 25px;
+    }
+
+    #criar-anuncio-destaque .s-days-unlock {
+        padding: 8px 30px;
+    }
+
+    #criar-anuncio-destaque .pwa-super-destaque-ad {
+        padding-top: 41px !important;
+        padding-bottom: 31px !important;
+    }
+
+    #criar-anuncio-destaque .pwa-s-pay-ad .d-auth-vard .d-data-valid-card .select-content {
+        width: 50%;
+    }
+
+    #criar-anuncio-destaque .input-content.width-container-50 input:nth-child(2){
+        width: 93% !important;
+    }
+
+    .d-pay-boleto p {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    #criar-anuncio-destaque .buttons-group .button-primary {
+        margin-right: 0px !important;
+    }
+}
+

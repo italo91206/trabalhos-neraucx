@@ -1,0 +1,920 @@
+#pwat-vender-pf-final .pwa-text-register{
+    width: 245px;
+}
+
+#pwat-create-pf-final .categorias, #pwat-create-pj-final .categorias   {
+    margin-top: 0!important;
+    border-top: none!important;
+    margin-bottom: 1.5pc;
+}
+
+.pwa-create {
+   padding-top: 2pc;
+   padding-bottom: 2pc;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.pwa-create-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.pwa-create-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+}
+
+.pwa-create-btns a{
+    text-transform: uppercase;
+}
+
+.pwat-form-create{
+    padding: 0 10px;
+}
+
+#conta-pf-inicio, #conta-pj-inicio{
+    padding-top: 2pc;
+    padding-bottom: 5pc;
+}
+
+#conta-pf-passo-3 .pwa-text-gray, #conta-pj-passo-3 .pwa-text-gray, #vender-pf, .pwa-text-gray {
+    padding: 0 10px;
+}
+
+.pwa-create-subtitle {
+    height: 41px;
+    max-width: 174px;
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+/* Imagem lateral desktop */
+.pwa-create-container-side-photo{
+    height: 80vh;
+    width: 100%;
+    max-width: 663px;
+    background: #E5E5E5;
+    text-align: center;
+    display: none;
+    margin: 80px 0;
+}
+
+.pwa-create-container-side-photo-text{
+    height: 58px;
+    width: 377px;
+    margin: auto;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left
+}
+
+/* Títulos das páginas */
+.pwa-create-title, 
+.pwa-create-title-adjust,
+.pwa-create-title-adjust2 {
+    height: 64px;
+    width: fit-content;
+    margin-top: 1.5pc;
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.pwa-create-title-adjust {
+    width: 184px;
+}
+.pwa-create-title-adjust2 {
+    width: 240px;
+}
+
+/* Textos simples da página */
+.pwa-create-text, 
+.pwa-create-text2 {
+    height: 45px;
+    width: 300px;
+
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.pwa-create-text2 {
+    margin-bottom: 100px;
+}
+.pwa-container-pg-content .pwa-create-text {
+    margin-top: 12px;
+    margin-bottom: 5pc;
+}
+
+.pwa-create-steps{
+    height: 15px;
+    width: 90px;
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: right;
+}
+/* Ajuste na distância o botão azul */
+.pwa-create .pwa-btn-blue {
+    margin-bottom: 1.5pc;
+}
+
+.pwa-create .pwa-label-text-gray {
+    margin-right: 300px;
+}
+
+.pwa-container-pg-content {
+    width: 330px;
+}
+
+/* Inputs de formulario com flex  */
+.pwa-flex-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+#conta-pf-passo-2 .pwa-box-input-2col, #conta-pj-passo-2 .pwa-box-input-2col{
+    width: 140px !important;
+}
+
+/* Ajustes nos titulos */
+.pwa-create-person-data .pwa-create-title {
+    height: 32px;
+    margin-top: 1.5pc;
+    margin-bottom: 1.5pc;
+}
+
+/* container pagina Criar PF e PJ */
+.pwa-create-person-data {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.pwa-create-person-data-container,
+.pwa-create-occupation-area, 
+.pwa-informations-account {
+    width: 100%;
+}
+
+
+
+/* container pagina Criar PF e PJ - Dados pessoais*/
+.pwa-create-person-data-container {
+    padding-bottom: 2pc;
+    border-bottom:1px solid #D1DCE1;
+}
+
+.pwa-create-steps-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pwa-steps-text-blue{
+    color: #14AFD1;
+}
+
+
+
+/* Container página criar PF e PJ - Documentações */
+.pwa-documentation-container01 {
+    width: 100%;
+    max-width: 400px;
+    padding-right:15px ;
+    padding-left: 15px;
+    text-align: left;
+    
+    /* Trocar para Display none para desabilitar a visão do card */
+    display:block ;
+}
+.pwa-documentation-container01 .pwa-create-title {
+    width: fit-content;
+}
+
+.pwa-info-sell-card-documentation-green {
+    height: 133px;
+    width: 100%;
+    max-width: 374px;
+    margin: auto;
+    margin-top: 1.5pc;
+    margin-bottom: 2pc;
+
+    border-radius: 5px;
+    background: #6FCF97;
+    border: 2px dashed #219653
+}
+
+.pwa-card-gren-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.pwa-info-sell-card-green-text {
+    position: absolute;
+    margin-left: 7pc;
+
+    color: #ffffff;
+    height: 51px;
+    width: 180px;
+
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+}
+
+/* Container Area de Ocupação */
+.pwa-create-occupation-area {
+    border-bottom: 1px solid #D1DCE1;
+    padding-bottom: 3pc;
+}
+
+.pwa-create-flex .pwa-box-input{
+    width: 100% !important;
+    padding: 0 10px;
+    margin-left: 0 !important;
+}
+
+.pwa-create-flex .pwa-inputs-group-2col{
+    padding: 0 10px;
+}
+
+.pwa-create-occupation-area .pwa-select{
+    margin-bottom: 0 !important;
+}
+
+.pwat-select-area-atuacao{
+    margin-bottom: 20px;
+}
+
+/* Container Informações da conta */
+.pwa-create-flex #password{
+    position: relative;
+}
+
+.pwa-create-flex #password img{
+    position: absolute;
+    top: 20%;
+    right: 6%;
+}
+
+/* Switch de local */
+.pwa-stablishment-switch-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.pwa-create-text-and-icon{
+    display: flex;
+}
+
+.pwa-create-text-and-icon p{
+    max-width: 200px;
+}
+
+.pwat-switch {
+    visibility: hidden;
+    position: absolute;
+}
+
+.pwat-switch-container{
+    margin-top: 12px;
+}
+.pwat-switch+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.pwat-switch-shadow-input+label {
+    padding: 2px;
+    width: 72px;
+    height: 29px;
+    background-color: #dddddd;
+    border-radius: 60px;
+    margin-top: 8px;
+}
+.pwat-switch-shadow-input+label:before,
+.pwat-switch-shadow-input+label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: '';
+}
+/* Define as características do espaço quando selecionado "NÃO"*/
+.pwat-switch-shadow-input+label:before {
+    right: 1px;
+    background-color: #FFFFFF;
+    border-radius: 60px;
+    transition: background 0.4s;
+    content: '';
+}
+/* Botão redondo no centro do pwat-switch */
+.pwat-switch-shadow-input+label::after {
+    width: 26px;
+    height: 25px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+    content: 'Não';
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-left: 2px;
+    padding-left: 25px;
+    padding-top: 6px;
+}
+.pwat-switch-shadow-input:checked+label:before {
+    background-color: #14AFD1;
+   
+    padding-left: 12px;
+    padding-top: 5.5px;
+    content: 'Sim';
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.pwat-switch-shadow-input:checked+label:after {
+    transform: translateX(42px);   
+    content: '';/*Remove o conteúdo*/
+}
+.pwat-text-switch {
+    display: none;
+}
+
+/* Tipo de estabelecimento - Passo 02 */
+.pwa-drop-stablishment-inner{
+    position: relative;
+}
+
+.pwa-drop-stablishment-inner img{
+    position: absolute;
+    top: 47%;
+    right: 4%;
+}
+
+/* Criar pf/pj passo 03 */
+.pwat-cards-deck-info-sell{
+    display: flex;
+    justify-content: space-around;
+}
+.pwat-card-info-sell {
+    height: 152px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #D0EFF6;
+    border: 1px solid #14AFD1;
+}
+
+.pwat-card-info-sell-text {
+    width: 88px;
+    margin-top: 10px;
+    color: #084654;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: center; 
+}
+
+/* Hover dos cards - passo 03 */
+.pwat-card-info-sell:hover svg path, .pwat-tipo-conta-selecionado svg path{
+    fill: #FFF;
+}
+
+.pwat-card-info-sell:hover, .pwat-tipo-conta-selecionado{
+    background: #43BFDA;
+    border: 1px solid #0C697D;
+}
+
+.pwat-card-info-sell:hover .pwat-card-info-sell-text , .pwat-tipo-conta-selecionado .pwat-card-info-sell-text {
+    color: #FFF;
+}
+
+.pwat-btn-avancar-passo-3{
+    border: none;
+    text-transform: uppercase;
+}
+
+.pwat-btn-avancar-passo-3:disabled{
+    border: none;
+    background: #D1DCE1;
+    text-transform: uppercase;
+}
+
+/* Container formulário account type */
+.pwat-form-account-type{
+    display: none;
+}
+
+.show-form-account-type{
+    display: block;
+}
+
+/* Input de adicionar fotos */
+.pwat-account-photo{
+    padding: 0 10px;
+}
+
+.pwat-send-photos-text{
+    color: #174E67;
+    font-size: 14px;
+    
+}
+
+.pwat-documentation-container {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D1DCE1;
+}
+
+/* Container dados bancários */
+
+.input-type-bank{
+    flex-wrap: nowrap !important;
+    margin-left: 32px;
+}
+
+.input-type-bank label{
+    margin-right: 0 !important;
+}
+
+.input-type-bank .box{
+    margin-top: 0 !important;
+}
+
+.pwat-agencia-conta{
+    justify-content: space-between !important;
+    padding: 0 10px !important;
+}
+
+.pwat-input-name{
+    padding: 0 10px;
+}
+
+/* Revisão de dados PF / PJ */
+.pwa-data-review-header {
+    display: none;
+}
+.pwa-data-review-header,
+.pwa-data-review-header-PJ {
+    max-width: 786px;
+    width: 100%;
+    max-width: 786px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pwa-titles-datas-review {
+    margin-top: 1.5pc;
+    margin-bottom: 1.5pc;
+    color: #457185;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.pwa-edit-text {
+    margin-top: 24px;
+    color: #108CA7;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: right;
+}
+
+.pwa-edit-text:hover {
+    text-decoration: underline;
+}
+
+.pwa-data-review-text-gray {
+    width: fit-content;
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-ul-text-first {
+    width: 35%;
+    margin-right: 20px;
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: right;
+}
+.pwa-ul-text-second {
+    width: 65%;    
+    color: #457185;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.pwa-data-review-payment,
+.pwa-data-review-area-action,
+.pwa-data-review-address,
+.pwa-data-review-bank-datas,
+.pwa-data-review-establishment   {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pwa-data-review-payment,
+.pwa-data-review-area-action,
+.pwa-data-review-address,
+.pwa-data-review-bank-datas  {
+    border-bottom: 1px solid #D1DCE1;
+}
+
+.pwa-data-review-bank-datas {
+    border-bottom: 1px solid #D1DCE1;
+    border-top: 1px solid #D1DCE1;
+}
+
+.pwa-data-review-establishment {
+    margin-top: 1pc;
+}
+
+.pwa-flex-header-titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pwa-list-flex {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1pc;
+}
+.pwa-list-flex ul {
+    list-style: none;
+}   
+.pwa-list-flex li {
+    height: 28px;
+}   
+
+.pwa-icon-top{
+    width: 75px;
+    height: 80px;
+}
+
+/* Criar pf/pj - página final */
+
+.pwa-register-check {
+    margin-top: 2pc;
+    margin-bottom: 2.5pc;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pwa-register-check-icon {
+    margin: auto;
+    margin-bottom: 1.5pc;
+}
+
+.pwa-text-register-green {
+    height: 54px;
+    width: fit-content;
+
+    color: #27AE60;
+    font-family: Cambay;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: auto;
+}
+
+#pwa-create-pf-final .categorias {
+    border-top: 1px solid #D1DCE1;
+    margin-bottom: 1.5pc;
+}
+
+.pwa-text-register {
+    padding-top: 1.5pc;
+    width: fit-content;
+ 
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin: auto;
+}
+
+.pwa-buy-equipo {
+    height: 70px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pwa-btn-buy-equipo {
+    height: 28px;
+    width: 179px;
+
+    margin-top: 5px;
+    margin-bottom: 5pc;
+
+    outline: none;
+    border: #14AFD1;
+    border-radius: 5px;
+    
+    background: #14AFD1;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.pwa-btn-buy-equipo:hover,
+.pwa-btn-buy-equipo:active  {
+    background: #108CA7;
+    cursor: pointer;
+}
+
+/* Modals das fotos */
+.pwa-modal-photo {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+@media(min-width: 1200px){
+    .pwa-create-container-side-photo{
+        display: initial;
+    } 
+
+    #pwat-vender-pf-final .pwa-text-register {
+        padding-bottom: 2.5pc;
+    }  
+
+    .pwa-create-person-data-container,
+    .pwa-create-occupation-area, 
+    .pwa-informations-account {
+        width: 100%;
+        max-width: 790px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .pwa-create-flex .pwa-create-container-side-photo {
+        display: initial;
+        margin-left: 50px;
+    }
+
+    .pwa-informations-account {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .pwa-create-occupation-area {
+        padding-bottom: 20px;
+    }
+
+    .pwa-create-person-data .pwa-inputs-group-2col {
+        margin-top: -28px;
+    }
+    .pwa-create-person-data .pwa-input-small {
+        height: 40px;
+        border-radius: 4px;
+    }
+
+    /* Botões da página revisar */
+    .pwat-btns-revisar{
+        width: 500px;
+    }
+}
+
+@media(min-width: 800px) {
+    /* Página revisão de dados pf/ pj */
+        .pwa-section-center-itens {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .pwa-data-review-header .pwa-titles-datas-review,
+    .pwa-data-review-header-PJ .pwa-titles-datas-review {
+        margin-top: 2pc;
+        margin-bottom: 0;
+    }
+    .pwa-data-review-header .pwa-data-review-text-gray,
+    .pwa-data-review-header-PJ .pwa-data-review-text-gray {
+        margin-bottom: 2pc;
+    }
+    .pwa-data-review-header{
+        display: initial;
+    }
+
+    .pwa-box-shadow {
+        height: fit-content;
+        width: 786px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #ffffffff;
+        box-shadow: 0px 0px 20px 0px #e0dfdf;
+    }
+
+    .pwa-list-flex {
+        margin-left: 0;
+    }
+
+    .pwa-ul-text-first {
+        text-align: left;
+        width: 150px;    
+        padding-left: 0;
+    }
+}
+
+
+@media(min-width: 600px) {
+    .pwa-container-pg-content {
+        width: 330px;
+    }
+}
+
+@media(min-width: 768px) {
+        .pwa-create {
+        height: 680px;
+        width: 454px;
+        border: 1px solid #CCCCCC;
+        margin: auto;
+    }
+    .pwa-create .pwa-label-text-gray {
+        display: none;
+    }
+
+    /* ////////////// Card Verde /////////////////// */
+    .pwa-info-sell-card-documentation-green {
+        height: 202px;
+
+    }
+    .pwa-card-gren-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 20px;
+
+    }
+    .pwa-info-sell-card-green-text {
+        position: relative;
+        margin-left: initial;
+        margin-top: 100px;
+
+        color: #ffffff;
+        height: 51px;
+        width: 100%;
+
+        font-family: Cambay;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;   
+    }
+
+        #categoria-slide .swiper-slide {
+        width: 250px;
+    }
+}
+
+@media(min-width: 440px){
+    .pwa-register-check {
+        margin-bottom: 0;
+    }
+
+}
+
+@media(max-width: 425px){
+        #categoria-slide .swiper-slide {
+        width: 170px;
+    }
+}
+
+@media(min-width: 374px){
+        #conta-pf-passo-2 .pwa-box-input-2col, #conta-pj-passo-2 .pwa-box-input-2col{
+        width: 170px !important;
+        }
+
+    .pwa-create-title, 
+    .pwa-create-title-adjust,
+    .pwa-create-title-adjust2 {
+        font-size: 26px;
+    }
+}
+

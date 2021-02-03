@@ -100,9 +100,11 @@
     height: 80px;
 }
 
+/* 
 .pwa-li:last-child {
     width: 80px!important;
-}
+} */
+
 .pwa-li h5, .pwa-li-modal h5 {
     width: fit-content;
 }
@@ -167,6 +169,7 @@
     margin-bottom: 2pc;
     display: flex;
     justify-content: center;
+    margin-left: 15px;
 }
 .pwa-dropbtn,
 .pwa-btn-filter {
@@ -342,9 +345,9 @@
 .categorias {
     width: 100%;
     max-width: 1200px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: auto;
+    /* padding-right: 20px;
+    padding-left: 20px; */
+    /* margin: auto; */
 }
 /* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
 @media only screen and (max-width: 600px) {
@@ -372,10 +375,10 @@
         display:block;
     }
 
-    .categorias {
+    /* .categorias {
         margin-top: 2pc;
         margin-bottom: 5.5pc;
-    }
+    } */
 
     .pwa-results-product {
         position: relative;
@@ -428,8 +431,7 @@ input {
 
 .pwa-modal-advanced-search-listing-container {
     background-color: #ffffff;
-    margin: auto;
-    margin-top: 25%;
+    margin: 20px auto;
     border: 1px solid #888;
     border-radius: 8px;
     height: fit-content;
@@ -782,11 +784,13 @@ input {
 .swiper-container {
     height: 100%;
     width: 100%;
-}
-.swiper-slide {
+} 
+
+/* .swiper-slide {
     width: fit-content;
     margin-right: 10px;
-}
+} */
+
 .swiper-pagination {
     position: relative;
     margin-top: 30  px;;
@@ -1074,12 +1078,16 @@ input {
 #ef-listagem .pwa-cards-product-container {
     max-width: 890px;
     align-items: baseline;
-    justify-content: unset;
+    justify-content: space-between;
+}
+
+.pwa-padding-product{
+    padding: 0 10px;
 }
 
 #ef-listagem .pwa-card-product {
     margin: unset;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     margin-bottom: 40px;
 }
 
@@ -1133,9 +1141,6 @@ input {
     }
     .pwa-list-collapse {
         padding-top: 12px;
-    }
-    .pwa-input-padrao {
-        width: 100%;
     }
     
     .pwa-box-input {
@@ -1330,4 +1335,19 @@ input {
 
 .pwa-panel select {
     margin-bottom: unset;
+}
+
+.banner-w100.relative {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.listagem-banner-text-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#ef-listagem .categorias-card .card {
+    width: 365px !important;
 }

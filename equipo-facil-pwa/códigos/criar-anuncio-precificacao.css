@@ -1,3 +1,8 @@
+#ef-criar-anuncio-precificacao .pwa-how-much-pay h3 {
+    font-size: 19px !important;
+    line-height: 27px !important;
+}
+
 section.pwa-how-much-pay {
     border: none;
 } 
@@ -64,6 +69,7 @@ section.pwa-how-much-pay {
     height: 100%;
     background: pwa-url(icon-money) center no-repeat;
 }
+
 .sales-potential h6 {
     font-family: Cambay;
     font-weight: bold;
@@ -306,6 +312,10 @@ section.pwa-how-much-pay {
     flex-flow: wrap;
     margin-top: 37px;
     padding-left: 8px;
+}
+
+.pwa-ad-page.page-01 .card.bg-card-1 {
+    margin-right: 15px;
 }
 
 .pwa-ad-category .categorias-card .card {
@@ -562,7 +572,7 @@ section.pwa-how-much-pay {
 .pwa-ad-page .year-fabrication-container .input-content {
     display: flex;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .pwa-ad-page .year-fabrication-container .input-content .select-content {
@@ -589,13 +599,6 @@ section.pwa-how-much-pay {
     text-transform: uppercase;
 }
 
-@media(max-width: 768px){
-    .isdesktop {
-        display: none;
-    }    
-}
-
-
 .pwa-how-much-pay {
     min-height: 270px;
 }
@@ -613,6 +616,7 @@ section.pwa-how-much-pay {
     max-width: 500px;
     margin-bottom: 29px;
 }
+
 .payment-receipt h5{
     text-align: start;
     font-family: Cambay;
@@ -698,6 +702,7 @@ section.pwa-how-much-pay {
     width: 100%;
     text-align: start;
 }
+
 .payment-receipt .how-receive .description span {
     font-family: Cambay;
     font-size: 1.4rem;
@@ -718,18 +723,50 @@ section.pwa-how-much-pay {
     max-width: 500px;
 }
 
+#ef-criar-anuncio-precificacao .payment-receipt {
+    position: relative;
+    margin-top: 40px !important;
+}
+
+
+/*================
+    RESPONSIVE
+================*/
+@media(max-width: 768px){
+    .isdesktop {
+        display: none;
+    }    
+}
+
 @media(min-width: 800px){
     .card-account-receipt {
         max-width: 332px;
     }
+
     .pwa-account-for-receipt .account-receipt-form .pwa-input-container {
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
     }
-}
 
-@media(min-width: 800px) {
+    #ef-criar-anuncio-precificacao .box-container-page {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .box-container-page .eqs-content-padding-43 {
+        padding: 17px 40px 0px 40px !important;
+    }
+
+    .input-content.width-container-50 {
+        min-width: 58% !important;
+        max-width: 58% !important;
+    }
+
+    .agencia-number-account {
+        width: 53% !important;
+    }
+
     .bg-sales-potential {
         margin-top: 100px;
     }
@@ -832,8 +869,8 @@ section.pwa-how-much-pay {
         margin-left: 40px;
     }
 
-    .pwa-account-for-receipt .account-receipt-form .pwa-input-container  .input-content.name {
-        width: 34% ;
+    .pwa-account-for-receipt .account-receipt-form .pwa-input-container .input-content.name {
+        width: 37.9%;
     }
 
     .pwa-account-for-receipt .account-receipt-form .pwa-input-container  .input-content.cpf {
@@ -843,10 +880,179 @@ section.pwa-how-much-pay {
     .pwa-account-for-receipt .account-receipt-form  .button-primary {
         margin-right: 0;
     }
+    
     .box-container-page.payment .payment-receipt {
         padding: 40px;
         max-width: unset;
     }
 
+    #ef-criar-anuncio-precificacao .width-container-50 {
+        width: 41% !important;
+    }
+
+    .select-content:nth-child(2) {
+        width: 23% !important;
+    }
+
+    #ef-criar-anuncio-precificacao .pwa-compar-cost {
+        padding-top: 0px !important
+    }
+
+     #ef-criar-anuncio-precificacao .box-container-page {
+         padding-top: 0px !important;
+         padding-bottom: 0px !important;
+    }
+
+    #ef-criar-anuncio-precificacao .account-receipt-form .button-primary {
+        max-width: 218px;
+        padding-top: 7px;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt ul {
+        margin-left: 0px !important;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt ul li {
+        justify-content: flex-start !important;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt ul li p {
+        text-align: left !important;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt ul li p{
+        width: 25%;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt .how-receive p {
+        text-align: left !important;
+        width: unset !important;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt .how-receive .description {
+        width: 85%;
+    }
+
+    #ef-criar-anuncio-precificacao .buttons-group {
+        border-top: none !important;
+        margin-top: 40px;
+        margin-bottom: 6em;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    #ef-criar-anuncio-precificacao .pwa-account-for-receipt .button-primary {
+        max-width: 257px;
+        height: 50px;
+    }
+
+    #ef-criar-anuncio-precificacao .payment-receipt {
+        padding: 0 !important;
+    }
+
+    #ef-criar-anuncio-precificacao .receipt-informations {
+        padding: 42px 40px 0px 40px !important;
+    }
     
+    #ef-criar-anuncio-precificacao .day-receipt-values {
+        padding: 0px 40px 35px 40px !important;
+    }
 }
+
+@media(max-width: 600px){
+    #ef-criar-anuncio-precificacao .card-account-receipt ul li p {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: normal;
+    }
+
+    #ef-criar-anuncio-precificacao .button-primary {
+        max-width: 262px;
+    }
+
+    /* #ef-criar-anuncio-precificacao section {
+        padding: 0px 10px;
+    } */
+
+    .eqf-form-account {
+        padding-left: 3px;
+        padding-right: 14px;
+    }
+
+    #ef-criar-anuncio-precificacao .pwa-account-for-receipt.eqs-content-padding-43 {
+        border-bottom: none;
+    }
+
+    #ef-criar-anuncio-precificacao  .buttons-group {
+        border-top: 1px solid #D1DCE1;
+    }
+
+    .pwa-how-much-pay .input-content input {
+        width: 57%;
+    }
+
+    .sales-potential {
+        width: 96% !important;
+    }
+
+    .input-content.cpf.width-container-30 input {
+        width: 54%;
+    }
+
+    .agencia-number-account .input-content:nth-child(1) {
+        width: 32%;
+    }
+
+    .agencia-number-account .input-content:nth-child(2) {
+        width: 63%;
+    }
+
+    .input-content.name.width-container-30 input,
+    .agencia-number-account .input-content:nth-child(1) input,
+    .agencia-number-account .input-content:nth-child(2) input {
+        width: 100%;
+    }
+
+     #ef-criar-anuncio-precificacao .buttons-group {
+        border-top: 1px solid #D1DCE1 !important;
+    }
+
+    #ef-criar-anuncio-precificacao .input-checkbox-modal .box {
+        width: 146px;
+    }
+
+    #ef-criar-anuncio-precificacao .account-receipt-form .input-checkbox-modal {
+        padding-left: 21px;
+    }   
+
+    #ef-criar-anuncio-precificacao .input-checkbox-modal .box label {
+        margin-right: 0px !important;
+    }
+}
+
+@media(min-width: 760px) and (max-width: 790px) {
+    #ef-criar-anuncio-precificacao .payment-receipt {
+        max-width: 100%;
+    }
+
+    #ef-criar-anuncio-precificacao .agencia-number-account {
+        justify-content: flex-start;
+    }
+
+    .agencia-number-account .input-content:nth-child(2) {
+        width: 63%;
+        margin-left: 50px;
+    }
+
+    .pwa-how-much-pay .input-content input {
+        width: 40%;
+    }
+
+    .agencia-number-account .input-content:nth-child(2) input {
+        width: 538px;
+    }
+}
+

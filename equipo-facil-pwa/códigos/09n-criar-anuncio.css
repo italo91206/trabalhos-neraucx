@@ -1,0 +1,165 @@
+/*=============
+ * CREATE ANUNCY FINISH
+==============*/
+#eqs-anuncy-finish {
+    min-height: 59vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d-equipo-concluid {
+    margin: 42px auto 100px;
+    width: 90%;
+}
+
+.d-equipo-concluid h6 {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+
+    color: #27AE60;
+}
+
+.equipo-concluid .ticket-inspect-equipo {
+    margin: 0;
+    margin-top: -15px;
+}
+
+.d-equipo-concluid p {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: #174E67;
+    max-width: 262px;
+    margin: 34px auto 29px;
+}
+
+.d-equipo-concluid span {
+    font-family: Cambay;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    display: flex;
+
+    color: #7495A4;
+    max-width: 146px;
+    margin: 0 auto;
+}
+
+.go-ad-register {
+    width: 90%;
+    margin: 0 auto 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.go-ad-register a {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    
+    color: #14AFD1;
+}
+
+#eqs-anuncy-finish .card-equipo-ad {
+    position: relative;
+    right: 0 !important;
+}
+
+.line-separator {
+    width: 100%;
+    border: 1px solid #F2F2F2;
+}
+
+#eqs-anuncy-finish .card-equipo-container {
+    min-height: auto !important;
+}
+
+#eqs-anuncy-finish .go-ad-register a {
+    margin-top: 4em;
+}
+
+
+/*====================
+ * REPONSIVE
+=====================*/
+@media(max-width: 600px) {
+    #eqs-anuncy-finish .product-info .card-body {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    #eqs-anuncy-finish .card-equipo-ad .location-product {
+        padding: 0 8px;
+    }
+
+    #eqs-anuncy-finish .card-equipo-ad .location-product p {
+        margin-right: 10px;
+    }
+}
+
+@media(min-width: 800px) {
+    #eqs-anuncy-finish {
+        padding-top: 50px;
+    }
+
+    #eqs-anuncy-finish .d-equipo-concluid p,
+    #eqs-anuncy-finish .d-equipo-concluid span {
+        max-width: 100% !important;
+    }
+
+    #eqs-anuncy-finish .d-equipo-concluid {
+        margin: 7px auto 8px !important;
+    }
+
+    #eqs-anuncy-finish .go-ad-register a {
+        font-size: 1.6rem !important;
+    }
+
+    #eqs-anuncy-finish .card-equipo-ad {
+        max-width: 517px;
+        height: 320px;
+    }
+
+    #eqs-anuncy-finish .product-info {
+        display: flex;
+        padding: 30px 0;
+    }
+
+    #eqs-anuncy-finish p.image-product {
+        width: 50% !important;
+    }
+
+    #eqs-anuncy-finish .card-body {
+        width: 500px !important;
+        min-width: 50%;
+    }
+
+    .line-separator {
+        display: none;
+    }
+
+    #eqs-anuncy-finish .location-product {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #eqs-anuncy-finish .card-equipo-ad {
+        margin-top: 40px;
+    }
+}

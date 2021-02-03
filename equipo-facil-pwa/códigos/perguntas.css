@@ -1,0 +1,522 @@
+#perguntas .pwa-header-navy-blue {
+    background-color: #174E67;
+    height: 60px;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#perguntas .pwa-header-text-with-icon {
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-right: 15px;
+}
+#perguntas .pwa-header-text-with-icon::before {
+    content: pwa-url(icon-question);
+    position: relative;
+    top: 5px;
+    margin-right: 8px;
+}
+
+#perguntas .pwa-container-master-inner {
+    margin: auto;
+    width: 100%;
+    max-width: 768px;
+    margin-bottom: 30px;
+}
+/* //////////// Perguntas e Respostas //////////////// */
+#perguntas .ef-questions-answers{
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+
+    color: #457185;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+    
+    padding: 20px;
+
+    border-top: 1px solid #D1DCE1
+}
+#perguntas .pwa-questions-answers-title{
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+#perguntas .pwa-questions-title{
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.09em;
+    text-align: left;
+    margin-bottom: 1pc;
+}
+
+
+/* //////////// Perguntas //////////////// */
+#perguntas .pwa-question{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    max-width: 768px;
+    padding: 0px 0px 10px 10px;
+    margin-top: 1pc;
+    text-align: left;
+}
+
+#perguntas .pwa-questions-mesage {
+    display: flex;
+    justify-content: space-between;
+}
+
+#perguntas .pwa-question-text {
+    height: 176px;
+    width: 80%;
+    max-width: 739px;
+    position: relative;
+    padding-right: 20px;
+}
+#perguntas .pwa-question-title-data {
+    position: relative;
+    margin-top: 5px;
+    width: fit-content;
+    
+    color: #A2B8C2;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+/* //////////// Respostas //////////////// */
+#perguntas .ef-answer {
+    margin: auto;
+    margin-top: 1pc;
+    margin-bottom: 2pc;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#perguntas .pwa-answer-img {
+    width: 74px;
+    height: 74px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+#perguntas .pwa-answer-img img {
+    width: 54px;
+    height: 54px;
+}
+
+#perguntas .pwa-header-answer {
+    display: flex;
+    align-items: center;
+}
+
+#perguntas .pwa-header-answer img {
+    width: 55px;
+    height: 55px;
+}
+
+#perguntas .pwa-header-answer-title {
+    max-width: 320px;
+    width: fit-content;
+    height:40px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 18px 0 8px;
+}
+#perguntas .pwa-tag-seller{
+    height: 18px;
+    width: 79px;
+
+    padding-left: 6px;
+    padding-top: 4px;
+
+    border-radius: 3px;
+    background: #14AFD1;
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+}
+#perguntas .pwa-header-answer-title-name {
+    color: #14AFD1 ;
+    font-family: Cambay;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    left: -50px;
+}
+#perguntas .pwa-header-answer-title-data {
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.12em;
+    text-align: left;
+}
+#perguntas .pwa-answer-text {
+    height: 176px;
+
+    margin: auto;
+    padding: 0px 10px 0px 60px;
+}
+
+#perguntas .pwa-question-group {
+    text-align: left;
+}
+.pwa-question-group .ef-question {
+    margin-bottom: 12px;
+}
+
+#perguntas .pwa-border-gray {
+    border-top: 1px solid #D1DCE1;
+}
+
+#perguntas .pwa-product-answers-questions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 130px;
+}
+
+#perguntas .pwa-product-quest-container-img {
+    height: 74px;
+    width: 74px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#perguntas .pwa-product-img-small {
+    height: 100%;
+    width: 100%;
+}
+
+
+#perguntas .pwa-product-brand-name-question {
+    width: 270px;
+}
+#perguntas .pwa-product-brand {
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+    margin-bottom: 5px;
+    padding-top: 10px;   
+}
+#perguntas .pwa-name-product-question {
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+
+#perguntas .pwa-reply-text {
+    position: relative;
+    left: -11px;
+    color: #14AFD1;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.09em;
+    text-align: left;
+}
+
+
+#perguntas .pwa-other-question-and-anounce, 
+#perguntas .pwa-question-anounce {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 110px;
+    max-width: 768px;
+    margin: auto;
+    
+    border-top: 1px solid #D1DCE1;
+    border-bottom: 1px solid #D1DCE1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#perguntas .pwa-question-anounce {
+    border-bottom: none ;
+    display: flex;
+    place-content: center;
+}
+#perguntas .pwa-do-other-question {
+    height: 46px;
+    width: 150px;
+    
+    color: #000000;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.09em;
+}
+#perguntas .pwa-btn-blue-small {
+    margin: initial;
+}
+
+
+
+#perguntas .pwa-adjust-footer {
+    display: flex;
+}
+#perguntas .pwa-btn-container {
+    margin-bottom: 40px;
+}
+
+
+/* ////////////////////////// RESPONSIVIDADE DESKTOP////////////////////////////////// */
+@media only screen and (min-width: 1200px) {
+
+    #perguntas .pwa-question-anounce {
+        place-content: flex-end;
+    }
+    #perguntas .pwa-question{
+        flex-direction: column;
+    }
+
+    #perguntas .modal-desktop-user {
+        display: block;
+        left: 0;
+        box-shadow: none;
+        z-index: 1;
+        margin-top: 0;
+        position: relative;
+        height: fit-content;
+        width: 340px;
+    }
+    #perguntas .modal-desktop-user::before {
+        display: none;
+    }
+    #perguntas .pwa-active-menu {
+        color: #174E67;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    #perguntas .pwa-flex-master {
+        display: flex;
+    }
+    
+    #perguntas .pwa-icon-turn-back {
+        display: none;
+    }
+    #perguntas .pwa-header-navy-blue {
+        background-color: transparent;
+        height: 100px;
+        justify-content: flex-start;
+    }
+    #perguntas .pwa-header-text-with-icon {
+        padding-top: 50px;
+        margin-left: -10px;
+        color: #174E67;
+        font-family: Cambay;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    #perguntas .pwa-header-text-with-icon::before {
+        content: '';
+    }
+    #perguntas .pwa-questions-answers-title {
+        font-size: 16px;
+    }
+    #perguntas .pwa-question-title-data {
+        position: initial;
+        margin-top: 5px;
+        width: 60px;
+    }
+    #perguntas .pwa-product-brand {
+        font-size: 13px;
+    }
+    
+    #perguntas .pwa-tag-seller{
+        height: 29px;
+        width: 75px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        padding: 0;
+        
+    }
+    #perguntas .pwa-question-answer-group {
+        box-shadow: 0px 0px 20px 0px #e6e6e6;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        border-radius: 8px;
+    }
+    #perguntas .ef-questions-answers {
+        padding-bottom: 10px;
+    }
+    #perguntas .ef-question {
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+    #perguntas .pwa-question-title-data {
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    #perguntas .pwa-question-text {
+        order: 2;
+    }
+    #perguntas .ef-question p, #perguntas .pwa-answer-text  {
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+    #perguntas .ef-answer {
+        margin-bottom: 10px;
+    }
+    #perguntas .pwa-product-answers-questions {
+        justify-content: flex-start;
+    }
+    #perguntas .pwa-product-quest-container-img {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #perguntas .pwa-product-brand-name-question {
+        width: fit-content;
+    }
+
+   #perguntas .pwa-question-group .ef-question {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+    #perguntas .pwa-other-question-and-anounce, 
+    #perguntas .pwa-question-anounce {
+        background: #E5E5E5;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        height: 89px;
+    }
+    #perguntas .pwa-do-other-question {
+        width: fit-content;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    #perguntas .pwa-btn-blue-big {
+        margin-right: 0;
+        margin-top: 15px;
+        height: 40px;
+        width: 144px;
+        border-radius: 4px;
+    }
+    #perguntas .pwa-btn-blue-big, #perguntas .pwa-btn-blue-small {
+        height: 40px;
+        width: 144px;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (min-width: 800px){
+
+    #perguntas .pwa-question-title-data{
+        display: block;
+    }
+
+    /* Perguntas e respostas*/
+
+    #perguntas .ef-question {
+        height: auto;
+        flex-direction: column;
+    }
+    #perguntas .ef-questions-answers {
+        background-color: transparent!important;
+        padding: 24px 40px !important;
+        height: auto;
+    }
+
+    #perguntas .ef-questions-answers .pwa-question-text {
+        width: auto;
+        height: auto;
+    }
+
+    #perguntas .ef-answer {
+        border-left: 3px solid var(--color-text-blue);
+        margin-left: 1pc;
+        flex-direction: column;
+    }
+
+    #perguntas .ef-answer .pwa-header-answer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #perguntas .ef-answer .pwa-header-answer img {
+        width: 33.33px;
+        height: 33.33px;
+    }
+   #perguntas .pwa-header-answer-title {
+        margin: 0 10px 0 18px;
+        flex-direction: column;
+        width: fit-content;
+    }
+}

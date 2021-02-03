@@ -952,6 +952,7 @@ footer {
 	width: 103px;
 	border-radius: 5px;
 	color: white;
+    text-align: center;
 }
 
 .pwa-btn-search-navy-blue:hover {

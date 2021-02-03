@@ -1,0 +1,247 @@
+.card-equipo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 460px;
+  }
+  
+  .bg-card-equipo-ad {
+    background: #e6e6e6;
+    width: 100%;
+    min-height: 780px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-equipo-ad {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+  
+    max-width: 370px;
+  
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+      0px 0px 1px rgba(0, 0, 0, 0.04);
+  
+    margin-top: -75px;
+  }
+  
+  .card-equipo-ad .image-product {
+    width: 100%;
+    height: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 5px 5px 0 0;
+    max-height: 207px;
+  }
+  
+  .card-equipo-ad .image-product img {
+    height: 207px;
+    width: 350px;
+    object-fit: contain;
+    padding: 10px 0;
+  }
+  
+  .card-equipo-ad .product-info {
+    padding: 0 8px;
+  }
+  
+  .card-equipo-ad .ticket-inspect-equipo {
+    margin-top: -10px;
+  }
+  
+  .card-equipo-ad h6 {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+  
+    color: #174e67;
+  
+    margin: 15px 0;
+  }
+  
+  .card-equipo-ad .value-product {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 28px;
+  
+    color: #14afd1;
+  
+    margin-bottom: 27px;
+  }
+  
+  .card-equipo-ad .value-parcel-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+  }
+  
+  .card-equipo-ad .value-parcel {
+    padding-bottom: 23px;
+  }
+  
+  .card-equipo-ad .value-parcel span {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #a2b8c2;
+  }
+  
+  .card-equipo-ad .location-product {
+    height: 42px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    background: #f2f2f2;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .card-equipo-ad .location-product span {
+    min-width: 114px;
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  
+    color: #7495a4;
+  }
+  
+  .card-equipo-ad .location-product span::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: pwa-url(icon-pin) no-repeat center center;
+    order: -1;
+  }
+  
+  .card-equipo-ad .location-product p {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+  
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  
+    color: #7495a4;
+    margin: 0;
+  }
+  
+  .price-value {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .salve-equipo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    margin: 10px 10px 0 0;
+  }
+  
+  .salve-equipo::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: pwa-url(mark) no-repeat center center;
+  }
+  
+  .super-destaque {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    background: #0098ED;
+    border-radius: 5px;
+    padding: 2px 5px;
+  
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  
+    color: #FFFFFF;
+    margin-top: -8px;
+  }
+  
+  .ticket-price-status {
+    background: #5B87F8;
+    border-radius: 3px;
+    width: 122px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 6px;
+  
+    font-family: Cambay;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  
+    color: #FFFFFF;
+    height: 30px;
+  }
+  
+  .ticket-price-status::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    order: -1;
+    background: pwa-url(icon-cifrao) no-repeat center center;
+  }
+  
+  
+  @media(min-width: 800px) {
+    .card-equipo-ad .value-parcel-content {
+      display: block;
+    }
+  
+    .card-equipo-ad .value-parcel {
+      padding-bottom: 10px;
+    }
+  
+    .card-equipo-ad .value-product {
+      margin-bottom: 10px;
+    }
+  
+    .card-equipo-ad .value-parcel span {
+      display: inline;
+    }
+  
+    .card-equipo-ad .super-destaque {
+      margin: 0;
+      border-radius: 5px 0px 10px;
+    }
+  }

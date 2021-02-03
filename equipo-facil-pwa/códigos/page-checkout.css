@@ -1,0 +1,382 @@
+/* Ocultando os botoes do header*/
+.menu-content.checkout{
+    justify-content: center;
+} 
+.menu-content.checkout .menu-header-buttons{
+    display: none;
+}
+
+
+/* estilos gerias da pagina */
+.page-checkout {
+    position: relative;
+}
+
+.display-none {
+    display: none;
+}
+
+.pwa-checkout-page section {
+    padding: 29px 0;
+    border-bottom: 1px solid #D1DCE1;
+    max-width: 750px;
+}
+
+
+.pwa-title-section {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 32px;
+
+    color: #174E67;
+}
+
+.pwa-sub-title-section {
+    font-family: Cambay;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 23px;
+
+    color: #174E67;
+}
+
+.pwa-input-container {
+    margin-top: 29px;
+    margin-left: 10px;
+}
+.pwa-input-container label {
+    display: flex;
+    align-items: center;
+
+    font-family: Cambay;
+    font-size: 1.1rem;
+    line-height: 15px;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7495A4;
+    
+    margin-top: 5px;
+}
+
+.input-content {
+    display: flex;
+    align-items: center;
+}
+
+.margin-input{
+    margin-top: 29px;
+}
+
+.input-content input {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 18px 18px 17px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E5E7EC;
+
+    font-family: Cambay;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+}
+
+.input-content input::placeholder {
+    font-family: Cambay;
+    font-size: 1.4rem;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #7495A4;
+}
+
+.input-content a{
+    font-family: Cambay;
+    font-size: 1.1rem;
+    line-height: 15px;
+
+    width: fit-content;
+    flex-shrink: 0;
+    margin-left: 14px;
+
+    letter-spacing: 0.12em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    color: var(--color-text-blue);
+}
+
+
+/* fim dos estilos gerias das paginas */
+
+/* section de checkout rapido */
+.pwa-checkout-speed p {
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+    margin-top: 15px
+}
+
+.pwa-checkout-means-pay {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+
+    letter-spacing: 0.01em;
+
+    color: #7495A4;
+}
+
+
+.pwa-checkout-means-pay .checkout {
+    width: 160px;
+    height: 40px;
+    border: none;
+    background: none;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.pwa-checkout-means-pay .checkout.visa {
+    background: url('../assets/images/visa_checkout.png') no-repeat center ;
+}
+
+.pwa-checkout-means-pay .checkout.cielo {
+    background: url('../assets/images/cta-cielo.png') no-repeat center;
+}
+/* fim dos estilos da section checkout rapido */
+
+
+/* estilos section cupom de desconto */
+.pwa-discount-coupom button{
+    max-width: 122px;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    border: none;
+    margin-left: 16px;
+
+    background-color: var(--color-text-blue);
+    color: #FFF;
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 17px;
+
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.pwa-form-payment {
+    display: flex;
+    flex-direction: column;
+}
+
+.pwa-form-payment .input-checkbox-modal {
+    display: flex;
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard {
+    
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box {
+    margin-bottom: 0 !important;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box label {
+    width: 57px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0 0 5px ;
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box label span {
+    width: 100%;
+    height: 35px;
+
+    display: flex;
+    margin: 0;
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box:nth-child(1) label span{
+    background: url('../assets/images/card-visa.png');
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box:nth-child(2) label span {
+    background: url('../assets/images/card-master.png');
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box:nth-child(3) label span {
+    background: url('../assets/images/card-american.png');
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box:nth-child(4) label span {
+    background: url('../assets/images/cards_07.png');
+}
+
+.pwa-form-payment .input-checkbox-modal.cardboard .box:nth-child(5) label span {
+    background: url('../assets/images/card-elo.png');
+}
+
+.pwa-credit-card {
+}
+
+.pwa-form-payment .number-end-val-card {
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.pwa-form-payment .number-end-val-card .number-card{
+    flex: 1;
+}
+
+.pwa-form-payment .number-end-val-card .number-card input {
+    max-width: none;
+}
+
+/* inputs */
+.pwa-form-payment .pwa-input-container {
+    margin-left: 0;
+}
+
+
+.selec-content {
+    max-width: 75px;
+}
+
+.select-content select{
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    font-family: Cambay;
+    font-size: 1.6rem;
+    line-height: 26px;
+
+    color: #7495A4;
+
+    border: 1px solid #E5E7EC;
+    border-radius: 5px;
+    background: #FFF;
+
+}
+
+.pwa-checkout-page section.pwa-form-payment {
+    border-bottom: none;
+}
+
+.pwa-delivery-type .pwa-group-input .input-checkbox-modal:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.pwa-delivery-type .pwa-group-input .input-checkbox-modal .box  {
+   margin: 0;
+   margin-top: 26px;
+}
+
+
+.pwa-form-payment .titular-card {
+    margin-top: 33px
+}
+.pwa-form-payment .titular-card.pwa-input-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.pwa-form-payment .titular-card .input-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    
+}
+.pwa-form-payment .titular-card .input-content span {
+    font-family: Cambay;
+    font-size: 12px;
+    line-height: 15px;
+
+    letter-spacing: 0.04em;
+
+    color: #A2B8C2;
+}
+
+.pwa-form-payment .titular-card .input-content input {
+    width: 100%;
+    max-width: none;
+    text-transform: none;
+}
+
+.pwa-form-payment .titular-card .input-content:nth-child(1) {
+    width: 72%;
+}
+
+.pwa-form-payment .titular-card .input-content:nth-child(2) {
+    width: 25%;
+}
+
+.number-installments {
+    margin-top: 42px;
+    max-width: 170px;
+}
+
+.info-utils {
+    flex-direction: column;
+}
+
+.save-data-card {
+    margin-bottom: 0 !important;
+}
+
+#buttom-submit-buy {
+    margin-bottom: 67px;
+}
+
+#billing-addres {
+    font-family: Cambay;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 19px;
+
+    letter-spacing: 0.01em;
+
+    color: #457185;
+    margin-bottom: -15px;
+    }

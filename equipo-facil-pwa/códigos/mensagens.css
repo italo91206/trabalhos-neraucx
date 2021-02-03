@@ -1,0 +1,181 @@
+/* /////////////////////// MENSAGENS //////////////////////// */
+.pwa-message-master-container {
+    height: 621px;
+    overflow-y: scroll;
+}
+
+.pwa-message-master-container::-webkit-scrollbar{
+    display: none;
+}
+
+.pwat-messages-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pwat-mensagens .pwa-product-answers-questions{
+    border-bottom: 1px solid #D1DCE1
+}
+
+
+
+.pwa-message-container {
+    width: 100%;
+    max-width: 768px;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.pwa-message-date {
+    background: #A1DFED;
+    height: 30px;
+    width: 114px;
+    left: 127px;
+    top: 254px;
+    border-radius: 5px;
+
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 18px;
+
+    padding-top: 7px;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: center;
+        
+}
+.pwa-message-img-container {
+    height: 74px;
+    width: 74px;
+    display: flex;
+    justify-content: center;
+}
+.pwa-message-img {
+    height: auto;
+    width: 100%;;
+}
+.pwa-message-text-gray , 
+.pwa-message-text-white  {
+    height: fit-content;
+    max-width: 588px;
+    border-radius: 3px;
+
+    color: #174E67;
+    font-family: Cambay;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    padding: 12px;
+}
+.pwa-message-text-gray {
+    background: #ECECEC;
+}
+.pwa-message-text-white {
+    background: #FFFFFF;
+}
+.pwa-message-who-send-hour {
+    padding-left: 20px;
+    color: #7495A4;
+    font-family: Cambay;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+.pwa-message-question {
+    display: flex;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+.pwa-message-answer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+.pwa-message-answer .pwa-message-img-container {
+    margin-left: 5px;
+}
+.pwa-message-question .pwa-message-img-container {
+    margin-right: 5px;
+}
+
+.pwa-input-message-container {
+    height: 122px;
+    width: 100%;
+    max-width: 768px;
+    background: #FFFFFF;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.pwa-container-message-inner {
+    max-width: 355px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 12px;
+}
+.pwa-attach {
+    height: 35px;
+    width: 37px;
+    border-radius: 5px;
+    background: #174E67;
+    padding: 7px 10px 7px 10px;
+    margin-right: 5px;
+}
+#anexar {
+    display: none;
+}
+.pwa-input-message {
+    height: 37px;
+    width: 80vw;
+    max-width: 309px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #D1DCE1;
+    color: #7495A4;
+}
+.pwa-input-message::placeholder {
+    color: #7495A4;
+}
+.pwa-btn-blue-send {
+    height: 50px;
+    width: 100%;
+    max-width: 355px;
+    margin-bottom: 12px;
+    
+    background: #14AFD1;
+    border: #14AFD1;
+    border-radius: 5px;
+
+    color: #FFFFFF;
+    font-family: Cambay;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin: auto;
+}
+.pwa-btn-blue-send:hover {
+    background: #174E67;
+}

@@ -22,7 +22,7 @@
 
         for(var i=0; i < itemsMenu.length; i++){
             itemsMenu[i].addEventListener("click", function(){
-                modaldivUsuarioMobileDesktop.classList.remove('ativo')
+                forceCloseMenuMobile();
             })
         }
 
@@ -51,6 +51,11 @@
             menuBarrasMobile.classList.toggle('close')
 
             modalbotaoNotificacao.classList.remove('ativo');
+        }
+
+        function forceCloseMenuMobile(){
+            modaldivUsuarioMobileDesktop.classList.remove('ativo')
+            menuBarrasMobile.classList.remove('close')
         }
     }
 }
