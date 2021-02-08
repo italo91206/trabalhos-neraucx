@@ -1,438 +1,555 @@
-<div  role="heading" aria-level="1" pwa-hook="on-page">
-	<div class="nv-overlay nv-is-hidden" ></div>
-	<header id="Header" >
-			<div class="nv-header" id="HeaderTop">
-			<div class="nv-container">
-					<div class="nv-frete-swiper" pwa-hook="nv-frete-slide">
-					<button class="swiper-button-prev nv-frete-swiper__button nv-is-prev nv-button nv-preserv-default"
-							type="button"><span class="nv-is-hidden">Anterior</span></button>
-					<button class="swiper-button-next nv-frete-swiper__button nv-is-next nv-button nv-preserv-default"
-							type="button"><span class="nv-is-hidden">Próximo</span></button>
-					<div class="swiper-container nv-frete-swiper-container">
-							<div class="swiper-wrapper nv-frete-swiper-wrapper">
-							<div class="swiper-slide nv-frete-swiper-slide">
-									<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
-							</div>
-							<div class="swiper-slide nv-frete-swiper-slide">
-									<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
-							</div>
-							<div class="swiper-slide nv-frete-swiper-slide">
-									<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
-							</div>
-							</div>
+<header id="Header" role="heading" aria-level="1" pwa-hook="on-page">
+	
+	<!-- carrinho -->
+	<pwa-cart open-on-add />
+	
+	<!-- div de overlay -->
+	<div class="nv-overlay nv-is-hidden" pwa-toggle-cart></div>
+
+	<!-- Slider pre-header -->
+	<div class="nv-header" id="HeaderTop">
+		<div class="nv-container">
+			<div class="nv-frete-swiper" pwa-hook="nv-frete-slide">
+				<button class="swiper-button-prev nv-frete-swiper__button nv-is-prev nv-button nv-preserv-default nv-button-swiper-ant-banner nv-button-swiper-prev-banner"
+					type="button"><span class="nv-is-hidden">Anterior</span></button>
+				<button class="swiper-button-next nv-frete-swiper__button nv-is-next nv-button nv-preserv-default nv-button-swiper-ant-banner nv-button-swiper-next-banner"
+					type="button"><span class="nv-is-hidden">Próximo</span></button>
+				<div class="swiper-container nv-frete-swiper-container">
+					<div class="swiper-wrapper nv-frete-swiper-wrapper">
+						<div class="swiper-slide nv-frete-swiper-slide">
+							<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
+						</div>
+						<div class="swiper-slide nv-frete-swiper-slide">
+							<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
+						</div>
+						<div class="swiper-slide nv-frete-swiper-slide">
+							<p class="nv-is-uppercase">Frete Grátis nas compras acima de R$ 400,00</p>
+						</div>
 					</div>
-					</div>
+				</div>
 			</div>
+		</div>
+	</div>
+
+	<!-- Barra pre-menu -->
+	<div class="nv-header" id="HeaderMiddle" pwa-hook="nv-nav-menu">
+		<div class="nv-container" pwa-hook="nv-navigation-menu">
+			<div class="nv-columns nv-is-mobile nv-is-vcentered">
+				<div class="nv-column nv-is-3-mobile nv-is-5-desktop nv-is-hidden-touch">
+                    <a class="nv-button__off nv-button nv-is-outlined nv-is-uppercase" href="#off">
+                        <!-- <span class="nv-icon">
+                            <i class="nv-is-sale" aria-hidden="true"></i>
+                        </span> -->
+                        <img pwa-src="icon-cupom-svg" alt="Icon Cupom">
+                        <span>Ganhe 10% OFF na primeira compra</span>
+                     </a>
+				</div>
+				<div class="nv-column nv-is-4-mobile nv-is-3-desktop nv-has-text-centered">
+					<div class="nv-logo"><a pwa-to-page="home"><img pwa-src="logo" alt="Navy Store" /></a></div>
+				</div>
+				<div class="nv-column nv-is-8-mobile nv-is-4-desktop nv-is-clearfix">
+					<div class="nv-is-pulled-right">
+						<ul class="nv-menu">
+							<li pwa-is-logged pwa-toggle-cart class="nv-menu__item nv-is-cart" data-count="2">
+								<button class="nv-menu__button" type="button"><span class="nv-is-hidden">Carrinho</span></button>
+                                <!-- <button class="nv-menu__button" type="button">
+                                    <img pwa-src="icon-carrinho-svg"  alt="Carrinho">
+                                </button> -->
+							</li>
+
+							<li pwa-not-logged pwa-to-auth class="nv-menu__item nv-is-cart" data-count="2">
+								<button class="nv-menu__button" type="button"><span class="nv-is-hidden">Carrinho</span></button>
+                                <!-- <button class="nv-menu__button" type="button">
+                                    <img pwa-src="icon-carrinho-svg"  alt="Carrinho">
+                                </button> -->
+							</li>
+
+							<li class="nv-menu__item nv-is-search">
+								<button class="js-modal-trigger nv-menu__button" type="button" data-modal="search"
+									data-modal-action="open" pwa-hook="nv-modal"><span class="nv-is-hidden">Buscar</span></button>
+							</li>
+							<li class="nv-menu__item nv-is-menu nv-is-hidden-desktop">
+								<button class="nv-hamburguer js-trigger" id="MobileNavigationButtonPrimary" type="button"
+									pwa-hook="nv-header-overflow"><span></span><span></span><span></span></button>
+							</li>
+
+							<!-- <li class="nv-menu__item nv-is-wishlist nv-is-hidden-touch" data-count="10"> -->
+							<li class="nv-menu__item nv-is-hidden-touch" data-count="10">
+								<!-- <button class="nv-menu__button" type="button">
+                                    <span class="nv-is-hidden">Lista de
+										Desejos
+                                    </span>
+                                </button> -->
+                                <button class="nv-menu__button" type="button">
+                                    <img pwa-src="icon-fav-svg"  alt="Lista de Desejos">
+                                </button>
+							</li>
+
+							<!-- <li pwa-is-logged pwa-to-account class="nv-menu__item nv-is-account nv-is-hidden-touch"> -->
+							<li pwa-is-logged pwa-to-account class="nv-menu__item nv-is-hidden-touch">
+								<!-- <button class="nv-menu__button" type="button"><span class="nv-is-hidden">Minha Conta</span></button> -->
+                                <button class="nv-menu__button" type="button">
+                                    <img pwa-src="icon-user-svg"  alt="Minha Conta">
+                                </button>
+							</li>
+
+							<!-- <li pwa-not-logged pwa-to-auth class="nv-menu__item nv-is-account nv-is-hidden-touch"> -->
+							<li pwa-not-logged pwa-to-auth class="nv-menu__item nv-is-hidden-touch">
+								<!-- <button class="nv-menu__button" type="button"><span class="nv-is-hidden">Minha Conta</span></button> -->
+								<button class="nv-menu__button" type="button">
+                                    <img pwa-src="icon-user-svg"  alt="Minha Conta">
+                                </button>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="nv-header" id="HeaderMiddle"  pwa-hook="nv-nav-menu">
-			<div class="nv-container" pwa-hook="nv-navigation-menu">
-					<div class="nv-columns nv-is-mobile nv-is-vcentered">
-					<div class="nv-column nv-is-3-mobile nv-is-4-desktop nv-is-hidden-touch"><a
-							class="nv-button__off nv-button nv-is-outlined nv-is-uppercase" href="#off"><span class="nv-icon"><i
-									class="nv-is-sale" aria-hidden="true"></i></span><span>Ganhe 10% OFF na primeira compra</span></a>
-					</div>
-					<div class="nv-column nv-is-4-mobile nv-is-4-desktop nv-has-text-centered">
-							<div class="nv-logo"><a  pwa-to-page="home"><img pwa-src="logo" alt="Navy Store"  /></a></div>
-					</div>
-					<div class="nv-column nv-is-8-mobile nv-is-4-desktop nv-is-clearfix">
-							<div class="nv-is-pulled-right">
-							<ul class="nv-menu">
-									<li class="nv-menu__item nv-is-cart" data-count="2">
-									<button class="nv-menu__button" type="button"><span class="nv-is-hidden">Carrinho</span></button>
-									</li>
-									<li class="nv-menu__item nv-is-search">
-									<button class="js-modal-trigger nv-menu__button" type="button" data-modal="search"
-											data-modal-action="open" pwa-hook="nv-modal"><span class="nv-is-hidden">Buscar</span></button>
-									</li>
-									<li class="nv-menu__item nv-is-menu nv-is-hidden-desktop">
-									<button class="nv-hamburguer js-trigger" id="MobileNavigationButtonPrimary"
-											type="button"  pwa-hook="nv-header-overflow"><span></span><span></span><span></span></button>
-									</li>
-									<li class="nv-menu__item nv-is-wishlist nv-is-hidden-touch" data-count="10">
-									<button class="nv-menu__button" type="button"><span class="nv-is-hidden">Lista de
-											Desejos</span></button>
-									</li>
-									<li class="nv-menu__item nv-is-account nv-is-hidden-touch">
-									<button class="nv-menu__button" type="button"><span class="nv-is-hidden">Minha Conta</span></button>
-									</li>
+		</div>
+	</div>
+
+	<!-- Barra menu -->
+	<div class="nv-header nv-is-hidden-mobile" id="HeaderBottom">
+		<div class="nv-container">
+			<div class="nv-columns nv-is-desktop">
+				<div class="nv-column nv-is-offset-3-desktop nv-is-7-desktop">
+					<nav id="Nav">
+						<div id="NavMenu">
+							<ul class="nv-nav-menu">
+								<li class="nv-nav-menu__item nv-has-submenu"><a class="nv-nav-menu__link"
+										href="#blusas"><span>Blusas</span></a>
+									<div class="nv-nav-submenu-wrapper">
+										<div class="nv-container">
+											<div class="nv-columns nv-is-desktop">
+												<div class="nv-column nv-is-offset-3-desktop nv-is-5-desktop">
+													<p class="nv-nav-submenu__title nv-title">Blusas</p>
+													<ul class="nv-nav-submenu">
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" pwa-to-search="">Recém
+																Chegadas</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
+																href="#queridinhas">Queridinhas</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" pwa-to-search="">No
+																precinho</a></li>
+														<li class="nv-nav-submenu__item nv-is-separator"><a class="nv-nav-submenu__link"
+																pwa-to-search="">Ver Todas</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" href="#blusa-suede">Blusa
+																Suede</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" href="#blusa-prepe">Blusa
+																Crepe</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" href="#blusa-crepe">Blusa
+																Crepe</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" href="#blusa-manga">Blusa
+																Manga</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
+																href="#blusa-manga-bufante">Blusa Manga Bufante</a></li>
+														<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
+																href="#blusa-alcinha">Blusa Alcinha</a></li>
+													</ul>
+												</div>
+												<div class="nv-column nv-is-4-desktop">
+													<div class="nv-nav-submenu-image"><img class="nv-nav-submenu__img" pwa-src="menu-example-1" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#calcas"><span>Calças</span></a>
+								</li>
+								<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#saias"><span>Saias</span></a>
+								</li>
+								<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#shorts"><span>Shorts</span></a>
+								</li>
+								<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#vestidos"><span>Vestidos</span></a>
+								</li>
+								<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#bazar"><span>Bazar</span></a>
+								</li>
 							</ul>
-							</div>
-					</div>
-					</div>
-			</div>
-			</div>
-			<div class="nv-header nv-is-hidden-mobile" id="HeaderBottom" >
-			<div class="nv-container">
-					<div class="nv-columns nv-is-desktop">
-					<div class="nv-column nv-is-offset-3-desktop nv-is-7-desktop">
-							<nav id="Nav">
-							<div id="NavMenu">
-									<ul class="nv-nav-menu">
-									<li class="nv-nav-menu__item nv-has-submenu"><a class="nv-nav-menu__link"
-											href="#blusas"><span>Blusas</span></a>
-											<div class="nv-nav-submenu-wrapper">
-											<div class="nv-container">
-													<div class="nv-columns nv-is-desktop">
-													<div class="nv-column nv-is-offset-3-desktop nv-is-5-desktop">
-															<p class="nv-nav-submenu__title nv-title">Blusas</p>
-															<ul class="nv-nav-submenu">
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	pwa-to-search="">Recém Chegadas</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#queridinhas">Queridinhas</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link" pwa-to-search="">No
-																	precinho</a></li>
-															<li class="nv-nav-submenu__item nv-is-separator"><a class="nv-nav-submenu__link"
-																 pwa-to-search="">Ver Todas</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-suede">Blusa Suede</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-prepe">Blusa Crepe</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-crepe">Blusa Crepe</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-manga">Blusa Manga</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-manga-bufante">Blusa Manga Bufante</a></li>
-															<li class="nv-nav-submenu__item "><a class="nv-nav-submenu__link"
-																	href="#blusa-alcinha">Blusa Alcinha</a></li>
-															</ul>
-													</div>
-													<div class="nv-column nv-is-4-desktop">
-															<div class="nv-nav-submenu-image"><img class="nv-nav-submenu__img"
-																	pwa-src="menu-example-1" /></div>
-													</div>
-													</div>
+						</div>
+					</nav>
+				</div>
+				<div class="nv-column nv-is-2-desktop nv-is-clearfix nv-is-align-self-center">
+					<div class="nv-is-pulled-right">
+						<div id="Help">
+							<a pwa-to-page="/duvidas-frequentes">
+								<button class="nv-button__help nv-button js-button-help" type="button" pwa-hook="nv-help-submenu">
+									<!-- <span class="nv-icon">
+										<i class="nv-is-help" aria-hidden="true"></i>
+									</span> -->
+                                    <img pwa-src="icon-ajuda-svg" alt="">
+									
+									<span>Precisa de Ajuda?</span>
+								</button>
+							</a>
+
+							<div class="nv-section" id="HelpSubmenu">
+								<div class="nv-container nv-is-max-desktop">
+									<div class="nv-columns nv-is-desktop nv-is-multiline">
+										<div class="nv-column nv-is-6-desktop">
+											<div class="nv-help-box">
+												<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-whatsapp"
+															aria-hidden="true"></i></span><span>Whatsapp</span>
+												</p>
+												<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos
+													sábados até as 13h.</p>
 											</div>
+										</div>
+										<div class="nv-column nv-is-6-desktop">
+											<div class="nv-help-box">
+												<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-help"
+															aria-hidden="true"></i></span><span>Dúvidas frequentes</span>
+												</p>
+												<p class="nv-help-box__description">Listamos e respondemos as principais dúvidas que recebemos
+													para agilizar seu atendimento.</p>
 											</div>
-									</li>
-									<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#calcas"><span>Calças</span></a>
-									</li>
-									<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#saias"><span>Saias</span></a>
-									</li>
-									<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#shorts"><span>Shorts</span></a>
-									</li>
-									<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#vestidos"><span>Vestidos</span></a>
-									</li>
-									<li class="nv-nav-menu__item "><a class="nv-nav-menu__link" href="#bazar"><span>Bazar</span></a>
-									</li>
-									</ul>
-							</div>
-							</nav>
-					</div>
-					<div class="nv-column nv-is-2-desktop nv-is-clearfix nv-is-align-self-center">
-							<div class="nv-is-pulled-right">
-							<div id="Help">
-									<button class="nv-button__help nv-button js-button-help" type="button"   pwa-hook="nv-help-submenu"><span class="nv-icon" ><i
-											class="nv-is-help" aria-hidden="true"></i></span><span>Precisa de Ajuda?</span>
-									</button>
-									<div class="nv-section" id="HelpSubmenu">
-									<div class="nv-container nv-is-max-desktop">
-											<div class="nv-columns nv-is-desktop nv-is-multiline">
-											<div class="nv-column nv-is-6-desktop">
-													<div class="nv-help-box">
-													<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-whatsapp"
-																	aria-hidden="true"></i></span><span>Whatsapp</span>
-													</p>
-													<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos
-															sábados até as 13h.</p>
-													</div>
+										</div>
+										<div class="nv-column nv-is-6-desktop">
+											<div class="nv-help-box">
+												<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-briefcase"
+															alt="briefcase" /></span><span>Encontre seu
+														tamanho</span>
+												</p>
+												<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos
+													sábados até as 13h.</p>
 											</div>
-											<div class="nv-column nv-is-6-desktop">
-													<div class="nv-help-box">
-													<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-help"
-																	aria-hidden="true"></i></span><span>Dúvidas frequentes</span>
-													</p>
-													<p class="nv-help-box__description">Listamos e respondemos as principais dúvidas que recebemos
-															para agilizar seu atendimento.</p>
-													</div>
+										</div>
+										<div class="nv-column nv-is-6-desktop">
+											<div class="nv-help-box">
+												<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-trocar-facil"
+															alt="exchange" /></span><span>Troca Fácil</span>
+												</p>
+												<p class="nv-help-box__description">Leva menos de 3 minutos para solicitar a troca. E
+													retornaremos sua solicitação em até 2 dias úteis.</p>
 											</div>
-											<div class="nv-column nv-is-6-desktop">
-													<div class="nv-help-box">
-													<p class="nv-help-box__title nv-title"><span class="nv-icon"><img
-																	pwa-src="icon-briefcase" alt="briefcase" /></span><span>Encontre seu
-															tamanho</span>
-													</p>
-													<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos
-															sábados até as 13h.</p>
-													</div>
-											</div>
-											<div class="nv-column nv-is-6-desktop">
-													<div class="nv-help-box">
-													<p class="nv-help-box__title nv-title"><span class="nv-icon"><img
-																	pwa-src="icon-trocar-facil" alt="exchange" /></span><span>Troca Fácil</span>
-													</p>
-													<p class="nv-help-box__description">Leva menos de 3 minutos para solicitar a troca. E
-															retornaremos sua solicitação em até 2 dias úteis.</p>
-													</div>
-											</div>
-											</div>
+										</div>
 									</div>
-									</div>
+								</div>
 							</div>
-							</div>
+						</div>
 					</div>
-					</div>
+				</div>
 			</div>
-			</div>
+		</div>
+	</div>
 
 	<!-- Modal de Pesquisa -->
-			<div class="js-modal nv-modal " id="SearchModal" data-modal-name="search" pwa-hook="nv-moda">
-			<div class="nv-modal-wrapper"><span class="nv-modal__icon" style="opacity: 0.5"><img pwa-src="icon-modal-search" alt=""/></span>
-					<div class="nv-modal-header">
-					<p class="nv-modal__title nv-title">Buscar</p>
-					<button class="js-modal-trigger nv-modal-close" type="button" data-modal-action="close">
-					</button>
-					</div>
-					<div class="nv-modal-body">
-					<form action="javascript:void">
-							<div class="nv-field">
-							<div class="nv-control nv-has-icons-left">
-									<input class="nv-input nv-is-large" placeholder="O que você está procurando?" type="text"/><span class="nv-icon nv-is-left"><i class="nv-is-search" aria-hidden="true"></i></span>
-							</div>
-							</div>
-					</form>
-					<hr/>
-					<div class="nv-columns nv-is-desktop">
-							<div class="nv-column nv-is-8-desktop">
-							<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase"> <span>Suas Buscas Recentes</span></p>
-							<p class="nv-empty nv-is-flex nv-is-align-items-center"> <span class="nv-mr-3 nv-is-inline-flex nv-is-align-items-center"><img pwa-src="icon-clock" alt=""/></span><span>Nenhum Histórico de pesquisas recentes</span></p>
-							</div>
-							<div class="nv-column nv-is-4-desktop">
-							<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase">Mais Pesquisadas</p>
-							<div class="nv-field nv-is-grouped nv-is-grouped-multiline">
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-									<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
-							</div>
-							</div>
-					</div>
+	<div class="js-modal nv-modal " id="SearchModal" data-modal-name="search" pwa-hook="nv-moda">
+		<div class="nv-modal-wrapper"><span class="nv-modal__icon" style="opacity: 0.5"><img pwa-src="icon-modal-search"
+					alt="" /></span>
+			<div class="nv-modal-header">
+				<p class="nv-modal__title nv-title">Buscar</p>
+				<button class="js-modal-trigger nv-modal-close" type="button" data-modal-action="close">
+				</button>
+			</div>
+			<div class="nv-modal-body">
+                <pwa-search-form action="javascript:void">
+                    <div class="nv-field">
+                        <div class="nv-control nv-has-icons-left nv-input-search">
+                            <input id="search-input" pwa-search-box class="nv-input nv-is-large" placeholder="O que você está procurando?" type="text" />
+                            <span class="nv-icon nv-is-left"><i class="nv-is-search" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </pwa-search-form>
 
-					<!-- Pesquisa Ativa -->
-					<!-- <div class="nv-columns nv-is-desktop">
+				<hr />
+				<div class="nv-columns nv-is-desktop">
 					<div class="nv-column nv-is-8-desktop">
-						<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase"> <span>Ver Todos os Resultados</span></p>
-											<div class="nv-product  nv-is-horizontal">
-												<div class="nv-product-image">
-													<div class="nv-product-filter-size">
-														<button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
-														<p class="nv-product-filter-size__title">Compra Rápida</p>
-														<div class="nv-filter">
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-810" value="P" checked="checked"/><span>P</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-810" value="M"/><span>M</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-810" value="G"/><span>G</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-810" value="GG"/><span>GG</span>
-															</label>
-														</div>
-													</div><img class="nv-product__img" pwa-src="prod-example-1-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
-												</div>
-												<div class="nv-product-content">
-													<div class="nv-product-content-header">
-														<p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
-														<button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
-													</div>
-													<div class="nv-product-content-body">
-														<div class="nv-product-prices">
-															<p class="nv-product__price">R$ 149,90</p>
-															<p class="nv-product__price-details">5x R$29,98</p>
-														</div>
-														<p class="nv-product-colors">
-															<label class="nv-product__color nv-is-ciano">
-																<input type="radio" name="product-color-input-1" value="ciano"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-sonic-silver">
-																<input type="radio" name="product-color-input-1" value="sonic-silver"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-chestnut">
-																<input type="radio" name="product-color-input-1" value="chestnut"/><span></span>
-															</label>
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="nv-product  nv-is-horizontal">
-												<div class="nv-product-image">
-													<div class="nv-product-filter-size">
-														<button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
-														<p class="nv-product-filter-size__title">Compra Rápida</p>
-														<div class="nv-filter">
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-0" value="P" checked="checked"/><span>P</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-0" value="M"/><span>M</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-0" value="G"/><span>G</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-0" value="GG"/><span>GG</span>
-															</label>
-														</div>
-													</div><img class="nv-product__img" pwa-src="prod-example-2-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
-												</div>
-												<div class="nv-product-content">
-													<div class="nv-product-content-header">
-														<p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
-														<button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
-													</div>
-													<div class="nv-product-content-body">
-														<div class="nv-product-prices">
-															<p class="nv-product__price">R$ 149,90</p>
-															<p class="nv-product__price-details">5x R$29,98</p>
-														</div>
-														<p class="nv-product-colors">
-															<label class="nv-product__color nv-is-ciano">
-																<input type="radio" name="product-color-input-2" value="ciano"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-sonic-silver">
-																<input type="radio" name="product-color-input-2" value="sonic-silver"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-chestnut">
-																<input type="radio" name="product-color-input-2" value="chestnut"/><span></span>
-															</label>
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="nv-product  nv-is-horizontal">
-												<div class="nv-product-image">
-													<div class="nv-product-filter-size">
-														<button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
-														<p class="nv-product-filter-size__title">Compra Rápida</p>
-														<div class="nv-filter">
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-135" value="P" checked="checked"/><span>P</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-135" value="M"/><span>M</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-135" value="G"/><span>G</span>
-															</label>
-															<label class="nv-filter__size">
-																<input type="radio" name="filter-size-input-135" value="GG"/><span>GG</span>
-															</label>
-														</div>
-													</div><img class="nv-product__img" pwa-src="prod-example-3-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
-												</div>
-												<div class="nv-product-content">
-													<div class="nv-product-content-header">
-														<p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
-														<button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
-													</div>
-													<div class="nv-product-content-body">
-														<div class="nv-product-prices">
-															<p class="nv-product__price">R$ 149,90</p>
-															<p class="nv-product__price-details">5x R$29,98</p>
-														</div>
-														<p class="nv-product-colors">
-															<label class="nv-product__color nv-is-ciano">
-																<input type="radio" name="product-color-input-3" value="ciano"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-sonic-silver">
-																<input type="radio" name="product-color-input-3" value="sonic-silver"/><span></span>
-															</label>
-															<label class="nv-product__color nv-is-chestnut">
-																<input type="radio" name="product-color-input-3" value="chestnut"/><span></span>
-															</label>
-														</p>
-													</div>
-												</div>
-											</div>
+						<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase nv-title-search">
+							<span>Suas Buscas Recentes</span>
+						</p>
+						<p class="nv-empty nv-is-flex nv-is-align-items-center">
+                            <span class="nv-mr-3 nv-is-inline-flex nv-is-align-items-center nv-icon-clock-search">
+                                <img pwa-src="icon-clock" alt="" />
+                            </span>
+                            <span>Nenhum Histórico de pesquisas recentes</span></p>
 					</div>
+                    <hr class="nv-separator-recents"/>
 					<div class="nv-column nv-is-4-desktop">
-						<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase"> <span>Pesquisas Semelhantes</span></p>
+						<p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase nv-title-search">Mais
+							Pesquisadas</p>
+						<div class="nv-field nv-is-grouped nv-is-grouped-multiline nv-tags-search">
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+							<div class="nv-control"><span class="nv-tag nv-is-medium">Tag</span></div>
+						</div>
 					</div>
-					</div> -->
+				</div>
 
-					</div>
-			</div>
-			</div>
+				<!-- Pesquisa Ativa -->
+				<!-- <div class="nv-columns nv-is-desktop">
+            <div class="nv-column nv-is-8-desktop">
+              <p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase"> <span>Ver Todos os Resultados</span></p>
+                        <div class="nv-product  nv-is-horizontal">
+                          <div class="nv-product-image">
+                            <div class="nv-product-filter-size">
+                              <button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
+                              <p class="nv-product-filter-size__title">Compra Rápida</p>
+                              <div class="nv-filter">
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-810" value="P" checked="checked"/><span>P</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-810" value="M"/><span>M</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-810" value="G"/><span>G</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-810" value="GG"/><span>GG</span>
+                                </label>
+                              </div>
+                            </div><img class="nv-product__img" pwa-src="prod-example-1-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
+                          </div>
+                          <div class="nv-product-content">
+                            <div class="nv-product-content-header">
+                              <p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
+                              <button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
+                            </div>
+                            <div class="nv-product-content-body">
+                              <div class="nv-product-prices">
+                                <p class="nv-product__price">R$ 149,90</p>
+                                <p class="nv-product__price-details">5x R$29,98</p>
+                              </div>
+                              <p class="nv-product-colors">
+                                <label class="nv-product__color nv-is-ciano">
+                                  <input type="radio" name="product-color-input-1" value="ciano"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-sonic-silver">
+                                  <input type="radio" name="product-color-input-1" value="sonic-silver"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-chestnut">
+                                  <input type="radio" name="product-color-input-1" value="chestnut"/><span></span>
+                                </label>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="nv-product  nv-is-horizontal">
+                          <div class="nv-product-image">
+                            <div class="nv-product-filter-size">
+                              <button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
+                              <p class="nv-product-filter-size__title">Compra Rápida</p>
+                              <div class="nv-filter">
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-0" value="P" checked="checked"/><span>P</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-0" value="M"/><span>M</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-0" value="G"/><span>G</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-0" value="GG"/><span>GG</span>
+                                </label>
+                              </div>
+                            </div><img class="nv-product__img" pwa-src="prod-example-2-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
+                          </div>
+                          <div class="nv-product-content">
+                            <div class="nv-product-content-header">
+                              <p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
+                              <button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
+                            </div>
+                            <div class="nv-product-content-body">
+                              <div class="nv-product-prices">
+                                <p class="nv-product__price">R$ 149,90</p>
+                                <p class="nv-product__price-details">5x R$29,98</p>
+                              </div>
+                              <p class="nv-product-colors">
+                                <label class="nv-product__color nv-is-ciano">
+                                  <input type="radio" name="product-color-input-2" value="ciano"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-sonic-silver">
+                                  <input type="radio" name="product-color-input-2" value="sonic-silver"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-chestnut">
+                                  <input type="radio" name="product-color-input-2" value="chestnut"/><span></span>
+                                </label>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="nv-product  nv-is-horizontal">
+                          <div class="nv-product-image">
+                            <div class="nv-product-filter-size">
+                              <button class="nv-product-filter-size__close" type="button"><span class="nv-is-hidden">Fechar</span></button>
+                              <p class="nv-product-filter-size__title">Compra Rápida</p>
+                              <div class="nv-filter">
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-135" value="P" checked="checked"/><span>P</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-135" value="M"/><span>M</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-135" value="G"/><span>G</span>
+                                </label>
+                                <label class="nv-filter__size">
+                                  <input type="radio" name="filter-size-input-135" value="GG"/><span>GG</span>
+                                </label>
+                              </div>
+                            </div><img class="nv-product__img" pwa-src="prod-example-3-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis"/>
+                          </div>
+                          <div class="nv-product-content">
+                            <div class="nv-product-content-header">
+                              <p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">Vestido Midi Cavado Faixa Texto Example Ellipsis</p>
+                              <button class="nv-product__favorite nv-button " type="button"><span class="nv-is-hidden">Amei</span></button>
+                            </div>
+                            <div class="nv-product-content-body">
+                              <div class="nv-product-prices">
+                                <p class="nv-product__price">R$ 149,90</p>
+                                <p class="nv-product__price-details">5x R$29,98</p>
+                              </div>
+                              <p class="nv-product-colors">
+                                <label class="nv-product__color nv-is-ciano">
+                                  <input type="radio" name="product-color-input-3" value="ciano"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-sonic-silver">
+                                  <input type="radio" name="product-color-input-3" value="sonic-silver"/><span></span>
+                                </label>
+                                <label class="nv-product__color nv-is-chestnut">
+                                  <input type="radio" name="product-color-input-3" value="chestnut"/><span></span>
+                                </label>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            </div>
+            <div class="nv-column nv-is-4-desktop">
+              <p class="nv-title nv-is-size-7 nv-has-text-weight-bold nv-has-text-battleship-gray nv-is-uppercase"> <span>Pesquisas Semelhantes</span></p>
+            </div>
+            </div> -->
 
-			<!-- Menu Mobile -->
-			<div class="nv-mobile-navigation" pwa-hook="nv-navigation-mobile">
-			<div class="nv-mobile-navigation-header">
-					<button class="nv-mobile-navigation-header__button nv-is-back nv-is-hidden js-layer-action-trigger" type="button" data-layer-action="back"><span class="nv-is-hidden">Voltar</span></button>
-					<p class="nv-mobile-navigation-header__title">Menu</p>
-					<button class="nv-mobile-navigation-header__button nv-is-close js-layer-action-trigger" type="button" data-layer-action="close"><span class="nv-is-hidden">Fechar</span></button>
 			</div>
-			<div class="nv-mobile-navigation-content">
-					<p class="nv-mobile-navigation__sale"><span>
-						<svg  width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.73545 2.57143V9.42857C1.73545 9.90196 2.12394 10.2857 2.60318 10.2857H14.4218C14.6751 10.2857 14.9157 10.1764 15.0806 9.98639L18.0557 6.55782C18.3342 6.23683 18.3342 5.76317 18.0557 5.44218L15.0806 2.01361C14.9157 1.82363 14.6751 1.71429 14.4218 1.71429H2.60318C2.12394 1.71429 1.73545 2.09804 1.73545 2.57143ZM0 2.57143V9.42857C0 10.8487 1.16548 12 2.60318 12H14.4218C15.1817 12 15.9037 11.672 16.3982 11.102L19.3733 7.67346C20.2089 6.71049 20.2089 5.28951 19.3733 4.32654L16.3982 0.897965C15.9037 0.328018 15.1817 0 14.4218 0H2.60318C1.16548 0 0 1.15127 0 2.57143Z" fill="#E67455"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0159 6.85714C13.4951 6.85714 13.8836 6.47339 13.8836 6C13.8836 5.52661 13.4951 5.14286 13.0159 5.14286C12.5366 5.14286 12.1482 5.52661 12.1482 6C12.1482 6.47339 12.5366 6.85714 13.0159 6.85714ZM13.0159 8.57143C14.4536 8.57143 15.6191 7.42016 15.6191 6C15.6191 4.57984 14.4536 3.42857 13.0159 3.42857C11.5782 3.42857 10.4127 4.57984 10.4127 6C10.4127 7.42016 11.5782 8.57143 13.0159 8.57143Z" fill="#E67455"/>
-							</svg></span><span>Ganhe 10% OFF na primeira compra</span></p>
-					<nav>
-					<ul class="nv-mobile-navigation-nav">
-							<li class="nv-mobile-navigation-nav__item nv-has-submenu"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-blusas" data-layer-action="open">Blusas</a>
-							<ul class="nv-mobile-navigation-subnav" id="mobile-nav-layer-blusas" data-layer-title="Blusas">
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Recém Chegadas</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Queridinhas</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">No precinho</a></li>
-									<li class="nv-mobile-navigation-subnav__item nv-is-separator"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Ver Todas</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Suede</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Crepe</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Crepe</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Manga</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Manga Bufante</a></li>
-									<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link" href="#submenu-item-link">Blusa Alcinha</a></li>
-							</ul>
-							</li>
-							<li class="nv-mobile-navigation-nav__item"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-calças" data-layer-action="open">Calças</a>
-							</li>
-							<li class="nv-mobile-navigation-nav__item"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-saias" data-layer-action="open">Saias</a>
-							</li>
-							<li class="nv-mobile-navigation-nav__item"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-shorts" data-layer-action="open">Shorts</a>
-							</li>
-							<li class="nv-mobile-navigation-nav__item"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-vestidos" data-layer-action="open">Vestidos</a>
-							</li>
-							<li class="nv-mobile-navigation-nav__item"><a class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link" data-layer-el-id="mobile-nav-layer-bazar" data-layer-action="open">Bazar</a>
-							</li>
-					</ul>
-					</nav>
-					<hr/>
-					<ul class="nv-mobile-navigation-menu">
-					<li class="nv-mobile-navigation-menu__item nv-is-help"><a class="nv-mobile-navigation-menu__link js-layer-el-trigger js-layer-action-trigger" href="#menu-item-link" data-layer-el-id="HelpMobile" data-layer-action="open">Precisa de Ajuda?</a></li>
-					<li class="nv-mobile-navigation-menu__item nv-is-account"><a class="nv-mobile-navigation-menu__link" href="#menu-item-link">Minha Conta</a></li>
-					<li class="nv-mobile-navigation-menu__item nv-is-wishlist" data-count="8"><a class="nv-mobile-navigation-menu__link" href="#menu-item-link">Meus Favoritos</a></li>
-					</ul>
-					<div class="nv-mobile-navigation-help" id="HelpMobile" data-layer-title="Ajuda">
-									<div class="nv-help-box">
-											<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-whatsapp" aria-hidden="true"></i></span><span>Whatsapp</span>
-											</p>
-											<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos sábados até as 13h.</p>
-									</div>
-									<div class="nv-help-box">
-											<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-help" aria-hidden="true"></i></span><span>Dúvidas frequentes</span>
-											</p>
-											<p class="nv-help-box__description">Listamos e respondemos as principais dúvidas que recebemos para agilizar seu atendimento.</p>
-									</div>
-									<div class="nv-help-box">
-											<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-briefcase" alt="briefcase"/></span><span>Encontre seu tamanho</span>
-											</p>
-											<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos sábados até as 13h.</p>
-									</div>
-									<div class="nv-help-box">
-											<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-trocar-facil" alt="exchange"/></span><span>Troca Fácil</span>
-											</p>
-											<p class="nv-help-box__description">Leva menos de 3 minutos para solicitar a troca. E retornaremos sua solicitação em até 2 dias úteis.</p>
-									</div>
-					</div>
+		</div>
+	</div>
+
+	<!-- Menu Mobile -->
+	<div class="nv-mobile-navigation" pwa-hook="nv-navigation-mobile">
+		<div class="nv-mobile-navigation-header">
+			<button class="nv-mobile-navigation-header__button nv-is-back nv-is-hidden js-layer-action-trigger" type="button"
+				data-layer-action="back"><span class="nv-is-hidden">Voltar</span></button>
+			<p class="nv-mobile-navigation-header__title">Menu</p>
+			<button class="nv-mobile-navigation-header__button nv-is-close js-layer-action-trigger" type="button"
+				data-layer-action="close"><span class="nv-is-hidden">Fechar</span></button>
+		</div>
+		<div class="nv-mobile-navigation-content">
+			<p class="nv-mobile-navigation__sale"><span>
+					<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M1.73545 2.57143V9.42857C1.73545 9.90196 2.12394 10.2857 2.60318 10.2857H14.4218C14.6751 10.2857 14.9157 10.1764 15.0806 9.98639L18.0557 6.55782C18.3342 6.23683 18.3342 5.76317 18.0557 5.44218L15.0806 2.01361C14.9157 1.82363 14.6751 1.71429 14.4218 1.71429H2.60318C2.12394 1.71429 1.73545 2.09804 1.73545 2.57143ZM0 2.57143V9.42857C0 10.8487 1.16548 12 2.60318 12H14.4218C15.1817 12 15.9037 11.672 16.3982 11.102L19.3733 7.67346C20.2089 6.71049 20.2089 5.28951 19.3733 4.32654L16.3982 0.897965C15.9037 0.328018 15.1817 0 14.4218 0H2.60318C1.16548 0 0 1.15127 0 2.57143Z"
+							fill="#E67455" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M13.0159 6.85714C13.4951 6.85714 13.8836 6.47339 13.8836 6C13.8836 5.52661 13.4951 5.14286 13.0159 5.14286C12.5366 5.14286 12.1482 5.52661 12.1482 6C12.1482 6.47339 12.5366 6.85714 13.0159 6.85714ZM13.0159 8.57143C14.4536 8.57143 15.6191 7.42016 15.6191 6C15.6191 4.57984 14.4536 3.42857 13.0159 3.42857C11.5782 3.42857 10.4127 4.57984 10.4127 6C10.4127 7.42016 11.5782 8.57143 13.0159 8.57143Z"
+							fill="#E67455" />
+					</svg></span><span>Ganhe 10% OFF na primeira compra</span></p>
+			<nav>
+				<ul class="nv-mobile-navigation-nav">
+					<li class="nv-mobile-navigation-nav__item nv-has-submenu"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-blusas" data-layer-action="open">Blusas</a>
+						<ul class="nv-mobile-navigation-subnav" id="mobile-nav-layer-blusas" data-layer-title="Blusas">
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Recém Chegadas</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Queridinhas</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">No precinho</a></li>
+							<li class="nv-mobile-navigation-subnav__item nv-is-separator"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Ver Todas</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Suede</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Crepe</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Crepe</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Manga</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Manga Bufante</a></li>
+							<li class="nv-mobile-navigation-subnav__item"><a class="nv-mobile-navigation-subnav__link"
+									href="#submenu-item-link">Blusa Alcinha</a></li>
+						</ul>
+					</li>
+					<li class="nv-mobile-navigation-nav__item"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-calças" data-layer-action="open">Calças</a>
+					</li>
+					<li class="nv-mobile-navigation-nav__item"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-saias" data-layer-action="open">Saias</a>
+					</li>
+					<li class="nv-mobile-navigation-nav__item"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-shorts" data-layer-action="open">Shorts</a>
+					</li>
+					<li class="nv-mobile-navigation-nav__item"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-vestidos" data-layer-action="open">Vestidos</a>
+					</li>
+					<li class="nv-mobile-navigation-nav__item"><a
+							class="js-layer-action-trigger js-layer-el-trigger nv-mobile-navigation-nav__link" href="#item-link"
+							data-layer-el-id="mobile-nav-layer-bazar" data-layer-action="open">Bazar</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<hr />
+
+			<ul class="nv-mobile-navigation-menu">
+				<li class="nv-mobile-navigation-menu__item nv-is-help">
+					<a class="nv-mobile-navigation-menu__link js-layer-el-trigger js-layer-action-trigger" href="#menu-item-link" data-layer-el-id="HelpMobile" data-layer-action="open">Precisa de Ajuda?</a>
+				</li>
+			
+				<li pwa-is-logged pwa-to-account class="nv-mobile-navigation-menu__item nv-is-account">
+					<a class="nv-mobile-navigation-menu__link" href="#menu-item-link">Minha Conta</a>
+				</li>
+
+				<li pwa-not-logged pwa-to-auth class="nv-mobile-navigation-menu__item nv-is-account">
+					<a class="nv-mobile-navigation-menu__link" href="#menu-item-link">Minha Conta</a>
+				</li>
+
+				<li class="nv-mobile-navigation-menu__item nv-is-wishlist" data-count="8">
+					<a class="nv-mobile-navigation-menu__link"	href="#menu-item-link">Meus Favoritos</a>
+				</li>
+			</ul>
+
+			<div class="nv-mobile-navigation-help" id="HelpMobile" data-layer-title="Ajuda">
+				<div class="nv-help-box">
+					<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-whatsapp"
+								aria-hidden="true"></i></span><span>Whatsapp</span>
+					</p>
+					<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos sábados até as
+						13h.</p>
+				</div>
+				<div class="nv-help-box">
+					<p class="nv-help-box__title nv-title"><span class="nv-icon"><i class="nv-is-help"
+								aria-hidden="true"></i></span><span>Dúvidas frequentes</span>
+					</p>
+					<p class="nv-help-box__description">Listamos e respondemos as principais dúvidas que recebemos para agilizar
+						seu atendimento.</p>
+				</div>
+				<div class="nv-help-box">
+					<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-briefcase"
+								alt="briefcase" /></span><span>Encontre seu tamanho</span>
+					</p>
+					<p class="nv-help-box__description">Estamos online de segunda a sexta das 9h30 às 18h30 e aos sábados até as
+						13h.</p>
+				</div>
+				<div class="nv-help-box">
+					<p class="nv-help-box__title nv-title"><span class="nv-icon"><img pwa-src="icon-trocar-facil"
+								alt="exchange" /></span><span>Troca Fácil</span>
+					</p>
+					<p class="nv-help-box__description">Leva menos de 3 minutos para solicitar a troca. E retornaremos sua
+						solicitação em até 2 dias úteis.</p>
+				</div>
 			</div>
-			</div>
-	</header>
-</div>
+		</div>
+	</div>
+	
+</header>
