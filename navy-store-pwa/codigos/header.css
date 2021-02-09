@@ -39,13 +39,13 @@
     flex-wrap: wrap;
     margin: -0.75rem;
   }
-  .nv-nav-menu__item {
+  /* .nv-nav-menu__item {
     display: block;
     flex: none;
     max-width: 16.6666666667%;
     padding: 0.75rem;
     width: 112px;
-  }
+  } */
   .nv-nav-menu__item.nv-has-submenu.nv-is-active > .nv-nav-submenu-wrapper {
     display: block;
   }
@@ -103,7 +103,7 @@
     display: none;
     left: 0;
     padding: 3rem 1.5rem;
-    position: absolute;
+    /* position: absolute; */
     top: calc(54px + 0.75rem);
     width: 100%;
     z-index: 99;
@@ -196,7 +196,7 @@
       overflow: none;
   }
   .nv-button__help img {
-      margin-right: 8px;
+      margin-right: 17px;
   }
   
   #HelpSubmenu {
@@ -269,3 +269,20 @@
           right: -12px !important;
       }
   }
+
+#nav .nv-nav-menu {
+    margin: 0 auto;
+    align-items: center;
+}
+
+#nav .nv-nav-menu:last-child {
+    margin-right: unset;
+    margin-left: unset;
+}
+
+#nav .nv-nav-menu:first-child {
+    width: 537px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 177px;
+}
