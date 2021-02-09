@@ -29,19 +29,16 @@
     <img class="nv-product__img" pwa-src="prod-example-1-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis" />
   </div>
 
-  <div class="nv-product-content">
+  <a pwa-to-product-page class="nv-product-content">
     <div class="nv-product-content-header">
       <p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">
         {{ product.name }}
       </p>
 
-      <button pwa-is-logged pwa-add-wishlist class="nv-product__favorite nv-button " type="button">
-        <span class="nv-is-hidden">Amei</span>
-      </button>
-
-      <button pwa-is-logged pwa-remove-wishlist class="nv-product__favorite nv-button " type="button">
-        <span class="nv-is-hidden">Amei</span>
-      </button>
+      <div pwa-is-logged>
+        <a pwa-add-wishlist ><img pwa-src="icon-heart" alt="Adicionar nos favoritos"></a>
+        <a pwa-remove-wishlist ><img pwa-src="icon-heart-o" alt="Remover dos favoritos"></a>
+      </div>
     </div>
 
     <div class="nv-product-content-body">
@@ -63,5 +60,5 @@
         </label>
       </p> -->
     </div>
-  </div>
+  </a>
 </div>
