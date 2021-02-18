@@ -37,6 +37,7 @@ ehthumbs.db
 Thumbs.db
 
 lukadigital\front\node_modules
+lukadigital\front\src\main-lock.js
 appsonco\src\main-lock.js
 DSC-interno\assets\*
 esporte-fino-store-pwa\original
