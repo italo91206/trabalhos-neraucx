@@ -1,0 +1,911 @@
+.pwat-swiper-detalhes-completo {
+  position: relative;
+}
+
+.pwat-detalhes {
+  margin-top: 40px;
+}
+
+/* START swiper detalhes */
+
+.pwat-swiper-detalhes {
+  z-index: 0;
+}
+
+.pwat-swiper-detalhes .swiper-slide,
+.pwat-swiper-quem-comprou .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.pwat-swiper-quem-comprou-completo .swiper-button-prev,
+.pwat-swiper-quem-comprou-completo .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.pwat-swiper-detalhes-completo .swiper-button-prev,
+.pwat-swiper-detalhes-completo .swiper-button-next {
+  top: 50%;
+  z-index: 0;
+}
+
+.pwat-swiper-quem-comprou-completo .swiper-button-prev:after,
+.pwat-swiper-quem-comprou-completo .swiper-button-next:after {
+  color: #fff;
+  transform: scale(0.3);
+}
+
+.pwat-swiper-detalhes .swiper-slide img,
+.pwat-swiper-quem-comprou .swiper-slide img {
+  width: 60%;
+}
+
+.pwat-paginacao-detalhes.swiper-pagination,
+.pwat-paginacao-quem-comprou.swiper-pagination {
+  z-index: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pwat-paginacao-detalhes.swiper-pagination .swiper-pagination-bullet,
+.pwat-paginacao-quem-comprou.swiper-pagination .swiper-pagination-bullet {
+  margin-right: 12px;
+}
+
+.pwat-paginacao-detalhes.swiper-pagination .swiper-pagination-bullet:last-child,
+.pwat-paginacao-quem-comprou.swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+/* END swiper detalhes */
+
+/* START detalhes */
+.pwat-detalhes-iniciais {
+  margin-top: 60px;
+}
+
+.pwat-detalhes-iniciais section {
+  text-align: center;
+}
+
+.pwat-detalhes-iniciais h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-principal-bold);
+}
+
+.pwat-detalhes-iniciais small {
+  font-size: 0.875em;
+  color: #c587b5;
+}
+
+.pwat-detalhes-iniciais .pwat-evaluation {
+  margin-top: 20px;
+}
+
+.pwat-detalhes-iniciais .pwat-evaluation img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.pwat-detalhes-iniciais .pwat-evaluation img:last-child {
+  margin-right: 0px;
+}
+
+.pwat-detalhes-iniciais .pwat-price {
+  margin-top: 40px;
+  font-size: 1.3em;
+}
+
+.pwat-detalhes-iniciais .pwat-price h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #741e7c;
+}
+
+.pwat-detalhes-iniciais .pwat-price p {
+  font-size: 0.875em;
+  color: #c587b5;
+}
+
+.pwat-detalhes-iniciais .pwat-btn-comprar {
+  margin-top: 30px;
+  width: 100%;
+  background: #00a989;
+}
+
+.pwat-detalhes-iniciais .pwat-btn-comprar:hover {
+  background: #009c7e;
+}
+.pwat-detalhes-iniciais .pwat-btn-comprar:active {
+  background: #00b895;
+}
+
+.pwat-detalhes-iniciais .pwat-frete {
+  margin-top: 40px;
+}
+
+.pwat-detalhes-iniciais .pwat-frete p {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: #c587b5;
+}
+
+.pwat-detalhes-iniciais .pwat-frete .pwat-form-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pwat-detalhes-iniciais .pwat-frete .pwat-form-group .pwat-cep {
+  width: 70%;
+  font-size: 0.875em;
+  border-width: 2px 0 2px 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 20px 0 0 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.pwat-detalhes-iniciais .pwat-frete .pwat-form-group .pwat-btn-cep {
+  background: #741e7c;
+  border-radius: 0 20px 20px 0;
+  height: 40px;
+  padding: 0 20px;
+}
+/* END detalhes */
+
+/* START sobre-produto */
+.pwat-sobre-produto {
+  margin-top: 80px;
+}
+
+.pwat-sobre-produto section h2 {
+  font-size: 6em;
+  color: #c587b5;
+  margin-top: -65px;
+}
+
+.pwat-sobre-produto section h2 span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 30px;
+  margin-top: -16px;
+  color: #741e7c;
+}
+
+.pwat-sobre-produto .pwat-conteudo-sobre-produto {
+  background: #ffeeff;
+  margin-top: -24px;
+  padding: 40px 0 60px 0;
+}
+
+.pwat-conteudo-sobre-produto .pwat-conteudo-1 {
+  border-bottom: 1px solid #f6d7fd;
+  padding-bottom: 40px;
+}
+
+.pwat-sobre-produto .pwat-conteudo-sobre-produto h3 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 28px;
+  color: #c587b5;
+}
+
+.pwat-conteudo-sobre-produto p {
+  font-size: 0.875em;
+  color: #bf7fae;
+  margin-top: 10px;
+}
+
+.pwat-conteudo-sobre-produto .pwat-conteudo-2 {
+  margin-top: 30px;
+}
+
+.pwat-conteudo-sobre-produto .pwat-conteudo-2 .pwat-item-conteudo-2 {
+  display: flex;
+  align-items: center;
+  color: #bf7fae;
+}
+
+.pwat-conteudo-sobre-produto .pwat-conteudo-2 .pwat-item-conteudo-2 p:first-child {
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.pwat-conteudo-sobre-produto .pwat-conteudo-2 .pwat-item-conteudo-2 p:last-child {
+  color: #bf7fae;
+  font-size: 0.8em;
+}
+/* END sobre-produto */
+
+/* START avaliacoes */
+
+.pwat-avaliacoes-completo h2 {
+  display: block;
+  font-size: 1.2rem;
+  color: #741e7c;
+  font-weight: 600;
+  line-height: 1rem;
+  margin-bottom: 50px;
+  color: #c587b5;
+}
+
+.pwat-avaliacoes-completo h2 span {
+  display: block;
+  color: #741e7c;
+  font-size: 4em;
+  font-weight: 400;
+  margin-left: 75px;
+}
+
+.pwat-avaliacoes-total .pwat-estrelas-completo {
+  display: flex;
+  align-items: center;
+}
+
+.pwat-avaliacoes-total .pwat-estrela {
+  min-width: 77px;
+}
+
+.pwat-avaliacoes-total .pwat-estrela img {
+  width: 12px;
+  height: 12px;
+  margin-right: 0;
+}
+
+.pwat-avaliacoes-total .pwat-porcentagem {
+  position: relative;
+  background: #cccccc;
+  width: 80%;
+  height: 10px;
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+.pwat-avaliacoes-total .pwat-porcentagem span {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 10px;
+  border-radius: 8px;
+  background: #c587b5;
+}
+
+/* Alterar as pocentagens de avalicaoes */
+.pwat-avaliacoes-total.pwat-cinco .pwat-porcentagem span {
+  width: 80%;
+}
+.pwat-avaliacoes-total.pwat-quatro .pwat-porcentagem span {
+  width: 60%;
+}
+.pwat-avaliacoes-total.pwat-tres .pwat-porcentagem span {
+  width: 30%;
+}
+.pwat-avaliacoes-total.pwat-dois .pwat-porcentagem span {
+  width: 10%;
+}
+.pwat-avaliacoes-total.pwat-um .pwat-porcentagem span {
+  width: 10%;
+}
+
+.pwat-estrelas-completo p {
+  font-size: 0.875em;
+  color: #c587b5;
+  max-width: 52px;
+  min-width: 52px;
+  text-align: right;
+}
+/* END avaliacoes */
+
+/* START que-achou */
+.pwat-que-achou {
+  margin-top: 60px;
+}
+
+.pwat-que-achou h2 {
+  display: block;
+  font-size: 1.2rem;
+  color: #c587b5;
+  font-weight: 600;
+  line-height: 1rem;
+  margin-bottom: 50px;
+}
+
+.pwat-que-achou h2 span {
+  display: block;
+  color: #741e7c;
+  font-size: 4em;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.pwat-que-achou .pwat-opiniao {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #898989;
+  font-weight: bold;
+}
+
+.pwat-que-achou .pwat-btns-opinioes {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pwat-que-achou .pwat-btns-opinioes a {
+  width: 100%;
+  font-size: 0.8125em;
+  line-height: 14px;
+  background: #c587b5;
+  padding: 10px 0;
+}
+
+.pwat-que-achou .pwat-btns-opinioes a p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.pwat-que-achou .pwat-btns-opinioes .pwat-btn-opinioes {
+  width: calc(50% - 10px);
+}
+
+/* END que-achou */
+
+/* START avaliacoes-clientes */
+
+.pwat-avaliacoes-bg{
+  background: #FFEFFF;
+}
+.pwat-avaliacoes-clientes {
+  padding-top: 40px;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente {
+  margin-bottom: 40px;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 18px;
+  color: #741e7c;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente .pwat-estrelas-clientes {
+  margin-top: 5px;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente .pwat-estrelas-clientes img {
+  width: 20px;
+  margin-right: 0;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente p {
+  margin-top: 20px;
+  color: #939598;
+  font-size: 0.875em;
+  line-height: 20px;
+}
+
+.pwat-avaliacoes-clientes .pwat-avaliacao-cliente small {
+  font-size: 0.875em;
+  display: block;
+  font-weight: bold;
+  margin-top: 16px;
+  color: #939598;
+}
+/* END avaliacoes-clientes */
+
+/* START beneficios */
+.pwat-beneficios-detalhes-completo .pwat-beneficios-detalhes {
+  padding: 80px 0 80px 0;
+}
+
+.pwat-beneficios-detalhes-completo h2 {
+  display: block;
+  color: #c587b5;
+  font-size: 1.2em;
+  line-height: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.pwat-beneficios-detalhes-completo h2 span {
+  display: block;
+  font-size: 4em;
+  font-weight: 400;
+  margin-left: 80px;
+  color: #741e7c;
+  z-index: 5;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone img {
+  width: 60px;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone h3 {
+  color: #c587b5;
+  font-size: 1.5em;
+  line-height: 28px;
+  margin-top: 20px;
+  display: block;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone h3 span {
+  color: #939598;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone p {
+  font-size: 0.875em;
+  color: #808285;
+  margin-top: 16px;
+}
+
+.pwat-beneficios-detalhes .pwat-img-icone p:nth-child(3) {
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* END beneficios */
+
+/* START quem-comprou */
+.pwat-quem-comprou h2 {
+  display: inline-block;
+  color: #c587b5;
+  font-size: 1.2em;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.pwat-quem-comprou h2 span:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.pwat-quem-comprou h2 span:nth-child(2) {
+  font-size: 6rem;
+  line-height: 0;
+  color: #741e7c;
+  margin-left: 10px;
+}
+
+.pwat-quem-comprou h3 {
+  display: inline-block;
+  color: #741e7c;
+  font-size: 1.2em;
+  line-height: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 0 32px;
+}
+
+.pwat-quem-comprou .pwat-preco-swiper {
+  margin-top: 16px;
+}
+
+.pwat-quem-comprou .pwat-preco-swiper p {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #741e7c;
+}
+
+.pwat-quem-comprou .pwat-preco-swiper p.pwat-parcelas {
+  font-size: 1em;
+  font-weight: 500;
+  color: #c587b5;
+  margin-left: 8px;
+}
+/* END quem-comprou */
+
+/* START produto-garantia */
+.pwat-detalhes .pwat-produto-garantia-bg {
+  padding: 100px 0 100px 0;
+  margin-top: -11%;
+  background-color: #a285bd;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-garantia-one {
+  font-size: 7rem;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title h2 {
+  font-size: 4rem;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title h2 span {
+  font-size: 4rem;
+  color: #f6b7c8;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title-flex p {
+  font-size: 0.7rem;
+  margin-top: 0px;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-info p {
+  font-size: 0.875em;
+  color: #fff;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-info p span {
+  font-weight: bold;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-btn-orange {
+  background: #fb8f46;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-btn-orange:hover {
+  background: #ed833b;
+}
+
+.pwat-detalhes .pwat-coletores-garantia-bg .pwat-btn-orange:active {
+  background: #fc9651;
+}
+/* END produto-garantia */
+
+/* SABER MAIS */
+.pwat-detalhes-saber-mais{
+  margin-top: 100px !important;
+}
+
+.pwat-detalhes-saber-mais .pwat-coletores-saber-mais{
+  padding-bottom: 150px !important;
+}
+
+@media (min-width: 576px) {
+
+  .pwat-detalhes .pwat-coletores-saber-mais a {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pwat-beneficios-detalhes-completo .pwat-beneficios-detalhes {
+    padding: 160px 0 0 0;
+  }
+  
+  .pwat-beneficios-detalhes-completo h2 {
+    margin-bottom: 60px;
+  }
+
+  /* START sobre-produto */
+  .pwat-sobre-produto section h2 {
+    font-size: 8em;
+    margin-top: -80px;
+  }
+  .pwat-sobre-produto section h2 span {
+    font-size: 1.4rem;
+    margin-top: -8px;
+  }
+
+  .pwat-sobre-produto .pwat-conteudo-sobre-produto {
+    padding: 60px 0 80px 0;
+  }
+
+  .pwat-sobre-produto .pwat-conteudo-sobre-produto h3 {
+    font-size: 1.2em;
+  }
+
+  .pwat-conteudo-sobre-produto p {
+    font-size: 1em;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+
+  .pwat-conteudo-sobre-produto .pwat-conteudo-2 .pwat-item-conteudo-2 p:last-child {
+    font-size: 1em;
+  }
+  /* END sobre-produto */
+
+  /* START avaliacoes-completo */
+  .pwat-avaliacoes-completo h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .pwat-avaliacoes-completo h2 span {
+    font-size: 3.8em;
+    margin-left: 126px;
+  }
+
+  .pwat-avaliacoes-total .pwat-estrela {
+    min-width: 120px;
+  }
+
+  .pwat-avaliacoes-total .pwat-estrela img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pwat-avaliacoes-total .pwat-porcentagem {
+    max-width: 250px;
+    min-width: 250px;
+    height: 12px;
+  }
+
+  .pwat-avaliacoes-total .pwat-porcentagem span {
+    height: 12px;
+  }
+
+  .pwat-estrelas-completo p {
+    font-size: 1em;
+  }
+  /* END avaliacoes-completo */
+
+  /* START que-achou */
+  .pwat-que-achou {
+    margin-top: 120px;
+  }
+
+  .pwat-que-achou h2 {
+    font-size: 2rem;
+    line-height: 1.8rem;
+    margin-bottom: 60px;
+  }
+
+  .pwat-que-achou h2 span {
+    font-size: 3.8em;
+    margin-left: 40px;
+  }
+
+  .pwat-que-achou .pwat-opiniao {
+    font-size: 1.4rem;
+  }
+
+  .pwat-que-achou .pwat-btns-opinioes {
+    padding: 0 100px;
+  }
+
+  .pwat-que-achou .pwat-btns-opinioes .pwat-btn-opinioes {
+    max-width: 300px;
+  }
+
+  .pwat-que-achou .pwat-btns-opinioes a {
+    font-size: 1em;
+  }
+  /* END que-achou */
+
+  /* START avaliacoes-clientes */
+  .pwat-avaliacoes-clientes .pwat-avaliacao-cliente h2 {
+    font-size: 1.4rem;
+    line-height: 24px;
+  }
+
+  .pwat-avaliacoes-clientes .pwat-avaliacao-cliente .pwat-estrelas-clientes {
+    margin-top: 10px;
+  }
+
+  .pwat-avaliacoes-clientes .pwat-avaliacao-cliente .pwat-estrelas-clientes img {
+    width: 22px;
+  }
+
+  .pwat-avaliacoes-clientes .pwat-avaliacao-cliente p {
+    font-size: 1em;
+    line-height: 24px;
+  }
+
+  .pwat-avaliacoes-clientes .pwat-avaliacao-cliente small {
+    font-size: 1em;
+    /* margin-top: 20px; */
+  }
+  /* END avaliacoes-clientes */
+
+  /* START beneficios */
+  .pwat-beneficios-detalhes-completo h2 {
+    font-size: 2em;
+    line-height: 24px;
+    margin-top: -60px;
+  }
+
+  .pwat-beneficios-detalhes-completo h2 span {
+    margin-left: 135px;
+  }
+
+  .pwat-beneficios-detalhes .pwat-img-icone p {
+    font-size: 1em;
+  }
+  /* END beneficios */
+
+  /* START quem-comprou */
+
+  .pwat-quem-comprou h2 {
+    font-size: 2em;
+  }
+
+  .pwat-quem-comprou h2 span:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .pwat-quem-comprou h2 span:nth-child(2) {
+    font-size: 7rem;
+  }
+  /* END quem-comprou */
+
+  /* START garantia */
+
+  .pwat-detalhes .pwat-produto-garantia-bg {
+    padding: 200px 0 100px 0;
+  }
+
+  .pwat-detalhes .pwat-coletores-garantia-bg .pwat-garantia-one {
+    font-size: 13rem;
+  }
+
+  .pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title h2 {
+    font-size: 7rem;
+  }
+
+  .pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title h2 span {
+    font-size: 7rem;
+  }
+
+  .pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-title-flex p {
+    font-size: 1.4rem;
+    margin-top: 30px;
+  }
+
+  .pwat-detalhes .pwat-coletores-garantia-bg .pwat-produto-garantia-info p {
+    font-size: 1.375em;
+  }
+  /* END garantia */
+}
+
+@media (min-width: 992px) {
+  /* START swiper detalhes */
+  .pwat-detalhes-iniciais h2 {
+    font-size: 1.5em;
+    margin-bottom: 6px;
+  }
+
+  .pwat-detalhes-iniciais small {
+    font-size: 1em;
+  }
+
+  .pwat-detalhes-iniciais .pwat-evaluation img {
+    width: 24px;
+  }
+
+  .pwat-detalhes-iniciais .pwat-price h3 {
+    font-size: 1.5em;
+  }
+
+  .pwat-detalhes-iniciais .pwat-price p {
+    font-size: 1em;
+  }
+
+  .pwat-detalhes-iniciais .pwat-frete p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #c587b5;
+  }
+  /* END swiper detalhes */
+
+  /* START sobre-produto */
+  .pwat-sobre-produto section h2 {
+    font-size: 10em;
+    margin-top: -100px;
+  }
+  .pwat-sobre-produto section h2 span {
+    font-size: 1.6rem;
+    margin-top: 0px;
+  }
+
+  .pwat-sobre-produto .pwat-conteudo-sobre-produto h3 {
+    font-size: 1.4em;
+  }
+
+  .pwat-conteudo-sobre-produto p {
+    font-size: 1.2em;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+
+  .pwat-conteudo-sobre-produto .pwat-conteudo-2 .pwat-item-conteudo-2 p:last-child {
+    font-size: 1.2em;
+  }
+  /* END sobre-produto */
+
+  /* START beneficios */
+  .pwat-beneficios-detalhes-completo h2 {
+    margin-top: -90px;
+  }
+  .pwat-beneficios-detalhes .pwat-img-icone p {
+    padding: 0 80px;
+  }
+  /* END beneficios */
+
+  .pwat-detalhes .pwat-coletores-saber-mais a {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pwat-detalhes-iniciais .pwat-btn-comprar {
+    width: 70%;
+  }
+
+  .pwat-detalhes-iniciais .pwat-frete .pwat-form-group .pwat-cep {
+    width: 30%;
+  }
+}
+
+
+.full-star{
+  background-image: pwa-url(icon-star-fill);
+}
+
+.empty-star{
+  background-image: pwa-url(icon-star-stroke);
+}
+
+.pwat-product-size .p4a-conf-bundle__option-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #c587b5;
+}
+
+#pwat-detalhes .pwat-product-size {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.p4a-conf-bundle__option-color--title {
+  font-size: 1em;
+  color: #da88b8;
+  font-weight: 600;
+  margin: unset;
+}
+
+.p4a-conf-bundle__option-input input {
+  appearance: none;
+}
+
+.pwat-product-size input {
+  display: none;
+}
+
+
+.p4a-conf-bundle__option-color label {
+  padding: 5px 15px;
+  background: #fed4ec;
+  border-radius: 6px;
+}
+
+.p4a-conf-bundle__option-color label[data-checked="true"] {
+  background: #da88b8;
+  transition: all .25s ease;
+}
+
+.p4a-conf-bundle__option-color label[data-checked="true"] div {
+  color: #fed4ec;
+}

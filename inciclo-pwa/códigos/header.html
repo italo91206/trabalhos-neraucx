@@ -1,0 +1,165 @@
+<header pwa-hook="in-header">
+
+  <pwa-cart open-on-add />
+  <div id="pwat-cart__darken"></div>
+
+  <div class="pwat-header-row-1">
+    <p class="pwat-text-center pwat-color-white" id="pre-header-progression">
+      Faltam <span>R$ 299,00</span>
+      para <span>frete grátis</span>
+    </p>
+  </div>
+
+  <div class="pwat-header-row-2 pwat-d-flex pwat-py-16 pwat-px-16 pwat-align-items-center pwat-justify-content-between">
+    <a class="pwat-icon-burguer" href="">
+      <img pwa-src="icon-menu-burguer" alt="Burguer" width="36">
+    </a>
+
+    <div class="pwat-header-logo">
+      <a pwa-to-page="/">
+        <img pwa-src="in-logo" alt="Logo" />
+      </a>
+    </div>
+
+    <nav
+      class="pwat-header-nav pwat-ml-16 pwat-align-items-center pwat-d-none pwat-d-xl-flex pwat-justify-content-between">
+
+      <ul class="pwat-header-nav-list pwat-d-flex">
+        <li>
+          <a class="pwat-btn-nossos-produtos">
+            Nossos Produtos
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.7 1.15L4.85 6L-2.12e-07 1.15L0.7 0.45L4.85 4.6L9 0.449999L9.7 1.15Z" fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li><a pwa-to-page="/kit-coletores">Kit Coletores</a></li>
+        <li><a pwa-to-page="/kit-disco-menstrual">Kits Disco Menstrual</a></li>
+        <li><a pwa-to-page="/promocoes">Promoções</a></li>
+      </ul>
+
+      <a pwa-to-search="" class="pwat-btn pwat-btn-orange pwat-btn-comprar-agr">
+        Compre Agora
+      </a>
+    </nav>
+
+    <div class="pwat-header-row-2-right pwat-d-flex pwat-align-items-center">
+      <div class="pwat-header-search">
+        <a>
+          <svg width=" 24" height="25" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M33.5376 30.2597L26.9164 23.445C26.6176 23.1374 26.2125 22.9665 25.7874 22.9665H24.7049C26.5379 20.5537 27.627 17.5188 27.627 14.2174C27.627 6.36364 21.4441 0 13.8135 0C6.18287 0 0 6.36364 0 14.2174C0 22.0711 6.18287 28.4347 13.8135 28.4347C17.0212 28.4347 19.9698 27.3137 22.3141 25.4272V26.5414C22.3141 26.9788 22.4802 27.3958 22.779 27.7033L29.4002 34.5181C30.0245 35.1606 31.0339 35.1606 31.6515 34.5181L33.531 32.5837C34.1552 31.9412 34.1552 30.9023 33.5376 30.2597ZM13.8135 22.9665C9.11825 22.9665 5.31289 19.0567 5.31289 14.2174C5.31289 9.38483 9.1116 5.46822 13.8135 5.46822C18.5088 5.46822 22.3141 9.37799 22.3141 14.2174C22.3141 19.0499 18.5154 22.9665 13.8135 22.9665Z"
+              fill="white" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="pwat-header-atendimento pwat-d-none pwat-d-xl-flex pwat-align-items-center">
+        <a class="pwat-d-flex pwat-align-items-center pwat-py-8 pwat-px-32">
+          <img pwa-src="icon-atendimento" alt="Atendimento" />
+          <p>Atendimento</p>
+        </a>
+      </div>
+
+      <div class="pwat-header-conta-carrinho pwat-d-flex pwat-align-items-center">
+        <div pwa-is-logged class="pwat-d-flex">
+          <a class="pwat-d-flex" pwa-to-account><img pwa-src="icon-account" alt="Conta" /></a>
+
+
+          <a class="pwat-sacola" pwa-toggle-cart><img pwa-src="icon-cart" alt="Sacola" />
+            <p pwa--if="$$cart.count > 0">{{ $$cart.count }}</p>
+          </a>
+        </div>
+
+        <div pwa-not-logged class="pwat-d-flex">
+          <a class="pwat-d-flex" pwa-to-auth><img pwa-src="icon-account" alt="Conta" /></a>
+          <a class="pwat-sacola" pwa-to-auth><img pwa-src="icon-cart" alt="Sacola" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pwat-menu-mobile pwat-absolute-menu">
+      <ul>
+        <li class="pwat-mb-16">
+          <a class="pwat-accordion-menu">
+            Nossos Produtos
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.7 1.15L4.85 6L-2.12e-07 1.15L0.7 0.45L4.85 4.6L9 0.449999L9.7 1.15Z" fill="white" />
+            </svg>
+          </a>
+          <div class="pwat-header-accordion">
+            <a class="pwat-item-menu" pwa-to-page="/coletor-menstrual">Coletor Menstrual
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/disco-menstrual">Disco
+              Menstrual<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/calcinha-absorvente">Calcinha
+              Absorvente<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/absorvente-reutilizavel">Absorvente
+              Reutilizável<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/linha-maternidade">Linha
+              Maternidade<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/cosmetico-vegano">Cosméticos
+              Veganos<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+          </div>
+        </li>
+        <li class="pwat-mb-16"><a pwa-to-page="/kit-coletores">Kits Coletores</a></li>
+        <li class="pwat-mb-16"><a pwa-to-page="/kit-disco-menstrual">Kit Disco Menstrual</a></li>
+        <li class="pwat-mb-16"><a pwa-to-page="/promocoes">Promoções</a></li>
+
+        <li class="pwat-mb-16 pwat-button-padding">
+          <a class="pwat-btn-atendimento-mobile pwat-py-8 pwat-px-32">
+            <img pwa-src="icon-atendimento" alt="Atendimento">
+            <p class="pwat-ml-16">Atendimento</p>
+          </a>
+        </li>
+
+        <li class="pwat-mb-16 pwat-button-padding">
+          <a pwa-to-search="" class="pwat-btn pwat-btn-orange pwat-btn-comprar-agr pwat-py-8 pwat-px-32">Compre
+            Agora</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pwat-hover-menu pwat-absolute-menu">
+    <div class="pwat-container-hover-menu">
+      <div class="pwat-left-hover">
+        <ul>
+          <li><a class="pwat-item-menu" pwa-to-page="/coletor-menstrual">Coletor Menstrual
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/disco-menstrual">Disco Menstrual
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/calcinha-absorvente">Calcinha Absorvente
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/absorvente-reutilizavel">Absorvente Reutilizável
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/linha-maternidade">Linha Maternidade
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/cosmetico-vegano">Cosméticos Veganos
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+          <li><a class="pwat-item-menu" pwa-to-page="/intera">Intera
+              <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
+        </ul>
+      </div>
+
+      <div class="pwat-right-hover">
+        <a pwa-to-search="coletores" class="pwat-item-menu">
+          <img class="pwat-img-fluid" pwa-src="banner-product-hover-menu" alt="Banner">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <pwa-search-form class="pwat-input-search pwat-absolute-menu">
+    <div class="pwat-search">
+      <div class=" pwat-d-flex pwat-align-items-center">
+        <input pwa-search-box type="text" placeholder="Pesquise no site">
+
+        <a>
+          <img pwa-src="icon-close-search" alt="Fechar pesquisa" width="36">
+        </a>
+      </div>
+    </div>
+  </pwa-search-form>
+</header>

@@ -1,0 +1,231 @@
+/************************\
+  START CARDS TOP
+\************************/
+
+.pwat-cards-top {
+    margin-top: 40px;
+  }
+  
+  /* START pwat-card (ALL Cards top) */
+  .pwat-card {
+    border-radius: 16px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .pwat-card img {
+    width: 100px;
+  }
+  
+  .pwat-card h2 {
+    font-size: 50px;
+    line-height: 20px;
+    color: var(--color-principal-bold);
+  }
+  
+  .pwat-card h2 span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-left: 30px;
+    color: var(--color-principal-light);
+  }
+  /* END pwat-card (ALL Cards top) */
+  
+  /* START pwat-card-1 */
+  .pwat-card-1 {
+    background: var(--color-principal-thin);
+  }
+  /* END pwat-card-1 */
+  
+  /* START pwat-card-2 */
+  .pwat-card-2 {
+    background: var(--color-principal-thin);
+  }
+  
+  .pwat-card-2 h2 span {
+    color: var(--color-principal-thin-2);
+  }
+  /* END pwat-card-2 */
+  
+  /* START pwat-card-3 */
+  .pwat-card-3 {
+    background: #f1b6e4;
+  }
+  /* END pwat-card-3 */
+  
+  /************************\
+    END CARDS TOP
+  \************************/
+  
+  /************************\
+      START PRODUCTS
+    \************************/
+  .pwat-produdcts {
+    margin-top: 40px;
+    margin-bottom: 200px;
+  }
+  
+  /* START Filters */
+  .pwat-filters {
+    border: 1px solid var(--color-principal-medium);
+    border-radius: 15px;
+    padding: 20px 30px;
+  }
+  
+  .pwat-filters h2 {
+    font-size: 1.25em;
+    line-height: 20px;
+  }
+  
+  .pwat-filters ul li {
+    margin-bottom: 10px;
+  }
+  
+  .pwat-filters ul li a {
+    font-size: 1.25em;
+    color: var(--color-principal-medium);
+  }
+  
+  .pwat-filters ul li a:hover {
+    color: var(--color-principal-bold);
+  }
+  
+  .pwat-color-filter {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+  }
+  
+  .pwat-color-filter li a img {
+    border: 2px solid #ffffff;
+    width: 40px;
+    box-shadow: 0px 4px 15px #bbc4ce;
+  }
+  
+  /* END Filters */
+  
+  .pwat-results-products h2 {
+    font-size: 1.25em;
+    line-height: 20px;
+  }
+  
+  .pwat-results-products select {
+    border-color: var(--color-gray-bold);
+  }
+  
+  
+  .pwat-card-produto {
+    margin-top: 0;
+  }
+  /************************\
+      END PRODUCTS
+  \************************/
+  
+  
+  
+  /* MEDIA QUERIES */
+  @media (min-width: 576px) {
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    /* START pwat-card (ALL Cards top) */
+    .pwat-card {
+      height: 120px;
+    }
+  
+    .pwat-card img {
+      width: 140px;
+    }
+  
+    .pwat-card h2 {
+      font-size: 3.125em;
+      line-height: 20px;
+    }
+  
+    .pwat-card h2 span {
+      font-size: 16px;
+      margin-left: 30px;
+    }
+    /* END pwat-card (ALL Cards top) */
+  }
+  @media (min-width: 1242px) {
+    /************************\
+      START CARDS TOP
+    \************************/
+  
+    /* START pwat-card (ALL Cards top) */
+    .pwat-card img {
+      width: 170px;
+    }
+  
+    .pwat-card h2 {
+      font-size: 4.375em;
+      line-height: 30px;
+    }
+  
+    .pwat-card h2 span {
+      font-size: 22px;
+    }
+    /* END pwat-card (ALL Cards top) */
+  
+    /************************\
+      END CARDS TOP
+    \************************/
+  }
+  
+.pwat-size-filters input,
+.pwat-category-filter input,
+.pwat-color-filter input {
+    display: none;
+}
+
+.pwat-filters label {
+    font-size: 1.25em;
+    color: var(--color-principal-medium);
+    cursor: pointer;
+}
+
+.pwat-filter-li:hover label {
+    text-decoration: underline;
+}
+
+.pwat-filter-li.checked label {
+    color: #8d1c81;
+    text-decoration: underline;
+}
+
+.pwat-color-filter .checked label {
+    transition: all .25s ease;
+    transform: scale(1.2);
+}
+
+.pwat-color-filter label {
+    width: 40px;
+    height: 40px;
+    display: block;
+    content: '';
+    color: #fff0;
+    box-shadow: 0px 4px 15px #bbc4ce;
+    border: 2px solid #ffffff;
+}
+
+.pwat-color-filter label.Vermelho {
+    background: #c8363a;
+}
+
+.pwat-color-filter label.Rosa {
+    background: #fa92d6;
+}
+
+.pwat-color-filter label.Laranja {
+    background: rgb(244, 131, 55);
+}
+
+.pwat-color-filter label.Preto {
+    background: rgb(56 56 56);
+}
+
+.pwat-filter-li {
+    cursor: pointer;
+}

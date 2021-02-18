@@ -13,7 +13,8 @@ import config from './scripts/config.json';
 import * as VueGoogleMaps from "vue2-google-maps";
 Vue.use(VueGoogleMaps, {
   load: {
-    // hidden
+    key: "AIzaSyA9EFGoipjVx7QOsML-cQNhYZLNkRapoJc",
+    libraries: "places" // necessary for places input
   }
 });
 

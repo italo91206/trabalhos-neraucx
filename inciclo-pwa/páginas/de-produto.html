@@ -1,0 +1,604 @@
+<main class="pwat-detalhes">
+  <!-- START Swiper Detalhes -->
+  <div class="pwat-container">
+    <div class="pwat-row">
+      <!-- slide de imagens do produto -->
+      <div class="pwat-col-12 pwat-col-md-6 pwat-swiper-detalhes-completo">
+        <!-- <img pwa--if="!product.image" pwa-src="nao-disponivel" pwa-alt="product.name" /> -->
+        
+        <div class="swiper-container pwat-swiper-detalhes" id="product-page-slide" pwa-hook="product-page-slide">
+          <div class="swiper-wrapper">
+            <div pwa-each-image class="swiper-slide">
+              <img pwa-src="image" pwa-alt="product.name" />
+            </div>
+          </div>
+        </div>
+
+        <div id="product-page-slide-pagination" class="swiper-pagination pwat-paginacao-detalhes"></div>
+
+        <div id="product-page-slide-prev" class="swiper-button-prev"></div>
+        <div id="product-page-slide-next" class="swiper-button-next"></div>
+      </div>      
+
+      <!-- START Detalhes Iniciais -->
+      <div class="pwat-col-12 pwat-col-md-6 pwat-detalhes-iniciais">
+        <section>
+          <h2>{{ product.name }}</h2>
+          <small>cód. {{ product.sku }}</small>
+          
+          <div id="product-start-avaliation" class="pwat-evaluation">
+            <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+            <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+            <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+            <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+            <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+          </div>
+
+          <div class="pwat-price">
+            <h3>{{ product.promotional_price | price }}</h3>
+            <p>3x {{ product.promotional_price/3 | price }}</p>
+          </div>
+
+          <div class="pwat-product-size" pwa--if="product.variation_bundle[0]">
+            <pwa-product-configurations-bundle firsts-selected always-list attribute="variation_bundle">
+            </pwa-product-configurations-bundle>
+          </div>
+
+          <product-kit ref="kit" @on-update="__configurationsKitOnUpdate" :product="product" :quantity="productQuantity" attribute="upsell" all-required  id="kit-colletion">
+            <template v-slot:default="component">
+              <div v-if="component.list.length > 0">
+                <div v-for="kit in component.list" :key="kit.product_id" class="produto-kit" style="padding: 15px 5px; border: 1px solid black">
+                  <strong class="product-kit-name">{{ kit.name }}</strong>
+                  
+                  <product-configurations-bundle ref="bundles" attribute="variation_bundle" @on-update="component.capture" :sku="activeSKU" :product="kit">
+                    <template class="ff-input-text" v-slot:default="component"> </template>
+                  </product-configurations-bundle>
+                </div>
+              </div>
+            </template>
+          </product-kit>
+
+          <button pwa-add-in-cart class="pwat-btn pwat-btn-comprar">comprar</button>
+
+          <div class="pwat-frete">
+            <p>calcule o valor do frete</p>
+            
+            <form action="">
+              <div class="pwat-form-group">
+                <input pwa-freight-box class="pwat-cep" type="text" placeholder="digite seu cep">
+                <button pwa-freight-submit  class="pwat-btn pwat-btn-cep">&gt;</button>
+              </div>
+            </form>
+
+            <div class="pwat-frete-box">
+              <p pwa-each-freight>
+                {{ freight.title }}:
+                <span pwa--if="freight.price > 0"> {{ freight.price | price }}</span>
+                <span pwa--else> Grátis</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- sobre o produto -->
+  <div class="pwat-col-0 pwat-sobre-produto pwat-mt-32">
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-sobre-produto-top">
+    </div>
+
+    <section>
+      <div class="pwat-container">
+        <h2 class="pwat-baginda">
+          sobre
+          <span>{{ product.name }}</span>
+        </h2>
+      </div>
+
+      <div class="pwat-conteudo-sobre-produto">
+        <div class="pwat-container">
+          <div pwa--html="product.description"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-sobre-produto-bottom">
+    </div>
+  </div>
+
+  <!-- Beneficios pra categoria Coletor Menstrual-->
+  <div 
+    pwa--if="product.categories.some(item => item.name === 'Coletor Menstrual')" 
+    class="pwat-col-0 pwat-beneficios-detalhes-completo" pwa-hook="get-product-reviews">
+
+    <section>
+      <div class="pwat-beneficios-detalhes ">
+        <div class="pwat-container pwat-d-flex pwat-justify-content-sm-center">
+          <h2>conheça os<span class="pwat-baginda"> benefícios</span>
+          </h2>
+        </div>
+
+        <div class="pwat-container">
+          <div class="pwat-row">
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-intensidades" alt="intensidades">
+              <h3 class="pwat-lulo">para todas as
+                <span>intensidades de luxo</span>
+              </h3>
+            </div>
+
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-silicone" alt="silicone">
+              <h3 class="pwat-lulo">100% silicone
+                <span>hipoalergênico</span>
+              </h3>
+            </div>
+
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-sustentavel" alt="sustentavel">
+              <h3 class="pwat-lulo">sustentável
+                <span>e econômico</span>
+              </h3>
+            </div>
+
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-pratico" alt="pratico">
+              <h3 class="pwat-lulo">prático e
+                <span>confortável</span>
+              </h3>
+            </div>
+
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-horas" alt="horas">
+              <h3 class="pwat-lulo">12 horas
+                <span>de proteção</span>
+              </h3>
+            </div>
+
+            <div class="pwat-img-icone pwat-col-12 pwat-col-md-6">
+              <img pwa-src="icon-beneficio-reultilizar" alt="horas">
+              <h3 class="pwat-lulo">Reutilizável
+                <span>por até 3 anos</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Benefícios pra categoria Calcinhas -->
+  <div
+    pwa--if="
+      product.categories.some(item => item.name === 'Calcinhas') ||
+      product.categories.some(item => item.name === 'Absorventes')
+    " 
+    class="pwat-absorvente-beneficios-wrapper" style="position: relative; z-index: 5;">
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-absorvente-beneficios-top">
+    </div>
+
+    <section class="pwat-absorvente-beneficios">
+        <h2 class="pwat-section-subtitle">conheça os<span class="pwat-baginda">benefícios</span>
+        </h2>
+
+        <div class="pwat-container pwat-beneficios-wrapper pwat-d-flex pwat-flex-wrap">
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-fininhas" alt="fininha"/></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">fininhas <span>e discretas</span></h3>
+          </article>
+
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-ncontem" alt="não contem camadas plasticas" /></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">não contém<span>camadas plásticas</span></h3>
+          </article>
+
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-altopoder" alt="alto poder" /></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">alto poder <span>de absorção</span></h3>
+          </article>
+
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-tecidos" alt="tecidos respiraveis" /></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">tecidos <span>respiráveis</span></h3>
+          </article>
+
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-reutilizaveis" alt="reutilizáveis" /></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">reutilizáveis <span>por até dois anos</span></h3>
+          </article>
+
+          <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+            <div class="pwat-beneficio-img"><img pwa-src="calcinhas-sustentavel" alt="sustentavel" /></div>
+            <h3 class="pwat-beneficio-title pwat-text-center">sustentável <span>e econômico</span></h3>
+          </article>
+        </div>
+
+        <div class="pwat-row pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-mt-24">
+          <a pwa-to-page="/calcinhas" class="pwat-btn pwat-btn-orange pwat-py-16 pwat-px-64">
+            comprar
+          </a>
+        </div>
+
+    </section>
+  </div>
+
+  <!-- Benefícios pra categoria Cosméticos Veganos -->
+  <div 
+    pwa--if="product.categories.some(item => item.name === 'Cosmético Vegano')"
+    class="pwat-cosmeticos-beneficios-wrapper" style="position: relative; z-index: 2;">
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-cosmeticos-beneficios-top">
+    </div>
+
+    <section class="pwat-cosmeticos-beneficios">
+        <h2 class="pwat-section-subtitle">conheça os<span class="pwat-baginda">benefícios</span>
+        </h2>
+
+        <div class="pwat-container pwat-beneficios-wrapper pwat-d-flex pwat-flex-wrap">
+            <article
+                class="pwat-col-12 pwat-col-sm-6 pwat-col-lg-3 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+                <div class="pwat-beneficio-img">
+                    <img pwa-src="relogio-red" alt="longa duração" />
+                </div>
+                <h3 class="pwat-beneficio-title pwat-text-center">longa <span>duração</span></h3>
+            </article>
+
+            <article
+                class="pwat-col-12 pwat-col-sm-6 pwat-col-lg-3 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+                <div class="pwat-beneficio-img">
+                    <img pwa-src="boca-red" alt="efeito matte" />
+                </div>
+                <h3 class="pwat-beneficio-title pwat-text-center">efeito<span>matte</span>
+                </h3>
+            </article>
+
+            <article
+                class="pwat-col-12 pwat-col-sm-6 pwat-col-lg-3  pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+                <div class="pwat-beneficio-img">
+                    <img pwa-src="coelho-red" alt="vegano e cruelty free" />
+                </div>
+                <h3 class="pwat-beneficio-title pwat-text-center">vegano e <span>livre de crueldade</span></h3>
+            </article>
+
+            <article
+                class="pwat-col-12 pwat-col-sm-6 pwat-col-lg-3 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+                <div class="pwat-beneficio-img">
+                    <img pwa-src="brasil-red" alt="feito no brasil" />
+                </div>
+                <h3 class="pwat-beneficio-title pwat-text-center">feito <span>no brasil</span></h3>
+            </article>
+        </div>
+    </section>
+
+    <div class="pwat-bg-top-bottom">
+        <img pwa-src="bg-cosmeticos-beneficios-bottom">
+    </div>
+  </div>
+
+  <!-- Benefícios pra categoria Disco Menstrual -->
+  <section 
+    pwa--if="product.categories.some(item => item.name === 'Disco Menstrual')"
+    class="pwat-disco-beneficios">
+    <h2 class="pwat-section-subtitle">conheça os<span class="pwat-baginda">benefícios</span>
+    </h2>
+
+    <div class="pwat-container pwat-beneficios-wrapper pwat-d-flex pwat-flex-wrap">
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-sembagunca" alt="sexo sem bagunça" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">sexo sem <span>bagunça</span></h3>
+      </article>
+
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-tamanhounico" alt="tamanho único" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">tamanho único <span>para todos os fluxos</span></h3>
+      </article>
+
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-12horas" alt="12 horas" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">12 horas <span>de proteção</span></h3>
+      </article>
+
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-reutilizavel" alt="reutilizável" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">reutilizável <span>por até 3 anos</span></h3>
+      </article>
+
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-silicone" alt="silicone" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">100% silicone <span>hipoalergênico</span></h3>
+      </article>
+
+      <article class=" pwat-col-6 pwat-col-lg-4 pwat-beneficio pwat-d-flex pwat-flex-column pwat-justify-content-start pwat-align-items-center">
+        <div class="pwat-beneficio-img"><img pwa-src="disco-sustentavel" alt="sustentavel" /></div>
+        <h3 class="pwat-beneficio-title pwat-text-center">sustentável <span>e econômico</span></h3>
+      </article>
+    </div>
+
+    <div class="pwat-btns-calcinhas pwat-d-flex pwat-col-12 pwat-justify-content-center pwat-mt-32">
+      <a pwa-to-page="/disco-menstrual" class="pwat-btn pwat-btn-orange pwat-py-16 pwat-px-32">
+        comprar
+      </a>
+    </div>
+
+  </section>
+
+  <!-- START avaliacoes-completo -->
+  <div class="pwat-col-0 pwat-avaliacoes-completo">
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-beneficios-top">
+    </div>
+
+    <div class="pwat-avaliacoes-bg">
+      <section
+        class="pwat-container pwat-d-md-flex pwat-align-items-center pwat-justify-content-center pwat-flex-column">
+        <h2>
+          confira nossas
+          <span class="pwat-baginda">avaliações</span>
+        </h2>
+
+        <!-- Mude a porcentagem na classe pwat-*numero* para alterar o design  -->
+        <!-- START 5 Estrelas -->
+        <div class="pwat-cinco pwat-avaliacoes-total">
+          <div class="pwat-estrelas-completo">
+            <div class="pwat-estrela">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+            </div>
+
+            <div class="pwat-porcentagem"><span></span></div>
+            <p>(468)</p>
+          </div>
+        </div>
+        <!-- END 5 Estrelas -->
+
+        <!-- START 4 Estrelas -->
+        <div class="pwat-quatro pwat-avaliacoes-total pwat-mt-16">
+          <div class="pwat-estrelas-completo">
+            <div class="pwat-estrela">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+            </div>
+
+            <div class="pwat-porcentagem"><span></span></div>
+            <p>(288)</p>
+          </div>
+        </div>
+        <!-- END 4 Estrelas -->
+
+        <!-- START 3 Estrelas -->
+        <div class="pwat-tres pwat-avaliacoes-total pwat-mt-16">
+          <div class="pwat-estrelas-completo">
+            <div class="pwat-estrela">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+            </div>
+
+            <div class="pwat-porcentagem"><span></span></div>
+            <p>(78)</p>
+          </div>
+        </div>
+        <!-- END 3 Estrelas -->
+
+        <!-- START 2 Estrelas -->
+        <div class="pwat-dois pwat-avaliacoes-total pwat-mt-16">
+          <div class="pwat-estrelas-completo">
+            <div class="pwat-estrela">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+            </div>
+
+            <div class="pwat-porcentagem"><span></span></div>
+            <p>(8)</p>
+          </div>
+        </div>
+        <!-- END 2 Estrelas -->
+
+        <!-- START 1 Estrelas -->
+        <div class="pwat-um pwat-avaliacoes-total pwat-mt-16">
+          <div class="pwat-estrelas-completo">
+            <div class="pwat-estrela">
+              <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+              <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+            </div>
+
+            <div class="pwat-porcentagem"><span></span></div>
+            <p>(8)</p>
+          </div>
+        </div>
+        <!-- END 1 Estrelas -->
+
+      </section>
+    </div>
+  </div>
+
+  <!-- Sobre o produto -->
+  <!-- <div class="pwat-col-0 pwat-que-achou">
+      <section class="pwat-container">
+        <h2>
+          o que
+          <span class="pwat-baginda">achou?</span>
+        </h2>
+        <p class="pwat-opiniao">Dê a sua opinião!</p>
+
+        <div class="pwat-btns-opinioes">
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes pwat-mb-16">
+            <a class="pwat-btn" href="">
+              confortável
+              <p>(98)</p>
+            </a>
+          </div>
+
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes pwat-mb-16">
+            <a class="pwat-btn" href="">
+              discreto
+              <p>(32)</p>
+            </a>
+          </div>
+
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes pwat-mb-16">
+            <a class="pwat-btn" href="">
+              moderno
+              <p>(234)</p>
+            </a>
+          </div>
+
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes pwat-mb-16">
+            <a class="pwat-btn" href="">
+              jovem
+              <p>(12)</p>
+            </a>
+          </div>
+
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes">
+            <a class="pwat-btn" href="">
+              básico
+              <p>(7)</p>
+            </a>
+          </div>
+
+          <div class="pwat-d-flex pwat-flex-column pwat-align-items-center pwat-btn-opinioes">
+            <a class="pwat-btn" href="">
+              básico
+              <p>(423)</p>
+            </a>
+          </div>
+        </div>
+
+      </section>
+    </div> -->
+
+  <!-- Avaliações de cliente -->
+  <div class="pwat-avaliacoes-bg">
+    <div class="pwat-col-0 pwat-avaliacoes-clientes">
+      <section class="pwat-container pwat-avaliacao-cliente">
+        <h2>Thais</h2>
+        <div class="pwat-estrelas-clientes">
+          <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+          <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+          <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+          <img pwa-src="icon-star-fill" alt="Icon Star Fill">
+          <img pwa-src="icon-star-stroke" alt="Icon Star Stroke">
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.</p>
+        <small>24 horas atrás</small>
+      </section>
+    </div>
+
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-beneficios-bottom">
+    </div>
+  </div>
+
+  <!-- Sobre a garantia, mas somente para discos e coletores -->
+  <div class="pwat-produto-garantia-bg pwat-coletores-garantia-bg" pwa--if="product.categories.some(item => item.name === 'Coletor Menstrual')">
+    <div class="pwat-container">
+      <section class="pwat-produto-garantia">
+        <div  class="pwat-produto-garantia-title-wrapper pwat-d-flex pwat-flex-lg-row pwat-flex-column pwat-align-items-center pwat-justify-content-center">
+          <img  class="pwat-img-fluid pwat-img-testar-detalhes" pwa-src="coletores-garantia-img" alt="coletores menstruais">
+          
+          <div class="pwat-produto-garantia-title pwat-d-flex pwat-align-items-center">
+            <p class="pwat-garantia-one">1</p>
+            <div class="pwat-produto-garantia-title-flex">
+              <h2> ano <span class="pwat-baginda">para testar</span></h2>
+              <p>ou seu dinheiro de volta</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="pwat-produto-garantia-info pwat-mt-64 pwat-d-flex pwat-flex-column pwat-justify-content-center pwat-align-items-center">
+          <p>Só a Inciclo te dá <span>um ano para testar</span> seu disco
+            menstrual e, caso não se apaixone, devolve seu dinheiro!</p>
+          <p>Temos certeza que você irá amar o Lovin, o que
+            nos dá confiança para oferecer uma garantia que nenhuma
+            outra marca no mundo possui.</p>
+
+          <a href="#" class="pwat-btn pwat-btn-orange pwat-py-16 pwat-mt-32">
+            Ver o regulamento
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <div>
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-um-ano-detalhes-bottom">
+    </div>
+  </div>
+
+  <!-- Slide do quem comprou, levou também -->
+  <div class="pwat-container-fluid ">
+    <div class="pwat-row">
+      <section class="pwat-col-12 pwat-d-flex pwat-justify-content-center pwat-quem-comprou">
+        <h2>quem viu,
+          <div class="pwat-d-flex pwat-align-items-start pwat-ml-16 pwat-mt-8 pwat-mt-md-16">
+            <span>comprou</span>
+            <span class="pwat-baginda">também</span>
+          </div>
+        </h2>
+      </section>
+
+      <div class="pwat-container-fluid pwat-no-padding ">
+        <pwa-product-list name="product-kits" id="pwat-swiper-kits-de-produto-slide" class="swiper-container pwat-col-12 pwat-col-md-12 pwat-mx-auto ">
+          <div class="swiper-wrapper">
+            <section pwa-each-product class="swiper-slide pwat-d-flex pwat-flex-column pwat-align-items-center pwat-text-center">
+              <pwa-product-card>
+            </section>
+          </div>
+
+          <div class="swiper-pagination pwat-estilo-bullets pwat-paginacao-quem-comprou"></div>
+        </pwa-product-list>
+
+        <div class="pwat-estilo-paginacao">
+          <div id="pwat-swiper-kits-de-produto-prev" class="swiper-button-prev"><img pwa-src="arrow-left"/></div>
+          <div id="pwat-swiper-kits-de-produto-next" class="swiper-button-next"><img pwa-src="arrow-right"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quer saber mais? Veja aqui -->
+  <div class="pwat-coletores-saber-mais-wrapper pwat-detalhes-saber-mais">
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-saber-mais-top">
+    </div>
+
+    <section class="pwat-coletores-saber-mais pwat-d-flex pwat-flex-column pwat-align-items-center pwat-px-32">
+      <h2 class="pwat-text-center">quer saber <span class="pwat-baginda">mais ?</span></h2>
+      <a href="#" class="pwat-btn pwat-btn-purple-bold pwat-py-16 pwat-px-64">veja aqui</a>
+    </section>
+
+    <div>
+      <div class="pwat-bg-top-bottom">
+        <img pwa-src="bg-saber-mais-detalhes">
+      </div>
+    </div>
+  </div>
+</main>

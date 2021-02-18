@@ -72,12 +72,16 @@ Vue.prototype.urlApi = 'https://api.lukadigital.desenvolvendo.site/';
 Vue.prototype.validForm = new ValidaForm();
 Vue.prototype.consomeJSON = new consomeJSON();
 Vue.prototype.logado = true;
-Vue.prototype.keyUser // hidden;
+Vue.prototype.keyUser = 'XBGE3FEFGIGEE';
 Vue.prototype.userData = '';
 Vue.prototype.mainAxios = axios.create({
 	baseURL: 'https://api.lukadigital.desenvolvendo.site/',
 	headers:	{
-		// hidden
+		'Accept': 'application/json',
+		'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+		'User-Email': 'anderson@av5.com.br',
+		'Api-Token': '1a2b3c4d5e',
+		'YW5kZXJzb25AYXY1LmNvbS5icjoxYTJiM2M0ZDVl': 'token'
 	}
 });
 Vue.prototype.update_dataUser = function () {

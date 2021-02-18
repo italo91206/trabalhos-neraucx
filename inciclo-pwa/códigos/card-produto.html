@@ -1,0 +1,56 @@
+<section class="pwat-card-produto">
+  <div class="pwat-card-produto-novo-promo pwat-d-flex">
+    <div class="pwat-card-produto-novo" pwa--if="product.categories.some(item => item.name === 'Promoções')">
+      <p class="pwat-baginda">novo</p>
+    </div>
+
+    <div class="pwat-card-produto-promo">
+      <p pwa--if="product.price > 0 && product.price != product.promotional_price" >
+        {{ Math.round((product.price - product.promotional_price)/product.price*100) }}% OFF
+      </p>
+    </div>
+  </div>
+
+  <div class="pwat-card-produto-image">
+   <img pwa--if="product.image" pwa-src="product.image" pwa-to-product-page pwa-alt="product.name" />
+    <img pwa--else pwa-src="nao-disponivel" pwa-to-product-page pwa-alt="product.name" />
+  </div>
+  ​
+  <div class="pwat-card-produto-info">
+    <h2 class="pwat-card-produto-name">{{ product.name.length > 30 ? product.name.substr(0, 30) + '...' : product.name }}</h2>
+    ​
+    <div class="pwat-card-produto-promo-preco pwat-d-flex pwat-justify-content-center pwat-pt-24 pwat-pb-8">
+      <p pwa--if="product.price > 0 && product.price != product.promotional_price" class="pwat-card-produto-preco">{{ product.price | price }}</p>
+      <p class="pwat-card-produto-preco-with-promo">{{ product.promotional_price | price }}</p>
+    </div>
+    ​
+    <p class="pwat-card-produto-parcelas pwat-text-center">
+      3x de {{ product.promotional_price/3 | price }}
+    </p>
+    ​
+    <div class="pwat-product-size" pwa--if="product.variation_bundle[0]">
+      <a class="pwat-btn pwat-btn-escolha pwat-btn-kit-1 pwat-d-flex pwat-justify-content-between pwat-align-items-center pwat-accordion-size"
+        href="#" pwa-hook="accordion-size">
+        <span>Escolha um tamanho</span>
+        <img pwa-src="arrow-down" alt="">
+      </a>
+      
+      <ul>
+        <li v-for="(value, index) in product.variation_bundle[0].values">
+          <label class="pwat-label-kit" for="kit-1-1">
+            <input type="radio" name="kit-1" id="kit-1-1">
+            <label class="pwat-label-input" for="kit-1-1"></label>
+            <div class="pwat-right-size">
+              <a pwa-to-product-page class="pwat-p-kit-1-1">Inciclo {{ value.title }}</a>
+              <!-- <small>Mais de 30 anos e/ou com filhos</small> -->
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+    ​
+    <a pwa-add-in-cart class="pwat-btn pwat-btn-orange pwat-btn-comprar-produto">
+      comprar
+    </a>
+  </div>
+</section>

@@ -1,0 +1,145 @@
+<main class="pwat-listagem" pwa-hook="prepara-filtros">
+  <div class="pwat-container-fluid">
+    <!-- INICIO pwat-cards-top -->
+    <div class="pwat-row pwat-cards-top">
+
+     <!-- Coletores Menstruais Card -->
+      <div class="pwat-col-12 pwat-col-lg-4">
+        <a pwa-to-page="/coletores-menstruais" class="pwat-card-1 pwat-card pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-px-md-8 pwat-px-xl-24">
+          <img pwa-src="coletores-menstruais-2" alt="Coletores Menstruais">
+          <section class="pwat-ml-16">
+            <h2 class="pwat-baginda pawt-p-0 pawt-m-0">
+              coletores
+              <br>
+              <span class="pawt-p-0 pawt-m-0">menstruais</span>
+            </h2>
+          </section>
+        </a>
+      </div>
+
+      <!-- Calcinhas Menstruais Card -->
+      <div class="pwat-col-12 pwat-col-lg-4">
+        <a pwa-to-page="/calcinhas-menstruais" class="pwat-card-2 pwat-card pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-px-md-8 pwat-px-xl-24">
+          <img pwa-src="calcinhas-menstruais" alt="Calcinhas Menstruais">
+          <section class="pwat-ml-16">
+            <h2 class="pwat-baginda pawt-p-0 pawt-m-0">
+              calcinhas
+              <br>
+              <span class="pawt-p-0 pawt-m-0">menstruais</span>
+            </h2>
+          </section>
+        </a>
+      </div>
+
+      <!-- Discos Menstruais Card -->
+      <div class="pwat-col-12 pwat-col-lg-4">
+        <a pwa-to-page="/discos-menstruais" class="pwat-card-2 pwat-card pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-px-md-8 pwat-px-xl-24">
+          <img pwa-src="discos-menstruais" alt="Discos Menstruais">
+          <section class="pwat-ml-16">
+            <h2 class="pwat-baginda pawt-p-0 pawt-m-0">
+              discos
+              <br>
+              <span class="pawt-p-0 pawt-m-0">menstruais</span>
+            </h2>
+          </section>
+        </a>
+      </div>
+    </div>
+
+    <!-- Container dos produtos + filtros -->
+    <section class="pwat-row pwat-produdcts">
+      <!-- Coluna dos filtros -->
+      <div class="pwat-col-12 pwat-col-lg-3">
+        <div>
+          <a pwa-to-page="/">
+            <p class="pwat-mb-32 pwat-color-principal">Home</p>
+          </a>
+        </div>
+
+        <!-- Filtro ativos -->
+        <section class="pwat-filters pwat-mb-24">
+          <pwa-tags-filter>
+            <h2 class="pwat-color-principal pwat-text-bold pwat-mb-16">Filtros selecionados</h2>
+            <ul pwa-has-filters class="pwat-category-filter">
+              <li pwa-each-filter class="pwat-filter-li flex">
+                <a pwa-remove-filter="click"><span class="fa fa-times"></span></a>
+                <div>{{ filter.value }}</div>
+              </li>
+            </ul>
+          </pwa-tags-filter>
+        </section>
+
+        <!-- Filtro de categorias -->
+        <section class="pwat-filters pwat-mb-24">
+          <pwa-attribute-filter attribute="categories.name" static multiple>
+            <h2 class="pwat-color-principal pwat-text-bold pwat-mb-16">Categorias</h2>
+            <ul class="pwat-category-filter" pwa-has-filters>
+              <li pwa-each-filter class="pwat-filter-li">
+                <input pwa-filter-input="checked" type="checkbox">
+                <label>{{ filter.label }}</label>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+        </section>
+
+        <!-- Filtro de Cor -->
+        <section class="pwat-filters pwat-mb-24">
+          <pwa-attribute-filter attribute="cor" static multiple>
+            <h2 class="pwat-color-principal pwat-text-bold pwat-mb-16">Filtrar por Cor</h2>
+
+            <ul pwa-has-filters class="pwat-color-filter">
+              <li pwa-each-filter class="pwat-filter-li">
+                <input pwa-filter-input="checked" type="checkbox">
+                <label pwa-class="filter.label"></label>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+        </section>
+
+        <!-- Filtro de Tamanho -->
+        <section class="pwat-filters">
+          <pwa-attribute-filter attribute="tamanho" static multiple>
+            <h2 class="pwat-color-principal pwat-text-bold pwat-mb-16">Filtrar por Tamanho</h2>
+            <ul pwa-has-filters class="pwat-size-filters">
+              <li pwa-each-filter class="pwat-filter-li">
+                <input pwa-filter-input="checked" type="checkbox">
+                <label>{{ filter.label }} ({{filter.count}})</label>
+              </li>
+            </ul>
+          </pwa-attribute-filter>
+        </section>
+      </div>
+
+      <!-- Coluna dos produtos -->
+      <section class="pwat-col-12 pwat-col-lg-9">
+        <div class="pwat-row">
+          <div class="pwat-col-12">
+            <section class="pwat-results-products pwat-mb-32">
+              <div class="pwat-d-flex pwat-justify-content-between pwat-align-items-center">
+                <h2 class="pwat-text-bold pwat-color-principal">Resultado da Busca</h2>
+                
+                <!-- Filtro por tamanho/recente/lançamento -->
+                <pwa-manual-filter class="">
+                  <label for="pwat-escolha-aqui">Ordenar por:</label>
+                  <select pwa-filter-input name="filter" class="pwat-py-8 pwat-pr-32 pwat-pl-4" name="pwat-escolhaaqui" id="pwat-escolha-aqui">
+                    <option value="name:+">Nome</option>
+                    <option value="product_id:-">Lançamentos</option>
+                    <option value="promotional_price:+">Maior preço</option>
+                    <option value="promotional_price:-">Menor preço</option>
+                  </select>
+                </pwa-manual-filter>
+              </div>
+            </section>
+          </div>
+          
+          <!-- listagem dos produtos -->
+          <pwa-result-list size="32" automatic-scrolls="1" class="pwat-card-wrapper pwat-d-flex pwat-flex-wrap w100">
+            <div pwa-each-product class="pwat-col-sm-6 pwat-col-xl-4" style="margin-bottom: 30px;">
+              <pwa-product-card>
+            </div>
+          </pwa-result-list>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>

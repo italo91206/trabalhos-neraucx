@@ -1,0 +1,2 @@
+Elastic velho: https://elastic:zzmcbpXkH0z7Evf9NAXvL1sG@5678f286f50f434abd73373ca220a9ba.sa-east-1.aws.found.io:9243/
+Elastic novo: https://elastic:wLToNW5FQZzEgEmGpfnQVDEx@6ed83e5eaca648e995c321cbb4cc7bf6.us-east-1.aws.found.io:9243/
