@@ -12,12 +12,12 @@
               <img pwa-src="image" pwa-alt="product.name" />
             </div>
           </div>
+
+          <div id="product-page-slide-prev" class="swiper-button-prev"></div>
+          <div id="product-page-slide-next" class="swiper-button-next"></div>
         </div>
 
-        <div id="product-page-slide-pagination" class="swiper-pagination pwat-paginacao-detalhes"></div>
-
-        <div id="product-page-slide-prev" class="swiper-button-prev"></div>
-        <div id="product-page-slide-next" class="swiper-button-next"></div>
+        <div id="product-page-slide-pagination" class="swiper-pagination pwat-paginacao-detalhes pwat-estilo-bullets"></div>
       </div>      
 
       <!-- START Detalhes Iniciais -->
@@ -44,20 +44,26 @@
             </pwa-product-configurations-bundle>
           </div>
 
-          <product-kit ref="kit" @on-update="__configurationsKitOnUpdate" :product="product" :quantity="productQuantity" attribute="upsell" all-required  id="kit-colletion">
-            <template v-slot:default="component">
-              <div v-if="component.list.length > 0">
-                <div v-for="kit in component.list" :key="kit.product_id" class="produto-kit" style="padding: 15px 5px; border: 1px solid black">
-                  <strong class="product-kit-name">{{ kit.name }}</strong>
-                  
-                  <product-configurations-bundle ref="bundles" attribute="variation_bundle" @on-update="component.capture" :sku="activeSKU" :product="kit">
-                    <template class="ff-input-text" v-slot:default="component"> </template>
-                  </product-configurations-bundle>
+          <product-kit 
+              ref="kit" 
+              @on-update="__configurationsKitOnUpdate" 
+              :product="product"
+              :quantity="productQuantity" 
+              attribute="upsell" 
+              all-required 
+              class="produto-kits">
+              <template v-slot:default="component">
+                <div v-if="component.list.length > 0">
+                  <div v-for="kit in component.list" :key="kit.product_id" class="produto-kit">
+                    <strong class="product-kit-name">{{ kit.name }}</strong>
+                    
+                    <product-configurations-bundle ref="bundles" attribute="variation_bundle" @on-update="component.capture" :sku="activeSKU" :product="kit">
+                      <template class="ff-input-text" v-slot:default="component"> </template>
+                    </product-configurations-bundle>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </product-kit>
-
+              </template>
+            </product-kit>
           <button pwa-add-in-cart class="pwat-btn pwat-btn-comprar">comprar</button>
 
           <div class="pwat-frete">
@@ -66,7 +72,8 @@
             <form action="">
               <div class="pwat-form-group">
                 <input pwa-freight-box class="pwat-cep" type="text" placeholder="digite seu cep">
-                <button pwa-freight-submit  class="pwat-btn pwat-btn-cep">&gt;</button>
+                <button pwa-freight-submit class="pwat-btn pwat-btn-cep">&gt;</button>
+                <button pwa-freight-loading class="pwat-btn pwat-btn-cep">&gt;</button>
               </div>
             </form>
 
@@ -90,7 +97,7 @@
     </div>
 
     <section>
-      <div class="pwat-container">
+      <div class="pwat-container pwat-sobre-bg">
         <h2 class="pwat-baginda">
           sobre
           <span>{{ product.name }}</span>
@@ -217,7 +224,7 @@
           </article>
         </div>
 
-        <div class="pwat-row pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-mt-24">
+        <div class="pwat-d-flex pwat-justify-content-center pwat-align-items-center pwat-mt-24">
           <a pwa-to-page="/calcinhas" class="pwat-btn pwat-btn-orange pwat-py-16 pwat-px-64">
             comprar
           </a>
