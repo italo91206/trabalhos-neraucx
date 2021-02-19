@@ -12,7 +12,7 @@
               <img pwa-src="image" pwa-alt="product.name" />
             </div>
             
-            <div pwa--else class="swiper-slide">
+            <div pwa--if="!product.image" class="swiper-slide">
               <img pwa-src="nao-disponivel" pwa-alt="product.name" />
             </div>
           </div>
@@ -68,6 +68,11 @@
                 </div>
               </template>
             </product-kit>
+
+            <div class="quantity-group">
+                <label class="quantidade" for="ic-quantidade">Selecione a quantidade</label>
+                <input pwa-quantity-box id="ic-quantidade" placeholder="Quantidade">
+             </div>
             
           <button pwa--if="($refs.kit ? $refs.kit.list : []).length <= 0"  pwa-add-in-cart class="pwat-btn pwat-btn-comprar">comprar</button>
           <button pwa--if="($refs.kit ? $refs.kit.list : []).length > 0" @click.prevent="$refs.kit.toCart()" pwa-toggle-cart class="pwat-btn pwat-btn-comprar">comprar</button>

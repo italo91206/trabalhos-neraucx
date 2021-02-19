@@ -977,3 +977,22 @@
 .pwat-detalhes .pwat-disco-beneficios {
   background: unset;
 }
+
+#ic-quantidade {
+  width: 15%;
+  font-size: 0.875em;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  height: 40px;
+  color: #c587b5;
+}
+
+.quantity-group {
+  margin-top: 15px;
+  color: #d988b8;
+  font-weight: bold;
+}
