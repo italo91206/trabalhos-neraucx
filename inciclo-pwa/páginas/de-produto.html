@@ -8,8 +8,12 @@
         
         <div class="swiper-container pwat-swiper-detalhes" id="product-page-slide" pwa-hook="product-page-slide">
           <div class="swiper-wrapper">
-            <div pwa-each-image class="swiper-slide">
+            <div pwa--if="product.image" pwa-each-image class="swiper-slide">
               <img pwa-src="image" pwa-alt="product.name" />
+            </div>
+            
+            <div pwa--else class="swiper-slide">
+              <img pwa-src="nao-disponivel" pwa-alt="product.name" />
             </div>
           </div>
 
@@ -64,7 +68,9 @@
                 </div>
               </template>
             </product-kit>
-          <button pwa-add-in-cart class="pwat-btn pwat-btn-comprar">comprar</button>
+            
+          <button pwa--if="($refs.kit ? $refs.kit.list : []).length <= 0"  pwa-add-in-cart class="pwat-btn pwat-btn-comprar">comprar</button>
+          <button pwa--if="($refs.kit ? $refs.kit.list : []).length > 0" @click.prevent="$refs.kit.toCart()" pwa-toggle-cart class="pwat-btn pwat-btn-comprar">comprar</button>
 
           <div class="pwat-frete">
             <p>calcule o valor do frete</p>
@@ -96,16 +102,22 @@
       <img pwa-src="bg-sobre-produto-top">
     </div>
 
-    <section>
-      <div class="pwat-container pwat-sobre-bg">
+    <section class="pwat-sobre-bg">
+      <!-- <div  class="pwat-container ">
         <h2 class="pwat-baginda">
           sobre
           <span>{{ product.name }}</span>
         </h2>
-      </div>
+      </div> -->
 
       <div class="pwat-conteudo-sobre-produto">
         <div class="pwat-container">
+            <div  class="pwat-container ">
+                <h2 class="pwat-baginda">
+                sobre
+                <span>{{ product.name }}</span>
+                </h2>
+            </div>
           <div pwa--html="product.description"></div>
         </div>
       </div>
@@ -183,10 +195,7 @@
       product.categories.some(item => item.name === 'Calcinhas') ||
       product.categories.some(item => item.name === 'Absorventes')
     " 
-    class="pwat-absorvente-beneficios-wrapper" style="position: relative; z-index: 5;">
-    <div class="pwat-bg-top-bottom">
-      <img pwa-src="bg-absorvente-beneficios-top">
-    </div>
+    class="pwat-absorvente-beneficios-wrapper-detalhes" style="position: relative; z-index: 5;">
 
     <section class="pwat-absorvente-beneficios">
         <h2 class="pwat-section-subtitle">conheça os<span class="pwat-baginda">benefícios</span>
@@ -516,7 +525,8 @@
     </div>
 
     <div class="pwat-bg-top-bottom">
-      <img pwa-src="bg-beneficios-bottom">
+      <!-- <img pwa-src="bg-beneficios-bottom"> old .svg version-->
+      <img pwa-src="bg-beneficios-bottom-png">
     </div>
   </div>
 
@@ -549,14 +559,18 @@
           </a>
         </div>
       </section>
-
     </div>
-
   </div>
 
-  <div>
+  <div pwa--if="product.categories.some(item => item.name === 'Coletor Menstrual')">
     <div class="pwat-bg-top-bottom">
-      <img pwa-src="bg-um-ano-detalhes-bottom">
+      <img pwa-src="bg-um-ano-detalhes-bottom-png">
+    </div>
+  </div>
+
+  <div pwa--else>
+    <div class="pwat-bg-top-bottom">
+      <img pwa-src="bg-without-ano-detalhes-bottom-png">
     </div>
   </div>
 
