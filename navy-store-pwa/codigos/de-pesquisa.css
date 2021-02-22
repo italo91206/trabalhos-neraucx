@@ -1,0 +1,42 @@
+.nv-product-card-pesquisa {
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 33.33%;
+    transition: width .25s ease;
+}
+
+.nv-column .rectangle {
+    width: 16px;
+    height: 24px;
+    border: 1px solid #D9D5D2;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: block;
+}
+
+.nv-column .active .rectangle {
+    background: #41403F;
+    border: unset;
+}
+
+.column-options-divider .rectangle:not(:last-child) {
+    margin-right: 4px;
+}
+
+#column-options .column-options-divider:not(:last-child) {
+    margin-right: 10px;
+    border-right: solid 2px #E6E7E8;
+    padding-right: 10px;
+}
+
+.column-options-divider:hover .rectangle {
+    transform: scale(1.05);
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+@media(max-width: 425px){
+    .nv-product-card-pesquisa {
+        max-width: 100% !important
+    }
+}

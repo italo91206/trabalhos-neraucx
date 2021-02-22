@@ -62,9 +62,28 @@
           <div class="nv-column nv-is-12-mobile nv-is-4-desktop nv-has-text-centered nv-is-hidden-touch">
             <p>{{ $$paginate.count }} Resultados</p>
           </div>
-          <div class="nv-column nv-is-8-mobile nv-is-4-desktop nv-is-clearfix nv-is-order-first-touch">
-            <div class="nv-is-pulled-right-desktop">[ Columns ]</div>
+
+          <!-- para alterar as opções de exibição -->
+          <div id="column-options" class="isdesktop nv-column nv-is-8-mobile nv-is-4-desktop nv-is-clearfix nv-is-order-first-touch flex" pwa-hook="listagem-card-options">
+            <div class="column-options-divider flex">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
+
+            <div class="column-options-divider flex active">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
+
+            <div class="column-options-divider flex">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
           </div>
+
           <div class="nv-column nv-is-4-mobile nv-is-hidden-desktop">
             <button class="nv-button nv-is-primary js-trigger" id="ProductsPageFilterButton"
               type="button">Filtrar</button>
@@ -170,6 +189,7 @@
               </div>
             </pwa-attribute-filter>
 
+            <!-- preço -->
             <div class="nv-widget nv-is-active">
               <div class="nv-widget-header">
                 <p class="nv-widget__title">Preço</p>
@@ -210,7 +230,7 @@
                 <p class="nv-has-text-centered">{{ $$paginate.count }} Resultados</p>
               </div>
 
-              <div pwa-each-product class="nv-column nv-is-4-desktop nv-is-12-mobile">
+              <div pwa-each-product class="nv-product-card-pesquisa">
                 <pwa-product-card>
               </div>
 
