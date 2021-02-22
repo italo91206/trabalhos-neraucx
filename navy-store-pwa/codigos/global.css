@@ -9527,3 +9527,12 @@ a:hover {
      display: flex;
      flex-wrap: wrap;
  }
+
+@media(max-width: 768px){
+    .isdesktop{
+        display: none;
+    }
+    .isdesktop.flex{
+        display: none;
+    }
+}
