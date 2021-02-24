@@ -1,0 +1,273 @@
+<main id="ns-pesquisa" role="main">
+    <div id="ProductsPageHeader">
+      <!-- barra dos breadcrumbs -->
+      <div class="nv-products-header" id="ProductsPageHeaderTop">
+        <div class="nv-container">
+          <div class="nv-columns nv-is-desktop nv-is-vcentered">
+            
+            <!-- titulo do breadcrumb -->
+            <div class="nv-column nv-is-6-desktop">
+              <h2 class="nv-title nv-has-text-white nv-is-uppercase">Title</h2>
+              
+              <div>
+                <ul class="nv-breadcrumbs">
+                  <li class="nv-breadcrumbs__item"><a href="#breadcrumb-item">Home</a></li>
+                  <li class="nv-breadcrumbs__item nv-is-active"><a href="#breadcrumb-item">{{ category.name }}</a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <!-- tags do breadcrumb -->
+            <pwa-subcategory-list class="nv-column nv-is-6-desktop nv-is-clearfix">
+              <div class="nv-is-pulled-right">
+                <ul class="nv-labels">
+                  <li pwa-each-subcategory class="nv-labels__item">
+                    <a pwa-to-subcategory-page>{{ subcategory.name }}</a>
+                  </li>
+                  <!-- <li class="nv-labels__item"><span>Item</span></li>
+                  <li class="nv-labels__item"><span>Item</span></li>
+                  <li class="nv-labels__item"><span>Item</span></li>
+                  <li class="nv-labels__item"><span>Item</span></li>
+                  <li class="nv-labels__item"><span>Item</span></li> -->
+                </ul>
+              </div>
+            </pwa-subcategory-list>
+          </div>
+        </div>
+      </div>
+  
+      <!-- barra after breadcrumbs  -->
+      <div class="nv-products-header" id="ProductsPageHeaderMiddle">
+        <div class="nv-container">
+          <p class="nv-group-86">
+            <span>
+              <a href="#t-shirts">T-shirts</a>, <a href="#blusas-de-alcinha">blusas de alcinha</a>,
+              <a href="#regatas">regatas</a>, tudo para completar a sua rotina está aqui. Escolha
+              suas próximas peças, complete seus looks e encha sua sacola agora mesmo... </span>
+              <span><a href="#more">Ver Mais</a>
+            </span>
+          </p>
+        </div>
+      </div>
+  
+      <!-- barra antes do container de listagem -->
+      <div class="nv-products-header" id="ProductsPageHeaderBottom">
+        <div class="nv-new-container flex center-aligned">
+          <!-- Ordenação de resultados -->
+          <div class="isdesktop">
+            <div class="nv-select" style="max-width: 205px; width: 100%">
+              <select style="width: 100%">
+                <option selected="selected" disabled="disabled">Mais Vendidos</option>
+                <option value="Item">Item</option>
+              </select>
+            </div>
+          </div>
+  
+          <!-- número de resultados -->
+          <div class="isdesktop">
+            <p>{{ $$paginate.count }} Resultados</p>
+          </div>
+  
+          <!-- para alterar as opções de exibição -->
+          <div id="column-options" class="isdesktop flex" pwa-hook="listagem-card-options">
+            <div class="column-options-divider flex">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
+  
+            <div class="column-options-divider flex active">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
+  
+            <div class="column-options-divider flex">
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+              <span class="rectangle"></span>
+            </div>
+          </div>
+  
+          <!-- botão do modal de filtros -->
+          <div class="ismobile">
+            <button class="nv-button nv-is-primary js-trigger" id="ProductsPageFilterButton" type="button">Filtrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- container da listagem de produtos -->
+    <pwa-result-list size="32" automatic-scrolls="1" class="nv-section" id="ProductsPage">
+      <div class="nv-container">
+        <div class="nv-columns nv-is-desktop nv-is-multiline">
+          <!-- coluna dos filtros -->
+          <div class="nv-column nv-is-3-desktop nv-is-hidden-touch" id="ProductsPageSidebarWrapper">
+            <aside class="nv-sidebar" id="ProductsPageSidebar" pwa-hook="nv-filter-widget">
+              
+              <!-- filtros selecionados -->
+              <pwa-tags-filter class="nv-widget nv-is-active">
+                <div class="nv-widget-header">
+                  <h3 class="nv-widget__title">Filtros selecionados</h3>
+                </div>
+  
+                <div class="nv-widget-content">
+                  <div class="nv-filter">
+                    <div pwa-has-filters class="nv-field nv-is-grouped nv-is-grouped-multiline">
+                      <div pwa-each-filter class="nv-control">
+                        <div class="nv-tags nv-has-addons">
+                          <span class="nv-filter__tag nv-tag nv-is-medium">{{ filter.value }}</span>
+                          <a pwa-remove-filter="click" class="nv-filter__tag nv-tag nv-is-delete nv-is-medium"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </pwa-tags-filter>
+  
+              <!-- cores -->
+              <pwa-variation-filter code="color" class="nv-widget nv-is-active" static multiple>
+                <div class="nv-widget-header">
+                  <p class="nv-widget__title">Cor</p>
+                </div>
+  
+                <div pwa-has-filters class="nv-widget-content">
+                  <div class="nv-filter">
+                    <label pwa-each-filter class="nv-filter__color nv-is-black">
+                      <input pwa-filter-input="checked" type="radio" name="filter-color-input" checked="checked" />
+                      <span pwa-class="filter.label"></span>
+                    </label>
+                  </div>
+                </div>
+              </pwa-variation-filter>
+  
+              <!-- tamanho -->
+              <pwa-variation-filter code="tamanho" force-order="P, M, G, GG" class="nv-widget nv-is-active" static multiple>
+                <div class="nv-widget-header">
+                  <p class="nv-widget__title">Tamanho</p>
+                </div>
+  
+                <div pwa-has-filters class="nv-widget-content">
+                  <div class="nv-filter">
+                    <label pwa-each-filter class="nv-filter__size">
+                      <input pwa-filter-input="checked" type="radio" name="filter-size-input-612" />
+                      <span>{{ filter.label }}</span>
+                    </label>
+                  </div>
+                </div>
+              </pwa-variation-filter>
+  
+              <!-- modelo  -->
+              <pwa-attribute-filter attribute="modelo" class="nv-widget nv-is-active" static multiple>
+                <div class="nv-widget-header">
+                  <p class="nv-widget__title">Modelo</p>
+                </div>
+  
+                <div pwa-has-filters class="nv-widget-content">
+                  <div class="nv-filter">
+                    <label pwa-each-filter class="nv-filter__outline-square-radio nv-filter__model">
+                      <input pwa-filter-input="checked" type="radio" name="filter-model-input"/>
+                      <span>{{ filter.label }}</span>
+                    </label>
+  
+                    <button class="nv-button nv-is-white nv-is-small nv-p-0" type="button">
+                      +24 Modelos
+                    </button>
+                  </div>
+                </div>
+              </pwa-attribute-filter>
+  
+              <!-- tecido -->
+              <pwa-variation-filter code="tecido" class="nv-widget nv-is-active" static multiple>
+                <div class="nv-widget-header">
+                  <p class="nv-widget__title">Tecido</p>
+                </div>
+  
+                <div pwa-has-filters class="nv-widget-content">
+                  <div class="nv-filter">
+                    <label pwa-each-filter class="nv-filter__outline-square-radio nv-filter__model">
+                      <input pwa-filter-input="checked" type="radio" name="filter-model-input"/>
+                      <span>{{ filter.label }}</span>
+                    </label>
+                  </div>
+                </div>
+              </pwa-variation-filter>
+  
+              <!-- preço -->
+              <div class="nv-widget nv-is-active">
+                <div class="nv-widget-header">
+                  <p class="nv-widget__title">Preço</p>
+                </div>
+  
+                <div class="nv-widget-content">
+                  <div class="nv-filter">
+                    <label class="nv-filter__outline-square-radio nv-filter__price">
+                      <input type="radio" name="filter-price-input" value="50" checked="checked" />
+                      <span>R$50 - R$100</span>
+                    </label>
+  
+                    <label class="nv-filter__outline-square-radio nv-filter__price">
+                      <input type="radio" name="filter-price-input" value="100" />
+                      <span>R$100 - R$150</span>
+                    </label>
+  
+                    <label class="nv-filter__outline-square-radio nv-filter__price">
+                      <input type="radio" name="filter-price-input" value="150" />
+                      <span>R$150 - R$200</span>
+                    </label>
+  
+                    <label class="nv-filter__outline-square-radio nv-filter__price">
+                      <input type="radio" name="filter-price-input" value="200" />
+                      <span>R$200 +</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+  
+          <!-- coluna dos resultados -->
+          <div class="nv-column nv-is-9-desktop">
+            <div id="ProductsPageList">
+              <div class="nv-columns nv-is-mobile nv-is-multiline">
+                <div class="nv-column nv-is-12-mobile nv-is-hidden-desktop">
+                  <p class="nv-has-text-centered">{{ $$paginate.count }} Resultados</p>
+                </div>
+  
+                <div pwa-each-product class="nv-product-card-pesquisa">
+                  <pwa-product-card>
+                </div>
+  
+                <div class="nv-column nv-is-12-desktop nv-has-text-centered nv-mt-6">
+                  <button class="nv-button nv-is-icon" type="button">
+                    <img pwa-src="icon-top-full" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </pwa-result-list>
+  
+    <!-- container da paginação  -->
+    <section class="nv-section nv-py-0" id="ProductsPagePagination">
+      <div class="nv-container">
+        <div class="nv-pagination">
+          <div class="nv-pagination-prev nv-d-flex">
+            <button class="nv-button nv-is-white" type="button"><img pwa-src="icon-arrow-prev-full" alt="" /></button>
+            <button class="nv-button nv-is-white" type="button"><img pwa-src="icon-arrow-prev" alt="" /></button>
+            <button class="nv-button nv-is-white nv-is-hidden-touch" type="button"><span>Anterior</span></button>
+          </div>
+          <div class="nv-pagination-current">
+            <p>Página 1 de {{ Math.ceil($$paginate.count/32) }}</p>
+          </div>
+          <div class="nv-pagination-next nv-d-flex">
+            <button class="nv-button nv-is-white nv-is-hidden-touch" type="button"><span>Próxima</span></button>
+            <button class="nv-button nv-is-white" type="button"><img pwa-src="icon-arrow-next" alt="" /></button>
+            <button class="nv-button nv-is-white" type="button"><img pwa-src="icon-arrow-next-full" alt="" /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
