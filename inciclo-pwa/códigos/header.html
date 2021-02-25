@@ -1,7 +1,7 @@
 <header pwa-hook="in-header">
 
   <pwa-cart open-on-add />
-  <div id="pwat-cart__darken"></div>
+  <div pwa-toggle-cart id="pwat-cart__darken"></div>
 
   <div class="pwat-header-row-1">
     <p class="pwat-text-center pwat-color-white" id="pre-header-progression">
@@ -73,7 +73,7 @@
 
         <div pwa-not-logged class="pwat-d-flex">
           <a class="pwat-d-flex" pwa-to-auth><img pwa-src="icon-account" alt="Conta" /></a>
-          <a class="pwat-sacola" pwa-to-auth><img pwa-src="icon-cart" alt="Sacola" /></a>
+          <a class="pwat-sacola" pwa-toggle-cart><img pwa-src="icon-cart" alt="Sacola" /></a>
         </div>
       </div>
     </div>
@@ -92,29 +92,29 @@
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
             <a class="pwat-item-menu" pwa-to-page="/disco-menstrual">Disco
               Menstrual<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
-            <a class="pwat-item-menu" pwa-to-page="/calcinha-absorvente">Calcinha
-              Absorvente<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
+            <a class="pwat-item-menu" pwa-to-page="/calcinha-menstrual">Calcinha
+              Menstrual<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
             <a class="pwat-item-menu" pwa-to-page="/absorvente-reutilizavel">Absorvente
               Reutilizável<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
-            <a class="pwat-item-menu" pwa-to-page="/linha-maternidade">Linha
+            <a class="pwat-item-menu" pwa-to-page="/maternidade">Linha
               Maternidade<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
-            <a class="pwat-item-menu" pwa-to-page="/cosmetico-vegano">Cosméticos
+            <a class="pwat-item-menu" pwa-to-page="/cosmeticos-veganos">Cosméticos
               Veganos<img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a>
           </div>
         </li>
-        <li class="pwat-mb-16"><a pwa-to-page="/kit-coletores">Kits Coletores</a></li>
-        <li class="pwat-mb-16"><a pwa-to-page="/kit-disco-menstrual">Kit Disco Menstrual</a></li>
-        <li class="pwat-mb-16"><a pwa-to-page="/promocoes">Promoções</a></li>
+        <li class="pwat-mb-16"><a class="pwat-item-menu" pwa-to-page="/kit-coletores">Kits Coletores</a></li>
+        <li class="pwat-mb-16"><a class="pwat-item-menu" pwa-to-page="/kit-disco-menstrual">Kit Disco Menstrual</a></li>
+        <li class="pwat-mb-16"><a class="pwat-item-menu" pwa-to-page="/promocoes">Promoções</a></li>
 
         <li class="pwat-mb-16 pwat-button-padding">
-          <a class="pwat-btn-atendimento-mobile pwat-py-8 pwat-px-32">
+          <a class="pwat-btn-atendimento-mobile pwat-py-8 pwat-px-32 pwat-item-menu">
             <img pwa-src="icon-atendimento" alt="Atendimento">
             <p class="pwat-ml-16">Atendimento</p>
           </a>
         </li>
 
         <li class="pwat-mb-16 pwat-button-padding">
-          <a pwa-to-search="" class="pwat-btn pwat-btn-orange pwat-btn-comprar-agr pwat-py-8 pwat-px-32">Compre
+          <a pwa-to-search="" class="pwat-btn pwat-btn-orange pwat-btn-comprar-agr pwat-py-8 pwat-px-32 pwat-item-menu">Compre
             Agora</a>
         </li>
       </ul>
@@ -129,13 +129,13 @@
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
           <li><a class="pwat-item-menu" pwa-to-page="/disco-menstrual">Disco Menstrual
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
-          <li><a class="pwat-item-menu" pwa-to-page="/calcinha-absorvente">Calcinha Absorvente
+          <li><a class="pwat-item-menu" pwa-to-page="/calcinha-menstrual">Calcinha Menstrual
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
           <li><a class="pwat-item-menu" pwa-to-page="/absorvente-reutilizavel">Absorvente Reutilizável
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
-          <li><a class="pwat-item-menu" pwa-to-page="/linha-maternidade">Linha Maternidade
+          <li><a class="pwat-item-menu" pwa-to-page="/maternidade">Linha Maternidade
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
-          <li><a class="pwat-item-menu" pwa-to-page="/cosmetico-vegano">Cosméticos Veganos
+          <li><a class="pwat-item-menu" pwa-to-page="/cosmeticos-veganos">Cosméticos Veganos
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
           <li><a class="pwat-item-menu" pwa-to-page="/intera">Intera
               <img pwa-src="icon-arrow-right-pink" alt="Arrow Right"></a></li>
