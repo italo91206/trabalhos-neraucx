@@ -2,24 +2,34 @@
     "--in-header": component => {
 
         // Search
-        let btnHeaderSearch = document.querySelector('.pwat-header-search a')
-        let btnCloseSearch = document.querySelector('.pwat-input-search a')
+        var btnHeaderSearch = document.querySelector('.pwat-header-search a')
+        var btnCloseSearch = document.querySelector('.pwat-input-search a')
         var searchInput = document.querySelector('.pwat-input-search')
-        let campoSeachInput = document.querySelector('.pwat-search input')
+        var campoSeachInput = document.querySelector('.pwat-search input')
 
         // Menu mobile
-        let btnBurguer = document.querySelector('.pwat-icon-burguer')
-        let menuMobile = document.querySelector('.pwat-menu-mobile')
+        var btnBurguer = document.querySelector('.pwat-icon-burguer')
+        var menuMobile = document.querySelector('.pwat-menu-mobile')
 
         // Menu hover
-        let btnNossosProdutos = document.querySelector('.pwat-btn-nossos-produtos')
-        let hoverMenu = document.querySelector('.pwat-hover-menu')
+        var btnNossosProdutos = document.querySelector('.pwat-btn-nossos-produtos')
+        var hoverMenu = document.querySelector('.pwat-hover-menu')
 
         // Accordion Nossos produtos
-        let btnAccoNossoPro = document.querySelector(".pwat-accordion-menu")
+        var btnAccoNossoPro = document.querySelector(".pwat-accordion-menu")
 
         // Itens menu close
-        let itensMenu = document.querySelectorAll(".pwat-item-menu")
+        var itensMenu = document.querySelectorAll(".pwat-item-menu")
+
+        function closeClickWindow(event) {
+            if (!event.target.matches('.pwat-header-search a') && !event.target.closest('.pwat-input-search')
+                && !event.target.matches('.pwat-icon-burguer') && !event.target.closest('.pwat-menu-mobile')) {
+                searchInput.classList.remove('pwat-active')
+                menuMobile.classList.remove('pwat-active')
+                // campoSeachInput.value = ""; // Isso foi comentado
+                window.removeEventListener("click", closeClickWindow)
+            }
+        }
 
         for(let i = 0; i < itensMenu.length; i++) {
             itensMenu[i].addEventListener('click', function(){
@@ -49,23 +59,23 @@
         /* END HOVER MENU */
 
         // Abrir pesquisa
-        btnHeaderSearch.addEventListener('click', function (e) {
+        btnHeaderSearch.addEventListener('click', function () {
             // e.preventDefault()
-            console.log(searchInput);
-            console.log(e);
             // searchInput = document.querySelector('.pwat-input-search')
             // campoSeachInput = document.querySelector('.pwat-search input')
-            if (searchInput.classList.contains('pwat-active')) {
-                console.log('Retorno deu true; mas será?')
-                console.log(searchInput.classList.contains('pwat-active'))
-                console.log(searchInput);
+            if (searchInput.classList.contains('pwat-active')){
+                // console.log('Retorno deu true; mas será?')
+                // console.log(searchInput.classList.contains('pwat-active'))
+                // console.log(searchInput);
                 searchInput.classList.remove('pwat-active')
-            } else {
-                console.log('Retorno deu false')
+            }else {
+                // console.log('Retorno deu false; mas será?')
+                // console.log(searchInput.classList.contains('pwat-active'))
+                // console.log(searchInput);
                 searchInput.classList.add('pwat-active')
                 menuMobile.classList.remove('pwat-active')
                 campoSeachInput.focus()
-                window.addEventListener("click", closeClickWindow)
+                // window.addEventListener("click", closeClickWindow)
             }
         })
 
@@ -90,15 +100,7 @@
             window.removeEventListener("click", closeClickWindow)
         })
 
-        function closeClickWindow(event) {
-            if (!event.target.matches('.pwat-header-search a') && !event.target.closest('.pwat-input-search')
-                && !event.target.matches('.pwat-icon-burguer') && !event.target.closest('.pwat-menu-mobile')) {
-                searchInput.classList.remove('pwat-active')
-                menuMobile.classList.remove('pwat-active')
-                // campoSeachInput.value = ""; // Isso foi comentado
-                window.removeEventListener("click", closeClickWindow)
-            }
-        }
+        
 
         btnAccoNossoPro.addEventListener('click', function (e) {
             e.preventDefault()
