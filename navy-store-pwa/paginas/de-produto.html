@@ -1,0 +1,561 @@
+<main role="main">
+	<div class="nv-section" id="Breadcrumbs">
+		<div class="nv-container">
+			<ul class="nv-breadcrumbs">
+				<li class="nv-breadcrumbs__item"><a href="#breadcrumb-item">Item</a></li>
+				<li class="nv-breadcrumbs__item"><a href="#breadcrumb-item">Item</a></li>
+				<li class="nv-breadcrumbs__item nv-is-active"><a href="#breadcrumb-item">Active</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="Main">
+		<section class="nv-product-section-adjust" id="ProductPage">
+			<div class="nv-container">
+				<div id="ProductPageShare">
+					<ul class="nv-social">
+						<li class="nv-social__item"><a class="nv-social__link" href="https://whatsapp.com"
+								target="_blank"
+								rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-whatsapp-circle" aria-hidden="true"></i></span></a>
+						</li>
+						<li class="nv-social__item"><a class="nv-social__link" href="https://instagram.com"
+								target="_blank"
+								rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-instagram-circle" aria-hidden="true"></i></span></a>
+						</li>
+						<li class="nv-social__item"><a class="nv-social__link" href="https://facebook.com"
+								target="_blank"
+								rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-facebook-circle" aria-hidden="true"></i></span></a>
+						</li>
+						<li class="nv-social__item"><a class="nv-social__link" href="https://twitter.com"
+								target="_blank"
+								rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-twitter-circle" aria-hidden="true"></i></span></a>
+						</li>
+						<li class="nv-social__item"><a class="nv-social__link" href="https://link.com" target="_blank"
+								rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-link-circle" aria-hidden="true"></i></span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="nv-columns nv-is-desktop nv-is-multiline">
+					<div class="nv-column nv-is-offset-1-desktop nv-is-6-desktop">
+						<div class="nv-product-gallery-swiper">
+							<button class="swiper-button-prev nv-product-gallery-swiper__button nv-is-prev nv-button nv-preserv-default" type="button"><span class="nv-is-hidden">Anterior</span></button>
+							<button class="swiper-button-next nv-product-gallery-swiper__button nv-is-next nv-button nv-preserv-default" type="button"><span class="nv-is-hidden">Próximo</span></button>
+							<p class="swiper-counter nv-product-gallery-swiper__counter">
+								<span>1</span><span>de</span><span>3</span></p>
+							<div class="swiper-container nv-product-gallery-swiper-container"
+								pwa-hook="nv-product-gallery">
+								<div class="swiper-wrapper nv-product-gallery-swiper-wrapper ">
+
+									<div pwa-each-image class="swiper-slide nv-product-gallery-swiper-slide">
+										<div class="nv-product-gallery">
+											<div class="nv-product-gallery-image">
+												<img class="nv-product-gallery__img" pwa-src="product.image">
+                                            </div>
+										</div>
+									</div>
+								</div>
+							</div>
+										<div class="swiper-thumbs nv-product-gallery-swiper-thumbs">
+											<div class="swiper-container nv-product-gallery-swiper-thumbs-container">
+												<div class="swiper-wrapper nv-product-gallery-swiper-thumbs-wrapper">
+													<div class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
+														<div class="nv-product-gallery-thumb">
+															<div class="nv-product-gallery-thumb-image">
+																<img class="nv-product-gallery-thumb__img" pwa-src="gallery-thumbnail-example-1"></div>
+															</div>
+														</div>
+														<div
+															class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
+															<div class="nv-product-gallery-thumb">
+																<div class="nv-product-gallery-thumb-image">
+																	<img class="nv-product-gallery-thumb__img"pwa-src="gallery-thumbnail-example-1"></div>
+																</div>
+															</div>
+															<div
+																class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
+																<div class="nv-product-gallery-thumb">
+																	<div class="nv-product-gallery-thumb-image">
+																		<img class="nv-product-gallery-thumb__img" pwa-src="gallery-thumbnail-example-1"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="nv-product-gallery-note" pwa-hook="close-gallery-note">
+                                                        <div class="nv-product-gallery-note-relative">
+                                                            <div class="nv-product-gallery-close">
+                                                                <button class="js-product-gallery-note-close nv-product-gallery-note-close-button" type="button"><img class="nv-product-gallery-note-close-button-img" pwa-src="icon-close-car"/></button>
+                                                            </div>
+                                                            <div class="nv-product-gallery-note-icon">
+                                                                <img pwa-src="icon-medal"/>
+                                                            </div>
+															<div class="nv-product-gallery-note-info">
+																<p class="nv-product-gallery-note-title">Todo mundo
+																	quer!!!</p>
+																<p class="nv-product-gallery-note-description">Esta peça
+																	está vendendo super rápido.<br> Compre antes que acabe.
+																</p>
+															</div>
+                                                            </div>
+														</div>
+												</div>
+                                                </div>
+												<div class="nv-column nv-is-5-desktop">
+													<div id="ProductPageStickySecondColumn">
+														<div class="nv-section-product-info">
+															<div class="nv-group-202">
+																<div class="nv-group-202-header">
+																	<h3 class="nv-group-202__title nv-title">{{ product.name }}</h3>
+																	<p class="nv-group-202__price">
+																		<span>{{ product.promotional_price | price }}</span><span>Ou até em 5x de {{ product.promotional_price/5 | price }}</span>
+																	</p>
+																	<button class="nv-group-202__favorite nv-button__favorite" type="button"><img pwa-src="icon-heart" alt="Adicionar nos favoritos"></button>
+																</div>
+																<div class="nv-group-202-body">
+																	<div class="nv-group-202-field">
+																		<p class="nv-group-202-field__title">
+																			<span>Cor</span></p>
+
+                                                                                <pwa-product-variations attribute="produtos-similares" class="nv-group-202-control">        
+                                                                                        <div class="nv-filter">
+                                                                                            <label class="nv-filter__color nv-is-black">
+                                                                                                <input type="radio" name="filter-color-input" value="black" checked="checked"/><span></span>
+                                                                                            </label>
+                                                                                            <label class="nv-filter__color nv-is-sonic-silver">
+                                                                                                <input type="radio" name="filter-color-input" value="sonic-silver"/><span></span>
+                                                                                            </label>
+                                                                                            <label class="nv-filter__color nv-is-chestnut">
+                                                                                                <input type="radio" name="filter-color-input" value="chestnut"/><span></span>
+                                                                                            </label>
+                                                                                            <label class="nv-filter__color nv-is-burnt-sienna">
+                                                                                                <input type="radio" name="filter-color-input" value="burnt-sienna"/><span></span>
+                                                                                            </label>
+                                                                                            <label class="nv-filter__color nv-is-caput-mortuum">
+                                                                                                <input type="radio" name="filter-color-input" value="caput-mortuum"/><span></span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                </pwa-product-variations>
+																	</div>
+
+																	<div class="nv-group-202-field">
+																		<p class="nv-group-202-field__title">
+																			<span>Tamanho</span></p>
+																		<div class="nv-group-202-control nv-is-flex">
+																			<div class="nv-group-202-field__divisor">
+																				<div class="nv-filter">
+																					<label class="nv-filter__size">
+                                    <input type="radio" name="filter-size-input-14112" value="P" checked="checked"/><span>P</span>
+                                </label>
+																					<label class="nv-filter__size">
+                                    <input type="radio" name="filter-size-input-14112" value="M"/><span>M</span>
+                                </label>
+																					<label class="nv-filter__size">
+                                    <input type="radio" name="filter-size-input-14112" value="G"/><span>G</span>
+                                </label>
+																					<label class="nv-filter__size">
+                                    <input type="radio" name="filter-size-input-14112" value="GG"/><span>GG</span>
+                                </label>
+																				</div>
+																			</div>
+																			<div class="nv-group-202-field__divisor">
+																				<button class="js-modal-trigger nv-button nv-button__guide" pwa-hook="nv-modal" type="button" data-modal="product-size-guide" data-modal-action="open"> <span class="nv-mr-3"><img pwa-src="icon-regua" alt=""/></span><span>Tabela de Medidas</span></button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="nv-group-202-footer">
+																	<button class="nv-adicionar-produto nv-button nv-is-primary nv-is-fullwidth" type="button">Adicionar à Sacola</button>
+																</div>
+															</div>
+															<div class="nv-mt-5">
+																<div class="nv-frete">
+																	<div class="nv-frete-header">
+																		<p class="nv-frete__title">
+																			<span class="nv-icon"><i class="nv-is-shipping" aria-hidden="true"></i></span><span>Prazo de Envio</span>
+																		</p>
+																	</div>
+																	<div class="nv-frete-body">
+																		<form action="javascript:void">
+																			<div class="nv-field">
+																				<div
+																					class="nv-control nv-has-icons-right">
+																					<input class="nv-input" placeholder="Digite seu endereço ou CEP" type="text"/><span class="nv-icon nv-is-right"><i class="nv-is-search" aria-hidden="true"></i></span>
+																					<ul
+																						class="nv-frete-search-results ">
+																						<li
+																							class="nv-frete-search-results__item">
+																							<span><strong>Av. Pedro Taques, 294</strong></span><span>- Zona 03, Maringá - PR</span>
+																						</li>
+																						<li
+																							class="nv-frete-search-results__item">
+																							<span><strong>Av. Pedro Taques, 294</strong></span><span>- Zona 03, Maringá - PR</span>
+																						</li>
+																						<li
+																							class="nv-frete-search-results__item">
+																							<span><strong>Av. Pedro Taques, 294</strong></span><span>- Zona 03, Maringá - PR</span>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</form>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="nv-column nv-is-offset-1-desktop nv-is-6-desktop">
+													<div class="nv-group-96 nv-section-product-info nv-section-product-info-tab-acc">
+														<!-- <div class="nv-group-96__item nv-is-active">
+															<p class="nv-group-96__title">Title</p>
+															<div class="nv-group-96__content nv-content">
+																<p>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing
+																	elit.
+																	Feugiat diam molestie ligula tristique. Lacus
+																	interdum accumsan, adipiscing mi consectetur
+																	facilisi id orci. Malesuada eu a urna, at sed lorem
+																	amet. In ullamcorper ut sit quis.
+
+																</p>
+																<p>
+																	Est urna dictum et eu adipiscing cursus commodo amet
+																	senectus. Turpis adipiscing
+																	dictum molestie posuere odio amet a.
+
+																</p>
+																<p>
+																	Gravida nunc, porta dolor, ante tortor arcu, eget
+																	orci volutpat. Fusce faucibus et,
+																	id maecenas cursus nulla etiam pellentesque lacus.
+																	Auctor justo mauris ut odio.
+																	Volutpat vel nunc eget at. Ac, semper facilisi eget
+																	tempor. Montes, vitae ut et eget
+																	lacinia fermentum commodo porttitor urna.
+																</p>
+															</div>
+														</div>
+														<div class="nv-group-96__item ">
+															<p class="nv-group-96__title">Title</p>
+															<div class="nv-group-96__content nv-content">
+																<p>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing
+																	elit.
+																	Feugiat diam molestie ligula tristique. Lacus
+																	interdum accumsan, adipiscing mi consectetur
+																	facilisi id orci. Malesuada eu a urna, at sed lorem
+																	amet. In ullamcorper ut sit quis.
+
+																</p>
+																<p>
+																	Est urna dictum et eu adipiscing cursus commodo amet
+																	senectus. Turpis adipiscing
+																	dictum molestie posuere odio amet a.
+
+																</p>
+																<p>
+																	Gravida nunc, porta dolor, ante tortor arcu, eget
+																	orci volutpat. Fusce faucibus et,
+																	id maecenas cursus nulla etiam pellentesque lacus.
+																	Auctor justo mauris ut odio.
+																	Volutpat vel nunc eget at. Ac, semper facilisi eget
+																	tempor. Montes, vitae ut et eget
+																	lacinia fermentum commodo porttitor urna.
+																</p>
+															</div>
+														</div>
+														<div class="nv-group-96__item ">
+															<p class="nv-group-96__title">Title</p>
+															<div class="nv-group-96__content nv-content">
+																<p>
+																	Lorem ipsum dolor sit amet, consectetur adipiscing
+																	elit.
+																	Feugiat diam molestie ligula tristique. Lacus
+																	interdum accumsan, adipiscing mi consectetur
+																	facilisi id orci. Malesuada eu a urna, at sed lorem
+																	amet. In ullamcorper ut sit quis.
+
+																</p>
+																<p>
+																	Est urna dictum et eu adipiscing cursus commodo amet
+																	senectus. Turpis adipiscing
+																	dictum molestie posuere odio amet a.
+
+																</p>
+																<p>
+																	Gravida nunc, porta dolor, ante tortor arcu, eget
+																	orci volutpat. Fusce faucibus et,
+																	id maecenas cursus nulla etiam pellentesque lacus.
+																	Auctor justo mauris ut odio.
+																	Volutpat vel nunc eget at. Ac, semper facilisi eget
+																	tempor. Montes, vitae ut et eget
+																	lacinia fermentum commodo porttitor urna.
+																</p>
+															</div>
+														</div> -->
+
+                                                        <div id="ProductPageShare2">
+                                                            <ul class="nv-social">
+                                                                <li class="nv-social__item"><a class="nv-social__link" href="https://whatsapp.com"
+                                                                        target="_blank"
+                                                                        rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-whatsapp-circle" aria-hidden="true"></i></span></a>
+                                                                </li>
+                                                                <li class="nv-social__item"><a class="nv-social__link" href="https://instagram.com"
+                                                                        target="_blank"
+                                                                        rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-instagram-circle" aria-hidden="true"></i></span></a>
+                                                                </li>
+                                                                <li class="nv-social__item"><a class="nv-social__link" href="https://facebook.com"
+                                                                        target="_blank"
+                                                                        rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-facebook-circle" aria-hidden="true"></i></span></a>
+                                                                </li>
+                                                                <li class="nv-social__item"><a class="nv-social__link" href="https://twitter.com"
+                                                                        target="_blank"
+                                                                        rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-twitter-circle" aria-hidden="true"></i></span></a>
+                                                                </li>
+                                                                <li class="nv-social__item"><a class="nv-social__link" href="https://link.com" target="_blank"
+                                                                        rel="noreferrer"><span class="nv-icon nv-social__icon"><i class="nv-is-link-circle" aria-hidden="true"></i></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="nv-tab-complete">
+                                                            <div class="nv-tab" pwa-hook="tab-product-detail">
+                                                                <a class="nv-btn-tab nv-active" href="#" data-tab="descricao">
+                                                                    <span>Descrição</span>
+                                                                    <img pwa-src="nv-acc-retract" alt="">
+                                                                    <img pwa-src="nv-acc-expand" alt="">
+                                                                </a>
+                                                                <div class="nv-accordion-content">
+                                                                    <p>Descrição</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                </div>
+                                                                <a class="nv-btn-tab" href="#" data-tab="tecidos">
+                                                                    <span>Tecidos</span>
+                                                                    <img pwa-src="nv-acc-retract" alt="">
+                                                                    <img pwa-src="nv-acc-expand" alt="">
+                                                                </a>
+                                                                <div class="nv-accordion-content">
+                                                                    <p>Tecidos</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                </div>
+                                                                <a class="nv-btn-tab" href="#" data-tab="cuidados">
+                                                                    <span>Cuidados</span>
+                                                                    <img pwa-src="nv-acc-retract" alt="">
+                                                                    <img pwa-src="nv-acc-expand" alt="">
+                                                                </a>
+                                                                <div class="nv-accordion-content">
+                                                                    <p>Cuidados</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed, deleniti, recusandae! Animi, sapiente, nostrum?</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="nv-tab-contents">
+                                                                <div class="nv-tab-content nv-active" data-tab="descricao">
+                                                                    <p>Descricao</p>
+                                                                    <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique. Lacus interdum accumsan, adipiscing mi consectetur facilisi id orci. Malesuada eu a urna, at sed lorem amet. In ullamcorper ut sit quis.
+                                                                        Est urna dictum et eu adipiscing cursus commodo amet senectus. Turpis adipiscing dictum molestie posuere odio amet a.
+                                                                    </p>    
+                                                                </div>
+                                                                <div class="nv-tab-content" data-tab="tecidos">
+                                                                    <p>Tecidos</p>
+                                                                    <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique. Lacus interdum accumsan, adipiscing mi consectetur facilisi id orci. Malesuada eu a urna, at sed lorem amet. In ullamcorper ut sit quis.
+                                                                    </p>    
+                                                                </div>
+                                                                <div class="nv-tab-content" data-tab="cuidados">
+                                                                    <p>Cuidados</p>
+                                                                    <p>
+                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique. 
+                                                                    </p>    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+													</div>
+												</div>
+				</div>
+			</div>
+		</section>
+		<section class="nv-section" id="CompleteLook">
+			<div class="nv-container">
+				<h2 class="nv-title nv-is-size-5 nv-mb-6 nv-is-uppercase nv-has-text-centered">Leve o Look Completo</h2>
+
+				<div class="nv-featured-swiper" pwa-hook="nv-featured-slide">
+					<!-- slide bullets -->
+					<button class="swiper-button-prev nv-featured-swiper__button nv-is-prev nv-button nv-preserv-default" type="button">
+                    <span class="nv-is-hidden">Anterior</span>
+                    </button>
+
+					<!-- slide bullets -->
+					<button class="swiper-button-next nv-featured-swiper__button nv-is-next nv-button nv-preserv-default" type="button">
+                    <span class="nv-is-hidden">Próximo</span>
+                    </button>
+
+					<!-- slide container -->
+					<pwa-product-list name="ofertas" class="swiper-container nv-featured-swiper-container">
+						<div class="swiper-wrapper nv-featured-swiper-wrapper">
+							<div pwa-each-product class="swiper-slide nv-featured-swiper-slide">
+								<pwa-product-card>
+							</div>
+						</div>
+					</pwa-product-list>
+
+					<!-- slide pagination -->
+					<div class="swiper-pagination nv-featured-swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="nv-section" id="Pros">
+			<div class="nv-container">
+				<h2 class="nv-title nv-has-text-centered" style="font-size: 23px; margin-bottom: 70px">
+					Descubra toda a versatilidade e conforto do básico
+				</h2>
+				<div class="nv-pros-swiper swiper-container js-swiper-mobile" pwa-hook="nv-swipers-mobile">
+					<button class="swiper-button-prev nv-pros-swiper__button nv-is-prev nv-button nv-preserv-default"
+          type="button"><span class="nv-is-hidden">Anterior</span></button>
+					<button class="swiper-button-next nv-pros-swiper__button nv-is-next nv-button nv-preserv-default"
+          type="button"><span class="nv-is-hidden">Próximo</span></button>
+					<div class="nv-pros-swiper-wrapper swiper-wrapper">
+						<div class="nv-pros-swiper-slide swiper-slide">
+							<div class="nv-pro">
+								<div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-melhor-custo-x-beneficio"
+                  alt="Melhor Custo x Benefício" /></div>
+									<div class="nv-pro-content">
+										<h3 class="nv-pro__title nv-title">Melhor Custo x Benefício</h3>
+										<p>Valorizamos nossa mão de obra e reduzimos nossa margem para garantir preços
+											acessíveis e boas
+											condições de trabalho para nossas costureiras.</p>
+									</div>
+								</div>
+							</div>
+							<div class="nv-pros-swiper-slide swiper-slide">
+								<div class="nv-pro">
+									<div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-qualidade-que-voce-merece"
+                  alt="Qualidade que você merece" /></div>
+										<div class="nv-pro-content">
+											<h3 class="nv-pro__title nv-title">Qualidade que você merece</h3>
+											<p>Sem bolinhas, sem manchas, sem desbotar. Selecionamos os melhores tecidos
+												para que suas peças
+												continuem lindas mesmo com o passar do tempo.</p>
+										</div>
+									</div>
+								</div>
+								<div class="nv-pros-swiper-slide swiper-slide">
+									<div class="nv-pro">
+										<div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-todo-cuidado-com-seu-pedido"
+                  alt="Todo cuidado com seu pedido" /></div>
+											<div class="nv-pro-content">
+												<h3 class="nv-pro__title nv-title">Todo cuidado com seu pedido</h3>
+												<p>Cada pedido feito no site é enviado na nossa caixinha com o cheirinho
+													da Navy. Suas peças são
+													envolvidas no papel seda com um laço de cetim para finalizar.</p>
+											</div>
+										</div>
+									</div>
+									<div class="nv-pros-swiper-slide swiper-slide">
+										<div class="nv-pro">
+											<div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-entrega-rapida-e-troca-facil"
+                  alt="Entrega rápida e troca fácil" /></div>
+												<div class="nv-pro-content">
+													<h3 class="nv-pro__title nv-title">Entrega rápida e troca fácil</h3>
+													<p>Despachamos seu pedido em até dois dias úteis e entregamos no
+														mesmo dia para Piracicaba. E, se
+														precisar, o frete da sua primeira troca é por nossa conta.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="nv-pros-swiper-pagination swiper-pagination"></div>
+								</div>
+								<div class="nv-has-text-centered nv-mt-6"><a class="nv-button nv-is-primary"
+										href="#about">Conheça o
+										#universonavy</a></div>
+							</div>
+		</section>
+	</div>
+
+	<div class="js-modal nv-modal" id="ProductSizeGuideModal" data-modal-name="product-size-guide">
+		<div class="nv-modal-wrapper nv-tabela-medidas-wrapper" style="max-width: 800px">
+			<div class="nv-modal-header">
+				<button class="js-modal-trigger nv-modal-close" type="button" data-modal-action="close"><span class="nv-is-hidden">Fechar</span></button>
+			</div>
+			<div class="nv-modal-body">
+				<div class="nv-guide">
+					<div class="nv-guide-header">
+						<p class="nv-guide__title nv-title">
+							<span class="nv-mr-4 nv-is-hidden-mobile"><img pwa-src="icon-modal-regua" alt=""/></span><span>Tabela de Medidas</span>
+						</p>
+					</div>
+					<div class="nv-guide-body" style="max-width: 600px">
+						<table class="nv-guide__table nv-table nv-is-bordered nv-is-fullwidth">
+							<thead>
+								<tr>
+									<th>Tamanho</th>
+									<th>Busto</th>
+									<th>Cintura</th>
+									<th>Quadril</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>PP</th>
+									<td>84</td>
+									<td>60</td>
+									<td>86</td>
+								</tr>
+								<tr>
+									<th>P</th>
+									<td>89</td>
+									<td>65</td>
+									<td>91</td>
+								</tr>
+								<tr>
+									<th>M</th>
+									<td>94</td>
+									<td>70</td>
+									<td>96</td>
+								</tr>
+								<tr>
+									<th>G</th>
+									<td>99</td>
+									<td>75</td>
+									<td>101</td>
+								</tr>
+								<tr>
+									<th>GG</th>
+									<td>104</td>
+									<td>80</td>
+									<td>106</td>
+								</tr>
+								<tr>
+									<th>XGG</th>
+									<td>109</td>
+									<td>85</td>
+									<td>111</td>
+								</tr>
+							</tbody>
+						</table>
+						<figure class="nv-guide-figure nv-my-6"><img pwa-src="guide" alt="Product Size Guide"/></figure>
+							<ul class="nv-guide-list">
+								<li class="nv-guide-list__item">
+									<p>Busto</p>
+									<p>Meça toda a circunferência do tórax 2,5cm abaixo da axila.</p>
+								</li>
+								<li class="nv-guide-list__item">
+									<p>Cintura</p>
+									<p>Meça toda a circunferência no ponto mais estreito da cintura.</p>
+								</li>
+								<li class="nv-guide-list__item">
+									<p>Quadril</p>
+									<p>Meça toda a circunferência no ponto mais largo do quadril.</p>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
