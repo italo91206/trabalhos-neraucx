@@ -2,9 +2,9 @@
   <div id="Breadcrumbs" class="nv-section isdesktop">
     <div class="nv-new-container">
       <ul class="nv-breadcrumbs">
-        <li class="nv-breadcrumbs__item"><a href="#breadcrumb-item">Item</a></li>
-        <li class="nv-breadcrumbs__item"><a href="#breadcrumb-item">Item</a></li>
-        <li class="nv-breadcrumbs__item nv-is-active"><a href="#breadcrumb-item">Active</a></li>
+        <li class="nv-breadcrumbs__item"><a pwa-to-page="home">Navy Store</a></li>
+        <li v-for="(bc, index) in product.breadcumb" :key="index" :href="`/${bc.url}`" class="nv-breadcrumbs__item"><a  class="se-breadcrumb">{{ bc.name }}</a></li>
+        <li class="nv-breadcrumbs__item nv-is-active"><span class="se-breadcrumb-product-name">{{ product.name }}</span></li>
       </ul>
     </div>
   </div>
@@ -114,7 +114,6 @@
               </div>
             </div>
           </div>
-
           <div class="nv-column nv-is-5-desktop">
             <div id="ProductPageStickySecondColumn">
               <div class="nv-section-product-info">
@@ -136,6 +135,10 @@
                     <pwa-product-configurations-bundle always-list attribute="variation_bundle">
                     </pwa-product-configurations-bundle>
                   </div>
+
+                  	<div class="nv-group-202-field__divisor" style="margin-bottom: 20px;">
+						<button class="js-modal-trigger nv-button nv-button__guide" pwa-hook="nv-modal" type="button" data-modal="product-size-guide" data-modal-action="open"> <span class="nv-mr-3"><img pwa-src="icon-regua" alt=""/></span><span>Tabela de Medidas</span></button>
+					</div>
                   
                   <div class="nv-group-202-footer">
                     <button pwa-add-in-cart class="nv-adicionar-produto nv-button nv-is-primary nv-is-fullwidth" type="button">
@@ -329,39 +332,32 @@
                         </a>
                         <div class="nv-accordion-content">
                             <p>Cuidados</p>
-                            <p><p>{{ product.specifications.cuidados }}</p></p>
+                            <p>{{ product.specifications.cuidados }}</p>
 
-                            <div class="icones-cuidados-teste" pwa--html="product.specifications.cuidados_icones">
-                                {{ product.specifications.cuidados_icones }}
-                            </div>
+                            <div class="icones-cuidados-teste" pwa--html="product.specifications.cuidado_icones"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="nv-tab-contents">
-                  <div class="nv-tab-content nv-active" data-tab="descricao">
+                  <div pwa--if="product.description"  class="nv-tab-content nv-active" data-tab="descricao">
                     <p>Descricao</p>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique.
-                      Lacus interdum accumsan, adipiscing mi consectetur facilisi id orci. Malesuada eu a urna, at sed
-                      lorem amet. In ullamcorper ut sit quis.
-                      Est urna dictum et eu adipiscing cursus commodo amet senectus. Turpis adipiscing dictum molestie
-                      posuere odio amet a.
+                      {{ product.description }}
                     </p>
                   </div>
-                  <div class="nv-tab-content" data-tab="tecidos">
-                    <p>Tecidos</p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique.
-                      Lacus interdum accumsan, adipiscing mi consectetur facilisi id orci. Malesuada eu a urna, at sed
-                      lorem amet. In ullamcorper ut sit quis.
-                    </p>
+                  <div  pwa--if="product.specifications.tecidos" class="nv-tab-content" data-tab="tecidos">
+                        <p>Tecidos</p>
+                        <p>
+                            {{ product.specifications.tecidos }}
+                        </p>
                   </div>
-                  <div class="nv-tab-content" data-tab="cuidados">
+                  <div pwa--if="product.specifications.cuidados" class="nv-tab-content" data-tab="cuidados">
                     <p>Cuidados</p>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat diam molestie ligula tristique.
+                        {{ product.specifications.cuidados }}
                     </p>
+                     <div class="icones-cuidados-teste" pwa--html="product.specifications.cuidado_icones"></div>
                   </div>
                 </div>
               </div>
@@ -501,7 +497,6 @@
                   <th>Quadril</th>
                 </tr>
               </thead>
-              
               <tbody>
                 <tr>
                   <th>PP</th>
