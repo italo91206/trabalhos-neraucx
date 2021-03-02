@@ -63,7 +63,7 @@
   <section class="nv-section">
     <div class="nv-container">
       <h2 class="nv-title nv-is-size-5 nv-mb-6 nv-title-15-dias">
-        <a class="nv-is-underline" pwa-to-page="/calças">
+        <a class="nv-is-underline" pwa-to-page="/novidades">
           <span>Para acompanhar sua rotina, novas peças a cada 15 dias</span>
           <!-- <span class="nv-icon nv-is-size-6 nv-ml-5"><i class="nv-is-arrow-right-circle" aria-hidden="true"></i></span> -->
           <span>
@@ -88,7 +88,7 @@
         </button>
 
         <!-- slide container -->
-        <pwa-product-list name="ofertas" class="swiper-container nv-featured-swiper-container">
+        <pwa-product-list name="ofertas" class="swiper-container nv-featured-swiper-container" >
           <div class="swiper-wrapper nv-featured-swiper-wrapper">
             <div pwa-each-product class="swiper-slide nv-featured-swiper-slide">
               <pwa-product-card>
@@ -103,43 +103,48 @@
   </section>
 
   <!-- seção das 3 imagens com texto de fundo desfocado -->
-  <section class="nv-section" id="Categories">
-    <div class="nv-container">
-      <div class="nv-columns nv-is-desktop">
-        <div class="nv-column nv-is-4-desktop">
-          <div class="nv-category">
-            <div class="nv-category-image"><img class="nv-category__img" pwa-src="cat-blusas"
-                alt="Blusas a partir de R$ 59,90" /></div>
-            <div class="nv-category-content">
-              <p class="nv-category__title nv-title">Blusas a partir de R$ 59,90</p>
-              <p class="nv-category__description">Peças confortáveis e cheias de estilo que te deixam pronta pra
-                qualquer ocasião.</p>
-            </div>
-          </div>
-        </div>
-        <div class="nv-column nv-is-4-desktop">
-          <div class="nv-category">
-            <div class="nv-category-image"><img class="nv-category__img" pwa-src="cat-mascaras-antibacterianas"
-                alt="Máscaras Antibacterianas" /></div>
-            <div class="nv-category-content">
-              <p class="nv-category__title nv-title">Máscaras Antibacterianas</p>
-              <p class="nv-category__description">Máscaras sem costura, seguindo critérios da ANVISA e do FDA.</p>
-            </div>
-          </div>
-        </div>
-        <div class="nv-column nv-is-4-desktop">
-          <div class="nv-category">
-            <div class="nv-category-image"><img class="nv-category__img" pwa-src="cat-moda-consciente"
-                alt="Moda Consciente" /></div>
-            <div class="nv-category-content">
-              <p class="nv-category__title nv-title">Moda Consciente</p>
-              <p class="nv-category__description">Roupas produzidas a partir de tecidos sustentáveis. #savetheworld.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="nv-section" id="Categories">
+	<div class="nv-container">
+		<div class="nv-columns nv-is-desktop">
+			<div class="nv-column nv-is-4-desktop">
+				<a pwa-to-page="/blusas" class="nv-category">
+					<div class="nv-category-image">
+						<img class="nv-category__img" pwa-src="cat-blusas" alt="Blusas a partir de R$ 59,90" /></div>
+						<div class="nv-category-content">
+							<p class="nv-category__title nv-title">Blusas a partir de R$ 59,90</p>
+							<p class="nv-category__description">Peças confortáveis e cheias de estilo que te deixam
+								pronta pra
+								qualquer ocasião.</p>
+						</div>
+				</a>
+			</div>
+
+			<div class="nv-column nv-is-4-desktop">
+				<a pwa-to-page="/mascaras" class="nv-category">
+					<div class="nv-category-image"><img class="nv-category__img" pwa-src="cat-mascaras-antibacterianas"
+				                alt="Máscaras Antibacterianas" /></div>
+						<div class="nv-category-content">
+							<p class="nv-category__title nv-title">Máscaras Antibacterianas</p>
+							<p class="nv-category__description">Máscaras sem costura, seguindo critérios da ANVISA e
+								do FDA.</p>
+						</div>
+				</a>
+			</div>
+
+			<div class="nv-column nv-is-4-desktop">
+				<a pwa-to-page="/blusas" class="nv-category">
+					<div class="nv-category-image"><img class="nv-category__img" pwa-src="cat-moda-consciente"
+					                alt="Moda Consciente" /></div>
+						<div class="nv-category-content">
+							<p class="nv-category__title nv-title">Moda Consciente</p>
+							<p class="nv-category__description">Roupas produzidas a partir de tecidos
+								sustentáveis. #savetheworld.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+</section>
 
   <!-- seção do instagram -->
   <section class="nv-section" id="Instagram">
@@ -156,32 +161,34 @@
             <p class="nv-insta-box__title"><a href="https://instagram.com/navystorefashion" target="_blank"
                 rel="noreferrer">@navystorefashion</a></p>
             <p class="nv-insta-box__description"><span>Compre os looks diretamente do insta e acompanhe o
-              </span><span><a href="#universonavy" rel="noreferrer">#universonavy</a></span></p>
+              </span><span><a pwa-to-page="/sobre" rel="noreferrer">#universonavy</a></span></p>
           </div>
         </div>
 
-        <div class="nv-column nv-is-9-desktop">
-          <div class="nv-insta-swiper swiper-container js-swiper-mobile" pwa-hook="nv-swipers-mobile">
-            <button class="swiper-button-prev nv-insta-swiper__button nv-is-prev nv-button nv-preserv-default"
-              type="button"><span class="nv-is-hidden">Anterior</span></button>
-            <button class="swiper-button-next nv-insta-swiper__button nv-is-next nv-button nv-preserv-default"
-              type="button"><span class="nv-is-hidden">Próximo</span></button>
-            <div class="nv-insta-swiper-wrapper swiper-wrapper">
-              <div class="nv-insta-swiper-slide swiper-slide">
+        <div id="InstagramSwiperColumn" class="nv-column nv-is-12-desktop">
+            <div class="nv-insta-swiper" pwa-hook="nv-insta-slide">
+                <button class="swiper-button-prev nv-insta-swiper__button nv-is-prev nv-button nv-preserv-default nv-is-hidden-desktop"
+                type="button"><span class="nv-is-hidden">Anterior</span></button>
+                <button class="swiper-button-next nv-insta-swiper__button nv-is-next nv-button nv-preserv-default nv-is-hidden-desktop"
+                type="button"><span class="nv-is-hidden">Próximo</span></button>
+                <div class="nv-insta-swiper-container swiper-container">
+                <div class="nv-insta-swiper-wrapper swiper-wrapper">
+                <div class="nv-insta-swiper-slide swiper-slide">
                 <div class="nv-insta-image"><img class="nv-insta__img" pwa-src="insta-gallery-1"
-                    alt="Instagram Title" /></div>
-              </div>
-              <div class="nv-insta-swiper-slide swiper-slide">
+                alt="Instagram Title" /></div>
+                </div>
+                <div class="nv-insta-swiper-slide swiper-slide">
                 <div class="nv-insta-image"><img class="nv-insta__img" pwa-src="insta-gallery-2"
-                    alt="Instagram Title" /></div>
-              </div>
-              <div class="nv-insta-swiper-slide swiper-slide">
+                alt="Instagram Title" /></div>
+                </div>
+                <div class="nv-insta-swiper-slide swiper-slide">
                 <div class="nv-insta-image"><img class="nv-insta__img" pwa-src="insta-gallery-3"
-                    alt="Instagram Title" /></div>
-              </div>
+                alt="Instagram Title" /></div>
+                </div>
+                </div>
+                </div>
+                <div class="nv-insta-swiper-pagination swiper-pagination nv-is-hidden-desktop"></div>
             </div>
-            <div class="nv-insta-swiper-pagination swiper-pagination"></div>
-          </div>
         </div>
       </div>
     </div>
@@ -193,101 +200,69 @@
       <h2 class="nv-title nv-has-text-centered" style="font-size: 23px; margin-bottom: 70px">
         Descubra toda a versatilidade e conforto do básico
       </h2>
-      <div class="nv-pros-swiper swiper-container js-swiper-mobile" pwa-hook="nv-swipers-mobile">
-        <button class="swiper-button-prev nv-pros-swiper__button nv-is-prev nv-button nv-preserv-default"
-          type="button"><span class="nv-is-hidden">Anterior</span></button>
-        <button class="swiper-button-next nv-pros-swiper__button nv-is-next nv-button nv-preserv-default"
-          type="button"><span class="nv-is-hidden">Próximo</span></button>
-        <div class="nv-pros-swiper-wrapper swiper-wrapper">
-          <div class="nv-pros-swiper-slide swiper-slide">
-            <div class="nv-pro">
-              <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-melhor-custo-x-beneficio"
-                  alt="Melhor Custo x Benefício" /></div>
-              <div class="nv-pro-content">
-                <h3 class="nv-pro__title nv-title">Melhor Custo x Benefício</h3>
-                <p>Valorizamos nossa mão de obra e reduzimos nossa margem para garantir preços acessíveis e boas
-                  condições de trabalho para nossas costureiras.</p>
-              </div>
+
+        <div class="nv-pros-swiper" pwa-hook="nv-pros-slide">
+
+            <button class="swiper-button-prev nv-pros-swiper__button nv-is-prev nv-button nv-preserv-default"
+            type="button"><span class="nv-is-hidden">Anterior</span></button>
+            <button class="swiper-button-next nv-pros-swiper__button nv-is-next nv-button nv-preserv-default"
+            type="button"><span class="nv-is-hidden">Próximo</span></button>
+            
+            <div class="nv-pros-swiper-container swiper-container">
+
+                <div class="nv-pros-swiper-wrapper swiper-wrapper">
+                <div class="nv-pros-swiper-slide swiper-slide">
+                    <div class="nv-pro">
+                    <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-melhor-custo-x-beneficio"
+                        alt="Melhor Custo x Benefício" /></div>
+                    <div class="nv-pro-content">
+                        <h3 class="nv-pro__title nv-title">Melhor Custo x Benefício</h3>
+                        <p>Valorizamos nossa mão de obra e reduzimos nossa margem para garantir preços acessíveis e boas
+                        condições de trabalho para nossas costureiras.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="nv-pros-swiper-slide swiper-slide">
+                    <div class="nv-pro">
+                    <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-qualidade-que-voce-merece"
+                        alt="Qualidade que você merece" /></div>
+                    <div class="nv-pro-content">
+                        <h3 class="nv-pro__title nv-title">Qualidade que você merece</h3>
+                        <p>Sem bolinhas, sem manchas, sem desbotar. Selecionamos os melhores tecidos para que suas peças
+                        continuem lindas mesmo com o passar do tempo.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="nv-pros-swiper-slide swiper-slide">
+                    <div class="nv-pro">
+                    <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-todo-cuidado-com-seu-pedido"
+                        alt="Todo cuidado com seu pedido" /></div>
+                    <div class="nv-pro-content">
+                        <h3 class="nv-pro__title nv-title">Todo cuidado com seu pedido</h3>
+                        <p>Cada pedido feito no site é enviado na nossa caixinha com o cheirinho da Navy. Suas peças são
+                        envolvidas no papel seda com um laço de cetim para finalizar.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="nv-pros-swiper-slide swiper-slide">
+                    <div class="nv-pro">
+                    <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-entrega-rapida-e-troca-facil"
+                        alt="Entrega rápida e troca fácil" /></div>
+                    <div class="nv-pro-content">
+                        <h3 class="nv-pro__title nv-title">Entrega rápida e troca fácil</h3>
+                        <p>Despachamos seu pedido em até dois dias úteis e entregamos no mesmo dia para Piracicaba. E, se
+                        precisar, o frete da sua primeira troca é por nossa conta.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-          <div class="nv-pros-swiper-slide swiper-slide">
-            <div class="nv-pro">
-              <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-qualidade-que-voce-merece"
-                  alt="Qualidade que você merece" /></div>
-              <div class="nv-pro-content">
-                <h3 class="nv-pro__title nv-title">Qualidade que você merece</h3>
-                <p>Sem bolinhas, sem manchas, sem desbotar. Selecionamos os melhores tecidos para que suas peças
-                  continuem lindas mesmo com o passar do tempo.</p>
-              </div>
-            </div>
-          </div>
-          <div class="nv-pros-swiper-slide swiper-slide">
-            <div class="nv-pro">
-              <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-todo-cuidado-com-seu-pedido"
-                  alt="Todo cuidado com seu pedido" /></div>
-              <div class="nv-pro-content">
-                <h3 class="nv-pro__title nv-title">Todo cuidado com seu pedido</h3>
-                <p>Cada pedido feito no site é enviado na nossa caixinha com o cheirinho da Navy. Suas peças são
-                  envolvidas no papel seda com um laço de cetim para finalizar.</p>
-              </div>
-            </div>
-          </div>
-          <div class="nv-pros-swiper-slide swiper-slide">
-            <div class="nv-pro">
-              <div class="nv-pro-image"><img class="nv-pro__img" pwa-src="pro-entrega-rapida-e-troca-facil"
-                  alt="Entrega rápida e troca fácil" /></div>
-              <div class="nv-pro-content">
-                <h3 class="nv-pro__title nv-title">Entrega rápida e troca fácil</h3>
-                <p>Despachamos seu pedido em até dois dias úteis e entregamos no mesmo dia para Piracicaba. E, se
-                  precisar, o frete da sua primeira troca é por nossa conta.</p>
-              </div>
-            </div>
-          </div>
+
+            <div class="nv-pros-swiper-pagination swiper-pagination nv-is-hidden-desktop"></div>
         </div>
-        <div class="nv-pros-swiper-pagination swiper-pagination"></div>
-      </div>
-      <div class="nv-has-text-centered nv-mt-6"><a class="nv-button nv-is-primary" href="#about">Conheça o
+      
+      <div pwa-to-page="/sobre" class="nv-has-text-centered nv-mt-6"><a class="nv-button nv-is-primary" href="#about">Conheça o
           #universonavy</a></div>
     </div>
   </section>
-
-  <!-- modal de newsletter -->
-  <div class="js-modal nv-modal" id="NewsletterModal" data-modal-name="search" pwa-hook="nv-modal">
-    <div class="nv-modal-wrapper" style="max-width: 600px"><span class="nv-modal__icon"><img
-          src="/assets/svg/icon-modal-email.svg" alt="" /></span>
-      <div class="nv-modal-header">
-        <p class="nv-modal__title nv-title">Quase lá! Informe seus dados e receba um desconto especial.</p>
-        <button class="js-modal-trigger nv-modal-close" type="button" data-modal-action="close"><span
-            class="nv-is-hidden">Fechar</span></button>
-      </div>
-      <div class="nv-modal-body">
-        <form action="javascript:void">
-          <div class="nv-field">
-            <div class="nv-control">
-              <input class="nv-input nv-is-large" type="text" placeholder="Nome" />
-            </div>
-          </div>
-          <div class="nv-field">
-            <div class="nv-control">
-              <input class="nv-input nv-is-large" type="email" placeholder="Email" />
-            </div>
-          </div>
-          <div class="nv-field">
-            <div class="nv-control">
-              <button class="nv-button nv-is-primary nv-is-fullwidth" type="submit">
-                Quero meu desconto
-
-              </button>
-            </div>
-          </div>
-        </form>
-        <hr />
-        <p class="nv-is-size-7">
-          Ao continuar, você concorda em receber e-mails com novidades e ofertas da Navy.
-          Todos os detalhes dos seus direitos em relação aos seus dados estão definidos em nossa <a
-            href="#politica-de-seguranca">Política de Segurança</a>.
-        </p>
-      </div>
-    </div>
-  </div>
 </main>
