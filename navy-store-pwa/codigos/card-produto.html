@@ -24,41 +24,33 @@
       </div>
 
     </div> -->
-    
+
     <!-- <img class="nv-product__img" pwa-src="product.image" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis" />     -->
-    <img class="nv-product__img" pwa-src="prod-example-1-image-1" alt="Vestido Midi Cavado Faixa Texto Example Ellipsis" />
+    <img pwa--if="product.image" class="nv-product__img" pwa-src="product.image" pwa-to-product-page pwa-alt="product.name" />
+    <img pwa--else pwa-src="nao-disponivel" class="nv-product__img" pwa-to-product-page pwa-alt="product.name" />
   </div>
 
-  <a pwa-to-product-page class="nv-product-content">
+  <a class="nv-product-content" pwa-to-product-paget>
     <div class="nv-product-content-header">
-      <p class="nv-product__title" title="Vestido Midi Cavado Faixa Texto Example Ellipsis">
+      <a class="nv-product__title" pwa-title="product.name">
         {{ product.name }}
-      </p>
+      </a>
 
       <div pwa-is-logged>
-        <a pwa-add-wishlist ><img pwa-src="icon-heart" alt="Adicionar nos favoritos"></a>
-        <a pwa-remove-wishlist ><img pwa-src="icon-heart-o" alt="Remover dos favoritos"></a>
+        <a pwa-add-wishlist><img pwa-src="icon-heart" alt="Adicionar nos favoritos"></a>
+        <a pwa-remove-wishlist><img pwa-src="icon-heart-o" alt="Remover dos favoritos"></a>
       </div>
     </div>
 
     <div class="nv-product-content-body">
       <div class="nv-product-prices">
-        <p class="nv-product__price">{{ product.price | price }}</p>
-        <p class="nv-product__price-details">5x {{product.price/5 | price }}</p>
+        <p class="nv-product__price">{{ product.promotional_price | price }}</p>
+        <p class="nv-product__price-details">5x {{product.promotional_price/5 | price }}</p>
       </div>
 
       <!-- color bullets do produto -->
-      <!-- <p class="nv-product-colors">
-        <label class="nv-product__color nv-is-ciano">
-          <input type="radio" name="product-color-input-2" value="ciano" /><span></span>
-        </label>
-        <label class="nv-product__color nv-is-sonic-silver">
-          <input type="radio" name="product-color-input-2" value="sonic-silver" /><span></span>
-        </label>
-        <label class="nv-product__color nv-is-chestnut">
-          <input type="radio" name="product-color-input-2" value="chestnut" /><span></span>
-        </label>
-      </p> -->
+      <p class="nv-product-colors" pwa-hook="recupera-cor">
+      </p>
     </div>
   </a>
 </div>
