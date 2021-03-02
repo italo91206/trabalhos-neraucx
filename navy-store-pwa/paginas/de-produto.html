@@ -55,6 +55,7 @@
                 <span>3</span>
               </p>
 
+              <!-- slider de fotos -->
               <div class="swiper-container nv-product-gallery-swiper-container" pwa-hook="nv-product-gallery">
                 <div class="swiper-wrapper nv-product-gallery-swiper-wrapper ">
                   <div pwa--if="product.image" pwa-each-image class="swiper-slide nv-product-gallery-swiper-slide">
@@ -75,30 +76,19 @@
                 </div>
               </div>
 
+              <!-- slider de thumbnails -->
               <div class="swiper-thumbs nv-product-gallery-swiper-thumbs">
                 <div class="swiper-container nv-product-gallery-swiper-thumbs-container">
                   <div class="swiper-wrapper nv-product-gallery-swiper-thumbs-wrapper">
-                    <div class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
+                    
+                    <div pwa--if="product.image" pwa-each-image class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
                       <div class="nv-product-gallery-thumb">
                         <div class="nv-product-gallery-thumb-image">
-                          <img class="nv-product-gallery-thumb__img" pwa-src="gallery-thumbnail-example-1">
+                          <img class="nv-product-gallery-thumb__img" pwa-src="image">
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
-                      <div class="nv-product-gallery-thumb">
-                        <div class="nv-product-gallery-thumb-image">
-                          <img class="nv-product-gallery-thumb__img" pwa-src="gallery-thumbnail-example-1">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide nv-product-gallery-swiper-thumbs-slide">
-                      <div class="nv-product-gallery-thumb">
-                        <div class="nv-product-gallery-thumb-image">
-                          <img class="nv-product-gallery-thumb__img" pwa-src="gallery-thumbnail-example-1">
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -124,6 +114,7 @@
               </div>
             </div>
           </div>
+
           <div class="nv-column nv-is-5-desktop">
             <div id="ProductPageStickySecondColumn">
               <div class="nv-section-product-info">
@@ -308,49 +299,45 @@
 
               <div class="nv-tab-complete">
                 <div class="nv-tab" pwa-hook="tab-product-detail">
-                  <a class="nv-btn-tab nv-active" href="#" data-tab="descricao">
-                    <span>Descrição</span>
-                    <img pwa-src="nv-acc-retract" alt="">
-                    <img pwa-src="nv-acc-expand" alt="">
-                  </a>
-                  <div class="nv-accordion-content">
-                    <p>Descrição</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                  </div>
-                  <a class="nv-btn-tab" href="#" data-tab="tecidos">
-                    <span>Tecidos</span>
-                    <img pwa-src="nv-acc-retract" alt="">
-                    <img pwa-src="nv-acc-expand" alt="">
-                  </a>
-                  <div class="nv-accordion-content">
-                    <p>Tecidos</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                  </div>
-                  <a class="nv-btn-tab" href="#" data-tab="cuidados">
-                    <span>Cuidados</span>
-                    <img pwa-src="nv-acc-retract" alt="">
-                    <img pwa-src="nv-acc-expand" alt="">
-                  </a>
-                  <div class="nv-accordion-content">
-                    <p>Cuidados</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas deleniti molestias necessitatibus
-                      quaerat quos incidunt! Quas officiis repellat dolore omnis nihil quo, ratione cupiditate! Sed,
-                      deleniti, recusandae! Animi, sapiente, nostrum?</p>
-                  </div>
+                    <div pwa--if="product.description"  style="display: flex; flex-direction: column;">
+                        <a class="nv-btn-tab nv-active" href="#" data-tab="descricao">
+                            <span>Descrição</span>
+                            <img pwa-src="nv-acc-retract" alt="">
+                            <img pwa-src="nv-acc-expand" alt="">
+                        </a>
+                        <div class="nv-accordion-content">
+                            <p>Descrição</p>
+                            <p>{{ product.description }}</p>
+                        </div>
+                    </div>
+                    <div pwa--if="product.specifications.tecidos"  style="display: flex; flex-direction: column;">
+                        <a  class="nv-btn-tab" href="#" data-tab="tecidos">
+                            <span>Tecidos</span>
+                            <img pwa-src="nv-acc-retract" alt="">
+                            <img pwa-src="nv-acc-expand" alt="">
+                        </a>
+                        <div class="nv-accordion-content">
+                            <p>Tecidos</p>
+                            <p>{{ product.specifications.tecidos }}</p>
+                        </div>
+                    </div>
+                    <div pwa--if="product.specifications.cuidados"  style="display: flex; flex-direction: column;">
+                        <a class="nv-btn-tab" href="#" data-tab="cuidados">
+                            <span>Cuidados</span>
+                            <img pwa-src="nv-acc-retract" alt="">
+                            <img pwa-src="nv-acc-expand" alt="">
+                        </a>
+                        <div class="nv-accordion-content">
+                            <p>Cuidados</p>
+                            <p><p>{{ product.specifications.cuidados }}</p></p>
+
+                            <div class="icones-cuidados-teste" pwa--html="product.specifications.cuidados_icones">
+                                {{ product.specifications.cuidados_icones }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="nv-tab-contents">
                   <div class="nv-tab-content nv-active" data-tab="descricao">
                     <p>Descricao</p>
@@ -514,6 +501,7 @@
                   <th>Quadril</th>
                 </tr>
               </thead>
+              
               <tbody>
                 <tr>
                   <th>PP</th>
