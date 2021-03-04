@@ -1,0 +1,153 @@
+<aside id="ns-cart" class="nv-carrinho">
+  <section class="nv-top-carrinho">
+    <a class="nv-close" pwa-toggle-cart>
+      <img pwa-src="icon-close-car" alt="Icon close">
+    </a>
+    <h1>Meu Carrinho <span pwa--if="$$cart.count > 0">( {{$$cart.count}} )</span></h1>
+  </section>
+
+  <a class="nv-carrinho-whats">
+    <span><img pwa-src="icon-whatsapp" alt="Icon whats"></span>
+    <span>Compartilhe sua sacola</span>
+  </a>
+
+  <span class="nv-faltam-carrinho">
+    Faltam apenas R$152,90 para você desbloquear frete grátis
+  </span>
+
+  <div>
+    <ul pwa-has-items class="nv-middle-carrinho">
+      <li pwa-each-item class="nv-produto-carrinho">
+        <div class="nv-top-produto-carrinho">
+          <picture>
+            <img pwa-src="product.image" pwa-alt="product.name" />
+            <img pwa--else pwa-src="nao-disponivel" pwa-alt="product.name" />
+          </picture>
+
+          <div class="nv-infos-produto">
+            <div class="nv-title-lix">
+              <h2>{{ product.name.length > 25 ? product.name.substr(0, 30) + '...' : product.name }}</h2>
+              <a pwa-remove-item>
+                <img pwa-src="icon-lixeira" alt="Icon whats">
+              </a>
+            </div>
+
+            <div class="nv-cor-size">
+              <small>Cor: {{ product.specifications.color }}</small>
+              <small>Tamanho: {{ product.specifications.tamanho }}</small>
+            </div>
+
+            <div class="nv-qt-preco">
+              <div class="nv-qt">
+                <a pwa-quantity-decrement class="nv-size-deact">
+                  <img pwa-src="icon-minus" alt="Ícone Menos">
+                </a>
+
+                <p pwa-quantity-box></p>
+
+                <a pwa-quantity-increment>
+                  <img pwa-src="icon-plus" alt="Ícone Mais">
+                </a>
+              </div>
+                
+              <p class="nv-preco-carrinho">{{ product.price | price }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE -->
+        <!-- <div class="nv-qt-preco">
+          <div class="nv-qt">
+            <a pwa-quantity-decrement class="nv-size-deact">
+              <img pwa-src="icon-minus" alt="Ícone Menos">
+            </a>
+
+            <p pwa-quantity-box></p>
+            <a pwa-quantity-increment>
+                <img pwa-src="icon-plus" alt="Ícone Mais">
+            </a>
+          </div>
+          <p class="nv-preco-carrinho">R$ 149,90</p>
+        </div> -->
+      </li>
+
+      <!-- <section class="nv-produto-carrinho nv-produto-brinde">
+                <div class="nv-top-produto-carrinho">
+                    <picture>
+                        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80">
+                        </picture>
+
+
+                        <div class="nv-infos-produto">
+                            <div class="nv-title-lix">
+                                <h2>VESTIDO MIDI CAVADO FAIXA</h2>
+                            </div>
+
+                            <div class="nv-brinde-preco">
+                                <p class="nv-brinde">
+                                    Brinde
+                                </p>
+                                <p class="nv-preco-carrinho">R$ 149,90</p>
+                            </div>
+
+                        </div>
+                </div>
+
+                <div class="nv-qt-preco">
+                    <div class="nv-qt">
+                        <a class="nv-size-deact">
+                            <img pwa-src="icon-minus" alt="Ícone Menos">
+                        </a>
+                            <p>1</p>
+                            <a>
+                                <img pwa-src="icon-plus" alt="Ícone Mais">
+                            </a>
+                    </div>
+                    <p class="nv-preco-carrinho">R$ 149,90</p>
+                </div>
+
+            </section> -->
+    </ul>
+  </div>
+
+  <div class="nv-bottom-carrinho">
+    <div class="nv-subtotal">
+      <p>Subtotal</p>
+      <p>{{ $$cart.subtotal | price }}</p>
+    </div>
+
+    <div pwa-with-coupon class="nv-desconto">
+      <p>Desconto</p>
+      <p>{{ $$cart.discount | price }}</p>
+    </div>
+
+    <form>
+      <div class="nv-form-carrinho">
+        <img pwa-src="icon-frete-car" alt="Icon close">
+        <input pwa-freight-box required type="text" placeholder="Digite seu CEP">
+        <button pwa-freight-submit>APLICAR</button>
+        <div pwa-each-freight>
+          <p pwa--if="freight.price > 0" class="nv-total-frente">Total frete: {{ freight.price | price }}</p>
+          <p pwa--if="freight.price <= 0" class="nv-total-frente">Frete gratuito</p>
+        </div>
+      </div>
+    </form>
+
+    <form>
+      <div class="nv-form-carrinho nv-form-cupom">
+        <img pwa-src="icon-cupom-car" alt="Icon Cupom">
+        <input pwa-coupon-box required type="text" placeholder="Digite seu cupom">
+        <button pwa-coupon-apply>APLICAR</button>
+      </div>
+    </form>
+
+    <div class="nv-total">
+      <div class="nv-header-total">
+        <p>Total</p>
+        <p>{{ $$cart.total | price }}</p>
+      </div>
+      <button pwa-checkout>IR PARA PAGAMENTO</button>
+    </div>
+
+  </div>
+</aside>

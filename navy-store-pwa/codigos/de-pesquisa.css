@@ -5,7 +5,7 @@
     transition: width .25s ease;
 }
 
-.nv-column .rectangle {
+#column-options .rectangle {
     width: 16px;
     height: 24px;
     border: 1px solid #D9D5D2;
@@ -14,7 +14,7 @@
     display: block;
 }
 
-.nv-column .active .rectangle {
+#column-options .active .rectangle {
     background: #41403F;
     border: unset;
 }
@@ -39,4 +39,104 @@
     .nv-product-card-pesquisa {
         max-width: 100% !important
     }
+}
+
+#ProductsPageHeaderMiddle {
+    background-color: #272626;
+    border-bottom: none;
+    color: #FFFFFF;
+}
+
+.nv-filter__color span {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #E6E7E8;
+    background: #6E6E7A;
+}
+
+.nv-filter__color span.azul {
+    background: #81dbfe;
+}
+
+.nv-filter__color span.preto {
+    background: #29292b;
+}
+
+.nv-filter__color span.branco {
+    background-color: #fdfffd;
+}
+
+.nv-filter__color > input[type=radio]:checked ~ span {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+    border: 2px solid #FEFEFE;
+    transition: all .25 ease;
+}
+
+#ProductsPageHeaderBottom .nv-new-container {
+    justify-content: space-between;
+}
+
+.nv-products-header {
+    border-bottom: 1px solid rgba(230, 231, 232, 0.7);
+    padding: 0.8125rem 0 0.875rem;
+}
+
+.nv-labels__item > a {
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    color: #606062;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 8px;
+}
+
+.nv-labels__item > a:hover {
+    opacity: 0.95;
+}
+
+#up-button {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid #E6E7E8;
+}
+
+.nv-filter__color span.vermelho {
+    background: #f44040;
+}
+
+.nv-filter__size {
+    margin-bottom: 10px;
+}
+
+#up-button {
+    border: 1px solid #E6E7E8;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    padding: unset;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.nv-filter__color span.roxo {
+    background-color: #9b249b;
+}
+
+.nv-group-86 span:last-child a {
+    font-size: 14px;
+}
+
+select[name="filter"] {
+    font-size: 12px !important;
+    padding-left: 1rem;
+    padding-right: 0.875rem !important;
+}
+
+.nv-select {
+    height: auto !important;
 }

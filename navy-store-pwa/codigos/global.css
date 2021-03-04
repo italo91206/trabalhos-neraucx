@@ -48,6 +48,7 @@ textarea {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -156,6 +157,10 @@ img {
   max-width: 100%;
 }
 
+.nv-none{
+    display: none !important;
+}
+
 input[type=checkbox],
 input[type=radio] {
   vertical-align: baseline;
@@ -244,6 +249,10 @@ table th {
   .nv-container:not(.nv-is-max-desktop):not(.nv-is-max-widescreen) {
     max-width: 1344px;
   }
+}
+
+.nv-d-flex {
+    display: flex;
 }
 
 .nv-content li + li {
@@ -6493,21 +6502,16 @@ a:hover {
 .nv-button:not(.nv-preserv-default):not(.nv-is-private):not(.nv-is-small) {
   height: 3em;
 }
-.nv-button:not(.nv-preserv-default):not(.nv-is-private):not(.nv-is-small).nv-is-icon {
+
+/* .nv-button:not(.nv-preserv-default):not(.nv-is-private):not(.nv-is-small).nv-is-icon {
   width: 40px;
   height: 40px;
   border-radius: 1297299px;
   font-size: 1em;
   padding: 0;
-}
-.nv-button:not(.nv-preserv-default):not(.nv-is-private):not(.nv-is-small).nv-is-icon img {
-  display: block;
-  flex: none;
-  width: 60%;
-  height: 60%;
-}
+} */
 
- .nv-overlay {
+.nv-overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
@@ -7187,17 +7191,7 @@ a:hover {
   padding: 0.75rem;
   
 }
-.nv-labels__item > span {
-  background-color: #FFFFFF;
-  border-radius: 2px;
-  color: #606062;
-  cursor: pointer;
-  display: inline-block;
-  padding: 4px 8px;
-}
-.nv-labels__item > span:hover {
-  opacity: 0.95;
-}
+
 .nv-labels__item.nv-is-active > span {
   color: white;
   background-color: rgba(121, 121, 124, 0.98);
@@ -7231,105 +7225,6 @@ a:hover {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.nv-product-gallery {
-  align-items: center;
-  background-color: #E6E7E8;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.nv-product-gallery-image {
-  margin: 0 auto;
-  max-width: 606px;
-}
-.nv-product-gallery-note {
-  width: calc(100% - 3rem);
-  height: auto;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #41403F;
-  /*! Note: backdrop-filter has minimal browser support */
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
-}
-
-.nv-product-gallery__img {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.nv-product-gallery-note__close {
-  width: 16px;
-  height: 16px;
-  align-items: center;
-  background-color: white;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  position: absolute;
-  right: 1.5rem;
-  top: -8px;
-}
-.nv-product-gallery-note__close::after {
-  
-  font-family: "icon" !important;
-  speak: never;
-  font-size: 1em;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "x";
-  font-size: 0.75em;
-  font-weight: 700;
-}
-.nv-product-gallery-note__close:hover {
-  background-color: #f14668;
-  color: white;
-}
-.nv-product-gallery-note__icon {
-  width: 64px;
-  height: 64px;
-  align-items: center;
-  background-color: white;
-  border-radius: 100%;
-  display: flex;
-  float: left;
-  justify-content: center;
-  margin-right: 1.5rem;
-}
-.nv-product-gallery-note__title {
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-}
-.nv-product-gallery-note__description {
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  max-width: 350px;
-}
-
-.nv-product-gallery-thumb__img {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .nv-group-96 {
@@ -8459,11 +8354,6 @@ a:hover {
   }
 }
 
-.nv-products-header {
-  border-bottom: 1px solid rgba(230, 231, 232, 0.7);
-  padding: 0.75rem 1.5rem;
-}
-
 #ProductsPageHeaderTop {
   background-color: #272626;
   background-image: url("data:image/svg+xml,%3Csvg width='241' height='120' viewBox='0 0 241 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' fill-rule='evenodd' clip-rule='evenodd' d='M205.201 -59.2329C205.224 -59.2401 205.24 -59.2553 205.255 -59.2706C205.276 -59.2915 205.297 -59.3124 205.339 -59.3124C205.339 -59.2918 205.349 -59.2713 205.364 -59.2495L215.296 -60.3165C215.38 -60.3165 215.463 -60.3165 215.463 -60.2328L240.575 -32.6343L240.817 -32.4527C240.896 -32.373 240.9 -32.2932 240.9 -32.2135L240.9 -32.2017V-32.0344L240.844 -31.9501L231.194 11.3919V11.393L231.194 11.3936C231.194 11.4021 231.192 11.4106 231.189 11.4191L229.117 53.2699C229.143 53.2803 229.166 53.295 229.186 53.3142C229.102 53.4815 229.186 53.5652 229.186 53.5652V53.7325L205.861 87.8421L209.94 115.568C209.94 115.587 209.936 115.61 209.929 115.635L212.078 122.639C212.101 122.679 212.116 122.729 212.116 122.764C212.116 122.796 212.116 122.815 212.112 122.832C212.111 122.834 212.111 122.836 212.11 122.839C212.101 122.863 212.081 122.884 212.033 122.932L188.935 146.28C188.928 146.327 188.908 146.361 188.855 146.361L188.855 146.361L188.854 146.362C188.801 146.414 188.782 146.433 188.753 146.44L129.362 193.051C129.359 193.054 129.357 193.056 129.354 193.059C129.334 193.078 129.314 193.092 129.294 193.101C129.26 193.122 129.227 193.135 129.194 193.135L27.2781 173.22C27.1977 173.22 27.1367 173.182 27.1042 173.132L0.25116 172.467C0.244766 172.467 0.238434 172.467 0.23204 172.466C0.210526 172.467 0.188995 172.467 0.16748 172.467C0.114365 172.467 0.061264 172.4 0.0295563 172.329L0.000152588 172.3V172.216V172.049L0.0249786 172.018L7.36354 113.309C7.36354 113.225 7.44722 113.142 7.5309 113.142H7.74101L48.0195 90.2318L37.2495 20.185C37.2444 20.1763 37.2412 20.1681 37.2392 20.1587C37.2357 20.1429 37.2357 20.124 37.2357 20.0952V20.0949C37.2357 20.0621 37.2357 20.0293 37.2408 19.9966L38.3235 -1.15828C38.3235 -1.18946 38.3351 -1.22064 38.354 -1.2475L16.6513 -72.3657V-72.5331L16.6514 -72.5331C16.735 -72.6168 16.735 -72.6168 16.8186 -72.6168L26.604 -73.0349L26.605 -73.035L26.6087 -73.0351H26.609C26.6407 -73.0351 26.6844 -73.0351 26.7265 -73.026L205.201 -59.2329ZM34.8088 128.873L48.5315 90.4659L118.366 95.4003L34.8088 128.873ZM121.496 38.169L119.242 94.3427L91.1848 50.7431L121.496 38.169ZM90.897 50.3402C90.8702 50.323 90.8366 50.3065 90.8022 50.3027L57.8602 14.4253L63.6021 16.5442L121.151 37.8306L116.944 39.5771L90.897 50.3402ZM90.2559 50.7253L48.5236 89.6589L37.9117 20.4728L90.2559 50.7253ZM118.943 94.9458L48.9143 90.0027L90.7 51.0584L118.943 94.9458ZM119.239 95.586L128.844 192.23L34.9697 129.26L119.239 95.586ZM34.2428 128.835L27.6059 124.912L8.16136 113.367L47.8924 90.7471L34.2428 128.835ZM7.76852 113.835L33.9402 129.374L0.608139 171.285L7.76852 113.835ZM34.5719 129.636L36.1268 130.679L128.023 192.382L27.5556 172.807L34.5719 129.636ZM37.8226 19.6534L56.4511 13.7115L38.8256 -0.656227L37.8226 19.6534ZM38.8226 -1.25967L36.4719 -15.2618L27.3853 -69.7174L56.3752 13.087L38.8226 -1.25967ZM56.8479 14.1137L89.3797 49.5443L38.2278 20.0528L56.8479 14.1137ZM42.1602 -29.0806L26.9779 -72.5304L204.321 -58.8114L81.6525 1.41531L57.0664 13.4848L42.1602 -29.0806ZM17.1534 -72.1984L37.8189 -4.67975L26.4838 -72.5316L17.1534 -72.1984ZM129.36 192.025L119.792 95.6829L170.646 123.49L129.36 192.025ZM216.254 -50.3628L240.279 -32.1883L213.79 7.79179L205.586 -58.4155L216.254 -50.3628ZM205.841 -58.8104L218.619 -49.1532L238.532 -34.1716L215.296 -59.8145L205.841 -58.8104ZM204.203 -58.1691L57.6142 13.8016L121.75 37.4697L150.977 3.58567L204.203 -58.1691ZM122.505 37.3307L205.011 -58.3334L213.371 8.297L122.505 37.3307ZM122.1 37.7999L122.438 37.4081L124.585 37.1235L213.398 8.81351L215.012 25.12L167.494 31.4383L215.212 25.1157H215.296C215.463 25.1157 215.547 25.1993 215.547 25.3667C215.547 25.4504 215.547 25.534 215.463 25.534L214.854 26.0652L204.386 69.0836L169.054 75.9295L154.49 78.7302L154.23 78.4032L153.694 78.8716L153.65 78.8151L154.186 78.3476L126.359 43.3369L122.1 37.7999ZM154.186 78.3476L154.23 78.4032L214.616 25.7195L214.505 25.7343L154.186 78.3476ZM188.353 146.193L171.059 123.887L130.161 191.778L188.353 146.193ZM120.109 95.2331L153.472 79.533L170.473 122.786L120.109 95.2331ZM206.912 122.668L173.77 123.145L186.007 120.655L209.439 115.903L211.53 122.597L206.912 122.668ZM188.687 145.859L211.271 123.024L188.036 123.357L171.533 123.6L171.461 123.615L188.687 145.859ZM171.866 122.912L205.434 88.2881L209.35 115.286L171.866 122.912ZM171.201 122.927L154.139 79.5338L204.333 87.831L205.086 87.956L171.201 122.927ZM153.287 79.0793L148.014 81.5607L119.739 94.817L121.998 38.42L153.287 79.0793ZM175.524 82.5506L155.068 79.1578L169.72 76.3188L204.334 69.6308L205.338 87.4536L175.524 82.5506ZM204.876 69.3839L204.844 69.448L205.796 86.9776L227.973 54.4616L204.876 69.3839ZM205.294 68.5329L217.486 43.7514L228.482 53.5524L205.294 68.5329ZM230.692 12.6481L228.686 53.0271L217.728 43.2603L230.692 12.6481ZM217.087 43.3746L205.352 67.2594L215.215 26.7305L217.111 43.0545L217.053 43.1895C217.053 43.2512 217.053 43.3129 217.087 43.3746ZM230.337 12.2481L217.517 42.11L216.119 30.2867L215.557 25.4504L217.028 24.1286L230.337 12.2481ZM121.75 37.4697L124.964 33.7671L121.767 37.4762L121.75 37.4697ZM230.776 11.0583L240.104 -30.8363L214.09 8.30519L230.776 11.0583ZM230.479 11.4841L223.036 18.1706L215.547 24.8647L214.047 8.7852L230.479 11.4841ZM34.0559 130.044L27.1109 172.718L0.75322 171.965L34.0559 130.044Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='215' y1='1.5' x2='28' y2='149' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0779663' stop-opacity='0.69'/%3E%3Cstop offset='0.956699' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
@@ -8480,12 +8370,6 @@ a:hover {
   #ProductsPageHeaderTop {
     background-position-x: 9rem;
   }
-}
-
-#ProductsPageHeaderMiddle {
-  background-color: #272626;
-  border-bottom: none;
-  color: #FFFFFF;
 }
 
 #ProductsPageSidebar {
@@ -9535,4 +9419,23 @@ a:hover {
     .isdesktop.flex{
         display: none;
     }
+}
+
+.nv-new-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+@media(max-width: 1280px){
+  .nv-new-container {
+    max-width: 1150px
+  }
+}
+
+.center-aligned {
+  align-items: center;
+}
+
+.ismobile {
+  display: none;
 }

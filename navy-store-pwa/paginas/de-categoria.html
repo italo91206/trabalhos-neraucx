@@ -54,21 +54,23 @@
       <div class="nv-products-header" id="ProductsPageHeaderBottom">
         <div class="nv-new-container flex center-aligned">
           <!-- Ordenação de resultados -->
-          <div class="isdesktop">
-            <div class="nv-select" style="max-width: 205px; width: 100%">
-              <select style="width: 100%">
-                <option selected="selected" disabled="disabled">Mais Vendidos</option>
-                <option value="Item">Item</option>
+          <pwa-manual-filter class="isdesktop">
+            <div class="nv-select">
+              <select pwa-filter-input name="filter">
+                <option value="name:+" selected>Mais Vendidos</option>
+                <option value="product_id:-">Lançamentos</option>
+                <option value="promotional_price:-">Maior preço</option>
+                <option value="promotional_price:+">Menor preço</option>
               </select>
             </div>
-          </div>
+          </pwa-manual-filter>
   
           <!-- número de resultados -->
           <div class="isdesktop">
             <p>{{ $$paginate.count }} Resultados</p>
           </div>
   
-          <!-- para alterar as opções de exibição -->
+          <!-- para alterar as opções de exibição -->n
           <div id="column-options" class="isdesktop flex" pwa-hook="listagem-card-options">
             <div class="column-options-divider flex">
               <span class="rectangle"></span>
@@ -239,9 +241,9 @@
                 </div>
   
                 <div class="nv-column nv-is-12-desktop nv-has-text-centered nv-mt-6">
-                  <button class="nv-button nv-is-icon" type="button">
+                  <a id="up-button" href="#ns-pesquisa"  class="nv-button nv-is-icon" type="button">
                     <img pwa-src="icon-top-full" alt="" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -251,7 +253,7 @@
     </pwa-result-list>
   
     <!-- container da paginação  -->
-    <section class="nv-section nv-py-0" id="ProductsPagePagination">
+    <!-- <section class="nv-section nv-py-0" id="ProductsPagePagination">
       <div class="nv-container">
         <div class="nv-pagination">
           <div class="nv-pagination-prev nv-d-flex">
@@ -269,5 +271,5 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
