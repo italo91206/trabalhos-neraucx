@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Averta';
+    src: url('../fonts/Averta-Regular-w2.woff2') format('woff2'),
+        url('../fonts/Averta-Regular-w.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('../fonts/Averta-Semibold-w2.woff2') format('woff2'),
+        url('../fonts/Averta-Semibold-w.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('../fonts/Averta-Bold-w2.woff2') format('woff2'),
+        url('../fonts/Averta-Bold-w.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Regular-w2.woff2') format('woff2'),
+        url('../fonts/PTSans-Regular-w.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Italic-w2.woff2') format('woff2'),
+        url('../fonts/PTSans-Italic-w.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Bold-w2.woff2') format('woff2'),
+        url('../fonts/PTSans-Bold-w.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

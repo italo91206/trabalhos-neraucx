@@ -1,0 +1,208 @@
+.navigation-wrap {
+    position: relative;
+    .navigation-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        &-prev {
+            left: -25px;
+        }
+        &-next {
+            right: -25px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .navigation-control {
+            &-prev {
+                left: -20px;
+            }
+            &-next {
+                right: -20px;
+            }
+        }
+    }
+}
+
+.navigation-control {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: $color-brand;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.2s $easing;
+    &:before {
+        display: inline-flex;
+        font-family: $font-icon;
+        font-size: 0.8em;
+        font-weight: 900;
+        transition: 0.2s $easing;
+    }
+    &-prev {
+        &:before {
+            content: "\f053";
+        }
+    }
+    &-next {
+        &:before {
+            content: "\f054";
+        }
+    }
+    &.swiper-button-disabled {
+        opacity: 0.4;
+    }
+    &.is-green {
+        color: #fff;
+        background-color: $green;
+        &:hover {
+            color: #fff;
+            background-color: $green-dark;
+        }
+    }
+    &.is-orange {
+        color: #fff;
+        background-color: $orange;
+        &:hover {
+            color: #fff;
+            background-color: $orange-dark;
+        }
+    }
+    &.is-blue {
+        color: #fff;
+        background-color: $blue-light;
+        &:hover {
+            color: #fff;
+            background-color: $blue-dark;
+        }
+    }
+    &.is-purple {
+        color: #fff;
+        background-color: $purple-light;
+        &:hover {
+            color: #fff;
+            background-color: $purple-dark;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 40px;
+        height: 40px;
+        &:before {
+            font-size: 0.64em;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &-control {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 15px;
+        &:after {
+            display: inline-flex;
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: $violet;
+            border-radius: 50%;
+        }
+        &-active {
+            &:after {
+                width: 3px;
+                height: 3px;
+                background: $pink;
+            }
+        }
+    }
+}
+
+.pagination-arrow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color: $orange2;
+    transition: 0.2s $easing;
+    &:before {
+        display: inline-flex;
+        font-family: $font-icon;
+        font-size: 0.8em;
+        font-weight: 900;
+    }
+    &-prev {
+        &:before {
+            content: "\f053";
+        }
+    }
+    &-next {
+        &:before {
+            content: "\f054";
+        }
+    }
+    &:hover {
+        color: $orange2-dark;
+    }
+}
+
+.pagination-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-item {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        font-family: $headings-font-family;
+        font-size: $h6-font-size;
+        font-weight: $headings-font-weight;
+        color: $orange-dark;
+        border-radius: 50%;
+        transition: 0.2s $easing;
+        &:hover {
+            color: $orange2-dark;
+        }
+        &.current {
+            color: #fff;
+            background-color: $orange-dark;
+            &:hover {
+                background-color: $orange2-dark;
+            }
+        }
+    }
+    .prev, .next {
+        display: inline-flex;
+        color: $orange-dark;
+        &:before {
+            display: inline-flex;
+            font-family: $font-icon;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+        &:hover {
+            color: $orange2-dark;
+        }
+    }
+    .prev {
+        &:before {
+            content: "\f053";
+        }
+    }
+    .next {
+        &:before {
+            content: "\f054";
+        }
+    }
+}

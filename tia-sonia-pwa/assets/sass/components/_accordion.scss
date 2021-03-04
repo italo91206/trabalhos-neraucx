@@ -1,0 +1,54 @@
+.accordion {
+    background: #fff;
+    border: 1px solid $gray-light;
+    summary {
+        padding: 12px;
+        background: $gray-light;
+        &::-webkit-details-marker {
+            display: none;
+        }
+        .accordion-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $body-color-alt;
+            &:after {
+                display: inline-flex;
+                font-family: $font-icon;
+                font-size: 14px;
+                font-weight: 900;
+                content: "\f078";
+            }
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &-content {
+        padding: 20px;
+        ul {
+            li {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                a {
+                    display: inline-flex;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &[open] {
+        summary {
+            background: darken($gray-light, 2%);
+            .accordion-title {
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}

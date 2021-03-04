@@ -1,0 +1,276 @@
+.footer {
+    background: #012765;
+    &-newsletter {
+        background: $blue-light url(../images/bg-footer-newsletter.svg) no-repeat 0 20px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+        &-title {
+            color: #fff;
+        }
+        &-form {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "input-email input-nome button";
+            align-items: flex-end;
+            .input-group {
+                margin: 0;
+                &.input-email {
+                    grid-area: input-email;
+                }
+                &.input-nome {
+                    grid-area: input-nome; 
+                }
+            }
+            .button {
+                grid-area: button;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            &-title {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 205px;
+            background-position: 0 101%;
+            &-form {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    "input-email input-nome"
+                    "button button";
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            &-form {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-areas:
+                    "input-email"
+                    "input-nome"
+                    "button";
+            }
+        }
+    }
+
+    &-content {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        &-logo {
+            margin-bottom: 35px;
+            .logo {
+                display: block;
+                img {
+                    width: 190px;
+                }
+            }
+        }
+        &-sobre {
+            @include caption;
+            color: #fff;
+            margin-bottom: 15px;
+            p {
+                line-height: $headings-line-height;
+                margin: 0;
+            }
+        }
+        &-nav {
+            margin-bottom: 30px;
+            li {
+                display: flex;
+                a {
+                    display: inline-flex;
+                    @include caption;
+                    color: $blue4;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &:not(:last-child) {
+                    margin: 0 0 14px;
+                }
+            }
+        }
+        &-copy {
+            @include caption;
+            color: $blue4;
+            p {
+                margin: 0;
+            }
+        }
+        &-contato {
+            li {
+                display: grid;
+                grid-template-columns: 40px auto;
+                grid-template-areas: "icon text";
+                color: $blue4;
+                a {
+                    display: inline-flex;
+                    color: $blue4;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &:before {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    grid-area: icon;
+                    content: "";
+                    width: 30px;
+                    height: 27px;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+                &.telefone {
+                    &:before {
+                        background-image: url(../images/icon-phone.svg);
+                    }
+                }
+                &.email {
+                    &:before {
+                        background-image: url(../images/icon-mail.svg);
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &-revendedores {
+            padding: 25px 30px;
+            border: 1px solid $blue4;
+            &-title {
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            &-excerpt {
+                color: $blue5;
+                margin-bottom: 25px;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        &-social {
+            display: flex;
+            li {
+                display: inline-flex;
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+                a {
+                    display: block;
+                    i {
+                        font-size: 20px;
+                        color: $blue4;
+                        transition: transform 0.2s $easing;
+                    }
+                    &:hover {
+                        i {
+                            color: lighten($blue4, 10%);
+                        }
+                    }
+                }
+            }
+        }
+        &-bandeiras {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5px;
+            margin-right: -5px;
+            li {
+                margin: 0 5px 10px;
+            }
+        }
+        &-selos {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+            li {
+                margin: 0 10px 10px;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .row {
+                row-gap: 30px;
+            }
+            &-logo {
+                text-align: center;
+            }
+            &-sobre {
+                text-align: center;
+            }
+            &-nav {
+                li {
+                    justify-content: center;
+                }
+            }
+            &-copy {
+                text-align: center;
+            }
+            &-contato-wrap {
+                display: flex;
+                justify-content: center;
+            }
+            &-contato {
+                li {
+                    display: flex;
+                    justify-content: center;
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+            &-revendedores {
+                padding: 0;
+                text-align: center;
+                border: none;
+            }
+            &-social {
+                justify-content: center;
+            }
+            &-bandeiras {
+                justify-content: center;
+            }
+            &-selos {
+                justify-content: center;
+            }
+        }
+    }
+
+    &-section {
+        &-title {
+            margin-bottom: 15px;
+            .title {
+                @include button;
+                color: #fff;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        @include media-breakpoint-down(md) {
+            &-title {
+                text-align: center;
+            }
+        }
+    }
+
+    &-dev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #002053;
+        a {
+            display: block;
+        }
+    }
+}

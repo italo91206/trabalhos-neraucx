@@ -1,0 +1,169 @@
+.page-revendedor {
+    padding-bottom: 80px;
+    .revendedor-hero {
+        figure {
+            width: 100%;
+            height: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            figure {
+                height: 300px;
+            }
+        }
+    }
+
+    .categorias-slider {
+        .categoria-item {
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 700;
+                color: $orange;
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    border: 1px solid $yellow-light;
+                    margin-bottom: 10px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    img {
+                        border-color: $yellow-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .sobre {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: calc(50% + 90px);
+            height: 100%;
+            background: #fff;
+        }
+        &-text {
+            padding: 50px;
+            .section-title {
+                .title {
+                    color: $orange-dark;
+                }
+            }
+        }
+        &-img {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @include media-breakpoint-down(md) {
+            &:before {
+                width: 100%;
+            }
+            &-text {
+                padding: 30px;
+            }
+            &-img {
+                padding: 0;
+                img {
+                    width: 100%;
+                    height: 390px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .banners {
+        .banner {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 356px;
+            padding: 40px 60px;
+            &.banner-frete {
+                background-color: $yellow;
+                background-image: url(../images/bg-banner-frete.png);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                .banner-title {
+                    margin-bottom: 10px;
+                    .title {
+                        color: #fff;
+                    }
+                }
+                .banner-content {
+                    color: $orange-dark;
+                    margin-bottom: 20px;
+                }
+            }
+            &.banner-promocao {
+                background-color: $green;
+                background-image: url(../images/bg-banner-promocao.png);
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                .banner-title {
+                    margin-bottom: 10px;
+                    .title {
+                        color: #fff;
+                    }
+                }
+                .banner-content {
+                    color: $green2-dark;
+                    margin-bottom: 20px;
+                }
+            }
+            .banner-wrap {
+                width: 50%;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            .banner {
+                align-items: center;
+                .banner-wrap {
+                    width: 65%;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            .col-banner {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            .banner {
+                height: auto;
+                padding: 30px;
+                &.banner-frete, &.banner-promocao {
+                    background-image: none;
+                }
+                .banner-wrap {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .novidades {
+        .section-title {
+            .title {
+                color: $orange-dark;
+            }
+        }
+    }
+}

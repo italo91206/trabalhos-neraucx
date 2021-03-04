@@ -1,0 +1,23 @@
+.breadcrumbs {
+    display: flex;
+    li {
+        display: inline-flex;
+        align-items: center;
+        @include body2;
+        color: $gray2;
+        a {
+            display: flex;
+            align-items: center;
+            color: $gray2;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &:not(:last-child) {
+            &:after {
+                content: "/";
+                padding: 0 6px;
+            }
+        }
+    }
+}

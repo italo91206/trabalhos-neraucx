@@ -1,0 +1,70 @@
+@function em($pixels, $context: $font-size) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1em;
+}
+
+@mixin placeholder {
+    &.placeholder { @content }
+    &:-moz-placeholder { @content }
+    &::-webkit-input-placeholder { @content }
+}
+
+@mixin gutter($size: '30px') {
+	margin-left: -$size;
+	margin-right: -$size;
+	[class*="col-"] {
+		padding-left: $size;
+		padding-right: $size;
+	}
+}
+
+// Guide
+@mixin subtitle {
+    font-family: $font-family-alternative;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+@mixin body2 {
+    font-size: 14px;
+}
+
+@mixin button {
+    font-family: $font-family-alternative;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+@mixin caption {
+    font-family: $font-family-alternative;
+    font-size: 12px;
+    letter-spacing: 0.028em;
+}
+
+@mixin overline {
+    font-family: $font-family-alternative;
+    font-size: 11px;
+    font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+@mixin scrollHorizontal {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 50%;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

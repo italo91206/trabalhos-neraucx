@@ -1,0 +1,10 @@
+$use-fadeIn: true;
+$use-fadeInUp: true;
+$base-distance: 10px;
+
+@import "node_modules/animate-sass/helpers/mixins";
+@import "node_modules/animate-sass/helpers/settings";
+@import "node_modules/animate-sass/helpers/base";
+
+@import "node_modules/animate-sass/animations/fade-enter/fadeIn";
+@import "node_modules/animate-sass/animations/fade-enter/fadeInUp";

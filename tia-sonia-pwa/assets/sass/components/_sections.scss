@@ -1,0 +1,21 @@
+section {
+    margin-bottom: 80px;
+    &.margin-small {
+        margin-bottom: 40px;
+    }
+    figure {
+        margin: 0;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+    .section-content {
+        margin-bottom: 40px;
+        p {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

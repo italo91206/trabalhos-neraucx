@@ -1,0 +1,76 @@
+.searchbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 15px;
+    border: 1px solid $violet;
+    .form-control {
+        padding: 0;
+        border: none;
+    }
+    &-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+        border: none;
+        &:after {
+            display: inline-flex;
+            content: "";
+            width: 22px;
+            height: 22px;
+            background: url(../images/icon-search.svg) no-repeat 50%;
+            background-size: cover;
+        }
+    }
+    &-found {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        padding: 10px;
+        background-color: #F8F9FA;
+        box-shadow: 0 4px 20px rgba(#000, 0.15);
+        overflow-y: auto;
+        z-index: 100;
+        &-item {
+            display: flex;
+            align-items: center;
+            figure {
+                width: 60px;
+                height: 60px;
+                flex-shrink: 0;
+                margin: 0 10px 0 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-content {
+                &-title {
+                    @include body2;
+                    color: $gray2;
+                }
+                &-description {
+                    @include subtitle;
+                    color: $violet-light;
+                    margin: 0;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &:focus-within {
+        border-color: $violet-light;
+        .searchbox-found {
+            display: block;
+        }
+    }
+}

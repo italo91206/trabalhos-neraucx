@@ -1,0 +1,90 @@
+// Typography
+$font-family-base: 'PT Sans';
+$font-family-alternative: 'Averta';
+$font-size: 16px;
+$font-weight-normal: 400;
+$line-height-base: 1.68;
+$body-color: #6A6A57;
+$body-color-alt: #4F4F40;
+
+$headings-font-family: $font-family-alternative;
+$headings-font-weight: 700;
+$headings-line-height: 1.22;
+$headings-margin-bottom: 0;
+
+$h1-font-size: 48px;
+$h2-font-size: 38px;
+$h3-font-size: 32px;
+$h4-font-size: 27px;
+$h5-font-size: 23px;
+$h6-font-size: 19px;
+
+$font-icon: 'Font Awesome 5 Free';
+$font-icon-brands: 'Font Awesome 5 Brands';
+
+// Colors
+$color-brand:    #03257E;
+$blue:           #03257E;
+$blue-dark:      #0C225E;
+$blue-light:     #0952AC;
+$blue2:          #4698CA;
+$blue2-dark:     #317CAA;
+$blue2-light:    #6CADD5;
+$blue3:          #1D4F91;
+$blue3-dark:     #143866;
+$blue3-light:    #2566BB;
+$blue4:          #56CCF2;
+$blue5:          #8AA6D5;
+$orange:         #FF7F41;
+$orange-dark:    #FF5E0F;
+$orange-light:   #FFA275;
+$orange2:        #FA4616;
+$orange2-dark:   #D73105;
+$orange2-light:  #FB6C46;
+$yellow:         #FFBF3F;
+$yellow-dark:    #E5AC39;
+$yellow-light:   #FFD073;
+$purple:         #B0008E;
+$purple-dark:    #800067;
+$purple-light:   #E500B9;
+$pink:           #E31C79;
+$pink-dark:      #B61661;
+$pink-light:     #E94994;
+$green:          #78BE21;
+$green-dark:     #5D941A;
+$green-light:    #93DC37;
+$green2:         #489560;
+$green2-dark:    #377149;
+$green2-light:   #5DB177;
+$violet:         #DFE0EE;
+$violet-dark:    #606395;
+$violet-light:   #9C9EBF;
+$gray:           #E0E0E0;
+$gray-dark:      #BDBDBD;
+$gray-light:     #F2F2F2;
+$gray2:          #87876E;
+
+// Grids
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 600px,
+    md: 800px,
+    lg: 1100px,
+    xl: 1280px
+) !default;
+
+// Containers
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1272px
+) !default;
+
+$container-side-width: var(--containerSideWidth);
+$container-side-width-negative: var(--containerSideWidthNegative);
+
+// Miscellaneous
+$easing: cubic-bezier(.4,0,.22,1);

@@ -1,0 +1,169 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $font-size;
+    scroll-behavior: smooth;
+    letter-spacing: 0.028em;
+}
+
+body {
+    &:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        background: rgba(#000, 0.6);
+        transition: 0.4s $easing;
+    }
+    &.overlay {
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+#app {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    padding-right: 40px;
+    padding-left: 40px;
+    @include media-breakpoint-down(xs) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.container {
+    @include media-breakpoint-down(lg) {
+        max-width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include media-breakpoint-down(xs) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+main {
+    background: #FAFAF7;
+    &.main-padding {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $body-color;
+    text-decoration: none;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+a,
+a:hover,
+a:focus,
+input,
+button,
+textarea,
+select {
+    text-decoration: none;
+    outline: none !important;
+}
+
+b,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:-webkit-autofill,
+select:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: normal;
+}
+
+h1 {
+    line-height: 1;
+    @include media-breakpoint-down(md) {
+        font-size: $h2-font-size;
+    }
+}
+
+// Helpers
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.guide-subtitle {
+    @include subtitle;
+}
+
+.guide-body2 {
+    @include body2;
+}
+
+.guide-button {
+    @include button;
+}
+
+.guide-caption {
+    @include caption;
+}
+
+.guide-overline {
+    @include overline;
+}
+
+.btn-loja {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    background: $pink url(../images/bg-home-sobre.svg) no-repeat 50%;
+    box-shadow: 2px 2px 8px rgba(#000, 0.24);
+    border-radius: 50%;
+    z-index: 100;
+}

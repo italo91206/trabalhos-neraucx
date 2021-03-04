@@ -1,0 +1,62 @@
+@import "base/variables";
+@import "base/mixins";
+
+@import "libs/bootstrap";
+@import "libs/animate";
+@import "libs/fontawesome";
+@import "libs/hamburger";
+@import "libs/mmenu";
+@import "libs/swiper";
+
+@import "components/forms";
+@import "components/buttons";
+@import "components/controls";
+@import "components/sections";
+@import "components/section-produtos";
+@import "components/search";
+
+@import "layout/fonts";
+@import "layout/miscellaneous";
+
+/* inicio article */
+@import "components/article";
+
+/* inicio apoio */
+@import "components/apoio";
+
+/* inicio produto card */
+@import "components/produto-card";
+
+/* inicio accordion */
+@import "components/accordion";
+
+/* inicio breadcrumbs */
+@import "components/breadcrumbs";
+
+/* inicio header */
+@import "layout/header";
+
+/* inicio navigation */
+@import "layout/navigation-bar";
+@import "layout/navigation-institucional";
+
+/* inicio footer */
+@import "layout/footer";
+
+/* inicio home */
+@import "layout/page-home";
+
+/* inicio listagem */
+@import "layout/page-listagem";
+
+/* inicio detalhe */
+@import "layout/page-detalhe";
+
+/* inicio sobre */
+@import "layout/page-sobre";
+
+/* inicio revendedor */
+@import "layout/page-revendedor";
+
+/* inicio ajuda */
+@import "layout/page-ajuda";

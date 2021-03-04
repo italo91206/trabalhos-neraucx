@@ -1,0 +1,93 @@
+.produto-card {
+    position: relative;
+    background: #fff;
+    padding: 15px 15px 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $green2-light;
+    &-selos {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        &-desconto, &-novidade {
+            display: block;
+            @include caption;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 2em;
+        }
+        &-desconto {
+            margin-bottom: 5px;
+            background: $orange;
+        }
+        &-novidade {
+            margin: 0;
+            background: $purple;
+        }
+        &-peso {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 46px;
+            height: 46px;
+            @include body2;
+            color: #fff;
+            font-weight: 700;
+            margin: 0;
+            background: $yellow-dark;
+            border-radius: 50%;
+        }
+    }
+    figure {
+        text-align: center;
+        margin-bottom: 15px;
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        text-align: center;
+        &-title {
+            color: $gray2;
+        }
+        &-description {
+            color: $gray2;
+        }
+        &-price {
+            color: $orange-dark;
+            span {
+                color: $gray2;
+            }
+        }
+    }
+    &-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        background: rgba(#fff, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        transition: 0.2s $easing;
+    }
+
+    &:hover {
+        .produto-card-button {
+            opacity: 1;
+            visibility: visible;
+            .button {
+                animation: 0.4s fadeInUp 0.1s both;
+            }
+        }
+    }
+}

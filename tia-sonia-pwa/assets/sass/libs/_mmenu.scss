@@ -1,0 +1,32 @@
+$mmspn_navbar_opac: 1;
+$mmspn_item_height: 42px;
+
+.mm-ocd__backdrop {}
+
+.mm-spn {
+    &.mm-spn--navbar {
+        &:after {
+            @include button;
+        }
+    }
+    &.mm-spn--light {
+        @include body2;
+    }
+}
+
+.navigation-aside {
+    ul {
+        li {
+            a {
+                img {
+                    display: none;
+                }
+                &.button {
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}
+
+@import "node_modules/mmenu-light/src/mmenu-light";

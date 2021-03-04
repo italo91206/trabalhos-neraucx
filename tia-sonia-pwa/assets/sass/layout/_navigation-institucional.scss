@@ -1,0 +1,111 @@
+.navigation-institucional {
+    > ul {
+        display: flex;
+        > li {
+            display: inline-flex;
+            align-items: center;
+            > a {
+                &:not(.button) {
+                    display: block;
+                    line-height: 110px;
+                    color: #fff;
+                    transition: 0.2s $easing;
+                }
+            }
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+            &.has-submenu {
+                &:hover {
+                    > a {
+                        color: $green;
+                    }
+                    > ul {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                column-gap: 20px;
+                row-gap: 25px;
+                padding-top: 25px;
+                padding-bottom: 40px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.2s $easing;
+                z-index: 10;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: $container-side-width-negative;
+                    width: 100vw;
+                    height: 100%;
+                    background: #fff;
+                    border-top: 1px solid $violet;
+                    z-index: -1;
+                }
+                li {
+                    &:first-child {
+                        grid-column: 1 / -1;
+                        display: flex;
+                        justify-content: center;
+                        a {
+                            display: block;
+                            @include body2;
+                            color: $violet-dark;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    &:not(:first-child) {
+                        display: block;
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            @include body2;
+                            img {
+                                display: block;
+                                width: 106px;
+                                height: 106px;
+                                object-fit: cover;
+                                border: 1px solid $yellow-light;
+                                margin-bottom: 10px;
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                                img {
+                                    border-color: $yellow-dark;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        > ul {
+            > li {
+                ul {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    &:before {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
